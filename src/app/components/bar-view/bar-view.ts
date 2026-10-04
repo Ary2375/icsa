@@ -33,6 +33,7 @@ Chart.register(BarController, BarElement, CategoryScale, LinearScale, Legend, Ti
 export class BarView {
   readonly results = input<Result[]>([]);
   readonly metric = input<Metric>('CMod');
+  readonly legendItems = signal<{ label: string; color: string }[]>([]);
 
   private readonly canvas = viewChild.required<ElementRef<HTMLCanvasElement>>('canvas');
   // Chart.js needs a real canvas, so wait for the browser render (SSR-safe).
@@ -55,10 +56,8 @@ export class BarView {
     const caseStudies = [...new Set(results.map(r => r.caseStudy))];
     const configs = [...new Map(results.map(r => [r.configKey, r.configLabel])).entries()];
 
-    return {
-      labels: caseStudies,
-      datasets: configs.map(([key, label], i) => {
-        const color = `hsl(${Math.round((i * 360) / configs.length)}, 65%, 55%)`;
+    const datasets = configs.map(([key, label], index) => {
+        const color = `hsl(${Math.round((index * 360) / configs.length)}, 65%, 55%)`;
         return {
           label,
           backgroundColor: color,
@@ -67,8 +66,14 @@ export class BarView {
             cs => results.find(r => r.caseStudy === cs && r.configKey === key)?.[metric] ?? null,
           ) as number[],
         };
-      }),
-    };
+      });
+
+    this.legendItems.set(datasets.map(dataset => ({
+      label: dataset.label ?? '',
+      color: String(dataset.backgroundColor),
+    })));
+
+    return { labels: caseStudies, datasets };
   }
 
   private render(data: ChartData<'bar'>): void {
@@ -89,7 +94,7 @@ export class BarView {
         maintainAspectRatio: false,
         plugins: {
           title: { display: true, text: title, font: { size: 16 } },
-          legend: { position: 'bottom', labels: { boxWidth: 12 } },
+          legend: { display: false },
           tooltip: { mode: 'index', intersect: false },
         },
         scales: {

@@ -14,6 +14,7 @@ export class RadarView {
   readonly results = input<Result[]>([]);
   readonly metrics = input<Metric[]>([...METRICS]);
   readonly caseStudy = input<string>('');
+  readonly legendItems = signal<{ label: string; color: string }[]>([]);
 
   private readonly canvas = viewChild.required<ElementRef<HTMLCanvasElement>>('canvas');
   private readonly rendered = signal(false);
@@ -26,18 +27,20 @@ export class RadarView {
       const metrics = this.metrics();
       const caseStudy = this.caseStudy();
       const rows = this.results().filter(result => result.caseStudy === caseStudy);
-      const data: ChartData<'radar'> = {
-        labels: metrics,
-        datasets: rows.map((result, index) => ({
+      const datasets = rows.map((result, index) => ({
           label: result.configLabel,
           data: metrics.map(metric => result[metric]),
-          borderColor: `hsl(${Math.round(index * 360 / rows.length)}, 65%, 45%)`,
-          backgroundColor: `hsla(${Math.round(index * 360 / rows.length)}, 65%, 45%, 0.08)`,
+          borderColor: `hsl(${Math.round((index * 360) / rows.length)}, 65%, 45%)`,
+          backgroundColor: `hsla(${Math.round((index * 360) / rows.length)}, 65%, 45%, 0.08)`,
           borderWidth: 2,
           pointRadius: 3,
           fill: true,
-        })),
-      };
+        }));
+      this.legendItems.set(datasets.map(dataset => ({
+        label: dataset.label,
+        color: String(dataset.borderColor),
+      })));
+      const data: ChartData<'radar'> = { labels: metrics, datasets };
 
       if (this.chart) {
         this.chart.data = data;
@@ -52,7 +55,7 @@ export class RadarView {
             maintainAspectRatio: false,
             plugins: {
               title: { display: true, text: caseStudy, font: { size: 16 } },
-              legend: { position: 'bottom', labels: { boxWidth: 12 } },
+              legend: { display: false },
             },
             scales: { r: { beginAtZero: true, suggestedMax: 100 } },
           },

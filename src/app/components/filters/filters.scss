@@ -4,12 +4,17 @@
 
 .filters {
   padding: 1rem;
-  border-radius: 12px;
-  background: var(--mat-sys-surface-container);
+  border: 1px solid var(--color-border);
+  border-radius: 4px;
+  background: var(--color-surface);
+  color: var(--color-ink);
   font-size: 0.9rem;
 
   h3 {
     margin: 0 0 0.75rem;
+    font-family: Georgia, 'Times New Roman', serif;
+    font-size: 1.1rem;
+    font-weight: 500;
   }
 }
 
@@ -21,13 +26,14 @@
   button {
     flex: 1;
     padding: 0.35rem 0.5rem;
-    border: 1px solid var(--mat-sys-outline-variant);
-    border-radius: 6px;
-    background: var(--mat-sys-surface);
+    border: 1px solid var(--color-border);
+    border-radius: 3px;
+    background: var(--color-surface);
+    color: var(--color-ink);
     cursor: pointer;
 
     &:hover {
-      background: var(--mat-sys-surface-container-high);
+      background: var(--color-surface-hover);
     }
   }
 }
@@ -37,8 +43,13 @@ details {
 
   > summary {
     cursor: pointer;
+    color: var(--color-ink);
     font-weight: 600;
     padding: 0.25rem 0;
+
+    &:hover {
+      color: var(--color-blue);
+    }
   }
 }
 
@@ -52,6 +63,11 @@ details.tool {
 
 label {
   cursor: pointer;
+  color: var(--color-body);
+}
+
+input[type='checkbox'] {
+  accent-color: var(--color-blue);
 }
 
 .leaf {

@@ -1,6 +1,5 @@
 import { Component, computed, OnInit, signal } from '@angular/core';
 import { MatCardModule } from '@angular/material/card';
-import { MatButtonToggleModule } from '@angular/material/button-toggle';
 import { BarView } from '../../components/bar-view/bar-view';
 import { RadarView } from '../../components/radar-view/radar-view';
 import { Filters } from '../../components/filters/filters';
@@ -10,7 +9,7 @@ import { Metric, METRICS, Result } from '../../models/result.model';
 import { ResultsService } from '../../services/results/results';
 
 @Component({
-  imports: [MatCardModule, MatButtonToggleModule, Filters, BarView, RadarView, TableView, Findings],
+  imports: [MatCardModule, Filters, BarView, RadarView, TableView, Findings],
   selector: 'app-dashboard',
   styleUrls: ['./dashboard.scss'],
   templateUrl: './dashboard.html',

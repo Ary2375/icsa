@@ -1,0 +1,23 @@
+:host {
+	display: block;
+}
+
+mat-card {
+	padding: 1rem;
+	border: 1px solid var(--color-border);
+	border-radius: 4px;
+	background: var(--color-surface);
+	box-shadow: none;
+	color: var(--color-ink);
+}
+
+h2 {
+	margin: 0 0 0.65rem;
+	font-family: Georgia, 'Times New Roman', serif;
+	font-size: 1.35rem;
+	font-weight: 500;
+}
+
+mat-list-item {
+	color: var(--color-body);
+}

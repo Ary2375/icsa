@@ -1,3 +1,8 @@
 <div class="radar-view">
-	<canvas #canvas role="img" [attr.aria-label]="'Radar chart: ' + caseStudy()"></canvas>
+	<div class="chart-canvas"><canvas #canvas role="img" [attr.aria-label]="'Radar chart: ' + caseStudy()"></canvas></div>
+	<ul class="chart-legend" aria-label="Chart legend">
+		@for (item of legendItems(); track item.label) {
+			<li><span class="legend-swatch" [style.backgroundColor]="item.color" aria-hidden="true"></span><span>{{ item.label }}</span></li>
+		}
+	</ul>
 </div>

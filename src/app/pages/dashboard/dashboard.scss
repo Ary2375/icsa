@@ -1,35 +1,11 @@
 .dashboard-container {
-
-  max-width: 1600px;
-
-  margin: auto;
-
-  padding: 2rem;
-
-}
-
-.hero {
-
-  text-align: center;
-
-  margin-bottom: 3rem;
-
-}
-
-.hero h1 {
-
-  font-size: 3rem;
-
-  line-height: 1.2;
-
-  margin-bottom: 1rem;
-
+  width: 100%;
 }
 
 .layout {
   display: grid;
-  grid-template-columns: 280px 1fr;
-  gap: 2rem;
+  grid-template-columns: minmax(240px, 280px) minmax(0, 1fr);
+  gap: 1.5rem;
   align-items: start;
 }
 
@@ -43,46 +19,63 @@ app-filters {
 .main {
   display: flex;
   flex-direction: column;
-  gap: 2rem;
+  gap: 1.5rem;
   min-width: 0;
+}
+
+.view-switch {
+  display: inline-grid;
+  grid-template-columns: repeat(3, minmax(76px, 1fr));
+  align-self: flex-start;
+  gap: 2px;
+  padding: 3px;
+  border: 1px solid var(--color-border);
+  border-radius: 4px;
+  background: var(--color-surface);
+}
+
+.mode-button {
+  min-height: 36px;
+  padding: 0.45rem 0.8rem;
+  border: 0;
+  border-radius: 2px;
+  background: transparent;
+  color: var(--color-body);
+  font: inherit;
+  font-size: 0.82rem;
+  cursor: pointer;
+}
+
+.mode-button:hover {
+  background: var(--color-surface-hover);
+  color: var(--color-ink);
+}
+
+.mode-button[aria-pressed='true'] {
+  background: var(--color-blue);
+  color: var(--color-surface);
 }
 
 .charts-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(min(520px, 100%), 1fr));
-  gap: 1.5rem;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 1rem;
 }
 
 .chart-card,
 .table-card {
   padding: 1rem;
+  border: 1px solid var(--color-border);
+  border-radius: 4px;
+  background: var(--color-surface);
+  box-shadow: none;
+  color: var(--color-ink);
 }
 
 @media (max-width: 800px) {
 
-  .dashboard-container {
-    padding: 1rem;
-  }
-
-  .hero h1 {
-    font-size: 2rem;
-    overflow-wrap: anywhere;
-  }
-
-  mat-button-toggle-group {
-    width: 100%;
-    --mat-standard-button-toggle-horizontal-padding: 4px;
-  }
-
-  mat-button-toggle {
-    flex: 1;
-    min-width: 0;
-  }
-
   .layout {
-
     grid-template-columns: 1fr;
-
   }
 
   app-filters {
@@ -95,7 +88,8 @@ app-filters {
 
 }
 
-mat-button-toggle-group {
-  align-self: flex-start;
-  max-width: 100%;
+@media (max-width: 1100px) {
+  .charts-grid {
+    grid-template-columns: minmax(0, 1fr);
+  }
 }

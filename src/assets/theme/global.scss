@@ -10,7 +10,8 @@
 }
 
 app-methodology,
-app-artifacts {
+app-artifacts,
+app-dashboard {
   display: block;
   min-height: calc(100vh - 68px);
   background: var(--project-page-bg);
@@ -18,20 +19,22 @@ app-artifacts {
 }
 
 app-methodology .methodology-page,
-app-artifacts .artifacts-page {
+app-artifacts .artifacts-page,
+app-dashboard .dashboard-container {
   max-width: var(--project-content-width);
   margin-inline: auto;
   padding: clamp(2.5rem, 6vw, 5rem) var(--project-page-gutter);
 }
 
 app-methodology .intro,
-app-artifacts .page-heading {
-  max-width: 900px;
+app-artifacts .page-heading,
+app-dashboard .page-heading {
   padding-bottom: 3.2rem;
 }
 
 app-methodology .eyebrow,
-app-artifacts .eyebrow {
+app-artifacts .eyebrow,
+app-dashboard .eyebrow {
   margin: 0 0 0.7rem;
   color: var(--project-accent);
   font-size: 0.7rem;
@@ -54,28 +57,36 @@ app-methodology p,
 app-artifacts h1,
 app-artifacts h2,
 app-artifacts h3,
-app-artifacts p {
+app-artifacts p,
+app-dashboard h1,
+app-dashboard h2,
+app-dashboard h3,
+app-dashboard p {
   margin-top: 0;
 }
 
 app-methodology h1,
 app-methodology h2,
 app-artifacts h1,
-app-artifacts h2 {
+app-artifacts h2,
+app-dashboard h1,
+app-dashboard h2 {
   font-family: Georgia, 'Times New Roman', serif;
   font-weight: 500;
 }
 
 app-methodology .intro h1,
-app-artifacts .page-heading h1 {
+app-artifacts .page-heading h1,
+app-dashboard .page-heading h1 {
   margin: 0 0 1.2rem;
   font-size: 4rem;
   line-height: 1;
 }
 
 app-methodology .intro-copy,
-app-artifacts .page-heading .intro-copy {
-  max-width: 650px;
+app-artifacts .page-heading .intro-copy,
+app-dashboard .page-heading .intro-copy {
+  max-width: none;
   margin: 0;
   color: var(--project-muted);
   font-size: 1rem;
@@ -88,7 +99,8 @@ app-methodology .model-generation,
 app-methodology .experiment-detail,
 app-methodology .references,
 app-artifacts .available-section,
-app-artifacts .repository-section {
+app-artifacts .repository-section,
+app-dashboard .dashboard-content {
   padding-block: 2.5rem;
   border-top: 1px solid var(--project-rule);
 }
@@ -97,7 +109,8 @@ app-methodology .section-heading,
 app-methodology .detail-section-heading,
 app-methodology .experiment-heading,
 app-methodology .references-heading,
-app-artifacts .section-heading {
+app-artifacts .section-heading,
+app-dashboard .section-heading {
   display: flex;
   align-items: flex-start;
   flex-direction: column;
@@ -109,7 +122,8 @@ app-methodology .section-heading .eyebrow,
 app-methodology .detail-section-heading .eyebrow,
 app-methodology .experiment-heading .eyebrow,
 app-methodology .references-heading .eyebrow,
-app-artifacts .section-heading .eyebrow {
+app-artifacts .section-heading .eyebrow,
+app-dashboard .section-heading .eyebrow {
   margin-bottom: 0.45rem;
 }
 
@@ -117,7 +131,8 @@ app-methodology .section-heading h2,
 app-methodology .detail-section-heading h2,
 app-methodology .experiment-heading h2,
 app-methodology .references-heading h2,
-app-artifacts .section-heading h2 {
+app-artifacts .section-heading h2,
+app-dashboard .section-heading h2 {
   margin: 0;
   font-size: 2rem;
   line-height: 1.15;
@@ -126,8 +141,9 @@ app-artifacts .section-heading h2 {
 app-methodology .section-note,
 app-methodology .detail-section-heading > p,
 app-methodology .experiment-heading > p:last-child,
-app-artifacts .section-heading > p {
-  max-width: 760px;
+app-artifacts .section-heading > p,
+app-dashboard .section-heading > p {
+  max-width: none;
   margin: 0;
   color: var(--project-muted);
   font-size: 0.85rem;
@@ -136,17 +152,20 @@ app-artifacts .section-heading > p {
 
 @media (max-width: 600px) {
   app-methodology .methodology-page,
-  app-artifacts .artifacts-page {
+  app-artifacts .artifacts-page,
+  app-dashboard .dashboard-container {
     padding-inline: 1.1rem;
   }
 
   app-methodology .intro,
-  app-artifacts .page-heading {
+  app-artifacts .page-heading,
+  app-dashboard .page-heading {
     padding-bottom: 3rem;
   }
 
   app-methodology .intro h1,
-  app-artifacts .page-heading h1 {
+  app-artifacts .page-heading h1,
+  app-dashboard .page-heading h1 {
     font-size: 3rem;
   }
 
@@ -154,7 +173,8 @@ app-artifacts .section-heading > p {
   app-methodology .detail-section-heading,
   app-methodology .experiment-heading,
   app-methodology .references-heading,
-  app-artifacts .section-heading {
+  app-artifacts .section-heading,
+  app-dashboard .section-heading {
     gap: 0.8rem;
   }
 
@@ -162,7 +182,8 @@ app-artifacts .section-heading > p {
   app-methodology .detail-section-heading h2,
   app-methodology .experiment-heading h2,
   app-methodology .references-heading h2,
-  app-artifacts .section-heading h2 {
+  app-artifacts .section-heading h2,
+  app-dashboard .section-heading h2 {
     font-size: 1.75rem;
   }
 }
