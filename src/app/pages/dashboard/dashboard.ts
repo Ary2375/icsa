@@ -3,13 +3,12 @@ import { MatCardModule } from '@angular/material/card';
 import { BarView } from '../../components/bar-view/bar-view';
 import { RadarView } from '../../components/radar-view/radar-view';
 import { Filters } from '../../components/filters/filters';
-import { Findings } from '../../components/findings/findings';
 import { TableView } from '../../components/table-view/table-view';
 import { Metric, METRICS, Result } from '../../models/result.model';
 import { ResultsService } from '../../services/results/results';
 
 @Component({
-  imports: [MatCardModule, Filters, BarView, RadarView, TableView, Findings],
+  imports: [MatCardModule, Filters, BarView, RadarView, TableView],
   selector: 'app-dashboard',
   styleUrls: ['./dashboard.scss'],
   templateUrl: './dashboard.html',
