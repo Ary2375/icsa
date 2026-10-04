@@ -1,0 +1,52 @@
+<aside class="filters">
+  <h3>Filters</h3>
+
+  <div class="actions">
+    <button type="button" (click)="selectAll()">Select All</button>
+    <button type="button" (click)="deselectAll()">Deselect All</button>
+  </div>
+
+  <details open>
+    <summary>LLMs</summary>
+    @for (node of tree(); track node.tool) {
+      <details open class="tool">
+        <summary>
+          <label>
+            <input
+              type="checkbox"
+              [checked]="toolState(node) === 'all'"
+              [indeterminate]="toolState(node) === 'some'"
+              (change)="toggleTool(node)" />
+            {{ node.label }}
+          </label>
+        </summary>
+        @for (config of node.configs; track config.key) {
+          <label class="leaf">
+            <input type="checkbox" [checked]="isSelected(config.key)" (change)="toggleConfig(config.key)" />
+            {{ config.strategy }}
+          </label>
+        }
+      </details>
+    }
+  </details>
+
+  <details open>
+    <summary>Case Studies</summary>
+    @for (cs of caseStudies(); track cs) {
+      <label class="leaf">
+        <input type="checkbox" [checked]="selectedCaseStudies().includes(cs)" (change)="toggleCaseStudy(cs)" />
+        {{ cs }}
+      </label>
+    }
+  </details>
+
+  <details open>
+    <summary>Metrics</summary>
+    @for (metric of metrics; track metric) {
+      <label class="leaf">
+        <input type="checkbox" [checked]="selectedMetrics().includes(metric)" (change)="toggleMetric(metric)" />
+        {{ metric }}
+      </label>
+    }
+  </details>
+</aside>

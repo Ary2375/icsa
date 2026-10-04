@@ -1,0 +1,62 @@
+:host {
+  display: block;
+}
+
+.filters {
+  padding: 1rem;
+  border-radius: 12px;
+  background: var(--mat-sys-surface-container);
+  font-size: 0.9rem;
+
+  h3 {
+    margin: 0 0 0.75rem;
+  }
+}
+
+.actions {
+  display: flex;
+  gap: 0.5rem;
+  margin-bottom: 0.75rem;
+
+  button {
+    flex: 1;
+    padding: 0.35rem 0.5rem;
+    border: 1px solid var(--mat-sys-outline-variant);
+    border-radius: 6px;
+    background: var(--mat-sys-surface);
+    cursor: pointer;
+
+    &:hover {
+      background: var(--mat-sys-surface-container-high);
+    }
+  }
+}
+
+details {
+  margin-bottom: 0.5rem;
+
+  > summary {
+    cursor: pointer;
+    font-weight: 600;
+    padding: 0.25rem 0;
+  }
+}
+
+details.tool {
+  margin-left: 0.75rem;
+
+  > summary {
+    font-weight: 500;
+  }
+}
+
+label {
+  cursor: pointer;
+}
+
+.leaf {
+  display: flex;
+  align-items: center;
+  gap: 0.4rem;
+  padding: 0.15rem 0 0.15rem 1.25rem;
+}

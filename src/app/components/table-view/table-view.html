@@ -1,0 +1,30 @@
+<div class="table-wrapper">
+  <table>
+    <thead>
+      <tr>
+        <th>Case Study</th>
+        <th>Tool</th>
+        <th>Strategy</th>
+        @for (metric of metrics(); track metric) {
+          <th>{{ metric }}</th>
+        }
+      </tr>
+    </thead>
+    <tbody>
+      @for (r of results(); track r.caseStudy + r.configKey) {
+        <tr>
+          <td>{{ r.caseStudy }}</td>
+          <td>{{ r.tool }}</td>
+          <td>{{ r.strategy }}</td>
+          @for (metric of metrics(); track metric) {
+            <td class="num">{{ r[metric] | number: '1.1-1' }}</td>
+          }
+        </tr>
+      } @empty {
+        <tr>
+          <td [attr.colspan]="3 + metrics().length">No results for the selected filters.</td>
+        </tr>
+      }
+    </tbody>
+  </table>
+</div>

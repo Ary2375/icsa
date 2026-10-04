@@ -1,0 +1,48 @@
+<div class="dashboard-container">
+
+    <header class="hero">
+
+        <h1>
+            Runtime Behavioral Models for
+            LLM-Driven Microservice Decomposition
+        </h1>
+
+        <p>
+            Evaluating runtime-derived behavioral models
+            as additional context for LLM-based decomposition.
+        </p>
+
+    </header>
+
+    <div class="layout">
+
+        <app-filters
+            [results]="results()"
+            [(selectedConfigs)]="selectedConfigs"
+            [(selectedCaseStudies)]="selectedCaseStudies"
+            [(selectedMetrics)]="selectedMetrics">
+        </app-filters>
+
+        <main class="main">
+
+            <div class="charts-grid">
+                @for (metric of selectedMetrics(); track metric) {
+                    <mat-card class="chart-card">
+                        <app-bar-view [results]="filteredResults()" [metric]="metric"></app-bar-view>
+                    </mat-card>
+                } @empty {
+                    <p>Select at least one metric.</p>
+                }
+            </div>
+
+            <mat-card class="table-card">
+                <app-table-view [results]="filteredResults()" [metrics]="selectedMetrics()"></app-table-view>
+            </mat-card>
+
+            <app-findings></app-findings>
+
+        </main>
+
+    </div>
+
+</div>
