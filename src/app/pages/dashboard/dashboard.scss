@@ -60,6 +60,25 @@ app-filters {
 
 @media (max-width: 800px) {
 
+  .dashboard-container {
+    padding: 1rem;
+  }
+
+  .hero h1 {
+    font-size: 2rem;
+    overflow-wrap: anywhere;
+  }
+
+  mat-button-toggle-group {
+    width: 100%;
+    --mat-standard-button-toggle-horizontal-padding: 4px;
+  }
+
+  mat-button-toggle {
+    flex: 1;
+    min-width: 0;
+  }
+
   .layout {
 
     grid-template-columns: 1fr;
@@ -74,4 +93,9 @@ app-filters {
 
   }
 
+}
+
+mat-button-toggle-group {
+  align-self: flex-start;
+  max-width: 100%;
 }

@@ -24,20 +24,47 @@
         </app-filters>
 
         <main class="main">
+            <mat-button-toggle-group aria-label="Display mode" [value]="viewMode()" (change)="viewMode.set($event.value)">
+                <mat-button-toggle value="table">Table</mat-button-toggle>
+                <mat-button-toggle value="bar">Bar</mat-button-toggle>
+                <mat-button-toggle value="radar">Radar</mat-button-toggle>
+            </mat-button-toggle-group>
 
-            <div class="charts-grid">
-                @for (metric of selectedMetrics(); track metric) {
-                    <mat-card class="chart-card">
-                        <app-bar-view [results]="filteredResults()" [metric]="metric"></app-bar-view>
-                    </mat-card>
-                } @empty {
-                    <p>Select at least one metric.</p>
+            @switch (viewMode()) {
+                @case ('table') {
+                    <app-table-view [results]="filteredResults()" [metrics]="selectedMetrics()"></app-table-view>
                 }
-            </div>
-
-            <mat-card class="table-card">
-                <app-table-view [results]="filteredResults()" [metrics]="selectedMetrics()"></app-table-view>
-            </mat-card>
+                @case ('bar') {
+                    <div class="charts-grid">
+                        @if (!filteredResults().length) {
+                            <p>No results for the selected filters.</p>
+                        } @else {
+                            @for (metric of selectedMetrics(); track metric) {
+                                <mat-card class="chart-card">
+                                    <app-bar-view [results]="filteredResults()" [metric]="metric"></app-bar-view>
+                                </mat-card>
+                            } @empty {
+                                <p>Select at least one metric.</p>
+                            }
+                        }
+                    </div>
+                }
+                @case ('radar') {
+                    <div class="charts-grid">
+                        @if (!selectedMetrics().length) {
+                            <p>Select at least one metric.</p>
+                        } @else {
+                            @for (caseStudy of radarCaseStudies(); track caseStudy) {
+                                <mat-card class="chart-card">
+                                    <app-radar-view [results]="filteredResults()" [metrics]="selectedMetrics()" [caseStudy]="caseStudy"></app-radar-view>
+                                </mat-card>
+                            } @empty {
+                                <p>No results for the selected filters.</p>
+                            }
+                        }
+                    </div>
+                }
+            }
 
             <app-findings></app-findings>
 

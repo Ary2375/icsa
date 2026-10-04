@@ -1,6 +1,8 @@
 import { Component, computed, OnInit, signal } from '@angular/core';
 import { MatCardModule } from '@angular/material/card';
+import { MatButtonToggleModule } from '@angular/material/button-toggle';
 import { BarView } from '../../components/bar-view/bar-view';
+import { RadarView } from '../../components/radar-view/radar-view';
 import { Filters } from '../../components/filters/filters';
 import { Findings } from '../../components/findings/findings';
 import { TableView } from '../../components/table-view/table-view';
@@ -8,7 +10,7 @@ import { Metric, METRICS, Result } from '../../models/result.model';
 import { ResultsService } from '../../services/results/results';
 
 @Component({
-  imports: [MatCardModule, Filters, BarView, TableView, Findings],
+  imports: [MatCardModule, MatButtonToggleModule, Filters, BarView, RadarView, TableView, Findings],
   selector: 'app-dashboard',
   styleUrls: ['./dashboard.scss'],
   templateUrl: './dashboard.html',
@@ -16,6 +18,8 @@ import { ResultsService } from '../../services/results/results';
 export class Dashboard implements OnInit {
 
   readonly results = signal<Result[]>([]);
+  readonly viewMode = signal<'table' | 'bar' | 'radar'>('bar');
+  readonly radarCaseStudies = computed(() => [...new Set(this.filteredResults().map(result => result.caseStudy))]);
 
   readonly selectedConfigs = signal<string[]>([]);
   readonly selectedCaseStudies = signal<string[]>([]);
