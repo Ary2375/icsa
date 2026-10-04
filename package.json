@@ -1,6 +1,6 @@
 {
   "name": "behavioral-models-llm-decomposition-results",
-  "version": "1.0.3",
+  "version": "1.0.4",
   "author": "Arianna Carmellino",
   "scripts": {
     "ng": "ng",

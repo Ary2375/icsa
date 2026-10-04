@@ -866,7 +866,6 @@ app-methodology {
       gap: 0;
       margin-top: 2rem;
       padding-left: 0.8rem;
-      border-left: 1px solid var(--color-connector);
     }
 
     .pipeline-stage,
@@ -879,11 +878,8 @@ app-methodology {
 
     .pipeline-stage::after,
     .pipeline-stage:nth-child(2)::after {
-      display: block;
-      top: 0;
-      right: auto;
-      left: -7px;
-      content: '↓';
+      display: none;
+      content: none;
     }
 
     .pipeline-stage:last-child::after {

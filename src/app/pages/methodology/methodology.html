@@ -38,7 +38,7 @@
                 <span class="stage-index">01</span>
                 <span class="stage-label">Instrument</span>
                 <h3>Java repositories</h3>
-                <p>Attach the OpenTelemetry Java Agent<a href="#ref-1" aria-label="Reference 1">[1]</a> and the custom
+                <p>Attach the OpenTelemetry Java Agent<a [routerLink]="[]" fragment="ref-1" aria-label="Reference 1">[1]</a> and the custom
                     extension to each repository.</p>
             </li>
 
@@ -71,7 +71,7 @@
                 <span class="stage-label">Repeat + review</span>
                 <h3>Repository × model</h3>
                 <p>Repeat for every repository and model variant; review the resulting decompositions in Results.</p>
-                <div class="stage-output"><a href="/">Final results <span aria-hidden="true">↗</span></a></div>
+                <div class="stage-output"><a routerLink="/">Final results <span aria-hidden="true">↗</span></a></div>
             </li>
         </ol>
     </section>
@@ -85,10 +85,10 @@
         </div>
 
         <div class="collection-explanation">
-            <p>First, each repository was instrumented with the OpenTelemetry Java Agent<a href="#ref-1"
+            <p>First, each repository was instrumented with the OpenTelemetry Java Agent<a [routerLink]="[]" fragment="ref-1"
                     aria-label="Reference 1">[1]</a>. Its application was then executed automatically and systematically
                 with the tests already present in the repository.</p>
-            <p>The OpenTelemetry Java Agent<a href="#ref-1" aria-label="Reference 1">[1]</a> was attached to each
+            <p>The OpenTelemetry Java Agent<a [routerLink]="[]" fragment="ref-1" aria-label="Reference 1">[1]</a> was attached to each
                 application. Its standard configuration does not capture method parameter values, so a custom extension
                 intercepted method calls and recorded parameter values alongside the traces.</p>
             <p>The repositories use different Java versions, so multiple compatible implementations of the custom
@@ -106,7 +106,7 @@
             <span class="diagram-arrow" aria-hidden="true">→</span>
             <article class="telemetry-agent">
                 <span class="diagram-kicker">1 · Instrument</span>
-                <h3>OpenTelemetry Java Agent<a href="#ref-1" aria-label="Reference 1">[1]</a></h3>
+                <h3>OpenTelemetry Java Agent<a [routerLink]="[]" fragment="ref-1" aria-label="Reference 1">[1]</a></h3>
                 <p>Configuration of the OpenTelemetry Java Agent and the custom extension. The custom extension
                     intercepts method calls and captures parameter values, which the standard agent does not collect.
                 </p>
@@ -149,8 +149,8 @@
                 <h2 id="generation-detail-title">From execution traces to behavioral models</h2>
             </div>
             <p class="generation-intro">Generation used two independent approaches. First, the GK-Tail+ algorithm <a
-                    href="#ref-2" aria-label="Reference 2">[2]</a> learned an Extended Finite State Machine (EFSM)
-                from the traces and captured method parameters. Then PM4Py <a href="#ref-3"
+                    [routerLink]="[]" fragment="ref-2" aria-label="Reference 2">[2]</a> learned an Extended Finite State Machine (EFSM)
+                from the traces and captured method parameters. Then PM4Py <a [routerLink]="[]" fragment="ref-3"
                     aria-label="Reference 3">[3]</a> analyzed the same <code>traces.json</code> as an event log to
                 discover three process models; it did not use the EFSM as input.</p>
         </header>
@@ -167,7 +167,7 @@
                             captured method parameters</small></div>
                     <span class="lane-arrow" aria-hidden="true">→</span>
                     <div class="lane-method"><span class="lane-kicker">Algorithm</span>
-                        <h3>GK-Tail+<a href="#ref-2" aria-label="Reference 2">[2]</a></h3>
+                        <h3>GK-Tail+<a [routerLink]="[]" fragment="ref-2" aria-label="Reference 2">[2]</a></h3>
                         <p>Learns an Guarded Finite State Machine from execution traces. Unlike a traditional Finite
                             State Machine, this extended
                             machine incorporates both behavioral transitions and parameter data.</p>
@@ -190,7 +190,7 @@
                             as event logs</small></div>
                     <span class="lane-arrow" aria-hidden="true">→</span>
                     <div class="lane-method"><span class="lane-kicker">Python library</span>
-                        <h3>PM4Py<a href="#ref-3" aria-label="Reference 3">[3]</a></h3>
+                        <h3>PM4Py<a [routerLink]="[]" fragment="ref-3" aria-label="Reference 3">[3]</a></h3>
                         <p>Runs three process-discovery algorithms on the event log.</p>
                     </div>
                     <span class="lane-arrow fanout-arrow" aria-hidden="true">→</span>
@@ -201,12 +201,12 @@
                             </p><strong>Output: DFG</strong>
                         </article>
                         <article class="algorithm-output inductive-output">
-                            <h3>Inductive Miner<a href="#ref-4" aria-label="Reference 4">[4]</a></h3>
+                            <h3>Inductive Miner<a [routerLink]="[]" fragment="ref-4" aria-label="Reference 4">[4]</a></h3>
                             <p>Builds a structured model expressing sequences, choices and parallel executions.</p>
                             <strong>Output: Petri Net model</strong>
                         </article>
                         <article class="algorithm-output split-output">
-                            <h3>Split Miner<a href="#ref-5" aria-label="Reference 5">[5]</a></h3>
+                            <h3>Split Miner<a [routerLink]="[]" fragment="ref-5" aria-label="Reference 5">[5]</a></h3>
                             <p>Filters the directly-follows graph and identifies BPMN gateways, balancing fitness,
                                 precision and simplicity.</p><strong>Output: BPMN model</strong>
                         </article>
@@ -225,7 +225,7 @@
                     Mermaid. These textual specifications are the model artifacts later added to the LLM input.</p>
                 <p>Some models were too large for free online editors to render as images. As a result, some graphical
                     images are missing even where the textual specification exists.</p>
-                <a href="/artifacts">Browse available project artifacts</a>
+                <a routerLink="/artifacts">Browse available project artifacts</a>
             </div>
         </section>
     </section>
@@ -260,7 +260,7 @@
                 <strong>Every model</strong>
             </div>
             <span class="experiment-arrow" aria-hidden="true">→</span>
-            <a class="results-step" href="/">
+            <a class="results-step" routerLink="/">
                 <span class="stack-title">Outcome</span>
                 <strong>Results tab</strong>
                 <small>Final decomposition results</small>
