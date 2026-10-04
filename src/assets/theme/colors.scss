@@ -1,0 +1,33 @@
+@use '@angular/material' as mat;
+
+$material-primary: mat.$azure-palette;
+$material-tertiary: mat.$blue-palette;
+
+:root {
+  --color-canvas: #f4f5f6;
+  --color-surface: #fff;
+  --color-surface-header: #fbfcf9;
+  --color-surface-hover: #eef1f4;
+  --color-surface-hover-soft: #f8f9fa;
+  --color-surface-subtle: #f7f8f9;
+  --color-surface-blue: #f4f7fa;
+  --color-surface-coral: #f8ece8;
+  --color-ink: #252a32;
+  --color-body: #626a75;
+  --color-muted: #737b85;
+  --color-nav-muted: #68717c;
+  --color-accent: #a84331;
+  --color-accent-strong: #b64b32;
+  --color-blue: #315f91;
+  --color-ochre: #9a793d;
+  --color-ochre-deep: #82652f;
+  --color-gray: #8a929b;
+  --color-connector: #aab1ba;
+  --color-border: #d2d6dc;
+  --color-border-soft: #e0e3e7;
+  --color-border-mid: #bdc4cd;
+  --color-border-page: #d1d5db;
+  --color-border-header: #d9dfd8;
+  --color-nav-active: #d65a3a;
+  --color-transparent: transparent;
+}

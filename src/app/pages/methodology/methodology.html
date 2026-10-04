@@ -1,0 +1,311 @@
+<main class="methodology-page">
+    <header class="intro" aria-labelledby="page-title">
+        <p class="eyebrow">Methodology <span>Runtime telemetry</span></p>
+        <h1 id="page-title">From runtime telemetry<br />to LLM-driven decompositions</h1>
+        <p class="intro-copy">
+            Java repositories were instrumented and exercised through their existing test suites to collect runtime
+            telemetry. The resulting traces were used to derive behavioral models; each model was then added
+            individually as the final artifact in the LLM input. This process was repeated for every repository and
+            model variant, producing the decompositions shown in Results.
+        </p>
+        <section class="research-question" aria-labelledby="research-question-title">
+            <p class="eyebrow" id="research-question-title">Research question</p>
+            <p>How do microservice decomposition results change when one runtime-derived behavioral model is appended
+                to the baseline LLM input, across repositories and model-generation approaches?</p>
+        </section>
+        <a class="starting-point" href="https://doi.org/10.1109/icsa66085.2026.00033" target="_blank" rel="noreferrer">
+            <span class="starting-label">Research starting point</span>
+            <p><cite>LLMs for Architectural Refactoring: An Exploratory Study on Monoliths to Microservices</cite></p>
+            <span class="starting-citation">A. Sambu, R. Capuano, E. O'Dea, K. Vaidhyanathan and H. Muccini, ICSA
+                2026</span>
+            <span class="publication-link-label">View publication</span>
+        </a>
+    </header>
+
+    <section class="pipeline-overview" aria-labelledby="pipeline-title">
+        <div class="section-heading">
+            <div>
+                <p class="eyebrow">End-to-end workflow</p>
+                <h2 id="pipeline-title">From repositories to evaluated decompositions</h2>
+            </div>
+            <p class="section-note">The model-generation step feeds a repeated LLM experiment, not the final result
+                directly.</p>
+        </div>
+
+        <ol class="pipeline-map"
+            aria-label="Instrument repositories, execute their tests, collect telemetry, generate models, run LLM experiments, and review results">
+            <li class="pipeline-stage collection-stage">
+                <span class="stage-index">01</span>
+                <span class="stage-label">Instrument</span>
+                <h3>Java repositories</h3>
+                <p>Attach the OpenTelemetry Java Agent<a href="#ref-1" aria-label="Reference 1">[1]</a> and the custom
+                    extension to each repository.</p>
+            </li>
+
+            <li class="pipeline-stage execution-stage">
+                <span class="stage-index">02</span>
+                <span class="stage-label">Execute</span>
+                <h3>Run systematically</h3>
+                <p>Automatically execute the tests already present in each repository; the OpenTelemetry Collector
+                    writes the telemetry files.</p>
+                <div class="stage-output"><code>traces.json</code><code>metrics.json</code><code>logs.json</code></div>
+            </li>
+
+            <li class="pipeline-stage generation-stage">
+                <span class="stage-index">03</span>
+                <span class="stage-label">Generate models</span>
+                <h3>Discover behavior</h3>
+                <p>Use <code>traces.json</code> first with GK-Tail+, then with PM4Py to produce the behavioral diagrams.
+                </p>
+            </li>
+
+            <li class="pipeline-stage experiment-stage">
+                <span class="stage-index">04</span>
+                <span class="stage-label">Run experiment</span>
+                <h3>Append one model</h3>
+                <p>Add one generated model as the last artifact in the article's LLM input, one model per run.</p>
+            </li>
+
+            <li class="pipeline-stage results-stage">
+                <span class="stage-index">05</span>
+                <span class="stage-label">Repeat + review</span>
+                <h3>Repository × model</h3>
+                <p>Repeat for every repository and model variant; review the resulting decompositions in Results.</p>
+                <div class="stage-output"><a href="/">Final results <span aria-hidden="true">↗</span></a></div>
+            </li>
+        </ol>
+    </section>
+
+    <section class="collection-detail" aria-labelledby="collection-detail-title">
+        <div class="detail-section-heading">
+            <div>
+                <p class="eyebrow">Inside steps 01–02</p>
+                <h2 id="collection-detail-title">How runtime data was collected</h2>
+            </div>
+        </div>
+
+        <div class="collection-explanation">
+            <p>First, each repository was instrumented with the OpenTelemetry Java Agent<a href="#ref-1"
+                    aria-label="Reference 1">[1]</a>. Its application was then executed automatically and systematically
+                with the tests already present in the repository.</p>
+            <p>The OpenTelemetry Java Agent<a href="#ref-1" aria-label="Reference 1">[1]</a> was attached to each
+                application. Its standard configuration does not capture method parameter values, so a custom extension
+                intercepted method calls and recorded parameter values alongside the traces.</p>
+            <p>The repositories use different Java versions, so multiple compatible implementations of the custom
+                extension were developed. During each test run, the OpenTelemetry Collector received the instrumented
+                telemetry and generated the three output files below.</p>
+        </div>
+
+        <div class="telemetry-flow" role="group"
+            aria-label="Repositories are instrumented, their existing tests are run automatically, and the OpenTelemetry Collector produces three parallel telemetry files">
+            <article class="telemetry-run">
+                <span class="diagram-kicker">Starting point</span>
+                <h3>Java repository</h3>
+                <p>Each analyzed application.</p>
+            </article>
+            <span class="diagram-arrow" aria-hidden="true">→</span>
+            <article class="telemetry-agent">
+                <span class="diagram-kicker">1 · Instrument</span>
+                <h3>OpenTelemetry Java Agent<a href="#ref-1" aria-label="Reference 1">[1]</a></h3>
+                <p>Configuration of the OpenTelemetry Java Agent and the custom extension. The custom extension
+                    intercepts method calls and captures parameter values, which the standard agent does not collect.
+                </p>
+            </article>
+            <span class="diagram-arrow" aria-hidden="true">→</span>
+            <article class="automated-execution">
+                <span class="diagram-kicker">2 · Execute</span>
+                <h3>Existing test suites</h3>
+                <p>Tests run automatically and systematically to exercise the instrumented application.</p>
+            </article>
+            <span class="diagram-arrow" aria-hidden="true">→</span>
+            <article class="collector-node">
+                <span class="diagram-kicker">02 · Collector output</span>
+                <h3>OpenTelemetry Collector</h3>
+                <p>Receives telemetry during execution and writes the output files.</p>
+            </article>
+            <span class="diagram-arrow" aria-hidden="true">→</span>
+            <div class="telemetry-output-group">
+                <span class="diagram-kicker">Three outputs from the same test run</span>
+                <div class="telemetry-files" aria-label="Parallel telemetry outputs">
+                    <article class="telemetry-file trace-file"><code>traces.json</code>
+                        <p>Gives us the big picture of what happens when a request is made to an
+                            application.</p>
+                    </article>
+                    <article class="telemetry-file metric-file"><code>metrics.json</code>
+                        <p>Measurements of services captured at runtime.</p>
+                    </article>
+                    <article class="telemetry-file log-file"><code>logs.json</code>
+                        <p>Application log events emitted during execution.</p>
+                    </article>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="model-generation" aria-labelledby="generation-detail-title">
+        <header class="detail-section-heading">
+            <div>
+                <p class="eyebrow">Inside step 03</p>
+                <h2 id="generation-detail-title">From execution traces to behavioral models</h2>
+            </div>
+            <p class="generation-intro">Generation used two independent approaches. First, the GK-Tail+ algorithm <a
+                    href="#ref-2" aria-label="Reference 2">[2]</a> learned an Extended Finite State Machine (EFSM)
+                from the traces and captured method parameters. Then PM4Py <a href="#ref-3"
+                    aria-label="Reference 3">[3]</a> analyzed the same <code>traces.json</code> as an event log to
+                discover three process models; it did not use the EFSM as input.</p>
+        </header>
+
+        <div class="model-generation-map" role="group"
+            aria-label="First, traces.json is processed by GK-Tail+ to generate an EFSM. Then the same traces.json is processed by PM4Py to generate a DFG, Inductive Miner model, and Split Miner BPMN model">
+            <article class="generation-pass gktail-pass">
+                <header class="pass-heading">
+                    <span class="pass-number">03A</span>
+                    <div><strong>State-based inference</strong></div>
+                </header>
+                <div class="pass-flow">
+                    <div class="pass-input"><span class="lane-kicker">Input</span><code>traces.json</code><small>with
+                            captured method parameters</small></div>
+                    <span class="lane-arrow" aria-hidden="true">→</span>
+                    <div class="lane-method"><span class="lane-kicker">Algorithm</span>
+                        <h3>GK-Tail+<a href="#ref-2" aria-label="Reference 2">[2]</a></h3>
+                        <p>Learns an Guarded Finite State Machine from execution traces. Unlike a traditional Finite
+                            State Machine, this extended
+                            machine incorporates both behavioral transitions and parameter data.</p>
+                    </div>
+                    <span class="lane-arrow" aria-hidden="true">→</span>
+                    <div class="lane-output"><span
+                            class="lane-kicker">Output</span><strong>GFSM</strong><small>behavioral transitions +
+                            parameter data</small></div>
+                </div>
+            </article>
+
+            <article class="generation-pass pm4py-pass">
+                <header class="pass-heading">
+                    <span class="pass-number">03B</span>
+                    <div><strong>Process discovery</strong>
+                    </div>
+                </header>
+                <div class="pass-flow">
+                    <div class="pass-input"><span class="lane-kicker">Input </span><code>traces.json</code><small>read
+                            as event logs</small></div>
+                    <span class="lane-arrow" aria-hidden="true">→</span>
+                    <div class="lane-method"><span class="lane-kicker">Python library</span>
+                        <h3>PM4Py<a href="#ref-3" aria-label="Reference 3">[3]</a></h3>
+                        <p>Runs three process-discovery algorithms on the event log.</p>
+                    </div>
+                    <span class="lane-arrow fanout-arrow" aria-hidden="true">→</span>
+                    <div class="algorithm-fanout">
+                        <article class="algorithm-output dfg-output">
+                            <h3>Directly-Follows Graph</h3>
+                            <p>Activities are nodes; directed edges show when one activity immediately follows another.
+                            </p><strong>Output: DFG</strong>
+                        </article>
+                        <article class="algorithm-output inductive-output">
+                            <h3>Inductive Miner<a href="#ref-4" aria-label="Reference 4">[4]</a></h3>
+                            <p>Builds a structured model expressing sequences, choices and parallel executions.</p>
+                            <strong>Output: Petri Net model</strong>
+                        </article>
+                        <article class="algorithm-output split-output">
+                            <h3>Split Miner<a href="#ref-5" aria-label="Reference 5">[5]</a></h3>
+                            <p>Filters the directly-follows graph and identifies BPMN gateways, balancing fitness,
+                                precision and simplicity.</p><strong>Output: BPMN model</strong>
+                        </article>
+                    </div>
+                </div>
+            </article>
+        </div>
+
+        <section class="model-representations" aria-labelledby="representation-title">
+            <div>
+                <p class="method-type">Model representations</p>
+                <h3 id="representation-title">Graphviz and Mermaid</h3>
+            </div>
+            <div>
+                <p>Each generated model has a textual specification and a graphical representation in both Graphviz and
+                    Mermaid. These textual specifications are the model artifacts later added to the LLM input.</p>
+                <p>Some models were too large for free online editors to render as images. As a result, some graphical
+                    images are missing even where the textual specification exists.</p>
+                <a href="/artifacts">Browse available project artifacts</a>
+            </div>
+        </section>
+    </section>
+
+    <section class="experiment-detail" aria-labelledby="experiment-title">
+        <div class="experiment-heading">
+            <p class="eyebrow">The repeated experiment</p>
+            <h2 id="experiment-title">One additional artifact at a time</h2>
+            <p>For each repository, keep the article's input and add one behavioral model at the end. Run the LLM
+                decomposition, then repeat with the next model.</p>
+        </div>
+
+        <div class="experiment-flow"
+            aria-label="Baseline LLM input plus one behavioral model appended last, sent to the LLM for decomposition, repeated for each repository and model, with results shown in the Results tab">
+            <div class="input-stack">
+                <span class="stack-title">LLM input</span>
+                <span class="input-item">Baseline artifacts</span>
+                <span class="input-item added-artifact"><b>+ 1 model diagram</b><small>appended as the last
+                        artifact</small></span>
+            </div>
+            <span class="experiment-arrow" aria-hidden="true">→</span>
+            <div class="run-step">
+                <span class="stack-title">One run</span>
+                <strong>LLM decomposition</strong>
+                <small>Repository + one model</small>
+            </div>
+            <span class="experiment-arrow" aria-hidden="true">→</span>
+            <div class="repeat-step">
+                <span class="stack-title">Repeat across</span>
+                <strong>Every repository</strong>
+                <span class="repeat-cross" aria-hidden="true">×</span>
+                <strong>Every model</strong>
+            </div>
+            <span class="experiment-arrow" aria-hidden="true">→</span>
+            <a class="results-step" href="/">
+                <span class="stack-title">Outcome</span>
+                <strong>Results tab</strong>
+                <small>Final decomposition results</small>
+            </a>
+        </div>
+
+        <p class="config-note">The Results tab records <code>80k_ai</code> as the baseline and the augmented runs as
+            <code>80k_ai_dfg</code>, <code>80k_ai_gfsm</code>, <code>80k_ai_inductive_miner</code> and
+            <code>80k_ai_split_miner</code>.
+        </p>
+    </section>
+
+    <section class="references" aria-labelledby="references-title">
+        <div class="references-heading">
+            <p class="eyebrow">Sources</p>
+            <h2 id="references-title">References</h2>
+        </div>
+        <ol class="reference-list">
+            <li id="ref-1"><span>[1]</span>
+                <p>OpenTelemetry, <cite>Java Agent</cite>. <a href="https://opentelemetry.io/docs/zero-code/java/agent/"
+                        target="_blank" rel="noreferrer">opentelemetry.io/docs/zero-code/java/agent</a></p>
+            </li>
+            <li id="ref-2"><span>[2]</span>
+                <p>L. Mariani, M. Pezzè and M. Santoro, <cite>GK-Tail+ An Efficient Approach to Learn Software
+                        Models</cite>, IEEE Transactions on Software Engineering, vol. 43, no. 8, pp. 715-738, 2017. <a
+                        href="https://doi.org/10.1109/TSE.2016.2623623" target="_blank"
+                        rel="noreferrer">doi:10.1109/TSE.2016.2623623</a></p>
+            </li>
+            <li id="ref-3"><span>[3]</span>
+                <p>PM4Py, <cite>Process Mining for Python</cite>. <a href="https://processintelligence.solutions/pm4py"
+                        target="_blank" rel="noreferrer">processintelligence.solutions/pm4py</a></p>
+            </li>
+            <li id="ref-4"><span>[4]</span>
+                <p>S. J. J. Leemans, D. Fahland and W. M. P. van der Aalst, <cite>Discovering Block-Structured Process
+                        Models from Event Logs - A Constructive Approach</cite>, PETRI NETS, 2013, pp. 311-329. <a
+                        href="https://doi.org/10.1007/978-3-642-38697-8_17" target="_blank"
+                        rel="noreferrer">doi:10.1007/978-3-642-38697-8_17</a></p>
+            </li>
+            <li id="ref-5"><span>[5]</span>
+                <p>A. Augusto, R. Conforti, M. Dumas, M. La Rosa and A. Polyvyanyy, <cite>Split Miner: Automated
+                        Discovery of Accurate and Simple Business Process Models from Event Logs</cite>, Knowledge and
+                    Information Systems, vol. 59, no. 2, pp. 251-284, 2019. <a
+                        href="https://doi.org/10.1007/s10115-018-1214-x" target="_blank"
+                        rel="noreferrer">doi:10.1007/s10115-018-1214-x</a></p>
+            </li>
+        </ol>
+    </section>
+</main>

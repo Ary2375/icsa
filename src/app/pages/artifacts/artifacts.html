@@ -1,0 +1,161 @@
+<main class="artifacts-page">
+  <header class="page-heading">
+    <p class="eyebrow">Project files <span>{{ repositories().length }} repositories</span></p>
+    <h1 id="page-title">Artifacts</h1>
+    <p class="intro-copy">Source data and generated model files associated with the experiment.</p>
+  </header>
+
+  <section class="available-section" aria-labelledby="available-title">
+    <div class="section-heading">
+      <div>
+        <p class="eyebrow">Available now</p>
+        <h2 id="available-title">Results dataset</h2>
+      </div>
+      <p>Final decomposition results used by the Results dashboard.</p>
+    </div>
+
+    <article class="file-row results-file-row">
+      <div class="file-identity">
+        <span class="file-format">JSON</span>
+        <span class="file-name"><code>results.json</code><small>assets/data/results.json</small></span>
+      </div>
+      <div class="file-actions">
+        <button type="button" class="text-action" [attr.aria-expanded]="isPreviewOpen(resultsFile)" (click)="togglePreview(resultsFile)">
+          {{ isPreviewOpen(resultsFile) ? 'Hide preview' : 'Preview' }}
+        </button>
+        <a class="text-action" [href]="resultsFile.url" [attr.download]="resultsFile.name">Download</a>
+      </div>
+    </article>
+
+    @if (isPreviewOpen(resultsFile)) {
+      <div class="preview-panel file-preview" aria-live="polite">
+        @if (loadingPreview()) {
+          <p>Loading results.json...</p>
+        } @else if (previewFailed()) {
+          <p>Could not load the file preview. The download link is still available.</p>
+        } @else {
+          <pre><code>{{ previewText() }}</code></pre>
+        }
+      </div>
+    }
+  </section>
+
+  <section class="repository-section" aria-labelledby="repository-title">
+    <div class="section-heading">
+      <div>
+        <p class="eyebrow">Repository files</p>
+        <h2 id="repository-title">Telemetry and behavioral models</h2>
+      </div>
+      <p>Browse source files and rendered diagrams for each analyzed repository.</p>
+    </div>
+    <div class="repository-groups">
+      @for (repository of repositories(); track repository.name) {
+        <details class="repository-group">
+          <summary class="repository-heading">
+            <span class="folder-mark" aria-hidden="true"></span>
+            <span class="repository-title">
+              <span class="repository-kicker">Repository</span>
+              <span class="repository-name">{{ repository.name }}</span>
+            </span>
+            <span class="disclosure-mark" aria-hidden="true"></span>
+          </summary>
+          <section class="repository-content" [attr.aria-label]="repository.name + ' artifacts'">
+            <details class="artifact-section telemetry-section">
+              <summary class="section-summary">
+                <span class="section-folder" aria-hidden="true"></span>
+                <h4>Runtime telemetry</h4>
+                <span class="disclosure-mark" aria-hidden="true"></span>
+              </summary>
+              <div class="section-files">
+                @for (file of repository.telemetry; track file.id) {
+                  <article class="file-row">
+                    <div class="file-identity"><span class="file-format">{{ file.format }}</span><code>{{ file.name }}</code></div>
+                    <div class="file-actions">
+                      <button type="button" class="text-action" [attr.aria-expanded]="isPreviewOpen(file)" (click)="togglePreview(file)">
+                        {{ isPreviewOpen(file) ? 'Hide preview' : 'Preview' }}
+                      </button>
+                      <a class="text-action" [href]="file.url" [attr.download]="file.name">Download</a>
+                    </div>
+                  </article>
+                  @if (isPreviewOpen(file)) {
+                    <div class="preview-panel file-preview" aria-live="polite">
+                      @if (loadingPreview()) {
+                        <p>Loading {{ file.name }}...</p>
+                      } @else if (previewFailed()) {
+                        <p>Could not load this file. The download link is still available.</p>
+                      } @else {
+                        <pre><code>{{ previewText() }}</code></pre>
+                      }
+                    </div>
+                  }
+                }
+              </div>
+            </details>
+
+            <details class="artifact-section model-collection">
+              <summary class="section-summary">
+                <span class="section-folder" aria-hidden="true"></span>
+                <h4>Behavioral models</h4>
+                <span class="disclosure-mark" aria-hidden="true"></span>
+              </summary>
+              <div class="model-list">
+                @for (model of repository.models; track model.id) {
+                  <details class="model-artifact">
+                    <summary class="model-summary">
+                      <span class="model-folder" aria-hidden="true"></span>
+                      <span>{{ model.label }}</span>
+                      <span class="disclosure-mark" aria-hidden="true"></span>
+                    </summary>
+                    <div class="model-content">
+                      <div class="model-sources">
+                        @for (source of model.sources; track source.id) {
+                          <article class="file-row source-row">
+                            <div class="file-identity"><span class="file-format">{{ source.format }}</span><code>{{ source.name }}</code></div>
+                            <div class="file-actions">
+                              <button type="button" class="text-action" [attr.aria-expanded]="isPreviewOpen(source)" (click)="togglePreview(source)">
+                                {{ isPreviewOpen(source) ? 'Hide source' : 'View source' }}
+                              </button>
+                              <a class="text-action" [href]="source.url" [attr.download]="source.name">Download</a>
+                            </div>
+                          </article>
+                          @if (isPreviewOpen(source)) {
+                            <div class="preview-panel file-preview" aria-live="polite">
+                              @if (loadingPreview()) {
+                                <p>Loading {{ source.name }}...</p>
+                              } @else if (previewFailed()) {
+                                <p>Could not load this file. The download link is still available.</p>
+                              } @else {
+                                <pre><code>{{ previewText() }}</code></pre>
+                              }
+                            </div>
+                          }
+                        }
+                      </div>
+                      @if (model.images.length) {
+                        <div class="diagram-gallery">
+                          @for (image of model.images; track image.id) {
+                            <figure class="diagram-preview">
+                              <a [href]="image.url" target="_blank" rel="noreferrer" [attr.aria-label]="'Open ' + model.label + ' ' + image.format + ' diagram'">
+                                <img [src]="image.url" [alt]="model.label + ' rendered diagram, ' + image.format" loading="lazy" />
+                              </a>
+                              <figcaption>
+                                <span>{{ image.format }} preview</span>
+                                <a class="text-action" [href]="image.url" [attr.download]="image.name">Download</a>
+                              </figcaption>
+                            </figure>
+                          }
+                        </div>
+                      }
+                    </div>
+                  </details>
+                }
+              </div>
+            </details>
+          </section>
+        </details>
+      } @empty {
+        <p>No repositories were found in the results dataset.</p>
+      }
+    </div>
+  </section>
+</main>

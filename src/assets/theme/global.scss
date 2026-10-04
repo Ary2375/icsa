@@ -1,0 +1,168 @@
+:root {
+  --project-page-bg: var(--color-canvas);
+  --project-ink: var(--color-ink);
+  --project-muted: var(--color-body);
+  --project-accent: var(--color-accent);
+  --project-blue: var(--color-blue);
+  --project-rule: var(--color-border-page);
+  --project-content-width: 1280px;
+  --project-page-gutter: clamp(1.2rem, 6vw, 6rem);
+}
+
+app-methodology,
+app-artifacts {
+  display: block;
+  min-height: calc(100vh - 68px);
+  background: var(--project-page-bg);
+  color: var(--project-ink);
+}
+
+app-methodology .methodology-page,
+app-artifacts .artifacts-page {
+  max-width: var(--project-content-width);
+  margin-inline: auto;
+  padding: clamp(2.5rem, 6vw, 5rem) var(--project-page-gutter);
+}
+
+app-methodology .intro,
+app-artifacts .page-heading {
+  max-width: 900px;
+  padding-bottom: 3.2rem;
+}
+
+app-methodology .eyebrow,
+app-artifacts .eyebrow {
+  margin: 0 0 0.7rem;
+  color: var(--project-accent);
+  font-size: 0.7rem;
+  font-weight: 750;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+}
+
+app-methodology .intro .eyebrow span,
+app-artifacts .page-heading .eyebrow span {
+  margin-left: 0.8rem;
+  color: var(--color-muted);
+}
+
+app-methodology h1,
+app-methodology h2,
+app-methodology h3,
+app-methodology h4,
+app-methodology p,
+app-artifacts h1,
+app-artifacts h2,
+app-artifacts h3,
+app-artifacts p {
+  margin-top: 0;
+}
+
+app-methodology h1,
+app-methodology h2,
+app-artifacts h1,
+app-artifacts h2 {
+  font-family: Georgia, 'Times New Roman', serif;
+  font-weight: 500;
+}
+
+app-methodology .intro h1,
+app-artifacts .page-heading h1 {
+  margin: 0 0 1.2rem;
+  font-size: 4rem;
+  line-height: 1;
+}
+
+app-methodology .intro-copy,
+app-artifacts .page-heading .intro-copy {
+  max-width: 650px;
+  margin: 0;
+  color: var(--project-muted);
+  font-size: 1rem;
+  line-height: 1.7;
+}
+
+app-methodology .pipeline-overview,
+app-methodology .collection-detail,
+app-methodology .model-generation,
+app-methodology .experiment-detail,
+app-methodology .references,
+app-artifacts .available-section,
+app-artifacts .repository-section {
+  padding-block: 2.5rem;
+  border-top: 1px solid var(--project-rule);
+}
+
+app-methodology .section-heading,
+app-methodology .detail-section-heading,
+app-methodology .experiment-heading,
+app-methodology .references-heading,
+app-artifacts .section-heading {
+  display: flex;
+  align-items: flex-start;
+  flex-direction: column;
+  gap: 0.55rem;
+  margin-bottom: 1.8rem;
+}
+
+app-methodology .section-heading .eyebrow,
+app-methodology .detail-section-heading .eyebrow,
+app-methodology .experiment-heading .eyebrow,
+app-methodology .references-heading .eyebrow,
+app-artifacts .section-heading .eyebrow {
+  margin-bottom: 0.45rem;
+}
+
+app-methodology .section-heading h2,
+app-methodology .detail-section-heading h2,
+app-methodology .experiment-heading h2,
+app-methodology .references-heading h2,
+app-artifacts .section-heading h2 {
+  margin: 0;
+  font-size: 2rem;
+  line-height: 1.15;
+}
+
+app-methodology .section-note,
+app-methodology .detail-section-heading > p,
+app-methodology .experiment-heading > p:last-child,
+app-artifacts .section-heading > p {
+  max-width: 760px;
+  margin: 0;
+  color: var(--project-muted);
+  font-size: 0.85rem;
+  line-height: 1.6;
+}
+
+@media (max-width: 600px) {
+  app-methodology .methodology-page,
+  app-artifacts .artifacts-page {
+    padding-inline: 1.1rem;
+  }
+
+  app-methodology .intro,
+  app-artifacts .page-heading {
+    padding-bottom: 3rem;
+  }
+
+  app-methodology .intro h1,
+  app-artifacts .page-heading h1 {
+    font-size: 3rem;
+  }
+
+  app-methodology .section-heading,
+  app-methodology .detail-section-heading,
+  app-methodology .experiment-heading,
+  app-methodology .references-heading,
+  app-artifacts .section-heading {
+    gap: 0.8rem;
+  }
+
+  app-methodology .section-heading h2,
+  app-methodology .detail-section-heading h2,
+  app-methodology .experiment-heading h2,
+  app-methodology .references-heading h2,
+  app-artifacts .section-heading h2 {
+    font-size: 1.75rem;
+  }
+}

@@ -1,0 +1,78 @@
+stateDiagram-v2
+  direction LR
+  q0 --> q1 : OwnerController.setAllowedFields [dataBinder in {"org.springframework.web.servlet.mvc.method.annotation.ExtendedServletRequestDataBinder@4e24b174", "org.springframework.web.servlet.mvc.method.annotation.ExtendedServletRequestDataBinder@104ab57b", "org.springframework.web.servlet.mvc.method.annotation.ExtendedServletRequestDataBinder@5bc0d62d", "org.springframework.web.servlet.mvc.method.annotation.ExtendedServletRequestDataBinder@6b02f644", "org.springframework.web.servlet.mvc.method.annotation.ExtendedServletRequestDataBinder@281a0671"}]
+  q0 --> q7 : OwnerController.setAllowedFields [dataBinder == "org.springframework.web.servlet.mvc.method.annotation.ExtendedServletRequestDataBinder@652b1eea"]
+  q0 --> q9 : OwnerController.setAllowedFields [dataBinder in {"org.springframework.web.servlet.mvc.method.annotation.ExtendedServletRequestDataBinder@1279b142", "org.springframework.web.servlet.mvc.method.annotation.ExtendedServletRequestDataBinder@7367b2bd", "org.springframework.web.servlet.mvc.method.annotation.ExtendedServletRequestDataBinder@67b12a7", "org.springframework.web.servlet.mvc.method.annotation.ExtendedServletRequestDataBinder@61b4da5c", "org.springframework.web.servlet.mvc.method.annotation.ExtendedServletRequestDataBinder@3d79168b", "org.springframework.web.servlet.mvc.method.annotation.ExtendedServletRequestDataBinder@6b0fc76b", "org.springframework.web.servlet.mvc.method.annotation.ExtendedServletRequestDataBinder@6f06d068", "org.springframework.web.servlet.mvc.method.annotation.ExtendedServletRequestDataBinder@7dd9a18c", "org.springframework.web.servlet.mvc.method.annotation.ExtendedServletRequestDataBinder@628d3123", "org.springframework.web.servlet.mvc.method.annotation.ExtendedServletRequestDataBinder@64eedae0"}]
+  q0 --> q37 : OwnerController.setAllowedFields [dataBinder == "org.springframework.web.servlet.mvc.method.annotation.ExtendedServletRequestDataBinder@5394dbfe"]
+  q0 --> q41 : OwnerController.setAllowedFields [dataBinder == "org.springframework.web.servlet.mvc.method.annotation.ExtendedServletRequestDataBinder@75ad0ea9"]
+  q0 --> q1 : OwnerRepository.findById
+  q0 --> q1 : OwnerRepository.findByLastName
+  q0 --> q1 : OwnerRepository.findPetTypes
+  q0 --> q1 : OwnerRepository.save
+  q0 --> q2 : PetController.findPet [ownerId == 1 and petId in {null, 1}]
+  q0 --> q1 : VetController.showResourcesVetList
+  q0 --> q27 : VetController.showVetList [page == 1]
+  q0 --> q1 : VetRepository.findAll
+  q0 --> q0 : VisitController.setAllowedFields [dataBinder in {"org.springframework.web.servlet.mvc.method.annotation.ExtendedServletRequestDataBinder@41eb9743", "org.springframework.web.servlet.mvc.method.annotation.ExtendedServletRequestDataBinder@1863ebc6", "org.springframework.web.servlet.mvc.method.annotation.ExtendedServletRequestDataBinder@635b5740", "org.springframework.web.servlet.mvc.method.annotation.ExtendedServletRequestDataBinder@7bd43ad7"}]
+  q0 --> q1 : VisitController.setAllowedFields [dataBinder in {"org.springframework.web.servlet.mvc.method.annotation.ExtendedServletRequestDataBinder@3edea5f9", "org.springframework.web.servlet.mvc.method.annotation.ExtendedServletRequestDataBinder@77129106"}]
+  q0 --> q29 : VisitController.setAllowedFields [dataBinder in {"org.springframework.web.servlet.mvc.method.annotation.ExtendedServletRequestDataBinder@373dcd9d", "org.springframework.web.servlet.mvc.method.annotation.ExtendedServletRequestDataBinder@3f730e66", "org.springframework.web.servlet.mvc.method.annotation.ExtendedServletRequestDataBinder@323ab952"}]
+  q0 --> q33 : VisitController.setAllowedFields [dataBinder in {"org.springframework.web.servlet.mvc.method.annotation.ExtendedServletRequestDataBinder@2ffa1f25", "org.springframework.web.servlet.mvc.method.annotation.ExtendedServletRequestDataBinder@1cc3fcd6"}]
+  q2 --> q3 : PetController.populatePetTypes
+  q2 --> q15 : PetController.populatePetTypes
+  q3 --> q4 : PetController.findOwner [ownerId == 1]
+  q3 --> q18 : PetController.findOwner [ownerId == 1]
+  q3 --> q22 : PetController.findOwner [ownerId == 1]
+  q4 --> q5 : PetController.initOwnerBinder [dataBinder == "org.springframework.web.servlet.mvc.method.annotation.ExtendedServletRequestDataBinder@3b9b3325"]
+  q5 --> q6 : PetController.initCreationForm [owner == "[Owner@6772f9c7 id = [null], new = true, lastName = [null], firstName = [null], address = [null], city = [null], telephone = [null]]"]
+  q6 --> q1 : PetController.initPetBinder [dataBinder in {"org.springframework.web.servlet.mvc.method.annotation.ExtendedServletRequestDataBinder@c85cbf7", "org.springframework.web.servlet.mvc.method.annotation.ExtendedServletRequestDataBinder@46a95286"}]
+  q6 --> q16 : PetController.initPetBinder [dataBinder in {"org.springframework.web.servlet.mvc.method.annotation.ExtendedServletRequestDataBinder@48fe904f", "org.springframework.web.servlet.mvc.method.annotation.ExtendedServletRequestDataBinder@467f21f8"}]
+  q7 --> q8 : OwnerController.findOwner [ownerId == null]
+  q8 --> q0 : OwnerController.initCreationForm
+  q9 --> q10 : OwnerController.findOwner [ownerId in {null, 1}]
+  q9 --> q20 : OwnerController.findOwner [ownerId == 1]
+  q9 --> q35 : OwnerController.findOwner [ownerId == 1]
+  q9 --> q39 : OwnerController.findOwner [ownerId == null]
+  q10 --> q11 : OwnerController.setAllowedFields [dataBinder in {"org.springframework.web.servlet.mvc.method.annotation.ExtendedServletRequestDataBinder@9c10e9c", "org.springframework.web.servlet.mvc.method.annotation.ExtendedServletRequestDataBinder@11d85254", "org.springframework.web.servlet.mvc.method.annotation.ExtendedServletRequestDataBinder@7914c8ac"}]
+  q10 --> q25 : OwnerController.setAllowedFields [dataBinder in {"org.springframework.web.servlet.mvc.method.annotation.ExtendedServletRequestDataBinder@74b3f968", "org.springframework.web.servlet.mvc.method.annotation.ExtendedServletRequestDataBinder@78381ea0", "org.springframework.web.servlet.mvc.method.annotation.ExtendedServletRequestDataBinder@42d7b96"}]
+  q11 --> q12 : OwnerController.setAllowedFields [dataBinder in {"org.springframework.web.servlet.mvc.method.annotation.ExtendedServletRequestDataBinder@2b17b49e", "org.springframework.web.servlet.mvc.method.annotation.ExtendedServletRequestDataBinder@47cf6b01", "org.springframework.web.servlet.mvc.method.annotation.ExtendedServletRequestDataBinder@5214cf10"}]
+  q12 --> q13 : OwnerController.processFindForm [owner in {"[Owner@177e6486 id = [null], new = true, lastName = [null], firstName = [null], address = [null], city = [null], telephone = [null]]", "[Owner@2417f69f id = [null], new = true, lastName = 'Unknown Surname', firstName = [null], address = [null], city = [null], telephone = [null]]", "[Owner@5e57b7ef id = [null], new = true, lastName = 'Franklin', firstName = [null], address = [null], city = [null], telephone = [null]]"} and page == 1]
+  q13 --> q1 : OwnerController.findPaginatedForOwnersLastName [lastname in {"Unknown Surname", "Franklin"} and page == 1]
+  q13 --> q14 : OwnerController.findPaginatedForOwnersLastName [lastname == "" and page == 1]
+  q14 --> q1 : OwnerController.addPaginationModel [page == 1 and paginated == "Page 1 of 1 containing org.springframework.samples.petclinic.owner.Owner instances"]
+  q15 --> q6 : PetController.findOwner [ownerId == 1]
+  q16 --> q17 : PetController.initOwnerBinder [dataBinder in {"org.springframework.web.servlet.mvc.method.annotation.ExtendedServletRequestDataBinder@37347be1", "org.springframework.web.servlet.mvc.method.annotation.ExtendedServletRequestDataBinder@d030dd3"}]
+  q17 --> q1 : PetController.processUpdateForm [owner in {"[Owner@a1100b7 id = [null], new = true, lastName = [null], firstName = [null], address = [null], city = [null], telephone = [null]]", "[Owner@46d50b32 id = [null], new = true, lastName = [null], firstName = [null], address = [null], city = [null], telephone = [null]]"} and pet == "Betty"]
+  q18 --> q19 : PetController.initOwnerBinder [dataBinder == "org.springframework.web.servlet.mvc.method.annotation.ExtendedServletRequestDataBinder@6e96492b"]
+  q19 --> q6 : PetController.initUpdateForm [owner == "[Owner@5256c05e id = [null], new = true, lastName = [null], firstName = [null], address = [null], city = [null], telephone = [null]]" and petId == 1]
+  q20 --> q21 : OwnerController.setAllowedFields [dataBinder == "org.springframework.web.servlet.mvc.method.annotation.ExtendedServletRequestDataBinder@3b4004cd"]
+  q21 --> q0 : OwnerController.initUpdateOwnerForm [ownerId == 1]
+  q22 --> q23 : PetController.initOwnerBinder [dataBinder in {"org.springframework.web.servlet.mvc.method.annotation.ExtendedServletRequestDataBinder@2dec2b42", "org.springframework.web.servlet.mvc.method.annotation.ExtendedServletRequestDataBinder@57104caa"}]
+  q23 --> q24 : PetController.initPetBinder [dataBinder in {"org.springframework.web.servlet.mvc.method.annotation.ExtendedServletRequestDataBinder@4f8c37c1", "org.springframework.web.servlet.mvc.method.annotation.ExtendedServletRequestDataBinder@72309bc"}]
+  q24 --> q1 : PetController.processCreationForm [owner in {"[Owner@51c26394 id = [null], new = true, lastName = [null], firstName = [null], address = [null], city = [null], telephone = [null]]", "[Owner@2c507e20 id = [null], new = true, lastName = [null], firstName = [null], address = [null], city = [null], telephone = [null]]"} and pet == "Betty"]
+  q25 --> q26 : OwnerController.setAllowedFields [dataBinder in {"org.springframework.web.servlet.mvc.method.annotation.ExtendedServletRequestDataBinder@679a6394", "org.springframework.web.servlet.mvc.method.annotation.ExtendedServletRequestDataBinder@2e205e62", "org.springframework.web.servlet.mvc.method.annotation.ExtendedServletRequestDataBinder@7e486dcf"}]
+  q26 --> q1 : OwnerController.processUpdateOwnerForm [owner in {"[Owner@4bf48307 id = 1, new = false, lastName = 'Franklin', firstName = 'George', address = '110 W. Liberty St.', city = 'Madison', telephone = '6085551023']", "[Owner@18a71e25 id = 1, new = false, lastName = 'Bloggs', firstName = 'Joe', address = '', city = 'Madison', telephone = '']", "[Owner@32e2e611 id = 1, new = false, lastName = 'Bloggs', firstName = 'Joe', address = '123 Caramel Street', city = 'London', telephone = '01616291589']"} and ownerId == 1]
+  q27 --> q28 : VetController.findPaginated [page == 1]
+  q28 --> q1 : VetController.addPaginationModel [page == 1 and paginated == "Page 1 of 1 containing org.springframework.samples.petclinic.vet.Vet instances"]
+  q29 --> q30 : VisitController.setAllowedFields [dataBinder == "org.springframework.web.servlet.mvc.method.annotation.ExtendedServletRequestDataBinder@341ba2e0"]
+  q29 --> q32 : VisitController.setAllowedFields [dataBinder in {"org.springframework.web.servlet.mvc.method.annotation.ExtendedServletRequestDataBinder@3d4fc9f5", "org.springframework.web.servlet.mvc.method.annotation.ExtendedServletRequestDataBinder@59fc62ff"}]
+  q30 --> q31 : VisitController.loadPetWithVisit [ownerId == 1 and petId == 1]
+  q31 --> q0 : VisitController.initNewVisitForm
+  q32 --> q0 : VisitController.loadPetWithVisit [ownerId == 1 and petId == 1]
+  q33 --> q34 : VisitController.setAllowedFields [dataBinder in {"org.springframework.web.servlet.mvc.method.annotation.ExtendedServletRequestDataBinder@50599a7e", "org.springframework.web.servlet.mvc.method.annotation.ExtendedServletRequestDataBinder@26928e2b"}]
+  q34 --> q0 : VisitController.processNewVisitForm [owner == "[Owner@8eeb409 id = [null], new = true, lastName = [null], firstName = [null], address = [null], city = [null], telephone = [null]]" and petId == 1 and visit == "org.springframework.samples.petclinic.owner.Visit@68648137"]
+  q34 --> q1 : VisitController.processNewVisitForm [owner == "[Owner@6d654064 id = [null], new = true, lastName = [null], firstName = [null], address = [null], city = [null], telephone = [null]]" and petId == 1 and visit == "org.springframework.samples.petclinic.owner.Visit@32cf3e7b"]
+  q35 --> q36 : OwnerController.setAllowedFields [dataBinder in {"org.springframework.web.servlet.mvc.method.annotation.ExtendedServletRequestDataBinder@ae4c757", "org.springframework.web.servlet.mvc.method.annotation.ExtendedServletRequestDataBinder@af53def"}]
+  q36 --> q0 : OwnerController.showOwner [ownerId == 1]
+  q36 --> q38 : OwnerController.showOwner [ownerId == 1]
+  q37 --> q38 : OwnerController.findOwner [ownerId == 1]
+  q38 --> q0 : OwnerRepository.findById
+  q38 --> q35 : OwnerRepository.findById
+  q39 --> q40 : OwnerController.setAllowedFields [dataBinder in {"org.springframework.web.servlet.mvc.method.annotation.ExtendedServletRequestDataBinder@1dabc2f8", "org.springframework.web.servlet.mvc.method.annotation.ExtendedServletRequestDataBinder@41997a02"}]
+  q40 --> q1 : OwnerController.processCreationForm [owner in {"[Owner@389467e9 id = [null], new = true, lastName = 'Bloggs', firstName = 'Joe', address = '123 Caramel Street', city = 'London', telephone = '01316761638']", "[Owner@7c8241eb id = [null], new = true, lastName = 'Bloggs', firstName = 'Joe', address = [null], city = 'London', telephone = [null]]"}]
+  q41 --> q42 : OwnerController.findOwner [ownerId == null]
+  q42 --> q0 : OwnerController.initFindForm
+
+  %% Accepting states
+  note right of q1
+    accepting
+  end note

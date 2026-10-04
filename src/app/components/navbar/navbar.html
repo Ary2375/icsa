@@ -1,1 +1,11 @@
-<p>navbar works!</p>
+<header class="site-header">
+    <a class="project-name" routerLink="/" aria-label="Dashboard">
+        <span>Runtime Behavioral Models for LLM-Driven Microservice Decomposition</span>
+    </a>
+    <nav aria-label="Main navigation">
+        <a routerLink="/" [routerLinkActiveOptions]="{ exact: true }" routerLinkActive="active"
+            ariaCurrentWhenActive="page">Results</a>
+        <a routerLink="/methodology" routerLinkActive="active" ariaCurrentWhenActive="page">Methodology</a>
+        <a routerLink="/artifacts" routerLinkActive="active" ariaCurrentWhenActive="page">Artifacts</a>
+    </nav>
+</header>

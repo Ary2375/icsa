@@ -1,0 +1,80 @@
+.site-header {
+	min-height: 68px;
+	padding: 0 clamp(1rem, 4vw, 3.5rem);
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	gap: 1.5rem;
+	border-bottom: 1px solid var(--color-border-header);
+	background: var(--color-surface-header);
+}
+
+.project-name,
+nav a {
+	color: var(--color-ink);
+	text-decoration: none;
+}
+
+.project-name {
+	display: inline-flex;
+	align-items: center;
+	gap: 0.7rem;
+	font-size: 0.95rem;
+	font-weight: 700;
+}
+
+.project-mark {
+	display: grid;
+	width: 32px;
+	aspect-ratio: 1;
+	place-items: center;
+	background: var(--color-ink);
+	color: var(--color-surface);
+	font-size: 0.7rem;
+	letter-spacing: 0;
+}
+
+nav {
+	display: flex;
+	align-items: stretch;
+	align-self: stretch;
+	gap: 1.4rem;
+}
+
+nav a {
+	display: flex;
+	align-items: center;
+	border-bottom: 2px solid var(--color-transparent);
+	color: var(--color-nav-muted);
+	font-size: 0.9rem;
+}
+
+nav a:hover,
+nav a.active {
+	border-bottom-color: var(--color-nav-active);
+	color: var(--color-ink);
+}
+
+@media (max-width: 520px) {
+	.site-header {
+		gap: 0.8rem;
+		padding-inline: 1rem;
+	}
+
+	.project-name {
+		gap: 0.5rem;
+		font-size: 0.78rem;
+	}
+
+	.project-mark {
+		width: 28px;
+	}
+
+	nav {
+		gap: 0.8rem;
+	}
+
+	nav a {
+		font-size: 0.78rem;
+	}
+}

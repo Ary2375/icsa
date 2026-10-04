@@ -1,0 +1,33 @@
+digraph EFSM {
+  rankdir=LR;
+  labelloc="t";
+  label="GK-TAIL+ EFSM";
+  node [shape=circle, fontname="Helvetica"];
+  edge [fontname="Helvetica"];
+
+  __start__ [shape=point];
+  __start__ -> q0;
+
+  q0;
+  q1;
+  q2 [shape=doublecircle];
+  q3;
+  q4;
+  q5;
+
+  q0 -> q5 [label="AccountService.getAccount\n[password in {\n    \"j2ee\",\n    \"password\"\n},\nusername in {\n    \"j2ee\",\n    1788085673468\n}]"];
+  q0 -> q0 [label="AccountService.insertAccount\n[account = \"org.mybatis.jpetstore.domain.Account@46a1969a\"]"];
+  q0 -> q2 [label="CatalogService.getItem\n[itemId in {\n    \"EST-1\",\n    \"EST-18\",\n    \"EST-20\"\n}]"];
+  q0 -> q3 [label="CatalogService.getItemListByProduct\n[productId in {\n    \"FI-SW-01\",\n    \"FI-FW-02\",\n    \"AV-CB-01\"\n}]"];
+  q0 -> q1 [label="CatalogService.getProductListByCategory\n[categoryId in {\n    \"BIRDS\",\n    \"FISH\",\n    \"DOGS\",\n    \"REPTILES\",\n    \"CATS\"\n}]"];
+  q0 -> q0 [label="CatalogService.isItemInStock\n[itemId in {\n    \"EST-18\",\n    \"EST-20\"\n}]"];
+  q0 -> q2 [label="CatalogService.searchProductList\n[keywords = \"fish\"]"];
+  q0 -> q2 [label="OrderService.getOrder\n[orderId = 1000]"];
+  q0 -> q2 [label="OrderService.getOrdersByUsername\n[username = \"j2ee\"]"];
+  q0 -> q4 [label="OrderService.insertOrder\n[order = \"org.mybatis.jpetstore.domain.Order@cd28589\"]"];
+  q0 -> q2 [label="ResponseFacade.sendRedirect"];
+  q1 -> q2 [label="CatalogService.getCategory\n[categoryId in {\n    \"BIRDS\",\n    \"FISH\",\n    \"DOGS\",\n    \"REPTILES\",\n    \"CATS\"\n}]"];
+  q3 -> q2 [label="CatalogService.getProduct\n[productId in {\n    \"FI-SW-01\",\n    \"FI-FW-02\",\n    \"AV-CB-01\"\n}]"];
+  q4 -> q2 [label="OrderService.getNextId\n[name = \"ordernum\"]"];
+  q5 -> q0 [label="CatalogService.getProductListByCategory\n[categoryId in {\n    \"DOGS\",\n    \"CATS\"\n}]"];
+}
