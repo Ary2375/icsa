@@ -13,9 +13,36 @@ app-methodology,
 app-artifacts,
 app-dashboard {
   display: block;
-  min-height: calc(100vh - 68px);
+  min-height: 0;
+  flex: 1 0 auto;
   background: var(--project-page-bg);
   color: var(--project-ink);
+}
+
+app-root {
+  display: flex;
+  min-height: 100vh;
+  flex-direction: column;
+}
+
+app-root > app-navbar {
+  flex: 0 0 auto;
+}
+
+app-root > router-outlet {
+  display: none;
+}
+
+.site-footer {
+  flex: 0 0 auto;
+  margin-top: auto;
+  padding: 0.75rem var(--project-page-gutter);
+  border-top: 1px solid var(--color-border-page);
+  background: var(--color-surface-header);
+  color: var(--color-muted);
+  font-size: 0.68rem;
+  line-height: 1.5;
+  text-align: center;
 }
 
 app-methodology .methodology-page,
@@ -185,5 +212,14 @@ app-dashboard .section-heading > p {
   app-artifacts .section-heading h2,
   app-dashboard .section-heading h2 {
     font-size: 1.75rem;
+  }
+}
+
+@media (max-width: 700px) {
+  .site-footer-inner {
+    align-items: flex-start;
+    flex-direction: column;
+    gap: 0.35rem;
+    padding-block: 0.9rem;
   }
 }
