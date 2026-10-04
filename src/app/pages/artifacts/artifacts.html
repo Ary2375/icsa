@@ -139,7 +139,7 @@
                                 <img [src]="image.url" [alt]="model.label + ' rendered diagram, ' + image.format" loading="lazy" />
                               </a>
                               <figcaption>
-                                <span>{{ image.format }} preview</span>
+                                <span>{{ image.renderedFrom ? image.renderedFrom + ' rendering (' + image.format + ')' : image.format + ' preview' }}</span>
                                 <a class="text-action" [href]="image.url" [attr.download]="image.name">Download</a>
                               </figcaption>
                             </figure>

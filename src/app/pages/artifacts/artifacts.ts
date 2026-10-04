@@ -8,6 +8,7 @@ export interface ArtifactFile {
   readonly url: string;
   readonly kind: 'text' | 'image';
   readonly format: string;
+  readonly renderedFrom?: 'DOT' | 'MMD';
 }
 
 export interface ModelArtifact {
@@ -26,7 +27,8 @@ export interface RepositoryArtifacts {
 function artifactFile(path: string, kind: ArtifactFile['kind']): ArtifactFile {
   const name = path.split('/').at(-1) ?? path;
   const extension = name.split('.').at(-1)?.toUpperCase() ?? 'FILE';
-  return { id: path, name, url: `/assets/artifacts/${path}`, kind, format: extension };
+  const renderedFrom = /_graphviz\./i.test(name) ? 'DOT' : /_mermaid\./i.test(name) ? 'MMD' : undefined;
+  return { id: path, name, url: `assets/artifacts/${path}`, kind, format: extension, renderedFrom };
 }
 
 function modelArtifact(
@@ -105,7 +107,7 @@ export class Artifacts implements OnInit {
   readonly resultsFile: ArtifactFile = {
     id: 'results.json',
     name: 'results.json',
-    url: '/assets/data/results.json',
+    url: 'assets/data/results.json',
     kind: 'text',
     format: 'JSON',
   };
