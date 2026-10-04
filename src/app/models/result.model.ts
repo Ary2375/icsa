@@ -1,4 +1,4 @@
-export const METRICS = ['CiD', 'CMod', 'BCP', 'DI', 'DTP', 'TC', 'LC', 'MoJoFM'] as const;
+export const METRICS = ['CiD', 'CMod', 'BCP', 'DI', 'DTP', 'TC', 'LC', 'MoJoFM', 'c2c_cvg 10%', 'c2c_cvg 33%', 'c2c_cvg 50%'] as const;
 export type Metric = (typeof METRICS)[number];
 
 export class Result {
@@ -22,6 +22,9 @@ export class Result {
     TC!: number;
     LC!: number;
     MoJoFM!: number;
+    'c2c_cvg 10%'!: number;
+    'c2c_cvg 33%'!: number;
+    'c2c_cvg 50%'!: number;
 
     static clone(results: Result): Result {
         const clone: Result = new Result();
@@ -37,6 +40,9 @@ export class Result {
         clone.TC = results.TC;
         clone.LC = results.LC;
         clone.MoJoFM = results.MoJoFM;
+        clone['c2c_cvg 10%'] = results['c2c_cvg 10%'];
+        clone['c2c_cvg 33%'] = results['c2c_cvg 33%'];
+        clone['c2c_cvg 50%'] = results['c2c_cvg 50%'];
 
         return clone;
     }

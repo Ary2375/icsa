@@ -27,6 +27,9 @@ export class ResultsService {
                         TC: r['TC'],
                         LC: r['LC'],
                         MoJoFM: r['MoJoFM'],
+                        'c2c_cvg 10%': r['c2c_cvg 10%'],
+                        'c2c_cvg 33%': r['c2c_cvg 33%'],
+                        'c2c_cvg 50%': r['c2c_cvg 50%'],
                     } as Result))
                 )
             );
