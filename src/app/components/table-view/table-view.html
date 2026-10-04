@@ -2,7 +2,6 @@
   <div class="comparison-key" aria-label="Comparison legend">
     <span><i class="key-swatch improved" aria-hidden="true"></i>Improved vs 80k_ai</span>
     <span><i class="key-swatch worsened" aria-hidden="true"></i>Worsened vs 80k_ai</span>
-    <span class="comparison-scope">Same case study and tool; higher score is better.</span>
   </div>
   <table>
     <thead>
@@ -10,36 +9,37 @@
         <th>Tool</th>
         <th>Strategy</th>
         @for (metric of metrics(); track metric) {
-          <th>{{ metric }}</th>
+        <th>{{ metric }}</th>
         }
       </tr>
     </thead>
     <tbody>
       @for (group of groupedResults(); track group.caseStudy) {
-        <tr class="case-study-heading">
-          <th [attr.colspan]="2 + metrics().length" scope="rowgroup">{{ group.caseStudy }}</th>
-        </tr>
-        @for (row of group.rows; track row.result.configKey) {
-          <tr [class.baseline-row]="row.result.strategy === '80k_ai'">
-            <td>{{ row.result.tool }}</td>
-            <td>{{ row.result.strategy }}@if (row.result.strategy === '80k_ai') { <span class="baseline-label">Baseline</span> }</td>
-            @for (metric of metrics(); track metric) {
-              @let delta = metricDelta(row, metric);
-              <td class="num metric-cell" [class.improved]="delta !== null && delta > 0" [class.worsened]="delta !== null && delta < 0">
-                <span>{{ row.result[metric] | number: '1.1-1' }}</span>
-                @if (delta !== null) {
-                  <small class="metric-delta">
-                    {{ delta > 0 ? '↑ +' : delta < 0 ? '↓ ' : '· ' }}{{ delta | number: '1.1-1' }}
-                  </small>
-                }
-              </td>
-            }
-          </tr>
+      <tr class="case-study-heading">
+        <th [attr.colspan]="2 + metrics().length" scope="rowgroup">{{ group.caseStudy }}</th>
+      </tr>
+      @for (row of group.rows; track row.result.configKey) {
+      <tr [class.baseline-row]="row.result.strategy === '80k_ai'">
+        <td>{{ row.result.tool }}</td>
+        <td>{{ row.result.strategy }}@if (row.result.strategy === '80k_ai') { <span
+            class="baseline-label">Baseline</span> }</td>
+        @for (metric of metrics(); track metric) {
+        @let delta = metricDelta(row, metric);
+        <td class="num metric-cell" [class.improved]="delta !== null && delta > 0"
+          [class.worsened]="delta !== null && delta < 0">
+          <span>{{ row.result[metric] | number: '1.1-1' }}</span>
+          @if (delta !== null) {
+          <small class="metric-delta">
+            {{ delta > 0 ? '↑ +' : delta < 0 ? '↓ ' : '· ' }}{{ delta | number: '1.1-1' }} </small>
+              }
+        </td>
         }
+      </tr>
+      }
       } @empty {
-        <tr>
-          <td [attr.colspan]="2 + metrics().length">No results for the selected filters.</td>
-        </tr>
+      <tr>
+        <td [attr.colspan]="2 + metrics().length">No results for the selected filters.</td>
+      </tr>
       }
     </tbody>
   </table>
