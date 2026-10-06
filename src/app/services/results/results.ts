@@ -44,6 +44,8 @@ export class ResultsService {
 
             '80k_ai',
 
+            '80k_ai_all',
+
             '80k_ai_dfg',
 
             '80k_ai_gfsm',
