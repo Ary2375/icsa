@@ -1,10 +1,19 @@
-import { Component, computed, input, model } from '@angular/core';
+import { Component, computed, effect, input, model, signal } from '@angular/core';
 import { Metric, METRICS, Result } from '../../models/result.model';
+import { compareChunks, parseStrategy, strategyFamily, variantOf } from '../../utils/chart-colors';
 
-interface ToolNode {
-  tool: string;
+type Dimension = 'tool' | 'family' | 'chunk' | 'variant';
+
+interface Option {
+  value: string;
   label: string;
-  configs: { key: string; strategy: string }[];
+}
+
+const DIMENSIONS: Dimension[] = ['tool', 'family', 'chunk', 'variant'];
+
+function dimensionValues(r: Result): Record<Dimension, string> {
+  const { chunk, kind } = parseStrategy(r.strategy);
+  return { tool: r.tool, family: strategyFamily(kind), chunk, variant: variantOf(kind) };
 }
 
 @Component({
@@ -17,49 +26,62 @@ export class Filters {
   readonly results = input<Result[]>([]);
 
   readonly selectedConfigs = model<string[]>([]);
-  readonly selectedCaseStudies = model<string[]>([]);
   readonly selectedMetrics = model<Metric[]>([]);
 
   readonly metrics = METRICS;
 
-  readonly tree = computed<ToolNode[]>(() => {
-    const byTool = new Map<string, Map<string, string>>();
-    for (const r of this.results()) {
-      if (!byTool.has(r.tool)) byTool.set(r.tool, new Map());
-      byTool.get(r.tool)!.set(r.configKey, r.strategy);
-    }
-    return [...byTool].map(([tool, configs]) => ({
-      tool,
-      label: tool.replace(/^LLM:\s*/, ''),
-      configs: [...configs].map(([key, strategy]) => ({ key, strategy })),
+  // Values switched off per dimension; new values default to on.
+  private readonly excluded = signal<Record<Dimension, string[]>>({ tool: [], family: [], chunk: [], variant: [] });
+
+  readonly options = computed<Record<Dimension, Option[]>>(() => {
+    const rows = this.results().map(dimensionValues);
+    const unique = (dimension: Dimension) => [...new Set(rows.map(row => row[dimension]))];
+    return {
+      tool: unique('tool').map(value => ({ value, label: value.replace(/^LLM:\s*/, '') })),
+      family: unique('family').sort().map(value => ({ value, label: value })),
+      chunk: unique('chunk').sort(compareChunks).map(value => ({ value, label: value })),
+      variant: unique('variant')
+        .sort((a, b) => a.localeCompare(b))
+        .map(value => ({ value, label: value || 'baseline' })),
+    };
+  });
+
+  readonly totalConfigs = computed(() => new Set(this.results().map(r => r.configKey)).size);
+
+  // The tool section is only useful when there is more than one tool.
+  readonly sections = computed(() => {
+    const titles: Record<Dimension, string> = { tool: 'LLM', family: 'Strategy', chunk: 'Chunk size', variant: 'Variant' };
+    return DIMENSIONS.filter(dimension => dimension !== 'tool' || this.options().tool.length > 1).map(dimension => ({
+      dimension,
+      title: titles[dimension],
+      options: this.options()[dimension],
     }));
   });
 
-  readonly caseStudies = computed(() => [...new Set(this.results().map(r => r.caseStudy))]);
-
-  isSelected(key: string): boolean {
-    return this.selectedConfigs().includes(key);
+  constructor() {
+    effect(() => {
+      const excluded = this.excluded();
+      const keys = this.results()
+        .filter(r => {
+          const values = dimensionValues(r);
+          return DIMENSIONS.every(dimension => !excluded[dimension].includes(values[dimension]));
+        })
+        .map(r => r.configKey);
+      this.selectedConfigs.set([...new Set(keys)]);
+    });
   }
 
-  toolState(node: ToolNode): 'all' | 'some' | 'none' {
-    const n = node.configs.filter(c => this.isSelected(c.key)).length;
-    return n === 0 ? 'none' : n === node.configs.length ? 'all' : 'some';
+  isOn(dimension: Dimension, value: string): boolean {
+    return !this.excluded()[dimension].includes(value);
   }
 
-  toggleConfig(key: string): void {
-    this.selectedConfigs.update(list => toggle(list, key));
+  toggle(dimension: Dimension, value: string): void {
+    this.excluded.update(state => ({ ...state, [dimension]: toggle(state[dimension], value) }));
   }
 
-  toggleTool(node: ToolNode): void {
-    const keys = node.configs.map(c => c.key);
-    const selectAll = this.toolState(node) !== 'all';
-    this.selectedConfigs.update(list =>
-      selectAll ? [...new Set([...list, ...keys])] : list.filter(k => !keys.includes(k)),
-    );
-  }
-
-  toggleCaseStudy(cs: string): void {
-    this.selectedCaseStudies.update(list => toggle(list, cs));
+  setDimension(dimension: Dimension, on: boolean): void {
+    const values = this.options()[dimension].map(option => option.value);
+    this.excluded.update(state => ({ ...state, [dimension]: on ? [] : values }));
   }
 
   toggleMetric(metric: Metric): void {
@@ -67,16 +89,18 @@ export class Filters {
     this.selectedMetrics.update(list => METRICS.filter(m => (m === metric ? !list.includes(m) : list.includes(m))));
   }
 
+  setMetrics(on: boolean): void {
+    this.selectedMetrics.set(on ? [...METRICS] : []);
+  }
+
   selectAll(): void {
-    this.selectedConfigs.set(this.tree().flatMap(n => n.configs.map(c => c.key)));
-    this.selectedCaseStudies.set(this.caseStudies());
-    this.selectedMetrics.set([...METRICS]);
+    DIMENSIONS.forEach(dimension => this.setDimension(dimension, true));
+    this.setMetrics(true);
   }
 
   deselectAll(): void {
-    this.selectedConfigs.set([]);
-    this.selectedCaseStudies.set([]);
-    this.selectedMetrics.set([]);
+    DIMENSIONS.forEach(dimension => this.setDimension(dimension, false));
+    this.setMetrics(false);
   }
 }
 

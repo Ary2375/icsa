@@ -1,15 +1,24 @@
 import { Component, computed, input } from '@angular/core';
 import { DecimalPipe } from '@angular/common';
 import { Metric, Result } from '../../models/result.model';
+import { compareChunks, isBaseline, parseStrategy, strategyFamily, StrategyFamily } from '../../utils/chart-colors';
 
 interface ComparisonRow {
   readonly result: Result;
   readonly baseline: Result | null;
+  readonly isBaseline: boolean;
+  // First row of a chunk block (baseline + the variants compared against it).
+  readonly blockStart: boolean;
+}
+
+interface FamilyGroup {
+  readonly family: StrategyFamily;
+  readonly rows: ComparisonRow[];
 }
 
 interface CaseStudyGroup {
   readonly caseStudy: string;
-  readonly rows: ComparisonRow[];
+  readonly families: FamilyGroup[];
 }
 
 @Component({
@@ -21,6 +30,12 @@ interface CaseStudyGroup {
 export class TableView {
   readonly results = input<Result[]>([]);
   readonly metrics = input<Metric[]>([]);
+  // With a single tool the column is redundant: the tool goes in the heading instead.
+  readonly singleTool = computed(() => {
+    const tools = new Set(this.results().map(result => result.tool));
+    return tools.size === 1 ? [...tools][0].replace(/^LLM:\s*/, '') : null;
+  });
+  readonly columnCount = computed(() => (this.singleTool() ? 1 : 2) + this.metrics().length);
   readonly groupedResults = computed(() => {
     const groups = new Map<string, Result[]>();
 
@@ -30,25 +45,42 @@ export class TableView {
       groups.set(result.caseStudy, group);
     }
 
-    return [...groups].map(([caseStudy, results]): CaseStudyGroup => {
-      const baselines = new Map(
-        results
-          .filter(result => result.strategy === '80k_ai')
-          .map(result => [result.tool, result]),
-      );
-      const orderedResults = [...results].sort(
-        (left, right) => Number(right.strategy === '80k_ai') - Number(left.strategy === '80k_ai'),
-      );
+    return [...groups].map(([caseStudy, results]): CaseStudyGroup => ({
+      caseStudy,
+      families: (['ai', 'concat'] as const)
+        .map(family => ({ family, rows: this.familyRows(results, family) }))
+        .filter(group => group.rows.length),
+    }));
+  });
 
+  // Variants are compared with the plain strategy of the same family, tool and chunk (e.g. 30k_ai_dfg vs 30k_ai).
+  private familyRows(results: Result[], family: StrategyFamily): ComparisonRow[] {
+    const parsed = results
+      .map(result => ({ result, ...parseStrategy(result.strategy) }))
+      .filter(p => strategyFamily(p.kind) === family);
+    const baselineKey = (tool: string, chunk: string) => `${tool}|${chunk}`;
+    const baselines = new Map(
+      parsed.filter(p => isBaseline(p.kind)).map(p => [baselineKey(p.result.tool, p.chunk), p.result]),
+    );
+
+    const ordered = parsed.sort(
+      (a, b) =>
+        compareChunks(a.chunk, b.chunk) ||
+        a.result.tool.localeCompare(b.result.tool) ||
+        Number(isBaseline(b.kind)) - Number(isBaseline(a.kind)) ||
+        a.kind.localeCompare(b.kind),
+    );
+
+    return ordered.map((p, index) => {
+      const previous = ordered[index - 1];
       return {
-        caseStudy,
-        rows: orderedResults.map(result => ({
-          result,
-          baseline: result.strategy === '80k_ai' ? null : baselines.get(result.tool) ?? null,
-        })),
+        result: p.result,
+        isBaseline: isBaseline(p.kind),
+        baseline: isBaseline(p.kind) ? null : baselines.get(baselineKey(p.result.tool, p.chunk)) ?? null,
+        blockStart: !previous || previous.chunk !== p.chunk || previous.result.tool !== p.result.tool,
       };
     });
-  });
+  }
 
   metricDelta(row: ComparisonRow, metric: Metric): number | null {
     return row.baseline ? row.result[metric] - row.baseline[metric] : null;

@@ -11,7 +11,6 @@
         <app-filters
             [results]="results()"
             [(selectedConfigs)]="selectedConfigs"
-            [(selectedCaseStudies)]="selectedCaseStudies"
             [(selectedMetrics)]="selectedMetrics">
         </app-filters>
 
@@ -22,9 +21,35 @@
                 <button type="button" class="mode-button" [attr.aria-pressed]="viewMode() === 'radar'" (click)="viewMode.set('radar')">Radar</button>
             </div>
 
+            @if (radarCaseStudies().length) {
+                <div class="view-switch repo-switch" role="group" aria-label="Repository">
+                    @for (repository of radarCaseStudies(); track repository) {
+                        <button type="button" class="mode-button" [attr.aria-pressed]="activeRepository() === repository" (click)="selectedRepository.set(repository)">{{ repository }}</button>
+                    }
+                </div>
+            }
+
+            @if (viewMode() !== 'table' && legendGroups().length) {
+                <details class="shared-legend" open>
+                    <summary>Legend (color = variant, shade = chunk size; ai and concat are the baselines)</summary>
+                    <div class="legend-groups">
+                        @for (group of legendGroups(); track group.name) {
+                            <div class="legend-group" [class.baseline]="group.baseline">
+                                <strong>{{ group.name }}</strong>
+                                <ul>
+                                    @for (item of group.items; track item.chunk) {
+                                        <li><span class="legend-swatch" [style.backgroundColor]="item.color" aria-hidden="true"></span>{{ item.chunk }}</li>
+                                    }
+                                </ul>
+                            </div>
+                        }
+                    </div>
+                </details>
+            }
+
             @switch (viewMode()) {
                 @case ('table') {
-                    <app-table-view [results]="filteredResults()" [metrics]="selectedMetrics()"></app-table-view>
+                    <app-table-view [results]="repositoryResults()" [metrics]="selectedMetrics()"></app-table-view>
                 }
                 @case ('bar') {
                     <div class="charts-grid">
@@ -33,7 +58,7 @@
                         } @else {
                             @for (metric of selectedMetrics(); track metric) {
                                 <mat-card class="chart-card">
-                                    <app-bar-view [results]="filteredResults()" [metric]="metric"></app-bar-view>
+                                    <app-bar-view [results]="repositoryResults()" [metric]="metric" [colors]="colors()"></app-bar-view>
                                 </mat-card>
                             } @empty {
                                 <p>Select at least one metric.</p>
@@ -42,17 +67,15 @@
                     </div>
                 }
                 @case ('radar') {
-                    <div class="charts-grid">
+                    <div class="charts-grid single-column">
                         @if (!selectedMetrics().length) {
                             <p>Select at least one metric.</p>
+                        } @else if (activeRepository()) {
+                            <mat-card class="chart-card">
+                                <app-radar-view [results]="filteredResults()" [metrics]="selectedMetrics()" [caseStudy]="activeRepository()" [colors]="colors()"></app-radar-view>
+                            </mat-card>
                         } @else {
-                            @for (caseStudy of radarCaseStudies(); track caseStudy) {
-                                <mat-card class="chart-card">
-                                    <app-radar-view [results]="filteredResults()" [metrics]="selectedMetrics()" [caseStudy]="caseStudy"></app-radar-view>
-                                </mat-card>
-                            } @empty {
-                                <p>No results for the selected filters.</p>
-                            }
+                            <p>No results for the selected filters.</p>
                         }
                     </div>
                 }

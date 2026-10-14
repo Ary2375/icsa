@@ -1,6 +1,7 @@
 import { afterNextRender, Component, DestroyRef, effect, ElementRef, inject, input, signal, viewChild } from '@angular/core';
 import { Chart, ChartData, Filler, Legend, LineElement, PointElement, RadarController, RadialLinearScale, Title, Tooltip } from 'chart.js';
 import { Metric, METRICS, Result } from '../../models/result.model';
+import { parseStrategy, strategyFamily } from '../../utils/chart-colors';
 
 Chart.register(RadarController, RadialLinearScale, PointElement, LineElement, Filler, Legend, Title, Tooltip);
 
@@ -14,7 +15,7 @@ export class RadarView {
   readonly results = input<Result[]>([]);
   readonly metrics = input<Metric[]>([...METRICS]);
   readonly caseStudy = input<string>('');
-  readonly legendItems = signal<{ label: string; color: string }[]>([]);
+  readonly colors = input<Record<string, string>>({});
 
   private readonly canvas = viewChild.required<ElementRef<HTMLCanvasElement>>('canvas');
   private readonly rendered = signal(false);
@@ -27,19 +28,20 @@ export class RadarView {
       const metrics = this.metrics();
       const caseStudy = this.caseStudy();
       const rows = this.results().filter(result => result.caseStudy === caseStudy);
-      const datasets = rows.map((result, index) => ({
+      const colors = this.colors();
+      // With many series, filled areas hide each other: draw lines only.
+      const crowded = rows.length > 6;
+      const datasets = rows.map(result => ({
           label: result.configLabel,
           data: metrics.map(metric => result[metric]),
-          borderColor: `hsl(${Math.round((index * 360) / rows.length)}, 65%, 45%)`,
-          backgroundColor: `hsla(${Math.round((index * 360) / rows.length)}, 65%, 45%, 0.08)`,
-          borderWidth: 2,
-          pointRadius: 3,
-          fill: true,
+          borderColor: colors[result.configKey],
+          backgroundColor: colors[result.configKey],
+          borderWidth: crowded ? 1.5 : 2,
+          // Same colors are shared by ai and concat, so concat is dashed.
+          borderDash: strategyFamily(parseStrategy(result.strategy).kind) === 'concat' ? [6, 4] : [],
+          pointRadius: crowded ? 2 : 3,
+          fill: false,
         }));
-      this.legendItems.set(datasets.map(dataset => ({
-        label: dataset.label,
-        color: String(dataset.borderColor),
-      })));
       const data: ChartData<'radar'> = { labels: metrics, datasets };
 
       if (this.chart) {

@@ -1,12 +1,15 @@
 <div class="table-wrapper">
   <div class="comparison-key" aria-label="Comparison legend">
-    <span><i class="key-swatch improved" aria-hidden="true"></i>Improved vs 80k_ai</span>
-    <span><i class="key-swatch worsened" aria-hidden="true"></i>Worsened vs 80k_ai</span>
+    <span><i class="key-swatch improved" aria-hidden="true"></i>Improved vs baseline</span>
+    <span><i class="key-swatch worsened" aria-hidden="true"></i>Worsened vs baseline</span>
+    <span class="comparison-scope">Baselines: plain <code>ai</code> and <code>concat</code>; each variant is compared with the baseline of the same chunk size.</span>
   </div>
   <table>
     <thead>
       <tr>
+        @if (!singleTool()) {
         <th>Tool</th>
+        }
         <th>Strategy</th>
         @for (metric of metrics(); track metric) {
         <th>{{ metric }}</th>
@@ -16,13 +19,20 @@
     <tbody>
       @for (group of groupedResults(); track group.caseStudy) {
       <tr class="case-study-heading">
-        <th [attr.colspan]="2 + metrics().length" scope="rowgroup">{{ group.caseStudy }}</th>
+        <th [attr.colspan]="columnCount()" scope="rowgroup">{{ group.caseStudy }}@if (singleTool()) { <span class="heading-tool">{{ singleTool() }}</span> }</th>
       </tr>
-      @for (row of group.rows; track row.result.configKey) {
-      <tr [class.baseline-row]="row.result.strategy === '80k_ai'">
+      @for (family of group.families; track family.family) {
+      <tr class="family-heading">
+        <th [attr.colspan]="columnCount()" scope="rowgroup">{{ family.family }} family</th>
+      </tr>
+      @for (row of family.rows; track row.result.configKey) {
+      <tr [class.baseline-row]="row.isBaseline" [class.block-start]="row.blockStart">
+        @if (!singleTool()) {
         <td>{{ row.result.tool }}</td>
-        <td>{{ row.result.strategy }}@if (row.result.strategy === '80k_ai') { <span
-            class="baseline-label">Baseline</span> }</td>
+        }
+        <td class="strategy-cell">{{ row.result.strategy }}@if (row.isBaseline) { <span
+            class="baseline-label">Baseline</span> } @else if (row.baseline) { <span
+            class="baseline-label">vs {{ row.baseline.strategy }}</span> }</td>
         @for (metric of metrics(); track metric) {
         @let delta = metricDelta(row, metric);
         <td class="num metric-cell" [class.improved]="delta !== null && delta > 0"
@@ -36,9 +46,10 @@
         }
       </tr>
       }
+      }
       } @empty {
       <tr>
-        <td [attr.colspan]="2 + metrics().length">No results for the selected filters.</td>
+        <td [attr.colspan]="columnCount()">No results for the selected filters.</td>
       </tr>
       }
     </tbody>

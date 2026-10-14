@@ -6,6 +6,7 @@ import { Filters } from '../../components/filters/filters';
 import { TableView } from '../../components/table-view/table-view';
 import { Metric, METRICS, Result } from '../../models/result.model';
 import { ResultsService } from '../../services/results/results';
+import { buildConfigColors, compareChunks, parseStrategy, variantOf } from '../../utils/chart-colors';
 
 @Component({
   imports: [MatCardModule, Filters, BarView, RadarView, TableView],
@@ -17,17 +18,50 @@ export class Dashboard implements OnInit {
 
   readonly results = signal<Result[]>([]);
   readonly viewMode = signal<'table' | 'bar' | 'radar'>('bar');
-  readonly radarCaseStudies = computed(() => [...new Set(this.filteredResults().map(result => result.caseStudy))]);
+  // Tabs stay stable even when the config filters exclude everything.
+  readonly radarCaseStudies = computed(() => [...new Set(this.results().map(result => result.caseStudy))]);
 
   readonly selectedConfigs = signal<string[]>([]);
-  readonly selectedCaseStudies = signal<string[]>([]);
   readonly selectedMetrics = signal<Metric[]>([...METRICS]);
 
   readonly filteredResults = computed(() => {
     const configs = new Set(this.selectedConfigs());
-    const caseStudies = new Set(this.selectedCaseStudies());
-    return this.results().filter(r => configs.has(r.configKey) && caseStudies.has(r.caseStudy));
+    return this.results().filter(r => configs.has(r.configKey));
   });
+
+  // Computed on all results so colors stay stable while filtering.
+  readonly colors = computed(() => buildConfigColors(this.results()));
+
+  // ai and concat share colors, so the legend lists variants only.
+  readonly legendGroups = computed(() => {
+    const colors = this.colors();
+    const groups = new Map<string, Map<string, string>>();
+    for (const r of this.filteredResults()) {
+      const { chunk, kind } = parseStrategy(r.strategy);
+      const variant = variantOf(kind);
+      if (!groups.has(variant)) groups.set(variant, new Map());
+      groups.get(variant)!.set(chunk, colors[r.configKey]);
+    }
+    return [...groups]
+      .sort(([a], [b]) => a.localeCompare(b))
+      .map(([variant, chunks]) => ({
+        name: variant || 'baseline',
+        baseline: !variant,
+        items: [...chunks]
+          .map(([chunk, color]) => ({ chunk, color }))
+          .sort((a, b) => compareChunks(a.chunk, b.chunk)),
+      }));
+  });
+
+  readonly selectedRepository = signal('');
+  // Falls back to the first repository when the selected one is filtered out.
+  readonly activeRepository = computed(() => {
+    const repositories = this.radarCaseStudies();
+    return repositories.includes(this.selectedRepository()) ? this.selectedRepository() : (repositories[0] ?? '');
+  });
+  readonly repositoryResults = computed(() =>
+    this.filteredResults().filter(r => r.caseStudy === this.activeRepository()),
+  );
 
   constructor(private resultsService: ResultsService) { }
 
@@ -37,7 +71,6 @@ export class Dashboard implements OnInit {
       .subscribe(data => {
         this.results.set(data);
         this.selectedConfigs.set([...new Set(data.map(r => r.configKey))]);
-        this.selectedCaseStudies.set([...new Set(data.map(r => r.caseStudy))]);
       });
   }
 }

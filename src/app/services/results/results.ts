@@ -42,6 +42,30 @@ export class ResultsService {
 
         const strategies = [
 
+            '30k_ai',
+
+            '30k_ai_all',
+
+            '30k_ai_dfg',
+
+            '30k_ai_gfsm',
+
+            '30k_ai_inductive_miner',
+
+            '30k_ai_split_miner',
+
+            '50k_ai',
+
+            '50k_ai_all',
+
+            '50k_ai_dfg',
+
+            '50k_ai_gfsm',
+
+            '50k_ai_inductive_miner',
+
+            '50k_ai_split_miner',
+
             '80k_ai',
 
             '80k_ai_all',
@@ -52,7 +76,43 @@ export class ResultsService {
 
             '80k_ai_inductive_miner',
 
-            '80k_ai_split_miner'
+            '80k_ai_split_miner',
+
+            '30k_concat',
+
+            '30k_concat_all',
+
+            '30k_concat_dfg',
+
+            '30k_concat_gfsm',
+
+            '30k_concat_inductive_miner',
+
+            '30k_concat_split_miner',
+
+            '50k_concat',
+
+            '50k_concat_all',
+
+            '50k_concat_dfg',
+
+            '50k_concat_gfsm',
+
+            '50k_concat_inductive_miner',
+
+            '50k_concat_split_miner',
+
+            '80k_concat',
+
+            '80k_concat_all',
+
+            '80k_concat_dfg',
+
+            '80k_concat_gfsm',
+
+            '80k_concat_inductive_miner',
+
+            '80k_concat_split_miner'
 
         ];
 

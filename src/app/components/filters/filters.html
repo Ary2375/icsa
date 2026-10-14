@@ -1,52 +1,49 @@
 <aside class="filters">
-  <h3>Filters</h3>
+  <header class="filters-header">
+    <h3>Filters</h3>
+    <span class="count" aria-live="polite">{{ selectedConfigs().length }} of {{ totalConfigs() }} configurations</span>
+  </header>
 
   <div class="actions">
-    <button type="button" (click)="selectAll()">Select All</button>
-    <button type="button" (click)="deselectAll()">Deselect All</button>
+    <button type="button" (click)="selectAll()">Select all</button>
+    <button type="button" (click)="deselectAll()">Clear</button>
   </div>
 
-  <details open>
-    <summary>LLMs</summary>
-    @for (node of tree(); track node.tool) {
-      <details open class="tool">
-        <summary>
-          <label>
-            <input
-              type="checkbox"
-              [checked]="toolState(node) === 'all'"
-              [indeterminate]="toolState(node) === 'some'"
-              (change)="toggleTool(node)" />
-            {{ node.label }}
-          </label>
-        </summary>
-        @for (config of node.configs; track config.key) {
-          <label class="leaf">
-            <input type="checkbox" [checked]="isSelected(config.key)" (change)="toggleConfig(config.key)" />
-            {{ config.strategy }}
+  @for (section of sections(); track section.dimension) {
+    <section class="group">
+      <div class="group-header">
+        <h4>{{ section.title }}</h4>
+        <span class="group-actions">
+          <button type="button" (click)="setDimension(section.dimension, true)">all</button>
+          <button type="button" (click)="setDimension(section.dimension, false)">none</button>
+        </span>
+      </div>
+      <div class="options">
+        @for (option of section.options; track option.value) {
+          <label class="option">
+            <input type="checkbox" [checked]="isOn(section.dimension, option.value)" (change)="toggle(section.dimension, option.value)" />
+            {{ option.label }}
           </label>
         }
-      </details>
-    }
-  </details>
+      </div>
+    </section>
+  }
 
-  <details open>
-    <summary>Case Studies</summary>
-    @for (cs of caseStudies(); track cs) {
-      <label class="leaf">
-        <input type="checkbox" [checked]="selectedCaseStudies().includes(cs)" (change)="toggleCaseStudy(cs)" />
-        {{ cs }}
-      </label>
-    }
-  </details>
-
-  <details open>
-    <summary>Metrics</summary>
-    @for (metric of metrics; track metric) {
-      <label class="leaf">
-        <input type="checkbox" [checked]="selectedMetrics().includes(metric)" (change)="toggleMetric(metric)" />
-        {{ metric }}
-      </label>
-    }
-  </details>
+  <section class="group">
+    <div class="group-header">
+      <h4>Metrics</h4>
+      <span class="group-actions">
+        <button type="button" (click)="setMetrics(true)">all</button>
+        <button type="button" (click)="setMetrics(false)">none</button>
+      </span>
+    </div>
+    <div class="options">
+      @for (metric of metrics; track metric) {
+        <label class="option">
+          <input type="checkbox" [checked]="selectedMetrics().includes(metric)" (change)="toggleMetric(metric)" />
+          {{ metric }}
+        </label>
+      }
+    </div>
+  </section>
 </aside>
