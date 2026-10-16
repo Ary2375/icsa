@@ -6,7 +6,7 @@ import { Filters } from '../../components/filters/filters';
 import { TableView } from '../../components/table-view/table-view';
 import { Metric, METRICS, Result } from '../../models/result.model';
 import { ResultsService } from '../../services/results/results';
-import { buildConfigColors, compareChunks, parseStrategy, variantOf } from '../../utils/chart-colors';
+import { buildConfigColors, compareChunks, compareVariants, parseStrategy, variantOf } from '../../utils/chart-colors';
 
 @Component({
   imports: [MatCardModule, Filters, BarView, RadarView, TableView],
@@ -43,7 +43,7 @@ export class Dashboard implements OnInit {
       groups.get(variant)!.set(chunk, colors[r.configKey]);
     }
     return [...groups]
-      .sort(([a], [b]) => a.localeCompare(b))
+      .sort(([a], [b]) => compareVariants(a, b))
       .map(([variant, chunks]) => ({
         name: variant || 'baseline',
         baseline: !variant,

@@ -1,3 +1,3 @@
 <div class="bar-view">
-  <div class="chart-canvas"><canvas #canvas></canvas></div>
+  <div class="chart-canvas" [style.height.px]="compact() ? compactHeight() : null"><canvas #canvas></canvas></div>
 </div>

@@ -1,6 +1,6 @@
 import { Component, computed, effect, input, model, signal } from '@angular/core';
 import { Metric, METRICS, Result } from '../../models/result.model';
-import { compareChunks, parseStrategy, strategyFamily, variantOf } from '../../utils/chart-colors';
+import { compareChunks, compareVariants, parseStrategy, strategyFamily, variantOf } from '../../utils/chart-colors';
 
 type Dimension = 'tool' | 'family' | 'chunk' | 'variant';
 
@@ -41,7 +41,7 @@ export class Filters {
       family: unique('family').sort().map(value => ({ value, label: value })),
       chunk: unique('chunk').sort(compareChunks).map(value => ({ value, label: value })),
       variant: unique('variant')
-        .sort((a, b) => a.localeCompare(b))
+        .sort(compareVariants)
         .map(value => ({ value, label: value || 'baseline' })),
     };
   });

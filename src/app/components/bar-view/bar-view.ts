@@ -27,6 +27,8 @@ import { compareChunks, compareKinds, isBaseline, parseStrategy, strategyFamily 
 
 Chart.register(BarController, BarElement, CategoryScale, LinearScale, Legend, Title, Tooltip);
 
+const COMPACT_BELOW = 720;
+
 @Component({
   imports: [],
   selector: 'app-bar-view',
@@ -37,7 +39,14 @@ export class BarView {
   readonly results = input<Result[]>([]);
   readonly metric = input<Metric>('CMod');
   readonly colors = input<Record<string, string>>({});
-
+  // Narrow screens: horizontal bars, so the many category labels have room.
+  readonly compact = signal(false);
+  readonly compactHeight = computed(() => {
+    const parsed = this.results().map(r => ({ tool: r.tool, ...parseStrategy(r.strategy) }));
+    const groups = new Set(parsed.map(p => `${p.tool}|${p.kind}`)).size;
+    const chunks = new Set(parsed.map(p => p.chunk)).size;
+    return groups * (chunks * 12 + 8) + 80;
+  });
   private readonly title = computed(() => {
     const caseStudy = this.results()[0]?.caseStudy;
     return caseStudy ? `${this.metric()} · ${caseStudy}` : this.metric();
@@ -55,41 +64,86 @@ export class BarView {
     id: 'familyBands',
     beforeDatasetsDraw: chart => {
       const { ctx, chartArea, scales } = chart;
-      const x = scales['x'];
+      const horizontal = chart.options.indexAxis === 'y';
+      const category = scales[horizontal ? 'y' : 'x'];
       const count = this.categories.length;
       if (!count) return;
-      const step = count > 1 ? x.getPixelForValue(1) - x.getPixelForValue(0) : chartArea.width;
+      const step =
+        count > 1
+          ? Math.abs(category.getPixelForValue(1) - category.getPixelForValue(0))
+          : horizontal ? chartArea.height : chartArea.width;
 
       ctx.save();
-      this.categories.forEach((category, i) => {
-        const left = x.getPixelForValue(i) - step / 2;
-        if (category.baseline) {
+      this.categories.forEach((item, i) => {
+        const start = category.getPixelForValue(i) - step / 2;
+        if (item.baseline) {
           ctx.fillStyle = 'rgba(128, 128, 128, 0.14)';
-          ctx.fillRect(left, chartArea.top, step, chartArea.height);
+          if (horizontal) ctx.fillRect(chartArea.left, start, chartArea.width, step);
+          else ctx.fillRect(start, chartArea.top, step, chartArea.height);
         }
-        if (i > 0 && this.categories[i - 1].family !== category.family) {
+        if (i > 0 && this.categories[i - 1].family !== item.family) {
           ctx.strokeStyle = 'rgba(128, 128, 128, 0.8)';
           ctx.setLineDash([6, 4]);
           ctx.lineWidth = 1.5;
           ctx.beginPath();
-          ctx.moveTo(left, chartArea.top);
-          ctx.lineTo(left, chartArea.bottom);
+          if (horizontal) {
+            ctx.moveTo(chartArea.left, start);
+            ctx.lineTo(chartArea.right, start);
+          } else {
+            ctx.moveTo(start, chartArea.top);
+            ctx.lineTo(start, chartArea.bottom);
+          }
           ctx.stroke();
         }
+      });
+      ctx.restore();
+    },
+    // A zero-length bar is invisible, so mark real zeros (missing data stays blank).
+    afterDatasetsDraw: chart => {
+      const { ctx, scales } = chart;
+      const horizontal = chart.options.indexAxis === 'y';
+      const zero = scales[horizontal ? 'x' : 'y'].getPixelForValue(0);
+
+      ctx.save();
+      ctx.strokeStyle = 'rgba(60, 60, 60, 0.9)';
+      ctx.lineWidth = 2;
+      chart.data.datasets.forEach((dataset, datasetIndex) => {
+        chart.getDatasetMeta(datasetIndex).data.forEach((bar, index) => {
+          if (dataset.data[index] !== 0) return;
+          const { x, y, width, height } = bar.getProps(['x', 'y', 'width', 'height'], true) as Record<string, number>;
+          ctx.beginPath();
+          if (horizontal) {
+            ctx.moveTo(zero, y - height / 2);
+            ctx.lineTo(zero, y + height / 2);
+          } else {
+            ctx.moveTo(x - width / 2, zero);
+            ctx.lineTo(x + width / 2, zero);
+          }
+          ctx.stroke();
+        });
       });
       ctx.restore();
     },
   };
 
   constructor() {
-    afterNextRender(() => this.rendered.set(true));
+    const destroyRef = inject(DestroyRef);
+    const host: HTMLElement = inject(ElementRef).nativeElement;
+    afterNextRender(() => {
+      // Chart width, not viewport: the filters sidebar eats a good part of the screen.
+      this.compact.set(host.getBoundingClientRect().width < COMPACT_BELOW);
+      const observer = new ResizeObserver(([entry]) => this.compact.set(entry.contentRect.width < COMPACT_BELOW));
+      observer.observe(host);
+      destroyRef.onDestroy(() => observer.disconnect());
+      this.rendered.set(true);
+    });
 
     effect(() => {
       if (!this.rendered()) return;
-      this.render(this.buildData(this.results(), this.metric(), this.colors()));
+      this.render(this.buildData(this.results(), this.metric(), this.colors()), this.compact());
     });
 
-    inject(DestroyRef).onDestroy(() => this.chart?.destroy());
+    destroyRef.onDestroy(() => this.chart?.destroy());
   }
 
   // X axis: strategy kinds; one dataset (bar) per chunk size. Results belong to a single case study.
@@ -122,8 +176,14 @@ export class BarView {
     return { labels, datasets };
   }
 
-  private render(data: ChartData<'bar'>): void {
+  private render(data: ChartData<'bar'>, compact: boolean): void {
     const title = this.title();
+    const indexAxis = compact ? 'y' : 'x';
+
+    if (this.chart && this.chart.options.indexAxis !== indexAxis) {
+      this.chart.destroy();
+      this.chart = undefined;
+    }
 
     if (this.chart) {
       this.chart.data = data;
@@ -137,6 +197,7 @@ export class BarView {
       data,
       plugins: [this.familyPlugin],
       options: {
+        indexAxis,
         responsive: true,
         maintainAspectRatio: false,
         plugins: {
@@ -144,9 +205,15 @@ export class BarView {
           legend: { display: false },
           tooltip: { mode: 'nearest', intersect: true },
         },
-        scales: {
-          y: { beginAtZero: true, suggestedMax: 100 },
-        },
+        scales: compact
+          ? {
+              x: { beginAtZero: true, suggestedMax: 100 },
+              y: { ticks: { autoSkip: false } },
+            }
+          : {
+              x: { ticks: { autoSkip: false, minRotation: 60, maxRotation: 90 } },
+              y: { beginAtZero: true, suggestedMax: 100 },
+            },
       },
     });
   }

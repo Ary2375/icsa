@@ -1,7 +1,7 @@
 import { Component, computed, input } from '@angular/core';
 import { DecimalPipe } from '@angular/common';
 import { Metric, Result } from '../../models/result.model';
-import { compareChunks, isBaseline, parseStrategy, strategyFamily, StrategyFamily } from '../../utils/chart-colors';
+import { compareChunks, compareKinds, isBaseline, parseStrategy, strategyFamily, StrategyFamily } from '../../utils/chart-colors';
 
 interface ComparisonRow {
   readonly result: Result;
@@ -67,8 +67,7 @@ export class TableView {
       (a, b) =>
         compareChunks(a.chunk, b.chunk) ||
         a.result.tool.localeCompare(b.result.tool) ||
-        Number(isBaseline(b.kind)) - Number(isBaseline(a.kind)) ||
-        a.kind.localeCompare(b.kind),
+        compareKinds(a.kind, b.kind),
     );
 
     return ordered.map((p, index) => {
