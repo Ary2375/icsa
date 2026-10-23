@@ -13,7 +13,15 @@ const DIMENSIONS: Dimension[] = ['tool', 'family', 'chunk', 'variant'];
 
 function dimensionValues(r: Result): Record<Dimension, string> {
   const { chunk, kind } = parseStrategy(r.strategy);
-  return { tool: r.tool, family: strategyFamily(kind), chunk, variant: variantOf(kind) };
+  return { tool: r.toolLabel, family: strategyFamily(kind), chunk, variant: variantOf(kind) };
+}
+
+function isExcluded(result: Result, excluded: Record<Dimension, string[]>): boolean {
+  const values = dimensionValues(result);
+  return excluded.tool.includes(values.tool) ||
+    (result.comparisonGroup === 'llm' && DIMENSIONS.some(dimension =>
+      dimension !== 'tool' && excluded[dimension].includes(values[dimension]),
+    ));
 }
 
 @Component({
@@ -34,10 +42,10 @@ export class Filters {
   private readonly excluded = signal<Record<Dimension, string[]>>({ tool: [], family: [], chunk: [], variant: [] });
 
   readonly options = computed<Record<Dimension, Option[]>>(() => {
-    const rows = this.results().map(dimensionValues);
+    const rows = this.results().filter(result => result.comparisonGroup === 'llm').map(dimensionValues);
     const unique = (dimension: Dimension) => [...new Set(rows.map(row => row[dimension]))];
     return {
-      tool: unique('tool').map(value => ({ value, label: value.replace(/^LLM:\s*/, '') })),
+      tool: [...new Set(this.results().map(result => dimensionValues(result).tool))].map(value => ({ value, label: value })),
       family: unique('family').sort().map(value => ({ value, label: value })),
       chunk: unique('chunk').sort(compareChunks).map(value => ({ value, label: value })),
       variant: unique('variant')
@@ -48,24 +56,37 @@ export class Filters {
 
   readonly totalConfigs = computed(() => new Set(this.results().map(r => r.configKey)).size);
 
+  readonly toolGroups = computed(() => [
+    { label: 'State of the art', comparisonGroup: 'literature' },
+    { label: 'LLM', comparisonGroup: 'llm' },
+  ].map(group => ({
+    label: group.label,
+    options: [...new Set(
+      this.results()
+        .filter(result => result.comparisonGroup === group.comparisonGroup)
+        .map(result => result.toolLabel),
+    )].sort((a, b) => a.localeCompare(b)).map(value => ({ value, label: value })),
+  })).filter(group => group.options.length));
+
   // The tool section is only useful when there is more than one tool.
   readonly sections = computed(() => {
-    const titles: Record<Dimension, string> = { tool: 'LLM', family: 'Strategy', chunk: 'Chunk size', variant: 'Variant' };
-    return DIMENSIONS.filter(dimension => dimension !== 'tool' || this.options().tool.length > 1).map(dimension => ({
-      dimension,
-      title: titles[dimension],
-      options: this.options()[dimension],
-    }));
+    const titles: Record<Dimension, string> = { tool: 'Tool', family: 'Strategy', chunk: 'Chunk size', variant: 'Variant' };
+    return DIMENSIONS
+      .filter(dimension => dimension !== 'tool' || this.options().tool.length > 1)
+      .map(dimension => ({
+        dimension,
+        title: titles[dimension],
+        groups: dimension === 'tool'
+          ? this.toolGroups()
+          : [{ label: '', options: this.options()[dimension] }],
+      }));
   });
 
   constructor() {
     effect(() => {
       const excluded = this.excluded();
       const keys = this.results()
-        .filter(r => {
-          const values = dimensionValues(r);
-          return DIMENSIONS.every(dimension => !excluded[dimension].includes(values[dimension]));
-        })
+        .filter(result => !isExcluded(result, excluded))
         .map(r => r.configKey);
       this.selectedConfigs.set([...new Set(keys)]);
     });

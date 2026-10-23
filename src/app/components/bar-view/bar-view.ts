@@ -29,6 +29,23 @@ Chart.register(BarController, BarElement, CategoryScale, LinearScale, Legend, Ti
 
 const COMPACT_BELOW = 720;
 
+export function compareBarGroups(a: Result, b: Result): number {
+  const groupOrder = (result: Result): number => {
+    if (result.comparisonGroup === 'literature') return 0;
+    return strategyFamily(parseStrategy(result.strategy).kind) === 'ai' ? 1 : 2;
+  };
+  const order = groupOrder(a) - groupOrder(b);
+  if (order) return order;
+
+  if (a.comparisonGroup === 'literature') {
+    return a.toolLabel.localeCompare(b.toolLabel) || a.strategy.localeCompare(b.strategy);
+  }
+
+  const aKind = parseStrategy(a.strategy).kind;
+  const bKind = parseStrategy(b.strategy).kind;
+  return compareKinds(aKind, bKind) || a.toolLabel.localeCompare(b.toolLabel);
+}
+
 @Component({
   imports: [],
   selector: 'app-bar-view',
@@ -41,12 +58,13 @@ export class BarView {
   readonly colors = input<Record<string, string>>({});
   // Narrow screens: horizontal bars, so the many category labels have room.
   readonly compact = signal(false);
-  readonly compactHeight = computed(() => {
-    const parsed = this.results().map(r => ({ tool: r.tool, ...parseStrategy(r.strategy) }));
-    const groups = new Set(parsed.map(p => `${p.tool}|${p.kind}`)).size;
-    const chunks = new Set(parsed.map(p => p.chunk)).size;
-    return groups * (chunks * 12 + 8) + 80;
+  private readonly slotCount = computed(() => {
+    const groups = new Set(this.results().map(result =>
+      `${result.tool}|${parseStrategy(result.strategy).kind}`,
+    )).size;
+    return this.results().length + Math.max(0, groups - 1);
   });
+  readonly compactHeight = computed(() => this.slotCount() * 24 + 80);
   private readonly title = computed(() => {
     const caseStudy = this.results()[0]?.caseStudy;
     return caseStudy ? `${this.metric()} · ${caseStudy}` : this.metric();
@@ -55,11 +73,12 @@ export class BarView {
   private readonly canvas = viewChild.required<ElementRef<HTMLCanvasElement>>('canvas');
   // Chart.js needs a real canvas, so wait for the browser render (SSR-safe).
   private readonly rendered = signal(false);
-  private chart?: Chart<'bar'>;
+  private chart?: Chart<'bar', (number | null)[]>;
+  private tooltipTitles: string[] = [];
   // Per x category, read by the plugin below.
-  private categories: { baseline: boolean; family: string }[] = [];
+  private categories: { highlighted: boolean; family: string }[] = [];
 
-  // Shades baseline categories and draws a divider between the ai and concat families.
+  // Shades reference categories and baselines, with dividers between reference, ai and concat groups.
   private readonly familyPlugin: Plugin<'bar'> = {
     id: 'familyBands',
     beforeDatasetsDraw: chart => {
@@ -76,7 +95,7 @@ export class BarView {
       ctx.save();
       this.categories.forEach((item, i) => {
         const start = category.getPixelForValue(i) - step / 2;
-        if (item.baseline) {
+        if (item.highlighted) {
           ctx.fillStyle = 'rgba(128, 128, 128, 0.14)';
           if (horizontal) ctx.fillRect(chartArea.left, start, chartArea.width, step);
           else ctx.fillRect(start, chartArea.top, step, chartArea.height);
@@ -146,37 +165,57 @@ export class BarView {
     destroyRef.onDestroy(() => this.chart?.destroy());
   }
 
-  // X axis: strategy kinds; one dataset (bar) per chunk size. Results belong to a single case study.
-  private buildData(results: Result[], metric: Metric, colors: Record<string, string>): ChartData<'bar'> {
-    const parsed = results.map(r => ({ r, ...parseStrategy(r.strategy) }));
-    const multiTool = new Set(results.map(r => r.tool)).size > 1;
-    const groupOf = (p: { r: Result; kind: string }) => `${p.r.tool}|${p.kind}`;
-
-    const kindOf = (group: string) => group.split('|')[1];
-    const groups = [...new Set(parsed.map(groupOf))].sort(
-      (a, b) => compareKinds(kindOf(a), kindOf(b)) || a.localeCompare(b),
-    );
-    const chunks = [...new Set(parsed.map(p => p.chunk))].sort(compareChunks);
-    this.categories = groups.map(g => ({ baseline: isBaseline(kindOf(g)), family: strategyFamily(kindOf(g)) }));
-    const labels = groups.map(g => {
-      const [tool, kind] = g.split('|');
-      const name = multiTool ? `${tool.replace(/^LLM:\s*/, '')} · ${kind}` : kind;
-      return isBaseline(kind) ? [name, '(baseline)'] : name;
+  // One category per actual result gives references and chunked experiments equal bar widths.
+  buildData(results: Result[], metric: Metric, colors: Record<string, string>): ChartData<'bar', (number | null)[]> {
+    const ordered = results
+      .map(r => ({ r, ...parseStrategy(r.strategy) }))
+      .sort((a, b) => compareBarGroups(a.r, b.r) || compareChunks(a.chunk, b.chunk));
+    const parsed: (typeof ordered[number] | null)[] = [];
+    ordered.forEach((item, index) => {
+      const previous = ordered[index - 1];
+      if (previous && (previous.r.tool !== item.r.tool || previous.kind !== item.kind)) parsed.push(null);
+      parsed.push(item);
     });
-
-    const datasets = chunks.map(chunk => {
-      const rows = groups.map(g => parsed.find(p => groupOf(p) === g && p.chunk === chunk)?.r);
+    this.categories = parsed.map((item, index) => {
+      const result = item ?? parsed[index - 1]!;
       return {
-        label: chunk,
-        backgroundColor: rows.map(r => (r ? colors[r.configKey] : 'transparent')),
-        data: rows.map(r => r?.[metric] ?? null) as number[],
+        highlighted: item !== null
+          ? item.r.comparisonGroup === 'literature' || isBaseline(item.kind)
+          : result.r.comparisonGroup === 'literature' && parsed[index + 1]?.r.comparisonGroup === 'literature',
+        family: result.r.comparisonGroup === 'literature' ? 'reference' : strategyFamily(result.kind),
       };
     });
+    this.tooltipTitles = parsed.map(item => item?.r.configLabel ?? '');
+    const groupIndexes = new Map<string, number[]>();
+    parsed.forEach((item, index) => {
+      if (!item) return;
+      const { r, kind } = item;
+      const key = `${r.tool}|${kind}`;
+      const indexes = groupIndexes.get(key) ?? [];
+      indexes.push(index);
+      groupIndexes.set(key, indexes);
+    });
+    const labels = parsed.map((item, index) => {
+      if (!item) return [];
+      const { r, kind } = item;
+      if (r.comparisonGroup === 'literature') return r.toolLabel;
+      const indexes = groupIndexes.get(`${r.tool}|${kind}`)!;
+      if (index !== indexes[Math.floor((indexes.length - 1) / 2)]) return [];
+      return isBaseline(kind) ? `${kind} (baseline)` : kind;
+    });
+
+    const datasets = [{
+      label: metric,
+      categoryPercentage: 1,
+      barPercentage: 0.9,
+      backgroundColor: parsed.map(item => item ? colors[item.r.configKey] : 'transparent'),
+      data: parsed.map(item => item ? item.r[metric] : null),
+    }];
 
     return { labels, datasets };
   }
 
-  private render(data: ChartData<'bar'>, compact: boolean): void {
+  private render(data: ChartData<'bar', (number | null)[]>, compact: boolean): void {
     const title = this.title();
     const indexAxis = compact ? 'y' : 'x';
 
@@ -192,7 +231,7 @@ export class BarView {
       return;
     }
 
-    this.chart = new Chart<'bar'>(this.canvas().nativeElement, {
+    this.chart = new Chart<'bar', (number | null)[]>(this.canvas().nativeElement, {
       type: 'bar',
       data,
       plugins: [this.familyPlugin],
@@ -203,7 +242,13 @@ export class BarView {
         plugins: {
           title: { display: true, text: title, font: { size: 16 } },
           legend: { display: false },
-          tooltip: { mode: 'nearest', intersect: true },
+          tooltip: {
+            mode: 'nearest',
+            intersect: true,
+            callbacks: {
+              title: items => items.length ? this.tooltipTitles[items[0].dataIndex] : '',
+            },
+          },
         },
         scales: compact
           ? {
@@ -211,7 +256,7 @@ export class BarView {
               y: { ticks: { autoSkip: false } },
             }
           : {
-              x: { ticks: { autoSkip: false, minRotation: 60, maxRotation: 90 } },
+              x: { ticks: { autoSkip: false, minRotation: 90, maxRotation: 90, font: { size: 12 } } },
               y: { beginAtZero: true, suggestedMax: 100 },
             },
       },

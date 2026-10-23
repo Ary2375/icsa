@@ -2,7 +2,7 @@
     <header class="page-heading">
         <p class="eyebrow">Evaluation</p>
         <h1 id="dashboard-title">Results</h1>
-        <p class="intro-copy">Compare decomposition outcomes across repositories, LLM configurations and behavioral-model inputs.</p>
+        <p class="intro-copy">Compare decomposition outcomes across repositories, LLM configurations, literature tools and behavioral-model inputs.</p>
     </header>
 
     <section class="dashboard-content" aria-labelledby="dashboard-title">
@@ -29,9 +29,9 @@
                 </div>
             }
 
-            @if (viewMode() !== 'table' && legendGroups().length) {
+            @if (viewMode() !== 'table' && (legendGroups().length || referenceTools().length)) {
                 <details class="shared-legend" open>
-                    <summary>Legend (color = variant, shade = chunk size; ai and concat are the baselines)</summary>
+                    <summary>Legend (color = LLM variant, shade = chunk size; grey bands in bar charts = baselines and state-of-the-art references)</summary>
                     <div class="legend-groups">
                         @for (group of legendGroups(); track group.name) {
                             <div class="legend-group" [class.baseline]="group.baseline">
@@ -43,13 +43,23 @@
                                 </ul>
                             </div>
                         }
+                        @if (referenceTools().length) {
+                            <div class="legend-group reference-legend">
+                                <strong>State-of-the-art references</strong>
+                                <ul>
+                                    @for (tool of referenceTools(); track tool.name) {
+                                        <li><span class="legend-swatch" [style.backgroundColor]="tool.color" aria-hidden="true"></span>{{ tool.name }}</li>
+                                    }
+                                </ul>
+                            </div>
+                        }
                     </div>
                 </details>
             }
 
             @switch (viewMode()) {
                 @case ('table') {
-                    <app-table-view [results]="repositoryResults()" [metrics]="selectedMetrics()"></app-table-view>
+                    <app-table-view [results]="repositoryResults()" [comparisonResults]="results()" [metrics]="selectedMetrics()"></app-table-view>
                 }
                 @case ('bar') {
                     <div class="charts-grid">

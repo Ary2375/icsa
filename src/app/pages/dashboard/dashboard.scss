@@ -106,6 +106,12 @@ app-filters {
   background: rgba(128, 128, 128, 0.14);
 }
 
+.legend-group.reference-legend {
+  padding: 0.25rem 0.4rem;
+  border-radius: 4px;
+  background: var(--color-surface-blue);
+}
+
 
 .legend-group {
   min-width: 0;

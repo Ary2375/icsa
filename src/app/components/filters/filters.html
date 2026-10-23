@@ -18,14 +18,21 @@
           <button type="button" (click)="setDimension(section.dimension, false)">none</button>
         </span>
       </div>
-      <div class="options">
-        @for (option of section.options; track option.value) {
-          <label class="option">
-            <input type="checkbox" [checked]="isOn(section.dimension, option.value)" (change)="toggle(section.dimension, option.value)" />
-            {{ option.label }}
-          </label>
-        }
-      </div>
+      @for (group of section.groups; track group.label) {
+        <fieldset class="option-group" [class.tool-group]="section.dimension === 'tool'">
+          @if (group.label) {
+            <legend>{{ group.label }}</legend>
+          }
+          <div class="options">
+            @for (option of group.options; track option.value) {
+              <label class="option">
+                <input type="checkbox" [checked]="isOn(section.dimension, option.value)" (change)="toggle(section.dimension, option.value)" />
+                <span>{{ option.label }}</span>
+              </label>
+            }
+          </div>
+        </fieldset>
+      }
     </section>
   }
 
@@ -41,7 +48,7 @@
       @for (metric of metrics; track metric) {
         <label class="option">
           <input type="checkbox" [checked]="selectedMetrics().includes(metric)" (change)="toggleMetric(metric)" />
-          {{ metric }}
+          <span>{{ metric }}</span>
         </label>
       }
     </div>

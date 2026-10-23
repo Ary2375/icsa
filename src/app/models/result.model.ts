@@ -1,5 +1,6 @@
 export const METRICS = ['CiD', 'CMod', 'BCP', 'DI', 'DTP', 'TC', 'LC', 'MoJoFM', 'c2c_cvg 10%', 'c2c_cvg 33%', 'c2c_cvg 50%'] as const;
 export type Metric = (typeof METRICS)[number];
+export type ComparisonGroup = 'llm' | 'literature';
 
 export class Result {
     /** Unique identifier of a tool + strategy configuration. */
@@ -7,13 +8,22 @@ export class Result {
         return `${this.tool}|${this.strategy}`;
     }
 
+    get toolLabel(): string {
+        if (this.tool === 'GROUND_TRUTH') return 'Ground Truth';
+        if (this.tool === 'MONO2MICRO' && this.comparisonGroup === 'literature') {
+            return `${this.tool} (${this.strategy})`;
+        }
+        return this.tool.replace(/^LLM:\s*/, '');
+    }
+
     get configLabel(): string {
-        return `${this.tool.replace(/^LLM:\s*/, '')} · ${this.strategy}`;
+        return this.comparisonGroup === 'literature' ? this.toolLabel : `${this.toolLabel} · ${this.strategy}`;
     }
 
     caseStudy!: string;
     tool!: string;
     strategy!: string;
+    comparisonGroup!: ComparisonGroup;
     CiD!: number;
     CMod!: number;
     BCP!: number;
@@ -26,12 +36,13 @@ export class Result {
     'c2c_cvg 33%'!: number;
     'c2c_cvg 50%'!: number;
 
-    static clone(results: Result): Result {
+    static clone(results: Omit<Result, 'configKey' | 'toolLabel' | 'configLabel'>): Result {
         const clone: Result = new Result();
 
         clone.caseStudy = results.caseStudy;
         clone.tool = results.tool;
         clone.strategy = results.strategy;
+        clone.comparisonGroup = results.comparisonGroup;
         clone.CiD = results.CiD;
         clone.CMod = results.CMod;
         clone.BCP = results.BCP;

@@ -17,6 +17,34 @@
   font-size: 0.7rem;
 }
 
+.comparison-controls {
+  padding: 0.75rem;
+  border-bottom: 1px solid var(--color-border);
+  color: var(--color-body);
+  font-size: 0.8rem;
+
+  label {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 0.5rem;
+  }
+
+  select {
+    max-width: 100%;
+    padding: 0.35rem;
+    border: 1px solid var(--color-border);
+    border-radius: 3px;
+    background: var(--color-surface);
+    color: var(--color-ink);
+    font: inherit;
+  }
+
+  p {
+    margin: 0.5rem 0 0;
+  }
+}
+
 .comparison-key > span {
   display: inline-flex;
   align-items: center;
@@ -91,6 +119,10 @@ tbody tr:hover {
   font-weight: 600;
 }
 
+.reference-row td {
+  background: var(--color-surface-subtle);
+}
+
 .block-start td {
   border-top: 2px solid var(--color-border);
 }
@@ -124,6 +156,7 @@ tbody tr:hover {
 
 .metric-delta {
   display: block;
+  white-space: nowrap;
   margin-top: 0.15rem;
   font-size: 0.62rem;
   font-weight: 700;

@@ -37,6 +37,7 @@ export class Dashboard implements OnInit {
     const colors = this.colors();
     const groups = new Map<string, Map<string, string>>();
     for (const r of this.filteredResults()) {
+      if (r.comparisonGroup !== 'llm') continue;
       const { chunk, kind } = parseStrategy(r.strategy);
       const variant = variantOf(kind);
       if (!groups.has(variant)) groups.set(variant, new Map());
@@ -51,6 +52,13 @@ export class Dashboard implements OnInit {
           .map(([chunk, color]) => ({ chunk, color }))
           .sort((a, b) => compareChunks(a.chunk, b.chunk)),
       }));
+  });
+  readonly referenceTools = computed(() => {
+    const tools = new Map<string, string>();
+    for (const result of this.filteredResults()) {
+      if (result.comparisonGroup === 'literature') tools.set(result.toolLabel, this.colors()[result.configKey]);
+    }
+    return [...tools].sort(([a], [b]) => a.localeCompare(b)).map(([name, color]) => ({ name, color }));
   });
 
   readonly selectedRepository = signal('');

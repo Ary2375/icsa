@@ -39,15 +39,25 @@ export function compareVariants(a: string, b: string): number {
 
 // Hue encodes the variant (shared by ai and concat), lightness the chunk size (smaller chunk = lighter).
 export function buildConfigColors(results: Result[]): Record<string, string> {
-  const parsed = results.map(r => ({ r, ...parseStrategy(r.strategy) }));
+  const colors: Record<string, string> = {};
+  const parsed = results
+    .filter(result => result.comparisonGroup === 'llm')
+    .map(r => ({ r, ...parseStrategy(r.strategy) }));
   const variants = [...new Set(parsed.map(p => variantOf(p.kind)))].sort(compareVariants);
   const chunks = [...new Set(parsed.map(p => p.chunk))].sort(compareChunks);
-  const colors: Record<string, string> = {};
 
   for (const { r, kind, chunk } of parsed) {
     const hue = Math.round((variants.indexOf(variantOf(kind)) * 360) / variants.length);
     const step = chunks.length > 1 ? chunks.indexOf(chunk) / (chunks.length - 1) : 0.5;
     colors[r.configKey] = `hsl(${hue}, 65%, ${Math.round(72 - step * 36)}%)`;
+  }
+
+  const references = [...new Set(
+    results.filter(result => result.comparisonGroup === 'literature').map(result => result.toolLabel),
+  )].sort();
+  for (const result of results.filter(item => item.comparisonGroup === 'literature')) {
+    const hue = 12 + Math.round((references.indexOf(result.toolLabel) * 345) / Math.max(references.length - 1, 1));
+    colors[result.configKey] = `hsl(${hue}, 65%, 52%)`;
   }
   return colors;
 }

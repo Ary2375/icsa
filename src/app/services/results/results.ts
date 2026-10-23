@@ -1,7 +1,30 @@
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { map, Observable } from 'rxjs';
-import { Result } from '../../models/result.model';
+import { ComparisonGroup, Result } from '../../models/result.model';
+
+interface RawResult {
+    'Case Study': string;
+    Tool: string;
+    Strategy: string;
+    Type?: string;
+    CiD: number;
+    CMod: number;
+    BCP: number;
+    DI: number;
+    DTP: number;
+    TC: number;
+    LC: number;
+    MoJoFM: number;
+    'c2c_cvg 10%': number;
+    'c2c_cvg 33%': number;
+    'c2c_cvg 50%': number;
+}
+
+interface ResultsPayload {
+    llm_comparison: Record<string, RawResult[]>;
+    variant_comparison?: Record<string, RawResult[]>;
+}
 
 @Injectable({
     providedIn: 'root'
@@ -12,126 +35,37 @@ export class ResultsService {
 
     getResults(): Observable<Result[]> {
         return this.httpClient
-            .get<{ llm_comparison: Record<string, any[]> }>('assets/data/results.json')
+            .get<ResultsPayload>('assets/data/results.json')
             .pipe(
-                map(data =>
-                    Object.values(data.llm_comparison).flat().map(r => Result.clone({
-                        caseStudy: r['Case Study'],
-                        tool: r['Tool'],
-                        strategy: r['Strategy'],
-                        CiD: r['CiD'],
-                        CMod: r['CMod'],
-                        BCP: r['BCP'],
-                        DI: r['DI'],
-                        DTP: r['DTP'],
-                        TC: r['TC'],
-                        LC: r['LC'],
-                        MoJoFM: r['MoJoFM'],
-                        'c2c_cvg 10%': r['c2c_cvg 10%'],
-                        'c2c_cvg 33%': r['c2c_cvg 33%'],
-                        'c2c_cvg 50%': r['c2c_cvg 50%'],
-                    } as Result))
-                )
+                map(data => [
+                    ...Object.values(data.llm_comparison)
+                        .flat()
+                        .map(row => this.toResult(row, 'llm')),
+                    ...Object.values(data.variant_comparison ?? {})
+                        .flat()
+                        .filter(row => row.Type !== 'LLM')
+                        .map(row => this.toResult(row, 'literature')),
+                ]),
             );
     }
 
-    getDeepSeekByRepository(
-        data: any,
-        repository: string
-    ) {
-
-        const strategies = [
-
-            '30k_ai',
-
-            '30k_ai_all',
-
-            '30k_ai_dfg',
-
-            '30k_ai_gfsm',
-
-            '30k_ai_inductive_miner',
-
-            '30k_ai_split_miner',
-
-            '50k_ai',
-
-            '50k_ai_all',
-
-            '50k_ai_dfg',
-
-            '50k_ai_gfsm',
-
-            '50k_ai_inductive_miner',
-
-            '50k_ai_split_miner',
-
-            '80k_ai',
-
-            '80k_ai_all',
-
-            '80k_ai_dfg',
-
-            '80k_ai_gfsm',
-
-            '80k_ai_inductive_miner',
-
-            '80k_ai_split_miner',
-
-            '30k_concat',
-
-            '30k_concat_all',
-
-            '30k_concat_dfg',
-
-            '30k_concat_gfsm',
-
-            '30k_concat_inductive_miner',
-
-            '30k_concat_split_miner',
-
-            '50k_concat',
-
-            '50k_concat_all',
-
-            '50k_concat_dfg',
-
-            '50k_concat_gfsm',
-
-            '50k_concat_inductive_miner',
-
-            '50k_concat_split_miner',
-
-            '80k_concat',
-
-            '80k_concat_all',
-
-            '80k_concat_dfg',
-
-            '80k_concat_gfsm',
-
-            '80k_concat_inductive_miner',
-
-            '80k_concat_split_miner'
-
-        ];
-
-        return strategies.map(strategy => {
-
-            return data.llm_comparison[strategy]
-                .find(
-                    (r: any) =>
-
-                        r['Case Study'] === repository
-
-                        &&
-
-                        r['Tool'] ===
-                        'LLM: Deepseek 32 Terminus'
-
-                );
-
+    private toResult(row: RawResult, comparisonGroup: ComparisonGroup): Result {
+        return Result.clone({
+            caseStudy: row['Case Study'],
+            tool: row.Tool,
+            strategy: row.Strategy,
+            comparisonGroup,
+            CiD: row.CiD,
+            CMod: row.CMod,
+            BCP: row.BCP,
+            DI: row.DI,
+            DTP: row.DTP,
+            TC: row.TC,
+            LC: row.LC,
+            MoJoFM: row.MoJoFM,
+            'c2c_cvg 10%': row['c2c_cvg 10%'],
+            'c2c_cvg 33%': row['c2c_cvg 33%'],
+            'c2c_cvg 50%': row['c2c_cvg 50%'],
         });
-
     }
 }

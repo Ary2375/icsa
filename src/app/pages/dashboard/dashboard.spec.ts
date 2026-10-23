@@ -1,5 +1,7 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
+import { of } from 'rxjs';
 import { Dashboard } from './dashboard';
+import { ResultsService } from '../../services/results/results';
 
 describe('Dashboard', () => {
   let component: Dashboard;
@@ -8,6 +10,7 @@ describe('Dashboard', () => {
   beforeEach(async () => {
     await TestBed.configureTestingModule({
       imports: [Dashboard],
+      providers: [{ provide: ResultsService, useValue: { getResults: () => of([]) } }],
     }).compileComponents();
 
     fixture = TestBed.createComponent(Dashboard);

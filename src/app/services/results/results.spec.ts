@@ -47,4 +47,93 @@ describe('ResultsService', () => {
       expect(METRICS).toContain(metric);
     }
   });
+
+  it('loads literature tools without duplicating LLM rows', () => {
+    let loaded: Result[] = [];
+    service.getResults().subscribe(results => loaded = results);
+
+    http.expectOne('assets/data/results.json').flush({
+      llm_comparison: {
+        baseline: [{
+          'Case Study': '7ep-demo',
+          Tool: 'LLM: Deepseek 32 Terminus',
+          Strategy: '80k_ai',
+          Type: 'LLM',
+          CiD: 1,
+          CMod: 2,
+          BCP: 3,
+          DI: 4,
+          DTP: 5,
+          TC: 6,
+          LC: 7,
+          MoJoFM: 8,
+          'c2c_cvg 10%': 9,
+          'c2c_cvg 33%': 10,
+          'c2c_cvg 50%': 11,
+        }],
+      },
+      variant_comparison: {
+        'MONO2MICRO': [
+          {
+            'Case Study': '7ep-demo',
+            Tool: 'MONO2MICRO',
+            Strategy: 'business',
+            Type: 'Traditional',
+            CiD: 1,
+            CMod: 2,
+            BCP: 3,
+            DI: 4,
+            DTP: 5,
+            TC: 6,
+            LC: 7,
+            MoJoFM: 8,
+            'c2c_cvg 10%': 9,
+            'c2c_cvg 33%': 10,
+            'c2c_cvg 50%': 11,
+          },
+          {
+            'Case Study': '7ep-demo',
+            Tool: 'MONO2MICRO',
+            Strategy: 'natural',
+            Type: 'Traditional',
+            CiD: 1,
+            CMod: 2,
+            BCP: 3,
+            DI: 4,
+            DTP: 5,
+            TC: 6,
+            LC: 7,
+            MoJoFM: 8,
+            'c2c_cvg 10%': 9,
+            'c2c_cvg 33%': 10,
+            'c2c_cvg 50%': 11,
+          },
+        ],
+        'LLM: Deepseek 32 Terminus': [{
+          'Case Study': '7ep-demo',
+          Tool: 'LLM: Deepseek 32 Terminus',
+          Strategy: '80k_ai',
+          Type: 'LLM',
+          CiD: 1,
+          CMod: 2,
+          BCP: 3,
+          DI: 4,
+          DTP: 5,
+          TC: 6,
+          LC: 7,
+          MoJoFM: 8,
+          'c2c_cvg 10%': 9,
+          'c2c_cvg 33%': 10,
+          'c2c_cvg 50%': 11,
+        }],
+      },
+    });
+
+    expect(loaded).toHaveLength(3);
+    expect(loaded.map(result => result.comparisonGroup)).toEqual(['llm', 'literature', 'literature']);
+    expect(loaded.slice(1).map(result => result.toolLabel)).toEqual([
+      'MONO2MICRO (business)',
+      'MONO2MICRO (natural)',
+    ]);
+  });
 });

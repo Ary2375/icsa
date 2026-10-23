@@ -16,7 +16,7 @@ The research starting point is [LLMs for Architectural Refactoring: An Explorato
 
 ## Application sections
 
-- **Results**: filter and inspect results as a table, bar charts, or radar charts. Table values are compared with the `80k_ai` baseline for the same case study and tool.
+- **Results**: filter and inspect all LLM experiments and literature/state-of-the-art reference results together as a table, bar charts, or radar charts. The table's **Compare with** selector defaults to the plain baseline for the same case study, tool, family, and chunk size. Alternatively, select a single literature reference to compare all displayed rows against its results for the same case study. Comparison data remains available even when hidden by filters; missing references produce an explicit notice instead of deltas. Higher/lower differences indicate numerical direction, not necessarily improvement.
 - **Methodology**: review telemetry collection, model generation, and the repeated LLM experiment.
 - **Artifacts**: preview or download telemetry JSON and model specifications, and view rendered diagrams grouped by repository.
 
@@ -37,13 +37,19 @@ The artifact catalog is maintained in `src/app/pages/artifacts/artifacts.ts`. Wh
 
 ## Updating results and artifacts
 
-Edit `src/assets/data/results.json`. The dashboard reads the `llm_comparison` object, whose keys identify the baseline and augmented inputs:
+Edit `src/assets/data/results.json`. The dashboard reads `llm_comparison` for LLM strategy results and `variant_comparison` for literature/state-of-the-art results. The latter includes DATACENTRIC, GROUND_TRUTH, HyDec, LOG2MS, and MONO2MICRO; the `business` and `natural` strategies are shown as separate MONO2MICRO configurations. LLM rows repeated in `variant_comparison` are ignored by the dashboard.
+
+The dashboard combines both sources in the same views. Literature tools are reference points; LLM strategy keys identify baseline and augmented inputs:
 
 - `80k_ai`: baseline input
 - `80k_ai_dfg`: baseline plus a DFG
 - `80k_ai_gfsm`: baseline plus an EFSM/GFSM
 - `80k_ai_inductive_miner`: baseline plus an Inductive Miner model
 - `80k_ai_split_miner`: baseline plus a Split Miner model
+
+Bar charts allocate one equal-width slot per actual result: a literature reference occupies one slot, while an LLM strategy with three chunk sizes occupies three closely spaced slots under a shared strategy label. A larger gap separates different strategies and reference tools. Colors and tooltips identify the chunk size, and grey bands highlight baselines and literature references.
+
+Bar charts fit the available page width without horizontal scrolling. Vertical charts use single-line, rotated group labels; narrow containers switch to horizontal bars with height adjusted to the results. Full tool and strategy names remain available in tooltips.
 
 Each result entry needs `Case Study`, `Tool`, `Strategy`, and the metric fields displayed by the table. Keep case-study and tool names consistent across strategies so baseline comparisons can be matched. Store repository files under `src/assets/artifacts/<Case Study>/` and update the artifact catalog when paths or files change.
 

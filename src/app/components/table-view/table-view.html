@@ -1,15 +1,31 @@
 <div class="table-wrapper">
+  <div class="comparison-controls">
+    <label>
+      Compare with
+      <select #comparison [value]="comparisonKey()" (change)="comparisonKey.set(comparison.value)">
+        <option value="baseline">Matching baseline</option>
+        @for (option of comparisonOptions(); track option.value) {
+          <option [value]="option.value">{{ option.label }}</option>
+        }
+      </select>
+    </label>
+    @for (caseStudy of missingReferences(); track caseStudy) {
+      <p role="status">{{ comparisonLabel() }} is not available for {{ caseStudy }}. Comparison deltas are not shown.</p>
+    }
+  </div>
   <div class="comparison-key" aria-label="Comparison legend">
-    <span><i class="key-swatch improved" aria-hidden="true"></i>Improved vs baseline</span>
-    <span><i class="key-swatch worsened" aria-hidden="true"></i>Worsened vs baseline</span>
+    <span><i class="key-swatch improved" aria-hidden="true"></i>Higher than {{ comparisonLabel() }}</span>
+    <span><i class="key-swatch worsened" aria-hidden="true"></i>Lower than {{ comparisonLabel() }}</span>
+    @if (comparisonKey() === 'baseline') {
     <span class="comparison-scope">Baselines: plain <code>ai</code> and <code>concat</code>; each variant is compared with the baseline of the same chunk size.</span>
+    } @else {
+    <span class="comparison-scope">Differences are calculated against {{ comparisonLabel() }} for the same case study.</span>
+    }
   </div>
   <table>
     <thead>
       <tr>
-        @if (!singleTool()) {
         <th>Tool</th>
-        }
         <th>Strategy</th>
         @for (metric of metrics(); track metric) {
         <th>{{ metric }}</th>
@@ -19,20 +35,24 @@
     <tbody>
       @for (group of groupedResults(); track group.caseStudy) {
       <tr class="case-study-heading">
-        <th [attr.colspan]="columnCount()" scope="rowgroup">{{ group.caseStudy }}@if (singleTool()) { <span class="heading-tool">{{ singleTool() }}</span> }</th>
+        <th [attr.colspan]="columnCount()" scope="rowgroup">{{ group.caseStudy }}</th>
       </tr>
       @for (family of group.families; track family.family) {
       <tr class="family-heading">
-        <th [attr.colspan]="columnCount()" scope="rowgroup">{{ family.family }} family</th>
+        <th [attr.colspan]="columnCount()" scope="rowgroup">{{ family.label }}</th>
       </tr>
       @for (row of family.rows; track row.result.configKey) {
-      <tr [class.baseline-row]="row.isBaseline" [class.block-start]="row.blockStart">
-        @if (!singleTool()) {
-        <td>{{ row.result.tool }}</td>
-        }
-        <td class="strategy-cell">{{ row.result.strategy }}@if (row.isBaseline) { <span
-            class="baseline-label">Baseline</span> } @else if (row.baseline) { <span
-            class="baseline-label">vs {{ row.baseline.strategy }}</span> }</td>
+      <tr [class.baseline-row]="row.isBaseline" [class.reference-row]="row.result.comparisonGroup === 'literature'" [class.block-start]="row.blockStart">
+        <td>{{ row.result.toolLabel }}</td>
+        <td class="strategy-cell">{{ row.result.strategy }}@if (row.result.comparisonGroup === 'literature') { <span
+            class="baseline-label">Reference</span> } @else if (row.isBaseline) { <span
+            class="baseline-label">Baseline</span> }
+            @if (row.baseline && row.result.configKey !== row.baseline.configKey) {
+              <span class="baseline-label">{{ comparisonKey() === 'baseline' ? 'vs baseline' : 'vs ' + row.baseline.toolLabel }}</span>
+            } @else if (comparisonKey() !== 'baseline' && row.result.configKey === comparisonKey()) {
+              <span class="baseline-label">Selected comparison reference</span>
+            }
+        </td>
         @for (metric of metrics(); track metric) {
         @let delta = metricDelta(row, metric);
         <td class="num metric-cell" [class.improved]="delta !== null && delta > 0"
