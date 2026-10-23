@@ -24,6 +24,12 @@ export class Result {
     tool!: string;
     strategy!: string;
     comparisonGroup!: ComparisonGroup;
+    observedEntities?: number | null;
+    observedEntitiesPercent?: number | null;
+    partitions?: number | null;
+    partitionSizeMin?: number | null;
+    partitionSizeMed?: number | null;
+    partitionSizeMax?: number | null;
     CiD!: number;
     CMod!: number;
     BCP!: number;
@@ -43,6 +49,12 @@ export class Result {
         clone.tool = results.tool;
         clone.strategy = results.strategy;
         clone.comparisonGroup = results.comparisonGroup;
+        clone.observedEntities = results.observedEntities;
+        clone.observedEntitiesPercent = results.observedEntitiesPercent;
+        clone.partitions = results.partitions;
+        clone.partitionSizeMin = results.partitionSizeMin;
+        clone.partitionSizeMed = results.partitionSizeMed;
+        clone.partitionSizeMax = results.partitionSizeMax;
         clone.CiD = results.CiD;
         clone.CMod = results.CMod;
         clone.BCP = results.BCP;

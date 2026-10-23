@@ -37,6 +37,12 @@ The artifact catalog is maintained in `src/app/pages/artifacts/artifacts.ts`. Wh
 
 ## Updating results and artifacts
 
+The table shows coverage (observed entities %) and partition count next to quality metrics. Expand **Details** in a row for observed-entity count and partition sizes Min/Med/Max. These fields are not included in quality-metric deltas. `Partition Size Med` retains its source name because its mean/median definition has not been confirmed. Missing structural data is displayed as N/A, not zero.
+
+The **Coverage** view shows one scatter chart per metric selected in the sidebar, with all metrics selected initially. The same sidebar configuration filters and repository selection apply. Colors use the same shared legend as other charts; a separate shape legend identifies experiments (circles), plain baselines (squares), and literature references (diamonds). Axis margins keep points at 0 and 100 inside the plot. Tooltips identify the configuration and observed-entity count. Missing coverage/metric values are excluded with a notice; overlapping points can represent multiple configurations.
+
+Observed-entity coverage is read from `# Obs. Ents. (%)`; it is not asserted to measure output completeness and is distinct from `c2c_cvg` metrics. No missing-entity counts, aggregate scores, or statistical significance are inferred.
+
 Edit `src/assets/data/results.json`. The dashboard reads `llm_comparison` for LLM strategy results and `variant_comparison` for literature/state-of-the-art results. The latter includes DATACENTRIC, GROUND_TRUTH, HyDec, LOG2MS, and MONO2MICRO; the `business` and `natural` strategies are shown as separate MONO2MICRO configurations. LLM rows repeated in `variant_comparison` are ignored by the dashboard.
 
 The dashboard combines both sources in the same views. Literature tools are reference points; LLM strategy keys identify baseline and augmented inputs:

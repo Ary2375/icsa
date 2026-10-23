@@ -20,6 +20,25 @@ describe('TableView', () => {
     expect(component).toBeTruthy();
   });
 
+  it('shows structural values and uses N/A for missing data instead of zero', () => {
+    const result = makeResult('LLM: Deepseek 32 Terminus', '80k_ai', 'llm');
+    result.observedEntities = 0;
+    result.observedEntitiesPercent = 0;
+    result.partitions = 5;
+    result.partitionSizeMin = 1;
+    result.partitionSizeMed = 4.8;
+    result.partitionSizeMax = null;
+    fixture.componentRef.setInput('results', [result]);
+    fixture.detectChanges();
+
+    const host: HTMLElement = fixture.nativeElement;
+    const values = [...host.querySelectorAll('tbody td.num')].map(cell => cell.textContent?.trim());
+    expect(values).toEqual(['0.0', '5']);
+    expect(host.querySelector('.row-details')?.textContent).toContain('4.8');
+    expect(host.querySelector('.row-details')?.textContent).toContain('N/A');
+    expect(component.columnCount()).toBe(4);
+  });
+
   it('normalizes rounded negative deltas to positive zero', () => {
     const baseline = makeResult('LLM: Deepseek 32 Terminus', '80k_ai', 'llm');
     const variant = makeResult('LLM: Deepseek 32 Terminus', '80k_ai_dfg', 'llm');

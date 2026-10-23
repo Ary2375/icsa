@@ -8,6 +8,11 @@ interface RawResult {
     Tool: string;
     Strategy: string;
     Type?: string;
+    '# Obs. Ents. (%)'?: string;
+    '#Partitions'?: number;
+    'Partition Size Min'?: number;
+    'Partition Size Med'?: number;
+    'Partition Size Max'?: number;
     CiD: number;
     CMod: number;
     BCP: number;
@@ -50,11 +55,22 @@ export class ResultsService {
     }
 
     private toResult(row: RawResult, comparisonGroup: ComparisonGroup): Result {
+        const coverage = row['# Obs. Ents. (%)'];
+        const match = coverage === undefined ? null : /^(\d+)\s+\((\d+(?:\.\d+)?)%\)$/.exec(coverage);
+        if (coverage !== undefined && (!match || Number(match[2]) > 100)) {
+            throw new Error(`Invalid observed-entity coverage for ${row['Case Study']} / ${row.Tool} / ${row.Strategy}: ${coverage}`);
+        }
         return Result.clone({
             caseStudy: row['Case Study'],
             tool: row.Tool,
             strategy: row.Strategy,
             comparisonGroup,
+            observedEntities: match ? Number(match[1]) : null,
+            observedEntitiesPercent: match ? Number(match[2]) : null,
+            partitions: row['#Partitions'] ?? null,
+            partitionSizeMin: row['Partition Size Min'] ?? null,
+            partitionSizeMed: row['Partition Size Med'] ?? null,
+            partitionSizeMax: row['Partition Size Max'] ?? null,
             CiD: row.CiD,
             CMod: row.CMod,
             BCP: row.BCP,

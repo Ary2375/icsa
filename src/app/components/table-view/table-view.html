@@ -22,11 +22,17 @@
     <span class="comparison-scope">Differences are calculated against {{ comparisonLabel() }} for the same case study.</span>
     }
   </div>
+  <details class="structure-note">
+    <summary>About coverage and structural data</summary>
+    <p>Coverage means observed entities (%) in the source dataset, not verified output completeness. Expand a row's details to see entity count and partition sizes. “Med” retains the source name; its mean/median interpretation is not confirmed. Missing values are N/A. Structural values are not included in deltas.</p>
+  </details>
   <table>
     <thead>
       <tr>
         <th>Tool</th>
         <th>Strategy</th>
+        <th title="Observed entities (%) in the source dataset">Coverage (%)</th>
+        <th>Partitions</th>
         @for (metric of metrics(); track metric) {
         <th>{{ metric }}</th>
         }
@@ -52,7 +58,18 @@
             } @else if (comparisonKey() !== 'baseline' && row.result.configKey === comparisonKey()) {
               <span class="baseline-label">Selected comparison reference</span>
             }
+            <details class="row-details">
+              <summary>Details</summary>
+              <dl>
+                <dt>Observed entities</dt><dd>{{ row.result.observedEntities ?? 'N/A' }}</dd>
+                <dt>Partition size min</dt><dd>{{ row.result.partitionSizeMin ?? 'N/A' }}</dd>
+                <dt>Partition size Med</dt><dd>{{ row.result.partitionSizeMed ?? 'N/A' }}</dd>
+                <dt>Partition size max</dt><dd>{{ row.result.partitionSizeMax ?? 'N/A' }}</dd>
+              </dl>
+            </details>
         </td>
+        <td class="num">{{ row.result.observedEntitiesPercent == null ? 'N/A' : (row.result.observedEntitiesPercent | number: '1.1-1') }}</td>
+        <td class="num">{{ row.result.partitions == null ? 'N/A' : (row.result.partitions | number: '1.0-0') }}</td>
         @for (metric of metrics(); track metric) {
         @let delta = metricDelta(row, metric);
         <td class="num metric-cell" [class.improved]="delta !== null && delta > 0"

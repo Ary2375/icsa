@@ -21,7 +21,7 @@ app-filters {
 
 .view-switch {
   display: inline-grid;
-  grid-template-columns: repeat(3, minmax(76px, 1fr));
+  grid-template-columns: repeat(4, minmax(0, 1fr));
   align-self: flex-start;
   gap: 2px;
   padding: 3px;
@@ -100,16 +100,23 @@ app-filters {
   margin-top: 0.4rem;
 }
 
-.legend-group.baseline {
+.legend-group.baseline,
+.legend-group.reference-legend {
   padding: 0.25rem 0.4rem;
   border-radius: 4px;
   background: rgba(128, 128, 128, 0.14);
 }
 
 .legend-group.reference-legend {
-  padding: 0.25rem 0.4rem;
-  border-radius: 4px;
-  background: var(--color-surface-blue);
+  grid-column: 1 / -1;
+
+  ul {
+    gap: 0.4rem 0.85rem;
+  }
+
+  li {
+    white-space: nowrap;
+  }
 }
 
 
@@ -142,6 +149,7 @@ app-filters {
 .legend-swatch {
   width: 10px;
   height: 10px;
+  flex-shrink: 0;
   border-radius: 2px;
 }
 

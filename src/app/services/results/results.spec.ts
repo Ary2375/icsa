@@ -33,6 +33,11 @@ describe('ResultsService', () => {
           'Case Study': '7ep-demo',
           Tool: 'LLM: Deepseek 32 Terminus',
           Strategy: '80k_ai',
+          '# Obs. Ents. (%)': '0 (0.0%)',
+          '#Partitions': 5,
+          'Partition Size Min': 1,
+          'Partition Size Med': 4.8,
+          'Partition Size Max': 8,
           'c2c_cvg 10%': 100,
           'c2c_cvg 33%': 80,
           'c2c_cvg 50%': 0,
@@ -42,6 +47,10 @@ describe('ResultsService', () => {
 
     expect(loaded).toHaveLength(1);
     expect(loaded[0]).toBeInstanceOf(Result);
+    expect(loaded[0].observedEntities).toBe(0);
+    expect(loaded[0].observedEntitiesPercent).toBe(0);
+    expect([loaded[0].partitions, loaded[0].partitionSizeMin, loaded[0].partitionSizeMed, loaded[0].partitionSizeMax])
+      .toEqual([5, 1, 4.8, 8]);
     expect(coverageMetrics.map(metric => loaded[0][metric])).toEqual([100, 80, 0]);
     for (const metric of coverageMetrics) {
       expect(METRICS).toContain(metric);

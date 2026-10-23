@@ -4,12 +4,13 @@ import { BarView } from '../../components/bar-view/bar-view';
 import { RadarView } from '../../components/radar-view/radar-view';
 import { Filters } from '../../components/filters/filters';
 import { TableView } from '../../components/table-view/table-view';
+import { CoverageView } from '../../components/coverage-view/coverage-view';
 import { Metric, METRICS, Result } from '../../models/result.model';
 import { ResultsService } from '../../services/results/results';
 import { buildConfigColors, compareChunks, compareVariants, parseStrategy, variantOf } from '../../utils/chart-colors';
 
 @Component({
-  imports: [MatCardModule, Filters, BarView, RadarView, TableView],
+  imports: [MatCardModule, Filters, BarView, RadarView, TableView, CoverageView],
   selector: 'app-dashboard',
   styleUrls: ['./dashboard.scss'],
   templateUrl: './dashboard.html',
@@ -17,7 +18,7 @@ import { buildConfigColors, compareChunks, compareVariants, parseStrategy, varia
 export class Dashboard implements OnInit {
 
   readonly results = signal<Result[]>([]);
-  readonly viewMode = signal<'table' | 'bar' | 'radar'>('bar');
+  readonly viewMode = signal<'table' | 'bar' | 'radar' | 'coverage'>('bar');
   // Tabs stay stable even when the config filters exclude everything.
   readonly radarCaseStudies = computed(() => [...new Set(this.results().map(result => result.caseStudy))]);
 

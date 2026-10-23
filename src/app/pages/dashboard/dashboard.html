@@ -19,6 +19,7 @@
                 <button type="button" class="mode-button" [attr.aria-pressed]="viewMode() === 'table'" (click)="viewMode.set('table')">Table</button>
                 <button type="button" class="mode-button" [attr.aria-pressed]="viewMode() === 'bar'" (click)="viewMode.set('bar')">Bar</button>
                 <button type="button" class="mode-button" [attr.aria-pressed]="viewMode() === 'radar'" (click)="viewMode.set('radar')">Radar</button>
+                <button type="button" class="mode-button" [attr.aria-pressed]="viewMode() === 'coverage'" (click)="viewMode.set('coverage')">Coverage</button>
             </div>
 
             @if (radarCaseStudies().length) {
@@ -58,6 +59,21 @@
             }
 
             @switch (viewMode()) {
+                @case ('coverage') {
+                    <div class="charts-grid">
+                        @if (!repositoryResults().length) {
+                            <p>No results for the selected filters.</p>
+                        } @else {
+                            @for (metric of selectedMetrics(); track metric) {
+                                <mat-card class="chart-card">
+                                    <app-coverage-view [results]="repositoryResults()" [metric]="metric" [colors]="colors()"></app-coverage-view>
+                                </mat-card>
+                            } @empty {
+                                <p>Select at least one metric.</p>
+                            }
+                        }
+                    </div>
+                }
                 @case ('table') {
                     <app-table-view [results]="repositoryResults()" [comparisonResults]="results()" [metrics]="selectedMetrics()"></app-table-view>
                 }

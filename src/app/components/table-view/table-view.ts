@@ -50,7 +50,7 @@ export class TableView {
     return [...new Set(this.results().map(result => result.caseStudy))]
       .filter(caseStudy => !this.selectedReference(caseStudy));
   });
-  readonly columnCount = computed(() => 2 + this.metrics().length);
+  readonly columnCount = computed(() => 4 + this.metrics().length);
   readonly groupedResults = computed(() => {
     const groups = new Map<string, Result[]>();
 
