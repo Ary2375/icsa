@@ -53,9 +53,9 @@ The dashboard combines both sources in the same views. Literature tools are refe
 - `80k_ai_inductive_miner`: baseline plus an Inductive Miner model
 - `80k_ai_split_miner`: baseline plus a Split Miner model
 
-Bar charts allocate one equal-width slot per actual result: a literature reference occupies one slot, while an LLM strategy with three chunk sizes occupies three closely spaced slots under a shared strategy label. A larger gap separates different strategies and reference tools. Colors and tooltips identify the chunk size, and grey bands highlight baselines and literature references.
+Bar charts group results by model and strategy, with one category label and adjacent bars for the available chunk sizes. Literature references each get their own category. This keeps the two LLMs directly comparable without repeating a category for every chunk, while retaining every result. Colors identify variants and chunk sizes; grey bands highlight baselines and literature references. Tooltips show the full model and strategy.
 
-Bar charts fit the available page width without horizontal scrolling. Vertical charts use single-line, rotated group labels; narrow containers switch to horizontal bars with height adjusted to the results. Full tool and strategy names remain available in tooltips.
+Bar charts use vertical bars and a shared model selector: only one LLM is displayed at a time across all metrics, with all its filtered strategies and chunk sizes. Selected literature references stay visible alongside either model. If filters exclude the active model, the selector falls back to the first available model. Full tool and strategy names remain available in tooltips.
 
 Each result entry needs `Case Study`, `Tool`, `Strategy`, and the metric fields displayed by the table. Keep case-study and tool names consistent across strategies so baseline comparisons can be matched. Store repository files under `src/assets/artifacts/<Case Study>/` and update the artifact catalog when paths or files change.
 

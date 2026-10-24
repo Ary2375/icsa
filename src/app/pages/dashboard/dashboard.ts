@@ -71,6 +71,24 @@ export class Dashboard implements OnInit {
   readonly repositoryResults = computed(() =>
     this.filteredResults().filter(r => r.caseStudy === this.activeRepository()),
   );
+  readonly selectedBarModel = signal('');
+  readonly barModels = computed(() => {
+    const models = new Map<string, string>();
+    for (const result of this.repositoryResults()) {
+      if (result.comparisonGroup === 'llm') models.set(result.tool, result.toolLabel);
+    }
+    return [...models].sort(([a], [b]) => a.localeCompare(b)).map(([tool, label]) => ({ tool, label }));
+  });
+  readonly activeBarModel = computed(() => {
+    const models = this.barModels();
+    return models.some(model => model.tool === this.selectedBarModel())
+      ? this.selectedBarModel()
+      : (models[0]?.tool ?? '');
+  });
+  readonly barResults = computed(() =>
+    this.repositoryResults().filter(result =>
+      result.comparisonGroup === 'literature' || result.tool === this.activeBarModel()),
+  );
 
   constructor(private resultsService: ResultsService) { }
 

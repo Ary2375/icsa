@@ -28,24 +28,39 @@ describe('BarView', () => {
     expect([concat, ai, references].sort(compareBarGroups)).toEqual([references, ai, concat]);
   });
 
-  it('allocates one equal-width category per reference or actual chunk result', () => {
+  it('groups chunk sizes under each model and strategy while retaining every result', () => {
     const reference = makeResult('DATACENTRIC', 'default', 'literature');
     const chunks = ['80k', '30k', '50k'].map(chunk =>
       makeResult('LLM: Deepseek 32 Terminus', `${chunk}_ai`, 'llm'),
     );
     const data = component.buildData([chunks[0], reference, chunks[1], chunks[2]], 'CMod', {});
 
-    expect(data.datasets).toHaveLength(1);
-    expect(data.datasets[0].data).toEqual([2, null, 2, 2, 2]);
-    expect(data.datasets[0].categoryPercentage).toBe(1);
-    expect(data.datasets[0].barPercentage).toBe(0.9);
-    expect(data.labels).toEqual([
-      'DATACENTRIC',
-      [],
-      [],
-      'ai (baseline)',
-      [],
+    expect(data.labels).toEqual(['DATACENTRIC', 'ai (baseline)']);
+    expect(data.datasets.map(dataset => dataset.label)).toEqual(['30k', '50k', '80k', 'Reference']);
+    expect(data.datasets.map(dataset => dataset.data)).toEqual([
+      [null, 2],
+      [null, 2],
+      [null, 2],
+      [2, null],
     ]);
+    expect(data.datasets.flatMap(dataset => dataset.data).filter(value => value !== null)).toHaveLength(4);
+  });
+
+  it('keeps models in separate categories and chunks in shared datasets', () => {
+    const results = [
+      makeResult('LLM: Deepseek 32 Terminus', '30k_ai', 'llm'),
+      makeResult('LLM: GLM 4.6', '30k_ai', 'llm'),
+      makeResult('LLM: Deepseek 32 Terminus', '50k_ai', 'llm'),
+      makeResult('LLM: GLM 4.6', '50k_ai', 'llm'),
+    ];
+    const data = component.buildData(results, 'CMod', {});
+
+    expect(data.labels).toEqual([
+      'Deepseek 32 Terminus · ai (baseline)',
+      'GLM 4.6 · ai (baseline)',
+    ]);
+    expect(data.datasets.map(dataset => dataset.label)).toEqual(['30k', '50k']);
+    expect(data.datasets.map(dataset => dataset.data)).toEqual([[2, 2], [2, 2]]);
   });
 });
 

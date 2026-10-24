@@ -27,8 +27,6 @@ import { compareChunks, compareKinds, isBaseline, parseStrategy, strategyFamily 
 
 Chart.register(BarController, BarElement, CategoryScale, LinearScale, Legend, Title, Tooltip);
 
-const COMPACT_BELOW = 720;
-
 export function compareBarGroups(a: Result, b: Result): number {
   const groupOrder = (result: Result): number => {
     if (result.comparisonGroup === 'literature') return 0;
@@ -46,6 +44,11 @@ export function compareBarGroups(a: Result, b: Result): number {
   return compareKinds(aKind, bKind) || a.toolLabel.localeCompare(b.toolLabel);
 }
 
+function barCategoryKey(result: Result): string {
+  if (result.comparisonGroup === 'literature') return result.configKey;
+  return `${result.tool}|${parseStrategy(result.strategy).kind}`;
+}
+
 @Component({
   imports: [],
   selector: 'app-bar-view',
@@ -56,15 +59,9 @@ export class BarView {
   readonly results = input<Result[]>([]);
   readonly metric = input<Metric>('CMod');
   readonly colors = input<Record<string, string>>({});
-  // Narrow screens: horizontal bars, so the many category labels have room.
-  readonly compact = signal(false);
-  private readonly slotCount = computed(() => {
-    const groups = new Set(this.results().map(result =>
-      `${result.tool}|${parseStrategy(result.strategy).kind}`,
-    )).size;
-    return this.results().length + Math.max(0, groups - 1);
-  });
-  readonly compactHeight = computed(() => this.slotCount() * 24 + 80);
+  private readonly metricMax = computed(() =>
+    Math.max(100, ...this.results().map(result => result[this.metric()])),
+  );
   private readonly title = computed(() => {
     const caseStudy = this.results()[0]?.caseStudy;
     return caseStudy ? `${this.metric()} · ${caseStudy}` : this.metric();
@@ -147,86 +144,103 @@ export class BarView {
 
   constructor() {
     const destroyRef = inject(DestroyRef);
-    const host: HTMLElement = inject(ElementRef).nativeElement;
     afterNextRender(() => {
-      // Chart width, not viewport: the filters sidebar eats a good part of the screen.
-      this.compact.set(host.getBoundingClientRect().width < COMPACT_BELOW);
-      const observer = new ResizeObserver(([entry]) => this.compact.set(entry.contentRect.width < COMPACT_BELOW));
-      observer.observe(host);
-      destroyRef.onDestroy(() => observer.disconnect());
       this.rendered.set(true);
     });
 
     effect(() => {
       if (!this.rendered()) return;
-      this.render(this.buildData(this.results(), this.metric(), this.colors()), this.compact());
+      this.render(this.buildData(this.results(), this.metric(), this.colors()));
     });
 
     destroyRef.onDestroy(() => this.chart?.destroy());
   }
 
-  // One category per actual result gives references and chunked experiments equal bar widths.
+  // Group chunk sizes within each model/strategy category so all runs remain visible without repeating labels.
   buildData(results: Result[], metric: Metric, colors: Record<string, string>): ChartData<'bar', (number | null)[]> {
-    const ordered = results
-      .map(r => ({ r, ...parseStrategy(r.strategy) }))
-      .sort((a, b) => compareBarGroups(a.r, b.r) || compareChunks(a.chunk, b.chunk));
-    const parsed: (typeof ordered[number] | null)[] = [];
-    ordered.forEach((item, index) => {
-      const previous = ordered[index - 1];
-      if (previous && (previous.r.tool !== item.r.tool || previous.kind !== item.kind)) parsed.push(null);
-      parsed.push(item);
+    const parsed = results.map(r => ({ r, ...parseStrategy(r.strategy) }));
+    const categoryResults = new Map<string, Result>();
+    for (const item of parsed) categoryResults.set(barCategoryKey(item.r), item.r);
+    const categories = [...categoryResults.keys()].sort((a, b) => {
+      const left = categoryResults.get(a)!;
+      const right = categoryResults.get(b)!;
+      return compareBarGroups(left, right) ||
+        compareChunks(parseStrategy(left.strategy).chunk, parseStrategy(right.strategy).chunk);
     });
-    this.categories = parsed.map((item, index) => {
-      const result = item ?? parsed[index - 1]!;
+    const valuesByChunk = new Map<string, Map<string, Result>>();
+    const references = new Map<string, Result>();
+    for (const { r, chunk } of parsed) {
+      if (r.comparisonGroup === 'literature') {
+        references.set(barCategoryKey(r), r);
+      } else {
+        const values = valuesByChunk.get(chunk) ?? new Map<string, Result>();
+        values.set(barCategoryKey(r), r);
+        valuesByChunk.set(chunk, values);
+      }
+    }
+
+    this.categories = categories.map(key => {
+      const result = categoryResults.get(key)!;
+      const kind = parseStrategy(result.strategy).kind;
       return {
-        highlighted: item !== null
-          ? item.r.comparisonGroup === 'literature' || isBaseline(item.kind)
-          : result.r.comparisonGroup === 'literature' && parsed[index + 1]?.r.comparisonGroup === 'literature',
-        family: result.r.comparisonGroup === 'literature' ? 'reference' : strategyFamily(result.kind),
+        highlighted: result.comparisonGroup === 'literature' || isBaseline(kind),
+        family: result.comparisonGroup === 'literature' ? 'reference' : strategyFamily(kind),
       };
     });
-    this.tooltipTitles = parsed.map(item => item?.r.configLabel ?? '');
-    const groupIndexes = new Map<string, number[]>();
-    parsed.forEach((item, index) => {
-      if (!item) return;
-      const { r, kind } = item;
-      const key = `${r.tool}|${kind}`;
-      const indexes = groupIndexes.get(key) ?? [];
-      indexes.push(index);
-      groupIndexes.set(key, indexes);
+    this.tooltipTitles = categories.map(key => {
+      const result = categoryResults.get(key)!;
+      return result.comparisonGroup === 'literature'
+        ? result.toolLabel
+        : `${result.toolLabel} · ${parseStrategy(result.strategy).kind}`;
     });
-    const labels = parsed.map((item, index) => {
-      if (!item) return [];
-      const { r, kind } = item;
-      if (r.comparisonGroup === 'literature') return r.toolLabel;
-      const indexes = groupIndexes.get(`${r.tool}|${kind}`)!;
-      if (index !== indexes[Math.floor((indexes.length - 1) / 2)]) return [];
-      return isBaseline(kind) ? `${kind} (baseline)` : kind;
+    const multiTool = new Set(results.filter(result => result.comparisonGroup === 'llm').map(result => result.tool)).size > 1;
+    const labels = categories.map(key => {
+      const result = categoryResults.get(key)!;
+      if (result.comparisonGroup === 'literature') return result.toolLabel;
+      const { kind } = parseStrategy(result.strategy);
+      const strategyLabel = isBaseline(kind) ? `${kind} (baseline)` : kind;
+      return multiTool ? `${result.toolLabel} · ${strategyLabel}` : strategyLabel;
     });
 
-    const datasets = [{
-      label: metric,
-      categoryPercentage: 1,
-      barPercentage: 0.9,
-      backgroundColor: parsed.map(item => item ? colors[item.r.configKey] : 'transparent'),
-      data: parsed.map(item => item ? item.r[metric] : null),
-    }];
+    const datasets = [...valuesByChunk]
+      .sort(([a], [b]) => compareChunks(a, b))
+      .map(([chunk, values]) => ({
+        label: chunk,
+        skipNull: true,
+        maxBarThickness: 16,
+        categoryPercentage: 0.75,
+        barPercentage: 0.85,
+        backgroundColor: categories.map(key => {
+          const result = values.get(key);
+          return result ? colors[result.configKey] : 'transparent';
+        }),
+        data: categories.map(key => values.get(key)?.[metric] ?? null),
+      }));
+    if (references.size) {
+      datasets.push({
+        label: 'Reference',
+        skipNull: true,
+        maxBarThickness: 16,
+        categoryPercentage: 0.75,
+        barPercentage: 0.85,
+        backgroundColor: categories.map(key => {
+          const result = references.get(key);
+          return result ? colors[result.configKey] : 'transparent';
+        }),
+        data: categories.map(key => references.get(key)?.[metric] ?? null),
+      });
+    }
 
     return { labels, datasets };
   }
 
-  private render(data: ChartData<'bar', (number | null)[]>, compact: boolean): void {
+  private render(data: ChartData<'bar', (number | null)[]>): void {
     const title = this.title();
-    const indexAxis = compact ? 'y' : 'x';
-
-    if (this.chart && this.chart.options.indexAxis !== indexAxis) {
-      this.chart.destroy();
-      this.chart = undefined;
-    }
 
     if (this.chart) {
       this.chart.data = data;
       this.chart.options.plugins!.title!.text = title;
+      this.chart.options.scales!['y']!.max = this.metricMax();
       this.chart.update();
       return;
     }
@@ -236,7 +250,7 @@ export class BarView {
       data,
       plugins: [this.familyPlugin],
       options: {
-        indexAxis,
+        indexAxis: 'x',
         responsive: true,
         maintainAspectRatio: false,
         plugins: {
@@ -250,15 +264,10 @@ export class BarView {
             },
           },
         },
-        scales: compact
-          ? {
-              x: { beginAtZero: true, suggestedMax: 100 },
-              y: { ticks: { autoSkip: false } },
-            }
-          : {
-              x: { ticks: { autoSkip: false, minRotation: 90, maxRotation: 90, font: { size: 12 } } },
-              y: { beginAtZero: true, suggestedMax: 100 },
-            },
+        scales: {
+          x: { ticks: { autoSkip: false, minRotation: 60, maxRotation: 90, font: { size: 11 } } },
+          y: { beginAtZero: true, max: this.metricMax() },
+        },
       },
     });
   }
