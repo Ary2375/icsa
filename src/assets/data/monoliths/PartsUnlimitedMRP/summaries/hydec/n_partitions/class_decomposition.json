@@ -1,0 +1,183 @@
+{
+  "tool": {
+    "decomposition": {
+      "patition2": [
+        {
+          "id": "CatalogItem"
+        },
+        {
+          "id": "ProductItem"
+        },
+        {
+          "id": "CatalogController"
+        },
+        {
+          "id": "CatalogItem"
+        },
+        {
+          "id": "MockCatalogItemsRepository"
+        },
+        {
+          "id": "CatalogItem1"
+        },
+        {
+          "id": "CatalogItemsRepository"
+        }
+      ],
+      "patition0": [
+        {
+          "id": "DeliveryAddress"
+        },
+        {
+          "id": "Order"
+        },
+        {
+          "id": "Quote"
+        },
+        {
+          "id": "QuoteItemInfo"
+        },
+        {
+          "id": "ShipmentEventInfo"
+        },
+        {
+          "id": "ShipmentRecord"
+        },
+        {
+          "id": "OrderItem"
+        },
+        {
+          "id": "OrderMessage"
+        },
+        {
+          "id": "MrpConnectService"
+        },
+        {
+          "id": "DealerController"
+        },
+        {
+          "id": "OrderController"
+        },
+        {
+          "id": "QuoteController"
+        },
+        {
+          "id": "ShipmentController"
+        },
+        {
+          "id": "DealerInfo"
+        },
+        {
+          "id": "Delivery"
+        },
+        {
+          "id": "DeliveryAddress"
+        },
+        {
+          "id": "Order"
+        },
+        {
+          "id": "OrderEventInfo"
+        },
+        {
+          "id": "OrderUpdateInfo"
+        },
+        {
+          "id": "PhoneInfo"
+        },
+        {
+          "id": "Quote"
+        },
+        {
+          "id": "QuoteItemInfo"
+        },
+        {
+          "id": "ShipmentEventInfo"
+        },
+        {
+          "id": "ShipmentRecord"
+        },
+        {
+          "id": "MockDealersRepository"
+        },
+        {
+          "id": "MockOrderRepository"
+        },
+        {
+          "id": "MockQuoteRepository"
+        },
+        {
+          "id": "MockShipmentRepository"
+        },
+        {
+          "id": "Dealer"
+        },
+        {
+          "id": "OrderDetails"
+        },
+        {
+          "id": "QuoteDetails"
+        },
+        {
+          "id": "ShipmentDetails"
+        },
+        {
+          "id": "MongoCatalogItemsRepository"
+        },
+        {
+          "id": "MongoDealersRepository"
+        },
+        {
+          "id": "MongoOperationsWithRetry"
+        },
+        {
+          "id": "MongoOrderRepository"
+        },
+        {
+          "id": "MongoQuoteRepository"
+        },
+        {
+          "id": "MongoShipmentRepository"
+        },
+        {
+          "id": "DealersRepository"
+        },
+        {
+          "id": "OrderRepository"
+        },
+        {
+          "id": "QuoteRepository"
+        },
+        {
+          "id": "RepositoryFactory"
+        },
+        {
+          "id": "ShipmentRepository"
+        },
+        {
+          "id": "BadRequestException"
+        },
+        {
+          "id": "ConflictingRequestException"
+        }
+      ],
+      "patition1": [
+        {
+          "id": "PingController"
+        },
+        {
+          "id": "MongoDBProperties"
+        },
+        {
+          "id": "OrderingConfiguration"
+        },
+        {
+          "id": "OrderingServiceProperties"
+        },
+        {
+          "id": "PropertyHelper"
+        }
+      ]
+    }
+  }
+}

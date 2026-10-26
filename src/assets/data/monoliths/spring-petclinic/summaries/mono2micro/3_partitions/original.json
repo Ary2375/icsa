@@ -1,0 +1,1660 @@
+{
+    "version": "v2.0.0r9",
+    "mono_run_time_call_graph": {
+        "nodes": [
+            {
+                "name": "PetClinicApplication",
+                "group": 1,
+                "category": "Undefined",
+                "construct": "Class",
+                "FQCN": "",
+                "filepath": "Class, project/src/main/java/org/springframework/samples/petclinic/PetClinicApplication.java",
+                "semantics": [
+                    "DEFAULT_USE_CASE"
+                ]
+            },
+            {
+                "name": "OwnerController",
+                "group": 1,
+                "category": "Undefined",
+                "construct": "Class",
+                "FQCN": "",
+                "filepath": "Class, project/src/main/java/org/springframework/samples/petclinic/owner/OwnerController.java",
+                "semantics": [
+                    "DEFAULT_USE_CASE"
+                ]
+            },
+            {
+                "name": "Owner",
+                "group": 1,
+                "category": "Undefined",
+                "construct": "Class",
+                "FQCN": "",
+                "filepath": "Class, project/src/main/java/org/springframework/samples/petclinic/owner/Owner.java",
+                "semantics": [
+                    "DEFAULT_USE_CASE"
+                ]
+            },
+            {
+                "name": "Person",
+                "group": 1,
+                "category": "Undefined",
+                "construct": "Class",
+                "FQCN": "",
+                "filepath": "Class, project/src/main/java/org/springframework/samples/petclinic/model/Person.java",
+                "semantics": [
+                    "DEFAULT_USE_CASE"
+                ]
+            },
+            {
+                "name": "BaseEntity",
+                "group": 1,
+                "category": "Undefined",
+                "construct": "Class",
+                "FQCN": "",
+                "filepath": "Class, project/src/main/java/org/springframework/samples/petclinic/model/BaseEntity.java",
+                "semantics": [
+                    "DEFAULT_USE_CASE"
+                ]
+            },
+            {
+                "name": "Pet",
+                "group": 1,
+                "category": "Undefined",
+                "construct": "Class",
+                "FQCN": "",
+                "filepath": "Class, project/src/main/java/org/springframework/samples/petclinic/owner/Pet.java",
+                "semantics": [
+                    "DEFAULT_USE_CASE"
+                ]
+            },
+            {
+                "name": "NamedEntity",
+                "group": 1,
+                "category": "Undefined",
+                "construct": "Class",
+                "FQCN": "",
+                "filepath": "Class, project/src/main/java/org/springframework/samples/petclinic/model/NamedEntity.java",
+                "semantics": [
+                    "DEFAULT_USE_CASE"
+                ]
+            },
+            {
+                "name": "PetType",
+                "group": 1,
+                "category": "Undefined",
+                "construct": "Class",
+                "FQCN": "",
+                "filepath": "Class, project/src/main/java/org/springframework/samples/petclinic/owner/PetType.java",
+                "semantics": [
+                    "DEFAULT_USE_CASE"
+                ]
+            },
+            {
+                "name": "Visit",
+                "group": 1,
+                "category": "Undefined",
+                "construct": "Class",
+                "FQCN": "",
+                "filepath": "Class, project/src/main/java/org/springframework/samples/petclinic/owner/Visit.java",
+                "semantics": [
+                    "DEFAULT_USE_CASE"
+                ]
+            },
+            {
+                "name": "PetController",
+                "group": 1,
+                "category": "Undefined",
+                "construct": "Class",
+                "FQCN": "",
+                "filepath": "Class, project/src/main/java/org/springframework/samples/petclinic/owner/PetController.java",
+                "semantics": [
+                    "DEFAULT_USE_CASE"
+                ]
+            },
+            {
+                "name": "PetTypeFormatter",
+                "group": 1,
+                "category": "Undefined",
+                "construct": "Class",
+                "FQCN": "",
+                "filepath": "Class, project/src/main/java/org/springframework/samples/petclinic/owner/PetTypeFormatter.java",
+                "semantics": [
+                    "DEFAULT_USE_CASE"
+                ]
+            },
+            {
+                "name": "PetValidator",
+                "group": 1,
+                "category": "Undefined",
+                "construct": "Class",
+                "FQCN": "",
+                "filepath": "Class, project/src/main/java/org/springframework/samples/petclinic/owner/PetValidator.java",
+                "semantics": [
+                    "DEFAULT_USE_CASE"
+                ]
+            },
+            {
+                "name": "VisitController",
+                "group": 1,
+                "category": "Undefined",
+                "construct": "Class",
+                "FQCN": "",
+                "filepath": "Class, project/src/main/java/org/springframework/samples/petclinic/owner/VisitController.java",
+                "semantics": [
+                    "DEFAULT_USE_CASE"
+                ]
+            },
+            {
+                "name": "VetController",
+                "group": 1,
+                "category": "Undefined",
+                "construct": "Class",
+                "FQCN": "",
+                "filepath": "Class, project/src/main/java/org/springframework/samples/petclinic/vet/VetController.java",
+                "semantics": [
+                    "DEFAULT_USE_CASE"
+                ]
+            },
+            {
+                "name": "Vet",
+                "group": 1,
+                "category": "Undefined",
+                "construct": "Class",
+                "FQCN": "",
+                "filepath": "Class, project/src/main/java/org/springframework/samples/petclinic/vet/Vet.java",
+                "semantics": [
+                    "DEFAULT_USE_CASE"
+                ]
+            },
+            {
+                "name": "Specialty",
+                "group": 1,
+                "category": "Undefined",
+                "construct": "Class",
+                "FQCN": "",
+                "filepath": "Class, project/src/main/java/org/springframework/samples/petclinic/vet/Specialty.java",
+                "semantics": [
+                    "DEFAULT_USE_CASE"
+                ]
+            },
+            {
+                "name": "Vets",
+                "group": 1,
+                "category": "Undefined",
+                "construct": "Class",
+                "FQCN": "",
+                "filepath": "Class, project/src/main/java/org/springframework/samples/petclinic/vet/Vets.java",
+                "semantics": [
+                    "DEFAULT_USE_CASE"
+                ]
+            },
+            {
+                "name": "PetClinicRuntimeHints",
+                "group": 1,
+                "category": "Undefined",
+                "construct": "Class",
+                "FQCN": "",
+                "filepath": "Class, project/src/main/java/org/springframework/samples/petclinic/PetClinicRuntimeHints.java",
+                "semantics": []
+            },
+            {
+                "name": "CacheConfiguration",
+                "group": 1,
+                "category": "Undefined",
+                "construct": "Class",
+                "FQCN": "",
+                "filepath": "Class, project/src/main/java/org/springframework/samples/petclinic/system/CacheConfiguration.java",
+                "semantics": []
+            },
+            {
+                "name": "WelcomeController",
+                "group": 1,
+                "category": "Undefined",
+                "construct": "Class",
+                "FQCN": "",
+                "filepath": "Class, project/src/main/java/org/springframework/samples/petclinic/system/WelcomeController.java",
+                "semantics": []
+            },
+            {
+                "name": "CrashController",
+                "group": 1,
+                "category": "Undefined",
+                "construct": "Class",
+                "FQCN": "",
+                "filepath": "Class, project/src/main/java/org/springframework/samples/petclinic/system/CrashController.java",
+                "semantics": []
+            }
+        ],
+        "links": [
+            {
+                "source": "OwnerController",
+                "target": "Owner",
+                "method": {
+                    "Owner": 8
+                },
+                "value": 3.079
+            },
+            {
+                "source": "OwnerController",
+                "target": "BaseEntity",
+                "method": {
+                    "getId": 2,
+                    "setId": 2
+                },
+                "value": 2.386
+            },
+            {
+                "source": "OwnerController",
+                "target": "Person",
+                "method": {
+                    "getLastName": 7,
+                    "setLastName": 1
+                },
+                "value": 3.079
+            },
+            {
+                "source": "Owner",
+                "target": "Person",
+                "method": {
+                    "Person": 32,
+                    "getLastName": 16,
+                    "getFirstName": 16
+                },
+                "value": 5.158
+            },
+            {
+                "source": "Owner",
+                "target": "BaseEntity",
+                "method": {
+                    "isNew": 53,
+                    "getId": 24
+                },
+                "value": 5.343
+            },
+            {
+                "source": "Owner",
+                "target": "NamedEntity",
+                "method": {
+                    "getName": 14
+                },
+                "value": 3.639
+            },
+            {
+                "source": "Owner",
+                "target": "Pet",
+                "method": {
+                    "addVisit": 1
+                },
+                "value": 1.0
+            },
+            {
+                "source": "Person",
+                "target": "BaseEntity",
+                "method": {
+                    "BaseEntity": 40
+                },
+                "value": 4.688
+            },
+            {
+                "source": "Pet",
+                "target": "NamedEntity",
+                "method": {
+                    "NamedEntity": 27
+                },
+                "value": 4.295
+            },
+            {
+                "source": "NamedEntity",
+                "target": "BaseEntity",
+                "method": {
+                    "BaseEntity": 51
+                },
+                "value": 4.931
+            },
+            {
+                "source": "PetType",
+                "target": "NamedEntity",
+                "method": {
+                    "NamedEntity": 20
+                },
+                "value": 3.995
+            },
+            {
+                "source": "Visit",
+                "target": "BaseEntity",
+                "method": {
+                    "BaseEntity": 15
+                },
+                "value": 3.708
+            },
+            {
+                "source": "PetController",
+                "target": "Pet",
+                "method": {
+                    "Pet": 4
+                },
+                "value": 2.386
+            },
+            {
+                "source": "PetController",
+                "target": "Owner",
+                "method": {
+                    "addPet": 4,
+                    "getPet [overloaded_#003]": 2,
+                    "getPet [overloaded_#002]": 4
+                },
+                "value": 3.302
+            },
+            {
+                "source": "PetController",
+                "target": "PetValidator",
+                "method": {
+                    "PetValidator": 6,
+                    "supports": 6
+                },
+                "value": 3.484
+            },
+            {
+                "source": "PetController",
+                "target": "NamedEntity",
+                "method": {
+                    "getName": 4
+                },
+                "value": 2.386
+            },
+            {
+                "source": "PetController",
+                "target": "BaseEntity",
+                "method": {
+                    "isNew": 2
+                },
+                "value": 1.693
+            },
+            {
+                "source": "PetTypeFormatter",
+                "target": "NamedEntity",
+                "method": {
+                    "getName": 6
+                },
+                "value": 2.791
+            },
+            {
+                "source": "PetValidator",
+                "target": "NamedEntity",
+                "method": {
+                    "getName": 4
+                },
+                "value": 2.386
+            },
+            {
+                "source": "PetValidator",
+                "target": "BaseEntity",
+                "method": {
+                    "isNew": 4
+                },
+                "value": 2.386
+            },
+            {
+                "source": "PetValidator",
+                "target": "Pet",
+                "method": {
+                    "getType": 3,
+                    "getBirthDate": 5
+                },
+                "value": 3.079
+            },
+            {
+                "source": "VisitController",
+                "target": "Owner",
+                "method": {
+                    "getPet [overloaded_#002]": 3,
+                    "addVisit": 1
+                },
+                "value": 2.386
+            },
+            {
+                "source": "VisitController",
+                "target": "Visit",
+                "method": {
+                    "Visit": 3
+                },
+                "value": 2.098
+            },
+            {
+                "source": "VisitController",
+                "target": "Pet",
+                "method": {
+                    "addVisit": 3
+                },
+                "value": 2.098
+            },
+            {
+                "source": "VetController",
+                "target": "Vets",
+                "method": {
+                    "Vets": 2,
+                    "getVetList": 2
+                },
+                "value": 2.386
+            },
+            {
+                "source": "Vet",
+                "target": "Person",
+                "method": {
+                    "Person": 8
+                },
+                "value": 3.079
+            },
+            {
+                "source": "Specialty",
+                "target": "NamedEntity",
+                "method": {
+                    "NamedEntity": 4
+                },
+                "value": 2.386
+            }
+        ],
+        "overview": {
+            "nodes": [
+                {
+                    "name": "Undefined",
+                    "group": "1",
+                    "category": "Undefined",
+                    "filepath": "",
+                    "semantics": []
+                }
+            ],
+            "links": []
+        }
+    },
+    "mono_data_dependency_graph": {
+        "nodes": [
+            {
+                "name": "Vet",
+                "group": 0,
+                "category": "default_group",
+                "filepath": "project/src/main/java/org/springframework/samples/petclinic/vet/Vet.java",
+                "semantics": []
+            },
+            {
+                "name": "Vets",
+                "group": 0,
+                "category": "default_group",
+                "filepath": "project/src/main/java/org/springframework/samples/petclinic/vet/Vets.java",
+                "semantics": []
+            },
+            {
+                "name": "Specialty",
+                "group": 0,
+                "category": "default_group",
+                "filepath": "project/src/main/java/org/springframework/samples/petclinic/vet/Specialty.java",
+                "semantics": []
+            },
+            {
+                "name": "VetController",
+                "group": 0,
+                "category": "default_group",
+                "filepath": "project/src/main/java/org/springframework/samples/petclinic/vet/VetController.java",
+                "semantics": []
+            },
+            {
+                "name": "PetClinicApplication",
+                "group": 0,
+                "category": "default_group",
+                "filepath": "project/src/main/java/org/springframework/samples/petclinic/PetClinicApplication.java",
+                "semantics": []
+            },
+            {
+                "name": "PetTypeFormatter",
+                "group": 0,
+                "category": "default_group",
+                "filepath": "project/src/main/java/org/springframework/samples/petclinic/owner/PetTypeFormatter.java",
+                "semantics": []
+            },
+            {
+                "name": "PetController",
+                "group": 0,
+                "category": "default_group",
+                "filepath": "project/src/main/java/org/springframework/samples/petclinic/owner/PetController.java",
+                "semantics": []
+            },
+            {
+                "name": "PetValidator",
+                "group": 0,
+                "category": "default_group",
+                "filepath": "project/src/main/java/org/springframework/samples/petclinic/owner/PetValidator.java",
+                "semantics": []
+            },
+            {
+                "name": "Visit",
+                "group": 0,
+                "category": "default_group",
+                "filepath": "project/src/main/java/org/springframework/samples/petclinic/owner/Visit.java",
+                "semantics": []
+            },
+            {
+                "name": "Pet",
+                "group": 1,
+                "category": "data_dep_island_0",
+                "filepath": "project/src/main/java/org/springframework/samples/petclinic/owner/Pet.java",
+                "semantics": []
+            },
+            {
+                "name": "OwnerController",
+                "group": 0,
+                "category": "default_group",
+                "filepath": "project/src/main/java/org/springframework/samples/petclinic/owner/OwnerController.java",
+                "semantics": []
+            },
+            {
+                "name": "Owner",
+                "group": 0,
+                "category": "default_group",
+                "filepath": "project/src/main/java/org/springframework/samples/petclinic/owner/Owner.java",
+                "semantics": []
+            },
+            {
+                "name": "PetType",
+                "group": 1,
+                "category": "data_dep_island_0",
+                "filepath": "project/src/main/java/org/springframework/samples/petclinic/owner/PetType.java",
+                "semantics": []
+            },
+            {
+                "name": "VisitController",
+                "group": 0,
+                "category": "default_group",
+                "filepath": "project/src/main/java/org/springframework/samples/petclinic/owner/VisitController.java",
+                "semantics": []
+            },
+            {
+                "name": "PetClinicRuntimeHints",
+                "group": 0,
+                "category": "default_group",
+                "filepath": "project/src/main/java/org/springframework/samples/petclinic/PetClinicRuntimeHints.java",
+                "semantics": []
+            },
+            {
+                "name": "CacheConfiguration",
+                "group": 0,
+                "category": "default_group",
+                "filepath": "project/src/main/java/org/springframework/samples/petclinic/system/CacheConfiguration.java",
+                "semantics": []
+            },
+            {
+                "name": "WelcomeController",
+                "group": 0,
+                "category": "default_group",
+                "filepath": "project/src/main/java/org/springframework/samples/petclinic/system/WelcomeController.java",
+                "semantics": []
+            },
+            {
+                "name": "CrashController",
+                "group": 0,
+                "category": "default_group",
+                "filepath": "project/src/main/java/org/springframework/samples/petclinic/system/CrashController.java",
+                "semantics": []
+            },
+            {
+                "name": "BaseEntity",
+                "group": 0,
+                "category": "default_group",
+                "filepath": "project/src/main/java/org/springframework/samples/petclinic/model/BaseEntity.java",
+                "semantics": []
+            },
+            {
+                "name": "Person",
+                "group": 0,
+                "category": "default_group",
+                "filepath": "project/src/main/java/org/springframework/samples/petclinic/model/Person.java",
+                "semantics": []
+            },
+            {
+                "name": "NamedEntity",
+                "group": 0,
+                "category": "default_group",
+                "filepath": "project/src/main/java/org/springframework/samples/petclinic/model/NamedEntity.java",
+                "semantics": []
+            }
+        ],
+        "links": [
+            {
+                "source": "Pet",
+                "target": "PetType",
+                "value": "1"
+            }
+        ],
+        "overview": {
+            "nodes": [
+                {
+                    "name": "data_dep_island_0",
+                    "group": 0,
+                    "category": "data_dep_island_0",
+                    "filepath": "data_dep_island_0",
+                    "semantics": []
+                },
+                {
+                    "name": "default_group",
+                    "group": 1,
+                    "category": "default_group",
+                    "filepath": "default_group",
+                    "semantics": []
+                }
+            ],
+            "links": []
+        }
+    },
+    "micro_detail_partition_by_business_logic": {
+        "nodes": [
+            {
+                "name": "PetClinicApplication",
+                "group": 1,
+                "category": "partition1",
+                "construct": "Class",
+                "FQCN": "org.springframework.samples.petclinic.PetClinicApplication",
+                "filepath": "Class, project/src/main/java/org/springframework/samples/petclinic/PetClinicApplication.java",
+                "semantics": [
+                    "DEFAULT_USE_CASE"
+                ]
+            },
+            {
+                "name": "OwnerController",
+                "group": 0,
+                "category": "partition0",
+                "construct": "Class",
+                "FQCN": "org.springframework.samples.petclinic.owner.OwnerController",
+                "filepath": "Class, project/src/main/java/org/springframework/samples/petclinic/owner/OwnerController.java",
+                "semantics": [
+                    "DEFAULT_USE_CASE"
+                ]
+            },
+            {
+                "name": "Owner",
+                "group": 0,
+                "category": "partition0",
+                "construct": "Class",
+                "FQCN": "org.springframework.samples.petclinic.owner.Owner",
+                "filepath": "Class, project/src/main/java/org/springframework/samples/petclinic/owner/Owner.java",
+                "semantics": [
+                    "DEFAULT_USE_CASE"
+                ]
+            },
+            {
+                "name": "Person",
+                "group": 0,
+                "category": "partition0",
+                "construct": "Class",
+                "FQCN": "org.springframework.samples.petclinic.model.Person",
+                "filepath": "Class, project/src/main/java/org/springframework/samples/petclinic/model/Person.java",
+                "semantics": [
+                    "DEFAULT_USE_CASE"
+                ]
+            },
+            {
+                "name": "BaseEntity",
+                "group": 0,
+                "category": "partition0",
+                "construct": "Class",
+                "FQCN": "org.springframework.samples.petclinic.model.BaseEntity",
+                "filepath": "Class, project/src/main/java/org/springframework/samples/petclinic/model/BaseEntity.java",
+                "semantics": [
+                    "DEFAULT_USE_CASE"
+                ]
+            },
+            {
+                "name": "Pet",
+                "group": 2,
+                "category": "partition2",
+                "construct": "Class",
+                "FQCN": "org.springframework.samples.petclinic.owner.Pet",
+                "filepath": "Class, project/src/main/java/org/springframework/samples/petclinic/owner/Pet.java",
+                "semantics": [
+                    "DEFAULT_USE_CASE"
+                ]
+            },
+            {
+                "name": "NamedEntity",
+                "group": 2,
+                "category": "partition2",
+                "construct": "Class",
+                "FQCN": "org.springframework.samples.petclinic.model.NamedEntity",
+                "filepath": "Class, project/src/main/java/org/springframework/samples/petclinic/model/NamedEntity.java",
+                "semantics": [
+                    "DEFAULT_USE_CASE"
+                ]
+            },
+            {
+                "name": "PetType",
+                "group": 2,
+                "category": "partition2",
+                "construct": "Class",
+                "FQCN": "org.springframework.samples.petclinic.owner.PetType",
+                "filepath": "Class, project/src/main/java/org/springframework/samples/petclinic/owner/PetType.java",
+                "semantics": [
+                    "DEFAULT_USE_CASE"
+                ]
+            },
+            {
+                "name": "Visit",
+                "group": 0,
+                "category": "partition0",
+                "construct": "Class",
+                "FQCN": "org.springframework.samples.petclinic.owner.Visit",
+                "filepath": "Class, project/src/main/java/org/springframework/samples/petclinic/owner/Visit.java",
+                "semantics": [
+                    "DEFAULT_USE_CASE"
+                ]
+            },
+            {
+                "name": "PetController",
+                "group": 2,
+                "category": "partition2",
+                "construct": "Class",
+                "FQCN": "org.springframework.samples.petclinic.owner.PetController",
+                "filepath": "Class, project/src/main/java/org/springframework/samples/petclinic/owner/PetController.java",
+                "semantics": [
+                    "DEFAULT_USE_CASE"
+                ]
+            },
+            {
+                "name": "PetTypeFormatter",
+                "group": 2,
+                "category": "partition2",
+                "construct": "Class",
+                "FQCN": "org.springframework.samples.petclinic.owner.PetTypeFormatter",
+                "filepath": "Class, project/src/main/java/org/springframework/samples/petclinic/owner/PetTypeFormatter.java",
+                "semantics": [
+                    "DEFAULT_USE_CASE"
+                ]
+            },
+            {
+                "name": "PetValidator",
+                "group": 2,
+                "category": "partition2",
+                "construct": "Class",
+                "FQCN": "org.springframework.samples.petclinic.owner.PetValidator",
+                "filepath": "Class, project/src/main/java/org/springframework/samples/petclinic/owner/PetValidator.java",
+                "semantics": [
+                    "DEFAULT_USE_CASE"
+                ]
+            },
+            {
+                "name": "VisitController",
+                "group": 0,
+                "category": "partition0",
+                "construct": "Class",
+                "FQCN": "org.springframework.samples.petclinic.owner.VisitController",
+                "filepath": "Class, project/src/main/java/org/springframework/samples/petclinic/owner/VisitController.java",
+                "semantics": [
+                    "DEFAULT_USE_CASE"
+                ]
+            },
+            {
+                "name": "VetController",
+                "group": 1,
+                "category": "partition1",
+                "construct": "Class",
+                "FQCN": "org.springframework.samples.petclinic.vet.VetController",
+                "filepath": "Class, project/src/main/java/org/springframework/samples/petclinic/vet/VetController.java",
+                "semantics": [
+                    "DEFAULT_USE_CASE"
+                ]
+            },
+            {
+                "name": "Vet",
+                "group": 0,
+                "category": "partition0",
+                "construct": "Class",
+                "FQCN": "org.springframework.samples.petclinic.vet.Vet",
+                "filepath": "Class, project/src/main/java/org/springframework/samples/petclinic/vet/Vet.java",
+                "semantics": [
+                    "DEFAULT_USE_CASE"
+                ]
+            },
+            {
+                "name": "Specialty",
+                "group": 2,
+                "category": "partition2",
+                "construct": "Class",
+                "FQCN": "org.springframework.samples.petclinic.vet.Specialty",
+                "filepath": "Class, project/src/main/java/org/springframework/samples/petclinic/vet/Specialty.java",
+                "semantics": [
+                    "DEFAULT_USE_CASE"
+                ]
+            },
+            {
+                "name": "Vets",
+                "group": 1,
+                "category": "partition1",
+                "construct": "Class",
+                "FQCN": "org.springframework.samples.petclinic.vet.Vets",
+                "filepath": "Class, project/src/main/java/org/springframework/samples/petclinic/vet/Vets.java",
+                "semantics": [
+                    "DEFAULT_USE_CASE"
+                ]
+            },
+            {
+                "name": "PetClinicRuntimeHints",
+                "group": 3,
+                "category": "Unobserved",
+                "construct": "Class",
+                "FQCN": "org.springframework.samples.petclinic.PetClinicRuntimeHints",
+                "filepath": "Class, project/src/main/java/org/springframework/samples/petclinic/PetClinicRuntimeHints.java",
+                "semantics": []
+            },
+            {
+                "name": "CacheConfiguration",
+                "group": 3,
+                "category": "Unobserved",
+                "construct": "Class",
+                "FQCN": "org.springframework.samples.petclinic.system.CacheConfiguration",
+                "filepath": "Class, project/src/main/java/org/springframework/samples/petclinic/system/CacheConfiguration.java",
+                "semantics": []
+            },
+            {
+                "name": "WelcomeController",
+                "group": 3,
+                "category": "Unobserved",
+                "construct": "Class",
+                "FQCN": "org.springframework.samples.petclinic.system.WelcomeController",
+                "filepath": "Class, project/src/main/java/org/springframework/samples/petclinic/system/WelcomeController.java",
+                "semantics": []
+            },
+            {
+                "name": "CrashController",
+                "group": 3,
+                "category": "Unobserved",
+                "construct": "Class",
+                "FQCN": "org.springframework.samples.petclinic.system.CrashController",
+                "filepath": "Class, project/src/main/java/org/springframework/samples/petclinic/system/CrashController.java",
+                "semantics": []
+            }
+        ],
+        "links": [
+            {
+                "source": "OwnerController",
+                "target": "Owner",
+                "method": {
+                    "Owner": 8
+                },
+                "value": 3.079
+            },
+            {
+                "source": "OwnerController",
+                "target": "BaseEntity",
+                "method": {
+                    "getId": 2,
+                    "setId": 2
+                },
+                "value": 2.386
+            },
+            {
+                "source": "OwnerController",
+                "target": "Person",
+                "method": {
+                    "getLastName": 7,
+                    "setLastName": 1
+                },
+                "value": 3.079
+            },
+            {
+                "source": "Owner",
+                "target": "Person",
+                "method": {
+                    "Person": 32,
+                    "getLastName": 16,
+                    "getFirstName": 16
+                },
+                "value": 5.158
+            },
+            {
+                "source": "Owner",
+                "target": "BaseEntity",
+                "method": {
+                    "isNew": 53,
+                    "getId": 24
+                },
+                "value": 5.343
+            },
+            {
+                "source": "Owner",
+                "target": "NamedEntity",
+                "method": {
+                    "getName": 14
+                },
+                "value": 3.639
+            },
+            {
+                "source": "Owner",
+                "target": "Pet",
+                "method": {
+                    "addVisit": 1
+                },
+                "value": 1.0
+            },
+            {
+                "source": "Person",
+                "target": "BaseEntity",
+                "method": {
+                    "BaseEntity": 40
+                },
+                "value": 4.688
+            },
+            {
+                "source": "Pet",
+                "target": "NamedEntity",
+                "method": {
+                    "NamedEntity": 27
+                },
+                "value": 4.295
+            },
+            {
+                "source": "NamedEntity",
+                "target": "BaseEntity",
+                "method": {
+                    "BaseEntity": 51
+                },
+                "value": 4.931
+            },
+            {
+                "source": "PetType",
+                "target": "NamedEntity",
+                "method": {
+                    "NamedEntity": 20
+                },
+                "value": 3.995
+            },
+            {
+                "source": "Visit",
+                "target": "BaseEntity",
+                "method": {
+                    "BaseEntity": 15
+                },
+                "value": 3.708
+            },
+            {
+                "source": "PetController",
+                "target": "Pet",
+                "method": {
+                    "Pet": 4
+                },
+                "value": 2.386
+            },
+            {
+                "source": "PetController",
+                "target": "Owner",
+                "method": {
+                    "addPet": 4,
+                    "getPet [overloaded_#003]": 2,
+                    "getPet [overloaded_#002]": 4
+                },
+                "value": 3.302
+            },
+            {
+                "source": "PetController",
+                "target": "PetValidator",
+                "method": {
+                    "PetValidator": 6,
+                    "supports": 6
+                },
+                "value": 3.484
+            },
+            {
+                "source": "PetController",
+                "target": "NamedEntity",
+                "method": {
+                    "getName": 4
+                },
+                "value": 2.386
+            },
+            {
+                "source": "PetController",
+                "target": "BaseEntity",
+                "method": {
+                    "isNew": 2
+                },
+                "value": 1.693
+            },
+            {
+                "source": "PetTypeFormatter",
+                "target": "NamedEntity",
+                "method": {
+                    "getName": 6
+                },
+                "value": 2.791
+            },
+            {
+                "source": "PetValidator",
+                "target": "NamedEntity",
+                "method": {
+                    "getName": 4
+                },
+                "value": 2.386
+            },
+            {
+                "source": "PetValidator",
+                "target": "BaseEntity",
+                "method": {
+                    "isNew": 4
+                },
+                "value": 2.386
+            },
+            {
+                "source": "PetValidator",
+                "target": "Pet",
+                "method": {
+                    "getType": 3,
+                    "getBirthDate": 5
+                },
+                "value": 3.079
+            },
+            {
+                "source": "VisitController",
+                "target": "Owner",
+                "method": {
+                    "getPet [overloaded_#002]": 3,
+                    "addVisit": 1
+                },
+                "value": 2.386
+            },
+            {
+                "source": "VisitController",
+                "target": "Visit",
+                "method": {
+                    "Visit": 3
+                },
+                "value": 2.098
+            },
+            {
+                "source": "VisitController",
+                "target": "Pet",
+                "method": {
+                    "addVisit": 3
+                },
+                "value": 2.098
+            },
+            {
+                "source": "VetController",
+                "target": "Vets",
+                "method": {
+                    "Vets": 2,
+                    "getVetList": 2
+                },
+                "value": 2.386
+            },
+            {
+                "source": "Vet",
+                "target": "Person",
+                "method": {
+                    "Person": 8
+                },
+                "value": 3.079
+            },
+            {
+                "source": "Specialty",
+                "target": "NamedEntity",
+                "method": {
+                    "NamedEntity": 4
+                },
+                "value": 2.386
+            }
+        ],
+        "overview": {
+            "nodes": [
+                {
+                    "name": "partition1",
+                    "group": 1,
+                    "category": "partition1",
+                    "filepath": "Cluster",
+                    "semantics": [
+                        "DEFAULT_USE_CASE"
+                    ]
+                },
+                {
+                    "name": "partition0",
+                    "group": 0,
+                    "category": "partition0",
+                    "filepath": "Cluster",
+                    "semantics": [
+                        "DEFAULT_USE_CASE"
+                    ]
+                },
+                {
+                    "name": "partition2",
+                    "group": 2,
+                    "category": "partition2",
+                    "filepath": "Cluster",
+                    "semantics": [
+                        "DEFAULT_USE_CASE"
+                    ]
+                },
+                {
+                    "name": "Unobserved",
+                    "group": 3,
+                    "category": "Unobserved",
+                    "filepath": "Cluster",
+                    "semantics": []
+                }
+            ],
+            "links": [
+                {
+                    "source": "partition0",
+                    "target": "partition2",
+                    "value": 1.611
+                },
+                {
+                    "source": "partition2",
+                    "target": "partition0",
+                    "value": 1.873
+                }
+            ]
+        }
+    },
+    "micro_detail_partition_by_natural_seam": {
+        "nodes": [
+            {
+                "name": "PetClinicApplication",
+                "group": 1,
+                "category": "partition1",
+                "construct": "Class",
+                "FQCN": "org.springframework.samples.petclinic.PetClinicApplication",
+                "filepath": "Class, project/src/main/java/org/springframework/samples/petclinic/PetClinicApplication.java",
+                "semantics": [
+                    "DEFAULT_USE_CASE"
+                ]
+            },
+            {
+                "name": "OwnerController",
+                "group": 0,
+                "category": "partition0",
+                "construct": "Class",
+                "FQCN": "org.springframework.samples.petclinic.owner.OwnerController",
+                "filepath": "Class, project/src/main/java/org/springframework/samples/petclinic/owner/OwnerController.java",
+                "semantics": [
+                    "DEFAULT_USE_CASE"
+                ]
+            },
+            {
+                "name": "Owner",
+                "group": 0,
+                "category": "partition0",
+                "construct": "Class",
+                "FQCN": "org.springframework.samples.petclinic.owner.Owner",
+                "filepath": "Class, project/src/main/java/org/springframework/samples/petclinic/owner/Owner.java",
+                "semantics": [
+                    "DEFAULT_USE_CASE"
+                ]
+            },
+            {
+                "name": "Person",
+                "group": 0,
+                "category": "partition0",
+                "construct": "Class",
+                "FQCN": "org.springframework.samples.petclinic.model.Person",
+                "filepath": "Class, project/src/main/java/org/springframework/samples/petclinic/model/Person.java",
+                "semantics": [
+                    "DEFAULT_USE_CASE"
+                ]
+            },
+            {
+                "name": "BaseEntity",
+                "group": 0,
+                "category": "partition0",
+                "construct": "Class",
+                "FQCN": "org.springframework.samples.petclinic.model.BaseEntity",
+                "filepath": "Class, project/src/main/java/org/springframework/samples/petclinic/model/BaseEntity.java",
+                "semantics": [
+                    "DEFAULT_USE_CASE"
+                ]
+            },
+            {
+                "name": "Pet",
+                "group": 2,
+                "category": "partition2",
+                "construct": "Class",
+                "FQCN": "org.springframework.samples.petclinic.owner.Pet",
+                "filepath": "Class, project/src/main/java/org/springframework/samples/petclinic/owner/Pet.java",
+                "semantics": [
+                    "DEFAULT_USE_CASE"
+                ]
+            },
+            {
+                "name": "NamedEntity",
+                "group": 2,
+                "category": "partition2",
+                "construct": "Class",
+                "FQCN": "org.springframework.samples.petclinic.model.NamedEntity",
+                "filepath": "Class, project/src/main/java/org/springframework/samples/petclinic/model/NamedEntity.java",
+                "semantics": [
+                    "DEFAULT_USE_CASE"
+                ]
+            },
+            {
+                "name": "PetType",
+                "group": 2,
+                "category": "partition2",
+                "construct": "Class",
+                "FQCN": "org.springframework.samples.petclinic.owner.PetType",
+                "filepath": "Class, project/src/main/java/org/springframework/samples/petclinic/owner/PetType.java",
+                "semantics": [
+                    "DEFAULT_USE_CASE"
+                ]
+            },
+            {
+                "name": "Visit",
+                "group": 0,
+                "category": "partition0",
+                "construct": "Class",
+                "FQCN": "org.springframework.samples.petclinic.owner.Visit",
+                "filepath": "Class, project/src/main/java/org/springframework/samples/petclinic/owner/Visit.java",
+                "semantics": [
+                    "DEFAULT_USE_CASE"
+                ]
+            },
+            {
+                "name": "PetController",
+                "group": 2,
+                "category": "partition2",
+                "construct": "Class",
+                "FQCN": "org.springframework.samples.petclinic.owner.PetController",
+                "filepath": "Class, project/src/main/java/org/springframework/samples/petclinic/owner/PetController.java",
+                "semantics": [
+                    "DEFAULT_USE_CASE"
+                ]
+            },
+            {
+                "name": "PetTypeFormatter",
+                "group": 2,
+                "category": "partition2",
+                "construct": "Class",
+                "FQCN": "org.springframework.samples.petclinic.owner.PetTypeFormatter",
+                "filepath": "Class, project/src/main/java/org/springframework/samples/petclinic/owner/PetTypeFormatter.java",
+                "semantics": [
+                    "DEFAULT_USE_CASE"
+                ]
+            },
+            {
+                "name": "PetValidator",
+                "group": 2,
+                "category": "partition2",
+                "construct": "Class",
+                "FQCN": "org.springframework.samples.petclinic.owner.PetValidator",
+                "filepath": "Class, project/src/main/java/org/springframework/samples/petclinic/owner/PetValidator.java",
+                "semantics": [
+                    "DEFAULT_USE_CASE"
+                ]
+            },
+            {
+                "name": "VisitController",
+                "group": 0,
+                "category": "partition0",
+                "construct": "Class",
+                "FQCN": "org.springframework.samples.petclinic.owner.VisitController",
+                "filepath": "Class, project/src/main/java/org/springframework/samples/petclinic/owner/VisitController.java",
+                "semantics": [
+                    "DEFAULT_USE_CASE"
+                ]
+            },
+            {
+                "name": "VetController",
+                "group": 1,
+                "category": "partition1",
+                "construct": "Class",
+                "FQCN": "org.springframework.samples.petclinic.vet.VetController",
+                "filepath": "Class, project/src/main/java/org/springframework/samples/petclinic/vet/VetController.java",
+                "semantics": [
+                    "DEFAULT_USE_CASE"
+                ]
+            },
+            {
+                "name": "Vet",
+                "group": 0,
+                "category": "partition0",
+                "construct": "Class",
+                "FQCN": "org.springframework.samples.petclinic.vet.Vet",
+                "filepath": "Class, project/src/main/java/org/springframework/samples/petclinic/vet/Vet.java",
+                "semantics": [
+                    "DEFAULT_USE_CASE"
+                ]
+            },
+            {
+                "name": "Specialty",
+                "group": 2,
+                "category": "partition2",
+                "construct": "Class",
+                "FQCN": "org.springframework.samples.petclinic.vet.Specialty",
+                "filepath": "Class, project/src/main/java/org/springframework/samples/petclinic/vet/Specialty.java",
+                "semantics": [
+                    "DEFAULT_USE_CASE"
+                ]
+            },
+            {
+                "name": "Vets",
+                "group": 1,
+                "category": "partition1",
+                "construct": "Class",
+                "FQCN": "org.springframework.samples.petclinic.vet.Vets",
+                "filepath": "Class, project/src/main/java/org/springframework/samples/petclinic/vet/Vets.java",
+                "semantics": [
+                    "DEFAULT_USE_CASE"
+                ]
+            },
+            {
+                "name": "PetClinicRuntimeHints",
+                "group": 3,
+                "category": "Unobserved",
+                "construct": "Class",
+                "FQCN": "org.springframework.samples.petclinic.PetClinicRuntimeHints",
+                "filepath": "Class, project/src/main/java/org/springframework/samples/petclinic/PetClinicRuntimeHints.java",
+                "semantics": []
+            },
+            {
+                "name": "CacheConfiguration",
+                "group": 3,
+                "category": "Unobserved",
+                "construct": "Class",
+                "FQCN": "org.springframework.samples.petclinic.system.CacheConfiguration",
+                "filepath": "Class, project/src/main/java/org/springframework/samples/petclinic/system/CacheConfiguration.java",
+                "semantics": []
+            },
+            {
+                "name": "WelcomeController",
+                "group": 3,
+                "category": "Unobserved",
+                "construct": "Class",
+                "FQCN": "org.springframework.samples.petclinic.system.WelcomeController",
+                "filepath": "Class, project/src/main/java/org/springframework/samples/petclinic/system/WelcomeController.java",
+                "semantics": []
+            },
+            {
+                "name": "CrashController",
+                "group": 3,
+                "category": "Unobserved",
+                "construct": "Class",
+                "FQCN": "org.springframework.samples.petclinic.system.CrashController",
+                "filepath": "Class, project/src/main/java/org/springframework/samples/petclinic/system/CrashController.java",
+                "semantics": []
+            }
+        ],
+        "links": [
+            {
+                "source": "OwnerController",
+                "target": "Owner",
+                "method": {
+                    "Owner": 8
+                },
+                "value": 3.079
+            },
+            {
+                "source": "OwnerController",
+                "target": "BaseEntity",
+                "method": {
+                    "getId": 2,
+                    "setId": 2
+                },
+                "value": 2.386
+            },
+            {
+                "source": "OwnerController",
+                "target": "Person",
+                "method": {
+                    "getLastName": 7,
+                    "setLastName": 1
+                },
+                "value": 3.079
+            },
+            {
+                "source": "Owner",
+                "target": "Person",
+                "method": {
+                    "Person": 32,
+                    "getLastName": 16,
+                    "getFirstName": 16
+                },
+                "value": 5.158
+            },
+            {
+                "source": "Owner",
+                "target": "BaseEntity",
+                "method": {
+                    "isNew": 53,
+                    "getId": 24
+                },
+                "value": 5.343
+            },
+            {
+                "source": "Owner",
+                "target": "NamedEntity",
+                "method": {
+                    "getName": 14
+                },
+                "value": 3.639
+            },
+            {
+                "source": "Owner",
+                "target": "Pet",
+                "method": {
+                    "addVisit": 1
+                },
+                "value": 1.0
+            },
+            {
+                "source": "Person",
+                "target": "BaseEntity",
+                "method": {
+                    "BaseEntity": 40
+                },
+                "value": 4.688
+            },
+            {
+                "source": "Pet",
+                "target": "NamedEntity",
+                "method": {
+                    "NamedEntity": 27
+                },
+                "value": 4.295
+            },
+            {
+                "source": "NamedEntity",
+                "target": "BaseEntity",
+                "method": {
+                    "BaseEntity": 51
+                },
+                "value": 4.931
+            },
+            {
+                "source": "PetType",
+                "target": "NamedEntity",
+                "method": {
+                    "NamedEntity": 20
+                },
+                "value": 3.995
+            },
+            {
+                "source": "Visit",
+                "target": "BaseEntity",
+                "method": {
+                    "BaseEntity": 15
+                },
+                "value": 3.708
+            },
+            {
+                "source": "PetController",
+                "target": "Pet",
+                "method": {
+                    "Pet": 4
+                },
+                "value": 2.386
+            },
+            {
+                "source": "PetController",
+                "target": "Owner",
+                "method": {
+                    "addPet": 4,
+                    "getPet [overloaded_#003]": 2,
+                    "getPet [overloaded_#002]": 4
+                },
+                "value": 3.302
+            },
+            {
+                "source": "PetController",
+                "target": "PetValidator",
+                "method": {
+                    "PetValidator": 6,
+                    "supports": 6
+                },
+                "value": 3.484
+            },
+            {
+                "source": "PetController",
+                "target": "NamedEntity",
+                "method": {
+                    "getName": 4
+                },
+                "value": 2.386
+            },
+            {
+                "source": "PetController",
+                "target": "BaseEntity",
+                "method": {
+                    "isNew": 2
+                },
+                "value": 1.693
+            },
+            {
+                "source": "PetTypeFormatter",
+                "target": "NamedEntity",
+                "method": {
+                    "getName": 6
+                },
+                "value": 2.791
+            },
+            {
+                "source": "PetValidator",
+                "target": "NamedEntity",
+                "method": {
+                    "getName": 4
+                },
+                "value": 2.386
+            },
+            {
+                "source": "PetValidator",
+                "target": "BaseEntity",
+                "method": {
+                    "isNew": 4
+                },
+                "value": 2.386
+            },
+            {
+                "source": "PetValidator",
+                "target": "Pet",
+                "method": {
+                    "getType": 3,
+                    "getBirthDate": 5
+                },
+                "value": 3.079
+            },
+            {
+                "source": "VisitController",
+                "target": "Owner",
+                "method": {
+                    "getPet [overloaded_#002]": 3,
+                    "addVisit": 1
+                },
+                "value": 2.386
+            },
+            {
+                "source": "VisitController",
+                "target": "Visit",
+                "method": {
+                    "Visit": 3
+                },
+                "value": 2.098
+            },
+            {
+                "source": "VisitController",
+                "target": "Pet",
+                "method": {
+                    "addVisit": 3
+                },
+                "value": 2.098
+            },
+            {
+                "source": "VetController",
+                "target": "Vets",
+                "method": {
+                    "Vets": 2,
+                    "getVetList": 2
+                },
+                "value": 2.386
+            },
+            {
+                "source": "Vet",
+                "target": "Person",
+                "method": {
+                    "Person": 8
+                },
+                "value": 3.079
+            },
+            {
+                "source": "Specialty",
+                "target": "NamedEntity",
+                "method": {
+                    "NamedEntity": 4
+                },
+                "value": 2.386
+            }
+        ],
+        "overview": {
+            "nodes": [
+                {
+                    "name": "partition1",
+                    "group": 1,
+                    "category": "partition1",
+                    "filepath": "Cluster",
+                    "semantics": [
+                        "DEFAULT_USE_CASE"
+                    ]
+                },
+                {
+                    "name": "partition0",
+                    "group": 0,
+                    "category": "partition0",
+                    "filepath": "Cluster",
+                    "semantics": [
+                        "DEFAULT_USE_CASE"
+                    ]
+                },
+                {
+                    "name": "partition2",
+                    "group": 2,
+                    "category": "partition2",
+                    "filepath": "Cluster",
+                    "semantics": [
+                        "DEFAULT_USE_CASE"
+                    ]
+                },
+                {
+                    "name": "Unobserved",
+                    "group": 3,
+                    "category": "Unobserved",
+                    "filepath": "Cluster",
+                    "semantics": []
+                }
+            ],
+            "links": [
+                {
+                    "source": "partition0",
+                    "target": "partition2",
+                    "value": 1.611
+                },
+                {
+                    "source": "partition2",
+                    "target": "partition0",
+                    "value": 1.873
+                }
+            ]
+        }
+    }
+}

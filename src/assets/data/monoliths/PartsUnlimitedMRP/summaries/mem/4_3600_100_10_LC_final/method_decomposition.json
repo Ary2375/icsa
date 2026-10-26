@@ -1,0 +1,192 @@
+{
+    "tool": {
+        "decomposition": {
+            "partition0": [
+                {
+                    "id": "Quote.Quote"
+                },
+                {
+                    "id": "Quote.Quote"
+                },
+                {
+                    "id": "Quote.addQuoteItem"
+                },
+                {
+                    "id": "Quote.equals"
+                },
+                {
+                    "id": "Quote.getCity"
+                },
+                {
+                    "id": "Quote.getCustomerName"
+                },
+                {
+                    "id": "Quote.getDealerName"
+                },
+                {
+                    "id": "Quote.getDiscount"
+                },
+                {
+                    "id": "Quote.getPostalCode"
+                },
+                {
+                    "id": "Quote.getQuoteId"
+                },
+                {
+                    "id": "Quote.getQuoteItems"
+                },
+                {
+                    "id": "Quote.getState"
+                },
+                {
+                    "id": "Quote.getTotalCost"
+                },
+                {
+                    "id": "Quote.getValidUntil"
+                },
+                {
+                    "id": "Quote.hashCode"
+                },
+                {
+                    "id": "Quote.setCity"
+                },
+                {
+                    "id": "Quote.setCustomerName"
+                },
+                {
+                    "id": "Quote.setDealerName"
+                },
+                {
+                    "id": "Quote.setDiscount"
+                },
+                {
+                    "id": "Quote.setPostalCode"
+                },
+                {
+                    "id": "Quote.setQuoteId"
+                },
+                {
+                    "id": "Quote.setQuoteItems"
+                },
+                {
+                    "id": "Quote.setState"
+                },
+                {
+                    "id": "Quote.setTotalCost"
+                },
+                {
+                    "id": "Quote.setValidUntil"
+                },
+                {
+                    "id": "Quote.validate"
+                },
+                {
+                    "id": "ShipmentRecord.ShipmentRecord"
+                },
+                {
+                    "id": "ShipmentRecord.ShipmentRecord"
+                },
+                {
+                    "id": "ShipmentRecord.addEvent"
+                },
+                {
+                    "id": "ShipmentRecord.addEvent"
+                },
+                {
+                    "id": "ShipmentRecord.getAlternateContactPhone"
+                },
+                {
+                    "id": "ShipmentRecord.getContactName"
+                },
+                {
+                    "id": "ShipmentRecord.getDeliveryAddress"
+                },
+                {
+                    "id": "ShipmentRecord.getDeliveryDate"
+                },
+                {
+                    "id": "ShipmentRecord.getEvents"
+                },
+                {
+                    "id": "ShipmentRecord.getOrderId"
+                },
+                {
+                    "id": "ShipmentRecord.getPrimaryContactPhone"
+                },
+                {
+                    "id": "ShipmentRecord.setAlternateContactPhone"
+                },
+                {
+                    "id": "ShipmentRecord.setContactName"
+                },
+                {
+                    "id": "ShipmentRecord.setDeliveryAddress"
+                },
+                {
+                    "id": "ShipmentRecord.setDeliveryDate"
+                },
+                {
+                    "id": "ShipmentRecord.setOrderId"
+                },
+                {
+                    "id": "ShipmentRecord.setPrimaryContactPhone"
+                },
+                {
+                    "id": "ShipmentRecord.validate"
+                }
+            ],
+            "partition1": [],
+            "partition2": [],
+            "partition3": [
+                {
+                    "id": "PostgresqlProperties.PostgresqlProperties"
+                },
+                {
+                    "id": "PostgresqlProperties.getDriverClass"
+                },
+                {
+                    "id": "PostgresqlProperties.getPassword"
+                },
+                {
+                    "id": "PostgresqlProperties.getUrl"
+                },
+                {
+                    "id": "PostgresqlProperties.getUsername"
+                },
+                {
+                    "id": "PostgresqlProperties.setDriverClass"
+                },
+                {
+                    "id": "PostgresqlProperties.setPassword"
+                },
+                {
+                    "id": "PostgresqlProperties.setUrl"
+                },
+                {
+                    "id": "PostgresqlProperties.setUsername"
+                },
+                {
+                    "id": "QuoteController.QuoteController"
+                },
+                {
+                    "id": "QuoteController.createQuote"
+                },
+                {
+                    "id": "QuoteController.deleteQuote"
+                },
+                {
+                    "id": "QuoteController.getQuoteById"
+                },
+                {
+                    "id": "QuoteController.getQuotesByCustomerName"
+                },
+                {
+                    "id": "QuoteController.getRepository"
+                },
+                {
+                    "id": "QuoteController.updateQuote"
+                }
+            ]
+        }
+    }
+}

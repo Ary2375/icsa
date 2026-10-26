@@ -1,0 +1,139 @@
+{
+  "mosaic": {
+    "decomposition": {
+      "partition0": [
+        {
+          "id": "OrderDetails"
+        },
+        {
+          "id": "Order"
+        },
+        {
+          "id": "OrderUpdateInfo"
+        },
+        {
+          "id": "OrderEventInfo"
+        },
+        {
+          "id": "OrderRepository"
+        },
+        {
+          "id": "MockOrderRepository"
+        },
+        {
+          "id": "MongoOrderRepository"
+        },
+        {
+          "id": "OrderController"
+        }
+      ],
+      "partition1": [
+        {
+          "id": "DealerInfo"
+        },
+        {
+          "id": "DealersRepository"
+        },
+        {
+          "id": "MockDealersRepository"
+        },
+        {
+          "id": "MongoDealersRepository"
+        },
+        {
+          "id": "DealerController"
+        }
+      ],
+      "partition2": [
+        {
+          "id": "ShipmentDetails"
+        },
+        {
+          "id": "DeliveryAddress"
+        },
+        {
+          "id": "ShipmentRecord"
+        },
+        {
+          "id": "ShipmentEventInfo"
+        },
+        {
+          "id": "PhoneInfo"
+        },
+        {
+          "id": "ShipmentRepository"
+        },
+        {
+          "id": "MockShipmentRepository"
+        },
+        {
+          "id": "MongoShipmentRepository"
+        },
+        {
+          "id": "ShipmentController.getShipments"
+        },
+        {
+          "id": "ShipmentController.getShipment"
+        },
+        {
+          "id": "ShipmentController.createShipmentRecord"
+        },
+        {
+          "id": "ShipmentController.updateShipment"
+        },
+        {
+          "id": "ShipmentController.deleteShipment"
+        },
+        {
+          "id": "ShipmentController.addEvent"
+        }
+      ],
+      "partition3": [
+        {
+          "id": "QuoteDetails"
+        },
+        {
+          "id": "QuoteItemInfo"
+        },
+        {
+          "id": "Quote"
+        },
+        {
+          "id": "Delivery"
+        },
+        {
+          "id": "QuoteRepository"
+        },
+        {
+          "id": "MockQuoteRepository"
+        },
+        {
+          "id": "MongoQuoteRepository"
+        },
+        {
+          "id": "ShipmentController.getDeliveries"
+        },
+        {
+          "id": "QuoteController"
+        }
+      ],
+      "partition4": [
+        {
+          "id": "CatalogItem"
+        },
+        {
+          "id": "CatalogItemsRepository"
+        },
+        {
+          "id": "MockCatalogItemsRepository"
+        },
+        {
+          "id": "MongoCatalogItemsRepository"
+        },
+        {
+          "id": "CatalogController"
+        }
+      ]
+    }
+  }
+}

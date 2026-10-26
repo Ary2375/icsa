@@ -1,0 +1,157 @@
+{
+    "tool": {
+        "decomposition": {
+            "UserManagementService": [
+                {
+                    "id": "AckServlet"
+                },
+                {
+                    "id": "AlcoholResult"
+                },
+                {
+                    "id": "AssertionException"
+                },
+                {
+                    "id": "CheckUtils"
+                },
+                {
+                    "id": "DbServlet"
+                },
+                {
+                    "id": "EmptyDataSource"
+                },
+                {
+                    "id": "FibServlet"
+                },
+                {
+                    "id": "LoginServlet"
+                },
+                {
+                    "id": "LoginUtils"
+                },
+                {
+                    "id": "MathServlet"
+                },
+                {
+                    "id": "NotImplementedException"
+                },
+                {
+                    "id": "ParameterObject"
+                },
+                {
+                    "id": "PasswordResult"
+                },
+                {
+                    "id": "PersistenceLayer"
+                },
+                {
+                    "id": "RegisterServlet"
+                },
+                {
+                    "id": "RegistrationResult"
+                },
+                {
+                    "id": "RegistrationUtils"
+                },
+                {
+                    "id": "ServletUtils"
+                },
+                {
+                    "id": "SqlData"
+                },
+                {
+                    "id": "SqlRuntimeException"
+                },
+                {
+                    "id": "StringUtils"
+                },
+                {
+                    "id": "TailRecursive"
+                },
+                {
+                    "id": "User"
+                },
+                {
+                    "id": "WebAppListener"
+                }
+            ],
+            "BorrowManagementService": [
+                {
+                    "id": "Borrower"
+                },
+                {
+                    "id": "Loan"
+                }
+            ],
+            "BookManagementService": [
+                {
+                    "id": "Book"
+                },
+                {
+                    "id": "Calculator"
+                },
+                {
+                    "id": "IPersistenceLayer"
+                },
+                {
+                    "id": "LibraryBookListAvailableServlet"
+                },
+                {
+                    "id": "LibraryBookListSearchServlet"
+                },
+                {
+                    "id": "LibraryBorrowerListSearchServlet"
+                },
+                {
+                    "id": "LibraryLendServlet"
+                },
+                {
+                    "id": "LibraryRegisterBookServlet"
+                },
+                {
+                    "id": "LibraryRegisterBorrowerServlet"
+                },
+                {
+                    "id": "LibraryUtils"
+                }
+            ],
+            "CalculateManagementService": [
+                {
+                    "id": "Ackermann"
+                },
+                {
+                    "id": "AckermannIterative"
+                },
+                {
+                    "id": "AlcoholCalculator"
+                },
+                {
+                    "id": "CartesianProduct"
+                },
+                {
+                    "id": "DinnerPrices"
+                },
+                {
+                    "id": "Fibonacci"
+                },
+                {
+                    "id": "FibonacciIterative"
+                },
+                {
+                    "id": "FunctionalField"
+                }
+            ],
+            "UNOBSERVED": [
+                {
+                    "id": "LibraryActionResults"
+                },
+                {
+                    "id": "PasswordResultEnums"
+                },
+                {
+                    "id": "RegistrationStatusEnums"
+                }
+            ]
+        }
+    }
+}

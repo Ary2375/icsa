@@ -1,0 +1,224 @@
+{
+  "mosaic": {
+    "decomposition": {
+      "partition0": [
+        {
+          "id": "Borrower"
+        },
+        {
+          "id": "Loan"
+        },
+        {
+          "id": "Book"
+        },
+        {
+          "id": "LibraryRegisterBorrowerServlet"
+        },
+        {
+          "id": "LibraryBookListSearchServlet"
+        },
+        {
+          "id": "LibraryLendServlet"
+        },
+        {
+          "id": "LibraryBorrowerListSearchServlet"
+        },
+        {
+          "id": "LibraryRegisterBookServlet"
+        },
+        {
+          "id": "LibraryUtils.lendBook"
+        },
+        {
+          "id": "LibraryUtils.createLoan"
+        },
+        {
+          "id": "LibraryUtils.registerBorrower"
+        },
+        {
+          "id": "LibraryUtils.saveNewBorrower"
+        },
+        {
+          "id": "LibraryUtils.registerBook"
+        },
+        {
+          "id": "LibraryUtils.saveNewBook"
+        },
+        {
+          "id": "LibraryUtils.searchForLoanByBook"
+        },
+        {
+          "id": "LibraryUtils.searchForLoanByBorrower"
+        },
+        {
+          "id": "LibraryUtils.searchForBorrowerByName"
+        },
+        {
+          "id": "LibraryUtils.searchForBookByTitle"
+        },
+        {
+          "id": "LibraryUtils.searchForBookById"
+        },
+        {
+          "id": "LibraryUtils.searchForBorrowerById"
+        },
+        {
+          "id": "LibraryUtils.deleteBook"
+        },
+        {
+          "id": "LibraryUtils.deleteBorrower"
+        },
+        {
+          "id": "LibraryUtils.listAllBooks"
+        },
+        {
+          "id": "LibraryUtils.listAllBorrowers"
+        },
+        {
+          "id": "LibraryUtils.listAvailableBooks"
+        },
+        {
+          "id": "LibraryBookListAvailableServlet"
+        },
+        {
+          "id": "PersistenceLayer.saveNewBorrower"
+        },
+        {
+          "id": "PersistenceLayer.createLoan"
+        },
+        {
+          "id": "PersistenceLayer.saveNewBook"
+        },
+        {
+          "id": "PersistenceLayer.updateBorrower"
+        },
+        {
+          "id": "PersistenceLayer.deleteBook"
+        },
+        {
+          "id": "PersistenceLayer.deleteBorrower"
+        },
+        {
+          "id": "PersistenceLayer.getBorrowerName"
+        },
+        {
+          "id": "PersistenceLayer.searchBorrowerDataByName"
+        },
+        {
+          "id": "PersistenceLayer.searchBooksByTitle"
+        },
+        {
+          "id": "PersistenceLayer.searchBooksById"
+        },
+        {
+          "id": "PersistenceLayer.searchBorrowersById"
+        },
+        {
+          "id": "PersistenceLayer.listAllBooks"
+        },
+        {
+          "id": "PersistenceLayer.listAvailableBooks"
+        },
+        {
+          "id": "PersistenceLayer.listBooks"
+        },
+        {
+          "id": "PersistenceLayer.listAllBorrowers"
+        },
+        {
+          "id": "PersistenceLayer.searchForLoanByBorrower"
+        },
+        {
+          "id": "PersistenceLayer.searchForLoanByBook"
+        }
+      ],
+      "partition1": [
+        {
+          "id": "User"
+        },
+        {
+          "id": "PasswordResult"
+        },
+        {
+          "id": "RegistrationResult"
+        },
+        {
+          "id": "PersistenceLayer.saveNewUser"
+        },
+        {
+          "id": "PersistenceLayer.searchForUserByName"
+        },
+        {
+          "id": "PersistenceLayer.areCredentialsValid"
+        },
+        {
+          "id": "PersistenceLayer.updateUserWithPassword"
+        },
+        {
+          "id": "PersistenceLayer.createHashedValueFromPassword"
+        },
+        {
+          "id": "PersistenceLayer.bytesToHex"
+        },
+        {
+          "id": "LibraryUtils.isEmpty"
+        },
+        {
+          "id": "LoginUtils"
+        },
+        {
+          "id": "RegistrationUtils"
+        },
+        {
+          "id": "RegisterServlet"
+        },
+        {
+          "id": "LoginServlet"
+        }
+      ],
+      "partition2": [
+        {
+          "id": "PersistenceLayer.cleanAndMigrateDatabase"
+        },
+        {
+          "id": "PersistenceLayer.cleanDatabase"
+        },
+        {
+          "id": "PersistenceLayer.configureFlyway"
+        },
+        {
+          "id": "PersistenceLayer.migrateDatabase"
+        },
+        {
+          "id": "DbServlet"
+        }
+      ],
+      "partition3": [
+        {
+          "id": "DinnerPrices"
+        },
+        {
+          "id": "AlcoholResult"
+        },
+        {
+          "id": "MathServlet"
+        },
+        {
+          "id": "AckServlet"
+        },
+        {
+          "id": "FibServlet"
+        },
+        {
+          "id": "AlcoholCalculator"
+        },
+        {
+          "id": "Ackermann"
+        },
+        {
+          "id": "Fibonacci"
+        }
+      ]
+    }
+  }
+}

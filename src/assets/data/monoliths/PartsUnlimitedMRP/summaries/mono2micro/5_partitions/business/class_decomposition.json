@@ -1,0 +1,112 @@
+{
+    "tool": {
+        "decomposition": {
+            "partition2": [
+                {
+                    "id": "MongoCatalogItemsRepository"
+                },
+                {
+                    "id": "MongoDealersRepository"
+                },
+                {
+                    "id": "MongoOperationsWithRetry"
+                },
+                {
+                    "id": "MongoOrderRepository"
+                },
+                {
+                    "id": "MongoQuoteRepository"
+                },
+                {
+                    "id": "MongoShipmentRepository"
+                },
+                {
+                    "id": "OrderingConfiguration"
+                },
+                {
+                    "id": "RepositoryFactory"
+                }
+            ],
+            "partition0": [
+                {
+                    "id": "BadRequestException"
+                },
+                {
+                    "id": "CatalogController"
+                },
+                {
+                    "id": "CatalogItem [Duplicate_#001]"
+                },
+                {
+                    "id": "DealerController"
+                },
+                {
+                    "id": "DealerInfo"
+                },
+                {
+                    "id": "MockCatalogItemsRepository"
+                },
+                {
+                    "id": "MockDealersRepository"
+                },
+                {
+                    "id": "MockQuoteRepository"
+                },
+                {
+                    "id": "OrderingInitializer"
+                },
+                {
+                    "id": "QuoteController"
+                },
+                {
+                    "id": "Utility"
+                }
+            ],
+            "partition1": [
+                {
+                    "id": "MockOrderRepository"
+                },
+                {
+                    "id": "Order"
+                },
+                {
+                    "id": "OrderController"
+                },
+                {
+                    "id": "OrderEventInfo"
+                },
+                {
+                    "id": "OrderUpdateInfo"
+                },
+                {
+                    "id": "Quote"
+                },
+                {
+                    "id": "QuoteItemInfo"
+                }
+            ],
+            "partition3": [
+                {
+                    "id": "DeliveryAddress"
+                },
+                {
+                    "id": "MockShipmentRepository"
+                },
+                {
+                    "id": "ShipmentController"
+                },
+                {
+                    "id": "ShipmentEventInfo"
+                },
+                {
+                    "id": "ShipmentRecord"
+                }
+            ],
+            "partition4": [
+                {
+                    "id": "PhoneInfo"
+                }
+            ]
+        }
+    }
+}

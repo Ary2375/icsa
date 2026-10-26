@@ -1,0 +1,68 @@
+{
+    "MEM": {
+        "decomposition": {
+            "partition0": [
+                {
+                    "id": "Quote"
+                },
+                {
+                    "id": "ShipmentRecord"
+                }
+            ],
+            "partition1": [
+                {
+                    "id": "MockDealersRepositoryTest"
+                },
+                {
+                    "id": "MongoCatalogItemsRepositoryTest"
+                },
+                {
+                    "id": "MongoDealersRepositoryTest"
+                },
+                {
+                    "id": "MongoOrderRepositoryTest"
+                },
+                {
+                    "id": "MongoQuoteRepositoryTest"
+                },
+                {
+                    "id": "MongoShipmentRepositoryTest"
+                },
+                {
+                    "id": "TestOrderingConfiguration"
+                }
+            ],
+            "partition2": [
+                {
+                    "id": "app-test"
+                },
+                {
+                    "id": "app"
+                },
+                {
+                    "id": "app"
+                },
+                {
+                    "id": "locustfile"
+                }
+            ],
+            "partition3": [
+                {
+                    "id": "DealersRepositoryTest"
+                },
+                {
+                    "id": "PostgresqlProperties"
+                },
+                {
+                    "id": "QuoteController"
+                },
+                {
+                    "id": "QuoteControllerTest"
+                },
+                {
+                    "id": "ShipmentControllerTest"
+                }
+            ]
+        }
+    }
+}

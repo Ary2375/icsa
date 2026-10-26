@@ -108,11 +108,6 @@
                 <p>
                   {{ side.stats.services }} services · {{ side.stats.entities }} distinct class IDs
                 </p>
-                <p class="small">
-                  Service size min / median / max: {{ side.stats.min ?? 'N/A' }} /
-                  {{ side.stats.median ?? 'N/A' }} / {{ side.stats.max ?? 'N/A' }} ·
-                  {{ side.stats.singletons }} single-class services
-                </p>
                 <div class="coverage" aria-label="Monolith coverage">
                   @if (side.coverage.percent !== null) {
                     <p>

@@ -1,0 +1,83 @@
+{
+    "tool": {
+        "decomposition": {
+            "patition2": [
+                {
+                    "id": "BaseEntity"
+                },
+                {
+                    "id": "NamedEntity"
+                },
+                {
+                    "id": "Owner"
+                },
+                {
+                    "id": "Person"
+                },
+                {
+                    "id": "Pet"
+                },
+                {
+                    "id": "PetType"
+                },
+                {
+                    "id": "Specialty"
+                }
+            ],
+            "patition0": [
+                {
+                    "id": "OwnerRepository"
+                },
+                {
+                    "id": "VetController"
+                },
+                {
+                    "id": "VetRepository"
+                },
+                {
+                    "id": "Vets"
+                }
+            ],
+            "patition3": [
+                {
+                    "id": "PetController"
+                },
+                {
+                    "id": "PetTypeFormatter"
+                },
+                {
+                    "id": "PetValidator"
+                },
+                {
+                    "id": "Visit"
+                },
+                {
+                    "id": "VisitController"
+                }
+            ],
+            "UNOBSERVED": [
+                {
+                    "id": "CacheConfiguration"
+                },
+                {
+                    "id": "CrashController"
+                },
+                {
+                    "id": "OwnerController"
+                },
+                {
+                    "id": "PetClinicApplication"
+                },
+                {
+                    "id": "PetClinicRuntimeHints"
+                },
+                {
+                    "id": "Vet"
+                },
+                {
+                    "id": "WelcomeController"
+                }
+            ]
+        }
+    }
+}

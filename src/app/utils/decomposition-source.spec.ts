@@ -1,9 +1,45 @@
 import {
   decompositionPath,
+  literaturePath,
   parsePartitions,
   parseReference,
   referencePath,
 } from './decomposition-source';
+
+describe('state-of-the-art decomposition paths', () => {
+  const folder = (monolith: string, method: string) =>
+    `assets/data/monoliths/${monolith}/summaries/${method}/class_decomposition.json`;
+
+  it('locates the class decomposition of each method', () => {
+    expect(literaturePath('7ep-demo', 'DATACENTRIC', 'default')).toBe(
+      folder('7ep-demo', 'datacentric/n_partitions'),
+    );
+    expect(literaturePath('JPetStore', 'GROUND_TRUTH', 'default')).toBe(
+      folder('jpetstore-6', 'ground_truth/n_partitions'),
+    );
+    expect(literaturePath('Spring-PetClinic', 'HyDec', 'n/a')).toBe(
+      folder('spring-petclinic', 'hydec/n_partitions'),
+    );
+    expect(literaturePath('JPetStore', 'LOG2MS', 'default')).toBe(
+      folder('jpetstore-6', 'log2ms/n_partitions'),
+    );
+  });
+
+  it('stores MONO2MICRO by number of partitions and strategy', () => {
+    expect(literaturePath('7ep-demo', 'MONO2MICRO', 'business')).toBe(
+      folder('7ep-demo', 'mono2micro/4_partitions/business'),
+    );
+    expect(literaturePath('PartsUnlimitedMRP', 'MONO2MICRO', 'natural')).toBe(
+      folder('PartsUnlimitedMRP', 'mono2micro/5_partitions/natural'),
+    );
+  });
+
+  it('returns null, never a guessed folder, for an unknown monolith, method or strategy', () => {
+    expect(literaturePath('Unknown app', 'DATACENTRIC', 'default')).toBeNull();
+    expect(literaturePath('JPetStore', 'UNKNOWN', 'default')).toBeNull();
+    expect(literaturePath('JPetStore', 'MONO2MICRO', '../business')).toBeNull();
+  });
+});
 
 describe('decomposition source paths', () => {
   const deepseek = 'LLM: Deepseek 32 Terminus';

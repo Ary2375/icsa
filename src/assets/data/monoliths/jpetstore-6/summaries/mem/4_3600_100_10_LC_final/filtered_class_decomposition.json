@@ -1,0 +1,90 @@
+{
+    "tool": {
+        "decomposition": {
+            "partition0": [
+                {
+                    "id": "AccountMapper"
+                },
+                {
+                    "id": "CategoryMapper"
+                },
+                {
+                    "id": "LineItemMapper"
+                }
+            ],
+            "partition1": [
+                {
+                    "id": "AccountService"
+                },
+                {
+                    "id": "Cart"
+                },
+                {
+                    "id": "CatalogService"
+                },
+                {
+                    "id": "LineItem"
+                },
+                {
+                    "id": "Order"
+                },
+                {
+                    "id": "OrderService"
+                }
+            ],
+            "partition2": [
+                {
+                    "id": "AbstractActionBean"
+                },
+                {
+                    "id": "Product"
+                }
+            ],
+            "partition3": [
+                {
+                    "id": "Account"
+                },
+                {
+                    "id": "CartItem"
+                },
+                {
+                    "id": "Category"
+                },
+                {
+                    "id": "Sequence"
+                }
+            ],
+            "partition4": [
+                {
+                    "id": "ProductMapper"
+                },
+                {
+                    "id": "SequenceMapper"
+                }
+            ],
+            "UNOBSERVED": [
+                {
+                    "id": "AccountActionBean"
+                },
+                {
+                    "id": "CartActionBean"
+                },
+                {
+                    "id": "CatalogActionBean"
+                },
+                {
+                    "id": "Item"
+                },
+                {
+                    "id": "ItemMapper"
+                },
+                {
+                    "id": "OrderActionBean"
+                },
+                {
+                    "id": "OrderMapper"
+                }
+            ]
+        }
+    }
+}

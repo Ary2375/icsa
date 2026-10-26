@@ -172,15 +172,96 @@ describe('Comparator page', () => {
     expect(text()).toContain('Deepseek 32 Terminus · 30k · AI · Static + DFG');
   });
 
-  it('only compares the evaluated LLM experiments, not the literature references', () => {
+  it('compares the LLM experiments and the state-of-the-art methods, which are never the default', () => {
     publish({
       variantRows: [
         { ...row('7ep-demo', 'default', 'GROUND_TRUTH'), Type: 'Traditional' },
         { ...row('7ep-demo', 'business', 'MONO2MICRO'), Type: 'Traditional' },
       ],
     });
-    expect(component.options()).toHaveLength(3);
-    expect(component.options().every((option) => option.tool === TOOL)).toBe(true);
+    expect(component.options()).toHaveLength(5);
+    expect(
+      component
+        .options()
+        .filter((option) => option.kind === 'literature')
+        .map((option) => option.label),
+    ).toEqual(['Ground Truth', 'MONO2MICRO (business)']);
+    expect(component.first()).toMatchObject({ kind: 'llm', tool: TOOL });
+    expect(component.second()).toMatchObject({ kind: 'llm', tool: TOOL });
+  });
+
+  describe('state-of-the-art methods', () => {
+    const GROUND_TRUTH_URL =
+      'assets/data/monoliths/7ep-demo/summaries/ground_truth/n_partitions/class_decomposition.json';
+    const MONO2MICRO_URL =
+      'assets/data/monoliths/7ep-demo/summaries/mono2micro/4_partitions/business/class_decomposition.json';
+    const variantRows = () => [
+      { ...row('7ep-demo', 'default', 'GROUND_TRUTH'), Type: 'Traditional' },
+      { ...row('7ep-demo', 'business', 'MONO2MICRO'), Type: 'Traditional' },
+    ];
+    const methodOption = (tool: string) =>
+      component.options().find((option) => option.tool === tool)!;
+
+    it('reads the method decomposition when it is chosen and compares it with an LLM run', () => {
+      files.set(
+        GROUND_TRUTH_URL,
+        body([
+          { name: 'accounts', classes: ['A', 'B'] },
+          { name: 'catalog', classes: ['C', 'D'] },
+        ]),
+      );
+      publish({ variantRows: variantRows() });
+      expect(requested).not.toContain(GROUND_TRUTH_URL);
+      requested.length = 0;
+      component.referenceChoice.set(selectionOf(methodOption('GROUND_TRUTH')));
+      settle();
+      expect(requested).toEqual([GROUND_TRUTH_URL]);
+      const [reference, selected] = component.columns();
+      expect(reference.experiment.label).toBe('Ground Truth');
+      expect(reference.experiment.source).toBe(GROUND_TRUTH_URL);
+      expect(reference.services.map((service) => service.name)).toEqual(['accounts', 'catalog']);
+      expect(reference.coverage).toMatchObject({ total: 4, percent: 100 });
+      expect(selected.experiment.kind).toBe('llm');
+      expect(component.evolution()).not.toBeNull();
+      expect(text()).toContain('Ground Truth');
+    });
+
+    it('opens the folder of a method that has several configurations', () => {
+      files.set(MONO2MICRO_URL, body([{ name: 'All', classes: ['A', 'B', 'C'] }]));
+      publish({ variantRows: variantRows() });
+      chooseSelectedMethod('MONO2MICRO');
+      expect(component.second()).toMatchObject({
+        kind: 'literature',
+        variant: 'business',
+        label: 'MONO2MICRO (business)',
+        source: MONO2MICRO_URL,
+      });
+      expect(component.evolution()?.merges).toBe(1);
+    });
+
+    it('names the file of a method that cannot be read', () => {
+      publish({ variantRows: variantRows() });
+      component.selectedChoice.set(selectionOf(methodOption('GROUND_TRUTH')));
+      settle();
+      expect(component.evolution()).toBeNull();
+      const alert = fixture.nativeElement.querySelector('[role="alert"]') as HTMLElement;
+      expect(alert.textContent).toContain(GROUND_TRUTH_URL);
+      expect(alert.textContent).toContain('404');
+    });
+
+    it('reports a method without a configured data folder', () => {
+      publish(
+        { variantRows: [{ ...row('7ep-demo', 'default', 'UNKNOWN'), Type: 'Traditional' }] },
+        false,
+      );
+      expect(component.error()).toContain('No data folder is configured for 7ep-demo / UNKNOWN');
+      expect(component.experiments()).toEqual([]);
+    });
+
+    function chooseSelectedMethod(tool: string): void {
+      component.selectedChoice.set(selectionOf(methodOption(tool)));
+      settle();
+    }
   });
 
   it('shows the observed entities of the experiment from results.json', () => {
@@ -363,6 +444,27 @@ describe('Comparator page', () => {
       });
       expect(selected.services[1]).toMatchObject({ label: 'New', counterparts: [] });
       expect(reference.services[2]).toMatchObject({ label: 'Removed', counterparts: [] });
+    });
+
+    it('lists the classes of each service in alphabetical order', () => {
+      publish({
+        data: {
+          '30k_ai': [{ name: 'Mixed', classes: ['zeta.Z', 'Beta', 'alpha', 'Alpha2', 'beta'] }],
+          '30k_ai_dfg': [{ name: 'Other', classes: ['A'] }],
+        },
+      });
+      const [reference] = component.columns();
+      expect(reference.services[0].classItems.map((item) => item.name)).toEqual([
+        'alpha',
+        'Alpha2',
+        'beta',
+        'Beta',
+        'zeta.Z',
+      ]);
+      const shown = [
+        ...fixture.nativeElement.querySelectorAll('[data-side="reference"] .class-list code'),
+      ].map((code) => (code as HTMLElement).textContent!.trim());
+      expect(shown).toEqual(['alpha', 'Alpha2', 'beta', 'Beta', 'zeta.Z']);
     });
 
     it('does not mark classes as moved when they stay in the main flow of their service', () => {

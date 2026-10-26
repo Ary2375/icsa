@@ -1,0 +1,621 @@
+{
+    "1_structural_static": {
+        "decomposition": {
+            "partition0": [
+                {
+                    "id": "BaseEntity"
+                },
+                {
+                    "id": "Owner"
+                },
+                {
+                    "id": "OwnerController"
+                },
+                {
+                    "id": "Person"
+                },
+                {
+                    "id": "Vet"
+                },
+                {
+                    "id": "Visit"
+                },
+                {
+                    "id": "VisitController"
+                }
+            ],
+            "partition1": [
+                {
+                    "id": "PetClinicApplication"
+                },
+                {
+                    "id": "VetController"
+                },
+                {
+                    "id": "Vets"
+                }
+            ],
+            "partition2": [
+                {
+                    "id": "NamedEntity"
+                },
+                {
+                    "id": "Pet"
+                },
+                {
+                    "id": "PetController"
+                },
+                {
+                    "id": "PetType"
+                },
+                {
+                    "id": "PetTypeFormatter"
+                },
+                {
+                    "id": "PetValidator"
+                },
+                {
+                    "id": "Specialty"
+                }
+            ]
+        },
+        "links": [
+            {
+                "source": "NamedEntity",
+                "target": "BaseEntity",
+                "weight": "1"
+            },
+            {
+                "source": "Person",
+                "target": "BaseEntity",
+                "weight": "1"
+            },
+            {
+                "source": "Owner",
+                "target": "Person",
+                "weight": "1"
+            },
+            {
+                "source": "Owner",
+                "target": "Pet",
+                "weight": "6"
+            },
+            {
+                "source": "OwnerController",
+                "target": "Owner",
+                "weight": "7"
+            },
+            {
+                "source": "Pet",
+                "target": "NamedEntity",
+                "weight": "1"
+            },
+            {
+                "source": "PetController",
+                "target": "Owner",
+                "weight": "6"
+            },
+            {
+                "source": "PetController",
+                "target": "Pet",
+                "weight": "4"
+            },
+            {
+                "source": "PetController",
+                "target": "PetValidator",
+                "weight": "1"
+            },
+            {
+                "source": "PetType",
+                "target": "NamedEntity",
+                "weight": "1"
+            },
+            {
+                "source": "PetTypeFormatter",
+                "target": "PetType",
+                "weight": "2"
+            },
+            {
+                "source": "PetValidator",
+                "target": "Pet",
+                "weight": "4"
+            },
+            {
+                "source": "Visit",
+                "target": "BaseEntity",
+                "weight": "1"
+            },
+            {
+                "source": "VisitController",
+                "target": "Owner",
+                "weight": "2"
+            },
+            {
+                "source": "VisitController",
+                "target": "Pet",
+                "weight": "1"
+            },
+            {
+                "source": "VisitController",
+                "target": "Visit",
+                "weight": "1"
+            },
+            {
+                "source": "Specialty",
+                "target": "NamedEntity",
+                "weight": "1"
+            },
+            {
+                "source": "Vet",
+                "target": "Person",
+                "weight": "1"
+            },
+            {
+                "source": "VetController",
+                "target": "Vets",
+                "weight": "4"
+            }
+        ]
+    },
+    "3_business_use_cases": {
+        "decomposition": {
+            "Owner USE CASE": [
+                {
+                    "id": "OWNER USE CASE"
+                }
+            ],
+            "Pet USE CASE": [
+                {
+                    "id": "PET USE CASE"
+                }
+            ],
+            "Vet USE CASE": [
+                {
+                    "id": "VET USE CASE"
+                }
+            ],
+            "Visit USE CASE": [
+                {
+                    "id": "VISIT USE CASE"
+                }
+            ],
+            "partition0": [
+                {
+                    "id": "BaseEntity"
+                },
+                {
+                    "id": "Owner"
+                },
+                {
+                    "id": "OwnerController"
+                },
+                {
+                    "id": "Person"
+                },
+                {
+                    "id": "Vet"
+                },
+                {
+                    "id": "Visit"
+                },
+                {
+                    "id": "VisitController"
+                }
+            ],
+            "partition1": [
+                {
+                    "id": "PetClinicApplication"
+                },
+                {
+                    "id": "VetController"
+                },
+                {
+                    "id": "Vets"
+                }
+            ],
+            "partition2": [
+                {
+                    "id": "NamedEntity"
+                },
+                {
+                    "id": "Pet"
+                },
+                {
+                    "id": "PetController"
+                },
+                {
+                    "id": "PetType"
+                },
+                {
+                    "id": "PetTypeFormatter"
+                },
+                {
+                    "id": "PetValidator"
+                },
+                {
+                    "id": "Specialty"
+                }
+            ]
+        },
+        "links": [
+            {
+                "source": "OWNER USE CASE",
+                "target": "BaseEntity",
+                "weight": "78"
+            },
+            {
+                "source": "OWNER USE CASE",
+                "target": "NamedEntity",
+                "weight": "45"
+            },
+            {
+                "source": "OWNER USE CASE",
+                "target": "Owner",
+                "weight": "198"
+            },
+            {
+                "source": "OWNER USE CASE",
+                "target": "OwnerController",
+                "weight": "60"
+            },
+            {
+                "source": "OWNER USE CASE",
+                "target": "Person",
+                "weight": "121"
+            },
+            {
+                "source": "OWNER USE CASE",
+                "target": "Pet",
+                "weight": "44"
+            },
+            {
+                "source": "OWNER USE CASE",
+                "target": "Visit",
+                "weight": "14"
+            },
+            {
+                "source": "PET USE CASE",
+                "target": "BaseEntity",
+                "weight": "58"
+            },
+            {
+                "source": "PET USE CASE",
+                "target": "NamedEntity",
+                "weight": "78"
+            },
+            {
+                "source": "PET USE CASE",
+                "target": "Owner",
+                "weight": "35"
+            },
+            {
+                "source": "PET USE CASE",
+                "target": "Person",
+                "weight": "16"
+            },
+            {
+                "source": "PET USE CASE",
+                "target": "Pet",
+                "weight": "56"
+            },
+            {
+                "source": "PET USE CASE",
+                "target": "PetController",
+                "weight": "36"
+            },
+            {
+                "source": "PET USE CASE",
+                "target": "PetTypeFormatter",
+                "weight": "12"
+            },
+            {
+                "source": "PET USE CASE",
+                "target": "PetValidator",
+                "weight": "10"
+            },
+            {
+                "source": "VISIT USE CASE",
+                "target": "BaseEntity",
+                "weight": "24"
+            },
+            {
+                "source": "VISIT USE CASE",
+                "target": "NamedEntity",
+                "weight": "6"
+            },
+            {
+                "source": "VISIT USE CASE",
+                "target": "Owner",
+                "weight": "17"
+            },
+            {
+                "source": "VISIT USE CASE",
+                "target": "Person",
+                "weight": "8"
+            },
+            {
+                "source": "VISIT USE CASE",
+                "target": "Pet",
+                "weight": "14"
+            },
+            {
+                "source": "VISIT USE CASE",
+                "target": "Visit",
+                "weight": "17"
+            },
+            {
+                "source": "VISIT USE CASE",
+                "target": "VisitController",
+                "weight": "22"
+            },
+            {
+                "source": "VET USE CASE",
+                "target": "BaseEntity",
+                "weight": "18"
+            },
+            {
+                "source": "VET USE CASE",
+                "target": "NamedEntity",
+                "weight": "6"
+            },
+            {
+                "source": "VET USE CASE",
+                "target": "Person",
+                "weight": "24"
+            },
+            {
+                "source": "VET USE CASE",
+                "target": "Vet",
+                "weight": "24"
+            },
+            {
+                "source": "VET USE CASE",
+                "target": "VetController",
+                "weight": "4"
+            },
+            {
+                "source": "VET USE CASE",
+                "target": "Vets",
+                "weight": "3"
+            }
+        ]
+    },
+    "4_database_access": {
+        "decomposition": {
+            "OWNERS TABLE": [
+                {
+                    "id": "OWNERS TABLE"
+                }
+            ],
+            "PETS TABLE": [
+                {
+                    "id": "PETS TABLE"
+                }
+            ],
+            "SPECIALTIES TABLE": [
+                {
+                    "id": "SPECIALTIES TABLE"
+                }
+            ],
+            "TYPES TABLE": [
+                {
+                    "id": "TYPES TABLE"
+                }
+            ],
+            "VETS TABLE": [
+                {
+                    "id": "VETS TABLE"
+                }
+            ],
+            "VET_SPECIALTIES TABLE": [
+                {
+                    "id": "VET_SPECIALTIES TABLE"
+                }
+            ],
+            "VISITS TABLE": [
+                {
+                    "id": "VISITS TABLE"
+                }
+            ],
+            "partition0": [
+                {
+                    "id": "BaseEntity"
+                },
+                {
+                    "id": "Owner"
+                },
+                {
+                    "id": "OwnerController"
+                },
+                {
+                    "id": "Person"
+                },
+                {
+                    "id": "Vet"
+                },
+                {
+                    "id": "Visit"
+                },
+                {
+                    "id": "VisitController"
+                }
+            ],
+            "partition1": [
+                {
+                    "id": "PetClinicApplication"
+                },
+                {
+                    "id": "VetController"
+                },
+                {
+                    "id": "Vets"
+                }
+            ],
+            "partition2": [
+                {
+                    "id": "NamedEntity"
+                },
+                {
+                    "id": "Pet"
+                },
+                {
+                    "id": "PetController"
+                },
+                {
+                    "id": "PetType"
+                },
+                {
+                    "id": "PetTypeFormatter"
+                },
+                {
+                    "id": "PetValidator"
+                },
+                {
+                    "id": "Specialty"
+                }
+            ]
+        },
+        "links": [
+            {
+                "source": "Owner",
+                "target": "OWNERS TABLE",
+                "weight": "17"
+            },
+            {
+                "source": "OwnerController",
+                "target": "OWNERS TABLE",
+                "weight": "8"
+            },
+            {
+                "source": "OwnerRepository",
+                "target": "OWNERS TABLE",
+                "weight": "4"
+            },
+            {
+                "source": "PetController",
+                "target": "OWNERS TABLE",
+                "weight": "6"
+            },
+            {
+                "source": "VisitController",
+                "target": "OWNERS TABLE",
+                "weight": "2"
+            },
+            {
+                "source": "Owner",
+                "target": "PETS TABLE",
+                "weight": "4"
+            },
+            {
+                "source": "OwnerController",
+                "target": "PETS TABLE",
+                "weight": "5"
+            },
+            {
+                "source": "OwnerRepository",
+                "target": "PETS TABLE",
+                "weight": "2"
+            },
+            {
+                "source": "Pet",
+                "target": "PETS TABLE",
+                "weight": "9"
+            },
+            {
+                "source": "PetController",
+                "target": "PETS TABLE",
+                "weight": "6"
+            },
+            {
+                "source": "PetValidator",
+                "target": "PETS TABLE",
+                "weight": "1"
+            },
+            {
+                "source": "VisitController",
+                "target": "PETS TABLE",
+                "weight": "2"
+            },
+            {
+                "source": "Specialty",
+                "target": "SPECIALTIES TABLE",
+                "weight": "1"
+            },
+            {
+                "source": "OwnerRepository",
+                "target": "TYPES TABLE",
+                "weight": "1"
+            },
+            {
+                "source": "Pet",
+                "target": "TYPES TABLE",
+                "weight": "2"
+            },
+            {
+                "source": "PetController",
+                "target": "TYPES TABLE",
+                "weight": "1"
+            },
+            {
+                "source": "PetType",
+                "target": "TYPES TABLE",
+                "weight": "2"
+            },
+            {
+                "source": "PetTypeFormatter",
+                "target": "TYPES TABLE",
+                "weight": "2"
+            },
+            {
+                "source": "PetValidator",
+                "target": "TYPES TABLE",
+                "weight": "1"
+            },
+            {
+                "source": "Vet",
+                "target": "VET_SPECIALTIES TABLE",
+                "weight": "5"
+            },
+            {
+                "source": "Vet",
+                "target": "VETS TABLE",
+                "weight": "6"
+            },
+            {
+                "source": "VetController",
+                "target": "VETS TABLE",
+                "weight": "3"
+            },
+            {
+                "source": "VetRepository",
+                "target": "VETS TABLE",
+                "weight": "1"
+            },
+            {
+                "source": "Vets",
+                "target": "VETS TABLE",
+                "weight": "2"
+            },
+            {
+                "source": "Owner",
+                "target": "VISITS TABLE",
+                "weight": "1"
+            },
+            {
+                "source": "Pet",
+                "target": "VISITS TABLE",
+                "weight": "2"
+            },
+            {
+                "source": "Visit",
+                "target": "VISITS TABLE",
+                "weight": "5"
+            },
+            {
+                "source": "VisitController",
+                "target": "VISITS TABLE",
+                "weight": "2"
+            }
+        ]
+    }
+}

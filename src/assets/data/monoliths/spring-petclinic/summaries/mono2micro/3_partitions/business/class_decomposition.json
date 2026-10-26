@@ -1,0 +1,63 @@
+{
+    "tool": {
+        "decomposition": {
+            "partition1": [
+                {
+                    "id": "PetClinicApplication"
+                },
+                {
+                    "id": "VetController"
+                },
+                {
+                    "id": "Vets"
+                }
+            ],
+            "partition0": [
+                {
+                    "id": "BaseEntity"
+                },
+                {
+                    "id": "Owner"
+                },
+                {
+                    "id": "OwnerController"
+                },
+                {
+                    "id": "Person"
+                },
+                {
+                    "id": "Vet"
+                },
+                {
+                    "id": "Visit"
+                },
+                {
+                    "id": "VisitController"
+                }
+            ],
+            "partition2": [
+                {
+                    "id": "NamedEntity"
+                },
+                {
+                    "id": "Pet"
+                },
+                {
+                    "id": "PetController"
+                },
+                {
+                    "id": "PetType"
+                },
+                {
+                    "id": "PetTypeFormatter"
+                },
+                {
+                    "id": "PetValidator"
+                },
+                {
+                    "id": "Specialty"
+                }
+            ]
+        }
+    }
+}

@@ -5,20 +5,35 @@ import {
   facetValues,
   findOption,
   isAvailable,
+  kindOf,
   modeLabel,
   parseThesisStrategy,
+  selectionForTool,
   selectionOf,
+  toolGroups,
+  toolLabel,
   variantGroup,
   variantLabel,
+  variantsOfTool,
 } from './experiment-selection';
 
 const option = (tool: string, chunk: string, mode: string, variant: string): ExperimentOption => ({
   id: [tool, chunk, mode, variant].join('|'),
+  kind: 'llm',
   tool,
   chunk,
   mode,
   variant,
   label: describeConfiguration(tool, chunk, mode, variant),
+});
+const literature = (tool: string, variant = 'default'): ExperimentOption => ({
+  id: [tool, variant].join('|'),
+  kind: 'literature',
+  tool,
+  chunk: '',
+  mode: '',
+  variant,
+  label: toolLabel(tool),
 });
 
 describe('experiment selection', () => {
@@ -111,6 +126,62 @@ describe('experiment selection', () => {
       chunk: '',
       mode: '',
       variant: '',
+    });
+  });
+
+  describe('state-of-the-art methods', () => {
+    const mixed = [
+      literature('DATACENTRIC'),
+      literature('GROUND_TRUTH'),
+      literature('MONO2MICRO', 'natural'),
+      literature('MONO2MICRO', 'business'),
+      ...grid,
+    ];
+
+    it('groups the approaches by kind and labels the ground truth', () => {
+      expect(toolGroups(mixed)).toEqual([
+        { label: 'LLM', tools: ['LLM: A', 'LLM: B'] },
+        { label: 'State of the art', tools: ['DATACENTRIC', 'GROUND_TRUTH', 'MONO2MICRO'] },
+      ]);
+      expect(toolGroups(grid).map((group) => group.label)).toEqual(['LLM']);
+      expect(toolLabel('GROUND_TRUTH')).toBe('Ground Truth');
+      expect(kindOf(mixed, 'MONO2MICRO')).toBe('literature');
+      expect(kindOf(mixed, 'LLM: A')).toBe('llm');
+    });
+
+    it('lists the configurations of a method', () => {
+      expect(variantsOfTool(mixed, 'MONO2MICRO')).toEqual(['business', 'natural']);
+      expect(variantsOfTool(mixed, 'DATACENTRIC')).toEqual(['default']);
+    });
+
+    it('never starts from a state-of-the-art method', () => {
+      const { reference, selected } = defaultSelections(mixed);
+      expect(reference.tool).toBe('LLM: A');
+      expect(selected.tool).toBe('LLM: A');
+      expect(defaultSelections([literature('HyDec', 'n/a')]).reference.tool).toBe('HyDec');
+    });
+
+    it('moves between an LLM and a method without ending in a dead end', () => {
+      const llm = selectionOf(grid[3]);
+      expect(selectionForTool(mixed, llm, 'DATACENTRIC')).toEqual({
+        tool: 'DATACENTRIC',
+        chunk: '',
+        mode: '',
+        variant: 'default',
+      });
+      expect(findOption(mixed, selectionForTool(mixed, llm, 'MONO2MICRO'))).toBe(mixed[3]);
+      const method = selectionOf(literature('DATACENTRIC'));
+      expect(findOption(mixed, selectionForTool(mixed, method, 'LLM: A'))).not.toBeNull();
+      // Keeps the other choices when the new LLM has the same experiment.
+      expect(selectionForTool(grid, llm, 'LLM: A')).toEqual(llm);
+      // Several experiments share one choice: the first in the usual order wins.
+      expect(selectionForTool(grid, selectionOf(grid[0]), 'LLM: A')).toEqual({
+        tool: 'LLM: A',
+        chunk: '30k',
+        mode: 'ai',
+        variant: 'dfg',
+      });
+      expect(selectionForTool([], llm, 'Unknown')).toEqual({ ...llm, tool: 'Unknown' });
     });
   });
 });

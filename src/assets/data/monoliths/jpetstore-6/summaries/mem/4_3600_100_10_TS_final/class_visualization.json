@@ -1,0 +1,801 @@
+{
+    "1_structural_static": {
+        "decomposition": {
+            "partition0": [
+                {
+                    "id": "CatalogActionBean"
+                },
+                {
+                    "id": "Category"
+                }
+            ],
+            "partition1": [
+                {
+                    "id": "AccountMapper"
+                },
+                {
+                    "id": "CategoryMapper"
+                },
+                {
+                    "id": "Item"
+                },
+                {
+                    "id": "OrderActionBean"
+                },
+                {
+                    "id": "ProductMapper"
+                },
+                {
+                    "id": "SequenceMapper"
+                }
+            ],
+            "partition2": [
+                {
+                    "id": "AbstractActionBean"
+                },
+                {
+                    "id": "Sequence"
+                }
+            ],
+            "partition3": [
+                {
+                    "id": "AccountService"
+                },
+                {
+                    "id": "CatalogService"
+                },
+                {
+                    "id": "LineItem"
+                },
+                {
+                    "id": "OrderMapper"
+                },
+                {
+                    "id": "OrderService"
+                }
+            ],
+            "partition6": [
+                {
+                    "id": "Account"
+                },
+                {
+                    "id": "LineItemMapper"
+                }
+            ],
+            "partition7": [
+                {
+                    "id": "Cart"
+                },
+                {
+                    "id": "CartActionBean"
+                },
+                {
+                    "id": "ItemMapper"
+                }
+            ]
+        },
+        "links": [
+            {
+                "source": "Cart",
+                "target": "Item",
+                "weight": "2"
+            },
+            {
+                "source": "LineItem",
+                "target": "Item",
+                "weight": "2"
+            },
+            {
+                "source": "AccountService",
+                "target": "AccountMapper",
+                "weight": "8"
+            },
+            {
+                "source": "AccountService",
+                "target": "Account",
+                "weight": "1"
+            },
+            {
+                "source": "CatalogService",
+                "target": "CategoryMapper",
+                "weight": "2"
+            },
+            {
+                "source": "CatalogService",
+                "target": "ItemMapper",
+                "weight": "3"
+            },
+            {
+                "source": "CatalogService",
+                "target": "ProductMapper",
+                "weight": "3"
+            },
+            {
+                "source": "OrderService",
+                "target": "Sequence",
+                "weight": "2"
+            },
+            {
+                "source": "OrderService",
+                "target": "SequenceMapper",
+                "weight": "2"
+            },
+            {
+                "source": "OrderService",
+                "target": "LineItemMapper",
+                "weight": "2"
+            },
+            {
+                "source": "OrderService",
+                "target": "OrderMapper",
+                "weight": "4"
+            },
+            {
+                "source": "OrderService",
+                "target": "Item",
+                "weight": "1"
+            },
+            {
+                "source": "OrderService",
+                "target": "LineItem",
+                "weight": "5"
+            },
+            {
+                "source": "OrderService",
+                "target": "ItemMapper",
+                "weight": "3"
+            },
+            {
+                "source": "CartActionBean",
+                "target": "Cart",
+                "weight": "8"
+            },
+            {
+                "source": "CartActionBean",
+                "target": "AbstractActionBean",
+                "weight": "1"
+            },
+            {
+                "source": "CartActionBean",
+                "target": "CatalogService",
+                "weight": "2"
+            },
+            {
+                "source": "CartActionBean",
+                "target": "Item",
+                "weight": "1"
+            },
+            {
+                "source": "CatalogActionBean",
+                "target": "AbstractActionBean",
+                "weight": "1"
+            },
+            {
+                "source": "CatalogActionBean",
+                "target": "CatalogService",
+                "weight": "6"
+            },
+            {
+                "source": "CatalogActionBean",
+                "target": "Item",
+                "weight": "1"
+            },
+            {
+                "source": "OrderActionBean",
+                "target": "AbstractActionBean",
+                "weight": "1"
+            },
+            {
+                "source": "OrderActionBean",
+                "target": "Account",
+                "weight": "2"
+            },
+            {
+                "source": "OrderActionBean",
+                "target": "OrderService",
+                "weight": "3"
+            },
+            {
+                "source": "OrderActionBean",
+                "target": "CartActionBean",
+                "weight": "2"
+            }
+        ]
+    },
+    "3_business_use_cases": {
+        "decomposition": {
+            "Order USE CASE": [
+                {
+                    "id": "ORDER USE CASE"
+                }
+            ],
+            "SelectItems USE CASE": [
+                {
+                    "id": "SELECTITEMS USE CASE"
+                }
+            ],
+            "UpdateProfile USE CASE": [
+                {
+                    "id": "UPDATEPROFILE USE CASE"
+                }
+            ],
+            "partition0": [
+                {
+                    "id": "CatalogActionBean"
+                },
+                {
+                    "id": "Category"
+                }
+            ],
+            "partition1": [
+                {
+                    "id": "AccountMapper"
+                },
+                {
+                    "id": "CategoryMapper"
+                },
+                {
+                    "id": "Item"
+                },
+                {
+                    "id": "OrderActionBean"
+                },
+                {
+                    "id": "ProductMapper"
+                },
+                {
+                    "id": "SequenceMapper"
+                }
+            ],
+            "partition2": [
+                {
+                    "id": "AbstractActionBean"
+                },
+                {
+                    "id": "Sequence"
+                }
+            ],
+            "partition3": [
+                {
+                    "id": "AccountService"
+                },
+                {
+                    "id": "CatalogService"
+                },
+                {
+                    "id": "LineItem"
+                },
+                {
+                    "id": "OrderMapper"
+                },
+                {
+                    "id": "OrderService"
+                }
+            ],
+            "partition6": [
+                {
+                    "id": "Account"
+                },
+                {
+                    "id": "LineItemMapper"
+                }
+            ],
+            "partition7": [
+                {
+                    "id": "Cart"
+                },
+                {
+                    "id": "CartActionBean"
+                },
+                {
+                    "id": "ItemMapper"
+                }
+            ]
+        },
+        "links": [
+            {
+                "source": "ORDER USE CASE",
+                "target": "AbstractActionBean",
+                "weight": "334"
+            },
+            {
+                "source": "ORDER USE CASE",
+                "target": "Account",
+                "weight": "151"
+            },
+            {
+                "source": "ORDER USE CASE",
+                "target": "AccountActionBean",
+                "weight": "123"
+            },
+            {
+                "source": "ORDER USE CASE",
+                "target": "AccountService",
+                "weight": "1"
+            },
+            {
+                "source": "ORDER USE CASE",
+                "target": "Cart",
+                "weight": "37"
+            },
+            {
+                "source": "ORDER USE CASE",
+                "target": "CartActionBean",
+                "weight": "33"
+            },
+            {
+                "source": "ORDER USE CASE",
+                "target": "CartItem",
+                "weight": "137"
+            },
+            {
+                "source": "ORDER USE CASE",
+                "target": "CatalogActionBean",
+                "weight": "66"
+            },
+            {
+                "source": "ORDER USE CASE",
+                "target": "CatalogService",
+                "weight": "13"
+            },
+            {
+                "source": "ORDER USE CASE",
+                "target": "Category",
+                "weight": "1"
+            },
+            {
+                "source": "ORDER USE CASE",
+                "target": "Item",
+                "weight": "245"
+            },
+            {
+                "source": "ORDER USE CASE",
+                "target": "LineItem",
+                "weight": "47"
+            },
+            {
+                "source": "ORDER USE CASE",
+                "target": "Order",
+                "weight": "2272"
+            },
+            {
+                "source": "ORDER USE CASE",
+                "target": "OrderActionBean",
+                "weight": "121"
+            },
+            {
+                "source": "ORDER USE CASE",
+                "target": "OrderService",
+                "weight": "7"
+            },
+            {
+                "source": "ORDER USE CASE",
+                "target": "Product",
+                "weight": "67"
+            },
+            {
+                "source": "ORDER USE CASE",
+                "target": "Sequence",
+                "weight": "8"
+            },
+            {
+                "source": "UPDATEPROFILE USE CASE",
+                "target": "AbstractActionBean",
+                "weight": "292"
+            },
+            {
+                "source": "UPDATEPROFILE USE CASE",
+                "target": "Account",
+                "weight": "169"
+            },
+            {
+                "source": "UPDATEPROFILE USE CASE",
+                "target": "AccountActionBean",
+                "weight": "130"
+            },
+            {
+                "source": "UPDATEPROFILE USE CASE",
+                "target": "AccountService",
+                "weight": "4"
+            },
+            {
+                "source": "UPDATEPROFILE USE CASE",
+                "target": "CatalogActionBean",
+                "weight": "20"
+            },
+            {
+                "source": "UPDATEPROFILE USE CASE",
+                "target": "CatalogService",
+                "weight": "3"
+            },
+            {
+                "source": "SELECTITEMS USE CASE",
+                "target": "AbstractActionBean",
+                "weight": "75"
+            },
+            {
+                "source": "SELECTITEMS USE CASE",
+                "target": "CatalogActionBean",
+                "weight": "51"
+            },
+            {
+                "source": "SELECTITEMS USE CASE",
+                "target": "CatalogService",
+                "weight": "9"
+            },
+            {
+                "source": "SELECTITEMS USE CASE",
+                "target": "Category",
+                "weight": "2"
+            },
+            {
+                "source": "SELECTITEMS USE CASE",
+                "target": "Item",
+                "weight": "102"
+            },
+            {
+                "source": "SELECTITEMS USE CASE",
+                "target": "Product",
+                "weight": "55"
+            }
+        ]
+    },
+    "4_database_access": {
+        "decomposition": {
+            "ACCOUNT TABLE": [
+                {
+                    "id": "ACCOUNT TABLE"
+                }
+            ],
+            "BANNERDATA TABLE": [
+                {
+                    "id": "BANNERDATA TABLE"
+                }
+            ],
+            "CATEGORY TABLE": [
+                {
+                    "id": "CATEGORY TABLE"
+                }
+            ],
+            "INVENTORY TABLE": [
+                {
+                    "id": "INVENTORY TABLE"
+                }
+            ],
+            "ITEM TABLE": [
+                {
+                    "id": "ITEM TABLE"
+                }
+            ],
+            "LINEITEM TABLE": [
+                {
+                    "id": "LINEITEM TABLE"
+                }
+            ],
+            "ORDERS TABLE": [
+                {
+                    "id": "ORDERS TABLE"
+                }
+            ],
+            "ORDERSTATUS TABLE": [
+                {
+                    "id": "ORDERSTATUS TABLE"
+                }
+            ],
+            "PRODUCT TABLE": [
+                {
+                    "id": "PRODUCT TABLE"
+                }
+            ],
+            "PROFILE TABLE": [
+                {
+                    "id": "PROFILE TABLE"
+                }
+            ],
+            "SEQUENCE TABLE": [
+                {
+                    "id": "SEQUENCE TABLE"
+                }
+            ],
+            "SIGNON TABLE": [
+                {
+                    "id": "SIGNON TABLE"
+                }
+            ],
+            "partition0": [
+                {
+                    "id": "CatalogActionBean"
+                },
+                {
+                    "id": "Category"
+                }
+            ],
+            "partition1": [
+                {
+                    "id": "AccountMapper"
+                },
+                {
+                    "id": "CategoryMapper"
+                },
+                {
+                    "id": "Item"
+                },
+                {
+                    "id": "OrderActionBean"
+                },
+                {
+                    "id": "ProductMapper"
+                },
+                {
+                    "id": "SequenceMapper"
+                }
+            ],
+            "partition2": [
+                {
+                    "id": "AbstractActionBean"
+                },
+                {
+                    "id": "Sequence"
+                }
+            ],
+            "partition3": [
+                {
+                    "id": "AccountService"
+                },
+                {
+                    "id": "CatalogService"
+                },
+                {
+                    "id": "LineItem"
+                },
+                {
+                    "id": "OrderMapper"
+                },
+                {
+                    "id": "OrderService"
+                }
+            ],
+            "partition6": [
+                {
+                    "id": "Account"
+                },
+                {
+                    "id": "LineItemMapper"
+                }
+            ],
+            "partition7": [
+                {
+                    "id": "Cart"
+                },
+                {
+                    "id": "CartActionBean"
+                },
+                {
+                    "id": "ItemMapper"
+                }
+            ]
+        },
+        "links": [
+            {
+                "source": "AccountActionBean",
+                "target": "SIGNON TABLE",
+                "weight": "3"
+            },
+            {
+                "source": "AccountMapper",
+                "target": "SIGNON TABLE",
+                "weight": "4"
+            },
+            {
+                "source": "AccountService",
+                "target": "SIGNON TABLE",
+                "weight": "3"
+            },
+            {
+                "source": "AccountActionBean",
+                "target": "ACCOUNT TABLE",
+                "weight": "3"
+            },
+            {
+                "source": "AccountMapper",
+                "target": "ACCOUNT TABLE",
+                "weight": "4"
+            },
+            {
+                "source": "AccountService",
+                "target": "ACCOUNT TABLE",
+                "weight": "3"
+            },
+            {
+                "source": "AccountActionBean",
+                "target": "PROFILE TABLE",
+                "weight": "3"
+            },
+            {
+                "source": "AccountMapper",
+                "target": "PROFILE TABLE",
+                "weight": "4"
+            },
+            {
+                "source": "AccountService",
+                "target": "PROFILE TABLE",
+                "weight": "3"
+            },
+            {
+                "source": "AccountActionBean",
+                "target": "BANNERDATA TABLE",
+                "weight": "3"
+            },
+            {
+                "source": "AccountMapper",
+                "target": "BANNERDATA TABLE",
+                "weight": "2"
+            },
+            {
+                "source": "AccountService",
+                "target": "BANNERDATA TABLE",
+                "weight": "1"
+            },
+            {
+                "source": "OrderActionBean",
+                "target": "ORDERS TABLE",
+                "weight": "3"
+            },
+            {
+                "source": "OrderMapper",
+                "target": "ORDERS TABLE",
+                "weight": "3"
+            },
+            {
+                "source": "OrderService",
+                "target": "ORDERS TABLE",
+                "weight": "3"
+            },
+            {
+                "source": "OrderActionBean",
+                "target": "ORDERSTATUS TABLE",
+                "weight": "3"
+            },
+            {
+                "source": "OrderMapper",
+                "target": "ORDERSTATUS TABLE",
+                "weight": "3"
+            },
+            {
+                "source": "OrderService",
+                "target": "ORDERSTATUS TABLE",
+                "weight": "3"
+            },
+            {
+                "source": "LineItemMapper",
+                "target": "LINEITEM TABLE",
+                "weight": "2"
+            },
+            {
+                "source": "OrderActionBean",
+                "target": "LINEITEM TABLE",
+                "weight": "1"
+            },
+            {
+                "source": "OrderService",
+                "target": "LINEITEM TABLE",
+                "weight": "2"
+            },
+            {
+                "source": "CatalogActionBean",
+                "target": "CATEGORY TABLE",
+                "weight": "1"
+            },
+            {
+                "source": "CatalogService",
+                "target": "CATEGORY TABLE",
+                "weight": "2"
+            },
+            {
+                "source": "CategoryMapper",
+                "target": "CATEGORY TABLE",
+                "weight": "2"
+            },
+            {
+                "source": "AccountActionBean",
+                "target": "PRODUCT TABLE",
+                "weight": "3"
+            },
+            {
+                "source": "CartActionBean",
+                "target": "PRODUCT TABLE",
+                "weight": "1"
+            },
+            {
+                "source": "CatalogActionBean",
+                "target": "PRODUCT TABLE",
+                "weight": "4"
+            },
+            {
+                "source": "CatalogService",
+                "target": "PRODUCT TABLE",
+                "weight": "5"
+            },
+            {
+                "source": "ItemMapper",
+                "target": "PRODUCT TABLE",
+                "weight": "2"
+            },
+            {
+                "source": "OrderService",
+                "target": "PRODUCT TABLE",
+                "weight": "1"
+            },
+            {
+                "source": "ProductMapper",
+                "target": "PRODUCT TABLE",
+                "weight": "3"
+            },
+            {
+                "source": "CartActionBean",
+                "target": "ITEM TABLE",
+                "weight": "1"
+            },
+            {
+                "source": "CatalogActionBean",
+                "target": "ITEM TABLE",
+                "weight": "2"
+            },
+            {
+                "source": "CatalogService",
+                "target": "ITEM TABLE",
+                "weight": "2"
+            },
+            {
+                "source": "ItemMapper",
+                "target": "ITEM TABLE",
+                "weight": "2"
+            },
+            {
+                "source": "OrderService",
+                "target": "ITEM TABLE",
+                "weight": "1"
+            },
+            {
+                "source": "CartActionBean",
+                "target": "INVENTORY TABLE",
+                "weight": "1"
+            },
+            {
+                "source": "CatalogActionBean",
+                "target": "INVENTORY TABLE",
+                "weight": "1"
+            },
+            {
+                "source": "CatalogService",
+                "target": "INVENTORY TABLE",
+                "weight": "2"
+            },
+            {
+                "source": "ItemMapper",
+                "target": "INVENTORY TABLE",
+                "weight": "3"
+            },
+            {
+                "source": "OrderService",
+                "target": "INVENTORY TABLE",
+                "weight": "2"
+            },
+            {
+                "source": "OrderActionBean",
+                "target": "SEQUENCE TABLE",
+                "weight": "1"
+            },
+            {
+                "source": "OrderService",
+                "target": "SEQUENCE TABLE",
+                "weight": "2"
+            },
+            {
+                "source": "SequenceMapper",
+                "target": "SEQUENCE TABLE",
+                "weight": "2"
+            }
+        ]
+    }
+}

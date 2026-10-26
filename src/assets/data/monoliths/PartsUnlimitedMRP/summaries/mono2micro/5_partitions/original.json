@@ -1,0 +1,3694 @@
+{
+    "version": "v2.0.0r9",
+    "mono_run_time_call_graph": {
+        "nodes": [
+            {
+                "name": "RepositoryFactory",
+                "group": 1,
+                "category": "Undefined",
+                "construct": "Class",
+                "FQCN": "",
+                "filepath": "Class, project/src/main/java/smpl/ordering/repositories/RepositoryFactory.java",
+                "semantics": [
+                    "DEFAULT_USE_CASE"
+                ]
+            },
+            {
+                "name": "OrderingConfiguration",
+                "group": 1,
+                "category": "Undefined",
+                "construct": "Class",
+                "FQCN": "",
+                "filepath": "Class, project/src/main/java/smpl/ordering/OrderingConfiguration.java",
+                "semantics": [
+                    "DEFAULT_USE_CASE"
+                ]
+            },
+            {
+                "name": "MockCatalogItemsRepository",
+                "group": 1,
+                "category": "Undefined",
+                "construct": "Class",
+                "FQCN": "",
+                "filepath": "Class, project/src/main/java/smpl/ordering/repositories/mock/MockCatalogItemsRepository.java",
+                "semantics": [
+                    "DEFAULT_USE_CASE"
+                ]
+            },
+            {
+                "name": "CatalogItem [Duplicate_#001]",
+                "group": 1,
+                "category": "Undefined",
+                "construct": "Class",
+                "FQCN": "",
+                "filepath": "Class, project/src/main/java/smpl/ordering/models/CatalogItem.java",
+                "semantics": [
+                    "DEFAULT_USE_CASE"
+                ]
+            },
+            {
+                "name": "MockDealersRepository",
+                "group": 1,
+                "category": "Undefined",
+                "construct": "Class",
+                "FQCN": "",
+                "filepath": "Class, project/src/main/java/smpl/ordering/repositories/mock/MockDealersRepository.java",
+                "semantics": [
+                    "DEFAULT_USE_CASE"
+                ]
+            },
+            {
+                "name": "MockQuoteRepository",
+                "group": 1,
+                "category": "Undefined",
+                "construct": "Class",
+                "FQCN": "",
+                "filepath": "Class, project/src/main/java/smpl/ordering/repositories/mock/MockQuoteRepository.java",
+                "semantics": [
+                    "DEFAULT_USE_CASE"
+                ]
+            },
+            {
+                "name": "MockOrderRepository",
+                "group": 1,
+                "category": "Undefined",
+                "construct": "Class",
+                "FQCN": "",
+                "filepath": "Class, project/src/main/java/smpl/ordering/repositories/mock/MockOrderRepository.java",
+                "semantics": [
+                    "DEFAULT_USE_CASE"
+                ]
+            },
+            {
+                "name": "MockShipmentRepository",
+                "group": 1,
+                "category": "Undefined",
+                "construct": "Class",
+                "FQCN": "",
+                "filepath": "Class, project/src/main/java/smpl/ordering/repositories/mock/MockShipmentRepository.java",
+                "semantics": [
+                    "DEFAULT_USE_CASE"
+                ]
+            },
+            {
+                "name": "MongoCatalogItemsRepository",
+                "group": 1,
+                "category": "Undefined",
+                "construct": "Class",
+                "FQCN": "",
+                "filepath": "Class, project/src/main/java/smpl/ordering/repositories/mongodb/MongoCatalogItemsRepository.java",
+                "semantics": [
+                    "DEFAULT_USE_CASE"
+                ]
+            },
+            {
+                "name": "MongoOperationsWithRetry",
+                "group": 1,
+                "category": "Undefined",
+                "construct": "Class",
+                "FQCN": "",
+                "filepath": "Class, project/src/main/java/smpl/ordering/repositories/mongodb/MongoOperationsWithRetry.java",
+                "semantics": [
+                    "DEFAULT_USE_CASE"
+                ]
+            },
+            {
+                "name": "MongoDealersRepository",
+                "group": 1,
+                "category": "Undefined",
+                "construct": "Class",
+                "FQCN": "",
+                "filepath": "Class, project/src/main/java/smpl/ordering/repositories/mongodb/MongoDealersRepository.java",
+                "semantics": [
+                    "DEFAULT_USE_CASE"
+                ]
+            },
+            {
+                "name": "MongoQuoteRepository",
+                "group": 1,
+                "category": "Undefined",
+                "construct": "Class",
+                "FQCN": "",
+                "filepath": "Class, project/src/main/java/smpl/ordering/repositories/mongodb/MongoQuoteRepository.java",
+                "semantics": [
+                    "DEFAULT_USE_CASE"
+                ]
+            },
+            {
+                "name": "MongoOrderRepository",
+                "group": 1,
+                "category": "Undefined",
+                "construct": "Class",
+                "FQCN": "",
+                "filepath": "Class, project/src/main/java/smpl/ordering/repositories/mongodb/MongoOrderRepository.java",
+                "semantics": [
+                    "DEFAULT_USE_CASE"
+                ]
+            },
+            {
+                "name": "MongoShipmentRepository",
+                "group": 1,
+                "category": "Undefined",
+                "construct": "Class",
+                "FQCN": "",
+                "filepath": "Class, project/src/main/java/smpl/ordering/repositories/mongodb/MongoShipmentRepository.java",
+                "semantics": [
+                    "DEFAULT_USE_CASE"
+                ]
+            },
+            {
+                "name": "CatalogController",
+                "group": 1,
+                "category": "Undefined",
+                "construct": "Class",
+                "FQCN": "",
+                "filepath": "Class, project/src/main/java/smpl/ordering/controllers/CatalogController.java",
+                "semantics": [
+                    "DEFAULT_USE_CASE"
+                ]
+            },
+            {
+                "name": "Utility",
+                "group": 1,
+                "category": "Undefined",
+                "construct": "Class",
+                "FQCN": "",
+                "filepath": "Class, project/src/main/java/smpl/ordering/Utility.java",
+                "semantics": [
+                    "DEFAULT_USE_CASE"
+                ]
+            },
+            {
+                "name": "OrderingInitializer",
+                "group": 1,
+                "category": "Undefined",
+                "construct": "Class",
+                "FQCN": "",
+                "filepath": "Class, project/src/main/java/smpl/ordering/OrderingInitializer.java",
+                "semantics": [
+                    "DEFAULT_USE_CASE"
+                ]
+            },
+            {
+                "name": "DealerController",
+                "group": 1,
+                "category": "Undefined",
+                "construct": "Class",
+                "FQCN": "",
+                "filepath": "Class, project/src/main/java/smpl/ordering/controllers/DealerController.java",
+                "semantics": [
+                    "DEFAULT_USE_CASE"
+                ]
+            },
+            {
+                "name": "DealerInfo",
+                "group": 1,
+                "category": "Undefined",
+                "construct": "Class",
+                "FQCN": "",
+                "filepath": "Class, project/src/main/java/smpl/ordering/models/DealerInfo.java",
+                "semantics": [
+                    "DEFAULT_USE_CASE"
+                ]
+            },
+            {
+                "name": "QuoteController",
+                "group": 1,
+                "category": "Undefined",
+                "construct": "Class",
+                "FQCN": "",
+                "filepath": "Class, project/src/main/java/smpl/ordering/controllers/QuoteController.java",
+                "semantics": [
+                    "DEFAULT_USE_CASE"
+                ]
+            },
+            {
+                "name": "OrderController",
+                "group": 1,
+                "category": "Undefined",
+                "construct": "Class",
+                "FQCN": "",
+                "filepath": "Class, project/src/main/java/smpl/ordering/controllers/OrderController.java",
+                "semantics": [
+                    "DEFAULT_USE_CASE"
+                ]
+            },
+            {
+                "name": "Quote",
+                "group": 1,
+                "category": "Undefined",
+                "construct": "Class",
+                "FQCN": "",
+                "filepath": "Class, project/src/main/java/smpl/ordering/models/Quote.java",
+                "semantics": [
+                    "DEFAULT_USE_CASE"
+                ]
+            },
+            {
+                "name": "QuoteItemInfo",
+                "group": 1,
+                "category": "Undefined",
+                "construct": "Class",
+                "FQCN": "",
+                "filepath": "Class, project/src/main/java/smpl/ordering/models/QuoteItemInfo.java",
+                "semantics": [
+                    "DEFAULT_USE_CASE"
+                ]
+            },
+            {
+                "name": "Order",
+                "group": 1,
+                "category": "Undefined",
+                "construct": "Class",
+                "FQCN": "",
+                "filepath": "Class, project/src/main/java/smpl/ordering/models/Order.java",
+                "semantics": [
+                    "DEFAULT_USE_CASE"
+                ]
+            },
+            {
+                "name": "OrderEventInfo",
+                "group": 1,
+                "category": "Undefined",
+                "construct": "Class",
+                "FQCN": "",
+                "filepath": "Class, project/src/main/java/smpl/ordering/models/OrderEventInfo.java",
+                "semantics": [
+                    "DEFAULT_USE_CASE"
+                ]
+            },
+            {
+                "name": "OrderUpdateInfo",
+                "group": 1,
+                "category": "Undefined",
+                "construct": "Class",
+                "FQCN": "",
+                "filepath": "Class, project/src/main/java/smpl/ordering/models/OrderUpdateInfo.java",
+                "semantics": [
+                    "DEFAULT_USE_CASE"
+                ]
+            },
+            {
+                "name": "BadRequestException",
+                "group": 1,
+                "category": "Undefined",
+                "construct": "Class",
+                "FQCN": "",
+                "filepath": "Class, project/src/main/java/smpl/ordering/BadRequestException.java",
+                "semantics": [
+                    "DEFAULT_USE_CASE"
+                ]
+            },
+            {
+                "name": "ShipmentController",
+                "group": 1,
+                "category": "Undefined",
+                "construct": "Class",
+                "FQCN": "",
+                "filepath": "Class, project/src/main/java/smpl/ordering/controllers/ShipmentController.java",
+                "semantics": [
+                    "DEFAULT_USE_CASE"
+                ]
+            },
+            {
+                "name": "ShipmentRecord",
+                "group": 1,
+                "category": "Undefined",
+                "construct": "Class",
+                "FQCN": "",
+                "filepath": "Class, project/src/main/java/smpl/ordering/models/ShipmentRecord.java",
+                "semantics": [
+                    "DEFAULT_USE_CASE"
+                ]
+            },
+            {
+                "name": "PhoneInfo",
+                "group": 1,
+                "category": "Undefined",
+                "construct": "Class",
+                "FQCN": "",
+                "filepath": "Class, project/src/main/java/smpl/ordering/models/PhoneInfo.java",
+                "semantics": [
+                    "DEFAULT_USE_CASE"
+                ]
+            },
+            {
+                "name": "DeliveryAddress",
+                "group": 1,
+                "category": "Undefined",
+                "construct": "Class",
+                "FQCN": "",
+                "filepath": "Class, project/src/main/java/smpl/ordering/models/DeliveryAddress.java",
+                "semantics": [
+                    "DEFAULT_USE_CASE"
+                ]
+            },
+            {
+                "name": "ShipmentEventInfo",
+                "group": 1,
+                "category": "Undefined",
+                "construct": "Class",
+                "FQCN": "",
+                "filepath": "Class, project/src/main/java/smpl/ordering/models/ShipmentEventInfo.java",
+                "semantics": [
+                    "DEFAULT_USE_CASE"
+                ]
+            },
+            {
+                "name": "PostgresqlProperties",
+                "group": 1,
+                "category": "Undefined",
+                "construct": "Class",
+                "FQCN": "",
+                "filepath": "Class, project/src/main/java/smpl/ordering/PostgresqlProperties.java",
+                "semantics": []
+            },
+            {
+                "name": "PropertyHelper",
+                "group": 1,
+                "category": "Undefined",
+                "construct": "Class",
+                "FQCN": "",
+                "filepath": "Class, project/src/main/java/smpl/ordering/PropertyHelper.java",
+                "semantics": []
+            },
+            {
+                "name": "OrderingServiceProperties",
+                "group": 1,
+                "category": "Undefined",
+                "construct": "Class",
+                "FQCN": "",
+                "filepath": "Class, project/src/main/java/smpl/ordering/OrderingServiceProperties.java",
+                "semantics": []
+            },
+            {
+                "name": "ConflictingRequestException",
+                "group": 1,
+                "category": "Undefined",
+                "construct": "Class",
+                "FQCN": "",
+                "filepath": "Class, project/src/main/java/smpl/ordering/ConflictingRequestException.java",
+                "semantics": []
+            },
+            {
+                "name": "MongoDBProperties",
+                "group": 1,
+                "category": "Undefined",
+                "construct": "Class",
+                "FQCN": "",
+                "filepath": "Class, project/src/main/java/smpl/ordering/MongoDBProperties.java",
+                "semantics": []
+            },
+            {
+                "name": "AppInsightsFilter",
+                "group": 1,
+                "category": "Undefined",
+                "construct": "Class",
+                "FQCN": "",
+                "filepath": "Class, project/src/main/java/smpl/ordering/AppInsightsFilter.java",
+                "semantics": []
+            },
+            {
+                "name": "SimpleCORSFilter",
+                "group": 1,
+                "category": "Undefined",
+                "construct": "Class",
+                "FQCN": "",
+                "filepath": "Class, project/src/main/java/smpl/ordering/SimpleCORSFilter.java",
+                "semantics": []
+            },
+            {
+                "name": "Dealer",
+                "group": 1,
+                "category": "Undefined",
+                "construct": "Class",
+                "FQCN": "",
+                "filepath": "Class, project/src/main/java/smpl/ordering/repositories/mongodb/models/Dealer.java",
+                "semantics": []
+            },
+            {
+                "name": "ShipmentDetails",
+                "group": 1,
+                "category": "Undefined",
+                "construct": "Class",
+                "FQCN": "",
+                "filepath": "Class, project/src/main/java/smpl/ordering/repositories/mongodb/models/ShipmentDetails.java",
+                "semantics": []
+            },
+            {
+                "name": "OrderDetails",
+                "group": 1,
+                "category": "Undefined",
+                "construct": "Class",
+                "FQCN": "",
+                "filepath": "Class, project/src/main/java/smpl/ordering/repositories/mongodb/models/OrderDetails.java",
+                "semantics": []
+            },
+            {
+                "name": "QuoteDetails",
+                "group": 1,
+                "category": "Undefined",
+                "construct": "Class",
+                "FQCN": "",
+                "filepath": "Class, project/src/main/java/smpl/ordering/repositories/mongodb/models/QuoteDetails.java",
+                "semantics": []
+            },
+            {
+                "name": "CatalogItem",
+                "group": 1,
+                "category": "Undefined",
+                "construct": "Class",
+                "FQCN": "",
+                "filepath": "Class, project/src/main/java/smpl/ordering/repositories/mongodb/models/CatalogItem.java",
+                "semantics": []
+            },
+            {
+                "name": "Delivery",
+                "group": 1,
+                "category": "Undefined",
+                "construct": "Class",
+                "FQCN": "",
+                "filepath": "Class, project/src/main/java/smpl/ordering/models/Delivery.java",
+                "semantics": []
+            },
+            {
+                "name": "PingController",
+                "group": 1,
+                "category": "Undefined",
+                "construct": "Class",
+                "FQCN": "",
+                "filepath": "Class, project/src/main/java/smpl/ordering/controllers/PingController.java",
+                "semantics": []
+            }
+        ],
+        "links": [
+            {
+                "source": "RepositoryFactory",
+                "target": "OrderingConfiguration",
+                "method": {
+                    "getApplicationContext": 25
+                },
+                "value": 4.218
+            },
+            {
+                "source": "RepositoryFactory",
+                "target": "MockCatalogItemsRepository",
+                "method": {
+                    "MockCatalogItemsRepository": 25
+                },
+                "value": 4.218
+            },
+            {
+                "source": "RepositoryFactory",
+                "target": "MockDealersRepository",
+                "method": {
+                    "MockDealersRepository": 25
+                },
+                "value": 4.218
+            },
+            {
+                "source": "RepositoryFactory",
+                "target": "MockQuoteRepository",
+                "method": {
+                    "MockQuoteRepository": 25
+                },
+                "value": 4.218
+            },
+            {
+                "source": "RepositoryFactory",
+                "target": "MockOrderRepository",
+                "method": {
+                    "MockOrderRepository": 25
+                },
+                "value": 4.218
+            },
+            {
+                "source": "RepositoryFactory",
+                "target": "MockShipmentRepository",
+                "method": {
+                    "MockShipmentRepository": 25
+                },
+                "value": 4.218
+            },
+            {
+                "source": "RepositoryFactory",
+                "target": "MongoCatalogItemsRepository",
+                "method": {
+                    "MongoCatalogItemsRepository": 25
+                },
+                "value": 4.218
+            },
+            {
+                "source": "RepositoryFactory",
+                "target": "MongoDealersRepository",
+                "method": {
+                    "MongoDealersRepository": 25
+                },
+                "value": 4.218
+            },
+            {
+                "source": "RepositoryFactory",
+                "target": "MongoQuoteRepository",
+                "method": {
+                    "MongoQuoteRepository": 25
+                },
+                "value": 4.218
+            },
+            {
+                "source": "RepositoryFactory",
+                "target": "MongoOrderRepository",
+                "method": {
+                    "MongoOrderRepository": 25
+                },
+                "value": 4.218
+            },
+            {
+                "source": "RepositoryFactory",
+                "target": "MongoShipmentRepository",
+                "method": {
+                    "MongoShipmentRepository": 25
+                },
+                "value": 4.218
+            },
+            {
+                "source": "MockCatalogItemsRepository",
+                "target": "CatalogItem [Duplicate_#001]",
+                "method": {
+                    "CatalogItem [overloaded_#002]": 75,
+                    "getSkuNumber": 19,
+                    "CatalogItem [overloaded_#003]": 7
+                },
+                "value": 5.615
+            },
+            {
+                "source": "CatalogItem [Duplicate_#001]",
+                "target": "Utility",
+                "method": {
+                    "validateStringField": 26
+                },
+                "value": 4.258
+            },
+            {
+                "source": "MockDealersRepository",
+                "target": "DealerInfo",
+                "method": {
+                    "getName": 78
+                },
+                "value": 5.356
+            },
+            {
+                "source": "MockQuoteRepository",
+                "target": "Quote",
+                "method": {
+                    "getDealerName": 35,
+                    "getQuoteId": 48,
+                    "setQuoteId": 3,
+                    "equals": 2,
+                    "getCustomerName": 3
+                },
+                "value": 5.51
+            },
+            {
+                "source": "MockQuoteRepository",
+                "target": "MockDealersRepository",
+                "method": {
+                    "getDealer": 20,
+                    "upsertDealer": 15
+                },
+                "value": 4.555
+            },
+            {
+                "source": "MockQuoteRepository",
+                "target": "DealerInfo",
+                "method": {
+                    "DealerInfo [overloaded_#002]": 15
+                },
+                "value": 3.708
+            },
+            {
+                "source": "MockQuoteRepository",
+                "target": "BadRequestException",
+                "method": {
+                    "BadRequestException": 1
+                },
+                "value": 1.0
+            },
+            {
+                "source": "MockOrderRepository",
+                "target": "MockQuoteRepository",
+                "method": {
+                    "getQuote": 12
+                },
+                "value": 3.484
+            },
+            {
+                "source": "MockOrderRepository",
+                "target": "Order",
+                "method": {
+                    "Order": 10,
+                    "setOrderDate": 10,
+                    "setOrderId": 10,
+                    "setQuoteId": 10,
+                    "setStatus": 10,
+                    "getOrderId": 28,
+                    "getQuoteId": 2,
+                    "getStatus": 3,
+                    "equals": 3
+                },
+                "value": 5.454
+            },
+            {
+                "source": "MockOrderRepository",
+                "target": "Quote",
+                "method": {
+                    "getDealerName": 2
+                },
+                "value": 1.693
+            },
+            {
+                "source": "MockShipmentRepository",
+                "target": "ShipmentRecord",
+                "method": {
+                    "getOrderId": 24,
+                    "ShipmentRecord [overloaded_#002]": 15,
+                    "addEvent [overloaded_#003]": 1
+                },
+                "value": 4.688
+            },
+            {
+                "source": "MockShipmentRepository",
+                "target": "MockOrderRepository",
+                "method": {
+                    "getOrder": 9
+                },
+                "value": 3.197
+            },
+            {
+                "source": "MockShipmentRepository",
+                "target": "BadRequestException",
+                "method": {
+                    "BadRequestException": 1
+                },
+                "value": 1.0
+            },
+            {
+                "source": "MockShipmentRepository",
+                "target": "Order",
+                "method": {
+                    "getStatus": 3
+                },
+                "value": 2.098
+            },
+            {
+                "source": "MockShipmentRepository",
+                "target": "ShipmentEventInfo",
+                "method": {
+                    "getDate": 1,
+                    "getComments": 1,
+                    "ShipmentEventInfo [overloaded_#002]": 1
+                },
+                "value": 2.098
+            },
+            {
+                "source": "MongoCatalogItemsRepository",
+                "target": "MongoOperationsWithRetry",
+                "method": {
+                    "MongoOperationsWithRetry": 25
+                },
+                "value": 4.218
+            },
+            {
+                "source": "MongoDealersRepository",
+                "target": "MongoOperationsWithRetry",
+                "method": {
+                    "MongoOperationsWithRetry": 25
+                },
+                "value": 4.218
+            },
+            {
+                "source": "MongoQuoteRepository",
+                "target": "MongoOperationsWithRetry",
+                "method": {
+                    "MongoOperationsWithRetry": 25
+                },
+                "value": 4.218
+            },
+            {
+                "source": "MongoOrderRepository",
+                "target": "MongoOperationsWithRetry",
+                "method": {
+                    "MongoOperationsWithRetry": 25
+                },
+                "value": 4.218
+            },
+            {
+                "source": "MongoShipmentRepository",
+                "target": "MongoOperationsWithRetry",
+                "method": {
+                    "MongoOperationsWithRetry": 25
+                },
+                "value": 4.218
+            },
+            {
+                "source": "CatalogController",
+                "target": "CatalogItem [Duplicate_#001]",
+                "method": {
+                    "validate": 13,
+                    "getSkuNumber": 28
+                },
+                "value": 4.713
+            },
+            {
+                "source": "CatalogController",
+                "target": "RepositoryFactory",
+                "method": {
+                    "getCatalogItemsRepository": 29
+                },
+                "value": 4.367
+            },
+            {
+                "source": "CatalogController",
+                "target": "MockCatalogItemsRepository",
+                "method": {
+                    "getCatalogItem": 16,
+                    "upsertCatalogItem": 10,
+                    "getCatalogItems": 2,
+                    "removeCatalogItem": 1
+                },
+                "value": 4.367
+            },
+            {
+                "source": "CatalogController",
+                "target": "OrderingInitializer",
+                "method": {
+                    "getApplicationPath": 9
+                },
+                "value": 3.197
+            },
+            {
+                "source": "DealerController",
+                "target": "DealerInfo",
+                "method": {
+                    "validate": 21,
+                    "getName": 29
+                },
+                "value": 4.912
+            },
+            {
+                "source": "DealerController",
+                "target": "RepositoryFactory",
+                "method": {
+                    "getDealersRepository": 40
+                },
+                "value": 4.688
+            },
+            {
+                "source": "DealerController",
+                "target": "MockDealersRepository",
+                "method": {
+                    "getDealer": 20,
+                    "upsertDealer": 15,
+                    "getDealers": 4,
+                    "removeDealer": 1
+                },
+                "value": 4.688
+            },
+            {
+                "source": "DealerController",
+                "target": "OrderingInitializer",
+                "method": {
+                    "getApplicationPath": 14
+                },
+                "value": 3.639
+            },
+            {
+                "source": "DealerInfo",
+                "target": "Utility",
+                "method": {
+                    "validateStringField": 21
+                },
+                "value": 4.044
+            },
+            {
+                "source": "QuoteController",
+                "target": "Quote",
+                "method": {
+                    "validate": 21,
+                    "getQuoteId": 18
+                },
+                "value": 4.663
+            },
+            {
+                "source": "QuoteController",
+                "target": "RepositoryFactory",
+                "method": {
+                    "getQuoteRepository": 31
+                },
+                "value": 4.433
+            },
+            {
+                "source": "QuoteController",
+                "target": "MockQuoteRepository",
+                "method": {
+                    "createQuote": 19,
+                    "updateQuote": 2,
+                    "getQuote": 5,
+                    "getQuotesByCustomerName": 3,
+                    "removeQuote": 2
+                },
+                "value": 4.433
+            },
+            {
+                "source": "QuoteController",
+                "target": "OrderingInitializer",
+                "method": {
+                    "getApplicationPath": 18
+                },
+                "value": 3.89
+            },
+            {
+                "source": "OrderController",
+                "target": "RepositoryFactory",
+                "method": {
+                    "getQuoteRepository": 10,
+                    "getOrderRepository": 36
+                },
+                "value": 4.828
+            },
+            {
+                "source": "OrderController",
+                "target": "MockQuoteRepository",
+                "method": {
+                    "getQuote": 10
+                },
+                "value": 3.302
+            },
+            {
+                "source": "OrderController",
+                "target": "MockOrderRepository",
+                "method": {
+                    "createOrder": 10,
+                    "getOrder": 13,
+                    "getOrdersByDealerName": 3,
+                    "getOrdersByStatus": 2,
+                    "updateOrder [overloaded_#001]": 3,
+                    "hasOrder": 5
+                },
+                "value": 4.583
+            },
+            {
+                "source": "OrderController",
+                "target": "OrderingInitializer",
+                "method": {
+                    "getApplicationPath": 10
+                },
+                "value": 3.302
+            },
+            {
+                "source": "OrderController",
+                "target": "Order",
+                "method": {
+                    "getOrderId": 13,
+                    "addEvent": 8,
+                    "setStatus": 5
+                },
+                "value": 4.258
+            },
+            {
+                "source": "OrderController",
+                "target": "OrderEventInfo",
+                "method": {
+                    "setDate": 8
+                },
+                "value": 3.079
+            },
+            {
+                "source": "OrderController",
+                "target": "OrderUpdateInfo",
+                "method": {
+                    "getEventInfo": 10,
+                    "getStatus": 5
+                },
+                "value": 3.708
+            },
+            {
+                "source": "Quote",
+                "target": "QuoteItemInfo",
+                "method": {
+                    "QuoteItemInfo [overloaded_#002]": 38
+                },
+                "value": 4.637
+            },
+            {
+                "source": "Quote",
+                "target": "Utility",
+                "method": {
+                    "validateStringField": 42
+                },
+                "value": 4.737
+            },
+            {
+                "source": "OrderUpdateInfo",
+                "target": "OrderEventInfo",
+                "method": {
+                    "OrderEventInfo [overloaded_#003]": 5
+                },
+                "value": 2.609
+            },
+            {
+                "source": "ShipmentController",
+                "target": "ShipmentRecord",
+                "method": {
+                    "validate": 7,
+                    "getOrderId": 12
+                },
+                "value": 3.944
+            },
+            {
+                "source": "ShipmentController",
+                "target": "RepositoryFactory",
+                "method": {
+                    "getShipmentRepository": 24
+                },
+                "value": 4.178
+            },
+            {
+                "source": "ShipmentController",
+                "target": "MockShipmentRepository",
+                "method": {
+                    "getShipmentById": 12,
+                    "createShipment": 6,
+                    "getShipments": 4,
+                    "updateShipment": 1,
+                    "addEvent": 1
+                },
+                "value": 4.178
+            },
+            {
+                "source": "ShipmentController",
+                "target": "OrderingInitializer",
+                "method": {
+                    "getApplicationPath": 5
+                },
+                "value": 2.609
+            },
+            {
+                "source": "ShipmentController",
+                "target": "ShipmentEventInfo",
+                "method": {
+                    "validate": 1,
+                    "setDate": 1
+                },
+                "value": 1.693
+            },
+            {
+                "source": "ShipmentRecord",
+                "target": "DeliveryAddress",
+                "method": {
+                    "validate": 7
+                },
+                "value": 2.945
+            },
+            {
+                "source": "ShipmentRecord",
+                "target": "ShipmentEventInfo",
+                "method": {
+                    "getDate": 1,
+                    "getComments": 1,
+                    "ShipmentEventInfo [overloaded_#002]": 1
+                },
+                "value": 2.098
+            }
+        ],
+        "overview": {
+            "nodes": [
+                {
+                    "name": "Undefined",
+                    "group": "1",
+                    "category": "Undefined",
+                    "filepath": "",
+                    "semantics": []
+                }
+            ],
+            "links": []
+        }
+    },
+    "mono_data_dependency_graph": {
+        "nodes": [
+            {
+                "name": "PostgresqlProperties",
+                "group": 0,
+                "category": "default_group",
+                "filepath": "project/src/main/java/smpl/ordering/PostgresqlProperties.java",
+                "semantics": []
+            },
+            {
+                "name": "PropertyHelper",
+                "group": 0,
+                "category": "default_group",
+                "filepath": "project/src/main/java/smpl/ordering/PropertyHelper.java",
+                "semantics": []
+            },
+            {
+                "name": "OrderingServiceProperties",
+                "group": 1,
+                "category": "data_dep_island_0",
+                "filepath": "project/src/main/java/smpl/ordering/OrderingServiceProperties.java",
+                "semantics": []
+            },
+            {
+                "name": "ConflictingRequestException",
+                "group": 0,
+                "category": "default_group",
+                "filepath": "project/src/main/java/smpl/ordering/ConflictingRequestException.java",
+                "semantics": []
+            },
+            {
+                "name": "MongoDBProperties",
+                "group": 1,
+                "category": "data_dep_island_0",
+                "filepath": "project/src/main/java/smpl/ordering/MongoDBProperties.java",
+                "semantics": []
+            },
+            {
+                "name": "BadRequestException",
+                "group": 0,
+                "category": "default_group",
+                "filepath": "project/src/main/java/smpl/ordering/BadRequestException.java",
+                "semantics": []
+            },
+            {
+                "name": "OrderingConfiguration",
+                "group": 1,
+                "category": "data_dep_island_0",
+                "filepath": "project/src/main/java/smpl/ordering/OrderingConfiguration.java",
+                "semantics": []
+            },
+            {
+                "name": "AppInsightsFilter",
+                "group": 0,
+                "category": "default_group",
+                "filepath": "project/src/main/java/smpl/ordering/AppInsightsFilter.java",
+                "semantics": []
+            },
+            {
+                "name": "Utility",
+                "group": 0,
+                "category": "default_group",
+                "filepath": "project/src/main/java/smpl/ordering/Utility.java",
+                "semantics": []
+            },
+            {
+                "name": "OrderingInitializer",
+                "group": 0,
+                "category": "default_group",
+                "filepath": "project/src/main/java/smpl/ordering/OrderingInitializer.java",
+                "semantics": []
+            },
+            {
+                "name": "SimpleCORSFilter",
+                "group": 0,
+                "category": "default_group",
+                "filepath": "project/src/main/java/smpl/ordering/SimpleCORSFilter.java",
+                "semantics": []
+            },
+            {
+                "name": "RepositoryFactory",
+                "group": 0,
+                "category": "default_group",
+                "filepath": "project/src/main/java/smpl/ordering/repositories/RepositoryFactory.java",
+                "semantics": []
+            },
+            {
+                "name": "MockQuoteRepository",
+                "group": 0,
+                "category": "default_group",
+                "filepath": "project/src/main/java/smpl/ordering/repositories/mock/MockQuoteRepository.java",
+                "semantics": []
+            },
+            {
+                "name": "MockCatalogItemsRepository",
+                "group": 0,
+                "category": "default_group",
+                "filepath": "project/src/main/java/smpl/ordering/repositories/mock/MockCatalogItemsRepository.java",
+                "semantics": []
+            },
+            {
+                "name": "MockDealersRepository",
+                "group": 0,
+                "category": "default_group",
+                "filepath": "project/src/main/java/smpl/ordering/repositories/mock/MockDealersRepository.java",
+                "semantics": []
+            },
+            {
+                "name": "MockShipmentRepository",
+                "group": 0,
+                "category": "default_group",
+                "filepath": "project/src/main/java/smpl/ordering/repositories/mock/MockShipmentRepository.java",
+                "semantics": []
+            },
+            {
+                "name": "MockOrderRepository",
+                "group": 0,
+                "category": "default_group",
+                "filepath": "project/src/main/java/smpl/ordering/repositories/mock/MockOrderRepository.java",
+                "semantics": []
+            },
+            {
+                "name": "MongoOperationsWithRetry",
+                "group": 0,
+                "category": "default_group",
+                "filepath": "project/src/main/java/smpl/ordering/repositories/mongodb/MongoOperationsWithRetry.java",
+                "semantics": []
+            },
+            {
+                "name": "MongoCatalogItemsRepository",
+                "group": 0,
+                "category": "default_group",
+                "filepath": "project/src/main/java/smpl/ordering/repositories/mongodb/MongoCatalogItemsRepository.java",
+                "semantics": []
+            },
+            {
+                "name": "MongoQuoteRepository",
+                "group": 0,
+                "category": "default_group",
+                "filepath": "project/src/main/java/smpl/ordering/repositories/mongodb/MongoQuoteRepository.java",
+                "semantics": []
+            },
+            {
+                "name": "MongoShipmentRepository",
+                "group": 0,
+                "category": "default_group",
+                "filepath": "project/src/main/java/smpl/ordering/repositories/mongodb/MongoShipmentRepository.java",
+                "semantics": []
+            },
+            {
+                "name": "MongoOrderRepository",
+                "group": 0,
+                "category": "default_group",
+                "filepath": "project/src/main/java/smpl/ordering/repositories/mongodb/MongoOrderRepository.java",
+                "semantics": []
+            },
+            {
+                "name": "MongoDealersRepository",
+                "group": 0,
+                "category": "default_group",
+                "filepath": "project/src/main/java/smpl/ordering/repositories/mongodb/MongoDealersRepository.java",
+                "semantics": []
+            },
+            {
+                "name": "Dealer",
+                "group": 0,
+                "category": "default_group",
+                "filepath": "project/src/main/java/smpl/ordering/repositories/mongodb/models/Dealer.java",
+                "semantics": []
+            },
+            {
+                "name": "ShipmentDetails",
+                "group": 2,
+                "category": "data_dep_island_1",
+                "filepath": "project/src/main/java/smpl/ordering/repositories/mongodb/models/ShipmentDetails.java",
+                "semantics": []
+            },
+            {
+                "name": "OrderDetails",
+                "group": 3,
+                "category": "data_dep_island_2",
+                "filepath": "project/src/main/java/smpl/ordering/repositories/mongodb/models/OrderDetails.java",
+                "semantics": []
+            },
+            {
+                "name": "QuoteDetails",
+                "group": 4,
+                "category": "data_dep_island_3",
+                "filepath": "project/src/main/java/smpl/ordering/repositories/mongodb/models/QuoteDetails.java",
+                "semantics": []
+            },
+            {
+                "name": "CatalogItem",
+                "group": 0,
+                "category": "default_group",
+                "filepath": "project/src/main/java/smpl/ordering/repositories/mongodb/models/CatalogItem.java",
+                "semantics": []
+            },
+            {
+                "name": "ShipmentRecord",
+                "group": 2,
+                "category": "data_dep_island_1",
+                "filepath": "project/src/main/java/smpl/ordering/models/ShipmentRecord.java",
+                "semantics": []
+            },
+            {
+                "name": "Delivery",
+                "group": 2,
+                "category": "data_dep_island_1",
+                "filepath": "project/src/main/java/smpl/ordering/models/Delivery.java",
+                "semantics": []
+            },
+            {
+                "name": "QuoteItemInfo",
+                "group": 4,
+                "category": "data_dep_island_3",
+                "filepath": "project/src/main/java/smpl/ordering/models/QuoteItemInfo.java",
+                "semantics": []
+            },
+            {
+                "name": "DealerInfo",
+                "group": 0,
+                "category": "default_group",
+                "filepath": "project/src/main/java/smpl/ordering/models/DealerInfo.java",
+                "semantics": []
+            },
+            {
+                "name": "Order",
+                "group": 2,
+                "category": "data_dep_island_1",
+                "filepath": "project/src/main/java/smpl/ordering/models/Order.java",
+                "semantics": []
+            },
+            {
+                "name": "ShipmentEventInfo",
+                "group": 2,
+                "category": "data_dep_island_1",
+                "filepath": "project/src/main/java/smpl/ordering/models/ShipmentEventInfo.java",
+                "semantics": []
+            },
+            {
+                "name": "OrderUpdateInfo",
+                "group": 3,
+                "category": "data_dep_island_2",
+                "filepath": "project/src/main/java/smpl/ordering/models/OrderUpdateInfo.java",
+                "semantics": []
+            },
+            {
+                "name": "Quote",
+                "group": 2,
+                "category": "data_dep_island_1",
+                "filepath": "project/src/main/java/smpl/ordering/models/Quote.java",
+                "semantics": []
+            },
+            {
+                "name": "PhoneInfo",
+                "group": 2,
+                "category": "data_dep_island_1",
+                "filepath": "project/src/main/java/smpl/ordering/models/PhoneInfo.java",
+                "semantics": []
+            },
+            {
+                "name": "DeliveryAddress",
+                "group": 2,
+                "category": "data_dep_island_1",
+                "filepath": "project/src/main/java/smpl/ordering/models/DeliveryAddress.java",
+                "semantics": []
+            },
+            {
+                "name": "CatalogItem [Duplicate_#001]",
+                "group": 0,
+                "category": "default_group",
+                "filepath": "project/src/main/java/smpl/ordering/models/CatalogItem.java",
+                "semantics": []
+            },
+            {
+                "name": "OrderEventInfo",
+                "group": 3,
+                "category": "data_dep_island_2",
+                "filepath": "project/src/main/java/smpl/ordering/models/OrderEventInfo.java",
+                "semantics": []
+            },
+            {
+                "name": "DealerController",
+                "group": 0,
+                "category": "default_group",
+                "filepath": "project/src/main/java/smpl/ordering/controllers/DealerController.java",
+                "semantics": []
+            },
+            {
+                "name": "OrderController",
+                "group": 0,
+                "category": "default_group",
+                "filepath": "project/src/main/java/smpl/ordering/controllers/OrderController.java",
+                "semantics": []
+            },
+            {
+                "name": "PingController",
+                "group": 1,
+                "category": "data_dep_island_0",
+                "filepath": "project/src/main/java/smpl/ordering/controllers/PingController.java",
+                "semantics": []
+            },
+            {
+                "name": "ShipmentController",
+                "group": 0,
+                "category": "default_group",
+                "filepath": "project/src/main/java/smpl/ordering/controllers/ShipmentController.java",
+                "semantics": []
+            },
+            {
+                "name": "CatalogController",
+                "group": 0,
+                "category": "default_group",
+                "filepath": "project/src/main/java/smpl/ordering/controllers/CatalogController.java",
+                "semantics": []
+            },
+            {
+                "name": "QuoteController",
+                "group": 0,
+                "category": "default_group",
+                "filepath": "project/src/main/java/smpl/ordering/controllers/QuoteController.java",
+                "semantics": []
+            }
+        ],
+        "links": [
+            {
+                "source": "OrderingConfiguration",
+                "target": "OrderingServiceProperties",
+                "value": "1"
+            },
+            {
+                "source": "OrderingConfiguration",
+                "target": "MongoDBProperties",
+                "value": "1"
+            },
+            {
+                "source": "ShipmentDetails",
+                "target": "ShipmentEventInfo",
+                "value": "1"
+            },
+            {
+                "source": "ShipmentDetails",
+                "target": "DeliveryAddress",
+                "value": "1"
+            },
+            {
+                "source": "ShipmentDetails",
+                "target": "PhoneInfo",
+                "value": "2"
+            },
+            {
+                "source": "OrderDetails",
+                "target": "OrderEventInfo",
+                "value": "1"
+            },
+            {
+                "source": "QuoteDetails",
+                "target": "QuoteItemInfo",
+                "value": "1"
+            },
+            {
+                "source": "ShipmentRecord",
+                "target": "DeliveryAddress",
+                "value": "1"
+            },
+            {
+                "source": "ShipmentRecord",
+                "target": "PhoneInfo",
+                "value": "2"
+            },
+            {
+                "source": "Delivery",
+                "target": "Quote",
+                "value": "1"
+            },
+            {
+                "source": "Delivery",
+                "target": "Order",
+                "value": "1"
+            },
+            {
+                "source": "Delivery",
+                "target": "ShipmentRecord",
+                "value": "1"
+            },
+            {
+                "source": "OrderUpdateInfo",
+                "target": "OrderEventInfo",
+                "value": "1"
+            },
+            {
+                "source": "PingController",
+                "target": "OrderingServiceProperties",
+                "value": "1"
+            }
+        ],
+        "overview": {
+            "nodes": [
+                {
+                    "name": "data_dep_island_0",
+                    "group": 0,
+                    "category": "data_dep_island_0",
+                    "filepath": "data_dep_island_0",
+                    "semantics": []
+                },
+                {
+                    "name": "data_dep_island_1",
+                    "group": 1,
+                    "category": "data_dep_island_1",
+                    "filepath": "data_dep_island_1",
+                    "semantics": []
+                },
+                {
+                    "name": "data_dep_island_2",
+                    "group": 2,
+                    "category": "data_dep_island_2",
+                    "filepath": "data_dep_island_2",
+                    "semantics": []
+                },
+                {
+                    "name": "data_dep_island_3",
+                    "group": 3,
+                    "category": "data_dep_island_3",
+                    "filepath": "data_dep_island_3",
+                    "semantics": []
+                },
+                {
+                    "name": "default_group",
+                    "group": 4,
+                    "category": "default_group",
+                    "filepath": "default_group",
+                    "semantics": []
+                }
+            ],
+            "links": []
+        }
+    },
+    "micro_detail_partition_by_business_logic": {
+        "nodes": [
+            {
+                "name": "RepositoryFactory",
+                "group": 2,
+                "category": "partition2",
+                "construct": "Class",
+                "FQCN": "smpl.ordering.repositories.RepositoryFactory",
+                "filepath": "Class, project/src/main/java/smpl/ordering/repositories/RepositoryFactory.java",
+                "semantics": [
+                    "DEFAULT_USE_CASE"
+                ]
+            },
+            {
+                "name": "OrderingConfiguration",
+                "group": 2,
+                "category": "partition2",
+                "construct": "Class",
+                "FQCN": "smpl.ordering.OrderingConfiguration",
+                "filepath": "Class, project/src/main/java/smpl/ordering/OrderingConfiguration.java",
+                "semantics": [
+                    "DEFAULT_USE_CASE"
+                ]
+            },
+            {
+                "name": "MockCatalogItemsRepository",
+                "group": 1,
+                "category": "partition0",
+                "construct": "Class",
+                "FQCN": "smpl.ordering.repositories.mock.MockCatalogItemsRepository",
+                "filepath": "Class, project/src/main/java/smpl/ordering/repositories/mock/MockCatalogItemsRepository.java",
+                "semantics": [
+                    "DEFAULT_USE_CASE"
+                ]
+            },
+            {
+                "name": "CatalogItem [Duplicate_#001]",
+                "group": 1,
+                "category": "partition0",
+                "construct": "Class",
+                "FQCN": "smpl.ordering.models.CatalogItem",
+                "filepath": "Class, project/src/main/java/smpl/ordering/models/CatalogItem.java",
+                "semantics": [
+                    "DEFAULT_USE_CASE"
+                ]
+            },
+            {
+                "name": "MockDealersRepository",
+                "group": 1,
+                "category": "partition0",
+                "construct": "Class",
+                "FQCN": "smpl.ordering.repositories.mock.MockDealersRepository",
+                "filepath": "Class, project/src/main/java/smpl/ordering/repositories/mock/MockDealersRepository.java",
+                "semantics": [
+                    "DEFAULT_USE_CASE"
+                ]
+            },
+            {
+                "name": "MockQuoteRepository",
+                "group": 1,
+                "category": "partition0",
+                "construct": "Class",
+                "FQCN": "smpl.ordering.repositories.mock.MockQuoteRepository",
+                "filepath": "Class, project/src/main/java/smpl/ordering/repositories/mock/MockQuoteRepository.java",
+                "semantics": [
+                    "DEFAULT_USE_CASE"
+                ]
+            },
+            {
+                "name": "MockOrderRepository",
+                "group": 4,
+                "category": "partition1",
+                "construct": "Class",
+                "FQCN": "smpl.ordering.repositories.mock.MockOrderRepository",
+                "filepath": "Class, project/src/main/java/smpl/ordering/repositories/mock/MockOrderRepository.java",
+                "semantics": [
+                    "DEFAULT_USE_CASE"
+                ]
+            },
+            {
+                "name": "MockShipmentRepository",
+                "group": 3,
+                "category": "partition3",
+                "construct": "Class",
+                "FQCN": "smpl.ordering.repositories.mock.MockShipmentRepository",
+                "filepath": "Class, project/src/main/java/smpl/ordering/repositories/mock/MockShipmentRepository.java",
+                "semantics": [
+                    "DEFAULT_USE_CASE"
+                ]
+            },
+            {
+                "name": "MongoCatalogItemsRepository",
+                "group": 2,
+                "category": "partition2",
+                "construct": "Class",
+                "FQCN": "smpl.ordering.repositories.mongodb.MongoCatalogItemsRepository",
+                "filepath": "Class, project/src/main/java/smpl/ordering/repositories/mongodb/MongoCatalogItemsRepository.java",
+                "semantics": [
+                    "DEFAULT_USE_CASE"
+                ]
+            },
+            {
+                "name": "MongoOperationsWithRetry",
+                "group": 2,
+                "category": "partition2",
+                "construct": "Class",
+                "FQCN": "smpl.ordering.repositories.mongodb.MongoOperationsWithRetry",
+                "filepath": "Class, project/src/main/java/smpl/ordering/repositories/mongodb/MongoOperationsWithRetry.java",
+                "semantics": [
+                    "DEFAULT_USE_CASE"
+                ]
+            },
+            {
+                "name": "MongoDealersRepository",
+                "group": 2,
+                "category": "partition2",
+                "construct": "Class",
+                "FQCN": "smpl.ordering.repositories.mongodb.MongoDealersRepository",
+                "filepath": "Class, project/src/main/java/smpl/ordering/repositories/mongodb/MongoDealersRepository.java",
+                "semantics": [
+                    "DEFAULT_USE_CASE"
+                ]
+            },
+            {
+                "name": "MongoQuoteRepository",
+                "group": 2,
+                "category": "partition2",
+                "construct": "Class",
+                "FQCN": "smpl.ordering.repositories.mongodb.MongoQuoteRepository",
+                "filepath": "Class, project/src/main/java/smpl/ordering/repositories/mongodb/MongoQuoteRepository.java",
+                "semantics": [
+                    "DEFAULT_USE_CASE"
+                ]
+            },
+            {
+                "name": "MongoOrderRepository",
+                "group": 2,
+                "category": "partition2",
+                "construct": "Class",
+                "FQCN": "smpl.ordering.repositories.mongodb.MongoOrderRepository",
+                "filepath": "Class, project/src/main/java/smpl/ordering/repositories/mongodb/MongoOrderRepository.java",
+                "semantics": [
+                    "DEFAULT_USE_CASE"
+                ]
+            },
+            {
+                "name": "MongoShipmentRepository",
+                "group": 2,
+                "category": "partition2",
+                "construct": "Class",
+                "FQCN": "smpl.ordering.repositories.mongodb.MongoShipmentRepository",
+                "filepath": "Class, project/src/main/java/smpl/ordering/repositories/mongodb/MongoShipmentRepository.java",
+                "semantics": [
+                    "DEFAULT_USE_CASE"
+                ]
+            },
+            {
+                "name": "CatalogController",
+                "group": 1,
+                "category": "partition0",
+                "construct": "Class",
+                "FQCN": "smpl.ordering.controllers.CatalogController",
+                "filepath": "Class, project/src/main/java/smpl/ordering/controllers/CatalogController.java",
+                "semantics": [
+                    "DEFAULT_USE_CASE"
+                ]
+            },
+            {
+                "name": "Utility",
+                "group": 1,
+                "category": "partition0",
+                "construct": "Class",
+                "FQCN": "smpl.ordering.Utility",
+                "filepath": "Class, project/src/main/java/smpl/ordering/Utility.java",
+                "semantics": [
+                    "DEFAULT_USE_CASE"
+                ]
+            },
+            {
+                "name": "OrderingInitializer",
+                "group": 1,
+                "category": "partition0",
+                "construct": "Class",
+                "FQCN": "smpl.ordering.OrderingInitializer",
+                "filepath": "Class, project/src/main/java/smpl/ordering/OrderingInitializer.java",
+                "semantics": [
+                    "DEFAULT_USE_CASE"
+                ]
+            },
+            {
+                "name": "DealerController",
+                "group": 1,
+                "category": "partition0",
+                "construct": "Class",
+                "FQCN": "smpl.ordering.controllers.DealerController",
+                "filepath": "Class, project/src/main/java/smpl/ordering/controllers/DealerController.java",
+                "semantics": [
+                    "DEFAULT_USE_CASE"
+                ]
+            },
+            {
+                "name": "DealerInfo",
+                "group": 1,
+                "category": "partition0",
+                "construct": "Class",
+                "FQCN": "smpl.ordering.models.DealerInfo",
+                "filepath": "Class, project/src/main/java/smpl/ordering/models/DealerInfo.java",
+                "semantics": [
+                    "DEFAULT_USE_CASE"
+                ]
+            },
+            {
+                "name": "QuoteController",
+                "group": 1,
+                "category": "partition0",
+                "construct": "Class",
+                "FQCN": "smpl.ordering.controllers.QuoteController",
+                "filepath": "Class, project/src/main/java/smpl/ordering/controllers/QuoteController.java",
+                "semantics": [
+                    "DEFAULT_USE_CASE"
+                ]
+            },
+            {
+                "name": "OrderController",
+                "group": 4,
+                "category": "partition1",
+                "construct": "Class",
+                "FQCN": "smpl.ordering.controllers.OrderController",
+                "filepath": "Class, project/src/main/java/smpl/ordering/controllers/OrderController.java",
+                "semantics": [
+                    "DEFAULT_USE_CASE"
+                ]
+            },
+            {
+                "name": "Quote",
+                "group": 4,
+                "category": "partition1",
+                "construct": "Class",
+                "FQCN": "smpl.ordering.models.Quote",
+                "filepath": "Class, project/src/main/java/smpl/ordering/models/Quote.java",
+                "semantics": [
+                    "DEFAULT_USE_CASE"
+                ]
+            },
+            {
+                "name": "QuoteItemInfo",
+                "group": 4,
+                "category": "partition1",
+                "construct": "Class",
+                "FQCN": "smpl.ordering.models.QuoteItemInfo",
+                "filepath": "Class, project/src/main/java/smpl/ordering/models/QuoteItemInfo.java",
+                "semantics": [
+                    "DEFAULT_USE_CASE"
+                ]
+            },
+            {
+                "name": "Order",
+                "group": 4,
+                "category": "partition1",
+                "construct": "Class",
+                "FQCN": "smpl.ordering.models.Order",
+                "filepath": "Class, project/src/main/java/smpl/ordering/models/Order.java",
+                "semantics": [
+                    "DEFAULT_USE_CASE"
+                ]
+            },
+            {
+                "name": "OrderEventInfo",
+                "group": 4,
+                "category": "partition1",
+                "construct": "Class",
+                "FQCN": "smpl.ordering.models.OrderEventInfo",
+                "filepath": "Class, project/src/main/java/smpl/ordering/models/OrderEventInfo.java",
+                "semantics": [
+                    "DEFAULT_USE_CASE"
+                ]
+            },
+            {
+                "name": "OrderUpdateInfo",
+                "group": 4,
+                "category": "partition1",
+                "construct": "Class",
+                "FQCN": "smpl.ordering.models.OrderUpdateInfo",
+                "filepath": "Class, project/src/main/java/smpl/ordering/models/OrderUpdateInfo.java",
+                "semantics": [
+                    "DEFAULT_USE_CASE"
+                ]
+            },
+            {
+                "name": "BadRequestException",
+                "group": 1,
+                "category": "partition0",
+                "construct": "Class",
+                "FQCN": "smpl.ordering.BadRequestException",
+                "filepath": "Class, project/src/main/java/smpl/ordering/BadRequestException.java",
+                "semantics": [
+                    "DEFAULT_USE_CASE"
+                ]
+            },
+            {
+                "name": "ShipmentController",
+                "group": 3,
+                "category": "partition3",
+                "construct": "Class",
+                "FQCN": "smpl.ordering.controllers.ShipmentController",
+                "filepath": "Class, project/src/main/java/smpl/ordering/controllers/ShipmentController.java",
+                "semantics": [
+                    "DEFAULT_USE_CASE"
+                ]
+            },
+            {
+                "name": "ShipmentRecord",
+                "group": 3,
+                "category": "partition3",
+                "construct": "Class",
+                "FQCN": "smpl.ordering.models.ShipmentRecord",
+                "filepath": "Class, project/src/main/java/smpl/ordering/models/ShipmentRecord.java",
+                "semantics": [
+                    "DEFAULT_USE_CASE"
+                ]
+            },
+            {
+                "name": "PhoneInfo",
+                "group": 5,
+                "category": "partition4",
+                "construct": "Class",
+                "FQCN": "smpl.ordering.models.PhoneInfo",
+                "filepath": "Class, project/src/main/java/smpl/ordering/models/PhoneInfo.java",
+                "semantics": [
+                    "DEFAULT_USE_CASE"
+                ]
+            },
+            {
+                "name": "DeliveryAddress",
+                "group": 3,
+                "category": "partition3",
+                "construct": "Class",
+                "FQCN": "smpl.ordering.models.DeliveryAddress",
+                "filepath": "Class, project/src/main/java/smpl/ordering/models/DeliveryAddress.java",
+                "semantics": [
+                    "DEFAULT_USE_CASE"
+                ]
+            },
+            {
+                "name": "ShipmentEventInfo",
+                "group": 3,
+                "category": "partition3",
+                "construct": "Class",
+                "FQCN": "smpl.ordering.models.ShipmentEventInfo",
+                "filepath": "Class, project/src/main/java/smpl/ordering/models/ShipmentEventInfo.java",
+                "semantics": [
+                    "DEFAULT_USE_CASE"
+                ]
+            },
+            {
+                "name": "PostgresqlProperties",
+                "group": 0,
+                "category": "Unobserved",
+                "construct": "Class",
+                "FQCN": "smpl.ordering.PostgresqlProperties",
+                "filepath": "Class, project/src/main/java/smpl/ordering/PostgresqlProperties.java",
+                "semantics": []
+            },
+            {
+                "name": "PropertyHelper",
+                "group": 0,
+                "category": "Unobserved",
+                "construct": "Class",
+                "FQCN": "smpl.ordering.PropertyHelper",
+                "filepath": "Class, project/src/main/java/smpl/ordering/PropertyHelper.java",
+                "semantics": []
+            },
+            {
+                "name": "OrderingServiceProperties",
+                "group": 0,
+                "category": "Unobserved",
+                "construct": "Class",
+                "FQCN": "smpl.ordering.OrderingServiceProperties",
+                "filepath": "Class, project/src/main/java/smpl/ordering/OrderingServiceProperties.java",
+                "semantics": []
+            },
+            {
+                "name": "ConflictingRequestException",
+                "group": 0,
+                "category": "Unobserved",
+                "construct": "Class",
+                "FQCN": "smpl.ordering.ConflictingRequestException",
+                "filepath": "Class, project/src/main/java/smpl/ordering/ConflictingRequestException.java",
+                "semantics": []
+            },
+            {
+                "name": "MongoDBProperties",
+                "group": 0,
+                "category": "Unobserved",
+                "construct": "Class",
+                "FQCN": "smpl.ordering.MongoDBProperties",
+                "filepath": "Class, project/src/main/java/smpl/ordering/MongoDBProperties.java",
+                "semantics": []
+            },
+            {
+                "name": "AppInsightsFilter",
+                "group": 0,
+                "category": "Unobserved",
+                "construct": "Class",
+                "FQCN": "smpl.ordering.AppInsightsFilter",
+                "filepath": "Class, project/src/main/java/smpl/ordering/AppInsightsFilter.java",
+                "semantics": []
+            },
+            {
+                "name": "SimpleCORSFilter",
+                "group": 0,
+                "category": "Unobserved",
+                "construct": "Class",
+                "FQCN": "smpl.ordering.SimpleCORSFilter",
+                "filepath": "Class, project/src/main/java/smpl/ordering/SimpleCORSFilter.java",
+                "semantics": []
+            },
+            {
+                "name": "Dealer",
+                "group": 0,
+                "category": "Unobserved",
+                "construct": "Class",
+                "FQCN": "smpl.ordering.repositories.mongodb.models.Dealer",
+                "filepath": "Class, project/src/main/java/smpl/ordering/repositories/mongodb/models/Dealer.java",
+                "semantics": []
+            },
+            {
+                "name": "ShipmentDetails",
+                "group": 0,
+                "category": "Unobserved",
+                "construct": "Class",
+                "FQCN": "smpl.ordering.repositories.mongodb.models.ShipmentDetails",
+                "filepath": "Class, project/src/main/java/smpl/ordering/repositories/mongodb/models/ShipmentDetails.java",
+                "semantics": []
+            },
+            {
+                "name": "OrderDetails",
+                "group": 0,
+                "category": "Unobserved",
+                "construct": "Class",
+                "FQCN": "smpl.ordering.repositories.mongodb.models.OrderDetails",
+                "filepath": "Class, project/src/main/java/smpl/ordering/repositories/mongodb/models/OrderDetails.java",
+                "semantics": []
+            },
+            {
+                "name": "QuoteDetails",
+                "group": 0,
+                "category": "Unobserved",
+                "construct": "Class",
+                "FQCN": "smpl.ordering.repositories.mongodb.models.QuoteDetails",
+                "filepath": "Class, project/src/main/java/smpl/ordering/repositories/mongodb/models/QuoteDetails.java",
+                "semantics": []
+            },
+            {
+                "name": "CatalogItem",
+                "group": 0,
+                "category": "Unobserved",
+                "construct": "Class",
+                "FQCN": "smpl.ordering.repositories.mongodb.models.CatalogItem",
+                "filepath": "Class, project/src/main/java/smpl/ordering/repositories/mongodb/models/CatalogItem.java",
+                "semantics": []
+            },
+            {
+                "name": "Delivery",
+                "group": 0,
+                "category": "Unobserved",
+                "construct": "Class",
+                "FQCN": "smpl.ordering.models.Delivery",
+                "filepath": "Class, project/src/main/java/smpl/ordering/models/Delivery.java",
+                "semantics": []
+            },
+            {
+                "name": "PingController",
+                "group": 0,
+                "category": "Unobserved",
+                "construct": "Class",
+                "FQCN": "smpl.ordering.controllers.PingController",
+                "filepath": "Class, project/src/main/java/smpl/ordering/controllers/PingController.java",
+                "semantics": []
+            }
+        ],
+        "links": [
+            {
+                "source": "RepositoryFactory",
+                "target": "OrderingConfiguration",
+                "method": {
+                    "getApplicationContext": 25
+                },
+                "value": 4.218
+            },
+            {
+                "source": "RepositoryFactory",
+                "target": "MockCatalogItemsRepository",
+                "method": {
+                    "MockCatalogItemsRepository": 25
+                },
+                "value": 4.218
+            },
+            {
+                "source": "RepositoryFactory",
+                "target": "MockDealersRepository",
+                "method": {
+                    "MockDealersRepository": 25
+                },
+                "value": 4.218
+            },
+            {
+                "source": "RepositoryFactory",
+                "target": "MockQuoteRepository",
+                "method": {
+                    "MockQuoteRepository": 25
+                },
+                "value": 4.218
+            },
+            {
+                "source": "RepositoryFactory",
+                "target": "MockOrderRepository",
+                "method": {
+                    "MockOrderRepository": 25
+                },
+                "value": 4.218
+            },
+            {
+                "source": "RepositoryFactory",
+                "target": "MockShipmentRepository",
+                "method": {
+                    "MockShipmentRepository": 25
+                },
+                "value": 4.218
+            },
+            {
+                "source": "RepositoryFactory",
+                "target": "MongoCatalogItemsRepository",
+                "method": {
+                    "MongoCatalogItemsRepository": 25
+                },
+                "value": 4.218
+            },
+            {
+                "source": "RepositoryFactory",
+                "target": "MongoDealersRepository",
+                "method": {
+                    "MongoDealersRepository": 25
+                },
+                "value": 4.218
+            },
+            {
+                "source": "RepositoryFactory",
+                "target": "MongoQuoteRepository",
+                "method": {
+                    "MongoQuoteRepository": 25
+                },
+                "value": 4.218
+            },
+            {
+                "source": "RepositoryFactory",
+                "target": "MongoOrderRepository",
+                "method": {
+                    "MongoOrderRepository": 25
+                },
+                "value": 4.218
+            },
+            {
+                "source": "RepositoryFactory",
+                "target": "MongoShipmentRepository",
+                "method": {
+                    "MongoShipmentRepository": 25
+                },
+                "value": 4.218
+            },
+            {
+                "source": "MockCatalogItemsRepository",
+                "target": "CatalogItem [Duplicate_#001]",
+                "method": {
+                    "CatalogItem [overloaded_#002]": 75,
+                    "getSkuNumber": 19,
+                    "CatalogItem [overloaded_#003]": 7
+                },
+                "value": 5.615
+            },
+            {
+                "source": "CatalogItem [Duplicate_#001]",
+                "target": "Utility",
+                "method": {
+                    "validateStringField": 26
+                },
+                "value": 4.258
+            },
+            {
+                "source": "MockDealersRepository",
+                "target": "DealerInfo",
+                "method": {
+                    "getName": 78
+                },
+                "value": 5.356
+            },
+            {
+                "source": "MockQuoteRepository",
+                "target": "Quote",
+                "method": {
+                    "getDealerName": 35,
+                    "getQuoteId": 48,
+                    "setQuoteId": 3,
+                    "equals": 2,
+                    "getCustomerName": 3
+                },
+                "value": 5.51
+            },
+            {
+                "source": "MockQuoteRepository",
+                "target": "MockDealersRepository",
+                "method": {
+                    "getDealer": 20,
+                    "upsertDealer": 15
+                },
+                "value": 4.555
+            },
+            {
+                "source": "MockQuoteRepository",
+                "target": "DealerInfo",
+                "method": {
+                    "DealerInfo [overloaded_#002]": 15
+                },
+                "value": 3.708
+            },
+            {
+                "source": "MockQuoteRepository",
+                "target": "BadRequestException",
+                "method": {
+                    "BadRequestException": 1
+                },
+                "value": 1.0
+            },
+            {
+                "source": "MockOrderRepository",
+                "target": "MockQuoteRepository",
+                "method": {
+                    "getQuote": 12
+                },
+                "value": 3.484
+            },
+            {
+                "source": "MockOrderRepository",
+                "target": "Order",
+                "method": {
+                    "Order": 10,
+                    "setOrderDate": 10,
+                    "setOrderId": 10,
+                    "setQuoteId": 10,
+                    "setStatus": 10,
+                    "getOrderId": 28,
+                    "getQuoteId": 2,
+                    "getStatus": 3,
+                    "equals": 3
+                },
+                "value": 5.454
+            },
+            {
+                "source": "MockOrderRepository",
+                "target": "Quote",
+                "method": {
+                    "getDealerName": 2
+                },
+                "value": 1.693
+            },
+            {
+                "source": "MockShipmentRepository",
+                "target": "ShipmentRecord",
+                "method": {
+                    "getOrderId": 24,
+                    "ShipmentRecord [overloaded_#002]": 15,
+                    "addEvent [overloaded_#003]": 1
+                },
+                "value": 4.688
+            },
+            {
+                "source": "MockShipmentRepository",
+                "target": "MockOrderRepository",
+                "method": {
+                    "getOrder": 9
+                },
+                "value": 3.197
+            },
+            {
+                "source": "MockShipmentRepository",
+                "target": "BadRequestException",
+                "method": {
+                    "BadRequestException": 1
+                },
+                "value": 1.0
+            },
+            {
+                "source": "MockShipmentRepository",
+                "target": "Order",
+                "method": {
+                    "getStatus": 3
+                },
+                "value": 2.098
+            },
+            {
+                "source": "MockShipmentRepository",
+                "target": "ShipmentEventInfo",
+                "method": {
+                    "getDate": 1,
+                    "getComments": 1,
+                    "ShipmentEventInfo [overloaded_#002]": 1
+                },
+                "value": 2.098
+            },
+            {
+                "source": "MongoCatalogItemsRepository",
+                "target": "MongoOperationsWithRetry",
+                "method": {
+                    "MongoOperationsWithRetry": 25
+                },
+                "value": 4.218
+            },
+            {
+                "source": "MongoDealersRepository",
+                "target": "MongoOperationsWithRetry",
+                "method": {
+                    "MongoOperationsWithRetry": 25
+                },
+                "value": 4.218
+            },
+            {
+                "source": "MongoQuoteRepository",
+                "target": "MongoOperationsWithRetry",
+                "method": {
+                    "MongoOperationsWithRetry": 25
+                },
+                "value": 4.218
+            },
+            {
+                "source": "MongoOrderRepository",
+                "target": "MongoOperationsWithRetry",
+                "method": {
+                    "MongoOperationsWithRetry": 25
+                },
+                "value": 4.218
+            },
+            {
+                "source": "MongoShipmentRepository",
+                "target": "MongoOperationsWithRetry",
+                "method": {
+                    "MongoOperationsWithRetry": 25
+                },
+                "value": 4.218
+            },
+            {
+                "source": "CatalogController",
+                "target": "CatalogItem [Duplicate_#001]",
+                "method": {
+                    "validate": 13,
+                    "getSkuNumber": 28
+                },
+                "value": 4.713
+            },
+            {
+                "source": "CatalogController",
+                "target": "RepositoryFactory",
+                "method": {
+                    "getCatalogItemsRepository": 29
+                },
+                "value": 4.367
+            },
+            {
+                "source": "CatalogController",
+                "target": "MockCatalogItemsRepository",
+                "method": {
+                    "getCatalogItem": 16,
+                    "upsertCatalogItem": 10,
+                    "getCatalogItems": 2,
+                    "removeCatalogItem": 1
+                },
+                "value": 4.367
+            },
+            {
+                "source": "CatalogController",
+                "target": "OrderingInitializer",
+                "method": {
+                    "getApplicationPath": 9
+                },
+                "value": 3.197
+            },
+            {
+                "source": "DealerController",
+                "target": "DealerInfo",
+                "method": {
+                    "validate": 21,
+                    "getName": 29
+                },
+                "value": 4.912
+            },
+            {
+                "source": "DealerController",
+                "target": "RepositoryFactory",
+                "method": {
+                    "getDealersRepository": 40
+                },
+                "value": 4.688
+            },
+            {
+                "source": "DealerController",
+                "target": "MockDealersRepository",
+                "method": {
+                    "getDealer": 20,
+                    "upsertDealer": 15,
+                    "getDealers": 4,
+                    "removeDealer": 1
+                },
+                "value": 4.688
+            },
+            {
+                "source": "DealerController",
+                "target": "OrderingInitializer",
+                "method": {
+                    "getApplicationPath": 14
+                },
+                "value": 3.639
+            },
+            {
+                "source": "DealerInfo",
+                "target": "Utility",
+                "method": {
+                    "validateStringField": 21
+                },
+                "value": 4.044
+            },
+            {
+                "source": "QuoteController",
+                "target": "Quote",
+                "method": {
+                    "validate": 21,
+                    "getQuoteId": 18
+                },
+                "value": 4.663
+            },
+            {
+                "source": "QuoteController",
+                "target": "RepositoryFactory",
+                "method": {
+                    "getQuoteRepository": 31
+                },
+                "value": 4.433
+            },
+            {
+                "source": "QuoteController",
+                "target": "MockQuoteRepository",
+                "method": {
+                    "createQuote": 19,
+                    "updateQuote": 2,
+                    "getQuote": 5,
+                    "getQuotesByCustomerName": 3,
+                    "removeQuote": 2
+                },
+                "value": 4.433
+            },
+            {
+                "source": "QuoteController",
+                "target": "OrderingInitializer",
+                "method": {
+                    "getApplicationPath": 18
+                },
+                "value": 3.89
+            },
+            {
+                "source": "OrderController",
+                "target": "RepositoryFactory",
+                "method": {
+                    "getQuoteRepository": 10,
+                    "getOrderRepository": 36
+                },
+                "value": 4.828
+            },
+            {
+                "source": "OrderController",
+                "target": "MockQuoteRepository",
+                "method": {
+                    "getQuote": 10
+                },
+                "value": 3.302
+            },
+            {
+                "source": "OrderController",
+                "target": "MockOrderRepository",
+                "method": {
+                    "createOrder": 10,
+                    "getOrder": 13,
+                    "getOrdersByDealerName": 3,
+                    "getOrdersByStatus": 2,
+                    "updateOrder [overloaded_#001]": 3,
+                    "hasOrder": 5
+                },
+                "value": 4.583
+            },
+            {
+                "source": "OrderController",
+                "target": "OrderingInitializer",
+                "method": {
+                    "getApplicationPath": 10
+                },
+                "value": 3.302
+            },
+            {
+                "source": "OrderController",
+                "target": "Order",
+                "method": {
+                    "getOrderId": 13,
+                    "addEvent": 8,
+                    "setStatus": 5
+                },
+                "value": 4.258
+            },
+            {
+                "source": "OrderController",
+                "target": "OrderEventInfo",
+                "method": {
+                    "setDate": 8
+                },
+                "value": 3.079
+            },
+            {
+                "source": "OrderController",
+                "target": "OrderUpdateInfo",
+                "method": {
+                    "getEventInfo": 10,
+                    "getStatus": 5
+                },
+                "value": 3.708
+            },
+            {
+                "source": "Quote",
+                "target": "QuoteItemInfo",
+                "method": {
+                    "QuoteItemInfo [overloaded_#002]": 38
+                },
+                "value": 4.637
+            },
+            {
+                "source": "Quote",
+                "target": "Utility",
+                "method": {
+                    "validateStringField": 42
+                },
+                "value": 4.737
+            },
+            {
+                "source": "OrderUpdateInfo",
+                "target": "OrderEventInfo",
+                "method": {
+                    "OrderEventInfo [overloaded_#003]": 5
+                },
+                "value": 2.609
+            },
+            {
+                "source": "ShipmentController",
+                "target": "ShipmentRecord",
+                "method": {
+                    "validate": 7,
+                    "getOrderId": 12
+                },
+                "value": 3.944
+            },
+            {
+                "source": "ShipmentController",
+                "target": "RepositoryFactory",
+                "method": {
+                    "getShipmentRepository": 24
+                },
+                "value": 4.178
+            },
+            {
+                "source": "ShipmentController",
+                "target": "MockShipmentRepository",
+                "method": {
+                    "getShipmentById": 12,
+                    "createShipment": 6,
+                    "getShipments": 4,
+                    "updateShipment": 1,
+                    "addEvent": 1
+                },
+                "value": 4.178
+            },
+            {
+                "source": "ShipmentController",
+                "target": "OrderingInitializer",
+                "method": {
+                    "getApplicationPath": 5
+                },
+                "value": 2.609
+            },
+            {
+                "source": "ShipmentController",
+                "target": "ShipmentEventInfo",
+                "method": {
+                    "validate": 1,
+                    "setDate": 1
+                },
+                "value": 1.693
+            },
+            {
+                "source": "ShipmentRecord",
+                "target": "DeliveryAddress",
+                "method": {
+                    "validate": 7
+                },
+                "value": 2.945
+            },
+            {
+                "source": "ShipmentRecord",
+                "target": "ShipmentEventInfo",
+                "method": {
+                    "getDate": 1,
+                    "getComments": 1,
+                    "ShipmentEventInfo [overloaded_#002]": 1
+                },
+                "value": 2.098
+            }
+        ],
+        "overview": {
+            "nodes": [
+                {
+                    "name": "partition2",
+                    "group": 2,
+                    "category": "partition2",
+                    "filepath": "Cluster",
+                    "semantics": [
+                        "DEFAULT_USE_CASE"
+                    ]
+                },
+                {
+                    "name": "partition0",
+                    "group": 1,
+                    "category": "partition0",
+                    "filepath": "Cluster",
+                    "semantics": [
+                        "DEFAULT_USE_CASE"
+                    ]
+                },
+                {
+                    "name": "partition1",
+                    "group": 4,
+                    "category": "partition1",
+                    "filepath": "Cluster",
+                    "semantics": [
+                        "DEFAULT_USE_CASE"
+                    ]
+                },
+                {
+                    "name": "partition3",
+                    "group": 3,
+                    "category": "partition3",
+                    "filepath": "Cluster",
+                    "semantics": [
+                        "DEFAULT_USE_CASE"
+                    ]
+                },
+                {
+                    "name": "partition4",
+                    "group": 5,
+                    "category": "partition4",
+                    "filepath": "Cluster",
+                    "semantics": [
+                        "DEFAULT_USE_CASE"
+                    ]
+                },
+                {
+                    "name": "Unobserved",
+                    "group": 0,
+                    "category": "Unobserved",
+                    "filepath": "Cluster",
+                    "semantics": []
+                }
+            ],
+            "links": [
+                {
+                    "source": "partition2",
+                    "target": "partition0",
+                    "value": 1.886
+                },
+                {
+                    "source": "partition2",
+                    "target": "partition1",
+                    "value": 1.433
+                },
+                {
+                    "source": "partition2",
+                    "target": "partition3",
+                    "value": 1.433
+                },
+                {
+                    "source": "partition0",
+                    "target": "partition1",
+                    "value": 1.785
+                },
+                {
+                    "source": "partition0",
+                    "target": "partition2",
+                    "value": 1.916
+                },
+                {
+                    "source": "partition1",
+                    "target": "partition0",
+                    "value": 1.962
+                },
+                {
+                    "source": "partition1",
+                    "target": "partition2",
+                    "value": 1.482
+                },
+                {
+                    "source": "partition3",
+                    "target": "partition1",
+                    "value": 1.516
+                },
+                {
+                    "source": "partition3",
+                    "target": "partition0",
+                    "value": 1.378
+                },
+                {
+                    "source": "partition3",
+                    "target": "partition2",
+                    "value": 1.429
+                }
+            ]
+        }
+    },
+    "micro_detail_partition_by_natural_seam": {
+        "nodes": [
+            {
+                "name": "RepositoryFactory",
+                "group": 2,
+                "category": "partition2",
+                "construct": "Class",
+                "FQCN": "smpl.ordering.repositories.RepositoryFactory",
+                "filepath": "Class, project/src/main/java/smpl/ordering/repositories/RepositoryFactory.java",
+                "semantics": [
+                    "DEFAULT_USE_CASE"
+                ]
+            },
+            {
+                "name": "OrderingConfiguration",
+                "group": 2,
+                "category": "partition2",
+                "construct": "Class",
+                "FQCN": "smpl.ordering.OrderingConfiguration",
+                "filepath": "Class, project/src/main/java/smpl/ordering/OrderingConfiguration.java",
+                "semantics": [
+                    "DEFAULT_USE_CASE"
+                ]
+            },
+            {
+                "name": "MockCatalogItemsRepository",
+                "group": 1,
+                "category": "partition0",
+                "construct": "Class",
+                "FQCN": "smpl.ordering.repositories.mock.MockCatalogItemsRepository",
+                "filepath": "Class, project/src/main/java/smpl/ordering/repositories/mock/MockCatalogItemsRepository.java",
+                "semantics": [
+                    "DEFAULT_USE_CASE"
+                ]
+            },
+            {
+                "name": "CatalogItem [Duplicate_#001]",
+                "group": 1,
+                "category": "partition0",
+                "construct": "Class",
+                "FQCN": "smpl.ordering.models.CatalogItem",
+                "filepath": "Class, project/src/main/java/smpl/ordering/models/CatalogItem.java",
+                "semantics": [
+                    "DEFAULT_USE_CASE"
+                ]
+            },
+            {
+                "name": "MockDealersRepository",
+                "group": 1,
+                "category": "partition0",
+                "construct": "Class",
+                "FQCN": "smpl.ordering.repositories.mock.MockDealersRepository",
+                "filepath": "Class, project/src/main/java/smpl/ordering/repositories/mock/MockDealersRepository.java",
+                "semantics": [
+                    "DEFAULT_USE_CASE"
+                ]
+            },
+            {
+                "name": "MockQuoteRepository",
+                "group": 1,
+                "category": "partition0",
+                "construct": "Class",
+                "FQCN": "smpl.ordering.repositories.mock.MockQuoteRepository",
+                "filepath": "Class, project/src/main/java/smpl/ordering/repositories/mock/MockQuoteRepository.java",
+                "semantics": [
+                    "DEFAULT_USE_CASE"
+                ]
+            },
+            {
+                "name": "MockOrderRepository",
+                "group": 3,
+                "category": "partition1",
+                "construct": "Class",
+                "FQCN": "smpl.ordering.repositories.mock.MockOrderRepository",
+                "filepath": "Class, project/src/main/java/smpl/ordering/repositories/mock/MockOrderRepository.java",
+                "semantics": [
+                    "DEFAULT_USE_CASE"
+                ]
+            },
+            {
+                "name": "MockShipmentRepository",
+                "group": 3,
+                "category": "partition1",
+                "construct": "Class",
+                "FQCN": "smpl.ordering.repositories.mock.MockShipmentRepository",
+                "filepath": "Class, project/src/main/java/smpl/ordering/repositories/mock/MockShipmentRepository.java",
+                "semantics": [
+                    "DEFAULT_USE_CASE"
+                ]
+            },
+            {
+                "name": "MongoCatalogItemsRepository",
+                "group": 2,
+                "category": "partition2",
+                "construct": "Class",
+                "FQCN": "smpl.ordering.repositories.mongodb.MongoCatalogItemsRepository",
+                "filepath": "Class, project/src/main/java/smpl/ordering/repositories/mongodb/MongoCatalogItemsRepository.java",
+                "semantics": [
+                    "DEFAULT_USE_CASE"
+                ]
+            },
+            {
+                "name": "MongoOperationsWithRetry",
+                "group": 2,
+                "category": "partition2",
+                "construct": "Class",
+                "FQCN": "smpl.ordering.repositories.mongodb.MongoOperationsWithRetry",
+                "filepath": "Class, project/src/main/java/smpl/ordering/repositories/mongodb/MongoOperationsWithRetry.java",
+                "semantics": [
+                    "DEFAULT_USE_CASE"
+                ]
+            },
+            {
+                "name": "MongoDealersRepository",
+                "group": 2,
+                "category": "partition2",
+                "construct": "Class",
+                "FQCN": "smpl.ordering.repositories.mongodb.MongoDealersRepository",
+                "filepath": "Class, project/src/main/java/smpl/ordering/repositories/mongodb/MongoDealersRepository.java",
+                "semantics": [
+                    "DEFAULT_USE_CASE"
+                ]
+            },
+            {
+                "name": "MongoQuoteRepository",
+                "group": 2,
+                "category": "partition2",
+                "construct": "Class",
+                "FQCN": "smpl.ordering.repositories.mongodb.MongoQuoteRepository",
+                "filepath": "Class, project/src/main/java/smpl/ordering/repositories/mongodb/MongoQuoteRepository.java",
+                "semantics": [
+                    "DEFAULT_USE_CASE"
+                ]
+            },
+            {
+                "name": "MongoOrderRepository",
+                "group": 2,
+                "category": "partition2",
+                "construct": "Class",
+                "FQCN": "smpl.ordering.repositories.mongodb.MongoOrderRepository",
+                "filepath": "Class, project/src/main/java/smpl/ordering/repositories/mongodb/MongoOrderRepository.java",
+                "semantics": [
+                    "DEFAULT_USE_CASE"
+                ]
+            },
+            {
+                "name": "MongoShipmentRepository",
+                "group": 2,
+                "category": "partition2",
+                "construct": "Class",
+                "FQCN": "smpl.ordering.repositories.mongodb.MongoShipmentRepository",
+                "filepath": "Class, project/src/main/java/smpl/ordering/repositories/mongodb/MongoShipmentRepository.java",
+                "semantics": [
+                    "DEFAULT_USE_CASE"
+                ]
+            },
+            {
+                "name": "CatalogController",
+                "group": 1,
+                "category": "partition0",
+                "construct": "Class",
+                "FQCN": "smpl.ordering.controllers.CatalogController",
+                "filepath": "Class, project/src/main/java/smpl/ordering/controllers/CatalogController.java",
+                "semantics": [
+                    "DEFAULT_USE_CASE"
+                ]
+            },
+            {
+                "name": "Utility",
+                "group": 1,
+                "category": "partition0",
+                "construct": "Class",
+                "FQCN": "smpl.ordering.Utility",
+                "filepath": "Class, project/src/main/java/smpl/ordering/Utility.java",
+                "semantics": [
+                    "DEFAULT_USE_CASE"
+                ]
+            },
+            {
+                "name": "OrderingInitializer",
+                "group": 1,
+                "category": "partition0",
+                "construct": "Class",
+                "FQCN": "smpl.ordering.OrderingInitializer",
+                "filepath": "Class, project/src/main/java/smpl/ordering/OrderingInitializer.java",
+                "semantics": [
+                    "DEFAULT_USE_CASE"
+                ]
+            },
+            {
+                "name": "DealerController",
+                "group": 1,
+                "category": "partition0",
+                "construct": "Class",
+                "FQCN": "smpl.ordering.controllers.DealerController",
+                "filepath": "Class, project/src/main/java/smpl/ordering/controllers/DealerController.java",
+                "semantics": [
+                    "DEFAULT_USE_CASE"
+                ]
+            },
+            {
+                "name": "DealerInfo",
+                "group": 1,
+                "category": "partition0",
+                "construct": "Class",
+                "FQCN": "smpl.ordering.models.DealerInfo",
+                "filepath": "Class, project/src/main/java/smpl/ordering/models/DealerInfo.java",
+                "semantics": [
+                    "DEFAULT_USE_CASE"
+                ]
+            },
+            {
+                "name": "QuoteController",
+                "group": 1,
+                "category": "partition0",
+                "construct": "Class",
+                "FQCN": "smpl.ordering.controllers.QuoteController",
+                "filepath": "Class, project/src/main/java/smpl/ordering/controllers/QuoteController.java",
+                "semantics": [
+                    "DEFAULT_USE_CASE"
+                ]
+            },
+            {
+                "name": "OrderController",
+                "group": 3,
+                "category": "partition1",
+                "construct": "Class",
+                "FQCN": "smpl.ordering.controllers.OrderController",
+                "filepath": "Class, project/src/main/java/smpl/ordering/controllers/OrderController.java",
+                "semantics": [
+                    "DEFAULT_USE_CASE"
+                ]
+            },
+            {
+                "name": "Quote",
+                "group": 3,
+                "category": "partition1",
+                "construct": "Class",
+                "FQCN": "smpl.ordering.models.Quote",
+                "filepath": "Class, project/src/main/java/smpl/ordering/models/Quote.java",
+                "semantics": [
+                    "DEFAULT_USE_CASE"
+                ]
+            },
+            {
+                "name": "QuoteItemInfo",
+                "group": 3,
+                "category": "partition1",
+                "construct": "Class",
+                "FQCN": "smpl.ordering.models.QuoteItemInfo",
+                "filepath": "Class, project/src/main/java/smpl/ordering/models/QuoteItemInfo.java",
+                "semantics": [
+                    "DEFAULT_USE_CASE"
+                ]
+            },
+            {
+                "name": "Order",
+                "group": 3,
+                "category": "partition1",
+                "construct": "Class",
+                "FQCN": "smpl.ordering.models.Order",
+                "filepath": "Class, project/src/main/java/smpl/ordering/models/Order.java",
+                "semantics": [
+                    "DEFAULT_USE_CASE"
+                ]
+            },
+            {
+                "name": "OrderEventInfo",
+                "group": 3,
+                "category": "partition1",
+                "construct": "Class",
+                "FQCN": "smpl.ordering.models.OrderEventInfo",
+                "filepath": "Class, project/src/main/java/smpl/ordering/models/OrderEventInfo.java",
+                "semantics": [
+                    "DEFAULT_USE_CASE"
+                ]
+            },
+            {
+                "name": "OrderUpdateInfo",
+                "group": 3,
+                "category": "partition1",
+                "construct": "Class",
+                "FQCN": "smpl.ordering.models.OrderUpdateInfo",
+                "filepath": "Class, project/src/main/java/smpl/ordering/models/OrderUpdateInfo.java",
+                "semantics": [
+                    "DEFAULT_USE_CASE"
+                ]
+            },
+            {
+                "name": "BadRequestException",
+                "group": 1,
+                "category": "partition0",
+                "construct": "Class",
+                "FQCN": "smpl.ordering.BadRequestException",
+                "filepath": "Class, project/src/main/java/smpl/ordering/BadRequestException.java",
+                "semantics": [
+                    "DEFAULT_USE_CASE"
+                ]
+            },
+            {
+                "name": "ShipmentController",
+                "group": 3,
+                "category": "partition1",
+                "construct": "Class",
+                "FQCN": "smpl.ordering.controllers.ShipmentController",
+                "filepath": "Class, project/src/main/java/smpl/ordering/controllers/ShipmentController.java",
+                "semantics": [
+                    "DEFAULT_USE_CASE"
+                ]
+            },
+            {
+                "name": "ShipmentRecord",
+                "group": 3,
+                "category": "partition1",
+                "construct": "Class",
+                "FQCN": "smpl.ordering.models.ShipmentRecord",
+                "filepath": "Class, project/src/main/java/smpl/ordering/models/ShipmentRecord.java",
+                "semantics": [
+                    "DEFAULT_USE_CASE"
+                ]
+            },
+            {
+                "name": "PhoneInfo",
+                "group": 3,
+                "category": "partition1",
+                "construct": "Class",
+                "FQCN": "smpl.ordering.models.PhoneInfo",
+                "filepath": "Class, project/src/main/java/smpl/ordering/models/PhoneInfo.java",
+                "semantics": [
+                    "DEFAULT_USE_CASE"
+                ]
+            },
+            {
+                "name": "DeliveryAddress",
+                "group": 3,
+                "category": "partition1",
+                "construct": "Class",
+                "FQCN": "smpl.ordering.models.DeliveryAddress",
+                "filepath": "Class, project/src/main/java/smpl/ordering/models/DeliveryAddress.java",
+                "semantics": [
+                    "DEFAULT_USE_CASE"
+                ]
+            },
+            {
+                "name": "ShipmentEventInfo",
+                "group": 3,
+                "category": "partition1",
+                "construct": "Class",
+                "FQCN": "smpl.ordering.models.ShipmentEventInfo",
+                "filepath": "Class, project/src/main/java/smpl/ordering/models/ShipmentEventInfo.java",
+                "semantics": [
+                    "DEFAULT_USE_CASE"
+                ]
+            },
+            {
+                "name": "PostgresqlProperties",
+                "group": 0,
+                "category": "Unobserved",
+                "construct": "Class",
+                "FQCN": "smpl.ordering.PostgresqlProperties",
+                "filepath": "Class, project/src/main/java/smpl/ordering/PostgresqlProperties.java",
+                "semantics": []
+            },
+            {
+                "name": "PropertyHelper",
+                "group": 0,
+                "category": "Unobserved",
+                "construct": "Class",
+                "FQCN": "smpl.ordering.PropertyHelper",
+                "filepath": "Class, project/src/main/java/smpl/ordering/PropertyHelper.java",
+                "semantics": []
+            },
+            {
+                "name": "OrderingServiceProperties",
+                "group": 0,
+                "category": "Unobserved",
+                "construct": "Class",
+                "FQCN": "smpl.ordering.OrderingServiceProperties",
+                "filepath": "Class, project/src/main/java/smpl/ordering/OrderingServiceProperties.java",
+                "semantics": []
+            },
+            {
+                "name": "ConflictingRequestException",
+                "group": 0,
+                "category": "Unobserved",
+                "construct": "Class",
+                "FQCN": "smpl.ordering.ConflictingRequestException",
+                "filepath": "Class, project/src/main/java/smpl/ordering/ConflictingRequestException.java",
+                "semantics": []
+            },
+            {
+                "name": "MongoDBProperties",
+                "group": 0,
+                "category": "Unobserved",
+                "construct": "Class",
+                "FQCN": "smpl.ordering.MongoDBProperties",
+                "filepath": "Class, project/src/main/java/smpl/ordering/MongoDBProperties.java",
+                "semantics": []
+            },
+            {
+                "name": "AppInsightsFilter",
+                "group": 0,
+                "category": "Unobserved",
+                "construct": "Class",
+                "FQCN": "smpl.ordering.AppInsightsFilter",
+                "filepath": "Class, project/src/main/java/smpl/ordering/AppInsightsFilter.java",
+                "semantics": []
+            },
+            {
+                "name": "SimpleCORSFilter",
+                "group": 0,
+                "category": "Unobserved",
+                "construct": "Class",
+                "FQCN": "smpl.ordering.SimpleCORSFilter",
+                "filepath": "Class, project/src/main/java/smpl/ordering/SimpleCORSFilter.java",
+                "semantics": []
+            },
+            {
+                "name": "Dealer",
+                "group": 0,
+                "category": "Unobserved",
+                "construct": "Class",
+                "FQCN": "smpl.ordering.repositories.mongodb.models.Dealer",
+                "filepath": "Class, project/src/main/java/smpl/ordering/repositories/mongodb/models/Dealer.java",
+                "semantics": []
+            },
+            {
+                "name": "ShipmentDetails",
+                "group": 0,
+                "category": "Unobserved",
+                "construct": "Class",
+                "FQCN": "smpl.ordering.repositories.mongodb.models.ShipmentDetails",
+                "filepath": "Class, project/src/main/java/smpl/ordering/repositories/mongodb/models/ShipmentDetails.java",
+                "semantics": []
+            },
+            {
+                "name": "OrderDetails",
+                "group": 0,
+                "category": "Unobserved",
+                "construct": "Class",
+                "FQCN": "smpl.ordering.repositories.mongodb.models.OrderDetails",
+                "filepath": "Class, project/src/main/java/smpl/ordering/repositories/mongodb/models/OrderDetails.java",
+                "semantics": []
+            },
+            {
+                "name": "QuoteDetails",
+                "group": 0,
+                "category": "Unobserved",
+                "construct": "Class",
+                "FQCN": "smpl.ordering.repositories.mongodb.models.QuoteDetails",
+                "filepath": "Class, project/src/main/java/smpl/ordering/repositories/mongodb/models/QuoteDetails.java",
+                "semantics": []
+            },
+            {
+                "name": "CatalogItem",
+                "group": 0,
+                "category": "Unobserved",
+                "construct": "Class",
+                "FQCN": "smpl.ordering.repositories.mongodb.models.CatalogItem",
+                "filepath": "Class, project/src/main/java/smpl/ordering/repositories/mongodb/models/CatalogItem.java",
+                "semantics": []
+            },
+            {
+                "name": "Delivery",
+                "group": 0,
+                "category": "Unobserved",
+                "construct": "Class",
+                "FQCN": "smpl.ordering.models.Delivery",
+                "filepath": "Class, project/src/main/java/smpl/ordering/models/Delivery.java",
+                "semantics": []
+            },
+            {
+                "name": "PingController",
+                "group": 0,
+                "category": "Unobserved",
+                "construct": "Class",
+                "FQCN": "smpl.ordering.controllers.PingController",
+                "filepath": "Class, project/src/main/java/smpl/ordering/controllers/PingController.java",
+                "semantics": []
+            }
+        ],
+        "links": [
+            {
+                "source": "RepositoryFactory",
+                "target": "OrderingConfiguration",
+                "method": {
+                    "getApplicationContext": 25
+                },
+                "value": 4.218
+            },
+            {
+                "source": "RepositoryFactory",
+                "target": "MockCatalogItemsRepository",
+                "method": {
+                    "MockCatalogItemsRepository": 25
+                },
+                "value": 4.218
+            },
+            {
+                "source": "RepositoryFactory",
+                "target": "MockDealersRepository",
+                "method": {
+                    "MockDealersRepository": 25
+                },
+                "value": 4.218
+            },
+            {
+                "source": "RepositoryFactory",
+                "target": "MockQuoteRepository",
+                "method": {
+                    "MockQuoteRepository": 25
+                },
+                "value": 4.218
+            },
+            {
+                "source": "RepositoryFactory",
+                "target": "MockOrderRepository",
+                "method": {
+                    "MockOrderRepository": 25
+                },
+                "value": 4.218
+            },
+            {
+                "source": "RepositoryFactory",
+                "target": "MockShipmentRepository",
+                "method": {
+                    "MockShipmentRepository": 25
+                },
+                "value": 4.218
+            },
+            {
+                "source": "RepositoryFactory",
+                "target": "MongoCatalogItemsRepository",
+                "method": {
+                    "MongoCatalogItemsRepository": 25
+                },
+                "value": 4.218
+            },
+            {
+                "source": "RepositoryFactory",
+                "target": "MongoDealersRepository",
+                "method": {
+                    "MongoDealersRepository": 25
+                },
+                "value": 4.218
+            },
+            {
+                "source": "RepositoryFactory",
+                "target": "MongoQuoteRepository",
+                "method": {
+                    "MongoQuoteRepository": 25
+                },
+                "value": 4.218
+            },
+            {
+                "source": "RepositoryFactory",
+                "target": "MongoOrderRepository",
+                "method": {
+                    "MongoOrderRepository": 25
+                },
+                "value": 4.218
+            },
+            {
+                "source": "RepositoryFactory",
+                "target": "MongoShipmentRepository",
+                "method": {
+                    "MongoShipmentRepository": 25
+                },
+                "value": 4.218
+            },
+            {
+                "source": "MockCatalogItemsRepository",
+                "target": "CatalogItem [Duplicate_#001]",
+                "method": {
+                    "CatalogItem [overloaded_#002]": 75,
+                    "getSkuNumber": 19,
+                    "CatalogItem [overloaded_#003]": 7
+                },
+                "value": 5.615
+            },
+            {
+                "source": "CatalogItem [Duplicate_#001]",
+                "target": "Utility",
+                "method": {
+                    "validateStringField": 26
+                },
+                "value": 4.258
+            },
+            {
+                "source": "MockDealersRepository",
+                "target": "DealerInfo",
+                "method": {
+                    "getName": 78
+                },
+                "value": 5.356
+            },
+            {
+                "source": "MockQuoteRepository",
+                "target": "Quote",
+                "method": {
+                    "getDealerName": 35,
+                    "getQuoteId": 48,
+                    "setQuoteId": 3,
+                    "equals": 2,
+                    "getCustomerName": 3
+                },
+                "value": 5.51
+            },
+            {
+                "source": "MockQuoteRepository",
+                "target": "MockDealersRepository",
+                "method": {
+                    "getDealer": 20,
+                    "upsertDealer": 15
+                },
+                "value": 4.555
+            },
+            {
+                "source": "MockQuoteRepository",
+                "target": "DealerInfo",
+                "method": {
+                    "DealerInfo [overloaded_#002]": 15
+                },
+                "value": 3.708
+            },
+            {
+                "source": "MockQuoteRepository",
+                "target": "BadRequestException",
+                "method": {
+                    "BadRequestException": 1
+                },
+                "value": 1.0
+            },
+            {
+                "source": "MockOrderRepository",
+                "target": "MockQuoteRepository",
+                "method": {
+                    "getQuote": 12
+                },
+                "value": 3.484
+            },
+            {
+                "source": "MockOrderRepository",
+                "target": "Order",
+                "method": {
+                    "Order": 10,
+                    "setOrderDate": 10,
+                    "setOrderId": 10,
+                    "setQuoteId": 10,
+                    "setStatus": 10,
+                    "getOrderId": 28,
+                    "getQuoteId": 2,
+                    "getStatus": 3,
+                    "equals": 3
+                },
+                "value": 5.454
+            },
+            {
+                "source": "MockOrderRepository",
+                "target": "Quote",
+                "method": {
+                    "getDealerName": 2
+                },
+                "value": 1.693
+            },
+            {
+                "source": "MockShipmentRepository",
+                "target": "ShipmentRecord",
+                "method": {
+                    "getOrderId": 24,
+                    "ShipmentRecord [overloaded_#002]": 15,
+                    "addEvent [overloaded_#003]": 1
+                },
+                "value": 4.688
+            },
+            {
+                "source": "MockShipmentRepository",
+                "target": "MockOrderRepository",
+                "method": {
+                    "getOrder": 9
+                },
+                "value": 3.197
+            },
+            {
+                "source": "MockShipmentRepository",
+                "target": "BadRequestException",
+                "method": {
+                    "BadRequestException": 1
+                },
+                "value": 1.0
+            },
+            {
+                "source": "MockShipmentRepository",
+                "target": "Order",
+                "method": {
+                    "getStatus": 3
+                },
+                "value": 2.098
+            },
+            {
+                "source": "MockShipmentRepository",
+                "target": "ShipmentEventInfo",
+                "method": {
+                    "getDate": 1,
+                    "getComments": 1,
+                    "ShipmentEventInfo [overloaded_#002]": 1
+                },
+                "value": 2.098
+            },
+            {
+                "source": "MongoCatalogItemsRepository",
+                "target": "MongoOperationsWithRetry",
+                "method": {
+                    "MongoOperationsWithRetry": 25
+                },
+                "value": 4.218
+            },
+            {
+                "source": "MongoDealersRepository",
+                "target": "MongoOperationsWithRetry",
+                "method": {
+                    "MongoOperationsWithRetry": 25
+                },
+                "value": 4.218
+            },
+            {
+                "source": "MongoQuoteRepository",
+                "target": "MongoOperationsWithRetry",
+                "method": {
+                    "MongoOperationsWithRetry": 25
+                },
+                "value": 4.218
+            },
+            {
+                "source": "MongoOrderRepository",
+                "target": "MongoOperationsWithRetry",
+                "method": {
+                    "MongoOperationsWithRetry": 25
+                },
+                "value": 4.218
+            },
+            {
+                "source": "MongoShipmentRepository",
+                "target": "MongoOperationsWithRetry",
+                "method": {
+                    "MongoOperationsWithRetry": 25
+                },
+                "value": 4.218
+            },
+            {
+                "source": "CatalogController",
+                "target": "CatalogItem [Duplicate_#001]",
+                "method": {
+                    "validate": 13,
+                    "getSkuNumber": 28
+                },
+                "value": 4.713
+            },
+            {
+                "source": "CatalogController",
+                "target": "RepositoryFactory",
+                "method": {
+                    "getCatalogItemsRepository": 29
+                },
+                "value": 4.367
+            },
+            {
+                "source": "CatalogController",
+                "target": "MockCatalogItemsRepository",
+                "method": {
+                    "getCatalogItem": 16,
+                    "upsertCatalogItem": 10,
+                    "getCatalogItems": 2,
+                    "removeCatalogItem": 1
+                },
+                "value": 4.367
+            },
+            {
+                "source": "CatalogController",
+                "target": "OrderingInitializer",
+                "method": {
+                    "getApplicationPath": 9
+                },
+                "value": 3.197
+            },
+            {
+                "source": "DealerController",
+                "target": "DealerInfo",
+                "method": {
+                    "validate": 21,
+                    "getName": 29
+                },
+                "value": 4.912
+            },
+            {
+                "source": "DealerController",
+                "target": "RepositoryFactory",
+                "method": {
+                    "getDealersRepository": 40
+                },
+                "value": 4.688
+            },
+            {
+                "source": "DealerController",
+                "target": "MockDealersRepository",
+                "method": {
+                    "getDealer": 20,
+                    "upsertDealer": 15,
+                    "getDealers": 4,
+                    "removeDealer": 1
+                },
+                "value": 4.688
+            },
+            {
+                "source": "DealerController",
+                "target": "OrderingInitializer",
+                "method": {
+                    "getApplicationPath": 14
+                },
+                "value": 3.639
+            },
+            {
+                "source": "DealerInfo",
+                "target": "Utility",
+                "method": {
+                    "validateStringField": 21
+                },
+                "value": 4.044
+            },
+            {
+                "source": "QuoteController",
+                "target": "Quote",
+                "method": {
+                    "validate": 21,
+                    "getQuoteId": 18
+                },
+                "value": 4.663
+            },
+            {
+                "source": "QuoteController",
+                "target": "RepositoryFactory",
+                "method": {
+                    "getQuoteRepository": 31
+                },
+                "value": 4.433
+            },
+            {
+                "source": "QuoteController",
+                "target": "MockQuoteRepository",
+                "method": {
+                    "createQuote": 19,
+                    "updateQuote": 2,
+                    "getQuote": 5,
+                    "getQuotesByCustomerName": 3,
+                    "removeQuote": 2
+                },
+                "value": 4.433
+            },
+            {
+                "source": "QuoteController",
+                "target": "OrderingInitializer",
+                "method": {
+                    "getApplicationPath": 18
+                },
+                "value": 3.89
+            },
+            {
+                "source": "OrderController",
+                "target": "RepositoryFactory",
+                "method": {
+                    "getQuoteRepository": 10,
+                    "getOrderRepository": 36
+                },
+                "value": 4.828
+            },
+            {
+                "source": "OrderController",
+                "target": "MockQuoteRepository",
+                "method": {
+                    "getQuote": 10
+                },
+                "value": 3.302
+            },
+            {
+                "source": "OrderController",
+                "target": "MockOrderRepository",
+                "method": {
+                    "createOrder": 10,
+                    "getOrder": 13,
+                    "getOrdersByDealerName": 3,
+                    "getOrdersByStatus": 2,
+                    "updateOrder [overloaded_#001]": 3,
+                    "hasOrder": 5
+                },
+                "value": 4.583
+            },
+            {
+                "source": "OrderController",
+                "target": "OrderingInitializer",
+                "method": {
+                    "getApplicationPath": 10
+                },
+                "value": 3.302
+            },
+            {
+                "source": "OrderController",
+                "target": "Order",
+                "method": {
+                    "getOrderId": 13,
+                    "addEvent": 8,
+                    "setStatus": 5
+                },
+                "value": 4.258
+            },
+            {
+                "source": "OrderController",
+                "target": "OrderEventInfo",
+                "method": {
+                    "setDate": 8
+                },
+                "value": 3.079
+            },
+            {
+                "source": "OrderController",
+                "target": "OrderUpdateInfo",
+                "method": {
+                    "getEventInfo": 10,
+                    "getStatus": 5
+                },
+                "value": 3.708
+            },
+            {
+                "source": "Quote",
+                "target": "QuoteItemInfo",
+                "method": {
+                    "QuoteItemInfo [overloaded_#002]": 38
+                },
+                "value": 4.637
+            },
+            {
+                "source": "Quote",
+                "target": "Utility",
+                "method": {
+                    "validateStringField": 42
+                },
+                "value": 4.737
+            },
+            {
+                "source": "OrderUpdateInfo",
+                "target": "OrderEventInfo",
+                "method": {
+                    "OrderEventInfo [overloaded_#003]": 5
+                },
+                "value": 2.609
+            },
+            {
+                "source": "ShipmentController",
+                "target": "ShipmentRecord",
+                "method": {
+                    "validate": 7,
+                    "getOrderId": 12
+                },
+                "value": 3.944
+            },
+            {
+                "source": "ShipmentController",
+                "target": "RepositoryFactory",
+                "method": {
+                    "getShipmentRepository": 24
+                },
+                "value": 4.178
+            },
+            {
+                "source": "ShipmentController",
+                "target": "MockShipmentRepository",
+                "method": {
+                    "getShipmentById": 12,
+                    "createShipment": 6,
+                    "getShipments": 4,
+                    "updateShipment": 1,
+                    "addEvent": 1
+                },
+                "value": 4.178
+            },
+            {
+                "source": "ShipmentController",
+                "target": "OrderingInitializer",
+                "method": {
+                    "getApplicationPath": 5
+                },
+                "value": 2.609
+            },
+            {
+                "source": "ShipmentController",
+                "target": "ShipmentEventInfo",
+                "method": {
+                    "validate": 1,
+                    "setDate": 1
+                },
+                "value": 1.693
+            },
+            {
+                "source": "ShipmentRecord",
+                "target": "DeliveryAddress",
+                "method": {
+                    "validate": 7
+                },
+                "value": 2.945
+            },
+            {
+                "source": "ShipmentRecord",
+                "target": "ShipmentEventInfo",
+                "method": {
+                    "getDate": 1,
+                    "getComments": 1,
+                    "ShipmentEventInfo [overloaded_#002]": 1
+                },
+                "value": 2.098
+            }
+        ],
+        "overview": {
+            "nodes": [
+                {
+                    "name": "partition2",
+                    "group": 2,
+                    "category": "partition2",
+                    "filepath": "Cluster",
+                    "semantics": [
+                        "DEFAULT_USE_CASE"
+                    ]
+                },
+                {
+                    "name": "partition0",
+                    "group": 1,
+                    "category": "partition0",
+                    "filepath": "Cluster",
+                    "semantics": [
+                        "DEFAULT_USE_CASE"
+                    ]
+                },
+                {
+                    "name": "partition1",
+                    "group": 3,
+                    "category": "partition1",
+                    "filepath": "Cluster",
+                    "semantics": [
+                        "DEFAULT_USE_CASE"
+                    ]
+                },
+                {
+                    "name": "Unobserved",
+                    "group": 0,
+                    "category": "Unobserved",
+                    "filepath": "Cluster",
+                    "semantics": []
+                }
+            ],
+            "links": [
+                {
+                    "source": "partition2",
+                    "target": "partition0",
+                    "value": 1.886
+                },
+                {
+                    "source": "partition2",
+                    "target": "partition1",
+                    "value": 1.704
+                },
+                {
+                    "source": "partition0",
+                    "target": "partition1",
+                    "value": 1.785
+                },
+                {
+                    "source": "partition0",
+                    "target": "partition2",
+                    "value": 1.916
+                },
+                {
+                    "source": "partition1",
+                    "target": "partition0",
+                    "value": 2.072
+                },
+                {
+                    "source": "partition1",
+                    "target": "partition2",
+                    "value": 1.732
+                }
+            ]
+        }
+    }
+}

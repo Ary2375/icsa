@@ -15,7 +15,7 @@ import {
   serviceEvolution,
   ServiceEvolutionKind,
 } from '../../utils/decomposition-analysis';
-import { decompositionPath } from '../../utils/decomposition-source';
+import { decompositionPath, literaturePath } from '../../utils/decomposition-source';
 import {
   defaultSelections,
   describeConfiguration,
@@ -191,23 +191,29 @@ export class Comparator implements OnInit {
             relation,
             counterparts: role.counterparts,
             classes: partition.classes,
-            classItems: partition.classes.map((name) => {
-              const elsewhere = there.get(name) ?? [];
-              if (isRepeated(name)) return { name, mark: 'ambiguous', note: 'repeated assignment' };
-              if (!elsewhere.length)
-                return {
-                  name,
-                  mark: 'only-here',
-                  note: key === 'reference' ? 'not in selected' : 'not in reference',
-                };
-              return elsewhere[0] === home
-                ? { name, mark: 'same', note: '' }
-                : {
+            classItems: [...partition.classes]
+              .sort(
+                (a, b) =>
+                  a.localeCompare(b, undefined, { sensitivity: 'base' }) || a.localeCompare(b),
+              )
+              .map((name) => {
+                const elsewhere = there.get(name) ?? [];
+                if (isRepeated(name))
+                  return { name, mark: 'ambiguous', note: 'repeated assignment' };
+                if (!elsewhere.length)
+                  return {
                     name,
-                    mark: 'moved',
-                    note: `${key === 'reference' ? '→' : '←'} ${otherPartitions[elsewhere[0]].name}`,
+                    mark: 'only-here',
+                    note: key === 'reference' ? 'not in selected' : 'not in reference',
                   };
-            }),
+                return elsewhere[0] === home
+                  ? { name, mark: 'same', note: '' }
+                  : {
+                      name,
+                      mark: 'moved',
+                      note: `${key === 'reference' ? '→' : '←'} ${otherPartitions[elsewhere[0]].name}`,
+                    };
+              }),
           };
         }),
       };
@@ -281,20 +287,16 @@ export class Comparator implements OnInit {
     );
   }
 
-  // Every evaluated LLM experiment of results.json is one comparable experiment.
+  // Every evaluated experiment of results.json is comparable: the LLM runs and the
+  // state-of-the-art methods, each read from its own decomposition file.
   private toExperiments(results: Result[]): Experiment[] {
-    const experiments = results
-      .filter((result) => result.comparisonGroup === 'llm')
-      .map((result): Experiment => {
-        const parsed = parseThesisStrategy(result.strategy);
-        if (!parsed) throw new Error(`Unsupported experiment strategy: ${result.strategy}`);
-        const source = decompositionPath(
-          result.caseStudy,
-          result.tool,
-          parsed.chunk,
-          parsed.mode,
-          parsed.variant,
-        );
+    const experiments = results.map((result): Experiment => {
+      const observed =
+        result.observedEntities != null && result.observedEntitiesPercent != null
+          ? `${result.observedEntities} (${result.observedEntitiesPercent.toFixed(1)}%)`
+          : null;
+      if (result.comparisonGroup === 'literature') {
+        const source = literaturePath(result.caseStudy, result.tool, result.strategy);
         if (!source) {
           throw new Error(
             `No data folder is configured for ${result.caseStudy} / ${result.tool}. Add it to decomposition-source.ts.`,
@@ -302,17 +304,42 @@ export class Comparator implements OnInit {
         }
         return {
           id: source,
+          kind: 'literature',
           caseStudy: result.caseStudy,
           tool: result.tool,
-          ...parsed,
-          label: describeConfiguration(result.tool, parsed.chunk, parsed.mode, parsed.variant),
+          chunk: '',
+          mode: '',
+          variant: result.strategy,
+          label: result.toolLabel,
           source,
-          observed:
-            result.observedEntities != null && result.observedEntitiesPercent != null
-              ? `${result.observedEntities} (${result.observedEntitiesPercent.toFixed(1)}%)`
-              : null,
+          observed,
         };
-      });
+      }
+      const parsed = parseThesisStrategy(result.strategy);
+      if (!parsed) throw new Error(`Unsupported experiment strategy: ${result.strategy}`);
+      const source = decompositionPath(
+        result.caseStudy,
+        result.tool,
+        parsed.chunk,
+        parsed.mode,
+        parsed.variant,
+      );
+      if (!source) {
+        throw new Error(
+          `No data folder is configured for ${result.caseStudy} / ${result.tool}. Add it to decomposition-source.ts.`,
+        );
+      }
+      return {
+        id: source,
+        kind: 'llm',
+        caseStudy: result.caseStudy,
+        tool: result.tool,
+        ...parsed,
+        label: describeConfiguration(result.tool, parsed.chunk, parsed.mode, parsed.variant),
+        source,
+        observed,
+      };
+    });
     if (new Set(experiments.map((item) => item.id)).size !== experiments.length) {
       throw new Error('Duplicate experiments in results.json.');
     }

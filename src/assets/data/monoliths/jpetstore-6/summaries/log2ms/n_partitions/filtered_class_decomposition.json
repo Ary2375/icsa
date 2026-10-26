@@ -1,0 +1,85 @@
+{
+    "tool": {
+        "decomposition": {
+            "partition0": [
+                {
+                    "id": "Account"
+                },
+                {
+                    "id": "AccountActionBean"
+                },
+                {
+                    "id": "AccountMapper"
+                },
+                {
+                    "id": "AccountService"
+                }
+            ],
+            "partition1": [
+                {
+                    "id": "Cart"
+                },
+                {
+                    "id": "CartItem"
+                },
+                {
+                    "id": "LineItem"
+                },
+                {
+                    "id": "LineItemMapper"
+                },
+                {
+                    "id": "Order"
+                },
+                {
+                    "id": "OrderActionBean"
+                },
+                {
+                    "id": "OrderMapper"
+                },
+                {
+                    "id": "OrderService"
+                },
+                {
+                    "id": "Sequence"
+                },
+                {
+                    "id": "SequenceMapper"
+                }
+            ],
+            "partition2": [
+                {
+                    "id": "AbstractActionBean"
+                },
+                {
+                    "id": "CartActionBean"
+                },
+                {
+                    "id": "CatalogActionBean"
+                },
+                {
+                    "id": "CatalogService"
+                },
+                {
+                    "id": "Category"
+                },
+                {
+                    "id": "CategoryMapper"
+                },
+                {
+                    "id": "Item"
+                },
+                {
+                    "id": "ItemMapper"
+                },
+                {
+                    "id": "Product"
+                },
+                {
+                    "id": "ProductMapper"
+                }
+            ],
+            "UNOBSERVED": []
+        }
+    }
+}

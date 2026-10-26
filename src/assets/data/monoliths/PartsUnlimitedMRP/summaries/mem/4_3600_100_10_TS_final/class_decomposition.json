@@ -1,0 +1,239 @@
+{
+    "MEM": {
+        "decomposition": {
+            "partition0": [
+                {
+                    "id": "app"
+                },
+                {
+                    "id": "app"
+                }
+            ],
+            "partition1": [
+                {
+                    "id": "MockCatalogItemsRepositoryTest"
+                },
+                {
+                    "id": "MockDealersRepositoryTest"
+                },
+                {
+                    "id": "MongoDealersRepository"
+                },
+                {
+                    "id": "MongoOrderRepository"
+                },
+                {
+                    "id": "MongoShipmentRepository"
+                },
+                {
+                    "id": "Order"
+                },
+                {
+                    "id": "OrderController"
+                },
+                {
+                    "id": "OrderUpdateInfo"
+                },
+                {
+                    "id": "QuoteRepository"
+                },
+                {
+                    "id": "Utility"
+                }
+            ],
+            "partition2": [
+                {
+                    "id": "MockOrderRepositoryTest"
+                },
+                {
+                    "id": "OrderRepositoryTest"
+                },
+                {
+                    "id": "SimpleCORSFilter"
+                }
+            ],
+            "partition3": [
+                {
+                    "id": "Delivery"
+                },
+                {
+                    "id": "OrderStatus"
+                }
+            ],
+            "partition4": [
+                {
+                    "id": "CatalogItem"
+                },
+                {
+                    "id": "DealersRepository"
+                },
+                {
+                    "id": "MockDealersRepository"
+                },
+                {
+                    "id": "OrderControllerTest"
+                },
+                {
+                    "id": "QuoteDetails"
+                }
+            ],
+            "partition5": [
+                {
+                    "id": "CatalogControllerTest"
+                },
+                {
+                    "id": "DeliveryAddress"
+                },
+                {
+                    "id": "MongoQuoteRepository"
+                },
+                {
+                    "id": "RepositoryFactory"
+                }
+            ],
+            "partition6": [
+                {
+                    "id": "CatalogController"
+                },
+                {
+                    "id": "ConfigurationRule"
+                },
+                {
+                    "id": "DealerController"
+                },
+                {
+                    "id": "DealerControllerTest"
+                },
+                {
+                    "id": "DealerInfo"
+                },
+                {
+                    "id": "MongoDealersRepositoryTest"
+                },
+                {
+                    "id": "MongoOperationsWithRetry"
+                },
+                {
+                    "id": "MongoShipmentRepositoryTest"
+                }
+            ],
+            "partition7": [
+                {
+                    "id": "MongoQuoteRepositoryTest"
+                },
+                {
+                    "id": "QuoteController"
+                },
+                {
+                    "id": "ShipmentController"
+                },
+                {
+                    "id": "UtilityTest"
+                }
+            ],
+            "partition8": [
+                {
+                    "id": "AppInsightsFilter"
+                },
+                {
+                    "id": "CatalogItem"
+                },
+                {
+                    "id": "MockOrderRepository"
+                },
+                {
+                    "id": "MockQuoteRepositoryTest"
+                },
+                {
+                    "id": "MongoCatalogItemsRepositoryTest"
+                },
+                {
+                    "id": "OrderRepository"
+                },
+                {
+                    "id": "OrderingConfiguration"
+                },
+                {
+                    "id": "Quote"
+                },
+                {
+                    "id": "QuoteItemInfo"
+                },
+                {
+                    "id": "ShipmentEventInfo"
+                }
+            ],
+            "partition9": [
+                {
+                    "id": "BadRequestException"
+                },
+                {
+                    "id": "CatalogItemsRepository"
+                },
+                {
+                    "id": "ConflictingRequestException"
+                },
+                {
+                    "id": "MongoDBProperties"
+                },
+                {
+                    "id": "OrderingServiceProperties"
+                },
+                {
+                    "id": "PostgresqlProperties"
+                },
+                {
+                    "id": "QuoteRepositoryTest"
+                },
+                {
+                    "id": "ShipmentControllerTest"
+                },
+                {
+                    "id": "ShipmentRepository"
+                }
+            ],
+            "partition10": [
+                {
+                    "id": "ProductMessage"
+                },
+                {
+                    "id": "Quote"
+                },
+                {
+                    "id": "ShipmentRecord"
+                },
+                {
+                    "id": "TestPath"
+                }
+            ],
+            "partition11": [
+                {
+                    "id": "CatalogItemsRepositoryTest"
+                },
+                {
+                    "id": "MockShipmentRepositoryTest"
+                },
+                {
+                    "id": "MongoCatalogItemsRepository"
+                },
+                {
+                    "id": "OrderEventInfo"
+                },
+                {
+                    "id": "OrderingInitializer"
+                }
+            ],
+            "partition12": [
+                {
+                    "id": "PhoneInfo"
+                },
+                {
+                    "id": "QuoteControllerTest"
+                },
+                {
+                    "id": "ShipmentRepositoryTest"
+                }
+            ]
+        }
+    }
+}

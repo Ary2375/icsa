@@ -1,0 +1,238 @@
+{
+    "tool": {
+        "decomposition": {
+            "uncounted": [
+                {
+                    "id": "AppInsightsFilter"
+                },
+                {
+                    "id": "Dealer"
+                },
+                {
+                    "id": "MockDealersRepository"
+                },
+                {
+                    "id": "MongoDBProperties"
+                },
+                {
+                    "id": "MongoDealersRepository"
+                },
+                {
+                    "id": "MongoOperationsWithRetry"
+                },
+                {
+                    "id": "OrderingInitializer"
+                },
+                {
+                    "id": "OrderingServiceProperties"
+                },
+                {
+                    "id": "PingController"
+                },
+                {
+                    "id": "PostgresqlProperties"
+                },
+                {
+                    "id": "PropertyHelper"
+                }
+            ],
+            "order": [
+                {
+                    "id": "BadRequestException"
+                },
+                {
+                    "id": "ConflictingRequestException"
+                },
+                {
+                    "id": "MockOrderRepository"
+                },
+                {
+                    "id": "MongoOrderRepository"
+                },
+                {
+                    "id": "Order"
+                },
+                {
+                    "id": "OrderController"
+                },
+                {
+                    "id": "OrderDetails"
+                },
+                {
+                    "id": "OrderEventInfo"
+                },
+                {
+                    "id": "OrderRepository"
+                },
+                {
+                    "id": "OrderStatus"
+                },
+                {
+                    "id": "OrderUpdateInfo"
+                },
+                {
+                    "id": "OrderingConfiguration"
+                },
+                {
+                    "id": "RepositoryFactory"
+                },
+                {
+                    "id": "SimpleCORSFilter"
+                },
+                {
+                    "id": "TestPath"
+                },
+                {
+                    "id": "Utility"
+                }
+            ],
+            "quote": [
+                {
+                    "id": "BadRequestException"
+                },
+                {
+                    "id": "MockQuoteRepository"
+                },
+                {
+                    "id": "MongoQuoteRepository"
+                },
+                {
+                    "id": "OrderingConfiguration"
+                },
+                {
+                    "id": "Quote"
+                },
+                {
+                    "id": "QuoteController"
+                },
+                {
+                    "id": "QuoteDetails"
+                },
+                {
+                    "id": "QuoteItemInfo"
+                },
+                {
+                    "id": "QuoteRepository"
+                },
+                {
+                    "id": "RepositoryFactory"
+                },
+                {
+                    "id": "SimpleCORSFilter"
+                },
+                {
+                    "id": "TestPath"
+                },
+                {
+                    "id": "Utility"
+                }
+            ],
+            "shipment": [
+                {
+                    "id": "BadRequestException"
+                },
+                {
+                    "id": "ConflictingRequestException"
+                },
+                {
+                    "id": "Delivery"
+                },
+                {
+                    "id": "DeliveryAddress"
+                },
+                {
+                    "id": "MockShipmentRepository"
+                },
+                {
+                    "id": "MongoShipmentRepository"
+                },
+                {
+                    "id": "OrderingConfiguration"
+                },
+                {
+                    "id": "PhoneInfo"
+                },
+                {
+                    "id": "RepositoryFactory"
+                },
+                {
+                    "id": "ShipmentController"
+                },
+                {
+                    "id": "ShipmentDetails"
+                },
+                {
+                    "id": "ShipmentEventInfo"
+                },
+                {
+                    "id": "ShipmentRecord"
+                },
+                {
+                    "id": "ShipmentRepository"
+                },
+                {
+                    "id": "SimpleCORSFilter"
+                },
+                {
+                    "id": "TestPath"
+                },
+                {
+                    "id": "Utility"
+                }
+            ],
+            "catalog": [
+                {
+                    "id": "CatalogController"
+                },
+                {
+                    "id": "CatalogItem"
+                },
+                {
+                    "id": "CatalogItem1"
+                },
+                {
+                    "id": "CatalogItemsRepository"
+                },
+                {
+                    "id": "MockCatalogItemsRepository"
+                },
+                {
+                    "id": "MongoCatalogItemsRepository"
+                },
+                {
+                    "id": "OrderingConfiguration"
+                },
+                {
+                    "id": "RepositoryFactory"
+                },
+                {
+                    "id": "SimpleCORSFilter"
+                },
+                {
+                    "id": "TestPath"
+                },
+                {
+                    "id": "Utility"
+                }
+            ],
+            "dealer": [
+                {
+                    "id": "DealerController"
+                },
+                {
+                    "id": "DealerInfo"
+                },
+                {
+                    "id": "DealersRepository"
+                },
+                {
+                    "id": "OrderingConfiguration"
+                },
+                {
+                    "id": "Utility"
+                }
+            ],
+            "UNOBSERVED": []
+        }
+    }
+}

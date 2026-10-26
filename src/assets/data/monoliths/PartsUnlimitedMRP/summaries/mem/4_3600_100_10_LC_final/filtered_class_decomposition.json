@@ -1,0 +1,171 @@
+{
+    "tool": {
+        "decomposition": {
+            "partition0": [
+                {
+                    "id": "Quote"
+                },
+                {
+                    "id": "ShipmentRecord"
+                }
+            ],
+            "partition3": [
+                {
+                    "id": "PostgresqlProperties"
+                },
+                {
+                    "id": "QuoteController"
+                }
+            ],
+            "UNOBSERVED": [
+                {
+                    "id": "AppInsightsFilter"
+                },
+                {
+                    "id": "BadRequestException"
+                },
+                {
+                    "id": "CatalogController"
+                },
+                {
+                    "id": "CatalogItem"
+                },
+                {
+                    "id": "CatalogItem1"
+                },
+                {
+                    "id": "CatalogItemsRepository"
+                },
+                {
+                    "id": "ConflictingRequestException"
+                },
+                {
+                    "id": "Dealer"
+                },
+                {
+                    "id": "DealerController"
+                },
+                {
+                    "id": "DealerInfo"
+                },
+                {
+                    "id": "DealersRepository"
+                },
+                {
+                    "id": "Delivery"
+                },
+                {
+                    "id": "DeliveryAddress"
+                },
+                {
+                    "id": "MockCatalogItemsRepository"
+                },
+                {
+                    "id": "MockDealersRepository"
+                },
+                {
+                    "id": "MockOrderRepository"
+                },
+                {
+                    "id": "MockQuoteRepository"
+                },
+                {
+                    "id": "MockShipmentRepository"
+                },
+                {
+                    "id": "MongoCatalogItemsRepository"
+                },
+                {
+                    "id": "MongoDBProperties"
+                },
+                {
+                    "id": "MongoDealersRepository"
+                },
+                {
+                    "id": "MongoOperationsWithRetry"
+                },
+                {
+                    "id": "MongoOrderRepository"
+                },
+                {
+                    "id": "MongoQuoteRepository"
+                },
+                {
+                    "id": "MongoShipmentRepository"
+                },
+                {
+                    "id": "Order"
+                },
+                {
+                    "id": "OrderController"
+                },
+                {
+                    "id": "OrderDetails"
+                },
+                {
+                    "id": "OrderEventInfo"
+                },
+                {
+                    "id": "OrderRepository"
+                },
+                {
+                    "id": "OrderStatus"
+                },
+                {
+                    "id": "OrderUpdateInfo"
+                },
+                {
+                    "id": "OrderingConfiguration"
+                },
+                {
+                    "id": "OrderingInitializer"
+                },
+                {
+                    "id": "OrderingServiceProperties"
+                },
+                {
+                    "id": "PhoneInfo"
+                },
+                {
+                    "id": "PingController"
+                },
+                {
+                    "id": "PropertyHelper"
+                },
+                {
+                    "id": "QuoteDetails"
+                },
+                {
+                    "id": "QuoteItemInfo"
+                },
+                {
+                    "id": "QuoteRepository"
+                },
+                {
+                    "id": "RepositoryFactory"
+                },
+                {
+                    "id": "ShipmentController"
+                },
+                {
+                    "id": "ShipmentDetails"
+                },
+                {
+                    "id": "ShipmentEventInfo"
+                },
+                {
+                    "id": "ShipmentRepository"
+                },
+                {
+                    "id": "SimpleCORSFilter"
+                },
+                {
+                    "id": "TestPath"
+                },
+                {
+                    "id": "Utility"
+                }
+            ]
+        }
+    }
+}

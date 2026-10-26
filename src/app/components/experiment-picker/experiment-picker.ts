@@ -5,10 +5,14 @@ import {
   Selection,
   facetValues,
   isAvailable,
+  kindOf,
   modeLabel,
+  selectionForTool,
+  toolGroups,
   toolLabel,
   variantGroup,
   variantLabel,
+  variantsOfTool,
 } from '../../utils/experiment-selection';
 
 @Component({
@@ -17,67 +21,82 @@ import {
     <fieldset [attr.data-side]="side()">
       <legend>{{ label() }}</legend>
       <label class="field">
-        <span class="field-label">LLM</span>
-        <select (change)="pick('tool', $event)">
-          @for (tool of facets().tools; track tool) {
-            <option
-              [value]="tool"
-              [selected]="tool === selection().tool"
-              [disabled]="!available('tool', tool)"
-            >
-              {{ toolLabel(tool) }}
-            </option>
-          }
-        </select>
-      </label>
-      <div class="field">
-        <span class="field-label">Chunk size</span>
-        <div class="chips" role="group" aria-label="Chunk size">
-          @for (chunk of facets().chunks; track chunk) {
-            <button
-              type="button"
-              [attr.aria-pressed]="chunk === selection().chunk"
-              [disabled]="!available('chunk', chunk)"
-              (click)="update({ chunk })"
-            >
-              {{ chunk }}
-            </button>
-          }
-        </div>
-      </div>
-      <div class="field">
-        <span class="field-label">Artifact preparation</span>
-        <div class="chips" role="group" aria-label="Artifact preparation">
-          @for (mode of facets().modes; track mode) {
-            <button
-              type="button"
-              [attr.aria-pressed]="mode === selection().mode"
-              [disabled]="!available('mode', mode)"
-              (click)="update({ mode })"
-            >
-              {{ modeLabel(mode) }}
-            </button>
-          }
-        </div>
-      </div>
-      <label class="field">
-        <span class="field-label">Behavioral input</span>
-        <select (change)="pick('variant', $event)">
-          @for (group of variantGroups(); track group.label) {
+        <span class="field-label">Approach</span>
+        <select aria-label="Approach" (change)="pickTool($event)">
+          @for (group of toolGroups(); track group.label) {
             <optgroup [label]="group.label">
-              @for (variant of group.items; track variant) {
-                <option
-                  [value]="variant"
-                  [selected]="variant === selection().variant"
-                  [disabled]="!available('variant', variant)"
-                >
-                  {{ variantLabel(variant) }}
+              @for (tool of group.tools; track tool) {
+                <option [value]="tool" [selected]="tool === selection().tool">
+                  {{ toolLabel(tool) }}
                 </option>
               }
             </optgroup>
           }
         </select>
       </label>
+      @if (isLiterature()) {
+        @if (configurations().length > 1) {
+          <label class="field">
+            <span class="field-label">Configuration</span>
+            <select aria-label="Configuration" (change)="pick('variant', $event)">
+              @for (configuration of configurations(); track configuration) {
+                <option [value]="configuration" [selected]="configuration === selection().variant">
+                  {{ variantLabel(configuration) }}
+                </option>
+              }
+            </select>
+          </label>
+        }
+      } @else {
+        <div class="field">
+          <span class="field-label">Chunk size</span>
+          <div class="chips" role="group" aria-label="Chunk size">
+            @for (chunk of facets().chunks; track chunk) {
+              <button
+                type="button"
+                [attr.aria-pressed]="chunk === selection().chunk"
+                [disabled]="!available('chunk', chunk)"
+                (click)="update({ chunk })"
+              >
+                {{ chunk }}
+              </button>
+            }
+          </div>
+        </div>
+        <div class="field">
+          <span class="field-label">Artifact preparation</span>
+          <div class="chips" role="group" aria-label="Artifact preparation">
+            @for (mode of facets().modes; track mode) {
+              <button
+                type="button"
+                [attr.aria-pressed]="mode === selection().mode"
+                [disabled]="!available('mode', mode)"
+                (click)="update({ mode })"
+              >
+                {{ modeLabel(mode) }}
+              </button>
+            }
+          </div>
+        </div>
+        <label class="field">
+          <span class="field-label">Behavioral input</span>
+          <select (change)="pick('variant', $event)">
+            @for (group of variantGroups(); track group.label) {
+              <optgroup [label]="group.label">
+                @for (variant of group.items; track variant) {
+                  <option
+                    [value]="variant"
+                    [selected]="variant === selection().variant"
+                    [disabled]="!available('variant', variant)"
+                  >
+                    {{ variantLabel(variant) }}
+                  </option>
+                }
+              </optgroup>
+            }
+          </select>
+        </label>
+      }
       @if (current(); as current) {
         <p class="current">{{ current.label }}</p>
       } @else {
@@ -180,7 +199,15 @@ export class ExperimentPicker {
   readonly toolLabel = toolLabel;
   readonly modeLabel = modeLabel;
   readonly variantLabel = variantLabel;
-  readonly facets = computed(() => facetValues(this.options()));
+  // Chunk, preparation and behavioral input only describe the LLM experiments.
+  readonly facets = computed(() =>
+    facetValues(this.options().filter((option) => option.kind === 'llm')),
+  );
+  readonly toolGroups = computed(() => toolGroups(this.options()));
+  readonly isLiterature = computed(
+    () => kindOf(this.options(), this.selection().tool) === 'literature',
+  );
+  readonly configurations = computed(() => variantsOfTool(this.options(), this.selection().tool));
   readonly variantGroups = computed(() => {
     const groups = new Map<string, string[]>();
     for (const variant of this.facets().variants) {
@@ -200,5 +227,11 @@ export class ExperimentPicker {
 
   pick(facet: Facet, event: Event): void {
     this.update({ [facet]: (event.target as HTMLSelectElement).value });
+  }
+
+  pickTool(event: Event): void {
+    this.selectionChange.emit(
+      selectionForTool(this.options(), this.selection(), (event.target as HTMLSelectElement).value),
+    );
   }
 }

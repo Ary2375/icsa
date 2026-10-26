@@ -1,0 +1,3264 @@
+{
+    "version": "v2.0.0r9",
+    "mono_run_time_call_graph": {
+        "nodes": [
+            {
+                "name": "RegisterServlet",
+                "group": 1,
+                "category": "Undefined",
+                "construct": "Class",
+                "FQCN": "",
+                "filepath": "Class, project/src/main/java/com/coveros/training/authentication/RegisterServlet.java",
+                "semantics": [
+                    "DEFAULT_USE_CASE"
+                ]
+            },
+            {
+                "name": "StringUtils",
+                "group": 1,
+                "category": "Undefined",
+                "construct": "Class",
+                "FQCN": "",
+                "filepath": "Class, project/src/main/java/com/coveros/training/helpers/StringUtils.java",
+                "semantics": [
+                    "DEFAULT_USE_CASE"
+                ]
+            },
+            {
+                "name": "ServletUtils",
+                "group": 1,
+                "category": "Undefined",
+                "construct": "Class",
+                "FQCN": "",
+                "filepath": "Class, project/src/main/java/com/coveros/training/helpers/ServletUtils.java",
+                "semantics": [
+                    "DEFAULT_USE_CASE"
+                ]
+            },
+            {
+                "name": "LibraryBookListAvailableServlet",
+                "group": 1,
+                "category": "Undefined",
+                "construct": "Class",
+                "FQCN": "",
+                "filepath": "Class, project/src/main/java/com/coveros/training/library/LibraryBookListAvailableServlet.java",
+                "semantics": [
+                    "DEFAULT_USE_CASE"
+                ]
+            },
+            {
+                "name": "LibraryUtils",
+                "group": 1,
+                "category": "Undefined",
+                "construct": "Class",
+                "FQCN": "",
+                "filepath": "Class, project/src/main/java/com/coveros/training/library/LibraryUtils.java",
+                "semantics": [
+                    "DEFAULT_USE_CASE"
+                ]
+            },
+            {
+                "name": "PersistenceLayer",
+                "group": 1,
+                "category": "Undefined",
+                "construct": "Class",
+                "FQCN": "",
+                "filepath": "Class, project/src/main/java/com/coveros/training/persistence/PersistenceLayer.java",
+                "semantics": [
+                    "DEFAULT_USE_CASE"
+                ]
+            },
+            {
+                "name": "SqlData",
+                "group": 1,
+                "category": "Undefined",
+                "construct": "Class",
+                "FQCN": "",
+                "filepath": "Class, project/src/main/java/com/coveros/training/persistence/SqlData.java",
+                "semantics": [
+                    "DEFAULT_USE_CASE"
+                ]
+            },
+            {
+                "name": "LibraryBookListSearchServlet",
+                "group": 1,
+                "category": "Undefined",
+                "construct": "Class",
+                "FQCN": "",
+                "filepath": "Class, project/src/main/java/com/coveros/training/library/LibraryBookListSearchServlet.java",
+                "semantics": [
+                    "DEFAULT_USE_CASE"
+                ]
+            },
+            {
+                "name": "Book",
+                "group": 1,
+                "category": "Undefined",
+                "construct": "Class",
+                "FQCN": "",
+                "filepath": "Class, project/src/main/java/com/coveros/training/library/domainobjects/Book.java",
+                "semantics": [
+                    "DEFAULT_USE_CASE"
+                ]
+            },
+            {
+                "name": "CheckUtils",
+                "group": 1,
+                "category": "Undefined",
+                "construct": "Class",
+                "FQCN": "",
+                "filepath": "Class, project/src/main/java/com/coveros/training/helpers/CheckUtils.java",
+                "semantics": [
+                    "DEFAULT_USE_CASE"
+                ]
+            },
+            {
+                "name": "ParameterObject",
+                "group": 1,
+                "category": "Undefined",
+                "construct": "Class",
+                "FQCN": "",
+                "filepath": "Class, project/src/main/java/com/coveros/training/persistence/ParameterObject.java",
+                "semantics": [
+                    "DEFAULT_USE_CASE"
+                ]
+            },
+            {
+                "name": "LibraryBorrowerListSearchServlet",
+                "group": 1,
+                "category": "Undefined",
+                "construct": "Class",
+                "FQCN": "",
+                "filepath": "Class, project/src/main/java/com/coveros/training/library/LibraryBorrowerListSearchServlet.java",
+                "semantics": [
+                    "DEFAULT_USE_CASE"
+                ]
+            },
+            {
+                "name": "Borrower",
+                "group": 1,
+                "category": "Undefined",
+                "construct": "Class",
+                "FQCN": "",
+                "filepath": "Class, project/src/main/java/com/coveros/training/library/domainobjects/Borrower.java",
+                "semantics": [
+                    "DEFAULT_USE_CASE"
+                ]
+            },
+            {
+                "name": "LibraryLendServlet",
+                "group": 1,
+                "category": "Undefined",
+                "construct": "Class",
+                "FQCN": "",
+                "filepath": "Class, project/src/main/java/com/coveros/training/library/LibraryLendServlet.java",
+                "semantics": [
+                    "DEFAULT_USE_CASE"
+                ]
+            },
+            {
+                "name": "Loan",
+                "group": 1,
+                "category": "Undefined",
+                "construct": "Class",
+                "FQCN": "",
+                "filepath": "Class, project/src/main/java/com/coveros/training/library/domainobjects/Loan.java",
+                "semantics": [
+                    "DEFAULT_USE_CASE"
+                ]
+            },
+            {
+                "name": "DbServlet",
+                "group": 1,
+                "category": "Undefined",
+                "construct": "Class",
+                "FQCN": "",
+                "filepath": "Class, project/src/main/java/com/coveros/training/persistence/DbServlet.java",
+                "semantics": [
+                    "DEFAULT_USE_CASE"
+                ]
+            },
+            {
+                "name": "RegistrationUtils",
+                "group": 1,
+                "category": "Undefined",
+                "construct": "Class",
+                "FQCN": "",
+                "filepath": "Class, project/src/main/java/com/coveros/training/authentication/RegistrationUtils.java",
+                "semantics": [
+                    "DEFAULT_USE_CASE"
+                ]
+            },
+            {
+                "name": "PasswordResult",
+                "group": 1,
+                "category": "Undefined",
+                "construct": "Class",
+                "FQCN": "",
+                "filepath": "Class, project/src/main/java/com/coveros/training/authentication/domainobjects/PasswordResult.java",
+                "semantics": [
+                    "DEFAULT_USE_CASE"
+                ]
+            },
+            {
+                "name": "RegistrationResult",
+                "group": 1,
+                "category": "Undefined",
+                "construct": "Class",
+                "FQCN": "",
+                "filepath": "Class, project/src/main/java/com/coveros/training/authentication/domainobjects/RegistrationResult.java",
+                "semantics": [
+                    "DEFAULT_USE_CASE"
+                ]
+            },
+            {
+                "name": "FibServlet",
+                "group": 1,
+                "category": "Undefined",
+                "construct": "Class",
+                "FQCN": "",
+                "filepath": "Class, project/src/main/java/com/coveros/training/mathematics/FibServlet.java",
+                "semantics": [
+                    "DEFAULT_USE_CASE"
+                ]
+            },
+            {
+                "name": "FibonacciIterative",
+                "group": 1,
+                "category": "Undefined",
+                "construct": "Class",
+                "FQCN": "",
+                "filepath": "Class, project/src/main/java/com/coveros/training/mathematics/FibonacciIterative.java",
+                "semantics": [
+                    "DEFAULT_USE_CASE"
+                ]
+            },
+            {
+                "name": "LibraryRegisterBorrowerServlet",
+                "group": 1,
+                "category": "Undefined",
+                "construct": "Class",
+                "FQCN": "",
+                "filepath": "Class, project/src/main/java/com/coveros/training/library/LibraryRegisterBorrowerServlet.java",
+                "semantics": [
+                    "DEFAULT_USE_CASE"
+                ]
+            },
+            {
+                "name": "MathServlet",
+                "group": 1,
+                "category": "Undefined",
+                "construct": "Class",
+                "FQCN": "",
+                "filepath": "Class, project/src/main/java/com/coveros/training/mathematics/MathServlet.java",
+                "semantics": [
+                    "DEFAULT_USE_CASE"
+                ]
+            },
+            {
+                "name": "Calculator",
+                "group": 1,
+                "category": "Undefined",
+                "construct": "Class",
+                "FQCN": "",
+                "filepath": "Class, project/src/main/java/com/coveros/training/mathematics/Calculator.java",
+                "semantics": [
+                    "DEFAULT_USE_CASE"
+                ]
+            },
+            {
+                "name": "LoginServlet",
+                "group": 1,
+                "category": "Undefined",
+                "construct": "Class",
+                "FQCN": "",
+                "filepath": "Class, project/src/main/java/com/coveros/training/authentication/LoginServlet.java",
+                "semantics": [
+                    "DEFAULT_USE_CASE"
+                ]
+            },
+            {
+                "name": "LibraryRegisterBookServlet",
+                "group": 1,
+                "category": "Undefined",
+                "construct": "Class",
+                "FQCN": "",
+                "filepath": "Class, project/src/main/java/com/coveros/training/library/LibraryRegisterBookServlet.java",
+                "semantics": [
+                    "DEFAULT_USE_CASE"
+                ]
+            },
+            {
+                "name": "AckServlet",
+                "group": 1,
+                "category": "Undefined",
+                "construct": "Class",
+                "FQCN": "",
+                "filepath": "Class, project/src/main/java/com/coveros/training/mathematics/AckServlet.java",
+                "semantics": [
+                    "DEFAULT_USE_CASE"
+                ]
+            },
+            {
+                "name": "Ackermann",
+                "group": 1,
+                "category": "Undefined",
+                "construct": "Class",
+                "FQCN": "",
+                "filepath": "Class, project/src/main/java/com/coveros/training/mathematics/Ackermann.java",
+                "semantics": [
+                    "DEFAULT_USE_CASE"
+                ]
+            },
+            {
+                "name": "LoginUtils",
+                "group": 1,
+                "category": "Undefined",
+                "construct": "Class",
+                "FQCN": "",
+                "filepath": "Class, project/src/main/java/com/coveros/training/authentication/LoginUtils.java",
+                "semantics": [
+                    "DEFAULT_USE_CASE"
+                ]
+            },
+            {
+                "name": "Fibonacci",
+                "group": 1,
+                "category": "Undefined",
+                "construct": "Class",
+                "FQCN": "",
+                "filepath": "Class, project/src/main/java/com/coveros/training/mathematics/Fibonacci.java",
+                "semantics": [
+                    "DEFAULT_USE_CASE"
+                ]
+            },
+            {
+                "name": "WebAppListener",
+                "group": 1,
+                "category": "Undefined",
+                "construct": "Class",
+                "FQCN": "",
+                "filepath": "Class, project/src/main/java/com/coveros/training/tomcat/WebAppListener.java",
+                "semantics": []
+            },
+            {
+                "name": "AlcoholResult",
+                "group": 1,
+                "category": "Undefined",
+                "construct": "Class",
+                "FQCN": "",
+                "filepath": "Class, project/src/main/java/com/coveros/training/expenses/AlcoholResult.java",
+                "semantics": []
+            },
+            {
+                "name": "DinnerPrices",
+                "group": 1,
+                "category": "Undefined",
+                "construct": "Class",
+                "FQCN": "",
+                "filepath": "Class, project/src/main/java/com/coveros/training/expenses/DinnerPrices.java",
+                "semantics": []
+            },
+            {
+                "name": "AlcoholCalculator",
+                "group": 1,
+                "category": "Undefined",
+                "construct": "Class",
+                "FQCN": "",
+                "filepath": "Class, project/src/main/java/com/coveros/training/expenses/AlcoholCalculator.java",
+                "semantics": []
+            },
+            {
+                "name": "CartesianProduct",
+                "group": 1,
+                "category": "Undefined",
+                "construct": "Class",
+                "FQCN": "",
+                "filepath": "Class, project/src/main/java/com/coveros/training/cartesianproduct/CartesianProduct.java",
+                "semantics": []
+            },
+            {
+                "name": "SqlRuntimeException",
+                "group": 1,
+                "category": "Undefined",
+                "construct": "Class",
+                "FQCN": "",
+                "filepath": "Class, project/src/main/java/com/coveros/training/persistence/SqlRuntimeException.java",
+                "semantics": []
+            },
+            {
+                "name": "EmptyDataSource",
+                "group": 1,
+                "category": "Undefined",
+                "construct": "Class",
+                "FQCN": "",
+                "filepath": "Class, project/src/main/java/com/coveros/training/persistence/EmptyDataSource.java",
+                "semantics": []
+            },
+            {
+                "name": "NotImplementedException",
+                "group": 1,
+                "category": "Undefined",
+                "construct": "Class",
+                "FQCN": "",
+                "filepath": "Class, project/src/main/java/com/coveros/training/persistence/NotImplementedException.java",
+                "semantics": []
+            },
+            {
+                "name": "User",
+                "group": 1,
+                "category": "Undefined",
+                "construct": "Class",
+                "FQCN": "",
+                "filepath": "Class, project/src/main/java/com/coveros/training/authentication/domainobjects/User.java",
+                "semantics": []
+            },
+            {
+                "name": "AssertionException",
+                "group": 1,
+                "category": "Undefined",
+                "construct": "Class",
+                "FQCN": "",
+                "filepath": "Class, project/src/main/java/com/coveros/training/helpers/AssertionException.java",
+                "semantics": []
+            }
+        ],
+        "links": [
+            {
+                "source": "RegisterServlet",
+                "target": "StringUtils",
+                "method": {
+                    "makeNotNullable": 8
+                },
+                "value": 3.079
+            },
+            {
+                "source": "RegisterServlet",
+                "target": "ServletUtils",
+                "method": {
+                    "forwardToResult": 4
+                },
+                "value": 2.386
+            },
+            {
+                "source": "RegisterServlet",
+                "target": "RegistrationUtils",
+                "method": {
+                    "processRegistration": 1
+                },
+                "value": 1.0
+            },
+            {
+                "source": "RegisterServlet",
+                "target": "RegistrationResult",
+                "method": {
+                    "toPrettyString": 1
+                },
+                "value": 1.0
+            },
+            {
+                "source": "LibraryBookListAvailableServlet",
+                "target": "LibraryUtils",
+                "method": {
+                    "listAvailableBooks": 4
+                },
+                "value": 2.386
+            },
+            {
+                "source": "LibraryBookListAvailableServlet",
+                "target": "ServletUtils",
+                "method": {
+                    "forwardToRestfulResult": 4
+                },
+                "value": 2.386
+            },
+            {
+                "source": "LibraryBookListAvailableServlet",
+                "target": "Book",
+                "method": {
+                    "toOutputString": 4
+                },
+                "value": 2.386
+            },
+            {
+                "source": "LibraryUtils",
+                "target": "PersistenceLayer",
+                "method": {
+                    "listAvailableBooks": 4,
+                    "listAllBooks": 3,
+                    "searchBooksById": 3,
+                    "searchBorrowerDataByName": 5,
+                    "searchBorrowersById": 3,
+                    "searchBooksByTitle": 4,
+                    "searchForLoanByBook": 1,
+                    "createLoan": 1,
+                    "listAllBorrowers": 3,
+                    "saveNewBorrower": 1,
+                    "saveNewBook": 1
+                },
+                "value": 4.367
+            },
+            {
+                "source": "LibraryUtils",
+                "target": "Book",
+                "method": {
+                    "createEmpty": 7,
+                    "isEmpty": 8,
+                    "Book": 1
+                },
+                "value": 3.772
+            },
+            {
+                "source": "LibraryUtils",
+                "target": "Borrower",
+                "method": {
+                    "createEmpty": 9,
+                    "isEmpty": 3,
+                    "Borrower": 1,
+                    "equals": 1
+                },
+                "value": 3.639
+            },
+            {
+                "source": "LibraryUtils",
+                "target": "Loan",
+                "method": {
+                    "createEmpty": 1,
+                    "isEmpty": 1
+                },
+                "value": 1.693
+            },
+            {
+                "source": "PersistenceLayer",
+                "target": "SqlData",
+                "method": {
+                    "SqlData [overloaded_#002]": 28,
+                    "applyParametersToPreparedStatement": 33,
+                    "SqlData [overloaded_#001]": 5
+                },
+                "value": 5.189
+            },
+            {
+                "source": "PersistenceLayer",
+                "target": "StringUtils",
+                "method": {
+                    "makeNotNullable": 11
+                },
+                "value": 3.397
+            },
+            {
+                "source": "PersistenceLayer",
+                "target": "Book",
+                "method": {
+                    "Book": 8
+                },
+                "value": 3.079
+            },
+            {
+                "source": "PersistenceLayer",
+                "target": "CheckUtils",
+                "method": {
+                    "IntParameterMustBePositive": 7,
+                    "StringMustNotBeNullOrEmpty": 15
+                },
+                "value": 4.091
+            },
+            {
+                "source": "PersistenceLayer",
+                "target": "Borrower",
+                "method": {
+                    "Borrower": 5
+                },
+                "value": 2.609
+            },
+            {
+                "source": "SqlData",
+                "target": "ParameterObject",
+                "method": {
+                    "ParameterObject": 27
+                },
+                "value": 4.295
+            },
+            {
+                "source": "LibraryBookListSearchServlet",
+                "target": "StringUtils",
+                "method": {
+                    "makeNotNullable": 18
+                },
+                "value": 3.89
+            },
+            {
+                "source": "LibraryBookListSearchServlet",
+                "target": "LibraryUtils",
+                "method": {
+                    "listAllBooks": 3,
+                    "searchForBookById": 3,
+                    "searchForBookByTitle": 2
+                },
+                "value": 3.079
+            },
+            {
+                "source": "LibraryBookListSearchServlet",
+                "target": "Book",
+                "method": {
+                    "toOutputString": 3,
+                    "isEmpty": 5
+                },
+                "value": 3.079
+            },
+            {
+                "source": "LibraryBookListSearchServlet",
+                "target": "ServletUtils",
+                "method": {
+                    "forwardToRestfulResult": 9
+                },
+                "value": 3.197
+            },
+            {
+                "source": "Book",
+                "target": "StringUtils",
+                "method": {
+                    "escapeForJson": 7
+                },
+                "value": 2.945
+            },
+            {
+                "source": "LibraryBorrowerListSearchServlet",
+                "target": "StringUtils",
+                "method": {
+                    "makeNotNullable": 22
+                },
+                "value": 4.091
+            },
+            {
+                "source": "LibraryBorrowerListSearchServlet",
+                "target": "LibraryUtils",
+                "method": {
+                    "searchForBorrowerByName": 3,
+                    "searchForBorrowerById": 3,
+                    "listAllBorrowers": 3
+                },
+                "value": 3.197
+            },
+            {
+                "source": "LibraryBorrowerListSearchServlet",
+                "target": "Borrower",
+                "method": {
+                    "isEmpty": 6,
+                    "toOutputString": 4
+                },
+                "value": 3.302
+            },
+            {
+                "source": "LibraryBorrowerListSearchServlet",
+                "target": "ServletUtils",
+                "method": {
+                    "forwardToRestfulResult": 11
+                },
+                "value": 3.397
+            },
+            {
+                "source": "Borrower",
+                "target": "StringUtils",
+                "method": {
+                    "escapeForJson": 4
+                },
+                "value": 2.386
+            },
+            {
+                "source": "LibraryLendServlet",
+                "target": "StringUtils",
+                "method": {
+                    "makeNotNullable": 6
+                },
+                "value": 2.791
+            },
+            {
+                "source": "LibraryLendServlet",
+                "target": "LibraryUtils",
+                "method": {
+                    "lendBook [overloaded_#003]": 1
+                },
+                "value": 1.0
+            },
+            {
+                "source": "LibraryLendServlet",
+                "target": "ServletUtils",
+                "method": {
+                    "forwardToResult": 3
+                },
+                "value": 2.098
+            },
+            {
+                "source": "Loan",
+                "target": "Book",
+                "method": {
+                    "createEmpty": 2,
+                    "equals": 1
+                },
+                "value": 2.098
+            },
+            {
+                "source": "Loan",
+                "target": "Borrower",
+                "method": {
+                    "createEmpty": 2,
+                    "equals": 1
+                },
+                "value": 2.098
+            },
+            {
+                "source": "DbServlet",
+                "target": "StringUtils",
+                "method": {
+                    "makeNotNullable": 3
+                },
+                "value": 2.098
+            },
+            {
+                "source": "DbServlet",
+                "target": "PersistenceLayer",
+                "method": {
+                    "cleanAndMigrateDatabase": 1,
+                    "cleanDatabase": 1,
+                    "migrateDatabase": 1
+                },
+                "value": 2.098
+            },
+            {
+                "source": "DbServlet",
+                "target": "ServletUtils",
+                "method": {
+                    "forwardToResult": 3
+                },
+                "value": 2.098
+            },
+            {
+                "source": "RegistrationUtils",
+                "target": "CheckUtils",
+                "method": {
+                    "StringMustNotBeNullOrEmpty": 3,
+                    "mustBeTrueAtThisPoint": 3
+                },
+                "value": 2.791
+            },
+            {
+                "source": "RegistrationUtils",
+                "target": "PersistenceLayer",
+                "method": {
+                    "searchForUserByName": 1,
+                    "saveNewUser": 1,
+                    "updateUserWithPassword": 1
+                },
+                "value": 2.098
+            },
+            {
+                "source": "RegistrationUtils",
+                "target": "PasswordResult",
+                "method": {
+                    "PasswordResult": 1
+                },
+                "value": 1.0
+            },
+            {
+                "source": "RegistrationUtils",
+                "target": "RegistrationResult",
+                "method": {
+                    "RegistrationResult [overloaded_#002]": 1
+                },
+                "value": 1.0
+            },
+            {
+                "source": "FibServlet",
+                "target": "FibonacciIterative",
+                "method": {
+                    "fibAlgo2": 1,
+                    "fibAlgo1": 1
+                },
+                "value": 1.693
+            },
+            {
+                "source": "FibServlet",
+                "target": "ServletUtils",
+                "method": {
+                    "forwardToRestfulResult": 3
+                },
+                "value": 2.098
+            },
+            {
+                "source": "FibServlet",
+                "target": "Fibonacci",
+                "method": {
+                    "calculate": 1
+                },
+                "value": 1.0
+            },
+            {
+                "source": "LibraryRegisterBorrowerServlet",
+                "target": "StringUtils",
+                "method": {
+                    "makeNotNullable": 2
+                },
+                "value": 1.693
+            },
+            {
+                "source": "LibraryRegisterBorrowerServlet",
+                "target": "ServletUtils",
+                "method": {
+                    "forwardToResult": 2
+                },
+                "value": 1.693
+            },
+            {
+                "source": "LibraryRegisterBorrowerServlet",
+                "target": "LibraryUtils",
+                "method": {
+                    "registerBorrower": 1
+                },
+                "value": 1.0
+            },
+            {
+                "source": "MathServlet",
+                "target": "Calculator",
+                "method": {
+                    "add [overloaded_#003]": 1
+                },
+                "value": 1.0
+            },
+            {
+                "source": "MathServlet",
+                "target": "ServletUtils",
+                "method": {
+                    "forwardToRestfulResult": 1
+                },
+                "value": 1.0
+            },
+            {
+                "source": "LoginServlet",
+                "target": "StringUtils",
+                "method": {
+                    "makeNotNullable": 6
+                },
+                "value": 2.791
+            },
+            {
+                "source": "LoginServlet",
+                "target": "ServletUtils",
+                "method": {
+                    "forwardToResult": 3
+                },
+                "value": 2.098
+            },
+            {
+                "source": "LoginServlet",
+                "target": "LoginUtils",
+                "method": {
+                    "isUserRegistered": 1
+                },
+                "value": 1.0
+            },
+            {
+                "source": "LibraryRegisterBookServlet",
+                "target": "StringUtils",
+                "method": {
+                    "makeNotNullable": 2
+                },
+                "value": 1.693
+            },
+            {
+                "source": "LibraryRegisterBookServlet",
+                "target": "ServletUtils",
+                "method": {
+                    "forwardToResult": 2
+                },
+                "value": 1.693
+            },
+            {
+                "source": "LibraryRegisterBookServlet",
+                "target": "LibraryUtils",
+                "method": {
+                    "registerBook": 1
+                },
+                "value": 1.0
+            },
+            {
+                "source": "AckServlet",
+                "target": "Ackermann",
+                "method": {
+                    "calculate": 1
+                },
+                "value": 1.0
+            },
+            {
+                "source": "AckServlet",
+                "target": "ServletUtils",
+                "method": {
+                    "forwardToRestfulResult": 2
+                },
+                "value": 1.693
+            },
+            {
+                "source": "LoginUtils",
+                "target": "CheckUtils",
+                "method": {
+                    "StringMustNotBeNullOrEmpty": 1
+                },
+                "value": 1.0
+            },
+            {
+                "source": "LoginUtils",
+                "target": "PersistenceLayer",
+                "method": {
+                    "areCredentialsValid": 1
+                },
+                "value": 1.0
+            }
+        ],
+        "overview": {
+            "nodes": [
+                {
+                    "name": "Undefined",
+                    "group": "1",
+                    "category": "Undefined",
+                    "filepath": "",
+                    "semantics": []
+                }
+            ],
+            "links": []
+        }
+    },
+    "mono_data_dependency_graph": {
+        "nodes": [
+            {
+                "name": "WebAppListener",
+                "group": 0,
+                "category": "default_group",
+                "filepath": "project/src/main/java/com/coveros/training/tomcat/WebAppListener.java",
+                "semantics": []
+            },
+            {
+                "name": "AlcoholResult",
+                "group": 0,
+                "category": "default_group",
+                "filepath": "project/src/main/java/com/coveros/training/expenses/AlcoholResult.java",
+                "semantics": []
+            },
+            {
+                "name": "DinnerPrices",
+                "group": 0,
+                "category": "default_group",
+                "filepath": "project/src/main/java/com/coveros/training/expenses/DinnerPrices.java",
+                "semantics": []
+            },
+            {
+                "name": "AlcoholCalculator",
+                "group": 0,
+                "category": "default_group",
+                "filepath": "project/src/main/java/com/coveros/training/expenses/AlcoholCalculator.java",
+                "semantics": []
+            },
+            {
+                "name": "CartesianProduct",
+                "group": 0,
+                "category": "default_group",
+                "filepath": "project/src/main/java/com/coveros/training/cartesianproduct/CartesianProduct.java",
+                "semantics": []
+            },
+            {
+                "name": "Fibonacci",
+                "group": 0,
+                "category": "default_group",
+                "filepath": "project/src/main/java/com/coveros/training/mathematics/Fibonacci.java",
+                "semantics": []
+            },
+            {
+                "name": "AckServlet",
+                "group": 0,
+                "category": "default_group",
+                "filepath": "project/src/main/java/com/coveros/training/mathematics/AckServlet.java",
+                "semantics": []
+            },
+            {
+                "name": "Calculator",
+                "group": 0,
+                "category": "default_group",
+                "filepath": "project/src/main/java/com/coveros/training/mathematics/Calculator.java",
+                "semantics": []
+            },
+            {
+                "name": "FibonacciIterative",
+                "group": 0,
+                "category": "default_group",
+                "filepath": "project/src/main/java/com/coveros/training/mathematics/FibonacciIterative.java",
+                "semantics": []
+            },
+            {
+                "name": "Ackermann",
+                "group": 0,
+                "category": "default_group",
+                "filepath": "project/src/main/java/com/coveros/training/mathematics/Ackermann.java",
+                "semantics": []
+            },
+            {
+                "name": "MathServlet",
+                "group": 0,
+                "category": "default_group",
+                "filepath": "project/src/main/java/com/coveros/training/mathematics/MathServlet.java",
+                "semantics": []
+            },
+            {
+                "name": "FibServlet",
+                "group": 0,
+                "category": "default_group",
+                "filepath": "project/src/main/java/com/coveros/training/mathematics/FibServlet.java",
+                "semantics": []
+            },
+            {
+                "name": "Loan",
+                "group": 1,
+                "category": "data_dep_island_0",
+                "filepath": "project/src/main/java/com/coveros/training/library/domainobjects/Loan.java",
+                "semantics": []
+            },
+            {
+                "name": "Borrower",
+                "group": 1,
+                "category": "data_dep_island_0",
+                "filepath": "project/src/main/java/com/coveros/training/library/domainobjects/Borrower.java",
+                "semantics": []
+            },
+            {
+                "name": "Book",
+                "group": 1,
+                "category": "data_dep_island_0",
+                "filepath": "project/src/main/java/com/coveros/training/library/domainobjects/Book.java",
+                "semantics": []
+            },
+            {
+                "name": "LibraryUtils",
+                "group": 2,
+                "category": "data_dep_island_1",
+                "filepath": "project/src/main/java/com/coveros/training/library/LibraryUtils.java",
+                "semantics": []
+            },
+            {
+                "name": "LibraryLendServlet",
+                "group": 2,
+                "category": "data_dep_island_1",
+                "filepath": "project/src/main/java/com/coveros/training/library/LibraryLendServlet.java",
+                "semantics": []
+            },
+            {
+                "name": "LibraryRegisterBorrowerServlet",
+                "group": 2,
+                "category": "data_dep_island_1",
+                "filepath": "project/src/main/java/com/coveros/training/library/LibraryRegisterBorrowerServlet.java",
+                "semantics": []
+            },
+            {
+                "name": "LibraryRegisterBookServlet",
+                "group": 2,
+                "category": "data_dep_island_1",
+                "filepath": "project/src/main/java/com/coveros/training/library/LibraryRegisterBookServlet.java",
+                "semantics": []
+            },
+            {
+                "name": "LibraryBookListAvailableServlet",
+                "group": 2,
+                "category": "data_dep_island_1",
+                "filepath": "project/src/main/java/com/coveros/training/library/LibraryBookListAvailableServlet.java",
+                "semantics": []
+            },
+            {
+                "name": "LibraryBookListSearchServlet",
+                "group": 2,
+                "category": "data_dep_island_1",
+                "filepath": "project/src/main/java/com/coveros/training/library/LibraryBookListSearchServlet.java",
+                "semantics": []
+            },
+            {
+                "name": "LibraryBorrowerListSearchServlet",
+                "group": 2,
+                "category": "data_dep_island_1",
+                "filepath": "project/src/main/java/com/coveros/training/library/LibraryBorrowerListSearchServlet.java",
+                "semantics": []
+            },
+            {
+                "name": "SqlRuntimeException",
+                "group": 0,
+                "category": "default_group",
+                "filepath": "project/src/main/java/com/coveros/training/persistence/SqlRuntimeException.java",
+                "semantics": []
+            },
+            {
+                "name": "PersistenceLayer",
+                "group": 0,
+                "category": "default_group",
+                "filepath": "project/src/main/java/com/coveros/training/persistence/PersistenceLayer.java",
+                "semantics": []
+            },
+            {
+                "name": "ParameterObject",
+                "group": 0,
+                "category": "default_group",
+                "filepath": "project/src/main/java/com/coveros/training/persistence/ParameterObject.java",
+                "semantics": []
+            },
+            {
+                "name": "SqlData",
+                "group": 0,
+                "category": "default_group",
+                "filepath": "project/src/main/java/com/coveros/training/persistence/SqlData.java",
+                "semantics": []
+            },
+            {
+                "name": "EmptyDataSource",
+                "group": 0,
+                "category": "default_group",
+                "filepath": "project/src/main/java/com/coveros/training/persistence/EmptyDataSource.java",
+                "semantics": []
+            },
+            {
+                "name": "NotImplementedException",
+                "group": 0,
+                "category": "default_group",
+                "filepath": "project/src/main/java/com/coveros/training/persistence/NotImplementedException.java",
+                "semantics": []
+            },
+            {
+                "name": "DbServlet",
+                "group": 0,
+                "category": "default_group",
+                "filepath": "project/src/main/java/com/coveros/training/persistence/DbServlet.java",
+                "semantics": []
+            },
+            {
+                "name": "User",
+                "group": 0,
+                "category": "default_group",
+                "filepath": "project/src/main/java/com/coveros/training/authentication/domainobjects/User.java",
+                "semantics": []
+            },
+            {
+                "name": "PasswordResult",
+                "group": 0,
+                "category": "default_group",
+                "filepath": "project/src/main/java/com/coveros/training/authentication/domainobjects/PasswordResult.java",
+                "semantics": []
+            },
+            {
+                "name": "RegistrationResult",
+                "group": 0,
+                "category": "default_group",
+                "filepath": "project/src/main/java/com/coveros/training/authentication/domainobjects/RegistrationResult.java",
+                "semantics": []
+            },
+            {
+                "name": "LoginUtils",
+                "group": 4,
+                "category": "data_dep_island_3",
+                "filepath": "project/src/main/java/com/coveros/training/authentication/LoginUtils.java",
+                "semantics": []
+            },
+            {
+                "name": "RegisterServlet",
+                "group": 3,
+                "category": "data_dep_island_2",
+                "filepath": "project/src/main/java/com/coveros/training/authentication/RegisterServlet.java",
+                "semantics": []
+            },
+            {
+                "name": "LoginServlet",
+                "group": 4,
+                "category": "data_dep_island_3",
+                "filepath": "project/src/main/java/com/coveros/training/authentication/LoginServlet.java",
+                "semantics": []
+            },
+            {
+                "name": "RegistrationUtils",
+                "group": 3,
+                "category": "data_dep_island_2",
+                "filepath": "project/src/main/java/com/coveros/training/authentication/RegistrationUtils.java",
+                "semantics": []
+            },
+            {
+                "name": "StringUtils",
+                "group": 0,
+                "category": "default_group",
+                "filepath": "project/src/main/java/com/coveros/training/helpers/StringUtils.java",
+                "semantics": []
+            },
+            {
+                "name": "AssertionException",
+                "group": 0,
+                "category": "default_group",
+                "filepath": "project/src/main/java/com/coveros/training/helpers/AssertionException.java",
+                "semantics": []
+            },
+            {
+                "name": "CheckUtils",
+                "group": 0,
+                "category": "default_group",
+                "filepath": "project/src/main/java/com/coveros/training/helpers/CheckUtils.java",
+                "semantics": []
+            },
+            {
+                "name": "ServletUtils",
+                "group": 0,
+                "category": "default_group",
+                "filepath": "project/src/main/java/com/coveros/training/helpers/ServletUtils.java",
+                "semantics": []
+            }
+        ],
+        "links": [
+            {
+                "source": "Loan",
+                "target": "Book",
+                "value": "1"
+            },
+            {
+                "source": "Loan",
+                "target": "Borrower",
+                "value": "1"
+            },
+            {
+                "source": "LibraryLendServlet",
+                "target": "LibraryUtils",
+                "value": "1"
+            },
+            {
+                "source": "LibraryRegisterBorrowerServlet",
+                "target": "LibraryUtils",
+                "value": "1"
+            },
+            {
+                "source": "LibraryRegisterBookServlet",
+                "target": "LibraryUtils",
+                "value": "1"
+            },
+            {
+                "source": "LibraryBookListAvailableServlet",
+                "target": "LibraryUtils",
+                "value": "1"
+            },
+            {
+                "source": "LibraryBookListSearchServlet",
+                "target": "LibraryUtils",
+                "value": "1"
+            },
+            {
+                "source": "LibraryBorrowerListSearchServlet",
+                "target": "LibraryUtils",
+                "value": "1"
+            },
+            {
+                "source": "RegisterServlet",
+                "target": "RegistrationUtils",
+                "value": "1"
+            },
+            {
+                "source": "LoginServlet",
+                "target": "LoginUtils",
+                "value": "1"
+            }
+        ],
+        "overview": {
+            "nodes": [
+                {
+                    "name": "data_dep_island_0",
+                    "group": 0,
+                    "category": "data_dep_island_0",
+                    "filepath": "data_dep_island_0",
+                    "semantics": []
+                },
+                {
+                    "name": "data_dep_island_1",
+                    "group": 1,
+                    "category": "data_dep_island_1",
+                    "filepath": "data_dep_island_1",
+                    "semantics": []
+                },
+                {
+                    "name": "data_dep_island_2",
+                    "group": 2,
+                    "category": "data_dep_island_2",
+                    "filepath": "data_dep_island_2",
+                    "semantics": []
+                },
+                {
+                    "name": "data_dep_island_3",
+                    "group": 3,
+                    "category": "data_dep_island_3",
+                    "filepath": "data_dep_island_3",
+                    "semantics": []
+                },
+                {
+                    "name": "default_group",
+                    "group": 4,
+                    "category": "default_group",
+                    "filepath": "default_group",
+                    "semantics": []
+                }
+            ],
+            "links": []
+        }
+    },
+    "micro_detail_partition_by_business_logic": {
+        "nodes": [
+            {
+                "name": "RegisterServlet",
+                "group": 4,
+                "category": "partition2",
+                "construct": "Service Entry",
+                "FQCN": "com.coveros.training.authentication.RegisterServlet",
+                "filepath": "Class, project/src/main/java/com/coveros/training/authentication/RegisterServlet.java",
+                "semantics": [
+                    "DEFAULT_USE_CASE"
+                ]
+            },
+            {
+                "name": "StringUtils",
+                "group": 3,
+                "category": "partition1",
+                "construct": "Class",
+                "FQCN": "com.coveros.training.helpers.StringUtils",
+                "filepath": "Class, project/src/main/java/com/coveros/training/helpers/StringUtils.java",
+                "semantics": [
+                    "DEFAULT_USE_CASE"
+                ]
+            },
+            {
+                "name": "ServletUtils",
+                "group": 3,
+                "category": "partition1",
+                "construct": "Class",
+                "FQCN": "com.coveros.training.helpers.ServletUtils",
+                "filepath": "Class, project/src/main/java/com/coveros/training/helpers/ServletUtils.java",
+                "semantics": [
+                    "DEFAULT_USE_CASE"
+                ]
+            },
+            {
+                "name": "LibraryBookListAvailableServlet",
+                "group": 3,
+                "category": "partition1",
+                "construct": "Service Entry",
+                "FQCN": "com.coveros.training.library.LibraryBookListAvailableServlet",
+                "filepath": "Class, project/src/main/java/com/coveros/training/library/LibraryBookListAvailableServlet.java",
+                "semantics": [
+                    "DEFAULT_USE_CASE"
+                ]
+            },
+            {
+                "name": "LibraryUtils",
+                "group": 3,
+                "category": "partition1",
+                "construct": "Class",
+                "FQCN": "com.coveros.training.library.LibraryUtils",
+                "filepath": "Class, project/src/main/java/com/coveros/training/library/LibraryUtils.java",
+                "semantics": [
+                    "DEFAULT_USE_CASE"
+                ]
+            },
+            {
+                "name": "PersistenceLayer",
+                "group": 3,
+                "category": "partition1",
+                "construct": "Class",
+                "FQCN": "com.coveros.training.persistence.PersistenceLayer",
+                "filepath": "Class, project/src/main/java/com/coveros/training/persistence/PersistenceLayer.java",
+                "semantics": [
+                    "DEFAULT_USE_CASE"
+                ]
+            },
+            {
+                "name": "SqlData",
+                "group": 3,
+                "category": "partition1",
+                "construct": "Class",
+                "FQCN": "com.coveros.training.persistence.SqlData",
+                "filepath": "Class, project/src/main/java/com/coveros/training/persistence/SqlData.java",
+                "semantics": [
+                    "DEFAULT_USE_CASE"
+                ]
+            },
+            {
+                "name": "LibraryBookListSearchServlet",
+                "group": 3,
+                "category": "partition1",
+                "construct": "Service Entry",
+                "FQCN": "com.coveros.training.library.LibraryBookListSearchServlet",
+                "filepath": "Class, project/src/main/java/com/coveros/training/library/LibraryBookListSearchServlet.java",
+                "semantics": [
+                    "DEFAULT_USE_CASE"
+                ]
+            },
+            {
+                "name": "Book",
+                "group": 3,
+                "category": "partition1",
+                "construct": "Class",
+                "FQCN": "com.coveros.training.library.domainobjects.Book",
+                "filepath": "Class, project/src/main/java/com/coveros/training/library/domainobjects/Book.java",
+                "semantics": [
+                    "DEFAULT_USE_CASE"
+                ]
+            },
+            {
+                "name": "CheckUtils",
+                "group": 3,
+                "category": "partition1",
+                "construct": "Class",
+                "FQCN": "com.coveros.training.helpers.CheckUtils",
+                "filepath": "Class, project/src/main/java/com/coveros/training/helpers/CheckUtils.java",
+                "semantics": [
+                    "DEFAULT_USE_CASE"
+                ]
+            },
+            {
+                "name": "ParameterObject",
+                "group": 3,
+                "category": "partition1",
+                "construct": "Class",
+                "FQCN": "com.coveros.training.persistence.ParameterObject",
+                "filepath": "Class, project/src/main/java/com/coveros/training/persistence/ParameterObject.java",
+                "semantics": [
+                    "DEFAULT_USE_CASE"
+                ]
+            },
+            {
+                "name": "LibraryBorrowerListSearchServlet",
+                "group": 3,
+                "category": "partition1",
+                "construct": "Service Entry",
+                "FQCN": "com.coveros.training.library.LibraryBorrowerListSearchServlet",
+                "filepath": "Class, project/src/main/java/com/coveros/training/library/LibraryBorrowerListSearchServlet.java",
+                "semantics": [
+                    "DEFAULT_USE_CASE"
+                ]
+            },
+            {
+                "name": "Borrower",
+                "group": 3,
+                "category": "partition1",
+                "construct": "Class",
+                "FQCN": "com.coveros.training.library.domainobjects.Borrower",
+                "filepath": "Class, project/src/main/java/com/coveros/training/library/domainobjects/Borrower.java",
+                "semantics": [
+                    "DEFAULT_USE_CASE"
+                ]
+            },
+            {
+                "name": "LibraryLendServlet",
+                "group": 3,
+                "category": "partition1",
+                "construct": "Service Entry",
+                "FQCN": "com.coveros.training.library.LibraryLendServlet",
+                "filepath": "Class, project/src/main/java/com/coveros/training/library/LibraryLendServlet.java",
+                "semantics": [
+                    "DEFAULT_USE_CASE"
+                ]
+            },
+            {
+                "name": "Loan",
+                "group": 3,
+                "category": "partition1",
+                "construct": "Class",
+                "FQCN": "com.coveros.training.library.domainobjects.Loan",
+                "filepath": "Class, project/src/main/java/com/coveros/training/library/domainobjects/Loan.java",
+                "semantics": [
+                    "DEFAULT_USE_CASE"
+                ]
+            },
+            {
+                "name": "DbServlet",
+                "group": 3,
+                "category": "partition1",
+                "construct": "Service Entry",
+                "FQCN": "com.coveros.training.persistence.DbServlet",
+                "filepath": "Class, project/src/main/java/com/coveros/training/persistence/DbServlet.java",
+                "semantics": [
+                    "DEFAULT_USE_CASE"
+                ]
+            },
+            {
+                "name": "RegistrationUtils",
+                "group": 4,
+                "category": "partition2",
+                "construct": "Class",
+                "FQCN": "com.coveros.training.authentication.RegistrationUtils",
+                "filepath": "Class, project/src/main/java/com/coveros/training/authentication/RegistrationUtils.java",
+                "semantics": [
+                    "DEFAULT_USE_CASE"
+                ]
+            },
+            {
+                "name": "PasswordResult",
+                "group": 4,
+                "category": "partition2",
+                "construct": "Class",
+                "FQCN": "com.coveros.training.authentication.domainobjects.PasswordResult",
+                "filepath": "Class, project/src/main/java/com/coveros/training/authentication/domainobjects/PasswordResult.java",
+                "semantics": [
+                    "DEFAULT_USE_CASE"
+                ]
+            },
+            {
+                "name": "RegistrationResult",
+                "group": 4,
+                "category": "partition2",
+                "construct": "Class",
+                "FQCN": "com.coveros.training.authentication.domainobjects.RegistrationResult",
+                "filepath": "Class, project/src/main/java/com/coveros/training/authentication/domainobjects/RegistrationResult.java",
+                "semantics": [
+                    "DEFAULT_USE_CASE"
+                ]
+            },
+            {
+                "name": "FibServlet",
+                "group": 1,
+                "category": "partition3",
+                "construct": "Service Entry",
+                "FQCN": "com.coveros.training.mathematics.FibServlet",
+                "filepath": "Class, project/src/main/java/com/coveros/training/mathematics/FibServlet.java",
+                "semantics": [
+                    "DEFAULT_USE_CASE"
+                ]
+            },
+            {
+                "name": "FibonacciIterative",
+                "group": 1,
+                "category": "partition3",
+                "construct": "Class",
+                "FQCN": "com.coveros.training.mathematics.FibonacciIterative",
+                "filepath": "Class, project/src/main/java/com/coveros/training/mathematics/FibonacciIterative.java",
+                "semantics": [
+                    "DEFAULT_USE_CASE"
+                ]
+            },
+            {
+                "name": "LibraryRegisterBorrowerServlet",
+                "group": 3,
+                "category": "partition1",
+                "construct": "Service Entry",
+                "FQCN": "com.coveros.training.library.LibraryRegisterBorrowerServlet",
+                "filepath": "Class, project/src/main/java/com/coveros/training/library/LibraryRegisterBorrowerServlet.java",
+                "semantics": [
+                    "DEFAULT_USE_CASE"
+                ]
+            },
+            {
+                "name": "MathServlet",
+                "group": 2,
+                "category": "partition0",
+                "construct": "Service Entry",
+                "FQCN": "com.coveros.training.mathematics.MathServlet",
+                "filepath": "Class, project/src/main/java/com/coveros/training/mathematics/MathServlet.java",
+                "semantics": [
+                    "DEFAULT_USE_CASE"
+                ]
+            },
+            {
+                "name": "Calculator",
+                "group": 2,
+                "category": "partition0",
+                "construct": "Class",
+                "FQCN": "com.coveros.training.mathematics.Calculator",
+                "filepath": "Class, project/src/main/java/com/coveros/training/mathematics/Calculator.java",
+                "semantics": [
+                    "DEFAULT_USE_CASE"
+                ]
+            },
+            {
+                "name": "LoginServlet",
+                "group": 3,
+                "category": "partition1",
+                "construct": "Service Entry",
+                "FQCN": "com.coveros.training.authentication.LoginServlet",
+                "filepath": "Class, project/src/main/java/com/coveros/training/authentication/LoginServlet.java",
+                "semantics": [
+                    "DEFAULT_USE_CASE"
+                ]
+            },
+            {
+                "name": "LibraryRegisterBookServlet",
+                "group": 3,
+                "category": "partition1",
+                "construct": "Service Entry",
+                "FQCN": "com.coveros.training.library.LibraryRegisterBookServlet",
+                "filepath": "Class, project/src/main/java/com/coveros/training/library/LibraryRegisterBookServlet.java",
+                "semantics": [
+                    "DEFAULT_USE_CASE"
+                ]
+            },
+            {
+                "name": "AckServlet",
+                "group": 2,
+                "category": "partition0",
+                "construct": "Service Entry",
+                "FQCN": "com.coveros.training.mathematics.AckServlet",
+                "filepath": "Class, project/src/main/java/com/coveros/training/mathematics/AckServlet.java",
+                "semantics": [
+                    "DEFAULT_USE_CASE"
+                ]
+            },
+            {
+                "name": "Ackermann",
+                "group": 2,
+                "category": "partition0",
+                "construct": "Class",
+                "FQCN": "com.coveros.training.mathematics.Ackermann",
+                "filepath": "Class, project/src/main/java/com/coveros/training/mathematics/Ackermann.java",
+                "semantics": [
+                    "DEFAULT_USE_CASE"
+                ]
+            },
+            {
+                "name": "LoginUtils",
+                "group": 3,
+                "category": "partition1",
+                "construct": "Class",
+                "FQCN": "com.coveros.training.authentication.LoginUtils",
+                "filepath": "Class, project/src/main/java/com/coveros/training/authentication/LoginUtils.java",
+                "semantics": [
+                    "DEFAULT_USE_CASE"
+                ]
+            },
+            {
+                "name": "Fibonacci",
+                "group": 1,
+                "category": "partition3",
+                "construct": "Class",
+                "FQCN": "com.coveros.training.mathematics.Fibonacci",
+                "filepath": "Class, project/src/main/java/com/coveros/training/mathematics/Fibonacci.java",
+                "semantics": [
+                    "DEFAULT_USE_CASE"
+                ]
+            },
+            {
+                "name": "WebAppListener",
+                "group": 0,
+                "category": "Unobserved",
+                "construct": "Class",
+                "FQCN": "com.coveros.training.tomcat.WebAppListener",
+                "filepath": "Class, project/src/main/java/com/coveros/training/tomcat/WebAppListener.java",
+                "semantics": []
+            },
+            {
+                "name": "AlcoholResult",
+                "group": 0,
+                "category": "Unobserved",
+                "construct": "Class",
+                "FQCN": "com.coveros.training.expenses.AlcoholResult",
+                "filepath": "Class, project/src/main/java/com/coveros/training/expenses/AlcoholResult.java",
+                "semantics": []
+            },
+            {
+                "name": "DinnerPrices",
+                "group": 0,
+                "category": "Unobserved",
+                "construct": "Class",
+                "FQCN": "com.coveros.training.expenses.DinnerPrices",
+                "filepath": "Class, project/src/main/java/com/coveros/training/expenses/DinnerPrices.java",
+                "semantics": []
+            },
+            {
+                "name": "AlcoholCalculator",
+                "group": 0,
+                "category": "Unobserved",
+                "construct": "Class",
+                "FQCN": "com.coveros.training.expenses.AlcoholCalculator",
+                "filepath": "Class, project/src/main/java/com/coveros/training/expenses/AlcoholCalculator.java",
+                "semantics": []
+            },
+            {
+                "name": "CartesianProduct",
+                "group": 0,
+                "category": "Unobserved",
+                "construct": "Class",
+                "FQCN": "com.coveros.training.cartesianproduct.CartesianProduct",
+                "filepath": "Class, project/src/main/java/com/coveros/training/cartesianproduct/CartesianProduct.java",
+                "semantics": []
+            },
+            {
+                "name": "SqlRuntimeException",
+                "group": 0,
+                "category": "Unobserved",
+                "construct": "Class",
+                "FQCN": "com.coveros.training.persistence.SqlRuntimeException",
+                "filepath": "Class, project/src/main/java/com/coveros/training/persistence/SqlRuntimeException.java",
+                "semantics": []
+            },
+            {
+                "name": "EmptyDataSource",
+                "group": 0,
+                "category": "Unobserved",
+                "construct": "Class",
+                "FQCN": "com.coveros.training.persistence.EmptyDataSource",
+                "filepath": "Class, project/src/main/java/com/coveros/training/persistence/EmptyDataSource.java",
+                "semantics": []
+            },
+            {
+                "name": "NotImplementedException",
+                "group": 0,
+                "category": "Unobserved",
+                "construct": "Class",
+                "FQCN": "com.coveros.training.persistence.NotImplementedException",
+                "filepath": "Class, project/src/main/java/com/coveros/training/persistence/NotImplementedException.java",
+                "semantics": []
+            },
+            {
+                "name": "User",
+                "group": 0,
+                "category": "Unobserved",
+                "construct": "Class",
+                "FQCN": "com.coveros.training.authentication.domainobjects.User",
+                "filepath": "Class, project/src/main/java/com/coveros/training/authentication/domainobjects/User.java",
+                "semantics": []
+            },
+            {
+                "name": "AssertionException",
+                "group": 0,
+                "category": "Unobserved",
+                "construct": "Class",
+                "FQCN": "com.coveros.training.helpers.AssertionException",
+                "filepath": "Class, project/src/main/java/com/coveros/training/helpers/AssertionException.java",
+                "semantics": []
+            }
+        ],
+        "links": [
+            {
+                "source": "RegisterServlet",
+                "target": "StringUtils",
+                "method": {
+                    "makeNotNullable": 8
+                },
+                "value": 3.079
+            },
+            {
+                "source": "RegisterServlet",
+                "target": "ServletUtils",
+                "method": {
+                    "forwardToResult": 4
+                },
+                "value": 2.386
+            },
+            {
+                "source": "RegisterServlet",
+                "target": "RegistrationUtils",
+                "method": {
+                    "processRegistration": 1
+                },
+                "value": 1.0
+            },
+            {
+                "source": "RegisterServlet",
+                "target": "RegistrationResult",
+                "method": {
+                    "toPrettyString": 1
+                },
+                "value": 1.0
+            },
+            {
+                "source": "LibraryBookListAvailableServlet",
+                "target": "LibraryUtils",
+                "method": {
+                    "listAvailableBooks": 4
+                },
+                "value": 2.386
+            },
+            {
+                "source": "LibraryBookListAvailableServlet",
+                "target": "ServletUtils",
+                "method": {
+                    "forwardToRestfulResult": 4
+                },
+                "value": 2.386
+            },
+            {
+                "source": "LibraryBookListAvailableServlet",
+                "target": "Book",
+                "method": {
+                    "toOutputString": 4
+                },
+                "value": 2.386
+            },
+            {
+                "source": "LibraryUtils",
+                "target": "PersistenceLayer",
+                "method": {
+                    "listAvailableBooks": 4,
+                    "listAllBooks": 3,
+                    "searchBooksById": 3,
+                    "searchBorrowerDataByName": 5,
+                    "searchBorrowersById": 3,
+                    "searchBooksByTitle": 4,
+                    "searchForLoanByBook": 1,
+                    "createLoan": 1,
+                    "listAllBorrowers": 3,
+                    "saveNewBorrower": 1,
+                    "saveNewBook": 1
+                },
+                "value": 4.367
+            },
+            {
+                "source": "LibraryUtils",
+                "target": "Book",
+                "method": {
+                    "createEmpty": 7,
+                    "isEmpty": 8,
+                    "Book": 1
+                },
+                "value": 3.772
+            },
+            {
+                "source": "LibraryUtils",
+                "target": "Borrower",
+                "method": {
+                    "createEmpty": 9,
+                    "isEmpty": 3,
+                    "Borrower": 1,
+                    "equals": 1
+                },
+                "value": 3.639
+            },
+            {
+                "source": "LibraryUtils",
+                "target": "Loan",
+                "method": {
+                    "createEmpty": 1,
+                    "isEmpty": 1
+                },
+                "value": 1.693
+            },
+            {
+                "source": "PersistenceLayer",
+                "target": "SqlData",
+                "method": {
+                    "SqlData [overloaded_#002]": 28,
+                    "applyParametersToPreparedStatement": 33,
+                    "SqlData [overloaded_#001]": 5
+                },
+                "value": 5.189
+            },
+            {
+                "source": "PersistenceLayer",
+                "target": "StringUtils",
+                "method": {
+                    "makeNotNullable": 11
+                },
+                "value": 3.397
+            },
+            {
+                "source": "PersistenceLayer",
+                "target": "Book",
+                "method": {
+                    "Book": 8
+                },
+                "value": 3.079
+            },
+            {
+                "source": "PersistenceLayer",
+                "target": "CheckUtils",
+                "method": {
+                    "IntParameterMustBePositive": 7,
+                    "StringMustNotBeNullOrEmpty": 15
+                },
+                "value": 4.091
+            },
+            {
+                "source": "PersistenceLayer",
+                "target": "Borrower",
+                "method": {
+                    "Borrower": 5
+                },
+                "value": 2.609
+            },
+            {
+                "source": "SqlData",
+                "target": "ParameterObject",
+                "method": {
+                    "ParameterObject": 27
+                },
+                "value": 4.295
+            },
+            {
+                "source": "LibraryBookListSearchServlet",
+                "target": "StringUtils",
+                "method": {
+                    "makeNotNullable": 18
+                },
+                "value": 3.89
+            },
+            {
+                "source": "LibraryBookListSearchServlet",
+                "target": "LibraryUtils",
+                "method": {
+                    "listAllBooks": 3,
+                    "searchForBookById": 3,
+                    "searchForBookByTitle": 2
+                },
+                "value": 3.079
+            },
+            {
+                "source": "LibraryBookListSearchServlet",
+                "target": "Book",
+                "method": {
+                    "toOutputString": 3,
+                    "isEmpty": 5
+                },
+                "value": 3.079
+            },
+            {
+                "source": "LibraryBookListSearchServlet",
+                "target": "ServletUtils",
+                "method": {
+                    "forwardToRestfulResult": 9
+                },
+                "value": 3.197
+            },
+            {
+                "source": "Book",
+                "target": "StringUtils",
+                "method": {
+                    "escapeForJson": 7
+                },
+                "value": 2.945
+            },
+            {
+                "source": "LibraryBorrowerListSearchServlet",
+                "target": "StringUtils",
+                "method": {
+                    "makeNotNullable": 22
+                },
+                "value": 4.091
+            },
+            {
+                "source": "LibraryBorrowerListSearchServlet",
+                "target": "LibraryUtils",
+                "method": {
+                    "searchForBorrowerByName": 3,
+                    "searchForBorrowerById": 3,
+                    "listAllBorrowers": 3
+                },
+                "value": 3.197
+            },
+            {
+                "source": "LibraryBorrowerListSearchServlet",
+                "target": "Borrower",
+                "method": {
+                    "isEmpty": 6,
+                    "toOutputString": 4
+                },
+                "value": 3.302
+            },
+            {
+                "source": "LibraryBorrowerListSearchServlet",
+                "target": "ServletUtils",
+                "method": {
+                    "forwardToRestfulResult": 11
+                },
+                "value": 3.397
+            },
+            {
+                "source": "Borrower",
+                "target": "StringUtils",
+                "method": {
+                    "escapeForJson": 4
+                },
+                "value": 2.386
+            },
+            {
+                "source": "LibraryLendServlet",
+                "target": "StringUtils",
+                "method": {
+                    "makeNotNullable": 6
+                },
+                "value": 2.791
+            },
+            {
+                "source": "LibraryLendServlet",
+                "target": "LibraryUtils",
+                "method": {
+                    "lendBook [overloaded_#003]": 1
+                },
+                "value": 1.0
+            },
+            {
+                "source": "LibraryLendServlet",
+                "target": "ServletUtils",
+                "method": {
+                    "forwardToResult": 3
+                },
+                "value": 2.098
+            },
+            {
+                "source": "Loan",
+                "target": "Book",
+                "method": {
+                    "createEmpty": 2,
+                    "equals": 1
+                },
+                "value": 2.098
+            },
+            {
+                "source": "Loan",
+                "target": "Borrower",
+                "method": {
+                    "createEmpty": 2,
+                    "equals": 1
+                },
+                "value": 2.098
+            },
+            {
+                "source": "DbServlet",
+                "target": "StringUtils",
+                "method": {
+                    "makeNotNullable": 3
+                },
+                "value": 2.098
+            },
+            {
+                "source": "DbServlet",
+                "target": "PersistenceLayer",
+                "method": {
+                    "cleanAndMigrateDatabase": 1,
+                    "cleanDatabase": 1,
+                    "migrateDatabase": 1
+                },
+                "value": 2.098
+            },
+            {
+                "source": "DbServlet",
+                "target": "ServletUtils",
+                "method": {
+                    "forwardToResult": 3
+                },
+                "value": 2.098
+            },
+            {
+                "source": "RegistrationUtils",
+                "target": "CheckUtils",
+                "method": {
+                    "StringMustNotBeNullOrEmpty": 3,
+                    "mustBeTrueAtThisPoint": 3
+                },
+                "value": 2.791
+            },
+            {
+                "source": "RegistrationUtils",
+                "target": "PersistenceLayer",
+                "method": {
+                    "searchForUserByName": 1,
+                    "saveNewUser": 1,
+                    "updateUserWithPassword": 1
+                },
+                "value": 2.098
+            },
+            {
+                "source": "RegistrationUtils",
+                "target": "PasswordResult",
+                "method": {
+                    "PasswordResult": 1
+                },
+                "value": 1.0
+            },
+            {
+                "source": "RegistrationUtils",
+                "target": "RegistrationResult",
+                "method": {
+                    "RegistrationResult [overloaded_#002]": 1
+                },
+                "value": 1.0
+            },
+            {
+                "source": "FibServlet",
+                "target": "FibonacciIterative",
+                "method": {
+                    "fibAlgo2": 1,
+                    "fibAlgo1": 1
+                },
+                "value": 1.693
+            },
+            {
+                "source": "FibServlet",
+                "target": "ServletUtils",
+                "method": {
+                    "forwardToRestfulResult": 3
+                },
+                "value": 2.098
+            },
+            {
+                "source": "FibServlet",
+                "target": "Fibonacci",
+                "method": {
+                    "calculate": 1
+                },
+                "value": 1.0
+            },
+            {
+                "source": "LibraryRegisterBorrowerServlet",
+                "target": "StringUtils",
+                "method": {
+                    "makeNotNullable": 2
+                },
+                "value": 1.693
+            },
+            {
+                "source": "LibraryRegisterBorrowerServlet",
+                "target": "ServletUtils",
+                "method": {
+                    "forwardToResult": 2
+                },
+                "value": 1.693
+            },
+            {
+                "source": "LibraryRegisterBorrowerServlet",
+                "target": "LibraryUtils",
+                "method": {
+                    "registerBorrower": 1
+                },
+                "value": 1.0
+            },
+            {
+                "source": "MathServlet",
+                "target": "Calculator",
+                "method": {
+                    "add [overloaded_#003]": 1
+                },
+                "value": 1.0
+            },
+            {
+                "source": "MathServlet",
+                "target": "ServletUtils",
+                "method": {
+                    "forwardToRestfulResult": 1
+                },
+                "value": 1.0
+            },
+            {
+                "source": "LoginServlet",
+                "target": "StringUtils",
+                "method": {
+                    "makeNotNullable": 6
+                },
+                "value": 2.791
+            },
+            {
+                "source": "LoginServlet",
+                "target": "ServletUtils",
+                "method": {
+                    "forwardToResult": 3
+                },
+                "value": 2.098
+            },
+            {
+                "source": "LoginServlet",
+                "target": "LoginUtils",
+                "method": {
+                    "isUserRegistered": 1
+                },
+                "value": 1.0
+            },
+            {
+                "source": "LibraryRegisterBookServlet",
+                "target": "StringUtils",
+                "method": {
+                    "makeNotNullable": 2
+                },
+                "value": 1.693
+            },
+            {
+                "source": "LibraryRegisterBookServlet",
+                "target": "ServletUtils",
+                "method": {
+                    "forwardToResult": 2
+                },
+                "value": 1.693
+            },
+            {
+                "source": "LibraryRegisterBookServlet",
+                "target": "LibraryUtils",
+                "method": {
+                    "registerBook": 1
+                },
+                "value": 1.0
+            },
+            {
+                "source": "AckServlet",
+                "target": "Ackermann",
+                "method": {
+                    "calculate": 1
+                },
+                "value": 1.0
+            },
+            {
+                "source": "AckServlet",
+                "target": "ServletUtils",
+                "method": {
+                    "forwardToRestfulResult": 2
+                },
+                "value": 1.693
+            },
+            {
+                "source": "LoginUtils",
+                "target": "CheckUtils",
+                "method": {
+                    "StringMustNotBeNullOrEmpty": 1
+                },
+                "value": 1.0
+            },
+            {
+                "source": "LoginUtils",
+                "target": "PersistenceLayer",
+                "method": {
+                    "areCredentialsValid": 1
+                },
+                "value": 1.0
+            }
+        ],
+        "overview": {
+            "nodes": [
+                {
+                    "name": "partition2",
+                    "group": 4,
+                    "category": "partition2",
+                    "filepath": "Cluster",
+                    "semantics": [
+                        "DEFAULT_USE_CASE"
+                    ]
+                },
+                {
+                    "name": "partition1",
+                    "group": 3,
+                    "category": "partition1",
+                    "filepath": "Cluster",
+                    "semantics": [
+                        "DEFAULT_USE_CASE"
+                    ]
+                },
+                {
+                    "name": "partition3",
+                    "group": 1,
+                    "category": "partition3",
+                    "filepath": "Cluster",
+                    "semantics": [
+                        "DEFAULT_USE_CASE"
+                    ]
+                },
+                {
+                    "name": "partition0",
+                    "group": 2,
+                    "category": "partition0",
+                    "filepath": "Cluster",
+                    "semantics": [
+                        "DEFAULT_USE_CASE"
+                    ]
+                },
+                {
+                    "name": "Unobserved",
+                    "group": 0,
+                    "category": "Unobserved",
+                    "filepath": "Cluster",
+                    "semantics": []
+                }
+            ],
+            "links": [
+                {
+                    "source": "partition2",
+                    "target": "partition1",
+                    "value": 1.793
+                },
+                {
+                    "source": "partition3",
+                    "target": "partition1",
+                    "value": 1.203
+                },
+                {
+                    "source": "partition0",
+                    "target": "partition1",
+                    "value": 1.281
+                }
+            ]
+        }
+    },
+    "micro_detail_partition_by_natural_seam": {
+        "nodes": [
+            {
+                "name": "RegisterServlet",
+                "group": 4,
+                "category": "partition2",
+                "construct": "Service Entry",
+                "FQCN": "com.coveros.training.authentication.RegisterServlet",
+                "filepath": "Class, project/src/main/java/com/coveros/training/authentication/RegisterServlet.java",
+                "semantics": [
+                    "DEFAULT_USE_CASE"
+                ]
+            },
+            {
+                "name": "StringUtils",
+                "group": 3,
+                "category": "partition1",
+                "construct": "Class",
+                "FQCN": "com.coveros.training.helpers.StringUtils",
+                "filepath": "Class, project/src/main/java/com/coveros/training/helpers/StringUtils.java",
+                "semantics": [
+                    "DEFAULT_USE_CASE"
+                ]
+            },
+            {
+                "name": "ServletUtils",
+                "group": 3,
+                "category": "partition1",
+                "construct": "Class",
+                "FQCN": "com.coveros.training.helpers.ServletUtils",
+                "filepath": "Class, project/src/main/java/com/coveros/training/helpers/ServletUtils.java",
+                "semantics": [
+                    "DEFAULT_USE_CASE"
+                ]
+            },
+            {
+                "name": "LibraryBookListAvailableServlet",
+                "group": 3,
+                "category": "partition1",
+                "construct": "Service Entry",
+                "FQCN": "com.coveros.training.library.LibraryBookListAvailableServlet",
+                "filepath": "Class, project/src/main/java/com/coveros/training/library/LibraryBookListAvailableServlet.java",
+                "semantics": [
+                    "DEFAULT_USE_CASE"
+                ]
+            },
+            {
+                "name": "LibraryUtils",
+                "group": 3,
+                "category": "partition1",
+                "construct": "Class",
+                "FQCN": "com.coveros.training.library.LibraryUtils",
+                "filepath": "Class, project/src/main/java/com/coveros/training/library/LibraryUtils.java",
+                "semantics": [
+                    "DEFAULT_USE_CASE"
+                ]
+            },
+            {
+                "name": "PersistenceLayer",
+                "group": 3,
+                "category": "partition1",
+                "construct": "Class",
+                "FQCN": "com.coveros.training.persistence.PersistenceLayer",
+                "filepath": "Class, project/src/main/java/com/coveros/training/persistence/PersistenceLayer.java",
+                "semantics": [
+                    "DEFAULT_USE_CASE"
+                ]
+            },
+            {
+                "name": "SqlData",
+                "group": 3,
+                "category": "partition1",
+                "construct": "Class",
+                "FQCN": "com.coveros.training.persistence.SqlData",
+                "filepath": "Class, project/src/main/java/com/coveros/training/persistence/SqlData.java",
+                "semantics": [
+                    "DEFAULT_USE_CASE"
+                ]
+            },
+            {
+                "name": "LibraryBookListSearchServlet",
+                "group": 3,
+                "category": "partition1",
+                "construct": "Service Entry",
+                "FQCN": "com.coveros.training.library.LibraryBookListSearchServlet",
+                "filepath": "Class, project/src/main/java/com/coveros/training/library/LibraryBookListSearchServlet.java",
+                "semantics": [
+                    "DEFAULT_USE_CASE"
+                ]
+            },
+            {
+                "name": "Book",
+                "group": 3,
+                "category": "partition1",
+                "construct": "Class",
+                "FQCN": "com.coveros.training.library.domainobjects.Book",
+                "filepath": "Class, project/src/main/java/com/coveros/training/library/domainobjects/Book.java",
+                "semantics": [
+                    "DEFAULT_USE_CASE"
+                ]
+            },
+            {
+                "name": "CheckUtils",
+                "group": 3,
+                "category": "partition1",
+                "construct": "Class",
+                "FQCN": "com.coveros.training.helpers.CheckUtils",
+                "filepath": "Class, project/src/main/java/com/coveros/training/helpers/CheckUtils.java",
+                "semantics": [
+                    "DEFAULT_USE_CASE"
+                ]
+            },
+            {
+                "name": "ParameterObject",
+                "group": 3,
+                "category": "partition1",
+                "construct": "Class",
+                "FQCN": "com.coveros.training.persistence.ParameterObject",
+                "filepath": "Class, project/src/main/java/com/coveros/training/persistence/ParameterObject.java",
+                "semantics": [
+                    "DEFAULT_USE_CASE"
+                ]
+            },
+            {
+                "name": "LibraryBorrowerListSearchServlet",
+                "group": 3,
+                "category": "partition1",
+                "construct": "Service Entry",
+                "FQCN": "com.coveros.training.library.LibraryBorrowerListSearchServlet",
+                "filepath": "Class, project/src/main/java/com/coveros/training/library/LibraryBorrowerListSearchServlet.java",
+                "semantics": [
+                    "DEFAULT_USE_CASE"
+                ]
+            },
+            {
+                "name": "Borrower",
+                "group": 3,
+                "category": "partition1",
+                "construct": "Class",
+                "FQCN": "com.coveros.training.library.domainobjects.Borrower",
+                "filepath": "Class, project/src/main/java/com/coveros/training/library/domainobjects/Borrower.java",
+                "semantics": [
+                    "DEFAULT_USE_CASE"
+                ]
+            },
+            {
+                "name": "LibraryLendServlet",
+                "group": 3,
+                "category": "partition1",
+                "construct": "Service Entry",
+                "FQCN": "com.coveros.training.library.LibraryLendServlet",
+                "filepath": "Class, project/src/main/java/com/coveros/training/library/LibraryLendServlet.java",
+                "semantics": [
+                    "DEFAULT_USE_CASE"
+                ]
+            },
+            {
+                "name": "Loan",
+                "group": 3,
+                "category": "partition1",
+                "construct": "Class",
+                "FQCN": "com.coveros.training.library.domainobjects.Loan",
+                "filepath": "Class, project/src/main/java/com/coveros/training/library/domainobjects/Loan.java",
+                "semantics": [
+                    "DEFAULT_USE_CASE"
+                ]
+            },
+            {
+                "name": "DbServlet",
+                "group": 3,
+                "category": "partition1",
+                "construct": "Service Entry",
+                "FQCN": "com.coveros.training.persistence.DbServlet",
+                "filepath": "Class, project/src/main/java/com/coveros/training/persistence/DbServlet.java",
+                "semantics": [
+                    "DEFAULT_USE_CASE"
+                ]
+            },
+            {
+                "name": "RegistrationUtils",
+                "group": 4,
+                "category": "partition2",
+                "construct": "Class",
+                "FQCN": "com.coveros.training.authentication.RegistrationUtils",
+                "filepath": "Class, project/src/main/java/com/coveros/training/authentication/RegistrationUtils.java",
+                "semantics": [
+                    "DEFAULT_USE_CASE"
+                ]
+            },
+            {
+                "name": "PasswordResult",
+                "group": 4,
+                "category": "partition2",
+                "construct": "Class",
+                "FQCN": "com.coveros.training.authentication.domainobjects.PasswordResult",
+                "filepath": "Class, project/src/main/java/com/coveros/training/authentication/domainobjects/PasswordResult.java",
+                "semantics": [
+                    "DEFAULT_USE_CASE"
+                ]
+            },
+            {
+                "name": "RegistrationResult",
+                "group": 4,
+                "category": "partition2",
+                "construct": "Class",
+                "FQCN": "com.coveros.training.authentication.domainobjects.RegistrationResult",
+                "filepath": "Class, project/src/main/java/com/coveros/training/authentication/domainobjects/RegistrationResult.java",
+                "semantics": [
+                    "DEFAULT_USE_CASE"
+                ]
+            },
+            {
+                "name": "FibServlet",
+                "group": 1,
+                "category": "partition3",
+                "construct": "Service Entry",
+                "FQCN": "com.coveros.training.mathematics.FibServlet",
+                "filepath": "Class, project/src/main/java/com/coveros/training/mathematics/FibServlet.java",
+                "semantics": [
+                    "DEFAULT_USE_CASE"
+                ]
+            },
+            {
+                "name": "FibonacciIterative",
+                "group": 1,
+                "category": "partition3",
+                "construct": "Class",
+                "FQCN": "com.coveros.training.mathematics.FibonacciIterative",
+                "filepath": "Class, project/src/main/java/com/coveros/training/mathematics/FibonacciIterative.java",
+                "semantics": [
+                    "DEFAULT_USE_CASE"
+                ]
+            },
+            {
+                "name": "LibraryRegisterBorrowerServlet",
+                "group": 3,
+                "category": "partition1",
+                "construct": "Service Entry",
+                "FQCN": "com.coveros.training.library.LibraryRegisterBorrowerServlet",
+                "filepath": "Class, project/src/main/java/com/coveros/training/library/LibraryRegisterBorrowerServlet.java",
+                "semantics": [
+                    "DEFAULT_USE_CASE"
+                ]
+            },
+            {
+                "name": "MathServlet",
+                "group": 2,
+                "category": "partition0",
+                "construct": "Service Entry",
+                "FQCN": "com.coveros.training.mathematics.MathServlet",
+                "filepath": "Class, project/src/main/java/com/coveros/training/mathematics/MathServlet.java",
+                "semantics": [
+                    "DEFAULT_USE_CASE"
+                ]
+            },
+            {
+                "name": "Calculator",
+                "group": 2,
+                "category": "partition0",
+                "construct": "Class",
+                "FQCN": "com.coveros.training.mathematics.Calculator",
+                "filepath": "Class, project/src/main/java/com/coveros/training/mathematics/Calculator.java",
+                "semantics": [
+                    "DEFAULT_USE_CASE"
+                ]
+            },
+            {
+                "name": "LoginServlet",
+                "group": 3,
+                "category": "partition1",
+                "construct": "Service Entry",
+                "FQCN": "com.coveros.training.authentication.LoginServlet",
+                "filepath": "Class, project/src/main/java/com/coveros/training/authentication/LoginServlet.java",
+                "semantics": [
+                    "DEFAULT_USE_CASE"
+                ]
+            },
+            {
+                "name": "LibraryRegisterBookServlet",
+                "group": 3,
+                "category": "partition1",
+                "construct": "Service Entry",
+                "FQCN": "com.coveros.training.library.LibraryRegisterBookServlet",
+                "filepath": "Class, project/src/main/java/com/coveros/training/library/LibraryRegisterBookServlet.java",
+                "semantics": [
+                    "DEFAULT_USE_CASE"
+                ]
+            },
+            {
+                "name": "AckServlet",
+                "group": 2,
+                "category": "partition0",
+                "construct": "Service Entry",
+                "FQCN": "com.coveros.training.mathematics.AckServlet",
+                "filepath": "Class, project/src/main/java/com/coveros/training/mathematics/AckServlet.java",
+                "semantics": [
+                    "DEFAULT_USE_CASE"
+                ]
+            },
+            {
+                "name": "Ackermann",
+                "group": 2,
+                "category": "partition0",
+                "construct": "Class",
+                "FQCN": "com.coveros.training.mathematics.Ackermann",
+                "filepath": "Class, project/src/main/java/com/coveros/training/mathematics/Ackermann.java",
+                "semantics": [
+                    "DEFAULT_USE_CASE"
+                ]
+            },
+            {
+                "name": "LoginUtils",
+                "group": 3,
+                "category": "partition1",
+                "construct": "Class",
+                "FQCN": "com.coveros.training.authentication.LoginUtils",
+                "filepath": "Class, project/src/main/java/com/coveros/training/authentication/LoginUtils.java",
+                "semantics": [
+                    "DEFAULT_USE_CASE"
+                ]
+            },
+            {
+                "name": "Fibonacci",
+                "group": 1,
+                "category": "partition3",
+                "construct": "Class",
+                "FQCN": "com.coveros.training.mathematics.Fibonacci",
+                "filepath": "Class, project/src/main/java/com/coveros/training/mathematics/Fibonacci.java",
+                "semantics": [
+                    "DEFAULT_USE_CASE"
+                ]
+            },
+            {
+                "name": "WebAppListener",
+                "group": 0,
+                "category": "Unobserved",
+                "construct": "Class",
+                "FQCN": "com.coveros.training.tomcat.WebAppListener",
+                "filepath": "Class, project/src/main/java/com/coveros/training/tomcat/WebAppListener.java",
+                "semantics": []
+            },
+            {
+                "name": "AlcoholResult",
+                "group": 0,
+                "category": "Unobserved",
+                "construct": "Class",
+                "FQCN": "com.coveros.training.expenses.AlcoholResult",
+                "filepath": "Class, project/src/main/java/com/coveros/training/expenses/AlcoholResult.java",
+                "semantics": []
+            },
+            {
+                "name": "DinnerPrices",
+                "group": 0,
+                "category": "Unobserved",
+                "construct": "Class",
+                "FQCN": "com.coveros.training.expenses.DinnerPrices",
+                "filepath": "Class, project/src/main/java/com/coveros/training/expenses/DinnerPrices.java",
+                "semantics": []
+            },
+            {
+                "name": "AlcoholCalculator",
+                "group": 0,
+                "category": "Unobserved",
+                "construct": "Class",
+                "FQCN": "com.coveros.training.expenses.AlcoholCalculator",
+                "filepath": "Class, project/src/main/java/com/coveros/training/expenses/AlcoholCalculator.java",
+                "semantics": []
+            },
+            {
+                "name": "CartesianProduct",
+                "group": 0,
+                "category": "Unobserved",
+                "construct": "Class",
+                "FQCN": "com.coveros.training.cartesianproduct.CartesianProduct",
+                "filepath": "Class, project/src/main/java/com/coveros/training/cartesianproduct/CartesianProduct.java",
+                "semantics": []
+            },
+            {
+                "name": "SqlRuntimeException",
+                "group": 0,
+                "category": "Unobserved",
+                "construct": "Class",
+                "FQCN": "com.coveros.training.persistence.SqlRuntimeException",
+                "filepath": "Class, project/src/main/java/com/coveros/training/persistence/SqlRuntimeException.java",
+                "semantics": []
+            },
+            {
+                "name": "EmptyDataSource",
+                "group": 0,
+                "category": "Unobserved",
+                "construct": "Class",
+                "FQCN": "com.coveros.training.persistence.EmptyDataSource",
+                "filepath": "Class, project/src/main/java/com/coveros/training/persistence/EmptyDataSource.java",
+                "semantics": []
+            },
+            {
+                "name": "NotImplementedException",
+                "group": 0,
+                "category": "Unobserved",
+                "construct": "Class",
+                "FQCN": "com.coveros.training.persistence.NotImplementedException",
+                "filepath": "Class, project/src/main/java/com/coveros/training/persistence/NotImplementedException.java",
+                "semantics": []
+            },
+            {
+                "name": "User",
+                "group": 0,
+                "category": "Unobserved",
+                "construct": "Class",
+                "FQCN": "com.coveros.training.authentication.domainobjects.User",
+                "filepath": "Class, project/src/main/java/com/coveros/training/authentication/domainobjects/User.java",
+                "semantics": []
+            },
+            {
+                "name": "AssertionException",
+                "group": 0,
+                "category": "Unobserved",
+                "construct": "Class",
+                "FQCN": "com.coveros.training.helpers.AssertionException",
+                "filepath": "Class, project/src/main/java/com/coveros/training/helpers/AssertionException.java",
+                "semantics": []
+            }
+        ],
+        "links": [
+            {
+                "source": "RegisterServlet",
+                "target": "StringUtils",
+                "method": {
+                    "makeNotNullable": 8
+                },
+                "value": 3.079
+            },
+            {
+                "source": "RegisterServlet",
+                "target": "ServletUtils",
+                "method": {
+                    "forwardToResult": 4
+                },
+                "value": 2.386
+            },
+            {
+                "source": "RegisterServlet",
+                "target": "RegistrationUtils",
+                "method": {
+                    "processRegistration": 1
+                },
+                "value": 1.0
+            },
+            {
+                "source": "RegisterServlet",
+                "target": "RegistrationResult",
+                "method": {
+                    "toPrettyString": 1
+                },
+                "value": 1.0
+            },
+            {
+                "source": "LibraryBookListAvailableServlet",
+                "target": "LibraryUtils",
+                "method": {
+                    "listAvailableBooks": 4
+                },
+                "value": 2.386
+            },
+            {
+                "source": "LibraryBookListAvailableServlet",
+                "target": "ServletUtils",
+                "method": {
+                    "forwardToRestfulResult": 4
+                },
+                "value": 2.386
+            },
+            {
+                "source": "LibraryBookListAvailableServlet",
+                "target": "Book",
+                "method": {
+                    "toOutputString": 4
+                },
+                "value": 2.386
+            },
+            {
+                "source": "LibraryUtils",
+                "target": "PersistenceLayer",
+                "method": {
+                    "listAvailableBooks": 4,
+                    "listAllBooks": 3,
+                    "searchBooksById": 3,
+                    "searchBorrowerDataByName": 5,
+                    "searchBorrowersById": 3,
+                    "searchBooksByTitle": 4,
+                    "searchForLoanByBook": 1,
+                    "createLoan": 1,
+                    "listAllBorrowers": 3,
+                    "saveNewBorrower": 1,
+                    "saveNewBook": 1
+                },
+                "value": 4.367
+            },
+            {
+                "source": "LibraryUtils",
+                "target": "Book",
+                "method": {
+                    "createEmpty": 7,
+                    "isEmpty": 8,
+                    "Book": 1
+                },
+                "value": 3.772
+            },
+            {
+                "source": "LibraryUtils",
+                "target": "Borrower",
+                "method": {
+                    "createEmpty": 9,
+                    "isEmpty": 3,
+                    "Borrower": 1,
+                    "equals": 1
+                },
+                "value": 3.639
+            },
+            {
+                "source": "LibraryUtils",
+                "target": "Loan",
+                "method": {
+                    "createEmpty": 1,
+                    "isEmpty": 1
+                },
+                "value": 1.693
+            },
+            {
+                "source": "PersistenceLayer",
+                "target": "SqlData",
+                "method": {
+                    "SqlData [overloaded_#002]": 28,
+                    "applyParametersToPreparedStatement": 33,
+                    "SqlData [overloaded_#001]": 5
+                },
+                "value": 5.189
+            },
+            {
+                "source": "PersistenceLayer",
+                "target": "StringUtils",
+                "method": {
+                    "makeNotNullable": 11
+                },
+                "value": 3.397
+            },
+            {
+                "source": "PersistenceLayer",
+                "target": "Book",
+                "method": {
+                    "Book": 8
+                },
+                "value": 3.079
+            },
+            {
+                "source": "PersistenceLayer",
+                "target": "CheckUtils",
+                "method": {
+                    "IntParameterMustBePositive": 7,
+                    "StringMustNotBeNullOrEmpty": 15
+                },
+                "value": 4.091
+            },
+            {
+                "source": "PersistenceLayer",
+                "target": "Borrower",
+                "method": {
+                    "Borrower": 5
+                },
+                "value": 2.609
+            },
+            {
+                "source": "SqlData",
+                "target": "ParameterObject",
+                "method": {
+                    "ParameterObject": 27
+                },
+                "value": 4.295
+            },
+            {
+                "source": "LibraryBookListSearchServlet",
+                "target": "StringUtils",
+                "method": {
+                    "makeNotNullable": 18
+                },
+                "value": 3.89
+            },
+            {
+                "source": "LibraryBookListSearchServlet",
+                "target": "LibraryUtils",
+                "method": {
+                    "listAllBooks": 3,
+                    "searchForBookById": 3,
+                    "searchForBookByTitle": 2
+                },
+                "value": 3.079
+            },
+            {
+                "source": "LibraryBookListSearchServlet",
+                "target": "Book",
+                "method": {
+                    "toOutputString": 3,
+                    "isEmpty": 5
+                },
+                "value": 3.079
+            },
+            {
+                "source": "LibraryBookListSearchServlet",
+                "target": "ServletUtils",
+                "method": {
+                    "forwardToRestfulResult": 9
+                },
+                "value": 3.197
+            },
+            {
+                "source": "Book",
+                "target": "StringUtils",
+                "method": {
+                    "escapeForJson": 7
+                },
+                "value": 2.945
+            },
+            {
+                "source": "LibraryBorrowerListSearchServlet",
+                "target": "StringUtils",
+                "method": {
+                    "makeNotNullable": 22
+                },
+                "value": 4.091
+            },
+            {
+                "source": "LibraryBorrowerListSearchServlet",
+                "target": "LibraryUtils",
+                "method": {
+                    "searchForBorrowerByName": 3,
+                    "searchForBorrowerById": 3,
+                    "listAllBorrowers": 3
+                },
+                "value": 3.197
+            },
+            {
+                "source": "LibraryBorrowerListSearchServlet",
+                "target": "Borrower",
+                "method": {
+                    "isEmpty": 6,
+                    "toOutputString": 4
+                },
+                "value": 3.302
+            },
+            {
+                "source": "LibraryBorrowerListSearchServlet",
+                "target": "ServletUtils",
+                "method": {
+                    "forwardToRestfulResult": 11
+                },
+                "value": 3.397
+            },
+            {
+                "source": "Borrower",
+                "target": "StringUtils",
+                "method": {
+                    "escapeForJson": 4
+                },
+                "value": 2.386
+            },
+            {
+                "source": "LibraryLendServlet",
+                "target": "StringUtils",
+                "method": {
+                    "makeNotNullable": 6
+                },
+                "value": 2.791
+            },
+            {
+                "source": "LibraryLendServlet",
+                "target": "LibraryUtils",
+                "method": {
+                    "lendBook [overloaded_#003]": 1
+                },
+                "value": 1.0
+            },
+            {
+                "source": "LibraryLendServlet",
+                "target": "ServletUtils",
+                "method": {
+                    "forwardToResult": 3
+                },
+                "value": 2.098
+            },
+            {
+                "source": "Loan",
+                "target": "Book",
+                "method": {
+                    "createEmpty": 2,
+                    "equals": 1
+                },
+                "value": 2.098
+            },
+            {
+                "source": "Loan",
+                "target": "Borrower",
+                "method": {
+                    "createEmpty": 2,
+                    "equals": 1
+                },
+                "value": 2.098
+            },
+            {
+                "source": "DbServlet",
+                "target": "StringUtils",
+                "method": {
+                    "makeNotNullable": 3
+                },
+                "value": 2.098
+            },
+            {
+                "source": "DbServlet",
+                "target": "PersistenceLayer",
+                "method": {
+                    "cleanAndMigrateDatabase": 1,
+                    "cleanDatabase": 1,
+                    "migrateDatabase": 1
+                },
+                "value": 2.098
+            },
+            {
+                "source": "DbServlet",
+                "target": "ServletUtils",
+                "method": {
+                    "forwardToResult": 3
+                },
+                "value": 2.098
+            },
+            {
+                "source": "RegistrationUtils",
+                "target": "CheckUtils",
+                "method": {
+                    "StringMustNotBeNullOrEmpty": 3,
+                    "mustBeTrueAtThisPoint": 3
+                },
+                "value": 2.791
+            },
+            {
+                "source": "RegistrationUtils",
+                "target": "PersistenceLayer",
+                "method": {
+                    "searchForUserByName": 1,
+                    "saveNewUser": 1,
+                    "updateUserWithPassword": 1
+                },
+                "value": 2.098
+            },
+            {
+                "source": "RegistrationUtils",
+                "target": "PasswordResult",
+                "method": {
+                    "PasswordResult": 1
+                },
+                "value": 1.0
+            },
+            {
+                "source": "RegistrationUtils",
+                "target": "RegistrationResult",
+                "method": {
+                    "RegistrationResult [overloaded_#002]": 1
+                },
+                "value": 1.0
+            },
+            {
+                "source": "FibServlet",
+                "target": "FibonacciIterative",
+                "method": {
+                    "fibAlgo2": 1,
+                    "fibAlgo1": 1
+                },
+                "value": 1.693
+            },
+            {
+                "source": "FibServlet",
+                "target": "ServletUtils",
+                "method": {
+                    "forwardToRestfulResult": 3
+                },
+                "value": 2.098
+            },
+            {
+                "source": "FibServlet",
+                "target": "Fibonacci",
+                "method": {
+                    "calculate": 1
+                },
+                "value": 1.0
+            },
+            {
+                "source": "LibraryRegisterBorrowerServlet",
+                "target": "StringUtils",
+                "method": {
+                    "makeNotNullable": 2
+                },
+                "value": 1.693
+            },
+            {
+                "source": "LibraryRegisterBorrowerServlet",
+                "target": "ServletUtils",
+                "method": {
+                    "forwardToResult": 2
+                },
+                "value": 1.693
+            },
+            {
+                "source": "LibraryRegisterBorrowerServlet",
+                "target": "LibraryUtils",
+                "method": {
+                    "registerBorrower": 1
+                },
+                "value": 1.0
+            },
+            {
+                "source": "MathServlet",
+                "target": "Calculator",
+                "method": {
+                    "add [overloaded_#003]": 1
+                },
+                "value": 1.0
+            },
+            {
+                "source": "MathServlet",
+                "target": "ServletUtils",
+                "method": {
+                    "forwardToRestfulResult": 1
+                },
+                "value": 1.0
+            },
+            {
+                "source": "LoginServlet",
+                "target": "StringUtils",
+                "method": {
+                    "makeNotNullable": 6
+                },
+                "value": 2.791
+            },
+            {
+                "source": "LoginServlet",
+                "target": "ServletUtils",
+                "method": {
+                    "forwardToResult": 3
+                },
+                "value": 2.098
+            },
+            {
+                "source": "LoginServlet",
+                "target": "LoginUtils",
+                "method": {
+                    "isUserRegistered": 1
+                },
+                "value": 1.0
+            },
+            {
+                "source": "LibraryRegisterBookServlet",
+                "target": "StringUtils",
+                "method": {
+                    "makeNotNullable": 2
+                },
+                "value": 1.693
+            },
+            {
+                "source": "LibraryRegisterBookServlet",
+                "target": "ServletUtils",
+                "method": {
+                    "forwardToResult": 2
+                },
+                "value": 1.693
+            },
+            {
+                "source": "LibraryRegisterBookServlet",
+                "target": "LibraryUtils",
+                "method": {
+                    "registerBook": 1
+                },
+                "value": 1.0
+            },
+            {
+                "source": "AckServlet",
+                "target": "Ackermann",
+                "method": {
+                    "calculate": 1
+                },
+                "value": 1.0
+            },
+            {
+                "source": "AckServlet",
+                "target": "ServletUtils",
+                "method": {
+                    "forwardToRestfulResult": 2
+                },
+                "value": 1.693
+            },
+            {
+                "source": "LoginUtils",
+                "target": "CheckUtils",
+                "method": {
+                    "StringMustNotBeNullOrEmpty": 1
+                },
+                "value": 1.0
+            },
+            {
+                "source": "LoginUtils",
+                "target": "PersistenceLayer",
+                "method": {
+                    "areCredentialsValid": 1
+                },
+                "value": 1.0
+            }
+        ],
+        "overview": {
+            "nodes": [
+                {
+                    "name": "partition2",
+                    "group": 4,
+                    "category": "partition2",
+                    "filepath": "Cluster",
+                    "semantics": [
+                        "DEFAULT_USE_CASE"
+                    ]
+                },
+                {
+                    "name": "partition1",
+                    "group": 3,
+                    "category": "partition1",
+                    "filepath": "Cluster",
+                    "semantics": [
+                        "DEFAULT_USE_CASE"
+                    ]
+                },
+                {
+                    "name": "partition3",
+                    "group": 1,
+                    "category": "partition3",
+                    "filepath": "Cluster",
+                    "semantics": [
+                        "DEFAULT_USE_CASE"
+                    ]
+                },
+                {
+                    "name": "partition0",
+                    "group": 2,
+                    "category": "partition0",
+                    "filepath": "Cluster",
+                    "semantics": [
+                        "DEFAULT_USE_CASE"
+                    ]
+                },
+                {
+                    "name": "Unobserved",
+                    "group": 0,
+                    "category": "Unobserved",
+                    "filepath": "Cluster",
+                    "semantics": []
+                }
+            ],
+            "links": [
+                {
+                    "source": "partition2",
+                    "target": "partition1",
+                    "value": 1.793
+                },
+                {
+                    "source": "partition3",
+                    "target": "partition1",
+                    "value": 1.203
+                },
+                {
+                    "source": "partition0",
+                    "target": "partition1",
+                    "value": 1.281
+                }
+            ]
+        }
+    }
+}

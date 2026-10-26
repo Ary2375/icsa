@@ -1,0 +1,218 @@
+{
+    "MEM": {
+        "decomposition": {
+            "partition0": [
+                {
+                    "id": "Book"
+                },
+                {
+                    "id": "LibraryBorrowerListSearchServletTests"
+                },
+                {
+                    "id": "LibraryRegisterBookServletTests"
+                },
+                {
+                    "id": "LibraryRegisterBorrowerServletTests"
+                },
+                {
+                    "id": "LibraryUtils"
+                },
+                {
+                    "id": "PasswordResult"
+                },
+                {
+                    "id": "User"
+                },
+                {
+                    "id": "WebAppListener"
+                }
+            ],
+            "partition1": [
+                {
+                    "id": "Ackermann"
+                },
+                {
+                    "id": "LendingTests"
+                },
+                {
+                    "id": "WebAppListenerTests"
+                }
+            ],
+            "partition2": [
+                {
+                    "id": "AlcoholStepDefs"
+                },
+                {
+                    "id": "BookTests"
+                }
+            ],
+            "partition3": [
+                {
+                    "id": "ApiCalls"
+                },
+                {
+                    "id": "HtmlUnitTests"
+                },
+                {
+                    "id": "SeleniumTests"
+                }
+            ],
+            "partition4": [
+                {
+                    "id": "ackermannStepDefs"
+                },
+                {
+                    "id": "authenticationStepDefs"
+                },
+                {
+                    "id": "basic_test"
+                },
+                {
+                    "id": "environment"
+                },
+                {
+                    "id": "fibonacciStepDefs"
+                },
+                {
+                    "id": "librarianStepDefs"
+                }
+            ],
+            "partition5": [
+                {
+                    "id": "AutoInsuranceActionTests"
+                },
+                {
+                    "id": "DesktopUiTests"
+                },
+                {
+                    "id": "ExecutionDataClient"
+                }
+            ],
+            "partition6": [
+                {
+                    "id": "MathStepDefs"
+                },
+                {
+                    "id": "PasswordResultTests"
+                },
+                {
+                    "id": "RegistrationResultTests"
+                },
+                {
+                    "id": "UserTests"
+                }
+            ],
+            "partition7": [
+                {
+                    "id": "DateUtils"
+                },
+                {
+                    "id": "LoginServlet"
+                },
+                {
+                    "id": "LoginServletTests"
+                },
+                {
+                    "id": "MathServlet"
+                },
+                {
+                    "id": "NbvcxzTests"
+                },
+                {
+                    "id": "PasswordResultEnums"
+                },
+                {
+                    "id": "RegisterServlet"
+                },
+                {
+                    "id": "RegistrationResult"
+                },
+                {
+                    "id": "RegistrationStatusEnums"
+                },
+                {
+                    "id": "RegistrationUtilsTests"
+                }
+            ],
+            "partition8": [
+                {
+                    "id": "AckermannIterativeParameterizedTests"
+                },
+                {
+                    "id": "AssertionException"
+                }
+            ],
+            "partition9": [
+                {
+                    "id": "AckermannStepDefs"
+                },
+                {
+                    "id": "AddDeleteListSearchBooksAndBorrowersStepDefs"
+                },
+                {
+                    "id": "BookCheckOutStepDefs"
+                },
+                {
+                    "id": "DbServlet"
+                },
+                {
+                    "id": "Fibonacci"
+                },
+                {
+                    "id": "FibonacciParameterizedTests"
+                },
+                {
+                    "id": "FibonacciStepDefs"
+                },
+                {
+                    "id": "LoginStepDefs"
+                },
+                {
+                    "id": "RegistrationStepDefs"
+                },
+                {
+                    "id": "StringUtils"
+                }
+            ],
+            "partition10": [
+                {
+                    "id": "AutoInsuranceAction"
+                },
+                {
+                    "id": "AutoInsuranceProcessor"
+                },
+                {
+                    "id": "AutoInsuranceUI"
+                },
+                {
+                    "id": "DesktopTester"
+                },
+                {
+                    "id": "InvalidClaimsException"
+                },
+                {
+                    "id": "WarningLetterEnum"
+                }
+            ],
+            "partition11": [
+                {
+                    "id": "CheckUtilsTests"
+                },
+                {
+                    "id": "LoginUtils"
+                }
+            ],
+            "partition12": [
+                {
+                    "id": "AlcoholCalculator"
+                },
+                {
+                    "id": "CartesianProduct"
+                },
+                {
+                    "id": "DinnerPrices"
+                }
+            ]
+        }
+    }
+}

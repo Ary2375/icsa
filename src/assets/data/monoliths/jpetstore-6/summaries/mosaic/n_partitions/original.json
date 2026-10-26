@@ -1,0 +1,108 @@
+{
+  "mosaic": {
+    "decomposition": {
+      "partition0": [
+        {
+          "id": "Order"
+        },
+        {
+          "id": "Sequence"
+        },
+        {
+          "id": "LineItem"
+        },
+        {
+          "id": "LineItemMapper"
+        },
+        {
+          "id": "OrderMapper"
+        },
+        {
+          "id": "SequenceMapper"
+        },
+        {
+          "id": "OrderActionBean"
+        },
+        {
+          "id": "OrderService"
+        }
+      ],
+      "partition1": [
+        {
+          "id": "Product"
+        },
+        {
+          "id": "Category"
+        },
+        {
+          "id": "CartItem"
+        },
+        {
+          "id": "Cart"
+        },
+        {
+          "id": "Item"
+        },
+        {
+          "id": "CategoryMapper"
+        },
+        {
+          "id": "ItemMapper"
+        },
+        {
+          "id": "ProductMapper"
+        },
+        {
+          "id": "CartActionBean"
+        },
+        {
+          "id": "CatalogActionBean"
+        },
+        {
+          "id": "AccountActionBean.getMyList"
+        },
+        {
+          "id": "AccountActionBean.setMyList"
+        },
+        {
+          "id": "CatalogService"
+        }
+      ],
+      "partition2": [
+        {
+          "id": "Account"
+        },
+        {
+          "id": "AccountMapper"
+        },
+        {
+          "id": "AccountActionBean.getAccount"
+        },
+        {
+          "id": "AccountActionBean.getUsername"
+        },
+        {
+          "id": "AccountActionBean.getPassword"
+        },
+        {
+          "id": "AccountActionBean.newAccount"
+        },
+        {
+          "id": "AccountActionBean.editAccount"
+        },
+        {
+          "id": "AccountActionBean.signon"
+        },
+        {
+          "id": "AccountActionBean.signoff"
+        },
+        {
+          "id": "AccountActionBean.clear"
+        },
+        {
+          "id": "AccountService"
+        }
+      ]
+    }
+  }
+}

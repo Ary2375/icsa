@@ -1,0 +1,104 @@
+{
+    "tool": {
+        "decomposition": {
+            "partition2": [
+                {
+                    "id": "PasswordResult"
+                },
+                {
+                    "id": "RegisterServlet"
+                },
+                {
+                    "id": "RegistrationResult"
+                },
+                {
+                    "id": "RegistrationUtils"
+                }
+            ],
+            "partition1": [
+                {
+                    "id": "Book"
+                },
+                {
+                    "id": "Borrower"
+                },
+                {
+                    "id": "CheckUtils"
+                },
+                {
+                    "id": "DbServlet"
+                },
+                {
+                    "id": "LibraryBookListAvailableServlet"
+                },
+                {
+                    "id": "LibraryBookListSearchServlet"
+                },
+                {
+                    "id": "LibraryBorrowerListSearchServlet"
+                },
+                {
+                    "id": "LibraryLendServlet"
+                },
+                {
+                    "id": "LibraryRegisterBookServlet"
+                },
+                {
+                    "id": "LibraryRegisterBorrowerServlet"
+                },
+                {
+                    "id": "LibraryUtils"
+                },
+                {
+                    "id": "Loan"
+                },
+                {
+                    "id": "LoginServlet"
+                },
+                {
+                    "id": "LoginUtils"
+                },
+                {
+                    "id": "ParameterObject"
+                },
+                {
+                    "id": "PersistenceLayer"
+                },
+                {
+                    "id": "ServletUtils"
+                },
+                {
+                    "id": "SqlData"
+                },
+                {
+                    "id": "StringUtils"
+                }
+            ],
+            "partition3": [
+                {
+                    "id": "FibServlet"
+                },
+                {
+                    "id": "Fibonacci"
+                },
+                {
+                    "id": "FibonacciIterative"
+                }
+            ],
+            "partition0": [
+                {
+                    "id": "AckServlet"
+                },
+                {
+                    "id": "Ackermann"
+                },
+                {
+                    "id": "Calculator"
+                },
+                {
+                    "id": "MathServlet"
+                }
+            ]
+        }
+    }
+}

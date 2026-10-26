@@ -1,0 +1,67 @@
+{
+  "mosaic": {
+    "decomposition": {
+      "partition0": [
+        {
+          "id": "Vet"
+        },
+        {
+          "id": "Specialty"
+        },
+        {
+          "id": "Vets"
+        },
+        {
+          "id": "Person"
+        },
+        {
+          "id": "BaseEntity"
+        },
+        {
+          "id": "NamedEntity"
+        },
+        {
+          "id": "VetRepository"
+        },
+        {
+          "id": "VetController"
+        }
+      ],
+      "partition1": [
+        {
+          "id": "Pet"
+        },
+        {
+          "id": "Owner"
+        },
+        {
+          "id": "Visit"
+        },
+        {
+          "id": "PetType"
+        },
+        {
+          "id": "Person"
+        },
+        {
+          "id": "BaseEntity"
+        },
+        {
+          "id": "NamedEntity"
+        },
+        {
+          "id": "OwnerRepository"
+        },
+        {
+          "id": "VisitController"
+        },
+        {
+          "id": "OwnerController"
+        },
+        {
+          "id": "PetController"
+        }
+      ]
+    }
+  }
+}

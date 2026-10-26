@@ -1,0 +1,121 @@
+{
+    "MEM": {
+        "decomposition": {
+            "partition0": [
+                {
+                    "id": "CatalogActionBean"
+                },
+                {
+                    "id": "Category"
+                }
+            ],
+            "partition1": [
+                {
+                    "id": "AccountMapper"
+                },
+                {
+                    "id": "AccountMapperTest"
+                },
+                {
+                    "id": "CategoryMapper"
+                },
+                {
+                    "id": "Item"
+                },
+                {
+                    "id": "OrderActionBean"
+                },
+                {
+                    "id": "OrderServiceTest"
+                },
+                {
+                    "id": "ProductMapper"
+                },
+                {
+                    "id": "SequenceMapper"
+                }
+            ],
+            "partition2": [
+                {
+                    "id": "AbstractActionBean"
+                },
+                {
+                    "id": "Sequence"
+                }
+            ],
+            "partition3": [
+                {
+                    "id": "AccountService"
+                },
+                {
+                    "id": "CatalogService"
+                },
+                {
+                    "id": "LineItem"
+                },
+                {
+                    "id": "LineItemMapperTest"
+                },
+                {
+                    "id": "OrderMapper"
+                },
+                {
+                    "id": "OrderService"
+                },
+                {
+                    "id": "ProductMapperTest"
+                },
+                {
+                    "id": "ScreenTransitionIT"
+                }
+            ],
+            "partition4": [
+                {
+                    "id": "AccountActionBeanTest"
+                },
+                {
+                    "id": "CatalogActionBeanTest"
+                },
+                {
+                    "id": "OrderActionBeanTest"
+                },
+                {
+                    "id": "OrderMapperTest"
+                }
+            ],
+            "partition5": [
+                {
+                    "id": "CartTest"
+                },
+                {
+                    "id": "MapperTestContext"
+                }
+            ],
+            "partition6": [
+                {
+                    "id": "Account"
+                },
+                {
+                    "id": "LineItemMapper"
+                }
+            ],
+            "partition7": [
+                {
+                    "id": "Cart"
+                },
+                {
+                    "id": "CartActionBean"
+                },
+                {
+                    "id": "ItemMapper"
+                },
+                {
+                    "id": "OrderTest"
+                },
+                {
+                    "id": "SequenceMapperTest"
+                }
+            ]
+        }
+    }
+}

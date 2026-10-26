@@ -1,0 +1,305 @@
+{
+    "tool": {
+        "decomposition": {
+            "partition0": [
+                {
+                    "id": "Book.Book"
+                },
+                {
+                    "id": "Book.createEmpty"
+                },
+                {
+                    "id": "Book.equals"
+                },
+                {
+                    "id": "Book.hashCode"
+                },
+                {
+                    "id": "Book.isEmpty"
+                },
+                {
+                    "id": "Book.toOutputString"
+                },
+                {
+                    "id": "Book.toString"
+                },
+                {
+                    "id": "LibraryUtils.LibraryUtils"
+                },
+                {
+                    "id": "LibraryUtils.LibraryUtils"
+                },
+                {
+                    "id": "LibraryUtils.createEmpty"
+                },
+                {
+                    "id": "LibraryUtils.createLoan"
+                },
+                {
+                    "id": "LibraryUtils.deleteBook"
+                },
+                {
+                    "id": "LibraryUtils.deleteBorrower"
+                },
+                {
+                    "id": "LibraryUtils.isEmpty"
+                },
+                {
+                    "id": "LibraryUtils.lendBook"
+                },
+                {
+                    "id": "LibraryUtils.lendBook"
+                },
+                {
+                    "id": "LibraryUtils.listAllBooks"
+                },
+                {
+                    "id": "LibraryUtils.listAllBorrowers"
+                },
+                {
+                    "id": "LibraryUtils.listAvailableBooks"
+                },
+                {
+                    "id": "LibraryUtils.registerBook"
+                },
+                {
+                    "id": "LibraryUtils.registerBorrower"
+                },
+                {
+                    "id": "LibraryUtils.saveNewBook"
+                },
+                {
+                    "id": "LibraryUtils.saveNewBorrower"
+                },
+                {
+                    "id": "LibraryUtils.searchForBookById"
+                },
+                {
+                    "id": "LibraryUtils.searchForBookByTitle"
+                },
+                {
+                    "id": "LibraryUtils.searchForBorrowerById"
+                },
+                {
+                    "id": "LibraryUtils.searchForBorrowerByName"
+                },
+                {
+                    "id": "LibraryUtils.searchForLoanByBook"
+                },
+                {
+                    "id": "LibraryUtils.searchForLoanByBorrower"
+                },
+                {
+                    "id": "PasswordResult.PasswordResult"
+                },
+                {
+                    "id": "PasswordResult.createDefault"
+                },
+                {
+                    "id": "PasswordResult.createEmpty"
+                },
+                {
+                    "id": "PasswordResult.equals"
+                },
+                {
+                    "id": "PasswordResult.hashCode"
+                },
+                {
+                    "id": "PasswordResult.isEmpty"
+                },
+                {
+                    "id": "PasswordResult.toPrettyString"
+                },
+                {
+                    "id": "PasswordResult.toString"
+                },
+                {
+                    "id": "User.User"
+                },
+                {
+                    "id": "User.createEmpty"
+                },
+                {
+                    "id": "User.equals"
+                },
+                {
+                    "id": "User.hashCode"
+                },
+                {
+                    "id": "User.isEmpty"
+                },
+                {
+                    "id": "User.toString"
+                },
+                {
+                    "id": "WebAppListener.WebAppListener"
+                },
+                {
+                    "id": "WebAppListener.WebAppListener"
+                },
+                {
+                    "id": "WebAppListener.contextDestroyed"
+                },
+                {
+                    "id": "WebAppListener.contextInitialized"
+                }
+            ],
+            "partition1": [
+                {
+                    "id": "Ackermann.Ackermann"
+                },
+                {
+                    "id": "Ackermann.ack"
+                },
+                {
+                    "id": "Ackermann.calculate"
+                }
+            ],
+            "partition2": [],
+            "partition3": [],
+            "partition4": [],
+            "partition5": [],
+            "partition6": [],
+            "partition7": [
+                {
+                    "id": "LoginServlet.LoginServlet"
+                },
+                {
+                    "id": "LoginServlet.doPost"
+                },
+                {
+                    "id": "MathServlet.MathServlet"
+                },
+                {
+                    "id": "MathServlet.doPost"
+                },
+                {
+                    "id": "MathServlet.forwardToResult"
+                },
+                {
+                    "id": "MathServlet.putNumberInRequest"
+                },
+                {
+                    "id": "MathServlet.setResultToSum"
+                },
+                {
+                    "id": "PasswordResultEnums.PasswordResultEnums"
+                },
+                {
+                    "id": "PasswordResultEnums.valueOf"
+                },
+                {
+                    "id": "PasswordResultEnums.values"
+                },
+                {
+                    "id": "RegisterServlet.RegisterServlet"
+                },
+                {
+                    "id": "RegisterServlet.doPost"
+                },
+                {
+                    "id": "RegisterServlet.forwardToResult"
+                },
+                {
+                    "id": "RegistrationResult.RegistrationResult"
+                },
+                {
+                    "id": "RegistrationResult.RegistrationResult"
+                },
+                {
+                    "id": "RegistrationResult.createEmpty"
+                },
+                {
+                    "id": "RegistrationResult.equals"
+                },
+                {
+                    "id": "RegistrationResult.hashCode"
+                },
+                {
+                    "id": "RegistrationResult.isEmpty"
+                },
+                {
+                    "id": "RegistrationResult.toPrettyString"
+                },
+                {
+                    "id": "RegistrationResult.toString"
+                },
+                {
+                    "id": "RegistrationStatusEnums.RegistrationStatusEnums"
+                },
+                {
+                    "id": "RegistrationStatusEnums.valueOf"
+                },
+                {
+                    "id": "RegistrationStatusEnums.values"
+                }
+            ],
+            "partition8": [
+                {
+                    "id": "AssertionException.AssertionException"
+                }
+            ],
+            "partition9": [
+                {
+                    "id": "DbServlet.DbServlet"
+                },
+                {
+                    "id": "DbServlet.DbServlet"
+                },
+                {
+                    "id": "DbServlet.doGet"
+                },
+                {
+                    "id": "Fibonacci.Fibonacci"
+                },
+                {
+                    "id": "Fibonacci.calculate"
+                },
+                {
+                    "id": "StringUtils.StringUtils"
+                },
+                {
+                    "id": "StringUtils.escapeForJson"
+                },
+                {
+                    "id": "StringUtils.makeNotNullable"
+                }
+            ],
+            "partition10": [],
+            "partition11": [
+                {
+                    "id": "LoginUtils.LoginUtils"
+                },
+                {
+                    "id": "LoginUtils.LoginUtils"
+                },
+                {
+                    "id": "LoginUtils.createEmpty"
+                },
+                {
+                    "id": "LoginUtils.isEmpty"
+                },
+                {
+                    "id": "LoginUtils.isUserRegistered"
+                }
+            ],
+            "partition12": [
+                {
+                    "id": "AlcoholCalculator.AlcoholCalculator"
+                },
+                {
+                    "id": "AlcoholCalculator.calculate"
+                },
+                {
+                    "id": "CartesianProduct.CartesianProduct"
+                },
+                {
+                    "id": "CartesianProduct.calculate"
+                },
+                {
+                    "id": "DinnerPrices.DinnerPrices"
+                }
+            ]
+        }
+    }
+}

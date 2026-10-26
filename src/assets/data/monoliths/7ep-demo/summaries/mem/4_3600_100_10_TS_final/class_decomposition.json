@@ -1,0 +1,321 @@
+{
+    "MEM": {
+        "decomposition": {
+            "partition0": [
+                {
+                    "id": "AckServletTests"
+                },
+                {
+                    "id": "DesktopTester"
+                },
+                {
+                    "id": "IPersistenceLayer"
+                },
+                {
+                    "id": "LoginServlet"
+                }
+            ],
+            "partition1": [
+                {
+                    "id": "AutoInsuranceActionTests"
+                },
+                {
+                    "id": "AutoInsuranceScriptClient"
+                },
+                {
+                    "id": "ExecutionDataClient"
+                },
+                {
+                    "id": "RegistrationStatusEnums"
+                },
+                {
+                    "id": "TailRecursive"
+                },
+                {
+                    "id": "package-info"
+                }
+            ],
+            "partition2": [
+                {
+                    "id": "FunctionalField"
+                },
+                {
+                    "id": "Loan"
+                },
+                {
+                    "id": "ServletUtils"
+                },
+                {
+                    "id": "environment"
+                }
+            ],
+            "partition3": [
+                {
+                    "id": "LibraryRegisterBookServletTests"
+                },
+                {
+                    "id": "User"
+                }
+            ],
+            "partition4": [
+                {
+                    "id": "AutoInsuranceAction"
+                },
+                {
+                    "id": "Borrower"
+                },
+                {
+                    "id": "DesktopUiTests"
+                },
+                {
+                    "id": "LoanTests"
+                },
+                {
+                    "id": "basic_test"
+                }
+            ],
+            "partition5": [
+                {
+                    "id": "DateUtils"
+                },
+                {
+                    "id": "FibServlet"
+                },
+                {
+                    "id": "FibonacciStepDefs"
+                },
+                {
+                    "id": "PasswordResultEnums"
+                },
+                {
+                    "id": "librarianStepDefs"
+                },
+                {
+                    "id": "package-info"
+                }
+            ],
+            "partition6": [
+                {
+                    "id": "LibraryBookListAvailableServlet"
+                },
+                {
+                    "id": "LibraryLendServletTests"
+                },
+                {
+                    "id": "authenticationStepDefs"
+                },
+                {
+                    "id": "package-info"
+                }
+            ],
+            "partition7": [
+                {
+                    "id": "Ackermann"
+                },
+                {
+                    "id": "AckermannParameterizedTests"
+                },
+                {
+                    "id": "AckermannStepDefs"
+                },
+                {
+                    "id": "AutoInsuranceProcessorTests"
+                },
+                {
+                    "id": "LendingTests"
+                },
+                {
+                    "id": "LibraryUtils"
+                },
+                {
+                    "id": "MathServletTests"
+                },
+                {
+                    "id": "PasswordResultTests"
+                },
+                {
+                    "id": "StringUtilsTests"
+                },
+                {
+                    "id": "package-info"
+                }
+            ],
+            "partition8": [
+                {
+                    "id": "CheckUtils"
+                },
+                {
+                    "id": "HtmlUnitTests"
+                },
+                {
+                    "id": "LibraryRegisterBorrowerServlet"
+                }
+            ],
+            "partition9": [
+                {
+                    "id": "ApiCalls"
+                },
+                {
+                    "id": "DbServlet"
+                },
+                {
+                    "id": "RegistrationResult"
+                }
+            ],
+            "partition10": [
+                {
+                    "id": "AlcoholResult"
+                },
+                {
+                    "id": "LibraryBookListAvailableServletTests"
+                },
+                {
+                    "id": "WebAppListenerTests"
+                },
+                {
+                    "id": "package-info"
+                }
+            ],
+            "partition11": [
+                {
+                    "id": "AckermannIterative"
+                },
+                {
+                    "id": "AutoInsuranceScriptServer"
+                },
+                {
+                    "id": "BookTests"
+                },
+                {
+                    "id": "LibraryActionResults"
+                },
+                {
+                    "id": "LibraryLendServlet"
+                },
+                {
+                    "id": "LoginServletTests"
+                },
+                {
+                    "id": "LoginStepDefs"
+                },
+                {
+                    "id": "MathServlet"
+                }
+            ],
+            "partition12": [
+                {
+                    "id": "InvalidClaimsException"
+                },
+                {
+                    "id": "WebAppListener"
+                },
+                {
+                    "id": "ackermannStepDefs"
+                }
+            ],
+            "partition13": [
+                {
+                    "id": "BorrowerTests"
+                },
+                {
+                    "id": "WarningLetterEnum"
+                }
+            ],
+            "partition14": [
+                {
+                    "id": "Calculator"
+                },
+                {
+                    "id": "CalculatorTests"
+                },
+                {
+                    "id": "CartesianProduct"
+                },
+                {
+                    "id": "CartesianProductStepDefs"
+                },
+                {
+                    "id": "LoginUtils"
+                },
+                {
+                    "id": "RegistrationResultTests"
+                },
+                {
+                    "id": "RegistrationUtilsTests"
+                },
+                {
+                    "id": "SeleniumTests"
+                }
+            ],
+            "partition15": [
+                {
+                    "id": "AlcoholCalculator"
+                },
+                {
+                    "id": "CheckUtilsTests"
+                },
+                {
+                    "id": "LibraryBookListSearchServletTests"
+                },
+                {
+                    "id": "RegistrationStepDefs"
+                },
+                {
+                    "id": "package-info"
+                }
+            ],
+            "partition16": [
+                {
+                    "id": "AutoInsuranceUI"
+                },
+                {
+                    "id": "PasswordResult"
+                },
+                {
+                    "id": "package-info"
+                }
+            ],
+            "partition17": [
+                {
+                    "id": "LibraryBorrowerListSearchServlet"
+                },
+                {
+                    "id": "LibraryRegisterBookServlet"
+                },
+                {
+                    "id": "StringUtils"
+                },
+                {
+                    "id": "package-info"
+                }
+            ],
+            "partition18": [
+                {
+                    "id": "BookCheckOutStepDefs"
+                },
+                {
+                    "id": "package-info"
+                }
+            ],
+            "partition19": [
+                {
+                    "id": "SelenifiedSample"
+                },
+                {
+                    "id": "fibonacciStepDefs"
+                }
+            ],
+            "partition20": [
+                {
+                    "id": "AckServlet"
+                },
+                {
+                    "id": "DateUtilsTests"
+                },
+                {
+                    "id": "DbServletTests"
+                }
+            ]
+        }
+    }
+}

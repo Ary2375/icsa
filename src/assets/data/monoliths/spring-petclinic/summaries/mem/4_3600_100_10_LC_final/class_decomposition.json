@@ -1,0 +1,90 @@
+{
+    "MEM": {
+        "decomposition": {
+            "partition0": [
+                {
+                    "id": "BaseEntity"
+                },
+                {
+                    "id": "NamedEntity"
+                },
+                {
+                    "id": "Person"
+                }
+            ],
+            "partition1": [
+                {
+                    "id": "Owner"
+                },
+                {
+                    "id": "VisitController"
+                }
+            ],
+            "partition2": [
+                {
+                    "id": "ClinicServiceTests"
+                },
+                {
+                    "id": "CrashController"
+                },
+                {
+                    "id": "CrashControllerTests"
+                },
+                {
+                    "id": "OwnerControllerTests"
+                },
+                {
+                    "id": "PetControllerTests"
+                },
+                {
+                    "id": "PetTypeFormatterTests"
+                },
+                {
+                    "id": "PetValidator"
+                },
+                {
+                    "id": "ValidatorTests"
+                },
+                {
+                    "id": "VetControllerTests"
+                },
+                {
+                    "id": "VisitControllerTests"
+                }
+            ],
+            "partition3": [
+                {
+                    "id": "Pet"
+                },
+                {
+                    "id": "Specialty"
+                },
+                {
+                    "id": "Vet"
+                },
+                {
+                    "id": "Visit"
+                }
+            ],
+            "partition4": [
+                {
+                    "id": "OwnerRepository"
+                },
+                {
+                    "id": "PetTypeFormatter"
+                }
+            ],
+            "partition5": [
+                {
+                    "id": "VetController"
+                },
+                {
+                    "id": "VetRepository"
+                },
+                {
+                    "id": "package-info"
+                }
+            ]
+        }
+    }
+}

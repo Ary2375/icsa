@@ -1,0 +1,173 @@
+{
+    "tool": {
+        "decomposition": {
+            "patition2": [
+                {
+                    "id": "CatalogController"
+                },
+                {
+                    "id": "CatalogItem"
+                },
+                {
+                    "id": "CatalogItem1"
+                },
+                {
+                    "id": "CatalogItemsRepository"
+                },
+                {
+                    "id": "MockCatalogItemsRepository"
+                }
+            ],
+            "patition0": [
+                {
+                    "id": "BadRequestException"
+                },
+                {
+                    "id": "ConflictingRequestException"
+                },
+                {
+                    "id": "Dealer"
+                },
+                {
+                    "id": "DealerController"
+                },
+                {
+                    "id": "DealerInfo"
+                },
+                {
+                    "id": "DealersRepository"
+                },
+                {
+                    "id": "Delivery"
+                },
+                {
+                    "id": "DeliveryAddress"
+                },
+                {
+                    "id": "MockDealersRepository"
+                },
+                {
+                    "id": "MockOrderRepository"
+                },
+                {
+                    "id": "MockQuoteRepository"
+                },
+                {
+                    "id": "MockShipmentRepository"
+                },
+                {
+                    "id": "MongoCatalogItemsRepository"
+                },
+                {
+                    "id": "MongoDealersRepository"
+                },
+                {
+                    "id": "MongoOperationsWithRetry"
+                },
+                {
+                    "id": "MongoOrderRepository"
+                },
+                {
+                    "id": "MongoQuoteRepository"
+                },
+                {
+                    "id": "MongoShipmentRepository"
+                },
+                {
+                    "id": "Order"
+                },
+                {
+                    "id": "OrderController"
+                },
+                {
+                    "id": "OrderDetails"
+                },
+                {
+                    "id": "OrderEventInfo"
+                },
+                {
+                    "id": "OrderRepository"
+                },
+                {
+                    "id": "OrderUpdateInfo"
+                },
+                {
+                    "id": "PhoneInfo"
+                },
+                {
+                    "id": "Quote"
+                },
+                {
+                    "id": "QuoteController"
+                },
+                {
+                    "id": "QuoteDetails"
+                },
+                {
+                    "id": "QuoteItemInfo"
+                },
+                {
+                    "id": "QuoteRepository"
+                },
+                {
+                    "id": "RepositoryFactory"
+                },
+                {
+                    "id": "ShipmentController"
+                },
+                {
+                    "id": "ShipmentDetails"
+                },
+                {
+                    "id": "ShipmentEventInfo"
+                },
+                {
+                    "id": "ShipmentRecord"
+                },
+                {
+                    "id": "ShipmentRepository"
+                }
+            ],
+            "patition1": [
+                {
+                    "id": "MongoDBProperties"
+                },
+                {
+                    "id": "OrderingConfiguration"
+                },
+                {
+                    "id": "OrderingServiceProperties"
+                },
+                {
+                    "id": "PingController"
+                },
+                {
+                    "id": "PropertyHelper"
+                }
+            ],
+            "UNOBSERVED": [
+                {
+                    "id": "AppInsightsFilter"
+                },
+                {
+                    "id": "OrderStatus"
+                },
+                {
+                    "id": "OrderingInitializer"
+                },
+                {
+                    "id": "PostgresqlProperties"
+                },
+                {
+                    "id": "SimpleCORSFilter"
+                },
+                {
+                    "id": "TestPath"
+                },
+                {
+                    "id": "Utility"
+                }
+            ]
+        }
+    }
+}

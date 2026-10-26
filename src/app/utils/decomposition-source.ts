@@ -16,6 +16,34 @@ export const LLM_FOLDERS: Record<string, string> = {
   'LLM: GLM 4.6': 'glm-4.6',
 };
 
+// Folder of each state-of-the-art method under summaries/. MONO2MICRO is stored by the number of
+// partitions it was run with, then by strategy.
+const LITERATURE_FOLDERS: Record<string, string> = {
+  DATACENTRIC: 'datacentric/n_partitions',
+  GROUND_TRUTH: 'ground_truth/n_partitions',
+  HyDec: 'hydec/n_partitions',
+  LOG2MS: 'log2ms/n_partitions',
+};
+
+export const MONO2MICRO_PARTITIONS: Record<string, number> = {
+  '7ep-demo': 4,
+  'jpetstore-6': 3,
+  PartsUnlimitedMRP: 5,
+  'spring-petclinic': 3,
+};
+
+export function literaturePath(caseStudy: string, tool: string, strategy: string): string | null {
+  const monolith = MONOLITH_FOLDERS[caseStudy];
+  if (!monolith) return null;
+  let folder = LITERATURE_FOLDERS[tool];
+  if (tool === 'MONO2MICRO') {
+    const partitions = MONO2MICRO_PARTITIONS[monolith];
+    if (!partitions || !/^\w+$/.test(strategy)) return null;
+    folder = `mono2micro/${partitions}_partitions/${strategy}`;
+  }
+  return folder ? `${DATA_ROOT}/${monolith}/summaries/${folder}/class_decomposition.json` : null;
+}
+
 // An empty variant is the static baseline, stored directly in the artifacts folder.
 export function decompositionPath(
   caseStudy: string,

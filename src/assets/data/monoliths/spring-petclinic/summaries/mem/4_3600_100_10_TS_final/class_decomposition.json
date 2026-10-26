@@ -1,0 +1,76 @@
+{
+    "MEM": {
+        "decomposition": {
+            "partition0": [
+                {
+                    "id": "OwnerController"
+                },
+                {
+                    "id": "OwnerControllerTests"
+                },
+                {
+                    "id": "PetController"
+                },
+                {
+                    "id": "VisitController"
+                }
+            ],
+            "partition1": [
+                {
+                    "id": "CacheConfiguration"
+                },
+                {
+                    "id": "VetRepository"
+                }
+            ],
+            "partition2": [
+                {
+                    "id": "BaseEntity"
+                },
+                {
+                    "id": "NamedEntity"
+                },
+                {
+                    "id": "Person"
+                },
+                {
+                    "id": "PetType"
+                },
+                {
+                    "id": "ValidatorTests"
+                },
+                {
+                    "id": "VetController"
+                },
+                {
+                    "id": "VetControllerTests"
+                },
+                {
+                    "id": "VisitControllerTests"
+                },
+                {
+                    "id": "package-info"
+                }
+            ],
+            "partition3": [
+                {
+                    "id": "CrashControllerTests"
+                },
+                {
+                    "id": "Pet"
+                },
+                {
+                    "id": "PetControllerTests"
+                }
+            ],
+            "partition4": [
+                {
+                    "id": "OwnerRepository"
+                },
+                {
+                    "id": "PetTypeFormatter"
+                }
+            ]
+        }
+    }
+}

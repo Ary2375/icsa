@@ -1,0 +1,225 @@
+{
+    "tool": {
+        "decomposition": {
+            "authentication": [
+                {
+                    "id": "AssertionException"
+                },
+                {
+                    "id": "CheckUtils"
+                },
+                {
+                    "id": "EmptyDataSource"
+                },
+                {
+                    "id": "IPersistenceLayer"
+                },
+                {
+                    "id": "LoginServlet"
+                },
+                {
+                    "id": "LoginUtils"
+                },
+                {
+                    "id": "NotImplementedException"
+                },
+                {
+                    "id": "ParameterObject"
+                },
+                {
+                    "id": "PasswordResult"
+                },
+                {
+                    "id": "PasswordResultEnums"
+                },
+                {
+                    "id": "PersistenceLayer"
+                },
+                {
+                    "id": "RegisterServlet"
+                },
+                {
+                    "id": "RegistrationResult"
+                },
+                {
+                    "id": "RegistrationStatusEnums"
+                },
+                {
+                    "id": "RegistrationUtils"
+                },
+                {
+                    "id": "ServletUtils"
+                },
+                {
+                    "id": "SqlData"
+                },
+                {
+                    "id": "SqlRuntimeException"
+                },
+                {
+                    "id": "StringUtils"
+                },
+                {
+                    "id": "User"
+                },
+                {
+                    "id": "WebAppListener"
+                }
+            ],
+            "library": [
+                {
+                    "id": "Book"
+                },
+                {
+                    "id": "Borrower"
+                },
+                {
+                    "id": "EmptyDataSource"
+                },
+                {
+                    "id": "IPersistenceLayer"
+                },
+                {
+                    "id": "LibraryActionResults"
+                },
+                {
+                    "id": "LibraryBookListAvailableServlet"
+                },
+                {
+                    "id": "LibraryBookListSearchServlet"
+                },
+                {
+                    "id": "LibraryBorrowerListSearchServlet"
+                },
+                {
+                    "id": "LibraryLendServlet"
+                },
+                {
+                    "id": "LibraryRegisterBookServlet"
+                },
+                {
+                    "id": "LibraryRegisterBorrowerServlet"
+                },
+                {
+                    "id": "LibraryUtils"
+                },
+                {
+                    "id": "Loan"
+                },
+                {
+                    "id": "NotImplementedException"
+                },
+                {
+                    "id": "ParameterObject"
+                },
+                {
+                    "id": "PersistenceLayer"
+                },
+                {
+                    "id": "ServletUtils"
+                },
+                {
+                    "id": "SqlData"
+                },
+                {
+                    "id": "SqlRuntimeException"
+                },
+                {
+                    "id": "StringUtils"
+                },
+                {
+                    "id": "WebAppListener"
+                }
+            ],
+            "mathematics": [
+                {
+                    "id": "AckServlet"
+                },
+                {
+                    "id": "Ackermann"
+                },
+                {
+                    "id": "AckermannIterative"
+                },
+                {
+                    "id": "AlcoholCalculator"
+                },
+                {
+                    "id": "AlcoholResult"
+                },
+                {
+                    "id": "Calculator"
+                },
+                {
+                    "id": "CartesianProduct"
+                },
+                {
+                    "id": "DinnerPrices"
+                },
+                {
+                    "id": "FibServlet"
+                },
+                {
+                    "id": "Fibonacci"
+                },
+                {
+                    "id": "FibonacciIterative"
+                },
+                {
+                    "id": "FunctionalField"
+                },
+                {
+                    "id": "MathServlet"
+                },
+                {
+                    "id": "ServletUtils"
+                },
+                {
+                    "id": "TailRecursive"
+                }
+            ],
+            "persistence": [
+                {
+                    "id": "AssertionException"
+                },
+                {
+                    "id": "CheckUtils"
+                },
+                {
+                    "id": "DbServlet"
+                },
+                {
+                    "id": "EmptyDataSource"
+                },
+                {
+                    "id": "IPersistenceLayer"
+                },
+                {
+                    "id": "NotImplementedException"
+                },
+                {
+                    "id": "ParameterObject"
+                },
+                {
+                    "id": "PersistenceLayer"
+                },
+                {
+                    "id": "ServletUtils"
+                },
+                {
+                    "id": "SqlData"
+                },
+                {
+                    "id": "SqlRuntimeException"
+                },
+                {
+                    "id": "StringUtils"
+                },
+                {
+                    "id": "WebAppListener"
+                }
+            ],
+            "UNOBSERVED": []
+        }
+    }
+}

@@ -1,5 +1,8 @@
+export type ExperimentKind = 'llm' | 'literature';
+
 export interface ExperimentOption {
   id: string;
+  kind: ExperimentKind;
   tool: string;
   chunk: string;
   mode: string;
@@ -40,7 +43,7 @@ export function parseThesisStrategy(
 }
 
 export function toolLabel(tool: string): string {
-  return tool.replace(/^LLM:\s*/, '');
+  return tool === 'GROUND_TRUTH' ? 'Ground Truth' : tool.replace(/^LLM:\s*/, '');
 }
 
 export function modeLabel(mode: string): string {
@@ -97,6 +100,58 @@ export function selectionOf(option: ExperimentOption): Selection {
   };
 }
 
+export function kindOf(options: ExperimentOption[], tool: string): ExperimentKind {
+  return options.find((option) => option.tool === tool)?.kind ?? 'llm';
+}
+
+const TOOL_GROUP_LABELS: Record<ExperimentKind, string> = {
+  llm: 'LLM',
+  literature: 'State of the art',
+};
+
+export function toolGroups(options: ExperimentOption[]): { label: string; tools: string[] }[] {
+  const { tools } = facetValues(options);
+  return (['llm', 'literature'] as const)
+    .map((kind) => ({
+      label: TOOL_GROUP_LABELS[kind],
+      tools: tools.filter((tool) => kindOf(options, tool) === kind),
+    }))
+    .filter((group) => group.tools.length);
+}
+
+// The experiments of one tool, in a stable order. For a state-of-the-art method these are its
+// configurations (for example the MONO2MICRO strategies).
+export function variantsOfTool(options: ExperimentOption[], tool: string): string[] {
+  return [...new Set(options.filter((o) => o.tool === tool).map((o) => o.variant))].sort((a, b) =>
+    a.localeCompare(b),
+  );
+}
+
+// Changing the tool keeps the other choices when the new tool has such an experiment; otherwise it
+// moves to the experiment of the new tool that shares most of them, so it never ends in a dead end.
+export function selectionForTool(
+  options: ExperimentOption[],
+  selection: Selection,
+  tool: string,
+): Selection {
+  const exact = findOption(options, { ...selection, tool });
+  if (exact) return selectionOf(exact);
+  const shared = (o: ExperimentOption) =>
+    Number(o.chunk === selection.chunk) +
+    Number(o.mode === selection.mode) +
+    Number(o.variant === selection.variant);
+  const best = options
+    .filter((o) => o.tool === tool)
+    .sort(
+      (a, b) =>
+        shared(b) - shared(a) ||
+        compareChunks(a.chunk, b.chunk) ||
+        compareModes(a.mode, b.mode) ||
+        compareVariants(a.variant, b.variant),
+    )[0];
+  return best ? selectionOf(best) : { ...selection, tool };
+}
+
 export function findOption<T extends ExperimentOption>(
   options: T[],
   selection: Selection,
@@ -123,10 +178,13 @@ export function isAvailable(
 }
 
 // The reference starts as the static baseline; the selected experiment adds a DFG to it.
-export function defaultSelections(options: ExperimentOption[]): {
+// State-of-the-art methods are never a default: they are chosen on purpose.
+export function defaultSelections(allOptions: ExperimentOption[]): {
   reference: Selection;
   selected: Selection;
 } {
+  const llm = allOptions.filter((option) => option.kind === 'llm');
+  const options = llm.length ? llm : allOptions;
   const sorted = [...options].sort(
     (a, b) =>
       a.tool.localeCompare(b.tool) ||

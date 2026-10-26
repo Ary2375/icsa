@@ -1,0 +1,662 @@
+{
+    "1_structural_static": {
+        "decomposition": {
+            "partition0": [
+                {
+                    "id": "Book"
+                },
+                {
+                    "id": "LibraryUtils"
+                },
+                {
+                    "id": "PasswordResult"
+                },
+                {
+                    "id": "User"
+                },
+                {
+                    "id": "WebAppListener"
+                }
+            ],
+            "partition1": [
+                {
+                    "id": "Ackermann"
+                }
+            ],
+            "partition11": [
+                {
+                    "id": "LoginUtils"
+                }
+            ],
+            "partition12": [
+                {
+                    "id": "AlcoholCalculator"
+                },
+                {
+                    "id": "CartesianProduct"
+                },
+                {
+                    "id": "DinnerPrices"
+                }
+            ],
+            "partition7": [
+                {
+                    "id": "LoginServlet"
+                },
+                {
+                    "id": "MathServlet"
+                },
+                {
+                    "id": "PasswordResultEnums"
+                },
+                {
+                    "id": "RegisterServlet"
+                },
+                {
+                    "id": "RegistrationResult"
+                },
+                {
+                    "id": "RegistrationStatusEnums"
+                }
+            ],
+            "partition8": [
+                {
+                    "id": "AssertionException"
+                }
+            ],
+            "partition9": [
+                {
+                    "id": "DbServlet"
+                },
+                {
+                    "id": "Fibonacci"
+                },
+                {
+                    "id": "StringUtils"
+                }
+            ]
+        },
+        "links": [
+            {
+                "source": "LoginServlet",
+                "target": "LoginUtils",
+                "weight": "2"
+            },
+            {
+                "source": "LoginServlet",
+                "target": "StringUtils",
+                "weight": "1"
+            },
+            {
+                "source": "RegisterServlet",
+                "target": "RegistrationResult",
+                "weight": "1"
+            },
+            {
+                "source": "RegisterServlet",
+                "target": "StringUtils",
+                "weight": "1"
+            },
+            {
+                "source": "PasswordResult",
+                "target": "PasswordResultEnums",
+                "weight": "1"
+            },
+            {
+                "source": "RegistrationResult",
+                "target": "RegistrationStatusEnums",
+                "weight": "1"
+            },
+            {
+                "source": "LibraryUtils",
+                "target": "Book",
+                "weight": "14"
+            },
+            {
+                "source": "Book",
+                "target": "StringUtils",
+                "weight": "1"
+            },
+            {
+                "source": "DbServlet",
+                "target": "StringUtils",
+                "weight": "1"
+            }
+        ]
+    },
+    "3_business_use_cases": {
+        "decomposition": {
+            "Authentication USE CASE": [
+                {
+                    "id": "AUTHENTICATION USE CASE"
+                }
+            ],
+            "Library USE CASE": [
+                {
+                    "id": "LIBRARY USE CASE"
+                }
+            ],
+            "Mathematics USE CASE": [
+                {
+                    "id": "MATHEMATICS USE CASE"
+                }
+            ],
+            "Persistence USE CASE": [
+                {
+                    "id": "PERSISTENCE USE CASE"
+                }
+            ],
+            "partition0": [
+                {
+                    "id": "Book"
+                },
+                {
+                    "id": "LibraryUtils"
+                },
+                {
+                    "id": "PasswordResult"
+                },
+                {
+                    "id": "User"
+                },
+                {
+                    "id": "WebAppListener"
+                }
+            ],
+            "partition1": [
+                {
+                    "id": "Ackermann"
+                }
+            ],
+            "partition11": [
+                {
+                    "id": "LoginUtils"
+                }
+            ],
+            "partition12": [
+                {
+                    "id": "AlcoholCalculator"
+                },
+                {
+                    "id": "CartesianProduct"
+                },
+                {
+                    "id": "DinnerPrices"
+                }
+            ],
+            "partition7": [
+                {
+                    "id": "LoginServlet"
+                },
+                {
+                    "id": "MathServlet"
+                },
+                {
+                    "id": "PasswordResultEnums"
+                },
+                {
+                    "id": "RegisterServlet"
+                },
+                {
+                    "id": "RegistrationResult"
+                },
+                {
+                    "id": "RegistrationStatusEnums"
+                }
+            ],
+            "partition8": [
+                {
+                    "id": "AssertionException"
+                }
+            ],
+            "partition9": [
+                {
+                    "id": "DbServlet"
+                },
+                {
+                    "id": "Fibonacci"
+                },
+                {
+                    "id": "StringUtils"
+                }
+            ]
+        },
+        "links": [
+            {
+                "source": "AUTHENTICATION USE CASE",
+                "target": "CheckUtils",
+                "weight": "12"
+            },
+            {
+                "source": "AUTHENTICATION USE CASE",
+                "target": "LoginServlet",
+                "weight": "3"
+            },
+            {
+                "source": "AUTHENTICATION USE CASE",
+                "target": "LoginUtils",
+                "weight": "1"
+            },
+            {
+                "source": "AUTHENTICATION USE CASE",
+                "target": "PersistenceLayer",
+                "weight": "20"
+            },
+            {
+                "source": "AUTHENTICATION USE CASE",
+                "target": "RegisterServlet",
+                "weight": "8"
+            },
+            {
+                "source": "AUTHENTICATION USE CASE",
+                "target": "RegistrationResult",
+                "weight": "1"
+            },
+            {
+                "source": "AUTHENTICATION USE CASE",
+                "target": "RegistrationUtils",
+                "weight": "4"
+            },
+            {
+                "source": "AUTHENTICATION USE CASE",
+                "target": "ServletUtils",
+                "weight": "7"
+            },
+            {
+                "source": "AUTHENTICATION USE CASE",
+                "target": "SqlData",
+                "weight": "14"
+            },
+            {
+                "source": "AUTHENTICATION USE CASE",
+                "target": "StringUtils",
+                "weight": "14"
+            },
+            {
+                "source": "LIBRARY USE CASE",
+                "target": "Book",
+                "weight": "56"
+            },
+            {
+                "source": "LIBRARY USE CASE",
+                "target": "Borrower",
+                "weight": "44"
+            },
+            {
+                "source": "LIBRARY USE CASE",
+                "target": "CheckUtils",
+                "weight": "17"
+            },
+            {
+                "source": "LIBRARY USE CASE",
+                "target": "LibraryBookListAvailableServlet",
+                "weight": "4"
+            },
+            {
+                "source": "LIBRARY USE CASE",
+                "target": "LibraryBookListSearchServlet",
+                "weight": "17"
+            },
+            {
+                "source": "LIBRARY USE CASE",
+                "target": "LibraryBorrowerListSearchServlet",
+                "weight": "21"
+            },
+            {
+                "source": "LIBRARY USE CASE",
+                "target": "LibraryLendServlet",
+                "weight": "4"
+            },
+            {
+                "source": "LIBRARY USE CASE",
+                "target": "LibraryRegisterBookServlet",
+                "weight": "2"
+            },
+            {
+                "source": "LIBRARY USE CASE",
+                "target": "LibraryRegisterBorrowerServlet",
+                "weight": "2"
+            },
+            {
+                "source": "LIBRARY USE CASE",
+                "target": "LibraryUtils",
+                "weight": "33"
+            },
+            {
+                "source": "LIBRARY USE CASE",
+                "target": "Loan",
+                "weight": "4"
+            },
+            {
+                "source": "LIBRARY USE CASE",
+                "target": "PersistenceLayer",
+                "weight": "123"
+            },
+            {
+                "source": "LIBRARY USE CASE",
+                "target": "ServletUtils",
+                "weight": "31"
+            },
+            {
+                "source": "LIBRARY USE CASE",
+                "target": "SqlData",
+                "weight": "69"
+            },
+            {
+                "source": "LIBRARY USE CASE",
+                "target": "StringUtils",
+                "weight": "72"
+            },
+            {
+                "source": "MATHEMATICS USE CASE",
+                "target": "AckServlet",
+                "weight": "10"
+            },
+            {
+                "source": "MATHEMATICS USE CASE",
+                "target": "Ackermann",
+                "weight": "45"
+            },
+            {
+                "source": "MATHEMATICS USE CASE",
+                "target": "AckermannIterative$$",
+                "weight": "3"
+            },
+            {
+                "source": "MATHEMATICS USE CASE",
+                "target": "AckermannIterative$$$Field",
+                "weight": "1"
+            },
+            {
+                "source": "MATHEMATICS USE CASE",
+                "target": "Calculator",
+                "weight": "1"
+            },
+            {
+                "source": "MATHEMATICS USE CASE",
+                "target": "FibServlet",
+                "weight": "12"
+            },
+            {
+                "source": "MATHEMATICS USE CASE",
+                "target": "Fibonacci",
+                "weight": "3"
+            },
+            {
+                "source": "MATHEMATICS USE CASE",
+                "target": "FibonacciIterative",
+                "weight": "2"
+            },
+            {
+                "source": "MATHEMATICS USE CASE",
+                "target": "MathServlet",
+                "weight": "5"
+            },
+            {
+                "source": "MATHEMATICS USE CASE",
+                "target": "ServletUtils",
+                "weight": "6"
+            },
+            {
+                "source": "MATHEMATICS USE CASE",
+                "target": "TailRecursive$$",
+                "weight": "1"
+            },
+            {
+                "source": "PERSISTENCE USE CASE",
+                "target": "DbServlet",
+                "weight": "3"
+            },
+            {
+                "source": "PERSISTENCE USE CASE",
+                "target": "PersistenceLayer",
+                "weight": "9"
+            },
+            {
+                "source": "PERSISTENCE USE CASE",
+                "target": "ServletUtils",
+                "weight": "3"
+            },
+            {
+                "source": "PERSISTENCE USE CASE",
+                "target": "StringUtils",
+                "weight": "3"
+            }
+        ]
+    },
+    "4_database_access": {
+        "decomposition": {
+            "BOOK TABLE": [
+                {
+                    "id": "BOOK TABLE"
+                }
+            ],
+            "BORROWER TABLE": [
+                {
+                    "id": "BORROWER TABLE"
+                }
+            ],
+            "LOAN TABLE": [
+                {
+                    "id": "LOAN TABLE"
+                }
+            ],
+            "USER TABLE": [
+                {
+                    "id": "USER TABLE"
+                }
+            ],
+            "partition0": [
+                {
+                    "id": "Book"
+                },
+                {
+                    "id": "LibraryUtils"
+                },
+                {
+                    "id": "PasswordResult"
+                },
+                {
+                    "id": "User"
+                },
+                {
+                    "id": "WebAppListener"
+                }
+            ],
+            "partition1": [
+                {
+                    "id": "Ackermann"
+                }
+            ],
+            "partition11": [
+                {
+                    "id": "LoginUtils"
+                }
+            ],
+            "partition12": [
+                {
+                    "id": "AlcoholCalculator"
+                },
+                {
+                    "id": "CartesianProduct"
+                },
+                {
+                    "id": "DinnerPrices"
+                }
+            ],
+            "partition7": [
+                {
+                    "id": "LoginServlet"
+                },
+                {
+                    "id": "MathServlet"
+                },
+                {
+                    "id": "PasswordResultEnums"
+                },
+                {
+                    "id": "RegisterServlet"
+                },
+                {
+                    "id": "RegistrationResult"
+                },
+                {
+                    "id": "RegistrationStatusEnums"
+                }
+            ],
+            "partition8": [
+                {
+                    "id": "AssertionException"
+                }
+            ],
+            "partition9": [
+                {
+                    "id": "DbServlet"
+                },
+                {
+                    "id": "Fibonacci"
+                },
+                {
+                    "id": "StringUtils"
+                }
+            ]
+        },
+        "links": [
+            {
+                "source": "DbServlet",
+                "target": "BORROWER TABLE",
+                "weight": "1"
+            },
+            {
+                "source": "IPersistenceLayer",
+                "target": "BORROWER TABLE",
+                "weight": "12"
+            },
+            {
+                "source": "LibraryBorrowerListSearchServlet",
+                "target": "BORROWER TABLE",
+                "weight": "4"
+            },
+            {
+                "source": "LibraryLendServlet",
+                "target": "BORROWER TABLE",
+                "weight": "1"
+            },
+            {
+                "source": "LibraryRegisterBorrowerServlet",
+                "target": "BORROWER TABLE",
+                "weight": "1"
+            },
+            {
+                "source": "LibraryUtils",
+                "target": "BORROWER TABLE",
+                "weight": "8"
+            },
+            {
+                "source": "PersistenceLayer",
+                "target": "BORROWER TABLE",
+                "weight": "13"
+            },
+            {
+                "source": "DbServlet",
+                "target": "BOOK TABLE",
+                "weight": "1"
+            },
+            {
+                "source": "IPersistenceLayer",
+                "target": "BOOK TABLE",
+                "weight": "11"
+            },
+            {
+                "source": "LibraryBookListAvailableServlet",
+                "target": "BOOK TABLE",
+                "weight": "1"
+            },
+            {
+                "source": "LibraryBookListSearchServlet",
+                "target": "BOOK TABLE",
+                "weight": "4"
+            },
+            {
+                "source": "LibraryLendServlet",
+                "target": "BOOK TABLE",
+                "weight": "1"
+            },
+            {
+                "source": "LibraryRegisterBookServlet",
+                "target": "BOOK TABLE",
+                "weight": "1"
+            },
+            {
+                "source": "LibraryUtils",
+                "target": "BOOK TABLE",
+                "weight": "9"
+            },
+            {
+                "source": "PersistenceLayer",
+                "target": "BOOK TABLE",
+                "weight": "12"
+            },
+            {
+                "source": "DbServlet",
+                "target": "LOAN TABLE",
+                "weight": "1"
+            },
+            {
+                "source": "IPersistenceLayer",
+                "target": "LOAN TABLE",
+                "weight": "7"
+            },
+            {
+                "source": "LibraryLendServlet",
+                "target": "LOAN TABLE",
+                "weight": "1"
+            },
+            {
+                "source": "LibraryUtils",
+                "target": "LOAN TABLE",
+                "weight": "4"
+            },
+            {
+                "source": "PersistenceLayer",
+                "target": "LOAN TABLE",
+                "weight": "8"
+            },
+            {
+                "source": "DbServlet",
+                "target": "USER TABLE",
+                "weight": "1"
+            },
+            {
+                "source": "IPersistenceLayer",
+                "target": "USER TABLE",
+                "weight": "8"
+            },
+            {
+                "source": "LoginServlet",
+                "target": "USER TABLE",
+                "weight": "1"
+            },
+            {
+                "source": "LoginUtils",
+                "target": "USER TABLE",
+                "weight": "1"
+            },
+            {
+                "source": "PersistenceLayer",
+                "target": "USER TABLE",
+                "weight": "9"
+            },
+            {
+                "source": "RegisterServlet",
+                "target": "USER TABLE",
+                "weight": "1"
+            },
+            {
+                "source": "RegistrationUtils",
+                "target": "USER TABLE",
+                "weight": "3"
+            }
+        ]
+    }
+}

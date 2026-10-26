@@ -1,0 +1,212 @@
+{
+  "tool": {
+    "decomposition": {
+      "CatalogManagementService": [
+        {
+          "id": "CatalogItem"
+        },
+        {
+          "id": "CatalogItem1"
+        },
+        {
+          "id": "CatalogItemsRepository"
+        },
+        {
+          "id": "RepositoryFactory"
+        },
+        {
+          "id": "MockCatalogItemsRepository"
+        },
+        {
+          "id": "MongoCatalogItemsRepository"
+        },
+        {
+          "id": "MongoOperationsWithRetry"
+        },
+        {
+          "id": "MrpConnectService"
+        },
+        {
+          "id": "QueueFactory"
+        },
+        {
+          "id": "QueueService"
+        },
+        {
+          "id": "CatalogController"
+        },
+        {
+          "id": "QueueResponse"
+        },
+        {
+          "id": "ProductItem"
+        },
+        {
+          "id": "ProductMessage"
+        },
+        {
+          "id": "CreateOrderProcessTask"
+        },
+        {
+          "id": "UpdateProductProcessTask"
+        },
+        {
+          "id": "BadRequestException"
+        },
+        {
+          "id": "ConflictingRequestException"
+        },
+        {
+          "id": "MongoDBProperties"
+        },
+        {
+          "id": "TestPath"
+        },
+        {
+          "id": "Utility"
+        }
+      ],
+      "DealersManagementService": [
+        {
+          "id": "Dealer"
+        },
+        {
+          "id": "DealersRepository"
+        },
+        {
+          "id": "MockDealersRepository"
+        },
+        {
+          "id": "MongoDealersRepository"
+        },
+        {
+          "id": "DealerController"
+        },
+        {
+          "id": "DealerInfo"
+        },
+        {
+          "id": "PostgresqlProperties"
+        }
+      ],
+      "OrderManagementService": [
+        {
+          "id": "OrderDetails"
+        },
+        {
+          "id": "ShipmentDetails"
+        },
+        {
+          "id": "OrderRepository"
+        },
+        {
+          "id": "ShipmentRepository"
+        },
+        {
+          "id": "MockOrderRepository"
+        },
+        {
+          "id": "MockShipmentRepository"
+        },
+        {
+          "id": "MongoOrderRepository"
+        },
+        {
+          "id": "MongoShipmentRepository"
+        },
+        {
+          "id": "OrderController"
+        },
+        {
+          "id": "PingController"
+        },
+        {
+          "id": "ShipmentController"
+        },
+        {
+          "id": "OrderingServiceProperties"
+        },
+        {
+          "id": "ConfigurationHelpers"
+        },
+        {
+          "id": "ConfigurationManager"
+        },
+        {
+          "id": "DeliveryAddress"
+        },
+        {
+          "id": "Order"
+        },
+        {
+          "id": "PhoneInfo"
+        },
+        {
+          "id": "ShipmentEventInfo"
+        },
+        {
+          "id": "ShipmentRecord"
+        },
+        {
+          "id": "AppInsightsFilter"
+        },
+        {
+          "id": "Delivery"
+        },
+        {
+          "id": "OrderEventInfo"
+        },
+        {
+          "id": "OrderUpdateInfo"
+        },
+        {
+          "id": "OrderingConfiguration"
+        },
+        {
+          "id": "OrderingInitializer"
+        },
+        {
+          "id": "PropertyHelper"
+        },
+        {
+          "id": "SimpleCORSFilter"
+        },
+        {
+          "id": "Main"
+        },
+        {
+          "id": "Constants"
+        }
+      ],
+      "QuotesManagementService": [
+        {
+          "id": "QuoteDetails"
+        },
+        {
+          "id": "QuoteRepository"
+        },
+        {
+          "id": "MockQuoteRepository"
+        },
+        {
+          "id": "MongoQuoteRepository"
+        },
+        {
+          "id": "QuoteController"
+        },
+        {
+          "id": "Quote"
+        },
+        {
+          "id": "QuoteItemInfo"
+        },
+        {
+          "id": "OrderItem"
+        },
+        {
+          "id": "OrderMessage"
+        }
+      ]
+    }
+  }
+}

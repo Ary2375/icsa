@@ -1,0 +1,197 @@
+{
+    "tool": {
+        "decomposition": {
+            "partition1": [
+                {
+                    "id": "MongoDealersRepository"
+                },
+                {
+                    "id": "MongoOrderRepository"
+                },
+                {
+                    "id": "MongoShipmentRepository"
+                },
+                {
+                    "id": "Order"
+                },
+                {
+                    "id": "OrderController"
+                },
+                {
+                    "id": "OrderUpdateInfo"
+                },
+                {
+                    "id": "QuoteRepository"
+                },
+                {
+                    "id": "Utility"
+                }
+            ],
+            "partition2": [
+                {
+                    "id": "SimpleCORSFilter"
+                }
+            ],
+            "partition3": [
+                {
+                    "id": "Delivery"
+                },
+                {
+                    "id": "OrderStatus"
+                }
+            ],
+            "partition4": [
+                {
+                    "id": "CatalogItem"
+                },
+                {
+                    "id": "DealersRepository"
+                },
+                {
+                    "id": "MockDealersRepository"
+                },
+                {
+                    "id": "QuoteDetails"
+                }
+            ],
+            "partition5": [
+                {
+                    "id": "DeliveryAddress"
+                },
+                {
+                    "id": "MongoQuoteRepository"
+                },
+                {
+                    "id": "RepositoryFactory"
+                }
+            ],
+            "partition6": [
+                {
+                    "id": "CatalogController"
+                },
+                {
+                    "id": "DealerController"
+                },
+                {
+                    "id": "DealerInfo"
+                },
+                {
+                    "id": "MongoOperationsWithRetry"
+                }
+            ],
+            "partition7": [
+                {
+                    "id": "QuoteController"
+                },
+                {
+                    "id": "ShipmentController"
+                }
+            ],
+            "partition8": [
+                {
+                    "id": "AppInsightsFilter"
+                },
+                {
+                    "id": "CatalogItem"
+                },
+                {
+                    "id": "MockOrderRepository"
+                },
+                {
+                    "id": "OrderRepository"
+                },
+                {
+                    "id": "OrderingConfiguration"
+                },
+                {
+                    "id": "Quote"
+                },
+                {
+                    "id": "QuoteItemInfo"
+                },
+                {
+                    "id": "ShipmentEventInfo"
+                }
+            ],
+            "partition9": [
+                {
+                    "id": "BadRequestException"
+                },
+                {
+                    "id": "CatalogItemsRepository"
+                },
+                {
+                    "id": "ConflictingRequestException"
+                },
+                {
+                    "id": "MongoDBProperties"
+                },
+                {
+                    "id": "OrderingServiceProperties"
+                },
+                {
+                    "id": "PostgresqlProperties"
+                },
+                {
+                    "id": "ShipmentRepository"
+                }
+            ],
+            "partition10": [
+                {
+                    "id": "Quote"
+                },
+                {
+                    "id": "ShipmentRecord"
+                },
+                {
+                    "id": "TestPath"
+                }
+            ],
+            "partition11": [
+                {
+                    "id": "MongoCatalogItemsRepository"
+                },
+                {
+                    "id": "OrderEventInfo"
+                },
+                {
+                    "id": "OrderingInitializer"
+                }
+            ],
+            "partition12": [
+                {
+                    "id": "PhoneInfo"
+                }
+            ],
+            "UNOBSERVED": [
+                {
+                    "id": "CatalogItem1"
+                },
+                {
+                    "id": "Dealer"
+                },
+                {
+                    "id": "MockCatalogItemsRepository"
+                },
+                {
+                    "id": "MockQuoteRepository"
+                },
+                {
+                    "id": "MockShipmentRepository"
+                },
+                {
+                    "id": "OrderDetails"
+                },
+                {
+                    "id": "PingController"
+                },
+                {
+                    "id": "PropertyHelper"
+                },
+                {
+                    "id": "ShipmentDetails"
+                }
+            ]
+        }
+    }
+}

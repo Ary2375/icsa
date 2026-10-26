@@ -1,0 +1,108 @@
+{
+    "MEM": {
+        "decomposition": {
+            "partition0": [
+                {
+                    "id": "AccountActionBeanTest"
+                },
+                {
+                    "id": "AccountMapper"
+                },
+                {
+                    "id": "CatalogActionBeanTest"
+                },
+                {
+                    "id": "CategoryMapper"
+                },
+                {
+                    "id": "LineItemMapper"
+                },
+                {
+                    "id": "OrderActionBeanTest"
+                }
+            ],
+            "partition1": [
+                {
+                    "id": "AccountService"
+                },
+                {
+                    "id": "Cart"
+                },
+                {
+                    "id": "CatalogService"
+                },
+                {
+                    "id": "LineItem"
+                },
+                {
+                    "id": "Order"
+                },
+                {
+                    "id": "OrderService"
+                }
+            ],
+            "partition2": [
+                {
+                    "id": "AbstractActionBean"
+                },
+                {
+                    "id": "Product"
+                }
+            ],
+            "partition3": [
+                {
+                    "id": "Account"
+                },
+                {
+                    "id": "CartItem"
+                },
+                {
+                    "id": "Category"
+                },
+                {
+                    "id": "Sequence"
+                }
+            ],
+            "partition4": [
+                {
+                    "id": "ProductMapper"
+                },
+                {
+                    "id": "SequenceMapper"
+                }
+            ],
+            "partition5": [
+                {
+                    "id": "AccountMapperTest"
+                },
+                {
+                    "id": "CartTest"
+                },
+                {
+                    "id": "CategoryMapperTest"
+                },
+                {
+                    "id": "ItemMapperTest"
+                },
+                {
+                    "id": "LineItemMapperTest"
+                },
+                {
+                    "id": "MapperTestContext"
+                },
+                {
+                    "id": "OrderMapperTest"
+                },
+                {
+                    "id": "OrderTest"
+                },
+                {
+                    "id": "ProductMapperTest"
+                },
+                {
+                    "id": "SequenceMapperTest"
+                }
+            ]
+        }
+    }
+}

@@ -1,0 +1,91 @@
+{
+    "tool": {
+        "decomposition": {
+            "partition0": [
+                {
+                    "id": "Visit"
+                },
+                {
+                    "id": "VisitController"
+                }
+            ],
+            "partition1": [
+                {
+                    "id": "NamedEntity"
+                }
+            ],
+            "partition2": [
+                {
+                    "id": "BaseEntity"
+                },
+                {
+                    "id": "Specialty"
+                },
+                {
+                    "id": "Vet"
+                },
+                {
+                    "id": "VetController"
+                },
+                {
+                    "id": "Vets"
+                }
+            ],
+            "partition3": [
+                {
+                    "id": "Pet"
+                },
+                {
+                    "id": "PetClinicApplication"
+                },
+                {
+                    "id": "PetController"
+                },
+                {
+                    "id": "PetType"
+                },
+                {
+                    "id": "PetTypeFormatter"
+                },
+                {
+                    "id": "PetValidator"
+                }
+            ],
+            "partition4": [
+                {
+                    "id": "Owner"
+                },
+                {
+                    "id": "OwnerController"
+                },
+                {
+                    "id": "Person"
+                }
+            ],
+            "partition5": [
+                {
+                    "id": "WelcomeController"
+                }
+            ],
+            "partition6": [
+                {
+                    "id": "CrashController"
+                }
+            ],
+            "UNOBSERVED": [
+                {
+                    "id": "CacheConfiguration"
+                },
+                {
+                    "id": "OwnerRepository"
+                },
+                {
+                    "id": "PetClinicRuntimeHints"
+                },
+                {
+                    "id": "VetRepository"
+                }
+            ]
+        }
+    }
+}

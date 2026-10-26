@@ -1,0 +1,63 @@
+{
+    "tool": {
+        "decomposition": {
+            "partition1": [
+                {
+                    "id": "AbstractActionBean"
+                },
+                {
+                    "id": "Account"
+                },
+                {
+                    "id": "AccountActionBean"
+                },
+                {
+                    "id": "AccountService"
+                },
+                {
+                    "id": "OrderActionBean"
+                }
+            ],
+            "partition0": [
+                {
+                    "id": "Cart"
+                },
+                {
+                    "id": "CartActionBean"
+                },
+                {
+                    "id": "CartItem"
+                },
+                {
+                    "id": "Item"
+                },
+                {
+                    "id": "LineItem"
+                },
+                {
+                    "id": "Order"
+                },
+                {
+                    "id": "OrderService"
+                },
+                {
+                    "id": "Sequence"
+                }
+            ],
+            "partition2": [
+                {
+                    "id": "CatalogActionBean"
+                },
+                {
+                    "id": "CatalogService"
+                },
+                {
+                    "id": "Category"
+                },
+                {
+                    "id": "Product"
+                }
+            ]
+        }
+    }
+}

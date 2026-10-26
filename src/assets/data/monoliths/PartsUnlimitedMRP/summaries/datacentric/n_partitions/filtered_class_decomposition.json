@@ -1,0 +1,175 @@
+{
+    "tool": {
+        "decomposition": {
+            "CatalogManagementService": [
+                {
+                    "id": "BadRequestException"
+                },
+                {
+                    "id": "CatalogController"
+                },
+                {
+                    "id": "CatalogItem"
+                },
+                {
+                    "id": "CatalogItem1"
+                },
+                {
+                    "id": "CatalogItemsRepository"
+                },
+                {
+                    "id": "ConflictingRequestException"
+                },
+                {
+                    "id": "MockCatalogItemsRepository"
+                },
+                {
+                    "id": "MongoCatalogItemsRepository"
+                },
+                {
+                    "id": "MongoDBProperties"
+                },
+                {
+                    "id": "MongoOperationsWithRetry"
+                },
+                {
+                    "id": "RepositoryFactory"
+                },
+                {
+                    "id": "TestPath"
+                },
+                {
+                    "id": "Utility"
+                }
+            ],
+            "DealersManagementService": [
+                {
+                    "id": "Dealer"
+                },
+                {
+                    "id": "DealerController"
+                },
+                {
+                    "id": "DealerInfo"
+                },
+                {
+                    "id": "DealersRepository"
+                },
+                {
+                    "id": "MockDealersRepository"
+                },
+                {
+                    "id": "MongoDealersRepository"
+                },
+                {
+                    "id": "PostgresqlProperties"
+                }
+            ],
+            "OrderManagementService": [
+                {
+                    "id": "AppInsightsFilter"
+                },
+                {
+                    "id": "Delivery"
+                },
+                {
+                    "id": "DeliveryAddress"
+                },
+                {
+                    "id": "MockOrderRepository"
+                },
+                {
+                    "id": "MockShipmentRepository"
+                },
+                {
+                    "id": "MongoOrderRepository"
+                },
+                {
+                    "id": "MongoShipmentRepository"
+                },
+                {
+                    "id": "Order"
+                },
+                {
+                    "id": "OrderController"
+                },
+                {
+                    "id": "OrderDetails"
+                },
+                {
+                    "id": "OrderEventInfo"
+                },
+                {
+                    "id": "OrderRepository"
+                },
+                {
+                    "id": "OrderUpdateInfo"
+                },
+                {
+                    "id": "OrderingConfiguration"
+                },
+                {
+                    "id": "OrderingInitializer"
+                },
+                {
+                    "id": "OrderingServiceProperties"
+                },
+                {
+                    "id": "PhoneInfo"
+                },
+                {
+                    "id": "PingController"
+                },
+                {
+                    "id": "PropertyHelper"
+                },
+                {
+                    "id": "ShipmentController"
+                },
+                {
+                    "id": "ShipmentDetails"
+                },
+                {
+                    "id": "ShipmentEventInfo"
+                },
+                {
+                    "id": "ShipmentRecord"
+                },
+                {
+                    "id": "ShipmentRepository"
+                },
+                {
+                    "id": "SimpleCORSFilter"
+                }
+            ],
+            "QuotesManagementService": [
+                {
+                    "id": "MockQuoteRepository"
+                },
+                {
+                    "id": "MongoQuoteRepository"
+                },
+                {
+                    "id": "Quote"
+                },
+                {
+                    "id": "QuoteController"
+                },
+                {
+                    "id": "QuoteDetails"
+                },
+                {
+                    "id": "QuoteItemInfo"
+                },
+                {
+                    "id": "QuoteRepository"
+                }
+            ],
+            "UNOBSERVED": [
+                {
+                    "id": "OrderStatus"
+                }
+            ]
+        }
+    }
+}

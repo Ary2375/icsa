@@ -1,0 +1,87 @@
+{
+    "tool": {
+        "decomposition": {
+            "partition0": [
+                {
+                    "id": "OwnerController"
+                },
+                {
+                    "id": "PetController"
+                },
+                {
+                    "id": "VisitController"
+                }
+            ],
+            "partition1": [
+                {
+                    "id": "CacheConfiguration"
+                },
+                {
+                    "id": "VetRepository"
+                }
+            ],
+            "partition2": [
+                {
+                    "id": "BaseEntity"
+                },
+                {
+                    "id": "NamedEntity"
+                },
+                {
+                    "id": "Person"
+                },
+                {
+                    "id": "PetType"
+                },
+                {
+                    "id": "VetController"
+                }
+            ],
+            "partition3": [
+                {
+                    "id": "Pet"
+                }
+            ],
+            "partition4": [
+                {
+                    "id": "OwnerRepository"
+                },
+                {
+                    "id": "PetTypeFormatter"
+                }
+            ],
+            "UNOBSERVED": [
+                {
+                    "id": "CrashController"
+                },
+                {
+                    "id": "Owner"
+                },
+                {
+                    "id": "PetClinicApplication"
+                },
+                {
+                    "id": "PetClinicRuntimeHints"
+                },
+                {
+                    "id": "PetValidator"
+                },
+                {
+                    "id": "Specialty"
+                },
+                {
+                    "id": "Vet"
+                },
+                {
+                    "id": "Vets"
+                },
+                {
+                    "id": "Visit"
+                },
+                {
+                    "id": "WelcomeController"
+                }
+            ]
+        }
+    }
+}

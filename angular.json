@@ -42,6 +42,11 @@
                 "output": "assets/data/monoliths"
               },
               {
+                "glob": "**/summaries/{datacentric,ground_truth,hydec,log2ms,mono2micro}/**/class_decomposition.json",
+                "input": "src/assets/data/monoliths",
+                "output": "assets/data/monoliths"
+              },
+              {
                 "glob": "*/reference_decomposition.json",
                 "input": "src/assets/data/monoliths",
                 "output": "assets/data/monoliths"

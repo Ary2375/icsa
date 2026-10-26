@@ -1,0 +1,2266 @@
+{
+    "version": "v2.0.0r9",
+    "mono_run_time_call_graph": {
+        "nodes": [
+            {
+                "name": "OrderActionBean",
+                "group": 1,
+                "category": "Undefined",
+                "construct": "Class",
+                "FQCN": "",
+                "filepath": "Class, project/src/main/java/org/mybatis/jpetstore/web/actions/OrderActionBean.java",
+                "semantics": [
+                    "DEFAULT_USE_CASE"
+                ]
+            },
+            {
+                "name": "AbstractActionBean",
+                "group": 1,
+                "category": "Undefined",
+                "construct": "Class",
+                "FQCN": "",
+                "filepath": "Class, project/src/main/java/org/mybatis/jpetstore/web/actions/AbstractActionBean.java",
+                "semantics": [
+                    "DEFAULT_USE_CASE"
+                ]
+            },
+            {
+                "name": "Order",
+                "group": 1,
+                "category": "Undefined",
+                "construct": "Class",
+                "FQCN": "",
+                "filepath": "Class, project/src/main/java/org/mybatis/jpetstore/domain/Order.java",
+                "semantics": [
+                    "DEFAULT_USE_CASE"
+                ]
+            },
+            {
+                "name": "AccountActionBean",
+                "group": 1,
+                "category": "Undefined",
+                "construct": "Class",
+                "FQCN": "",
+                "filepath": "Class, project/src/main/java/org/mybatis/jpetstore/web/actions/AccountActionBean.java",
+                "semantics": [
+                    "DEFAULT_USE_CASE"
+                ]
+            },
+            {
+                "name": "Account",
+                "group": 1,
+                "category": "Undefined",
+                "construct": "Class",
+                "FQCN": "",
+                "filepath": "Class, project/src/main/java/org/mybatis/jpetstore/domain/Account.java",
+                "semantics": [
+                    "DEFAULT_USE_CASE"
+                ]
+            },
+            {
+                "name": "CartActionBean",
+                "group": 1,
+                "category": "Undefined",
+                "construct": "Class",
+                "FQCN": "",
+                "filepath": "Class, project/src/main/java/org/mybatis/jpetstore/web/actions/CartActionBean.java",
+                "semantics": [
+                    "DEFAULT_USE_CASE"
+                ]
+            },
+            {
+                "name": "Cart",
+                "group": 1,
+                "category": "Undefined",
+                "construct": "Class",
+                "FQCN": "",
+                "filepath": "Class, project/src/main/java/org/mybatis/jpetstore/domain/Cart.java",
+                "semantics": [
+                    "DEFAULT_USE_CASE"
+                ]
+            },
+            {
+                "name": "CartItem",
+                "group": 1,
+                "category": "Undefined",
+                "construct": "Class",
+                "FQCN": "",
+                "filepath": "Class, project/src/main/java/org/mybatis/jpetstore/domain/CartItem.java",
+                "semantics": [
+                    "DEFAULT_USE_CASE"
+                ]
+            },
+            {
+                "name": "Item",
+                "group": 1,
+                "category": "Undefined",
+                "construct": "Class",
+                "FQCN": "",
+                "filepath": "Class, project/src/main/java/org/mybatis/jpetstore/domain/Item.java",
+                "semantics": [
+                    "DEFAULT_USE_CASE"
+                ]
+            },
+            {
+                "name": "LineItem",
+                "group": 1,
+                "category": "Undefined",
+                "construct": "Class",
+                "FQCN": "",
+                "filepath": "Class, project/src/main/java/org/mybatis/jpetstore/domain/LineItem.java",
+                "semantics": [
+                    "DEFAULT_USE_CASE"
+                ]
+            },
+            {
+                "name": "CatalogActionBean",
+                "group": 1,
+                "category": "Undefined",
+                "construct": "Class",
+                "FQCN": "",
+                "filepath": "Class, project/src/main/java/org/mybatis/jpetstore/web/actions/CatalogActionBean.java",
+                "semantics": [
+                    "DEFAULT_USE_CASE"
+                ]
+            },
+            {
+                "name": "CatalogService",
+                "group": 1,
+                "category": "Undefined",
+                "construct": "Class",
+                "FQCN": "",
+                "filepath": "Class, project/src/main/java/org/mybatis/jpetstore/service/CatalogService.java",
+                "semantics": [
+                    "DEFAULT_USE_CASE"
+                ]
+            },
+            {
+                "name": "Product",
+                "group": 1,
+                "category": "Undefined",
+                "construct": "Class",
+                "FQCN": "",
+                "filepath": "Class, project/src/main/java/org/mybatis/jpetstore/domain/Product.java",
+                "semantics": [
+                    "DEFAULT_USE_CASE"
+                ]
+            },
+            {
+                "name": "AccountService",
+                "group": 1,
+                "category": "Undefined",
+                "construct": "Class",
+                "FQCN": "",
+                "filepath": "Class, project/src/main/java/org/mybatis/jpetstore/service/AccountService.java",
+                "semantics": [
+                    "DEFAULT_USE_CASE"
+                ]
+            },
+            {
+                "name": "OrderService",
+                "group": 1,
+                "category": "Undefined",
+                "construct": "Class",
+                "FQCN": "",
+                "filepath": "Class, project/src/main/java/org/mybatis/jpetstore/service/OrderService.java",
+                "semantics": [
+                    "DEFAULT_USE_CASE"
+                ]
+            },
+            {
+                "name": "Category",
+                "group": 1,
+                "category": "Undefined",
+                "construct": "Class",
+                "FQCN": "",
+                "filepath": "Class, project/src/main/java/org/mybatis/jpetstore/domain/Category.java",
+                "semantics": [
+                    "DEFAULT_USE_CASE"
+                ]
+            },
+            {
+                "name": "Sequence",
+                "group": 1,
+                "category": "Undefined",
+                "construct": "Class",
+                "FQCN": "",
+                "filepath": "Class, project/src/main/java/org/mybatis/jpetstore/domain/Sequence.java",
+                "semantics": [
+                    "DEFAULT_USE_CASE"
+                ]
+            }
+        ],
+        "links": [
+            {
+                "source": "OrderActionBean",
+                "target": "AbstractActionBean",
+                "method": {
+                    "AbstractActionBean": 1,
+                    "setMessage": 1
+                },
+                "value": 1.693
+            },
+            {
+                "source": "OrderActionBean",
+                "target": "Order",
+                "method": {
+                    "Order": 2,
+                    "initOrder": 1,
+                    "setOrderId": 1,
+                    "getOrderId": 1,
+                    "getUsername": 1
+                },
+                "value": 2.791
+            },
+            {
+                "source": "OrderActionBean",
+                "target": "AccountActionBean",
+                "method": {
+                    "isAuthenticated": 1,
+                    "getAccount": 3
+                },
+                "value": 2.386
+            },
+            {
+                "source": "OrderActionBean",
+                "target": "CartActionBean",
+                "method": {
+                    "getCart": 1,
+                    "clear": 1
+                },
+                "value": 1.693
+            },
+            {
+                "source": "OrderActionBean",
+                "target": "Account",
+                "method": {
+                    "getUsername": 2
+                },
+                "value": 1.693
+            },
+            {
+                "source": "OrderActionBean",
+                "target": "OrderService",
+                "method": {
+                    "getOrdersByUsername": 1,
+                    "getOrder": 1,
+                    "insertOrder": 1
+                },
+                "value": 2.098
+            },
+            {
+                "source": "Order",
+                "target": "Account",
+                "method": {
+                    "getUsername": 1,
+                    "getFirstName": 2,
+                    "getLastName": 2,
+                    "getAddress1": 2,
+                    "getAddress2": 2,
+                    "getCity": 2,
+                    "getState": 2,
+                    "getZip": 2,
+                    "getCountry": 2
+                },
+                "value": 3.833
+            },
+            {
+                "source": "Order",
+                "target": "Cart",
+                "method": {
+                    "getSubTotal": 1,
+                    "getAllCartItems": 1
+                },
+                "value": 1.693
+            },
+            {
+                "source": "Order",
+                "target": "LineItem",
+                "method": {
+                    "LineItem [overloaded_#002]": 1
+                },
+                "value": 1.0
+            },
+            {
+                "source": "AccountActionBean",
+                "target": "Account",
+                "method": {
+                    "getUsername": 83,
+                    "Account": 6,
+                    "setPassword": 7,
+                    "setUsername": 4,
+                    "getPassword": 6,
+                    "getFavouriteCategoryId": 4
+                },
+                "value": 5.7
+            },
+            {
+                "source": "AccountActionBean",
+                "target": "AbstractActionBean",
+                "method": {
+                    "AbstractActionBean": 3
+                },
+                "value": 2.098
+            },
+            {
+                "source": "AccountActionBean",
+                "target": "AccountService",
+                "method": {
+                    "getAccount [overloaded_#002]": 3,
+                    "insertAccount": 1,
+                    "getAccount [overloaded_#001]": 1
+                },
+                "value": 2.609
+            },
+            {
+                "source": "AccountActionBean",
+                "target": "CatalogService",
+                "method": {
+                    "getProductListByCategory": 4
+                },
+                "value": 2.386
+            },
+            {
+                "source": "CartActionBean",
+                "target": "AbstractActionBean",
+                "method": {
+                    "AbstractActionBean": 2
+                },
+                "value": 1.693
+            },
+            {
+                "source": "CartActionBean",
+                "target": "Cart",
+                "method": {
+                    "Cart": 3,
+                    "getAllCartItems": 1,
+                    "setQuantityByItemId": 2,
+                    "containsItemId": 2,
+                    "addItem": 2,
+                    "removeItemById": 1
+                },
+                "value": 3.397
+            },
+            {
+                "source": "CartActionBean",
+                "target": "CartItem",
+                "method": {
+                    "getItem": 2
+                },
+                "value": 1.693
+            },
+            {
+                "source": "CartActionBean",
+                "target": "Item",
+                "method": {
+                    "getItemId": 2
+                },
+                "value": 1.693
+            },
+            {
+                "source": "CartActionBean",
+                "target": "CatalogService",
+                "method": {
+                    "isItemInStock": 2,
+                    "getItem": 2
+                },
+                "value": 2.386
+            },
+            {
+                "source": "Cart",
+                "target": "CartItem",
+                "method": {
+                    "getItem": 8,
+                    "getQuantity": 7,
+                    "setQuantity": 4,
+                    "CartItem": 2,
+                    "setItem": 2,
+                    "setInStock": 2,
+                    "incrementQuantity": 2
+                },
+                "value": 4.295
+            },
+            {
+                "source": "Cart",
+                "target": "Item",
+                "method": {
+                    "getListPrice": 7,
+                    "getItemId": 4
+                },
+                "value": 3.397
+            },
+            {
+                "source": "CartItem",
+                "target": "Item",
+                "method": {
+                    "getListPrice": 8
+                },
+                "value": 3.079
+            },
+            {
+                "source": "LineItem",
+                "target": "CartItem",
+                "method": {
+                    "getQuantity": 1,
+                    "getItem": 3
+                },
+                "value": 2.386
+            },
+            {
+                "source": "LineItem",
+                "target": "Item",
+                "method": {
+                    "getItemId": 1,
+                    "getListPrice": 3
+                },
+                "value": 2.386
+            },
+            {
+                "source": "CatalogActionBean",
+                "target": "CatalogService",
+                "method": {
+                    "getItemListByProduct": 4,
+                    "getProduct": 4,
+                    "getItem": 2,
+                    "searchProductList": 1,
+                    "getProductListByCategory": 3,
+                    "getCategory": 3
+                },
+                "value": 3.833
+            },
+            {
+                "source": "CatalogActionBean",
+                "target": "AbstractActionBean",
+                "method": {
+                    "AbstractActionBean": 12
+                },
+                "value": 3.484
+            },
+            {
+                "source": "CatalogActionBean",
+                "target": "Item",
+                "method": {
+                    "getProduct": 2
+                },
+                "value": 1.693
+            },
+            {
+                "source": "CatalogService",
+                "target": "Item",
+                "method": {
+                    "Item": 8,
+                    "getProduct": 80,
+                    "setItemId": 8,
+                    "setListPrice": 8,
+                    "setUnitCost": 8,
+                    "setSupplierId": 8,
+                    "setProduct": 8,
+                    "setStatus": 8,
+                    "setAttribute1": 8,
+                    "setQuantity": 3
+                },
+                "value": 5.99
+            },
+            {
+                "source": "CatalogService",
+                "target": "Product",
+                "method": {
+                    "Product": 27,
+                    "setProductId": 27,
+                    "setName": 27,
+                    "setDescription": 27,
+                    "setCategoryId": 27
+                },
+                "value": 5.905
+            },
+            {
+                "source": "CatalogService",
+                "target": "Category",
+                "method": {
+                    "Category": 2,
+                    "setCategoryId": 2,
+                    "setName": 2,
+                    "setDescription": 2
+                },
+                "value": 3.079
+            },
+            {
+                "source": "AccountService",
+                "target": "Account",
+                "method": {
+                    "Account": 3,
+                    "setUsername": 3,
+                    "setEmail": 3,
+                    "setFirstName": 3,
+                    "setLastName": 3,
+                    "setStatus": 1,
+                    "setAddress1": 3,
+                    "setAddress2": 3,
+                    "setCity": 3,
+                    "setState": 3,
+                    "setZip": 3,
+                    "setCountry": 3,
+                    "setPhone": 3,
+                    "setLanguagePreference": 3,
+                    "setFavouriteCategoryId": 3,
+                    "setListOption": 3,
+                    "setBannerOption": 3,
+                    "setBannerName": 3,
+                    "getEmail": 1,
+                    "getFirstName": 1,
+                    "getLastName": 1,
+                    "getStatus": 1,
+                    "getAddress1": 1,
+                    "getAddress2": 1,
+                    "getCity": 1,
+                    "getState": 1,
+                    "getZip": 1,
+                    "getCountry": 1,
+                    "getPhone": 1,
+                    "getUsername": 3,
+                    "isListOption": 1,
+                    "isBannerOption": 1,
+                    "getLanguagePreference": 1,
+                    "getFavouriteCategoryId": 1,
+                    "getPassword": 1
+                },
+                "value": 5.262
+            },
+            {
+                "source": "OrderService",
+                "target": "Order",
+                "method": {
+                    "Order": 85,
+                    "setBillAddress1": 85,
+                    "setBillAddress2": 85,
+                    "setBillCity": 85,
+                    "setBillCountry": 85,
+                    "setBillState": 85,
+                    "setBillToFirstName": 85,
+                    "setBillToLastName": 85,
+                    "setBillZip": 85,
+                    "setShipAddress1": 85,
+                    "setShipAddress2": 85,
+                    "setShipCity": 85,
+                    "setShipCountry": 85,
+                    "setShipState": 85,
+                    "setShipToFirstName": 85,
+                    "setShipToLastName": 85,
+                    "setShipZip": 85,
+                    "setCardType": 85,
+                    "setCourier": 85,
+                    "setCreditCard": 85,
+                    "setExpiryDate": 85,
+                    "setLocale": 85,
+                    "setOrderDate": 85,
+                    "setOrderId": 86,
+                    "setTotalPrice": 85,
+                    "setUsername": 85,
+                    "setStatus": 85,
+                    "setLineItems": 1,
+                    "getLineItems": 3,
+                    "getOrderId": 4,
+                    "getUsername": 1,
+                    "getOrderDate": 2,
+                    "getShipAddress1": 1,
+                    "getShipAddress2": 1,
+                    "getShipCity": 1,
+                    "getShipState": 1,
+                    "getShipZip": 1,
+                    "getShipCountry": 1,
+                    "getBillAddress1": 1,
+                    "getBillAddress2": 1,
+                    "getBillCity": 1,
+                    "getBillState": 1,
+                    "getBillZip": 1,
+                    "getBillCountry": 1,
+                    "getCourier": 1,
+                    "getTotalPrice": 1,
+                    "getBillToFirstName": 1,
+                    "getBillToLastName": 1,
+                    "getShipToFirstName": 1,
+                    "getShipToLastName": 1,
+                    "getCreditCard": 1,
+                    "getExpiryDate": 1,
+                    "getCardType": 1,
+                    "getLocale": 1,
+                    "getStatus": 1
+                },
+                "value": 8.753
+            },
+            {
+                "source": "OrderService",
+                "target": "LineItem",
+                "method": {
+                    "LineItem [overloaded_#001]": 1,
+                    "setOrderId": 2,
+                    "setLineNumber": 1,
+                    "setItemId": 1,
+                    "setQuantity": 1,
+                    "setUnitPrice": 1,
+                    "getItemId": 4,
+                    "setItem": 1,
+                    "getQuantity": 2,
+                    "getOrderId": 1,
+                    "getLineNumber": 1,
+                    "getUnitPrice": 1
+                },
+                "value": 3.833
+            },
+            {
+                "source": "OrderService",
+                "target": "Item",
+                "method": {
+                    "Item": 1,
+                    "getProduct": 12,
+                    "setItemId": 1,
+                    "setListPrice": 1,
+                    "setUnitCost": 1,
+                    "setSupplierId": 1,
+                    "setProduct": 1,
+                    "setStatus": 1,
+                    "setAttribute1": 1,
+                    "setQuantity": 2
+                },
+                "value": 4.091
+            },
+            {
+                "source": "OrderService",
+                "target": "Product",
+                "method": {
+                    "Product": 1,
+                    "setProductId": 1,
+                    "setName": 1,
+                    "setDescription": 1,
+                    "setCategoryId": 1
+                },
+                "value": 2.609
+            },
+            {
+                "source": "OrderService",
+                "target": "Sequence",
+                "method": {
+                    "Sequence [overloaded_#002]": 2,
+                    "getName": 3,
+                    "Sequence [overloaded_#001]": 1,
+                    "setName": 1,
+                    "setNextId": 1,
+                    "getNextId": 3
+                },
+                "value": 3.397
+            }
+        ],
+        "overview": {
+            "nodes": [
+                {
+                    "name": "Undefined",
+                    "group": "1",
+                    "category": "Undefined",
+                    "filepath": "",
+                    "semantics": []
+                }
+            ],
+            "links": []
+        }
+    },
+    "mono_data_dependency_graph": {
+        "nodes": [
+            {
+                "name": "CatalogActionBean",
+                "group": 1,
+                "category": "data_dep_island_0",
+                "filepath": "project/src/main/java/org/mybatis/jpetstore/web/actions/CatalogActionBean.java",
+                "semantics": []
+            },
+            {
+                "name": "AbstractActionBean",
+                "group": 0,
+                "category": "default_group",
+                "filepath": "project/src/main/java/org/mybatis/jpetstore/web/actions/AbstractActionBean.java",
+                "semantics": []
+            },
+            {
+                "name": "OrderActionBean",
+                "group": 2,
+                "category": "data_dep_island_1",
+                "filepath": "project/src/main/java/org/mybatis/jpetstore/web/actions/OrderActionBean.java",
+                "semantics": []
+            },
+            {
+                "name": "AccountActionBean",
+                "group": 1,
+                "category": "data_dep_island_0",
+                "filepath": "project/src/main/java/org/mybatis/jpetstore/web/actions/AccountActionBean.java",
+                "semantics": []
+            },
+            {
+                "name": "CartActionBean",
+                "group": 1,
+                "category": "data_dep_island_0",
+                "filepath": "project/src/main/java/org/mybatis/jpetstore/web/actions/CartActionBean.java",
+                "semantics": []
+            },
+            {
+                "name": "CatalogService",
+                "group": 1,
+                "category": "data_dep_island_0",
+                "filepath": "project/src/main/java/org/mybatis/jpetstore/service/CatalogService.java",
+                "semantics": []
+            },
+            {
+                "name": "AccountService",
+                "group": 1,
+                "category": "data_dep_island_0",
+                "filepath": "project/src/main/java/org/mybatis/jpetstore/service/AccountService.java",
+                "semantics": []
+            },
+            {
+                "name": "OrderService",
+                "group": 2,
+                "category": "data_dep_island_1",
+                "filepath": "project/src/main/java/org/mybatis/jpetstore/service/OrderService.java",
+                "semantics": []
+            },
+            {
+                "name": "LineItem",
+                "group": 1,
+                "category": "data_dep_island_0",
+                "filepath": "project/src/main/java/org/mybatis/jpetstore/domain/LineItem.java",
+                "semantics": []
+            },
+            {
+                "name": "Item",
+                "group": 1,
+                "category": "data_dep_island_0",
+                "filepath": "project/src/main/java/org/mybatis/jpetstore/domain/Item.java",
+                "semantics": []
+            },
+            {
+                "name": "Order",
+                "group": 2,
+                "category": "data_dep_island_1",
+                "filepath": "project/src/main/java/org/mybatis/jpetstore/domain/Order.java",
+                "semantics": []
+            },
+            {
+                "name": "Sequence",
+                "group": 0,
+                "category": "default_group",
+                "filepath": "project/src/main/java/org/mybatis/jpetstore/domain/Sequence.java",
+                "semantics": []
+            },
+            {
+                "name": "CartItem",
+                "group": 1,
+                "category": "data_dep_island_0",
+                "filepath": "project/src/main/java/org/mybatis/jpetstore/domain/CartItem.java",
+                "semantics": []
+            },
+            {
+                "name": "Category",
+                "group": 1,
+                "category": "data_dep_island_0",
+                "filepath": "project/src/main/java/org/mybatis/jpetstore/domain/Category.java",
+                "semantics": []
+            },
+            {
+                "name": "Product",
+                "group": 1,
+                "category": "data_dep_island_0",
+                "filepath": "project/src/main/java/org/mybatis/jpetstore/domain/Product.java",
+                "semantics": []
+            },
+            {
+                "name": "Account",
+                "group": 1,
+                "category": "data_dep_island_0",
+                "filepath": "project/src/main/java/org/mybatis/jpetstore/domain/Account.java",
+                "semantics": []
+            },
+            {
+                "name": "Cart",
+                "group": 1,
+                "category": "data_dep_island_0",
+                "filepath": "project/src/main/java/org/mybatis/jpetstore/domain/Cart.java",
+                "semantics": []
+            }
+        ],
+        "links": [
+            {
+                "source": "CatalogActionBean",
+                "target": "CatalogService",
+                "value": "1"
+            },
+            {
+                "source": "CatalogActionBean",
+                "target": "Category",
+                "value": "1"
+            },
+            {
+                "source": "CatalogActionBean",
+                "target": "Product",
+                "value": "1"
+            },
+            {
+                "source": "CatalogActionBean",
+                "target": "Item",
+                "value": "1"
+            },
+            {
+                "source": "OrderActionBean",
+                "target": "OrderService",
+                "value": "1"
+            },
+            {
+                "source": "OrderActionBean",
+                "target": "Order",
+                "value": "1"
+            },
+            {
+                "source": "AccountActionBean",
+                "target": "AccountService",
+                "value": "1"
+            },
+            {
+                "source": "AccountActionBean",
+                "target": "CatalogService",
+                "value": "1"
+            },
+            {
+                "source": "AccountActionBean",
+                "target": "Account",
+                "value": "1"
+            },
+            {
+                "source": "CartActionBean",
+                "target": "CatalogService",
+                "value": "1"
+            },
+            {
+                "source": "CartActionBean",
+                "target": "Cart",
+                "value": "1"
+            },
+            {
+                "source": "LineItem",
+                "target": "Item",
+                "value": "1"
+            },
+            {
+                "source": "Item",
+                "target": "Product",
+                "value": "1"
+            },
+            {
+                "source": "CartItem",
+                "target": "Item",
+                "value": "1"
+            }
+        ],
+        "overview": {
+            "nodes": [
+                {
+                    "name": "data_dep_island_0",
+                    "group": 0,
+                    "category": "data_dep_island_0",
+                    "filepath": "data_dep_island_0",
+                    "semantics": []
+                },
+                {
+                    "name": "data_dep_island_1",
+                    "group": 1,
+                    "category": "data_dep_island_1",
+                    "filepath": "data_dep_island_1",
+                    "semantics": []
+                },
+                {
+                    "name": "default_group",
+                    "group": 2,
+                    "category": "default_group",
+                    "filepath": "default_group",
+                    "semantics": []
+                }
+            ],
+            "links": []
+        }
+    },
+    "micro_detail_partition_by_business_logic": {
+        "nodes": [
+            {
+                "name": "OrderActionBean",
+                "group": 1,
+                "category": "partition1",
+                "construct": "Class",
+                "FQCN": "org.mybatis.jpetstore.web.actions.OrderActionBean",
+                "filepath": "Class, project/src/main/java/org/mybatis/jpetstore/web/actions/OrderActionBean.java",
+                "semantics": [
+                    "DEFAULT_USE_CASE"
+                ]
+            },
+            {
+                "name": "AbstractActionBean",
+                "group": 1,
+                "category": "partition1",
+                "construct": "Class",
+                "FQCN": "org.mybatis.jpetstore.web.actions.AbstractActionBean",
+                "filepath": "Class, project/src/main/java/org/mybatis/jpetstore/web/actions/AbstractActionBean.java",
+                "semantics": [
+                    "DEFAULT_USE_CASE"
+                ]
+            },
+            {
+                "name": "Order",
+                "group": 2,
+                "category": "partition0",
+                "construct": "Class",
+                "FQCN": "org.mybatis.jpetstore.domain.Order",
+                "filepath": "Class, project/src/main/java/org/mybatis/jpetstore/domain/Order.java",
+                "semantics": [
+                    "DEFAULT_USE_CASE"
+                ]
+            },
+            {
+                "name": "AccountActionBean",
+                "group": 1,
+                "category": "partition1",
+                "construct": "Class",
+                "FQCN": "org.mybatis.jpetstore.web.actions.AccountActionBean",
+                "filepath": "Class, project/src/main/java/org/mybatis/jpetstore/web/actions/AccountActionBean.java",
+                "semantics": [
+                    "DEFAULT_USE_CASE"
+                ]
+            },
+            {
+                "name": "Account",
+                "group": 1,
+                "category": "partition1",
+                "construct": "Class",
+                "FQCN": "org.mybatis.jpetstore.domain.Account",
+                "filepath": "Class, project/src/main/java/org/mybatis/jpetstore/domain/Account.java",
+                "semantics": [
+                    "DEFAULT_USE_CASE"
+                ]
+            },
+            {
+                "name": "CartActionBean",
+                "group": 2,
+                "category": "partition0",
+                "construct": "Class",
+                "FQCN": "org.mybatis.jpetstore.web.actions.CartActionBean",
+                "filepath": "Class, project/src/main/java/org/mybatis/jpetstore/web/actions/CartActionBean.java",
+                "semantics": [
+                    "DEFAULT_USE_CASE"
+                ]
+            },
+            {
+                "name": "Cart",
+                "group": 2,
+                "category": "partition0",
+                "construct": "Class",
+                "FQCN": "org.mybatis.jpetstore.domain.Cart",
+                "filepath": "Class, project/src/main/java/org/mybatis/jpetstore/domain/Cart.java",
+                "semantics": [
+                    "DEFAULT_USE_CASE"
+                ]
+            },
+            {
+                "name": "CartItem",
+                "group": 2,
+                "category": "partition0",
+                "construct": "Class",
+                "FQCN": "org.mybatis.jpetstore.domain.CartItem",
+                "filepath": "Class, project/src/main/java/org/mybatis/jpetstore/domain/CartItem.java",
+                "semantics": [
+                    "DEFAULT_USE_CASE"
+                ]
+            },
+            {
+                "name": "Item",
+                "group": 2,
+                "category": "partition0",
+                "construct": "Class",
+                "FQCN": "org.mybatis.jpetstore.domain.Item",
+                "filepath": "Class, project/src/main/java/org/mybatis/jpetstore/domain/Item.java",
+                "semantics": [
+                    "DEFAULT_USE_CASE"
+                ]
+            },
+            {
+                "name": "LineItem",
+                "group": 2,
+                "category": "partition0",
+                "construct": "Class",
+                "FQCN": "org.mybatis.jpetstore.domain.LineItem",
+                "filepath": "Class, project/src/main/java/org/mybatis/jpetstore/domain/LineItem.java",
+                "semantics": [
+                    "DEFAULT_USE_CASE"
+                ]
+            },
+            {
+                "name": "CatalogActionBean",
+                "group": 0,
+                "category": "partition2",
+                "construct": "Class",
+                "FQCN": "org.mybatis.jpetstore.web.actions.CatalogActionBean",
+                "filepath": "Class, project/src/main/java/org/mybatis/jpetstore/web/actions/CatalogActionBean.java",
+                "semantics": [
+                    "DEFAULT_USE_CASE"
+                ]
+            },
+            {
+                "name": "CatalogService",
+                "group": 0,
+                "category": "partition2",
+                "construct": "Class",
+                "FQCN": "org.mybatis.jpetstore.service.CatalogService",
+                "filepath": "Class, project/src/main/java/org/mybatis/jpetstore/service/CatalogService.java",
+                "semantics": [
+                    "DEFAULT_USE_CASE"
+                ]
+            },
+            {
+                "name": "Product",
+                "group": 0,
+                "category": "partition2",
+                "construct": "Class",
+                "FQCN": "org.mybatis.jpetstore.domain.Product",
+                "filepath": "Class, project/src/main/java/org/mybatis/jpetstore/domain/Product.java",
+                "semantics": [
+                    "DEFAULT_USE_CASE"
+                ]
+            },
+            {
+                "name": "AccountService",
+                "group": 1,
+                "category": "partition1",
+                "construct": "Class",
+                "FQCN": "org.mybatis.jpetstore.service.AccountService",
+                "filepath": "Class, project/src/main/java/org/mybatis/jpetstore/service/AccountService.java",
+                "semantics": [
+                    "DEFAULT_USE_CASE"
+                ]
+            },
+            {
+                "name": "OrderService",
+                "group": 2,
+                "category": "partition0",
+                "construct": "Class",
+                "FQCN": "org.mybatis.jpetstore.service.OrderService",
+                "filepath": "Class, project/src/main/java/org/mybatis/jpetstore/service/OrderService.java",
+                "semantics": [
+                    "DEFAULT_USE_CASE"
+                ]
+            },
+            {
+                "name": "Category",
+                "group": 0,
+                "category": "partition2",
+                "construct": "Class",
+                "FQCN": "org.mybatis.jpetstore.domain.Category",
+                "filepath": "Class, project/src/main/java/org/mybatis/jpetstore/domain/Category.java",
+                "semantics": [
+                    "DEFAULT_USE_CASE"
+                ]
+            },
+            {
+                "name": "Sequence",
+                "group": 2,
+                "category": "partition0",
+                "construct": "Class",
+                "FQCN": "org.mybatis.jpetstore.domain.Sequence",
+                "filepath": "Class, project/src/main/java/org/mybatis/jpetstore/domain/Sequence.java",
+                "semantics": [
+                    "DEFAULT_USE_CASE"
+                ]
+            }
+        ],
+        "links": [
+            {
+                "source": "OrderActionBean",
+                "target": "AbstractActionBean",
+                "method": {
+                    "AbstractActionBean": 1,
+                    "setMessage": 1
+                },
+                "value": 1.693
+            },
+            {
+                "source": "OrderActionBean",
+                "target": "Order",
+                "method": {
+                    "Order": 2,
+                    "initOrder": 1,
+                    "setOrderId": 1,
+                    "getOrderId": 1,
+                    "getUsername": 1
+                },
+                "value": 2.791
+            },
+            {
+                "source": "OrderActionBean",
+                "target": "AccountActionBean",
+                "method": {
+                    "isAuthenticated": 1,
+                    "getAccount": 3
+                },
+                "value": 2.386
+            },
+            {
+                "source": "OrderActionBean",
+                "target": "CartActionBean",
+                "method": {
+                    "getCart": 1,
+                    "clear": 1
+                },
+                "value": 1.693
+            },
+            {
+                "source": "OrderActionBean",
+                "target": "Account",
+                "method": {
+                    "getUsername": 2
+                },
+                "value": 1.693
+            },
+            {
+                "source": "OrderActionBean",
+                "target": "OrderService",
+                "method": {
+                    "getOrdersByUsername": 1,
+                    "getOrder": 1,
+                    "insertOrder": 1
+                },
+                "value": 2.098
+            },
+            {
+                "source": "Order",
+                "target": "Account",
+                "method": {
+                    "getUsername": 1,
+                    "getFirstName": 2,
+                    "getLastName": 2,
+                    "getAddress1": 2,
+                    "getAddress2": 2,
+                    "getCity": 2,
+                    "getState": 2,
+                    "getZip": 2,
+                    "getCountry": 2
+                },
+                "value": 3.833
+            },
+            {
+                "source": "Order",
+                "target": "Cart",
+                "method": {
+                    "getSubTotal": 1,
+                    "getAllCartItems": 1
+                },
+                "value": 1.693
+            },
+            {
+                "source": "Order",
+                "target": "LineItem",
+                "method": {
+                    "LineItem [overloaded_#002]": 1
+                },
+                "value": 1.0
+            },
+            {
+                "source": "AccountActionBean",
+                "target": "Account",
+                "method": {
+                    "getUsername": 83,
+                    "Account": 6,
+                    "setPassword": 7,
+                    "setUsername": 4,
+                    "getPassword": 6,
+                    "getFavouriteCategoryId": 4
+                },
+                "value": 5.7
+            },
+            {
+                "source": "AccountActionBean",
+                "target": "AbstractActionBean",
+                "method": {
+                    "AbstractActionBean": 3
+                },
+                "value": 2.098
+            },
+            {
+                "source": "AccountActionBean",
+                "target": "AccountService",
+                "method": {
+                    "getAccount [overloaded_#002]": 3,
+                    "insertAccount": 1,
+                    "getAccount [overloaded_#001]": 1
+                },
+                "value": 2.609
+            },
+            {
+                "source": "AccountActionBean",
+                "target": "CatalogService",
+                "method": {
+                    "getProductListByCategory": 4
+                },
+                "value": 2.386
+            },
+            {
+                "source": "CartActionBean",
+                "target": "AbstractActionBean",
+                "method": {
+                    "AbstractActionBean": 2
+                },
+                "value": 1.693
+            },
+            {
+                "source": "CartActionBean",
+                "target": "Cart",
+                "method": {
+                    "Cart": 3,
+                    "getAllCartItems": 1,
+                    "setQuantityByItemId": 2,
+                    "containsItemId": 2,
+                    "addItem": 2,
+                    "removeItemById": 1
+                },
+                "value": 3.397
+            },
+            {
+                "source": "CartActionBean",
+                "target": "CartItem",
+                "method": {
+                    "getItem": 2
+                },
+                "value": 1.693
+            },
+            {
+                "source": "CartActionBean",
+                "target": "Item",
+                "method": {
+                    "getItemId": 2
+                },
+                "value": 1.693
+            },
+            {
+                "source": "CartActionBean",
+                "target": "CatalogService",
+                "method": {
+                    "isItemInStock": 2,
+                    "getItem": 2
+                },
+                "value": 2.386
+            },
+            {
+                "source": "Cart",
+                "target": "CartItem",
+                "method": {
+                    "getItem": 8,
+                    "getQuantity": 7,
+                    "setQuantity": 4,
+                    "CartItem": 2,
+                    "setItem": 2,
+                    "setInStock": 2,
+                    "incrementQuantity": 2
+                },
+                "value": 4.295
+            },
+            {
+                "source": "Cart",
+                "target": "Item",
+                "method": {
+                    "getListPrice": 7,
+                    "getItemId": 4
+                },
+                "value": 3.397
+            },
+            {
+                "source": "CartItem",
+                "target": "Item",
+                "method": {
+                    "getListPrice": 8
+                },
+                "value": 3.079
+            },
+            {
+                "source": "LineItem",
+                "target": "CartItem",
+                "method": {
+                    "getQuantity": 1,
+                    "getItem": 3
+                },
+                "value": 2.386
+            },
+            {
+                "source": "LineItem",
+                "target": "Item",
+                "method": {
+                    "getItemId": 1,
+                    "getListPrice": 3
+                },
+                "value": 2.386
+            },
+            {
+                "source": "CatalogActionBean",
+                "target": "CatalogService",
+                "method": {
+                    "getItemListByProduct": 4,
+                    "getProduct": 4,
+                    "getItem": 2,
+                    "searchProductList": 1,
+                    "getProductListByCategory": 3,
+                    "getCategory": 3
+                },
+                "value": 3.833
+            },
+            {
+                "source": "CatalogActionBean",
+                "target": "AbstractActionBean",
+                "method": {
+                    "AbstractActionBean": 12
+                },
+                "value": 3.484
+            },
+            {
+                "source": "CatalogActionBean",
+                "target": "Item",
+                "method": {
+                    "getProduct": 2
+                },
+                "value": 1.693
+            },
+            {
+                "source": "CatalogService",
+                "target": "Item",
+                "method": {
+                    "Item": 8,
+                    "getProduct": 80,
+                    "setItemId": 8,
+                    "setListPrice": 8,
+                    "setUnitCost": 8,
+                    "setSupplierId": 8,
+                    "setProduct": 8,
+                    "setStatus": 8,
+                    "setAttribute1": 8,
+                    "setQuantity": 3
+                },
+                "value": 5.99
+            },
+            {
+                "source": "CatalogService",
+                "target": "Product",
+                "method": {
+                    "Product": 27,
+                    "setProductId": 27,
+                    "setName": 27,
+                    "setDescription": 27,
+                    "setCategoryId": 27
+                },
+                "value": 5.905
+            },
+            {
+                "source": "CatalogService",
+                "target": "Category",
+                "method": {
+                    "Category": 2,
+                    "setCategoryId": 2,
+                    "setName": 2,
+                    "setDescription": 2
+                },
+                "value": 3.079
+            },
+            {
+                "source": "AccountService",
+                "target": "Account",
+                "method": {
+                    "Account": 3,
+                    "setUsername": 3,
+                    "setEmail": 3,
+                    "setFirstName": 3,
+                    "setLastName": 3,
+                    "setStatus": 1,
+                    "setAddress1": 3,
+                    "setAddress2": 3,
+                    "setCity": 3,
+                    "setState": 3,
+                    "setZip": 3,
+                    "setCountry": 3,
+                    "setPhone": 3,
+                    "setLanguagePreference": 3,
+                    "setFavouriteCategoryId": 3,
+                    "setListOption": 3,
+                    "setBannerOption": 3,
+                    "setBannerName": 3,
+                    "getEmail": 1,
+                    "getFirstName": 1,
+                    "getLastName": 1,
+                    "getStatus": 1,
+                    "getAddress1": 1,
+                    "getAddress2": 1,
+                    "getCity": 1,
+                    "getState": 1,
+                    "getZip": 1,
+                    "getCountry": 1,
+                    "getPhone": 1,
+                    "getUsername": 3,
+                    "isListOption": 1,
+                    "isBannerOption": 1,
+                    "getLanguagePreference": 1,
+                    "getFavouriteCategoryId": 1,
+                    "getPassword": 1
+                },
+                "value": 5.262
+            },
+            {
+                "source": "OrderService",
+                "target": "Order",
+                "method": {
+                    "Order": 85,
+                    "setBillAddress1": 85,
+                    "setBillAddress2": 85,
+                    "setBillCity": 85,
+                    "setBillCountry": 85,
+                    "setBillState": 85,
+                    "setBillToFirstName": 85,
+                    "setBillToLastName": 85,
+                    "setBillZip": 85,
+                    "setShipAddress1": 85,
+                    "setShipAddress2": 85,
+                    "setShipCity": 85,
+                    "setShipCountry": 85,
+                    "setShipState": 85,
+                    "setShipToFirstName": 85,
+                    "setShipToLastName": 85,
+                    "setShipZip": 85,
+                    "setCardType": 85,
+                    "setCourier": 85,
+                    "setCreditCard": 85,
+                    "setExpiryDate": 85,
+                    "setLocale": 85,
+                    "setOrderDate": 85,
+                    "setOrderId": 86,
+                    "setTotalPrice": 85,
+                    "setUsername": 85,
+                    "setStatus": 85,
+                    "setLineItems": 1,
+                    "getLineItems": 3,
+                    "getOrderId": 4,
+                    "getUsername": 1,
+                    "getOrderDate": 2,
+                    "getShipAddress1": 1,
+                    "getShipAddress2": 1,
+                    "getShipCity": 1,
+                    "getShipState": 1,
+                    "getShipZip": 1,
+                    "getShipCountry": 1,
+                    "getBillAddress1": 1,
+                    "getBillAddress2": 1,
+                    "getBillCity": 1,
+                    "getBillState": 1,
+                    "getBillZip": 1,
+                    "getBillCountry": 1,
+                    "getCourier": 1,
+                    "getTotalPrice": 1,
+                    "getBillToFirstName": 1,
+                    "getBillToLastName": 1,
+                    "getShipToFirstName": 1,
+                    "getShipToLastName": 1,
+                    "getCreditCard": 1,
+                    "getExpiryDate": 1,
+                    "getCardType": 1,
+                    "getLocale": 1,
+                    "getStatus": 1
+                },
+                "value": 8.753
+            },
+            {
+                "source": "OrderService",
+                "target": "LineItem",
+                "method": {
+                    "LineItem [overloaded_#001]": 1,
+                    "setOrderId": 2,
+                    "setLineNumber": 1,
+                    "setItemId": 1,
+                    "setQuantity": 1,
+                    "setUnitPrice": 1,
+                    "getItemId": 4,
+                    "setItem": 1,
+                    "getQuantity": 2,
+                    "getOrderId": 1,
+                    "getLineNumber": 1,
+                    "getUnitPrice": 1
+                },
+                "value": 3.833
+            },
+            {
+                "source": "OrderService",
+                "target": "Item",
+                "method": {
+                    "Item": 1,
+                    "getProduct": 12,
+                    "setItemId": 1,
+                    "setListPrice": 1,
+                    "setUnitCost": 1,
+                    "setSupplierId": 1,
+                    "setProduct": 1,
+                    "setStatus": 1,
+                    "setAttribute1": 1,
+                    "setQuantity": 2
+                },
+                "value": 4.091
+            },
+            {
+                "source": "OrderService",
+                "target": "Product",
+                "method": {
+                    "Product": 1,
+                    "setProductId": 1,
+                    "setName": 1,
+                    "setDescription": 1,
+                    "setCategoryId": 1
+                },
+                "value": 2.609
+            },
+            {
+                "source": "OrderService",
+                "target": "Sequence",
+                "method": {
+                    "Sequence [overloaded_#002]": 2,
+                    "getName": 3,
+                    "Sequence [overloaded_#001]": 1,
+                    "setName": 1,
+                    "setNextId": 1,
+                    "getNextId": 3
+                },
+                "value": 3.397
+            }
+        ],
+        "overview": {
+            "nodes": [
+                {
+                    "name": "partition1",
+                    "group": 1,
+                    "category": "partition1",
+                    "filepath": "Cluster",
+                    "semantics": [
+                        "DEFAULT_USE_CASE"
+                    ]
+                },
+                {
+                    "name": "partition0",
+                    "group": 2,
+                    "category": "partition0",
+                    "filepath": "Cluster",
+                    "semantics": [
+                        "DEFAULT_USE_CASE"
+                    ]
+                },
+                {
+                    "name": "partition2",
+                    "group": 0,
+                    "category": "partition2",
+                    "filepath": "Cluster",
+                    "semantics": [
+                        "DEFAULT_USE_CASE"
+                    ]
+                }
+            ],
+            "links": [
+                {
+                    "source": "partition1",
+                    "target": "partition0",
+                    "value": 1.601
+                },
+                {
+                    "source": "partition1",
+                    "target": "partition2",
+                    "value": 1.242
+                },
+                {
+                    "source": "partition0",
+                    "target": "partition1",
+                    "value": 1.533
+                },
+                {
+                    "source": "partition0",
+                    "target": "partition2",
+                    "value": 1.494
+                },
+                {
+                    "source": "partition2",
+                    "target": "partition1",
+                    "value": 1.366
+                },
+                {
+                    "source": "partition2",
+                    "target": "partition0",
+                    "value": 1.664
+                }
+            ]
+        }
+    },
+    "micro_detail_partition_by_natural_seam": {
+        "nodes": [
+            {
+                "name": "OrderActionBean",
+                "group": 0,
+                "category": "partition0",
+                "construct": "Class",
+                "FQCN": "org.mybatis.jpetstore.web.actions.OrderActionBean",
+                "filepath": "Class, project/src/main/java/org/mybatis/jpetstore/web/actions/OrderActionBean.java",
+                "semantics": [
+                    "DEFAULT_USE_CASE"
+                ]
+            },
+            {
+                "name": "AbstractActionBean",
+                "group": 0,
+                "category": "partition0",
+                "construct": "Class",
+                "FQCN": "org.mybatis.jpetstore.web.actions.AbstractActionBean",
+                "filepath": "Class, project/src/main/java/org/mybatis/jpetstore/web/actions/AbstractActionBean.java",
+                "semantics": [
+                    "DEFAULT_USE_CASE"
+                ]
+            },
+            {
+                "name": "Order",
+                "group": 0,
+                "category": "partition0",
+                "construct": "Class",
+                "FQCN": "org.mybatis.jpetstore.domain.Order",
+                "filepath": "Class, project/src/main/java/org/mybatis/jpetstore/domain/Order.java",
+                "semantics": [
+                    "DEFAULT_USE_CASE"
+                ]
+            },
+            {
+                "name": "AccountActionBean",
+                "group": 0,
+                "category": "partition0",
+                "construct": "Class",
+                "FQCN": "org.mybatis.jpetstore.web.actions.AccountActionBean",
+                "filepath": "Class, project/src/main/java/org/mybatis/jpetstore/web/actions/AccountActionBean.java",
+                "semantics": [
+                    "DEFAULT_USE_CASE"
+                ]
+            },
+            {
+                "name": "Account",
+                "group": 0,
+                "category": "partition0",
+                "construct": "Class",
+                "FQCN": "org.mybatis.jpetstore.domain.Account",
+                "filepath": "Class, project/src/main/java/org/mybatis/jpetstore/domain/Account.java",
+                "semantics": [
+                    "DEFAULT_USE_CASE"
+                ]
+            },
+            {
+                "name": "CartActionBean",
+                "group": 0,
+                "category": "partition0",
+                "construct": "Class",
+                "FQCN": "org.mybatis.jpetstore.web.actions.CartActionBean",
+                "filepath": "Class, project/src/main/java/org/mybatis/jpetstore/web/actions/CartActionBean.java",
+                "semantics": [
+                    "DEFAULT_USE_CASE"
+                ]
+            },
+            {
+                "name": "Cart",
+                "group": 0,
+                "category": "partition0",
+                "construct": "Class",
+                "FQCN": "org.mybatis.jpetstore.domain.Cart",
+                "filepath": "Class, project/src/main/java/org/mybatis/jpetstore/domain/Cart.java",
+                "semantics": [
+                    "DEFAULT_USE_CASE"
+                ]
+            },
+            {
+                "name": "CartItem",
+                "group": 0,
+                "category": "partition0",
+                "construct": "Class",
+                "FQCN": "org.mybatis.jpetstore.domain.CartItem",
+                "filepath": "Class, project/src/main/java/org/mybatis/jpetstore/domain/CartItem.java",
+                "semantics": [
+                    "DEFAULT_USE_CASE"
+                ]
+            },
+            {
+                "name": "Item",
+                "group": 0,
+                "category": "partition0",
+                "construct": "Class",
+                "FQCN": "org.mybatis.jpetstore.domain.Item",
+                "filepath": "Class, project/src/main/java/org/mybatis/jpetstore/domain/Item.java",
+                "semantics": [
+                    "DEFAULT_USE_CASE"
+                ]
+            },
+            {
+                "name": "LineItem",
+                "group": 0,
+                "category": "partition0",
+                "construct": "Class",
+                "FQCN": "org.mybatis.jpetstore.domain.LineItem",
+                "filepath": "Class, project/src/main/java/org/mybatis/jpetstore/domain/LineItem.java",
+                "semantics": [
+                    "DEFAULT_USE_CASE"
+                ]
+            },
+            {
+                "name": "CatalogActionBean",
+                "group": 0,
+                "category": "partition0",
+                "construct": "Class",
+                "FQCN": "org.mybatis.jpetstore.web.actions.CatalogActionBean",
+                "filepath": "Class, project/src/main/java/org/mybatis/jpetstore/web/actions/CatalogActionBean.java",
+                "semantics": [
+                    "DEFAULT_USE_CASE"
+                ]
+            },
+            {
+                "name": "CatalogService",
+                "group": 0,
+                "category": "partition0",
+                "construct": "Class",
+                "FQCN": "org.mybatis.jpetstore.service.CatalogService",
+                "filepath": "Class, project/src/main/java/org/mybatis/jpetstore/service/CatalogService.java",
+                "semantics": [
+                    "DEFAULT_USE_CASE"
+                ]
+            },
+            {
+                "name": "Product",
+                "group": 0,
+                "category": "partition0",
+                "construct": "Class",
+                "FQCN": "org.mybatis.jpetstore.domain.Product",
+                "filepath": "Class, project/src/main/java/org/mybatis/jpetstore/domain/Product.java",
+                "semantics": [
+                    "DEFAULT_USE_CASE"
+                ]
+            },
+            {
+                "name": "AccountService",
+                "group": 0,
+                "category": "partition0",
+                "construct": "Class",
+                "FQCN": "org.mybatis.jpetstore.service.AccountService",
+                "filepath": "Class, project/src/main/java/org/mybatis/jpetstore/service/AccountService.java",
+                "semantics": [
+                    "DEFAULT_USE_CASE"
+                ]
+            },
+            {
+                "name": "OrderService",
+                "group": 0,
+                "category": "partition0",
+                "construct": "Class",
+                "FQCN": "org.mybatis.jpetstore.service.OrderService",
+                "filepath": "Class, project/src/main/java/org/mybatis/jpetstore/service/OrderService.java",
+                "semantics": [
+                    "DEFAULT_USE_CASE"
+                ]
+            },
+            {
+                "name": "Category",
+                "group": 0,
+                "category": "partition0",
+                "construct": "Class",
+                "FQCN": "org.mybatis.jpetstore.domain.Category",
+                "filepath": "Class, project/src/main/java/org/mybatis/jpetstore/domain/Category.java",
+                "semantics": [
+                    "DEFAULT_USE_CASE"
+                ]
+            },
+            {
+                "name": "Sequence",
+                "group": 0,
+                "category": "partition0",
+                "construct": "Class",
+                "FQCN": "org.mybatis.jpetstore.domain.Sequence",
+                "filepath": "Class, project/src/main/java/org/mybatis/jpetstore/domain/Sequence.java",
+                "semantics": [
+                    "DEFAULT_USE_CASE"
+                ]
+            }
+        ],
+        "links": [
+            {
+                "source": "OrderActionBean",
+                "target": "AbstractActionBean",
+                "method": {
+                    "AbstractActionBean": 1,
+                    "setMessage": 1
+                },
+                "value": 1.693
+            },
+            {
+                "source": "OrderActionBean",
+                "target": "Order",
+                "method": {
+                    "Order": 2,
+                    "initOrder": 1,
+                    "setOrderId": 1,
+                    "getOrderId": 1,
+                    "getUsername": 1
+                },
+                "value": 2.791
+            },
+            {
+                "source": "OrderActionBean",
+                "target": "AccountActionBean",
+                "method": {
+                    "isAuthenticated": 1,
+                    "getAccount": 3
+                },
+                "value": 2.386
+            },
+            {
+                "source": "OrderActionBean",
+                "target": "CartActionBean",
+                "method": {
+                    "getCart": 1,
+                    "clear": 1
+                },
+                "value": 1.693
+            },
+            {
+                "source": "OrderActionBean",
+                "target": "Account",
+                "method": {
+                    "getUsername": 2
+                },
+                "value": 1.693
+            },
+            {
+                "source": "OrderActionBean",
+                "target": "OrderService",
+                "method": {
+                    "getOrdersByUsername": 1,
+                    "getOrder": 1,
+                    "insertOrder": 1
+                },
+                "value": 2.098
+            },
+            {
+                "source": "Order",
+                "target": "Account",
+                "method": {
+                    "getUsername": 1,
+                    "getFirstName": 2,
+                    "getLastName": 2,
+                    "getAddress1": 2,
+                    "getAddress2": 2,
+                    "getCity": 2,
+                    "getState": 2,
+                    "getZip": 2,
+                    "getCountry": 2
+                },
+                "value": 3.833
+            },
+            {
+                "source": "Order",
+                "target": "Cart",
+                "method": {
+                    "getSubTotal": 1,
+                    "getAllCartItems": 1
+                },
+                "value": 1.693
+            },
+            {
+                "source": "Order",
+                "target": "LineItem",
+                "method": {
+                    "LineItem [overloaded_#002]": 1
+                },
+                "value": 1.0
+            },
+            {
+                "source": "AccountActionBean",
+                "target": "Account",
+                "method": {
+                    "getUsername": 83,
+                    "Account": 6,
+                    "setPassword": 7,
+                    "setUsername": 4,
+                    "getPassword": 6,
+                    "getFavouriteCategoryId": 4
+                },
+                "value": 5.7
+            },
+            {
+                "source": "AccountActionBean",
+                "target": "AbstractActionBean",
+                "method": {
+                    "AbstractActionBean": 3
+                },
+                "value": 2.098
+            },
+            {
+                "source": "AccountActionBean",
+                "target": "AccountService",
+                "method": {
+                    "getAccount [overloaded_#002]": 3,
+                    "insertAccount": 1,
+                    "getAccount [overloaded_#001]": 1
+                },
+                "value": 2.609
+            },
+            {
+                "source": "AccountActionBean",
+                "target": "CatalogService",
+                "method": {
+                    "getProductListByCategory": 4
+                },
+                "value": 2.386
+            },
+            {
+                "source": "CartActionBean",
+                "target": "AbstractActionBean",
+                "method": {
+                    "AbstractActionBean": 2
+                },
+                "value": 1.693
+            },
+            {
+                "source": "CartActionBean",
+                "target": "Cart",
+                "method": {
+                    "Cart": 3,
+                    "getAllCartItems": 1,
+                    "setQuantityByItemId": 2,
+                    "containsItemId": 2,
+                    "addItem": 2,
+                    "removeItemById": 1
+                },
+                "value": 3.397
+            },
+            {
+                "source": "CartActionBean",
+                "target": "CartItem",
+                "method": {
+                    "getItem": 2
+                },
+                "value": 1.693
+            },
+            {
+                "source": "CartActionBean",
+                "target": "Item",
+                "method": {
+                    "getItemId": 2
+                },
+                "value": 1.693
+            },
+            {
+                "source": "CartActionBean",
+                "target": "CatalogService",
+                "method": {
+                    "isItemInStock": 2,
+                    "getItem": 2
+                },
+                "value": 2.386
+            },
+            {
+                "source": "Cart",
+                "target": "CartItem",
+                "method": {
+                    "getItem": 8,
+                    "getQuantity": 7,
+                    "setQuantity": 4,
+                    "CartItem": 2,
+                    "setItem": 2,
+                    "setInStock": 2,
+                    "incrementQuantity": 2
+                },
+                "value": 4.295
+            },
+            {
+                "source": "Cart",
+                "target": "Item",
+                "method": {
+                    "getListPrice": 7,
+                    "getItemId": 4
+                },
+                "value": 3.397
+            },
+            {
+                "source": "CartItem",
+                "target": "Item",
+                "method": {
+                    "getListPrice": 8
+                },
+                "value": 3.079
+            },
+            {
+                "source": "LineItem",
+                "target": "CartItem",
+                "method": {
+                    "getQuantity": 1,
+                    "getItem": 3
+                },
+                "value": 2.386
+            },
+            {
+                "source": "LineItem",
+                "target": "Item",
+                "method": {
+                    "getItemId": 1,
+                    "getListPrice": 3
+                },
+                "value": 2.386
+            },
+            {
+                "source": "CatalogActionBean",
+                "target": "CatalogService",
+                "method": {
+                    "getItemListByProduct": 4,
+                    "getProduct": 4,
+                    "getItem": 2,
+                    "searchProductList": 1,
+                    "getProductListByCategory": 3,
+                    "getCategory": 3
+                },
+                "value": 3.833
+            },
+            {
+                "source": "CatalogActionBean",
+                "target": "AbstractActionBean",
+                "method": {
+                    "AbstractActionBean": 12
+                },
+                "value": 3.484
+            },
+            {
+                "source": "CatalogActionBean",
+                "target": "Item",
+                "method": {
+                    "getProduct": 2
+                },
+                "value": 1.693
+            },
+            {
+                "source": "CatalogService",
+                "target": "Item",
+                "method": {
+                    "Item": 8,
+                    "getProduct": 80,
+                    "setItemId": 8,
+                    "setListPrice": 8,
+                    "setUnitCost": 8,
+                    "setSupplierId": 8,
+                    "setProduct": 8,
+                    "setStatus": 8,
+                    "setAttribute1": 8,
+                    "setQuantity": 3
+                },
+                "value": 5.99
+            },
+            {
+                "source": "CatalogService",
+                "target": "Product",
+                "method": {
+                    "Product": 27,
+                    "setProductId": 27,
+                    "setName": 27,
+                    "setDescription": 27,
+                    "setCategoryId": 27
+                },
+                "value": 5.905
+            },
+            {
+                "source": "CatalogService",
+                "target": "Category",
+                "method": {
+                    "Category": 2,
+                    "setCategoryId": 2,
+                    "setName": 2,
+                    "setDescription": 2
+                },
+                "value": 3.079
+            },
+            {
+                "source": "AccountService",
+                "target": "Account",
+                "method": {
+                    "Account": 3,
+                    "setUsername": 3,
+                    "setEmail": 3,
+                    "setFirstName": 3,
+                    "setLastName": 3,
+                    "setStatus": 1,
+                    "setAddress1": 3,
+                    "setAddress2": 3,
+                    "setCity": 3,
+                    "setState": 3,
+                    "setZip": 3,
+                    "setCountry": 3,
+                    "setPhone": 3,
+                    "setLanguagePreference": 3,
+                    "setFavouriteCategoryId": 3,
+                    "setListOption": 3,
+                    "setBannerOption": 3,
+                    "setBannerName": 3,
+                    "getEmail": 1,
+                    "getFirstName": 1,
+                    "getLastName": 1,
+                    "getStatus": 1,
+                    "getAddress1": 1,
+                    "getAddress2": 1,
+                    "getCity": 1,
+                    "getState": 1,
+                    "getZip": 1,
+                    "getCountry": 1,
+                    "getPhone": 1,
+                    "getUsername": 3,
+                    "isListOption": 1,
+                    "isBannerOption": 1,
+                    "getLanguagePreference": 1,
+                    "getFavouriteCategoryId": 1,
+                    "getPassword": 1
+                },
+                "value": 5.262
+            },
+            {
+                "source": "OrderService",
+                "target": "Order",
+                "method": {
+                    "Order": 85,
+                    "setBillAddress1": 85,
+                    "setBillAddress2": 85,
+                    "setBillCity": 85,
+                    "setBillCountry": 85,
+                    "setBillState": 85,
+                    "setBillToFirstName": 85,
+                    "setBillToLastName": 85,
+                    "setBillZip": 85,
+                    "setShipAddress1": 85,
+                    "setShipAddress2": 85,
+                    "setShipCity": 85,
+                    "setShipCountry": 85,
+                    "setShipState": 85,
+                    "setShipToFirstName": 85,
+                    "setShipToLastName": 85,
+                    "setShipZip": 85,
+                    "setCardType": 85,
+                    "setCourier": 85,
+                    "setCreditCard": 85,
+                    "setExpiryDate": 85,
+                    "setLocale": 85,
+                    "setOrderDate": 85,
+                    "setOrderId": 86,
+                    "setTotalPrice": 85,
+                    "setUsername": 85,
+                    "setStatus": 85,
+                    "setLineItems": 1,
+                    "getLineItems": 3,
+                    "getOrderId": 4,
+                    "getUsername": 1,
+                    "getOrderDate": 2,
+                    "getShipAddress1": 1,
+                    "getShipAddress2": 1,
+                    "getShipCity": 1,
+                    "getShipState": 1,
+                    "getShipZip": 1,
+                    "getShipCountry": 1,
+                    "getBillAddress1": 1,
+                    "getBillAddress2": 1,
+                    "getBillCity": 1,
+                    "getBillState": 1,
+                    "getBillZip": 1,
+                    "getBillCountry": 1,
+                    "getCourier": 1,
+                    "getTotalPrice": 1,
+                    "getBillToFirstName": 1,
+                    "getBillToLastName": 1,
+                    "getShipToFirstName": 1,
+                    "getShipToLastName": 1,
+                    "getCreditCard": 1,
+                    "getExpiryDate": 1,
+                    "getCardType": 1,
+                    "getLocale": 1,
+                    "getStatus": 1
+                },
+                "value": 8.753
+            },
+            {
+                "source": "OrderService",
+                "target": "LineItem",
+                "method": {
+                    "LineItem [overloaded_#001]": 1,
+                    "setOrderId": 2,
+                    "setLineNumber": 1,
+                    "setItemId": 1,
+                    "setQuantity": 1,
+                    "setUnitPrice": 1,
+                    "getItemId": 4,
+                    "setItem": 1,
+                    "getQuantity": 2,
+                    "getOrderId": 1,
+                    "getLineNumber": 1,
+                    "getUnitPrice": 1
+                },
+                "value": 3.833
+            },
+            {
+                "source": "OrderService",
+                "target": "Item",
+                "method": {
+                    "Item": 1,
+                    "getProduct": 12,
+                    "setItemId": 1,
+                    "setListPrice": 1,
+                    "setUnitCost": 1,
+                    "setSupplierId": 1,
+                    "setProduct": 1,
+                    "setStatus": 1,
+                    "setAttribute1": 1,
+                    "setQuantity": 2
+                },
+                "value": 4.091
+            },
+            {
+                "source": "OrderService",
+                "target": "Product",
+                "method": {
+                    "Product": 1,
+                    "setProductId": 1,
+                    "setName": 1,
+                    "setDescription": 1,
+                    "setCategoryId": 1
+                },
+                "value": 2.609
+            },
+            {
+                "source": "OrderService",
+                "target": "Sequence",
+                "method": {
+                    "Sequence [overloaded_#002]": 2,
+                    "getName": 3,
+                    "Sequence [overloaded_#001]": 1,
+                    "setName": 1,
+                    "setNextId": 1,
+                    "getNextId": 3
+                },
+                "value": 3.397
+            }
+        ],
+        "overview": {
+            "nodes": [
+                {
+                    "name": "partition0",
+                    "group": 0,
+                    "category": "partition0",
+                    "filepath": "Cluster",
+                    "semantics": [
+                        "DEFAULT_USE_CASE"
+                    ]
+                }
+            ],
+            "links": []
+        }
+    }
+}

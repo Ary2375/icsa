@@ -1,0 +1,89 @@
+{
+    "tool": {
+        "decomposition": {
+            "partition0": [
+                {
+                    "id": "BaseEntity"
+                },
+                {
+                    "id": "NamedEntity"
+                },
+                {
+                    "id": "Person"
+                }
+            ],
+            "partition1": [
+                {
+                    "id": "Owner"
+                },
+                {
+                    "id": "VisitController"
+                }
+            ],
+            "partition2": [
+                {
+                    "id": "CrashController"
+                },
+                {
+                    "id": "PetValidator"
+                }
+            ],
+            "partition3": [
+                {
+                    "id": "Pet"
+                },
+                {
+                    "id": "Specialty"
+                },
+                {
+                    "id": "Vet"
+                },
+                {
+                    "id": "Visit"
+                }
+            ],
+            "partition4": [
+                {
+                    "id": "OwnerRepository"
+                },
+                {
+                    "id": "PetTypeFormatter"
+                }
+            ],
+            "partition5": [
+                {
+                    "id": "VetController"
+                },
+                {
+                    "id": "VetRepository"
+                }
+            ],
+            "UNOBSERVED": [
+                {
+                    "id": "CacheConfiguration"
+                },
+                {
+                    "id": "OwnerController"
+                },
+                {
+                    "id": "PetClinicApplication"
+                },
+                {
+                    "id": "PetClinicRuntimeHints"
+                },
+                {
+                    "id": "PetController"
+                },
+                {
+                    "id": "PetType"
+                },
+                {
+                    "id": "Vets"
+                },
+                {
+                    "id": "WelcomeController"
+                }
+            ]
+        }
+    }
+}

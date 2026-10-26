@@ -1,0 +1,185 @@
+{
+    "tool": {
+        "decomposition": {
+            "partition0": [
+                {
+                    "id": "IPersistenceLayer"
+                },
+                {
+                    "id": "LoginServlet"
+                }
+            ],
+            "partition1": [
+                {
+                    "id": "RegistrationStatusEnums"
+                },
+                {
+                    "id": "TailRecursive"
+                }
+            ],
+            "partition2": [
+                {
+                    "id": "FunctionalField"
+                },
+                {
+                    "id": "Loan"
+                },
+                {
+                    "id": "ServletUtils"
+                }
+            ],
+            "partition3": [
+                {
+                    "id": "User"
+                }
+            ],
+            "partition4": [
+                {
+                    "id": "Borrower"
+                }
+            ],
+            "partition5": [
+                {
+                    "id": "FibServlet"
+                },
+                {
+                    "id": "PasswordResultEnums"
+                }
+            ],
+            "partition6": [
+                {
+                    "id": "LibraryBookListAvailableServlet"
+                }
+            ],
+            "partition7": [
+                {
+                    "id": "Ackermann"
+                },
+                {
+                    "id": "LibraryUtils"
+                }
+            ],
+            "partition8": [
+                {
+                    "id": "CheckUtils"
+                },
+                {
+                    "id": "LibraryRegisterBorrowerServlet"
+                }
+            ],
+            "partition9": [
+                {
+                    "id": "DbServlet"
+                },
+                {
+                    "id": "RegistrationResult"
+                }
+            ],
+            "partition10": [
+                {
+                    "id": "AlcoholResult"
+                }
+            ],
+            "partition11": [
+                {
+                    "id": "AckermannIterative"
+                },
+                {
+                    "id": "LibraryActionResults"
+                },
+                {
+                    "id": "LibraryLendServlet"
+                },
+                {
+                    "id": "MathServlet"
+                }
+            ],
+            "partition12": [
+                {
+                    "id": "WebAppListener"
+                }
+            ],
+            "partition14": [
+                {
+                    "id": "Calculator"
+                },
+                {
+                    "id": "CartesianProduct"
+                },
+                {
+                    "id": "LoginUtils"
+                }
+            ],
+            "partition15": [
+                {
+                    "id": "AlcoholCalculator"
+                }
+            ],
+            "partition16": [
+                {
+                    "id": "PasswordResult"
+                }
+            ],
+            "partition17": [
+                {
+                    "id": "LibraryBorrowerListSearchServlet"
+                },
+                {
+                    "id": "LibraryRegisterBookServlet"
+                },
+                {
+                    "id": "StringUtils"
+                }
+            ],
+            "partition20": [
+                {
+                    "id": "AckServlet"
+                }
+            ],
+            "UNOBSERVED": [
+                {
+                    "id": "AssertionException"
+                },
+                {
+                    "id": "Book"
+                },
+                {
+                    "id": "DinnerPrices"
+                },
+                {
+                    "id": "EmptyDataSource"
+                },
+                {
+                    "id": "Fibonacci"
+                },
+                {
+                    "id": "FibonacciIterative"
+                },
+                {
+                    "id": "LibraryBookListSearchServlet"
+                },
+                {
+                    "id": "NotImplementedException"
+                },
+                {
+                    "id": "ParameterObject"
+                },
+                {
+                    "id": "PersistenceLayer"
+                },
+                {
+                    "id": "RegisterServlet"
+                },
+                {
+                    "id": "RegistrationUtils"
+                },
+                {
+                    "id": "SqlData"
+                },
+                {
+                    "id": "SqlRuntimeException"
+                }
+            ]
+        }
+    }
+}

@@ -17,7 +17,7 @@ The research starting point is [LLMs for Architectural Refactoring: An Explorato
 ## Application sections
 
 - **Results**: filter and inspect all LLM experiments and literature/state-of-the-art reference results together as a table, bar charts, or radar charts. The table's **Compare with** selector defaults to the plain baseline for the same case study, tool, family, and chunk size. Alternatively, select a single literature reference to compare all displayed rows against its results for the same case study. Comparison data remains available even when hidden by filters; missing references produce an explicit notice instead of deltas. Higher/lower differences indicate numerical direction, not necessarily improvement.
-- **Comparator** (`/comparator`): choose a reference experiment, then explore a selected experiment relative to that fixed reference. The two decompositions are shown side by side, with every microservice tagged as new, removed, merged, split, renamed, etc., the differing classes highlighted, and the coverage of the monolith reported for each. This page focuses exclusively on architectural structure; metrics remain in Results.
+- **Comparator** (`/comparator`): choose a reference experiment, then explore a selected experiment relative to that fixed reference. Either side can be an LLM experiment or a state-of-the-art method (DATACENTRIC, HyDec, LOG2MS, MONO2MICRO, Ground Truth). The two decompositions are shown side by side, with every microservice tagged as new, removed, merged, split, renamed, etc., the differing classes highlighted, and the coverage of the monolith reported for each. This page focuses exclusively on architectural structure; metrics remain in Results.
 - **Methodology**: review telemetry collection, model generation, and the repeated LLM experiment.
 - **Artifacts**: preview or download telemetry JSON and model specifications, and view rendered diagrams grouped by repository.
 
@@ -30,7 +30,7 @@ src/app/pages/comparator/          Side-by-side comparison of two decompositions
 src/app/pages/methodology/         Pipeline, diagrams, and references
 src/app/pages/artifacts/           Artifact browser
 src/assets/data/results.json       Dataset consumed by Results
-src/assets/data/monoliths/         Reference class lists and raw decompositions (532 files) read live by the Comparator
+src/assets/data/monoliths/         Reference class lists, raw LLM decompositions and state-of-the-art decompositions read live by the Comparator
 src/assets/artifacts/<repository>/ Telemetry and model files by repository
 src/assets/theme/colors.scss       Shared color tokens
 src/assets/theme/global.scss       Shared page layout and typography
@@ -78,28 +78,39 @@ selected experiment preserves the reference, so it can serve as a stable
 baseline across multiple comparisons. Changing monolith resets both selections.
 Identical selections are allowed and explicitly reported.
 
-- **Selection by factor:** each experiment is chosen through the factors of the
-  study rather than from one long list: **LLM**, **chunk size** (30k / 50k /
-  80k), **artifact preparation** (AI / CONCAT) and **behavioral input** (static
-  only, static + one model, static + all models, or behavioral models only,
-  grouped in the menu). Values that no experiment combines with the current
-  choices are disabled, so a selection never ends in a dead end. The chosen
-  experiment is spelled out below the controls, for example
-  “Deepseek 32 Terminus · 30k · AI · Static + DFG”.
-- **Scope:** only the 528 thesis experiments are compared (4 monoliths × 2 LLMs ×
-  3 chunk sizes × 2 preparations × 11 inputs). Other outputs of the original
-  study (other LLMs, hierarchical or zero-shot runs) are not part of the
-  comparison and are not kept in the repository. An experiment whose
-  strategy name does not follow the chunk/preparation/input pattern stops the
-  page with an explicit error instead of being silently skipped.
+- **Selection by factor:** each experiment is chosen first by **approach**: one
+  of the LLMs or one of the state-of-the-art methods (menu grouped as “LLM” and
+  “State of the art”). For an LLM the remaining factors are **chunk size**
+  (30k / 50k / 80k), **artifact preparation** (AI / CONCAT) and **behavioral
+  input** (static only, static + one model, static + all models, or behavioral
+  models only, grouped in the menu). Values that no experiment combines with the
+  current choices are disabled, so a selection never ends in a dead end. For a
+  state-of-the-art method those factors do not apply and are hidden; a
+  **configuration** menu appears only when the method has several (MONO2MICRO
+  `business` / `natural`). Switching approach keeps the other choices when
+  possible, otherwise it moves to the closest experiment of the new approach. The
+  chosen experiment is spelled out below the controls, for example
+  “Deepseek 32 Terminus · 30k · AI · Static + DFG” or “MONO2MICRO (business)”.
+- **Scope:** the 528 thesis LLM experiments (4 monoliths × 2 LLMs × 3 chunk
+  sizes × 2 preparations × 11 inputs) can be compared with the state-of-the-art
+  decompositions listed in `variant_comparison` of `results.json`: DATACENTRIC,
+  GROUND_TRUTH, HyDec, LOG2MS (JPetStore and Spring-PetClinic only) and MONO2MICRO
+  (`business` and `natural`). Other outputs of the original study (other LLMs,
+  hierarchical or zero-shot runs, MEM, MOSAIC) are not part of the comparison. An
+  LLM experiment whose strategy name does not follow the
+  chunk/preparation/input pattern stops the page with an explicit error instead
+  of being silently skipped.
 - **Default:** the reference starts as the static baseline and the selected
-  experiment as the same setting plus a DFG. Both can be changed independently.
+  experiment as the same setting plus a DFG. Both can be changed independently;
+  a state-of-the-art method is never a default.
 
 - **Side-by-side comparison:** the reference decomposition on the left and the
-  selected experiment on the right, with service and class counts, service
-  sizes and the raw JSON link. Every service carries a tag (new, removed,
+  selected experiment on the right, with service and class counts and the raw
+  JSON link. Every service carries a tag (new, removed,
   merged, split, reorganized, modified, renamed, unchanged or uncertain) and the
   services it relates to on the other side. Unchanged services are collapsed.
+  The classes of each service are listed in alphabetical order (ignoring case)
+  to make a class easy to find.
 - **Summary:** counts of new services, removed services, merge operations and
   split operations, plus the change in monolith coverage.
 - **Legend:** a single legend below the columns explains every service tag (New,
@@ -136,29 +147,37 @@ cohesion, coupling, architectural quality or causality from class co-location.
 
 There is no generated index and no script to run. Every time the page is opened:
 
-1. `results.json` provides the list of experiments (LLM strategies only).
-2. When an experiment is chosen, only its `decomposition.json` and the
+1. `results.json` provides the list of experiments: the LLM strategies and the
+   state-of-the-art rows of `variant_comparison`.
+2. When an experiment is chosen, only its decomposition file and the
    monolith's `reference_decomposition.json` are fetched, with
    `Cache-Control: no-cache` so edited files are never served stale.
 
 The Comparator therefore always reflects the files currently deployed. A missing
-or malformed file, an unsupported strategy name, an unmapped monolith/LLM or a
-duplicate experiment shows an explicit error instead of being skipped.
+or malformed file, an unsupported strategy name, an unmapped monolith/LLM/method
+or a duplicate experiment shows an explicit error instead of being skipped.
 
-`src/assets/data/monoliths` contains only what the Comparator needs (**532
-files**, which must be committed for deployment): for each monolith,
-`reference_decomposition.json` (its class list) and the raw `decomposition.json`
-of every compared experiment under
+`src/assets/data/monoliths` contains what the Comparator needs: for each
+monolith, `reference_decomposition.json` (its class list), the raw
+`decomposition.json` of every compared LLM experiment under
 `summaries/<llm>/<chunk>/artifacts_<ai|concat>/<variant>/` (an empty variant
-folder is the static baseline).
+folder is the static baseline), and the `class_decomposition.json` of every
+state-of-the-art method under `summaries/<method>/n_partitions/` (MONO2MICRO:
+`summaries/mono2micro/<N>_partitions/<business|natural>/`). The
+`class_decomposition.json` is the one whose number of services matches
+`#Partitions` in `results.json`; the `filtered_*`, visualization, method-level,
+`original.json`, MEM and MOSAIC files are kept in the repository but not read.
+These files must be committed for deployment.
 
-`angular.json` publishes only these files with the site (528 decompositions and
-the 4 references, about 1 MB); the rest of the tree is excluded.
+`angular.json` publishes only the files above with the site (528 LLM
+decompositions, 22 method decompositions and the 4 references); the rest of the
+tree is excluded.
 
-To add a monolith or LLM, add its data folder to `MONOLITH_FOLDERS` /
-`LLM_FOLDERS` in `src/app/utils/decomposition-source.ts` (and a new chunk size
-or LLM to the globs in `angular.json`). Quality metrics, tokens and automatic
-research notes are not part of this page.
+To add a monolith, LLM or method, add its data folder to `MONOLITH_FOLDERS` /
+`LLM_FOLDERS` / `LITERATURE_FOLDERS` in `src/app/utils/decomposition-source.ts`
+(and a new chunk size, LLM or method to the globs in `angular.json`). For a new
+MONO2MICRO run, also add its partition count to `MONO2MICRO_PARTITIONS`. Quality
+metrics, tokens and automatic research notes are not part of this page.
 
 Focused validation:
 

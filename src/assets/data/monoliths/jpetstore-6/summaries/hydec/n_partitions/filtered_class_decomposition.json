@@ -1,0 +1,96 @@
+{
+    "tool": {
+        "decomposition": {
+            "patition0": [
+                {
+                    "id": "Cart"
+                },
+                {
+                    "id": "CartActionBean"
+                },
+                {
+                    "id": "CartItem"
+                },
+                {
+                    "id": "Item"
+                },
+                {
+                    "id": "ItemMapper"
+                }
+            ],
+            "patition4": [
+                {
+                    "id": "Category"
+                },
+                {
+                    "id": "CategoryMapper"
+                }
+            ],
+            "patition5": [
+                {
+                    "id": "LineItem"
+                },
+                {
+                    "id": "LineItemMapper"
+                }
+            ],
+            "patition1": [
+                {
+                    "id": "Order"
+                },
+                {
+                    "id": "OrderActionBean"
+                },
+                {
+                    "id": "OrderMapper"
+                },
+                {
+                    "id": "OrderService"
+                }
+            ],
+            "patition6": [
+                {
+                    "id": "Product"
+                },
+                {
+                    "id": "ProductMapper"
+                }
+            ],
+            "patition2": [
+                {
+                    "id": "Sequence"
+                },
+                {
+                    "id": "SequenceMapper"
+                }
+            ],
+            "patition7": [
+                {
+                    "id": "AccountActionBean"
+                },
+                {
+                    "id": "AccountMapper"
+                },
+                {
+                    "id": "AccountService"
+                }
+            ],
+            "patition3": [
+                {
+                    "id": "CatalogActionBean"
+                },
+                {
+                    "id": "CatalogService"
+                }
+            ],
+            "UNOBSERVED": [
+                {
+                    "id": "AbstractActionBean"
+                },
+                {
+                    "id": "Account"
+                }
+            ]
+        }
+    }
+}
