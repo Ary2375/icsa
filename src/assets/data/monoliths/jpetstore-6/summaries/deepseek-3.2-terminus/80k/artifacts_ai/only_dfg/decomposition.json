@@ -1,0 +1,26 @@
+{
+  "tool": {
+    "decomposition": {
+      "Account Management Service": [
+        {
+          "id": "AccountService"
+        }
+      ],
+      "Catalog Service": [
+        {
+          "id": "CatalogService"
+        }
+      ],
+      "Order Management Service": [
+        {
+          "id": "OrderService"
+        }
+      ],
+      "Web Infrastructure Service": [
+        {
+          "id": "ResponseFacade"
+        }
+      ]
+    }
+  }
+}

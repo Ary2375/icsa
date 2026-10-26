@@ -1,0 +1,106 @@
+{
+  "tool": {
+    "decomposition": {
+      "Owner Service": [
+        {
+          "id": "Owner"
+        },
+        {
+          "id": "OwnerController"
+        },
+        {
+          "id": "OwnerRepository"
+        },
+        {
+          "id": "Person"
+        },
+        {
+          "id": "BaseEntity"
+        }
+      ],
+      "Pet Service": [
+        {
+          "id": "Pet"
+        },
+        {
+          "id": "PetController"
+        },
+        {
+          "id": "PetType"
+        },
+        {
+          "id": "PetTypeRepository"
+        },
+        {
+          "id": "PetTypeFormatter"
+        },
+        {
+          "id": "PetValidator"
+        },
+        {
+          "id": "NamedEntity"
+        },
+        {
+          "id": "BaseEntity"
+        }
+      ],
+      "Visit Service": [
+        {
+          "id": "Visit"
+        },
+        {
+          "id": "VisitController"
+        },
+        {
+          "id": "BaseEntity"
+        }
+      ],
+      "Vet Service": [
+        {
+          "id": "Vet"
+        },
+        {
+          "id": "VetController"
+        },
+        {
+          "id": "VetRepository"
+        },
+        {
+          "id": "Vets"
+        },
+        {
+          "id": "Specialty"
+        },
+        {
+          "id": "Person"
+        },
+        {
+          "id": "NamedEntity"
+        },
+        {
+          "id": "BaseEntity"
+        }
+      ],
+      "Infrastructure Service": [
+        {
+          "id": "PetClinicApplication"
+        },
+        {
+          "id": "PetClinicRuntimeHints"
+        },
+        {
+          "id": "CacheConfiguration"
+        },
+        {
+          "id": "WebConfiguration"
+        },
+        {
+          "id": "WelcomeController"
+        },
+        {
+          "id": "CrashController"
+        }
+      ]
+    }
+  }
+}

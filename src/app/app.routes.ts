@@ -5,6 +5,10 @@ import { Artifacts } from './pages/artifacts/artifacts';
 
 export const routes: Routes = [
     {
+        path: "comparator",
+        loadComponent: () => import('./pages/comparator/comparator').then(module => module.Comparator)
+    },
+    {
         path: "artifacts",
         component: Artifacts
     },

@@ -1,0 +1,81 @@
+{
+  "tool": {
+    "decomposition": {
+      "Account Management Service": [
+        {
+          "id": "AccountDAO"
+        },
+        {
+          "id": "SignonDAO"
+        },
+        {
+          "id": "ProfileDAO"
+        }
+      ],
+      "Catalog Management Service": [
+        {
+          "id": "ProductDAO"
+        },
+        {
+          "id": "CategoryDAO"
+        },
+        {
+          "id": "ItemDAO"
+        },
+        {
+          "id": "InventoryDAO"
+        },
+        {
+          "id": "SupplierDAO"
+        },
+        {
+          "id": "BannerDataDAO"
+        }
+      ],
+      "Order Management Service": [
+        {
+          "id": "OrdersDAO"
+        },
+        {
+          "id": "OrderStatusDAO"
+        },
+        {
+          "id": "LineItemDAO"
+        }
+      ],
+      "Sequence Generation Service": [
+        {
+          "id": "SequenceDAO"
+        }
+      ],
+      "Web API Service": [
+        {
+          "id": "JPetStoreController"
+        },
+        {
+          "id": "CargoCPCController"
+        },
+        {
+          "id": "ResponseHandler"
+        },
+        {
+          "id": "HttpGetHandler"
+        },
+        {
+          "id": "HttpPostHandler"
+        }
+      ],
+      "Shared Infrastructure Service": [
+        {
+          "id": "DataSourceConfig"
+        },
+        {
+          "id": "IndexInitializer"
+        },
+        {
+          "id": "GenericDAO"
+        }
+      ]
+    }
+  }
+}

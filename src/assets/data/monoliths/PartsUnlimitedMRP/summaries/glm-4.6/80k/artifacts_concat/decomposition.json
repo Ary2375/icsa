@@ -1,0 +1,317 @@
+{
+  "tool": {
+    "decomposition": {
+      "Catalog Management Service": [
+        {
+          "id": "CatalogController"
+        },
+        {
+          "id": "CatalogControllerTest"
+        },
+        {
+          "id": "CatalogItem"
+        },
+        {
+          "id": "CatalogItemsRepository"
+        },
+        {
+          "id": "CatalogItemsRepositoryTest"
+        },
+        {
+          "id": "MockCatalogItemsRepository"
+        },
+        {
+          "id": "MongoCatalogItemsRepository"
+        },
+        {
+          "id": "smpl.ordering.repositories.mongodb.models.CatalogItem"
+        }
+      ],
+      "Dealer Management Service": [
+        {
+          "id": "DealerController"
+        },
+        {
+          "id": "DealerControllerTest"
+        },
+        {
+          "id": "DealerInfo"
+        },
+        {
+          "id": "DealersRepository"
+        },
+        {
+          "id": "DealersRepositoryTest"
+        },
+        {
+          "id": "MockDealersRepository"
+        },
+        {
+          "id": "MongoDealersRepository"
+        },
+        {
+          "id": "smpl.ordering.repositories.mongodb.models.Dealer"
+        }
+      ],
+      "Quote Management Service": [
+        {
+          "id": "QuoteController"
+        },
+        {
+          "id": "QuoteControllerTest"
+        },
+        {
+          "id": "Quote"
+        },
+        {
+          "id": "QuoteItemInfo"
+        },
+        {
+          "id": "QuoteRepository"
+        },
+        {
+          "id": "QuoteRepositoryTest"
+        },
+        {
+          "id": "MockQuoteRepository"
+        },
+        {
+          "id": "MongoQuoteRepository"
+        },
+        {
+          "id": "smpl.ordering.repositories.mongodb.models.QuoteDetails"
+        },
+        {
+          "id": "integration.models.mrp.Quote"
+        },
+        {
+          "id": "integration.models.mrp.QuoteItemInfo"
+        }
+      ],
+      "Order Management Service": [
+        {
+          "id": "OrderController"
+        },
+        {
+          "id": "OrderControllerTest"
+        },
+        {
+          "id": "Order"
+        },
+        {
+          "id": "OrderEventInfo"
+        },
+        {
+          "id": "OrderStatus"
+        },
+        {
+          "id": "OrderUpdateInfo"
+        },
+        {
+          "id": "OrderRepository"
+        },
+        {
+          "id": "OrderRepositoryTest"
+        },
+        {
+          "id": "MockOrderRepository"
+        },
+        {
+          "id": "MongoOrderRepository"
+        },
+        {
+          "id": "smpl.ordering.repositories.mongodb.models.OrderDetails"
+        },
+        {
+          "id": "integration.models.mrp.Order"
+        }
+      ],
+      "Shipment Management Service": [
+        {
+          "id": "ShipmentController"
+        },
+        {
+          "id": "ShipmentControllerTest"
+        },
+        {
+          "id": "ShipmentRecord"
+        },
+        {
+          "id": "ShipmentEventInfo"
+        },
+        {
+          "id": "Delivery"
+        },
+        {
+          "id": "DeliveryAddress"
+        },
+        {
+          "id": "PhoneInfo"
+        },
+        {
+          "id": "ShipmentRepository"
+        },
+        {
+          "id": "ShipmentRepositoryTest"
+        },
+        {
+          "id": "MockShipmentRepository"
+        },
+        {
+          "id": "MongoShipmentRepository"
+        },
+        {
+          "id": "smpl.ordering.repositories.mongodb.models.ShipmentDetails"
+        },
+        {
+          "id": "integration.models.mrp.ShipmentRecord"
+        },
+        {
+          "id": "integration.models.mrp.ShipmentEventInfo"
+        },
+        {
+          "id": "integration.models.mrp.DeliveryAddress"
+        },
+        {
+          "id": "integration.models.mrp.PhoneInfo"
+        }
+      ],
+      "Integration Service": [
+        {
+          "id": "Main"
+        },
+        {
+          "id": "Constants"
+        },
+        {
+          "id": "ConfigurationHelpers"
+        },
+        {
+          "id": "ConfigurationManager"
+        },
+        {
+          "id": "QueueResponse"
+        },
+        {
+          "id": "CreateOrderProcessTask"
+        },
+        {
+          "id": "UpdateProductProcessTask"
+        },
+        {
+          "id": "MrpConnectService"
+        },
+        {
+          "id": "QueueFactory"
+        },
+        {
+          "id": "QueueService"
+        },
+        {
+          "id": "integration.models.mrp.CatalogItem"
+        },
+        {
+          "id": "integration.models.website.OrderItem"
+        },
+        {
+          "id": "integration.models.website.OrderMessage"
+        },
+        {
+          "id": "integration.models.website.ProductItem"
+        },
+        {
+          "id": "integration.models.website.ProductMessage"
+        }
+      ],
+      "Common Infrastructure Service": [
+        {
+          "id": "AppInsightsFilter"
+        },
+        {
+          "id": "BadRequestException"
+        },
+        {
+          "id": "ConflictingRequestException"
+        },
+        {
+          "id": "MongoDBProperties"
+        },
+        {
+          "id": "OrderingConfiguration"
+        },
+        {
+          "id": "OrderingInitializer"
+        },
+        {
+          "id": "OrderingServiceProperties"
+        },
+        {
+          "id": "PostgresqlProperties"
+        },
+        {
+          "id": "PropertyHelper"
+        },
+        {
+          "id": "SimpleCORSFilter"
+        },
+        {
+          "id": "TestOrderingConfiguration"
+        },
+        {
+          "id": "TestPath"
+        },
+        {
+          "id": "Utility"
+        },
+        {
+          "id": "UtilityTest"
+        },
+        {
+          "id": "ConfigurationRule"
+        },
+        {
+          "id": "RepositoryFactory"
+        },
+        {
+          "id": "MongoOperationsWithRetry"
+        },
+        {
+          "id": "PingController"
+        },
+        {
+          "id": "MongoCatalogItemsRepositoryTest"
+        },
+        {
+          "id": "MongoDealersRepositoryTest"
+        },
+        {
+          "id": "MongoOrderRepositoryTest"
+        },
+        {
+          "id": "MongoQuoteRepositoryTest"
+        },
+        {
+          "id": "MongoShipmentRepositoryTest"
+        },
+        {
+          "id": "MockCatalogItemsRepositoryTest"
+        },
+        {
+          "id": "MockDealersRepositoryTest"
+        },
+        {
+          "id": "MockOrderRepositoryTest"
+        },
+        {
+          "id": "MockQuoteRepositoryTest"
+        },
+        {
+          "id": "MockShipmentRepositoryTest"
+        },
+        {
+          "id": "IntegrationTests"
+        }
+      ]
+    }
+  }
+}

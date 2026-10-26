@@ -1,0 +1,110 @@
+{
+  "tool": {
+    "decomposition": {
+      "Account Management Service": [
+        {
+          "id": "Account"
+        },
+        {
+          "id": "Signon"
+        },
+        {
+          "id": "Profile"
+        },
+        {
+          "id": "BannerData"
+        },
+        {
+          "id": "AccountMapper"
+        },
+        {
+          "id": "AccountService"
+        },
+        {
+          "id": "AccountAction"
+        }
+      ],
+      "Catalog Service": [
+        {
+          "id": "Category"
+        },
+        {
+          "id": "Product"
+        },
+        {
+          "id": "Item"
+        },
+        {
+          "id": "Supplier"
+        },
+        {
+          "id": "Inventory"
+        },
+        {
+          "id": "CategoryMapper"
+        },
+        {
+          "id": "ProductMapper"
+        },
+        {
+          "id": "ItemMapper"
+        },
+        {
+          "id": "CatalogService"
+        },
+        {
+          "id": "CatalogAction"
+        }
+      ],
+      "Order Management Service": [
+        {
+          "id": "Order"
+        },
+        {
+          "id": "OrderStatus"
+        },
+        {
+          "id": "LineItem"
+        },
+        {
+          "id": "Sequence"
+        },
+        {
+          "id": "Cart"
+        },
+        {
+          "id": "CartItem"
+        },
+        {
+          "id": "OrderMapper"
+        },
+        {
+          "id": "LineItemMapper"
+        },
+        {
+          "id": "SequenceMapper"
+        },
+        {
+          "id": "OrderService"
+        },
+        {
+          "id": "OrderAction"
+        },
+        {
+          "id": "CartAction"
+        }
+      ],
+      "Shared Infrastructure Service": [
+        {
+          "id": "AbstractAction"
+        },
+        {
+          "id": "IncludeAction"
+        },
+        {
+          "id": "DomainObject"
+        }
+      ]
+    }
+  }
+}

@@ -1,0 +1,135 @@
+{
+  "tool": {
+    "decomposition": {
+      "Catalog Service": [
+        {
+          "id": "CatalogController"
+        },
+        {
+          "id": "CatalogItem"
+        },
+        {
+          "id": "MockCatalogItemsRepository"
+        },
+        {
+          "id": "CatalogItemsRepositoryTest"
+        },
+        {
+          "id": "CatalogControllerTest"
+        },
+        {
+          "id": "MockCatalogItemsRepositoryTest"
+        }
+      ],
+      "Dealer Service": [
+        {
+          "id": "DealerController"
+        },
+        {
+          "id": "DealerInfo"
+        },
+        {
+          "id": "MockDealersRepository"
+        },
+        {
+          "id": "DealersRepositoryTest"
+        },
+        {
+          "id": "DealerControllerTest"
+        },
+        {
+          "id": "MockDealersRepositoryTest"
+        }
+      ],
+      "Quote Service": [
+        {
+          "id": "QuoteController"
+        },
+        {
+          "id": "Quote"
+        },
+        {
+          "id": "QuoteItemInfo"
+        },
+        {
+          "id": "MockQuoteRepository"
+        },
+        {
+          "id": "QuoteRepositoryTest"
+        },
+        {
+          "id": "QuoteControllerTest"
+        },
+        {
+          "id": "MockQuoteRepositoryTest"
+        }
+      ],
+      "Order Service": [
+        {
+          "id": "OrderController"
+        },
+        {
+          "id": "Order"
+        },
+        {
+          "id": "OrderEventInfo"
+        },
+        {
+          "id": "OrderUpdateInfo"
+        },
+        {
+          "id": "MockOrderRepository"
+        },
+        {
+          "id": "OrderRepositoryTest"
+        },
+        {
+          "id": "OrderControllerTest"
+        },
+        {
+          "id": "MockOrderRepositoryTest"
+        }
+      ],
+      "Shipment Service": [
+        {
+          "id": "ShipmentController"
+        },
+        {
+          "id": "ShipmentRecord"
+        },
+        {
+          "id": "ShipmentEventInfo"
+        },
+        {
+          "id": "MockShipmentRepository"
+        },
+        {
+          "id": "ShipmentRepositoryTest"
+        },
+        {
+          "id": "ShipmentControllerTest"
+        },
+        {
+          "id": "DeliveryAddress"
+        }
+      ],
+      "Shared Infrastructure Service": [
+        {
+          "id": "RepositoryFactory"
+        },
+        {
+          "id": "Utility"
+        },
+        {
+          "id": "PropertyHelper"
+        },
+        {
+          "id": "ConfigurationRule"
+        },
+        {
+          "id": "UtilityTest"
+        }
+      ]
+    }
+  }
+}

@@ -1,0 +1,127 @@
+{
+  "tool": {
+    "decomposition": {
+      "Account Service": [
+        {
+          "id": "Account"
+        },
+        {
+          "id": "Signon"
+        },
+        {
+          "id": "Profile"
+        },
+        {
+          "id": "AccountDao"
+        },
+        {
+          "id": "SignonDao"
+        },
+        {
+          "id": "ProfileDao"
+        },
+        {
+          "id": "AccountAction"
+        }
+      ],
+      "Catalog Service": [
+        {
+          "id": "Product"
+        },
+        {
+          "id": "Category"
+        },
+        {
+          "id": "Item"
+        },
+        {
+          "id": "Inventory"
+        },
+        {
+          "id": "Supplier"
+        },
+        {
+          "id": "ProductDao"
+        },
+        {
+          "id": "CategoryDao"
+        },
+        {
+          "id": "ItemDao"
+        },
+        {
+          "id": "InventoryDao"
+        },
+        {
+          "id": "SupplierDao"
+        },
+        {
+          "id": "CatalogAction"
+        }
+      ],
+      "Order Service": [
+        {
+          "id": "Order"
+        },
+        {
+          "id": "OrderStatus"
+        },
+        {
+          "id": "LineItem"
+        },
+        {
+          "id": "OrderDao"
+        },
+        {
+          "id": "OrderStatusDao"
+        },
+        {
+          "id": "LineItemDao"
+        },
+        {
+          "id": "OrderAction"
+        }
+      ],
+      "Banner Service": [
+        {
+          "id": "BannerData"
+        },
+        {
+          "id": "BannerDataDao"
+        }
+      ],
+      "Sequence Service": [
+        {
+          "id": "Sequence"
+        },
+        {
+          "id": "SequenceDao"
+        }
+      ],
+      "Database Initialization Service": [
+        {
+          "id": "DatabaseInitializer"
+        }
+      ],
+      "Web Service": [
+        {
+          "id": "PetStoreController"
+        },
+        {
+          "id": "Response"
+        },
+        {
+          "id": "ResponseFacade"
+        }
+      ],
+      "Shared Infrastructure Service": [
+        {
+          "id": "BaseAction"
+        },
+        {
+          "id": "JpetstoreApplication"
+        }
+      ]
+    }
+  }
+}

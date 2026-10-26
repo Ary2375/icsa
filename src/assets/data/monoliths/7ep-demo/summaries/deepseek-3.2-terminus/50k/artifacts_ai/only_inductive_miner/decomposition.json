@@ -1,0 +1,76 @@
+{
+  "tool": {
+    "decomposition": {
+      "Account Service": [
+        {
+          "id": "Account"
+        },
+        {
+          "id": "Profile"
+        },
+        {
+          "id": "Signon"
+        }
+      ],
+      "Catalog Service": [
+        {
+          "id": "Product"
+        },
+        {
+          "id": "Category"
+        },
+        {
+          "id": "Item"
+        },
+        {
+          "id": "Supplier"
+        }
+      ],
+      "Inventory Service": [
+        {
+          "id": "Inventory"
+        }
+      ],
+      "Order Service": [
+        {
+          "id": "Orders"
+        },
+        {
+          "id": "OrderStatus"
+        },
+        {
+          "id": "LineItem"
+        },
+        {
+          "id": "Sequence"
+        }
+      ],
+      "Banner Service": [
+        {
+          "id": "BannerData"
+        }
+      ],
+      "Cargo Service": [
+        {
+          "id": "CargoController"
+        }
+      ],
+      "JPetStore Web Service": [
+        {
+          "id": "JpetstoreController"
+        }
+      ],
+      "Shared Infrastructure Service": [
+        {
+          "id": "DataSource"
+        },
+        {
+          "id": "Response"
+        },
+        {
+          "id": "ResponseFacade"
+        }
+      ]
+    }
+  }
+}

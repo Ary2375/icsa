@@ -1,0 +1,88 @@
+{
+  "tool": {
+    "decomposition": {
+      "User Management Service": [
+        {
+          "id": "Account"
+        },
+        {
+          "id": "AccountService"
+        },
+        {
+          "id": "AccountMapper"
+        },
+        {
+          "id": "AccountActionBean"
+        }
+      ],
+      "Product Catalog Service": [
+        {
+          "id": "Category"
+        },
+        {
+          "id": "Product"
+        },
+        {
+          "id": "Item"
+        },
+        {
+          "id": "CatalogService"
+        },
+        {
+          "id": "CategoryMapper"
+        },
+        {
+          "id": "ProductMapper"
+        },
+        {
+          "id": "ItemMapper"
+        },
+        {
+          "id": "CatalogActionBean"
+        }
+      ],
+      "Order Processing Service": [
+        {
+          "id": "Order"
+        },
+        {
+          "id": "LineItem"
+        },
+        {
+          "id": "Sequence"
+        },
+        {
+          "id": "OrderService"
+        },
+        {
+          "id": "OrderMapper"
+        },
+        {
+          "id": "LineItemMapper"
+        },
+        {
+          "id": "SequenceMapper"
+        },
+        {
+          "id": "OrderActionBean"
+        }
+      ],
+      "Shopping Cart Service": [
+        {
+          "id": "Cart"
+        },
+        {
+          "id": "CartItem"
+        },
+        {
+          "id": "CartActionBean"
+        }
+      ],
+      "Web Gateway Service": [
+        {
+          "id": "AbstractActionBean"
+        }
+      ]
+    }
+  }
+}

@@ -1,0 +1,98 @@
+{
+  "tool": {
+    "decomposition": {
+      "Account Service": [
+        {
+          "id": "Account"
+        },
+        {
+          "id": "AccountMapper"
+        },
+        {
+          "id": "AccountService"
+        },
+        {
+          "id": "AccountController"
+        },
+        {
+          "id": "SignonInterceptor"
+        }
+      ],
+      "Catalog Service": [
+        {
+          "id": "Category"
+        },
+        {
+          "id": "Product"
+        },
+        {
+          "id": "Item"
+        },
+        {
+          "id": "CategoryMapper"
+        },
+        {
+          "id": "ProductMapper"
+        },
+        {
+          "id": "ItemMapper"
+        },
+        {
+          "id": "CatalogService"
+        },
+        {
+          "id": "CatalogController"
+        }
+      ],
+      "Order Service": [
+        {
+          "id": "Cart"
+        },
+        {
+          "id": "CartItem"
+        },
+        {
+          "id": "Order"
+        },
+        {
+          "id": "OrderStatus"
+        },
+        {
+          "id": "LineItem"
+        },
+        {
+          "id": "Sequence"
+        },
+        {
+          "id": "OrderMapper"
+        },
+        {
+          "id": "OrderStatusMapper"
+        },
+        {
+          "id": "LineItemMapper"
+        },
+        {
+          "id": "SequenceMapper"
+        },
+        {
+          "id": "OrderService"
+        },
+        {
+          "id": "OrderController"
+        },
+        {
+          "id": "CartController"
+        }
+      ],
+      "Shared Infrastructure Service": [
+        {
+          "id": "JpetstoreApplication"
+        },
+        {
+          "id": "BaseAction"
+        }
+      ]
+    }
+  }
+}

@@ -1,0 +1,68 @@
+{
+  "tool": {
+    "decomposition": {
+      "Account Management Service": [
+        {
+          "id": "AccountService"
+        },
+        {
+          "id": "Account"
+        },
+        {
+          "id": "Profile"
+        },
+        {
+          "id": "Signon"
+        }
+      ],
+      "Catalog Management Service": [
+        {
+          "id": "CatalogService"
+        },
+        {
+          "id": "Category"
+        },
+        {
+          "id": "Product"
+        },
+        {
+          "id": "Item"
+        },
+        {
+          "id": "Inventory"
+        },
+        {
+          "id": "Supplier"
+        },
+        {
+          "id": "BannerData"
+        }
+      ],
+      "Order Management Service": [
+        {
+          "id": "OrderService"
+        },
+        {
+          "id": "Order"
+        },
+        {
+          "id": "LineItem"
+        },
+        {
+          "id": "OrderStatus"
+        },
+        {
+          "id": "Sequence"
+        }
+      ],
+      "Shared Infrastructure Service": [
+        {
+          "id": "ResponseFacade"
+        },
+        {
+          "id": "Response"
+        }
+      ]
+    }
+  }
+}

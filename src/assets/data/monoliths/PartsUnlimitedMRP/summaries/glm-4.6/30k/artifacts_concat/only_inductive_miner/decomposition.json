@@ -1,0 +1,150 @@
+{
+  "tool": {
+    "decomposition": {
+      "Quote Service": [
+        {
+          "id": "QuoteController"
+        },
+        {
+          "id": "QuoteRepository"
+        },
+        {
+          "id": "MockQuoteRepository"
+        },
+        {
+          "id": "Quote"
+        },
+        {
+          "id": "QuoteItemInfo"
+        },
+        {
+          "id": "QuoteRepositoryTest"
+        },
+        {
+          "id": "MockQuoteRepositoryTest"
+        },
+        {
+          "id": "QuoteControllerTest"
+        }
+      ],
+      "Order Service": [
+        {
+          "id": "OrderController"
+        },
+        {
+          "id": "OrderRepository"
+        },
+        {
+          "id": "MockOrderRepository"
+        },
+        {
+          "id": "Order"
+        },
+        {
+          "id": "OrderEventInfo"
+        },
+        {
+          "id": "OrderUpdateInfo"
+        },
+        {
+          "id": "OrderRepositoryTest"
+        },
+        {
+          "id": "MockOrderRepositoryTest"
+        },
+        {
+          "id": "OrderControllerTest"
+        }
+      ],
+      "Shipment Service": [
+        {
+          "id": "ShipmentController"
+        },
+        {
+          "id": "ShipmentRepository"
+        },
+        {
+          "id": "MockShipmentRepository"
+        },
+        {
+          "id": "ShipmentRecord"
+        },
+        {
+          "id": "ShipmentEventInfo"
+        },
+        {
+          "id": "DeliveryAddress"
+        },
+        {
+          "id": "ShipmentRepositoryTest"
+        },
+        {
+          "id": "ShipmentControllerTest"
+        }
+      ],
+      "Dealer Service": [
+        {
+          "id": "DealerController"
+        },
+        {
+          "id": "DealersRepository"
+        },
+        {
+          "id": "MockDealersRepository"
+        },
+        {
+          "id": "DealerInfo"
+        },
+        {
+          "id": "DealersRepositoryTest"
+        },
+        {
+          "id": "MockDealersRepositoryTest"
+        },
+        {
+          "id": "DealerControllerTest"
+        }
+      ],
+      "Catalog Service": [
+        {
+          "id": "CatalogController"
+        },
+        {
+          "id": "CatalogItemsRepository"
+        },
+        {
+          "id": "MockCatalogItemsRepository"
+        },
+        {
+          "id": "CatalogItem"
+        },
+        {
+          "id": "CatalogItemsRepositoryTest"
+        },
+        {
+          "id": "MockCatalogItemsRepositoryTest"
+        },
+        {
+          "id": "CatalogControllerTest"
+        }
+      ],
+      "Shared Infrastructure Service": [
+        {
+          "id": "RepositoryFactory"
+        },
+        {
+          "id": "Utility"
+        },
+        {
+          "id": "PropertyHelper"
+        },
+        {
+          "id": "ConfigurationRule"
+        },
+        {
+          "id": "UtilityTest"
+        }
+      ]
+    }
+  }
+}

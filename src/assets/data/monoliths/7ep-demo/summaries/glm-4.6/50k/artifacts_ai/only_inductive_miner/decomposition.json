@@ -1,0 +1,134 @@
+{
+  "tool": {
+    "decomposition": {
+      "Account Service": [
+        {
+          "id": "Account"
+        },
+        {
+          "id": "Signon"
+        },
+        {
+          "id": "Profile"
+        },
+        {
+          "id": "BannerData"
+        },
+        {
+          "id": "AccountDao"
+        },
+        {
+          "id": "SqlMapAccountDao"
+        },
+        {
+          "id": "AccountService"
+        },
+        {
+          "id": "AccountBean"
+        }
+      ],
+      "Catalog Service": [
+        {
+          "id": "Category"
+        },
+        {
+          "id": "Product"
+        },
+        {
+          "id": "Item"
+        },
+        {
+          "id": "Supplier"
+        },
+        {
+          "id": "Inventory"
+        },
+        {
+          "id": "CategoryDao"
+        },
+        {
+          "id": "SqlMapCategoryDao"
+        },
+        {
+          "id": "ProductDao"
+        },
+        {
+          "id": "SqlMapProductDao"
+        },
+        {
+          "id": "ItemDao"
+        },
+        {
+          "id": "SqlMapItemDao"
+        },
+        {
+          "id": "CatalogService"
+        },
+        {
+          "id": "CatalogBean"
+        }
+      ],
+      "Order Service": [
+        {
+          "id": "Order"
+        },
+        {
+          "id": "OrderStatus"
+        },
+        {
+          "id": "LineItem"
+        },
+        {
+          "id": "Sequence"
+        },
+        {
+          "id": "Cart"
+        },
+        {
+          "id": "CartItem"
+        },
+        {
+          "id": "OrderDao"
+        },
+        {
+          "id": "SqlMapOrderDao"
+        },
+        {
+          "id": "LineItemDao"
+        },
+        {
+          "id": "SqlMapLineItemDao"
+        },
+        {
+          "id": "SequenceDao"
+        },
+        {
+          "id": "SqlMapSequenceDao"
+        },
+        {
+          "id": "OrderService"
+        },
+        {
+          "id": "OrderValidator"
+        },
+        {
+          "id": "OrderBean"
+        },
+        {
+          "id": "CartBean"
+        }
+      ],
+      "Shared Infrastructure Service": [
+        {
+          "id": "PetStoreImpl"
+        },
+        {
+          "id": "SessionData"
+        },
+        {
+          "id": "DataSource"
+        }
+      ]
+    }
+  }
+}

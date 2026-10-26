@@ -1,0 +1,161 @@
+{
+  "tool": {
+    "decomposition": {
+      "Authentication Service": [
+        {
+          "id": "RegisterServlet"
+        },
+        {
+          "id": "LoginServlet"
+        },
+        {
+          "id": "RegistrationUtils"
+        },
+        {
+          "id": "LoginUtils"
+        },
+        {
+          "id": "User"
+        },
+        {
+          "id": "PasswordResult"
+        },
+        {
+          "id": "PasswordResultEnums"
+        },
+        {
+          "id": "RegistrationResult"
+        },
+        {
+          "id": "RegistrationStatusEnums"
+        }
+      ],
+      "Library Management Service": [
+        {
+          "id": "LibraryRegisterBookServlet"
+        },
+        {
+          "id": "LibraryRegisterBorrowerServlet"
+        },
+        {
+          "id": "LibraryLendServlet"
+        },
+        {
+          "id": "LibraryBookListSearchServlet"
+        },
+        {
+          "id": "LibraryBookListAvailableServlet"
+        },
+        {
+          "id": "LibraryBorrowerListSearchServlet"
+        },
+        {
+          "id": "LibraryUtils"
+        },
+        {
+          "id": "Book"
+        },
+        {
+          "id": "Borrower"
+        },
+        {
+          "id": "Loan"
+        },
+        {
+          "id": "LibraryActionResults"
+        }
+      ],
+      "Mathematics Service": [
+        {
+          "id": "MathServlet"
+        },
+        {
+          "id": "FibServlet"
+        },
+        {
+          "id": "AckServlet"
+        },
+        {
+          "id": "Calculator"
+        },
+        {
+          "id": "Fibonacci"
+        },
+        {
+          "id": "FibonacciIterative"
+        },
+        {
+          "id": "Ackermann"
+        },
+        {
+          "id": "AckermannIterative"
+        },
+        {
+          "id": "TailRecursive"
+        },
+        {
+          "id": "FunctionalField"
+        }
+      ],
+      "Persistence Service": [
+        {
+          "id": "PersistenceLayer"
+        },
+        {
+          "id": "IPersistenceLayer"
+        },
+        {
+          "id": "DbServlet"
+        },
+        {
+          "id": "WebAppListener"
+        },
+        {
+          "id": "SqlData"
+        },
+        {
+          "id": "SqlRuntimeException"
+        },
+        {
+          "id": "EmptyDataSource"
+        },
+        {
+          "id": "ParameterObject"
+        },
+        {
+          "id": "NotImplementedException"
+        }
+      ],
+      "Shared Utilities Service": [
+        {
+          "id": "ServletUtils"
+        },
+        {
+          "id": "StringUtils"
+        },
+        {
+          "id": "CheckUtils"
+        },
+        {
+          "id": "AssertionException"
+        }
+      ],
+      "Expense Calculator Service": [
+        {
+          "id": "AlcoholCalculator"
+        },
+        {
+          "id": "AlcoholResult"
+        },
+        {
+          "id": "DinnerPrices"
+        }
+      ],
+      "Utility Functions Service": [
+        {
+          "id": "CartesianProduct"
+        }
+      ]
+    }
+  }
+}

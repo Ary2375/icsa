@@ -1,0 +1,364 @@
+{
+  "tool": {
+    "decomposition": {
+      "Catalog Management Service": [
+        {
+          "id": "INSERT datasource.inventory"
+        },
+        {
+          "id": "SELECT ed2a18a9-6e94-490e-9642-feb9d0accea4.PRODUCT"
+        },
+        {
+          "id": "CREATE table datasource.supplier"
+        },
+        {
+          "id": "INSERT datasource.category"
+        },
+        {
+          "id": "CREATE table ed2a18a9-6e94-490e-9642-feb9d0accea4.supplier"
+        },
+        {
+          "id": "INSERT ed2a18a9-6e94-490e-9642-feb9d0accea4.supplier"
+        },
+        {
+          "id": "CREATE table datasource.bannerdata"
+        },
+        {
+          "id": "INSERT datasource.product"
+        },
+        {
+          "id": "INSERT datasource.item"
+        },
+        {
+          "id": "CREATE table datasource.product"
+        },
+        {
+          "id": "INSERT ed2a18a9-6e94-490e-9642-feb9d0accea4.category"
+        },
+        {
+          "id": "INSERT ed2a18a9-6e94-490e-9642-feb9d0accea4.item"
+        },
+        {
+          "id": "INSERT ed2a18a9-6e94-490e-9642-feb9d0accea4.inventory"
+        },
+        {
+          "id": "INSERT datasource.supplier"
+        },
+        {
+          "id": "INSERT ed2a18a9-6e94-490e-9642-feb9d0accea4.product"
+        },
+        {
+          "id": "CREATE table datasource.item"
+        },
+        {
+          "id": "UPDATE ed2a18a9-6e94-490e-9642-feb9d0accea4.INVENTORY"
+        },
+        {
+          "id": "CREATE table ed2a18a9-6e94-490e-9642-feb9d0accea4.item"
+        },
+        {
+          "id": "CREATE table ed2a18a9-6e94-490e-9642-feb9d0accea4.inventory"
+        },
+        {
+          "id": "SELECT ed2a18a9-6e94-490e-9642-feb9d0accea4.CATEGORY"
+        },
+        {
+          "id": "CREATE table datasource.inventory"
+        },
+        {
+          "id": "SELECT ed2a18a9-6e94-490e-9642-feb9d0accea4.inventory"
+        },
+        {
+          "id": "CREATE table ed2a18a9-6e94-490e-9642-feb9d0accea4.product"
+        },
+        {
+          "id": "CREATE table ed2a18a9-6e94-490e-9642-feb9d0accea4.category"
+        },
+        {
+          "id": "SELECT ed2a18a9-6e94-490e-9642-feb9d0accea4.INVENTORY"
+        },
+        {
+          "id": "CREATE table datasource.category"
+        },
+        {
+          "id": "CREATE table ed2a18a9-6e94-490e-9642-feb9d0accea4.bannerdata"
+        },
+        {
+          "id": "INSERT datasource.bannerdata"
+        },
+        {
+          "id": "INSERT ed2a18a9-6e94-490e-9642-feb9d0accea4.bannerdata"
+        },
+        {
+          "id": "SELECT datasource.PRODUCT"
+        },
+        {
+          "id": "UPDATE datasource.INVENTORY"
+        },
+        {
+          "id": "SELECT datasource.CATEGORY"
+        },
+        {
+          "id": "SELECT datasource.INVENTORY"
+        }
+      ],
+      "Account Management Service": [
+        {
+          "id": "INSERT datasource.account"
+        },
+        {
+          "id": "CREATE table datasource.profile"
+        },
+        {
+          "id": "UPDATE ed2a18a9-6e94-490e-9642-feb9d0accea4.PROFILE"
+        },
+        {
+          "id": "CREATE table datasource.account"
+        },
+        {
+          "id": "INSERT datasource.signon"
+        },
+        {
+          "id": "SELECT ed2a18a9-6e94-490e-9642-feb9d0accea4.account"
+        },
+        {
+          "id": "UPDATE ed2a18a9-6e94-490e-9642-feb9d0accea4.ACCOUNT"
+        },
+        {
+          "id": "CREATE table datasource.signon"
+        },
+        {
+          "id": "INSERT ed2a18a9-6e94-490e-9642-feb9d0accea4.account"
+        },
+        {
+          "id": "SELECT ed2a18a9-6e94-490e-9642-feb9d0accea4.signon"
+        },
+        {
+          "id": "INSERT ed2a18a9-6e94-490e-9642-feb9d0accea4.ACCOUNT"
+        },
+        {
+          "id": "SELECT ed2a18a9-6e94-490e-9642-feb9d0accea4.profile"
+        },
+        {
+          "id": "INSERT ed2a18a9-6e94-490e-9642-feb9d0accea4.PROFILE"
+        },
+        {
+          "id": "INSERT datasource.profile"
+        },
+        {
+          "id": "INSERT ed2a18a9-6e94-490e-9642-feb9d0accea4.SIGNON"
+        },
+        {
+          "id": "INSERT ed2a18a9-6e94-490e-9642-feb9d0accea4.signon"
+        },
+        {
+          "id": "INSERT ed2a18a9-6e94-490e-9642-feb9d0accea4.profile"
+        },
+        {
+          "id": "CREATE table ed2a18a9-6e94-490e-9642-feb9d0accea4.account"
+        },
+        {
+          "id": "UPDATE ed2a18a9-6e94-490e-9642-feb9d0accea4.SIGNON"
+        },
+        {
+          "id": "CREATE table ed2a18a9-6e94-490e-9642-feb9d0accea4.signon"
+        },
+        {
+          "id": "CREATE table ed2a18a9-6e94-490e-9642-feb9d0accea4.profile"
+        },
+        {
+          "id": "INSERT datasource.ACCOUNT"
+        },
+        {
+          "id": "INSERT datasource.PROFILE"
+        },
+        {
+          "id": "INSERT datasource.SIGNON"
+        }
+      ],
+      "Order Management Service": [
+        {
+          "id": "SELECT ed2a18a9-6e94-490e-9642-feb9d0accea4.orderstatus"
+        },
+        {
+          "id": "SELECT ed2a18a9-6e94-490e-9642-feb9d0accea4.LINEITEM"
+        },
+        {
+          "id": "CREATE table ed2a18a9-6e94-490e-9642-feb9d0accea4.lineitem"
+        },
+        {
+          "id": "CREATE TABLE datasource.sequence"
+        },
+        {
+          "id": "CREATE table datasource.orders"
+        },
+        {
+          "id": "SELECT ed2a18a9-6e94-490e-9642-feb9d0accea4.lineitem"
+        },
+        {
+          "id": "SELECT ed2a18a9-6e94-490e-9642-feb9d0accea4.orders"
+        },
+        {
+          "id": "UPDATE ed2a18a9-6e94-490e-9642-feb9d0accea4.SEQUENCE"
+        },
+        {
+          "id": "CREATE table datasource.lineitem"
+        },
+        {
+          "id": "SELECT ed2a18a9-6e94-490e-9642-feb9d0accea4.sequence"
+        },
+        {
+          "id": "CREATE table ed2a18a9-6e94-490e-9642-feb9d0accea4.orderstatus"
+        },
+        {
+          "id": "INSERT ed2a18a9-6e94-490e-9642-feb9d0accea4.sequence"
+        },
+        {
+          "id": "CREATE table datasource.orderstatus"
+        },
+        {
+          "id": "INSERT ed2a18a9-6e94-490e-9642-feb9d0accea4.LINEITEM"
+        },
+        {
+          "id": "CREATE TABLE ed2a18a9-6e94-490e-9642-feb9d0accea4.sequence"
+        },
+        {
+          "id": "SELECT ed2a18a9-6e94-490e-9642-feb9d0accea4.SEQUENCE"
+        },
+        {
+          "id": "INSERT datasource.sequence"
+        },
+        {
+          "id": "INSERT ed2a18a9-6e94-490e-9642-feb9d0accea4.ORDERS"
+        },
+        {
+          "id": "INSERT ed2a18a9-6e94-490e-9642-feb9d0accea4.ORDERSTATUS"
+        },
+        {
+          "id": "CREATE table ed2a18a9-6e94-490e-9642-feb9d0accea4.orders"
+        },
+        {
+          "id": "SELECT datasource.SEQUENCE"
+        },
+        {
+          "id": "UPDATE datasource.SEQUENCE"
+        },
+        {
+          "id": "SELECT datasource.LINEITEM"
+        },
+        {
+          "id": "INSERT datasource.ORDERS"
+        },
+        {
+          "id": "INSERT datasource.ORDERSTATUS"
+        },
+        {
+          "id": "INSERT datasource.LINEITEM"
+        }
+      ],
+      "Web Interface Service": [
+        {
+          "id": "GET /jpetstore/*"
+        },
+        {
+          "id": "POST"
+        },
+        {
+          "id": "GET"
+        },
+        {
+          "id": "POST /jpetstore/*.action"
+        },
+        {
+          "id": "Response.sendError"
+        },
+        {
+          "id": "GET /jpetstore/*.action"
+        },
+        {
+          "id": "GET /cargocpc/*"
+        },
+        {
+          "id": "ResponseFacade.sendRedirect"
+        }
+      ],
+      "Shared Infrastructure Service": [
+        {
+          "id": "2209451280096"
+        },
+        {
+          "id": "datasource"
+        },
+        {
+          "id": "CREATE index datasource"
+        },
+        {
+          "id": "SELECT ed2a18a9-6e94-490e-9642-feb9d0accea4"
+        },
+        {
+          "id": "2209452492432"
+        },
+        {
+          "id": "CREATE index ed2a18a9-6e94-490e-9642-feb9d0accea4"
+        },
+        {
+          "id": "2209452491312"
+        },
+        {
+          "id": "2209452490832"
+        },
+        {
+          "id": "2209451611856"
+        },
+        {
+          "id": "2209451736784"
+        },
+        {
+          "id": "2209452493232"
+        },
+        {
+          "id": "2209452491472"
+        },
+        {
+          "id": "2209452490992"
+        },
+        {
+          "id": "2209452492112"
+        },
+        {
+          "id": "2209452491632"
+        },
+        {
+          "id": "2209452494992"
+        },
+        {
+          "id": "2209452495632"
+        },
+        {
+          "id": "2209452495152"
+        },
+        {
+          "id": "2209452496272"
+        },
+        {
+          "id": "2209452495792"
+        },
+        {
+          "id": "SELECT datasource"
+        },
+        {
+          "id": "2209452491952"
+        },
+        {
+          "id": "2209452496592"
+        },
+        {
+          "id": "2209452496112"
+        },
+        {
+          "id": "2209452494672"
+        }
+      ]
+    }
+  }
+}

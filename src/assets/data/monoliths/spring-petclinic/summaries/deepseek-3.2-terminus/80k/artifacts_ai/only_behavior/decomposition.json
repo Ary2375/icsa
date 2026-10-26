@@ -1,0 +1,43 @@
+{
+  "tool": {
+    "decomposition": {
+      "Owner and Pet Management Service": [
+        {
+          "id": "OwnerController"
+        },
+        {
+          "id": "OwnerRepository"
+        },
+        {
+          "id": "PetController"
+        },
+        {
+          "id": "VisitController"
+        },
+        {
+          "id": "Owner"
+        },
+        {
+          "id": "Pet"
+        },
+        {
+          "id": "Visit"
+        },
+        {
+          "id": "PetType"
+        }
+      ],
+      "Veterinary Service": [
+        {
+          "id": "VetController"
+        },
+        {
+          "id": "VetRepository"
+        },
+        {
+          "id": "Vet"
+        }
+      ]
+    }
+  }
+}

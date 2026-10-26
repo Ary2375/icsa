@@ -1,0 +1,83 @@
+{
+  "tool": {
+    "decomposition": {
+      "Account Management Service": [
+        {
+          "id": "Account"
+        },
+        {
+          "id": "AccountMapper"
+        },
+        {
+          "id": "AccountService"
+        },
+        {
+          "id": "AccountActionBean"
+        }
+      ],
+      "Product Catalog Service": [
+        {
+          "id": "Category"
+        },
+        {
+          "id": "Product"
+        },
+        {
+          "id": "Item"
+        },
+        {
+          "id": "CategoryMapper"
+        },
+        {
+          "id": "ProductMapper"
+        },
+        {
+          "id": "ItemMapper"
+        },
+        {
+          "id": "CatalogService"
+        },
+        {
+          "id": "CatalogActionBean"
+        }
+      ],
+      "Order Management Service": [
+        {
+          "id": "Order"
+        },
+        {
+          "id": "LineItem"
+        },
+        {
+          "id": "Sequence"
+        },
+        {
+          "id": "OrderMapper"
+        },
+        {
+          "id": "SequenceMapper"
+        },
+        {
+          "id": "OrderService"
+        },
+        {
+          "id": "OrderActionBean"
+        },
+        {
+          "id": "Cart"
+        },
+        {
+          "id": "CartItem"
+        },
+        {
+          "id": "CartActionBean"
+        }
+      ],
+      "Shared Infrastructure Service": [
+        {
+          "id": "BaseActionBean"
+        }
+      ]
+    }
+  }
+}

@@ -1,0 +1,173 @@
+{
+  "tool": {
+    "decomposition": {
+      "User Management Service": [
+        {
+          "id": "Signon"
+        },
+        {
+          "id": "SignonController"
+        },
+        {
+          "id": "SignonRepository"
+        },
+        {
+          "id": "Profile"
+        },
+        {
+          "id": "ProfileController"
+        },
+        {
+          "id": "ProfileRepository"
+        },
+        {
+          "id": "Account"
+        },
+        {
+          "id": "AccountController"
+        },
+        {
+          "id": "AccountRepository"
+        }
+      ],
+      "Catalog Service": [
+        {
+          "id": "Product"
+        },
+        {
+          "id": "ProductController"
+        },
+        {
+          "id": "ProductRepository"
+        },
+        {
+          "id": "Category"
+        },
+        {
+          "id": "CategoryController"
+        },
+        {
+          "id": "CategoryRepository"
+        },
+        {
+          "id": "Item"
+        },
+        {
+          "id": "ItemController"
+        },
+        {
+          "id": "ItemRepository"
+        },
+        {
+          "id": "Inventory"
+        },
+        {
+          "id": "InventoryController"
+        },
+        {
+          "id": "InventoryRepository"
+        },
+        {
+          "id": "Supplier"
+        },
+        {
+          "id": "SupplierController"
+        },
+        {
+          "id": "SupplierRepository"
+        }
+      ],
+      "Order Management Service": [
+        {
+          "id": "Order"
+        },
+        {
+          "id": "OrderController"
+        },
+        {
+          "id": "OrderRepository"
+        },
+        {
+          "id": "OrderStatus"
+        },
+        {
+          "id": "OrderStatusController"
+        },
+        {
+          "id": "OrderStatusRepository"
+        },
+        {
+          "id": "LineItem"
+        },
+        {
+          "id": "LineItemController"
+        },
+        {
+          "id": "LineItemRepository"
+        }
+      ],
+      "Content Management Service": [
+        {
+          "id": "BannerData"
+        },
+        {
+          "id": "BannerDataController"
+        },
+        {
+          "id": "BannerDataRepository"
+        }
+      ],
+      "Sequence Generation Service": [
+        {
+          "id": "Sequence"
+        },
+        {
+          "id": "SequenceController"
+        },
+        {
+          "id": "SequenceRepository"
+        }
+      ],
+      "Web Gateway Service": [
+        {
+          "id": "JpetstoreController"
+        },
+        {
+          "id": "CargocpcController"
+        },
+        {
+          "id": "Post"
+        },
+        {
+          "id": "Get"
+        },
+        {
+          "id": "Response"
+        },
+        {
+          "id": "ResponseFacade"
+        },
+        {
+          "id": "ResponseSendError"
+        },
+        {
+          "id": "ResponseFacadeSendRedirect"
+        }
+      ],
+      "Database Infrastructure Service": [
+        {
+          "id": "Datasource"
+        },
+        {
+          "id": "CreateTable"
+        },
+        {
+          "id": "CreateIndex"
+        },
+        {
+          "id": "SchemaMigration"
+        }
+      ]
+    }
+  }
+}

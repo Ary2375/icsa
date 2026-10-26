@@ -1,0 +1,317 @@
+{
+  "tool": {
+    "decomposition": {
+      "Integration Service": [
+        {
+          "id": "Constants"
+        },
+        {
+          "id": "Main"
+        },
+        {
+          "id": "ConfigurationHelpers"
+        },
+        {
+          "id": "ConfigurationManager"
+        },
+        {
+          "id": "QueueResponse"
+        },
+        {
+          "id": "CatalogItem"
+        },
+        {
+          "id": "DeliveryAddress"
+        },
+        {
+          "id": "Order"
+        },
+        {
+          "id": "PhoneInfo"
+        },
+        {
+          "id": "Quote"
+        },
+        {
+          "id": "QuoteItemInfo"
+        },
+        {
+          "id": "ShipmentEventInfo"
+        },
+        {
+          "id": "ShipmentRecord"
+        },
+        {
+          "id": "OrderItem"
+        },
+        {
+          "id": "OrderMessage"
+        },
+        {
+          "id": "ProductItem"
+        },
+        {
+          "id": "ProductMessage"
+        },
+        {
+          "id": "CreateOrderProcessTask"
+        },
+        {
+          "id": "UpdateProductProcessTask"
+        },
+        {
+          "id": "MrpConnectService"
+        },
+        {
+          "id": "QueueFactory"
+        },
+        {
+          "id": "QueueService"
+        }
+      ],
+      "Catalog Service": [
+        {
+          "id": "CatalogController"
+        },
+        {
+          "id": "CatalogItemsRepository"
+        },
+        {
+          "id": "MongoCatalogItemsRepository"
+        },
+        {
+          "id": "MockCatalogItemsRepository"
+        },
+        {
+          "id": "CatalogItem"
+        },
+        {
+          "id": "CatalogItem"
+        },
+        {
+          "id": "CatalogItemsRepositoryTest"
+        },
+        {
+          "id": "CatalogControllerTest"
+        },
+        {
+          "id": "MockCatalogItemsRepositoryTest"
+        },
+        {
+          "id": "MongoCatalogItemsRepositoryTest"
+        }
+      ],
+      "Dealer Service": [
+        {
+          "id": "DealerController"
+        },
+        {
+          "id": "DealersRepository"
+        },
+        {
+          "id": "MongoDealersRepository"
+        },
+        {
+          "id": "MockDealersRepository"
+        },
+        {
+          "id": "DealerInfo"
+        },
+        {
+          "id": "Dealer"
+        },
+        {
+          "id": "DealersRepositoryTest"
+        },
+        {
+          "id": "DealerControllerTest"
+        },
+        {
+          "id": "MockDealersRepositoryTest"
+        },
+        {
+          "id": "MongoDealersRepositoryTest"
+        }
+      ],
+      "Quote Service": [
+        {
+          "id": "QuoteController"
+        },
+        {
+          "id": "QuoteRepository"
+        },
+        {
+          "id": "MongoQuoteRepository"
+        },
+        {
+          "id": "MockQuoteRepository"
+        },
+        {
+          "id": "Quote"
+        },
+        {
+          "id": "QuoteItemInfo"
+        },
+        {
+          "id": "QuoteDetails"
+        },
+        {
+          "id": "QuoteRepositoryTest"
+        },
+        {
+          "id": "QuoteControllerTest"
+        },
+        {
+          "id": "MockQuoteRepositoryTest"
+        },
+        {
+          "id": "MongoQuoteRepositoryTest"
+        }
+      ],
+      "Order Service": [
+        {
+          "id": "OrderController"
+        },
+        {
+          "id": "OrderRepository"
+        },
+        {
+          "id": "MongoOrderRepository"
+        },
+        {
+          "id": "MockOrderRepository"
+        },
+        {
+          "id": "Order"
+        },
+        {
+          "id": "OrderEventInfo"
+        },
+        {
+          "id": "OrderStatus"
+        },
+        {
+          "id": "OrderUpdateInfo"
+        },
+        {
+          "id": "OrderDetails"
+        },
+        {
+          "id": "OrderRepositoryTest"
+        },
+        {
+          "id": "OrderControllerTest"
+        },
+        {
+          "id": "MockOrderRepositoryTest"
+        },
+        {
+          "id": "MongoOrderRepositoryTest"
+        }
+      ],
+      "Shipment Service": [
+        {
+          "id": "ShipmentController"
+        },
+        {
+          "id": "ShipmentRepository"
+        },
+        {
+          "id": "MongoShipmentRepository"
+        },
+        {
+          "id": "MockShipmentRepository"
+        },
+        {
+          "id": "ShipmentRecord"
+        },
+        {
+          "id": "ShipmentEventInfo"
+        },
+        {
+          "id": "DeliveryAddress"
+        },
+        {
+          "id": "PhoneInfo"
+        },
+        {
+          "id": "Delivery"
+        },
+        {
+          "id": "ShipmentDetails"
+        },
+        {
+          "id": "ShipmentRepositoryTest"
+        },
+        {
+          "id": "ShipmentControllerTest"
+        },
+        {
+          "id": "MockShipmentRepositoryTest"
+        },
+        {
+          "id": "MongoShipmentRepositoryTest"
+        }
+      ],
+      "Shared Infrastructure Service": [
+        {
+          "id": "AppInsightsFilter"
+        },
+        {
+          "id": "BadRequestException"
+        },
+        {
+          "id": "ConfigurationRule"
+        },
+        {
+          "id": "ConflictingRequestException"
+        },
+        {
+          "id": "MongoDBProperties"
+        },
+        {
+          "id": "OrderingConfiguration"
+        },
+        {
+          "id": "OrderingInitializer"
+        },
+        {
+          "id": "OrderingServiceProperties"
+        },
+        {
+          "id": "PostgresqlProperties"
+        },
+        {
+          "id": "PropertyHelper"
+        },
+        {
+          "id": "SimpleCORSFilter"
+        },
+        {
+          "id": "TestOrderingConfiguration"
+        },
+        {
+          "id": "TestPath"
+        },
+        {
+          "id": "Utility"
+        },
+        {
+          "id": "UtilityTest"
+        },
+        {
+          "id": "PingController"
+        },
+        {
+          "id": "RepositoryFactory"
+        },
+        {
+          "id": "MongoOperationsWithRetry"
+        },
+        {
+          "id": "IntegrationTests"
+        }
+      ]
+    }
+  }
+}

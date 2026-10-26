@@ -1,0 +1,81 @@
+{
+  "tool": {
+    "decomposition": {
+      "Customer Account Service": [
+        {
+          "id": "Account"
+        },
+        {
+          "id": "Signon"
+        },
+        {
+          "id": "Profile"
+        },
+        {
+          "id": "BannerData"
+        }
+      ],
+      "Catalog Service": [
+        {
+          "id": "Category"
+        },
+        {
+          "id": "Product"
+        },
+        {
+          "id": "Item"
+        },
+        {
+          "id": "Supplier"
+        }
+      ],
+      "Inventory Service": [
+        {
+          "id": "Inventory"
+        }
+      ],
+      "Order Management Service": [
+        {
+          "id": "Order"
+        },
+        {
+          "id": "Orders"
+        },
+        {
+          "id": "OrderStatus"
+        },
+        {
+          "id": "LineItem"
+        },
+        {
+          "id": "Sequence"
+        }
+      ],
+      "Storefront Web Service": [
+        {
+          "id": "StorefrontController"
+        },
+        {
+          "id": "ActionController"
+        },
+        {
+          "id": "CargoCpcController"
+        },
+        {
+          "id": "Response"
+        },
+        {
+          "id": "ResponseFacade"
+        }
+      ],
+      "Shared Infrastructure Service": [
+        {
+          "id": "DataSource"
+        },
+        {
+          "id": "SchemaInitializer"
+        }
+      ]
+    }
+  }
+}

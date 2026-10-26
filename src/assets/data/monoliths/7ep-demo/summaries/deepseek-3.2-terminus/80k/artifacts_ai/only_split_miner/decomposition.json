@@ -1,0 +1,138 @@
+{
+  "tool": {
+    "decomposition": {
+      "Account Service": [
+        {
+          "id": "Account"
+        },
+        {
+          "id": "AccountMapper"
+        },
+        {
+          "id": "AccountService"
+        },
+        {
+          "id": "AccountController"
+        },
+        {
+          "id": "Signon"
+        },
+        {
+          "id": "SignonMapper"
+        },
+        {
+          "id": "Profile"
+        },
+        {
+          "id": "ProfileMapper"
+        }
+      ],
+      "Catalog Service": [
+        {
+          "id": "Product"
+        },
+        {
+          "id": "ProductMapper"
+        },
+        {
+          "id": "CatalogService"
+        },
+        {
+          "id": "CatalogController"
+        },
+        {
+          "id": "Category"
+        },
+        {
+          "id": "CategoryMapper"
+        },
+        {
+          "id": "Item"
+        },
+        {
+          "id": "ItemMapper"
+        },
+        {
+          "id": "Supplier"
+        },
+        {
+          "id": "SupplierMapper"
+        },
+        {
+          "id": "BannerData"
+        },
+        {
+          "id": "BannerDataMapper"
+        }
+      ],
+      "Order Service": [
+        {
+          "id": "Order"
+        },
+        {
+          "id": "OrderMapper"
+        },
+        {
+          "id": "OrderService"
+        },
+        {
+          "id": "OrderController"
+        },
+        {
+          "id": "OrderStatus"
+        },
+        {
+          "id": "OrderStatusMapper"
+        },
+        {
+          "id": "LineItem"
+        },
+        {
+          "id": "LineItemMapper"
+        }
+      ],
+      "Inventory Service": [
+        {
+          "id": "Inventory"
+        },
+        {
+          "id": "InventoryMapper"
+        },
+        {
+          "id": "InventoryService"
+        }
+      ],
+      "Sequence Service": [
+        {
+          "id": "Sequence"
+        },
+        {
+          "id": "SequenceMapper"
+        },
+        {
+          "id": "SequenceService"
+        }
+      ],
+      "Web and Shared Infrastructure Service": [
+        {
+          "id": "ActionServlet"
+        },
+        {
+          "id": "JPetStoreController"
+        },
+        {
+          "id": "CargoController"
+        },
+        {
+          "id": "ErrorHandler"
+        },
+        {
+          "id": "RedirectHandler"
+        },
+        {
+          "id": "DataSource"
+        }
+      ]
+    }
+  }
+}

@@ -1,0 +1,113 @@
+{
+  "tool": {
+    "decomposition": {
+      "Account Management Service": [
+        {
+          "id": "Account"
+        },
+        {
+          "id": "Signon"
+        },
+        {
+          "id": "Profile"
+        },
+        {
+          "id": "BannerData"
+        },
+        {
+          "id": "AccountMapper"
+        },
+        {
+          "id": "SignonMapper"
+        },
+        {
+          "id": "AccountService"
+        },
+        {
+          "id": "AccountController"
+        }
+      ],
+      "Catalog Service": [
+        {
+          "id": "Category"
+        },
+        {
+          "id": "Product"
+        },
+        {
+          "id": "Item"
+        },
+        {
+          "id": "Supplier"
+        },
+        {
+          "id": "Inventory"
+        },
+        {
+          "id": "CategoryMapper"
+        },
+        {
+          "id": "ProductMapper"
+        },
+        {
+          "id": "ItemMapper"
+        },
+        {
+          "id": "CatalogService"
+        },
+        {
+          "id": "CatalogController"
+        }
+      ],
+      "Order Service": [
+        {
+          "id": "Order"
+        },
+        {
+          "id": "LineItem"
+        },
+        {
+          "id": "OrderStatus"
+        },
+        {
+          "id": "Sequence"
+        },
+        {
+          "id": "Cart"
+        },
+        {
+          "id": "CartItem"
+        },
+        {
+          "id": "OrderMapper"
+        },
+        {
+          "id": "LineItemMapper"
+        },
+        {
+          "id": "SequenceMapper"
+        },
+        {
+          "id": "OrderService"
+        },
+        {
+          "id": "OrderController"
+        },
+        {
+          "id": "CartController"
+        }
+      ],
+      "Shared Infrastructure Service": [
+        {
+          "id": "Domain"
+        },
+        {
+          "id": "AbstractController"
+        },
+        {
+          "id": "JpetstoreApplication"
+        }
+      ]
+    }
+  }
+}

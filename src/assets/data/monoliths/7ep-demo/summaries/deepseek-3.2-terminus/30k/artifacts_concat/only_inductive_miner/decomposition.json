@@ -1,0 +1,139 @@
+{
+  "tool": {
+    "decomposition": {
+      "Account Service": [
+        {
+          "id": "Account"
+        },
+        {
+          "id": "Profile"
+        },
+        {
+          "id": "Signon"
+        },
+        {
+          "id": "AccountService"
+        },
+        {
+          "id": "AccountMapper"
+        },
+        {
+          "id": "ProfileMapper"
+        },
+        {
+          "id": "SignonMapper"
+        },
+        {
+          "id": "AccountAction"
+        }
+      ],
+      "Catalog Service": [
+        {
+          "id": "Category"
+        },
+        {
+          "id": "Product"
+        },
+        {
+          "id": "Item"
+        },
+        {
+          "id": "Inventory"
+        },
+        {
+          "id": "Supplier"
+        },
+        {
+          "id": "BannerData"
+        },
+        {
+          "id": "CatalogService"
+        },
+        {
+          "id": "CategoryMapper"
+        },
+        {
+          "id": "ProductMapper"
+        },
+        {
+          "id": "ItemMapper"
+        },
+        {
+          "id": "InventoryMapper"
+        },
+        {
+          "id": "SupplierMapper"
+        },
+        {
+          "id": "BannerDataMapper"
+        },
+        {
+          "id": "CatalogAction"
+        }
+      ],
+      "Order Service": [
+        {
+          "id": "Order"
+        },
+        {
+          "id": "OrderStatus"
+        },
+        {
+          "id": "LineItem"
+        },
+        {
+          "id": "Sequence"
+        },
+        {
+          "id": "OrderService"
+        },
+        {
+          "id": "OrderMapper"
+        },
+        {
+          "id": "OrderStatusMapper"
+        },
+        {
+          "id": "LineItemMapper"
+        },
+        {
+          "id": "SequenceMapper"
+        },
+        {
+          "id": "OrderAction"
+        }
+      ],
+      "Cart Service": [
+        {
+          "id": "Cart"
+        },
+        {
+          "id": "CartItem"
+        },
+        {
+          "id": "CartAction"
+        }
+      ],
+      "Shared Infrastructure Service": [
+        {
+          "id": "AbstractAction"
+        },
+        {
+          "id": "DatabaseInitializer"
+        },
+        {
+          "id": "JpetstoreController"
+        },
+        {
+          "id": "CargocpcController"
+        },
+        {
+          "id": "Response"
+        },
+        {
+          "id": "ResponseFacade"
+        }
+      ]
+    }
+  }
+}

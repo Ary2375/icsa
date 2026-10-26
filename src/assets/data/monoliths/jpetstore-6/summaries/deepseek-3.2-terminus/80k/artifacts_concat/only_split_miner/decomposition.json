@@ -1,0 +1,87 @@
+{
+  "tool": {
+    "decomposition": {
+      "Account Service": [
+        {
+          "id": "Account"
+        },
+        {
+          "id": "Profile"
+        },
+        {
+          "id": "SignOn"
+        }
+      ],
+      "Catalog Service": [
+        {
+          "id": "Product"
+        },
+        {
+          "id": "Category"
+        },
+        {
+          "id": "Item"
+        },
+        {
+          "id": "Supplier"
+        },
+        {
+          "id": "BannerData"
+        }
+      ],
+      "Inventory Service": [
+        {
+          "id": "Inventory"
+        }
+      ],
+      "Order Service": [
+        {
+          "id": "Order"
+        },
+        {
+          "id": "OrderStatus"
+        },
+        {
+          "id": "LineItem"
+        },
+        {
+          "id": "Sequence"
+        }
+      ],
+      "Web Service": [
+        {
+          "id": "JpetstoreController"
+        },
+        {
+          "id": "JpetstoreActionController"
+        },
+        {
+          "id": "CargocpcController"
+        },
+        {
+          "id": "Response"
+        },
+        {
+          "id": "ResponseFacade"
+        },
+        {
+          "id": "GetHandler"
+        },
+        {
+          "id": "PostHandler"
+        }
+      ],
+      "Infrastructure Service": [
+        {
+          "id": "DataSource"
+        },
+        {
+          "id": "Index"
+        },
+        {
+          "id": "SelectQuery"
+        }
+      ]
+    }
+  }
+}

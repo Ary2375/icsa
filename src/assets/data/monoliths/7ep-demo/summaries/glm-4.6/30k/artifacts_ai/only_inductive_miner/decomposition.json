@@ -1,0 +1,137 @@
+{
+  "tool": {
+    "decomposition": {
+      "Account Management Service": [
+        {
+          "id": "Account"
+        },
+        {
+          "id": "Profile"
+        },
+        {
+          "id": "BannerData"
+        },
+        {
+          "id": "AccountDao"
+        },
+        {
+          "id": "SqlMapAccountDao"
+        },
+        {
+          "id": "AccountController"
+        },
+        {
+          "id": "SignonController"
+        },
+        {
+          "id": "SignoffController"
+        },
+        {
+          "id": "NewAccountController"
+        },
+        {
+          "id": "UpdateAccountController"
+        }
+      ],
+      "Product Catalog Service": [
+        {
+          "id": "Category"
+        },
+        {
+          "id": "Product"
+        },
+        {
+          "id": "Item"
+        },
+        {
+          "id": "Supplier"
+        },
+        {
+          "id": "CategoryDao"
+        },
+        {
+          "id": "ProductDao"
+        },
+        {
+          "id": "ItemDao"
+        },
+        {
+          "id": "SqlMapCategoryDao"
+        },
+        {
+          "id": "SqlMapProductDao"
+        },
+        {
+          "id": "SqlMapItemDao"
+        },
+        {
+          "id": "ViewCategoryController"
+        },
+        {
+          "id": "ViewProductController"
+        },
+        {
+          "id": "ViewItemController"
+        },
+        {
+          "id": "SearchProductsController"
+        }
+      ],
+      "Order Management Service": [
+        {
+          "id": "Order"
+        },
+        {
+          "id": "OrderStatus"
+        },
+        {
+          "id": "LineItem"
+        },
+        {
+          "id": "Sequence"
+        },
+        {
+          "id": "SequenceDao"
+        },
+        {
+          "id": "Cart"
+        },
+        {
+          "id": "CartItem"
+        },
+        {
+          "id": "OrderDao"
+        },
+        {
+          "id": "SqlMapOrderDao"
+        },
+        {
+          "id": "NewOrderController"
+        },
+        {
+          "id": "ViewOrderController"
+        },
+        {
+          "id": "ListOrdersController"
+        },
+        {
+          "id": "AddItemToCartController"
+        },
+        {
+          "id": "RemoveItemFromCartController"
+        },
+        {
+          "id": "ViewCartController"
+        }
+      ],
+      "Shared Infrastructure Service": [
+        {
+          "id": "PetStoreFacade"
+        },
+        {
+          "id": "PetStoreImpl"
+        }
+      ]
+    }
+  }
+}

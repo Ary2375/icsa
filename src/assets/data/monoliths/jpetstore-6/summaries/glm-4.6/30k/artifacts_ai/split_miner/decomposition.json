@@ -1,0 +1,119 @@
+{
+  "tool": {
+    "decomposition": {
+      "User Service": [
+        {
+          "id": "AccountActionBean"
+        },
+        {
+          "id": "AccountService"
+        },
+        {
+          "id": "AccountMapper"
+        },
+        {
+          "id": "Account"
+        },
+        {
+          "id": "AbstractActionBean"
+        }
+      ],
+      "Catalog Service": [
+        {
+          "id": "CatalogActionBean"
+        },
+        {
+          "id": "CatalogService"
+        },
+        {
+          "id": "CategoryMapper"
+        },
+        {
+          "id": "ProductMapper"
+        },
+        {
+          "id": "ItemMapper"
+        },
+        {
+          "id": "Category"
+        },
+        {
+          "id": "Product"
+        },
+        {
+          "id": "Item"
+        },
+        {
+          "id": "AbstractActionBean"
+        }
+      ],
+      "Cart Service": [
+        {
+          "id": "CartActionBean"
+        },
+        {
+          "id": "Cart"
+        },
+        {
+          "id": "CartItem"
+        },
+        {
+          "id": "Item"
+        },
+        {
+          "id": "Product"
+        },
+        {
+          "id": "AbstractActionBean"
+        }
+      ],
+      "Order Service": [
+        {
+          "id": "OrderActionBean"
+        },
+        {
+          "id": "OrderService"
+        },
+        {
+          "id": "OrderMapper"
+        },
+        {
+          "id": "LineItemMapper"
+        },
+        {
+          "id": "SequenceMapper"
+        },
+        {
+          "id": "Sequence"
+        },
+        {
+          "id": "Order"
+        },
+        {
+          "id": "LineItem"
+        },
+        {
+          "id": "Item"
+        },
+        {
+          "id": "Product"
+        },
+        {
+          "id": "ItemMapper"
+        },
+        {
+          "id": "Cart"
+        },
+        {
+          "id": "CartItem"
+        },
+        {
+          "id": "Account"
+        },
+        {
+          "id": "AbstractActionBean"
+        }
+      ]
+    }
+  }
+}

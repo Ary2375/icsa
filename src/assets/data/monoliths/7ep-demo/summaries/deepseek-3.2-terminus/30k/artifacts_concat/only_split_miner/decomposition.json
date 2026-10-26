@@ -1,0 +1,88 @@
+{
+  "tool": {
+    "decomposition": {
+      "Account Management Service": [
+        {
+          "id": "Account"
+        },
+        {
+          "id": "Profile"
+        },
+        {
+          "id": "Signon"
+        }
+      ],
+      "Order Management Service": [
+        {
+          "id": "Orders"
+        },
+        {
+          "id": "OrderStatus"
+        },
+        {
+          "id": "LineItem"
+        },
+        {
+          "id": "Sequence"
+        }
+      ],
+      "Catalog Management Service": [
+        {
+          "id": "Product"
+        },
+        {
+          "id": "Category"
+        },
+        {
+          "id": "Item"
+        },
+        {
+          "id": "Inventory"
+        },
+        {
+          "id": "Supplier"
+        },
+        {
+          "id": "BannerData"
+        }
+      ],
+      "Web/API Gateway Service": [
+        {
+          "id": "JpetstoreController"
+        },
+        {
+          "id": "JpetstoreActionController"
+        },
+        {
+          "id": "CargoController"
+        },
+        {
+          "id": "ErrorHandler"
+        },
+        {
+          "id": "RedirectHandler"
+        },
+        {
+          "id": "GetHandler"
+        },
+        {
+          "id": "PostHandler"
+        }
+      ],
+      "Database Infrastructure Service": [
+        {
+          "id": "SchemaManager"
+        },
+        {
+          "id": "IndexManager"
+        },
+        {
+          "id": "DatabaseHealthChecker"
+        },
+        {
+          "id": "DataSource"
+        }
+      ]
+    }
+  }
+}

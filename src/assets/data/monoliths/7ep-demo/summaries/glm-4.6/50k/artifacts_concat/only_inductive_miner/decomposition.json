@@ -1,0 +1,134 @@
+{
+  "tool": {
+    "decomposition": {
+      "Account Management Service": [
+        {
+          "id": "Account"
+        },
+        {
+          "id": "Profile"
+        },
+        {
+          "id": "BannerData"
+        },
+        {
+          "id": "AccountBean"
+        },
+        {
+          "id": "AccountService"
+        },
+        {
+          "id": "AccountDao"
+        },
+        {
+          "id": "AccountSqlMapDao"
+        }
+      ],
+      "Catalog Service": [
+        {
+          "id": "Category"
+        },
+        {
+          "id": "Product"
+        },
+        {
+          "id": "Item"
+        },
+        {
+          "id": "Supplier"
+        },
+        {
+          "id": "Inventory"
+        },
+        {
+          "id": "CatalogBean"
+        },
+        {
+          "id": "CatalogService"
+        },
+        {
+          "id": "CategoryDao"
+        },
+        {
+          "id": "CategorySqlMapDao"
+        },
+        {
+          "id": "ProductDao"
+        },
+        {
+          "id": "ProductSqlMapDao"
+        },
+        {
+          "id": "ItemDao"
+        },
+        {
+          "id": "ItemSqlMapDao"
+        }
+      ],
+      "Order Management Service": [
+        {
+          "id": "Order"
+        },
+        {
+          "id": "OrderStatus"
+        },
+        {
+          "id": "LineItem"
+        },
+        {
+          "id": "Sequence"
+        },
+        {
+          "id": "Cart"
+        },
+        {
+          "id": "CartItem"
+        },
+        {
+          "id": "OrderBean"
+        },
+        {
+          "id": "CartBean"
+        },
+        {
+          "id": "OrderService"
+        },
+        {
+          "id": "OrderDao"
+        },
+        {
+          "id": "OrderSqlMapDao"
+        },
+        {
+          "id": "LineItemDao"
+        },
+        {
+          "id": "LineItemSqlMapDao"
+        },
+        {
+          "id": "SequenceDao"
+        },
+        {
+          "id": "SequenceSqlMapDao"
+        }
+      ],
+      "Shared Infrastructure Service": [
+        {
+          "id": "PetStoreFacade"
+        },
+        {
+          "id": "PetStoreImpl"
+        },
+        {
+          "id": "BeanAction"
+        },
+        {
+          "id": "BaseBean"
+        },
+        {
+          "id": "DaoManager"
+        }
+      ]
+    }
+  }
+}

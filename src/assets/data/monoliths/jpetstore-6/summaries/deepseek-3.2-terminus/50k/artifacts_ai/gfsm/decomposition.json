@@ -1,0 +1,106 @@
+{
+  "tool": {
+    "decomposition": {
+      "Account Service": [
+        {
+          "id": "Account"
+        },
+        {
+          "id": "AccountMapper"
+        },
+        {
+          "id": "AccountService"
+        }
+      ],
+      "Catalog Service": [
+        {
+          "id": "Category"
+        },
+        {
+          "id": "Product"
+        },
+        {
+          "id": "Item"
+        },
+        {
+          "id": "CategoryMapper"
+        },
+        {
+          "id": "ProductMapper"
+        },
+        {
+          "id": "ItemMapper"
+        },
+        {
+          "id": "CatalogService"
+        }
+      ],
+      "Inventory Service": [
+        {
+          "id": "ItemMapper"
+        },
+        {
+          "id": "Item"
+        }
+      ],
+      "Order Service": [
+        {
+          "id": "Order"
+        },
+        {
+          "id": "LineItem"
+        },
+        {
+          "id": "Sequence"
+        },
+        {
+          "id": "OrderMapper"
+        },
+        {
+          "id": "LineItemMapper"
+        },
+        {
+          "id": "SequenceMapper"
+        },
+        {
+          "id": "OrderService"
+        },
+        {
+          "id": "Account"
+        },
+        {
+          "id": "Cart"
+        },
+        {
+          "id": "CartItem"
+        },
+        {
+          "id": "Item"
+        }
+      ],
+      "Web Presentation Service": [
+        {
+          "id": "AbstractActionBean"
+        },
+        {
+          "id": "AccountActionBean"
+        },
+        {
+          "id": "CartActionBean"
+        },
+        {
+          "id": "CatalogActionBean"
+        },
+        {
+          "id": "OrderActionBean"
+        },
+        {
+          "id": "Cart"
+        },
+        {
+          "id": "CartItem"
+        }
+      ]
+    }
+  }
+}

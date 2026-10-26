@@ -1,0 +1,306 @@
+{
+  "tool": {
+    "decomposition": {
+      "Account Management Service": [
+        {
+          "id": "INSERT datasource.ACCOUNT"
+        },
+        {
+          "id": "INSERT datasource.PROFILE"
+        },
+        {
+          "id": "INSERT datasource.SIGNON"
+        },
+        {
+          "id": "UPDATE ed2a18a9-6e94-490e-9642-feb9d0accea4.ACCOUNT"
+        },
+        {
+          "id": "UPDATE ed2a18a9-6e94-490e-9642-feb9d0accea4.PROFILE"
+        },
+        {
+          "id": "UPDATE ed2a18a9-6e94-490e-9642-feb9d0accea4.SIGNON"
+        },
+        {
+          "id": "SELECT ed2a18a9-6e94-490e-9642-feb9d0accea4.account"
+        },
+        {
+          "id": "SELECT ed2a18a9-6e94-490e-9642-feb9d0accea4.profile"
+        },
+        {
+          "id": "SELECT ed2a18a9-6e94-490e-9642-feb9d0accea4.signon"
+        },
+        {
+          "id": "INSERT ed2a18a9-6e94-490e-9642-feb9d0accea4.account"
+        },
+        {
+          "id": "INSERT ed2a18a9-6e94-490e-9642-feb9d0accea4.ACCOUNT"
+        },
+        {
+          "id": "INSERT ed2a18a9-6e94-490e-9642-feb9d0accea4.profile"
+        },
+        {
+          "id": "INSERT ed2a18a9-6e94-490e-9642-feb9d0accea4.PROFILE"
+        },
+        {
+          "id": "INSERT ed2a18a9-6e94-490e-9642-feb9d0accea4.signon"
+        },
+        {
+          "id": "INSERT ed2a18a9-6e94-490e-9642-feb9d0accea4.SIGNON"
+        },
+        {
+          "id": "INSERT ed2a18a9-6e94-490e-9642-feb9d0accea4.bannerdata"
+        },
+        {
+          "id": "INSERT datasource.account"
+        },
+        {
+          "id": "INSERT datasource.profile"
+        },
+        {
+          "id": "INSERT datasource.signon"
+        },
+        {
+          "id": "INSERT datasource.bannerdata"
+        },
+        {
+          "id": "CREATE table ed2a18a9-6e94-490e-9642-feb9d0accea4.account"
+        },
+        {
+          "id": "CREATE table ed2a18a9-6e94-490e-9642-feb9d0accea4.profile"
+        },
+        {
+          "id": "CREATE table ed2a18a9-6e94-490e-9642-feb9d0accea4.signon"
+        },
+        {
+          "id": "CREATE table ed2a18a9-6e94-490e-9642-feb9d0accea4.bannerdata"
+        },
+        {
+          "id": "CREATE table datasource.account"
+        },
+        {
+          "id": "CREATE table datasource.profile"
+        },
+        {
+          "id": "CREATE table datasource.signon"
+        },
+        {
+          "id": "CREATE table datasource.bannerdata"
+        }
+      ],
+      "Catalog Service": [
+        {
+          "id": "SELECT ed2a18a9-6e94-490e-9642-feb9d0accea4.PRODUCT"
+        },
+        {
+          "id": "SELECT ed2a18a9-6e94-490e-9642-feb9d0accea4.CATEGORY"
+        },
+        {
+          "id": "SELECT datasource.PRODUCT"
+        },
+        {
+          "id": "SELECT datasource.CATEGORY"
+        },
+        {
+          "id": "INSERT ed2a18a9-6e94-490e-9642-feb9d0accea4.supplier"
+        },
+        {
+          "id": "INSERT ed2a18a9-6e94-490e-9642-feb9d0accea4.product"
+        },
+        {
+          "id": "INSERT ed2a18a9-6e94-490e-9642-feb9d0accea4.item"
+        },
+        {
+          "id": "INSERT ed2a18a9-6e94-490e-9642-feb9d0accea4.category"
+        },
+        {
+          "id": "INSERT datasource.supplier"
+        },
+        {
+          "id": "INSERT datasource.product"
+        },
+        {
+          "id": "INSERT datasource.item"
+        },
+        {
+          "id": "INSERT datasource.category"
+        },
+        {
+          "id": "CREATE table ed2a18a9-6e94-490e-9642-feb9d0accea4.supplier"
+        },
+        {
+          "id": "CREATE table ed2a18a9-6e94-490e-9642-feb9d0accea4.product"
+        },
+        {
+          "id": "CREATE table ed2a18a9-6e94-490e-9642-feb9d0accea4.item"
+        },
+        {
+          "id": "CREATE table ed2a18a9-6e94-490e-9642-feb9d0accea4.category"
+        },
+        {
+          "id": "CREATE table datasource.supplier"
+        },
+        {
+          "id": "CREATE table datasource.product"
+        },
+        {
+          "id": "CREATE table datasource.item"
+        },
+        {
+          "id": "CREATE table datasource.category"
+        }
+      ],
+      "Order Management Service": [
+        {
+          "id": "INSERT datasource.ORDERS"
+        },
+        {
+          "id": "INSERT datasource.ORDERSTATUS"
+        },
+        {
+          "id": "INSERT datasource.LINEITEM"
+        },
+        {
+          "id": "UPDATE datasource.SEQUENCE"
+        },
+        {
+          "id": "SELECT datasource.SEQUENCE"
+        },
+        {
+          "id": "SELECT datasource.LINEITEM"
+        },
+        {
+          "id": "UPDATE ed2a18a9-6e94-490e-9642-feb9d0accea4.SEQUENCE"
+        },
+        {
+          "id": "SELECT ed2a18a9-6e94-490e-9642-feb9d0accea4.SEQUENCE"
+        },
+        {
+          "id": "SELECT ed2a18a9-6e94-490e-9642-feb9d0accea4.sequence"
+        },
+        {
+          "id": "SELECT ed2a18a9-6e94-490e-9642-feb9d0accea4.orders"
+        },
+        {
+          "id": "SELECT ed2a18a9-6e94-490e-9642-feb9d0accea4.orderstatus"
+        },
+        {
+          "id": "SELECT ed2a18a9-6e94-490e-9642-feb9d0accea4.lineitem"
+        },
+        {
+          "id": "SELECT ed2a18a9-6e94-490e-9642-feb9d0accea4.LINEITEM"
+        },
+        {
+          "id": "INSERT ed2a18a9-6e94-490e-9642-feb9d0accea4.ORDERS"
+        },
+        {
+          "id": "INSERT ed2a18a9-6e94-490e-9642-feb9d0accea4.ORDERSTATUS"
+        },
+        {
+          "id": "INSERT ed2a18a9-6e94-490e-9642-feb9d0accea4.LINEITEM"
+        },
+        {
+          "id": "INSERT ed2a18a9-6e94-490e-9642-feb9d0accea4.sequence"
+        },
+        {
+          "id": "INSERT datasource.sequence"
+        },
+        {
+          "id": "CREATE table ed2a18a9-6e94-490e-9642-feb9d0accea4.orders"
+        },
+        {
+          "id": "CREATE table ed2a18a9-6e94-490e-9642-feb9d0accea4.orderstatus"
+        },
+        {
+          "id": "CREATE table ed2a18a9-6e94-490e-9642-feb9d0accea4.lineitem"
+        },
+        {
+          "id": "CREATE TABLE ed2a18a9-6e94-490e-9642-feb9d0accea4.sequence"
+        },
+        {
+          "id": "CREATE table datasource.orders"
+        },
+        {
+          "id": "CREATE table datasource.orderstatus"
+        },
+        {
+          "id": "CREATE table datasource.lineitem"
+        },
+        {
+          "id": "CREATE TABLE datasource.sequence"
+        }
+      ],
+      "Inventory Service": [
+        {
+          "id": "UPDATE datasource.INVENTORY"
+        },
+        {
+          "id": "SELECT datasource.INVENTORY"
+        },
+        {
+          "id": "UPDATE ed2a18a9-6e94-490e-9642-feb9d0accea4.INVENTORY"
+        },
+        {
+          "id": "SELECT ed2a18a9-6e94-490e-9642-feb9d0accea4.INVENTORY"
+        },
+        {
+          "id": "SELECT ed2a18a9-6e94-490e-9642-feb9d0accea4.inventory"
+        },
+        {
+          "id": "INSERT ed2a18a9-6e94-490e-9642-feb9d0accea4.inventory"
+        },
+        {
+          "id": "INSERT datasource.inventory"
+        },
+        {
+          "id": "CREATE table ed2a18a9-6e94-490e-9642-feb9d0accea4.inventory"
+        },
+        {
+          "id": "CREATE table datasource.inventory"
+        }
+      ],
+      "API Gateway Service": [
+        {
+          "id": "GET"
+        },
+        {
+          "id": "POST"
+        },
+        {
+          "id": "GET /jpetstore/*"
+        },
+        {
+          "id": "GET /jpetstore/*.action"
+        },
+        {
+          "id": "POST /jpetstore/*.action"
+        },
+        {
+          "id": "GET /cargocpc/*"
+        },
+        {
+          "id": "Response.sendError"
+        },
+        {
+          "id": "ResponseFacade.sendRedirect"
+        }
+      ],
+      "Database Infrastructure Service": [
+        {
+          "id": "datasource"
+        },
+        {
+          "id": "SELECT ed2a18a9-6e94-490e-9642-feb9d0accea4"
+        },
+        {
+          "id": "SELECT datasource"
+        },
+        {
+          "id": "CREATE index ed2a18a9-6e94-490e-9642-feb9d0accea4"
+        },
+        {
+          "id": "CREATE index datasource"
+        }
+      ]
+    }
+  }
+}

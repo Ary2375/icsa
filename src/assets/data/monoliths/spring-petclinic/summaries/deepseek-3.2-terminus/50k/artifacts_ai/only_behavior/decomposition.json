@@ -1,0 +1,60 @@
+{
+  "tool": {
+    "decomposition": {
+      "Clinic Patient Management Service": [
+        {
+          "id": "Owner"
+        },
+        {
+          "id": "OwnerController"
+        },
+        {
+          "id": "OwnerRepository"
+        },
+        {
+          "id": "Pet"
+        },
+        {
+          "id": "PetController"
+        },
+        {
+          "id": "PetType"
+        },
+        {
+          "id": "Visit"
+        },
+        {
+          "id": "VisitController"
+        }
+      ],
+      "Veterinary Service": [
+        {
+          "id": "Vet"
+        },
+        {
+          "id": "Specialty"
+        },
+        {
+          "id": "VetController"
+        },
+        {
+          "id": "VetRepository"
+        }
+      ],
+      "Shared Infrastructure Service": [
+        {
+          "id": "PetClinicApplication"
+        },
+        {
+          "id": "BaseEntity"
+        },
+        {
+          "id": "NamedEntity"
+        },
+        {
+          "id": "Person"
+        }
+      ]
+    }
+  }
+}

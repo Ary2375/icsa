@@ -1,0 +1,124 @@
+{
+  "tool": {
+    "decomposition": {
+      "Account Service": [
+        {
+          "id": "AccountService"
+        },
+        {
+          "id": "Account"
+        },
+        {
+          "id": "Signon"
+        },
+        {
+          "id": "Profile"
+        },
+        {
+          "id": "AccountMapper"
+        },
+        {
+          "id": "SignonMapper"
+        },
+        {
+          "id": "ProfileMapper"
+        },
+        {
+          "id": "AccountActionBean"
+        }
+      ],
+      "Catalog Service": [
+        {
+          "id": "CatalogService"
+        },
+        {
+          "id": "Category"
+        },
+        {
+          "id": "Product"
+        },
+        {
+          "id": "Item"
+        },
+        {
+          "id": "Supplier"
+        },
+        {
+          "id": "BannerData"
+        },
+        {
+          "id": "CategoryMapper"
+        },
+        {
+          "id": "ProductMapper"
+        },
+        {
+          "id": "ItemMapper"
+        },
+        {
+          "id": "InventoryMapper"
+        },
+        {
+          "id": "SupplierMapper"
+        },
+        {
+          "id": "BannerDataMapper"
+        },
+        {
+          "id": "CatalogActionBean"
+        }
+      ],
+      "Order Service": [
+        {
+          "id": "OrderService"
+        },
+        {
+          "id": "Order"
+        },
+        {
+          "id": "LineItem"
+        },
+        {
+          "id": "OrderStatus"
+        },
+        {
+          "id": "Sequence"
+        },
+        {
+          "id": "OrderMapper"
+        },
+        {
+          "id": "LineItemMapper"
+        },
+        {
+          "id": "SequenceMapper"
+        },
+        {
+          "id": "OrderActionBean"
+        }
+      ],
+      "Cart Service": [
+        {
+          "id": "Cart"
+        },
+        {
+          "id": "CartItem"
+        },
+        {
+          "id": "CartActionBean"
+        }
+      ],
+      "Shared Infrastructure Service": [
+        {
+          "id": "AbstractActionBean"
+        },
+        {
+          "id": "ResponseFacade"
+        },
+        {
+          "id": "Response"
+        }
+      ]
+    }
+  }
+}

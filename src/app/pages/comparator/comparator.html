@@ -1,0 +1,276 @@
+<main class="comparator-page">
+  <header class="page-heading">
+    <p class="eyebrow">Comparator</p>
+    <h1>Compare two<br />experiments</h1>
+  </header>
+
+  @if (loading()) {
+    <p role="status">Loading experiments...</p>
+  } @else if (error()) {
+    <div role="alert" class="notice">
+      <p>{{ error() }}</p>
+      <button (click)="load()">Retry loading</button>
+    </div>
+  } @else if (!experiments().length) {
+    <p role="status">No experiments are available in results.json.</p>
+  } @else {
+    <section class="selection" aria-label="Experiments to compare">
+      <label class="monolith"
+        >Monolith
+        <select
+          aria-label="Monolith"
+          [ngModel]="activeCase()"
+          (ngModelChange)="changeRepository($event)"
+        >
+          @for (name of repositories(); track name) {
+            <option [value]="name">{{ name }}</option>
+          }
+        </select>
+      </label>
+      <div class="experiment-selectors">
+        <app-experiment-picker
+          label="Reference experiment"
+          side="reference"
+          [options]="options()"
+          [selection]="referenceSelection()"
+          [current]="first()"
+          (selectionChange)="referenceChoice.set($event)"
+        />
+        <span class="direction" aria-hidden="true">→</span>
+        <app-experiment-picker
+          label="Selected experiment"
+          side="selected"
+          [options]="options()"
+          [selection]="selectedSelection()"
+          [current]="second()"
+          (selectionChange)="selectedChoice.set($event)"
+        />
+      </div>
+    </section>
+
+    @if (evolution(); as evolution) {
+      @if (first()?.id === second()?.id) {
+        <p class="notice" role="status">
+          You selected the same experiment on both sides. There are no structural differences.
+        </p>
+      }
+      <p class="comparison-direction" role="status">
+        <strong>Reference:</strong> {{ first()?.label }} <span aria-hidden="true">→</span>
+        <strong>Selected:</strong> {{ second()?.label }}. All changes describe the selected
+        experiment relative to this reference.
+      </p>
+      <div class="summary-grid" aria-label="Changes relative to the reference">
+        <div>
+          <strong>{{ evolution.newServices }}</strong
+          ><span>New microservices</span>
+        </div>
+        <div>
+          <strong>{{ evolution.removedServices }}</strong
+          ><span>Removed microservices</span>
+        </div>
+        <div>
+          <strong>{{ evolution.merges }}</strong
+          ><span>Merge operations</span>
+        </div>
+        <div>
+          <strong>{{ evolution.splits }}</strong
+          ><span>Split operations</span>
+        </div>
+        <div>
+          @if (coverageChange(); as change) {
+            <strong
+              >{{ change.reference | number: '1.0-0' }}% →
+              {{ change.selected | number: '1.0-0' }}%</strong
+            ><span
+              >Monolith coverage · {{ change.onlySelected }} classes gained,
+              {{ change.onlyReference }} lost</span
+            >
+          } @else {
+            <strong>N/A</strong><span>Monolith coverage: class list unavailable</span>
+          }
+        </div>
+      </div>
+
+      <section class="comparator-section" aria-labelledby="services-title">
+        <div class="section-heading">
+          <h2 id="services-title">Reference and selected, side by side</h2>
+        </div>
+        <div class="side-by-side">
+          @for (side of columns(); track side.key) {
+            <article
+              class="experiment-panel"
+              [attr.data-side]="side.key"
+              [attr.aria-label]="side.key + ' decomposition'"
+            >
+              <header>
+                <p class="side-label">{{ side.name }}</p>
+                <h3>{{ side.experiment.label }}</h3>
+                <p>
+                  {{ side.stats.services }} services · {{ side.stats.entities }} distinct class IDs
+                </p>
+                <p class="small">
+                  Service size min / median / max: {{ side.stats.min ?? 'N/A' }} /
+                  {{ side.stats.median ?? 'N/A' }} / {{ side.stats.max ?? 'N/A' }} ·
+                  {{ side.stats.singletons }} single-class services
+                </p>
+                <div class="coverage" aria-label="Monolith coverage">
+                  @if (side.coverage.percent !== null) {
+                    <p>
+                      <strong>Monolith coverage:</strong>
+                      {{ side.coverage.covered.length }} / {{ side.coverage.total }} classes ({{
+                        side.coverage.percent | number: '1.0-0'
+                      }}%)
+                    </p>
+                    <meter
+                      min="0"
+                      [max]="side.coverage.total"
+                      [value]="side.coverage.covered.length"
+                      [attr.aria-label]="side.name + ' monolith coverage'"
+                    ></meter>
+                    @if (side.coverage.outside || side.coverage.unresolved) {
+                      <p class="small">
+                        {{ side.coverage.outside }} class IDs are not in the monolith's class list
+                        (for example tests or other artifacts)
+                        @if (side.coverage.unresolved) {
+                          and {{ side.coverage.unresolved }} simple names match several classes
+                        }
+                        and are not counted.
+                      </p>
+                    }
+                    @if (side.coverage.missing.length) {
+                      <details class="missing">
+                        <summary>{{ side.coverage.missing.length }} classes not covered</summary>
+                        <p class="small">
+                          <code>{{ side.coverage.missing.join(', ') }}</code>
+                        </p>
+                      </details>
+                    }
+                  } @else {
+                    <p class="small">Monolith coverage unavailable: the class list is missing.</p>
+                  }
+                  @if (side.experiment.observed) {
+                    <p class="small">
+                      Entities observed by the evaluation: {{ side.experiment.observed }}
+                    </p>
+                  }
+                </div>
+                <a [href]="side.experiment.source" target="_blank" rel="noopener"
+                  >Open decomposition JSON</a
+                >
+              </header>
+              @for (service of side.services; track $index) {
+                <details
+                  class="service"
+                  [attr.data-kind]="service.kind"
+                  [open]="service.kind !== 'unchanged'"
+                >
+                  <summary>
+                    <span class="service-title">{{ service.name }}</span>
+                    @if (service.label) {
+                      <span class="badge" [attr.data-kind]="service.kind">{{ service.label }}</span>
+                    }
+                    @if (service.counterparts.length) {
+                      <span class="small"
+                        >{{ service.relation }} {{ service.counterparts.join(', ') }}</span
+                      >
+                    }
+                    <span class="small">{{ service.classes.length }} classes</span>
+                  </summary>
+                  <ul class="class-list">
+                    @for (item of service.classItems; track $index) {
+                      <li [attr.data-mark]="item.mark">
+                        <code>{{ item.name }}</code>
+                        @if (item.note) {
+                          <span class="class-note">{{ item.note }}</span>
+                        }
+                      </li>
+                    }
+                  </ul>
+                  @if (!service.classes.length) {
+                    <p>Empty service.</p>
+                  }
+                </details>
+              }
+            </article>
+          }
+        </div>
+        <div class="legend" aria-label="Legend">
+          <div>
+            <h3>Service tags</h3>
+            <ul>
+              <li>
+                <span class="badge" data-kind="new">New</span> only in the selected experiment: none
+                of its classes is in the reference
+              </li>
+              <li>
+                <span class="badge" data-kind="removed">Removed</span> only in the reference: none
+                of its classes survives in the selected experiment
+              </li>
+              <li>
+                <span class="badge" data-kind="merged">Merged</span> several reference services
+                become one selected service
+              </li>
+              <li>
+                <span class="badge" data-kind="split">Split</span> /
+                <span class="badge" data-kind="split">Split part</span> one reference service
+                becomes several selected services
+              </li>
+              <li>
+                <span class="badge" data-kind="redistributed">Reorganized</span> several services on
+                each side exchange classes: neither a simple merge nor a split
+              </li>
+              <li>
+                <span class="badge" data-kind="modified">Modified</span> one service on each side,
+                but with a different set of classes
+              </li>
+              <li>
+                <span class="badge" data-kind="renamed">Renamed</span> same classes, different name
+              </li>
+              <li>
+                <span class="badge" data-kind="unchanged">Unchanged</span> same name and same
+                classes
+              </li>
+              <li>
+                <span class="badge" data-kind="uncertain">Uncertain</span> empty service or repeated
+                classes: no reliable correspondence
+              </li>
+            </ul>
+          </div>
+          <div>
+            <h3>Class tags</h3>
+            <ul>
+              <li>
+                <span class="mark moved">→ Service</span> /
+                <span class="mark moved">← Service</span> the class leaves the main flow of its
+                service: it went to, or came from, the service shown
+              </li>
+              <li>
+                <span class="mark only-here">not in selected</span> the class is in the reference
+                but not in the selected experiment
+              </li>
+              <li>
+                <span class="mark only-selected">not in reference</span> the class is in the
+                selected experiment but not in the reference
+              </li>
+              <li>
+                <span class="mark ambiguous">repeated assignment</span> the class is assigned to
+                several services and is excluded from the correspondence
+              </li>
+            </ul>
+          </div>
+        </div>
+      </section>
+    } @else if (!first() || !second()) {
+      <p class="notice" role="status">
+        Choose an available combination for both experiments: no experiment matches one of the
+        current selections.
+      </p>
+    } @else if (loadError(); as message) {
+      <div role="alert" class="notice">
+        <p>{{ message }}</p>
+      </div>
+    } @else {
+      <p role="status">Loading decompositions...</p>
+    }
+  }
+</main>

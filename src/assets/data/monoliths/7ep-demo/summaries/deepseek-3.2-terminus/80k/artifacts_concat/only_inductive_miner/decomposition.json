@@ -1,0 +1,101 @@
+{
+  "tool": {
+    "decomposition": {
+      "Account Service": [
+        {
+          "id": "Account"
+        },
+        {
+          "id": "Profile"
+        },
+        {
+          "id": "Signon"
+        },
+        {
+          "id": "AccountMapper"
+        },
+        {
+          "id": "ProfileMapper"
+        },
+        {
+          "id": "SignonMapper"
+        },
+        {
+          "id": "AccountActionBean"
+        }
+      ],
+      "Catalog Service": [
+        {
+          "id": "BannerData"
+        },
+        {
+          "id": "Category"
+        },
+        {
+          "id": "Product"
+        },
+        {
+          "id": "Item"
+        },
+        {
+          "id": "Supplier"
+        },
+        {
+          "id": "BannerDataMapper"
+        },
+        {
+          "id": "CategoryMapper"
+        },
+        {
+          "id": "ProductMapper"
+        },
+        {
+          "id": "ItemMapper"
+        },
+        {
+          "id": "SupplierMapper"
+        },
+        {
+          "id": "CatalogActionBean"
+        }
+      ],
+      "Order Service": [
+        {
+          "id": "Order"
+        },
+        {
+          "id": "OrderStatus"
+        },
+        {
+          "id": "LineItem"
+        },
+        {
+          "id": "Sequence"
+        },
+        {
+          "id": "OrderMapper"
+        },
+        {
+          "id": "OrderStatusMapper"
+        },
+        {
+          "id": "LineItemMapper"
+        },
+        {
+          "id": "SequenceMapper"
+        },
+        {
+          "id": "OrderActionBean"
+        }
+      ],
+      "Inventory Service": [
+        {
+          "id": "Inventory"
+        },
+        {
+          "id": "InventoryMapper"
+        }
+      ]
+    }
+  }
+}

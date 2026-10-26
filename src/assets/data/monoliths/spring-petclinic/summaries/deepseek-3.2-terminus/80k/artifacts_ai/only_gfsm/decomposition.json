@@ -1,0 +1,59 @@
+{
+  "tool": {
+    "decomposition": {
+      "Owner Service": [
+        {
+          "id": "Owner"
+        },
+        {
+          "id": "OwnerController"
+        },
+        {
+          "id": "OwnerRepository"
+        },
+        {
+          "id": "PetType"
+        }
+      ],
+      "Pet Service": [
+        {
+          "id": "Pet"
+        },
+        {
+          "id": "PetController"
+        },
+        {
+          "id": "Owner"
+        },
+        {
+          "id": "PetType"
+        }
+      ],
+      "Veterinary Service": [
+        {
+          "id": "Vet"
+        },
+        {
+          "id": "VetController"
+        },
+        {
+          "id": "VetRepository"
+        }
+      ],
+      "Visit Service": [
+        {
+          "id": "Visit"
+        },
+        {
+          "id": "VisitController"
+        },
+        {
+          "id": "Owner"
+        },
+        {
+          "id": "Pet"
+        }
+      ]
+    }
+  }
+}

@@ -1,0 +1,51 @@
+{
+  "tool": {
+    "decomposition": {
+      "Owner Management Service": [
+        {
+          "id": "Owner"
+        },
+        {
+          "id": "PetType"
+        },
+        {
+          "id": "OwnerRepository"
+        },
+        {
+          "id": "OwnerController"
+        },
+        {
+          "id": "PetController"
+        },
+        {
+          "id": "VisitController"
+        }
+      ],
+      "Veterinary Service": [
+        {
+          "id": "Vet"
+        },
+        {
+          "id": "VetRepository"
+        },
+        {
+          "id": "VetController"
+        }
+      ],
+      "Shared Infrastructure Service": [
+        {
+          "id": "Session"
+        },
+        {
+          "id": "Transaction"
+        },
+        {
+          "id": "MockHttpServletResponse"
+        },
+        {
+          "id": "WelcomeController"
+        }
+      ]
+    }
+  }
+}

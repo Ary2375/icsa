@@ -1,0 +1,78 @@
+{
+  "tool": {
+    "decomposition": {
+      "Account Service": [
+        {
+          "id": "Account"
+        },
+        {
+          "id": "AccountAction"
+        },
+        {
+          "id": "AccountMapper"
+        },
+        {
+          "id": "AccountService"
+        }
+      ],
+      "Catalog Service": [
+        {
+          "id": "CatalogAction"
+        },
+        {
+          "id": "CatalogService"
+        },
+        {
+          "id": "Category"
+        },
+        {
+          "id": "CategoryMapper"
+        },
+        {
+          "id": "Product"
+        },
+        {
+          "id": "ProductMapper"
+        },
+        {
+          "id": "Item"
+        },
+        {
+          "id": "ItemMapper"
+        }
+      ],
+      "Order Service": [
+        {
+          "id": "OrderAction"
+        },
+        {
+          "id": "OrderService"
+        },
+        {
+          "id": "Order"
+        },
+        {
+          "id": "OrderMapper"
+        },
+        {
+          "id": "LineItem"
+        },
+        {
+          "id": "LineItemMapper"
+        },
+        {
+          "id": "SequenceMapper"
+        },
+        {
+          "id": "CartAction"
+        },
+        {
+          "id": "Cart"
+        },
+        {
+          "id": "CartItem"
+        }
+      ]
+    }
+  }
+}

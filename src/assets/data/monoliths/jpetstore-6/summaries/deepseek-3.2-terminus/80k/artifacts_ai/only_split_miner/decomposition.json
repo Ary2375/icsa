@@ -1,0 +1,116 @@
+{
+  "tool": {
+    "decomposition": {
+      "Account Service": [
+        {
+          "id": "Account"
+        },
+        {
+          "id": "Signon"
+        },
+        {
+          "id": "Profile"
+        },
+        {
+          "id": "AccountDAO"
+        },
+        {
+          "id": "SignonDAO"
+        },
+        {
+          "id": "ProfileDAO"
+        }
+      ],
+      "Catalog Service": [
+        {
+          "id": "Product"
+        },
+        {
+          "id": "Category"
+        },
+        {
+          "id": "Item"
+        },
+        {
+          "id": "ProductDAO"
+        },
+        {
+          "id": "CategoryDAO"
+        },
+        {
+          "id": "ItemDAO"
+        }
+      ],
+      "Inventory Service": [
+        {
+          "id": "Inventory"
+        },
+        {
+          "id": "Supplier"
+        },
+        {
+          "id": "InventoryDAO"
+        },
+        {
+          "id": "SupplierDAO"
+        }
+      ],
+      "Order Service": [
+        {
+          "id": "Order"
+        },
+        {
+          "id": "OrderStatus"
+        },
+        {
+          "id": "LineItem"
+        },
+        {
+          "id": "Sequence"
+        },
+        {
+          "id": "OrderDAO"
+        },
+        {
+          "id": "OrderStatusDAO"
+        },
+        {
+          "id": "LineItemDAO"
+        },
+        {
+          "id": "SequenceDAO"
+        }
+      ],
+      "Content Service": [
+        {
+          "id": "BannerData"
+        },
+        {
+          "id": "BannerDataDAO"
+        }
+      ],
+      "API Gateway Service": [
+        {
+          "id": "JpetstoreController"
+        },
+        {
+          "id": "CargocpcController"
+        },
+        {
+          "id": "Response"
+        },
+        {
+          "id": "ResponseFacade"
+        }
+      ],
+      "Shared Infrastructure Service": [
+        {
+          "id": "Datasource"
+        },
+        {
+          "id": "DatabaseInitializer"
+        }
+      ]
+    }
+  }
+}

@@ -1,0 +1,70 @@
+{
+  "tool": {
+    "decomposition": {
+      "Catalog Management Service": [
+        {
+          "id": "CatalogController"
+        },
+        {
+          "id": "MockCatalogItemsRepository"
+        },
+        {
+          "id": "CatalogItem"
+        }
+      ],
+      "Dealer Management Service": [
+        {
+          "id": "DealerController"
+        },
+        {
+          "id": "MockDealersRepository"
+        },
+        {
+          "id": "DealerInfo"
+        }
+      ],
+      "Quote Management Service": [
+        {
+          "id": "QuoteController"
+        },
+        {
+          "id": "MockQuoteRepository"
+        },
+        {
+          "id": "Quote"
+        }
+      ],
+      "Order Management Service": [
+        {
+          "id": "OrderController"
+        },
+        {
+          "id": "MockOrderRepository"
+        },
+        {
+          "id": "Order"
+        },
+        {
+          "id": "OrderUpdateInfo"
+        },
+        {
+          "id": "OrderEventInfo"
+        }
+      ],
+      "Shipment Management Service": [
+        {
+          "id": "ShipmentController"
+        },
+        {
+          "id": "MockShipmentRepository"
+        },
+        {
+          "id": "ShipmentRecord"
+        },
+        {
+          "id": "ShipmentEventInfo"
+        }
+      ]
+    }
+  }
+}

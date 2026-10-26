@@ -1,0 +1,83 @@
+{
+  "tool": {
+    "decomposition": {
+      "Account Management Service": [
+        {
+          "id": "Account"
+        },
+        {
+          "id": "Profile"
+        },
+        {
+          "id": "Signon"
+        }
+      ],
+      "Catalog Service": [
+        {
+          "id": "Category"
+        },
+        {
+          "id": "Item"
+        },
+        {
+          "id": "Product"
+        }
+      ],
+      "Inventory Service": [
+        {
+          "id": "Inventory"
+        },
+        {
+          "id": "Supplier"
+        }
+      ],
+      "Order Management Service": [
+        {
+          "id": "LineItem"
+        },
+        {
+          "id": "OrderStatus"
+        },
+        {
+          "id": "Orders"
+        }
+      ],
+      "Content Management Service": [
+        {
+          "id": "BannerData"
+        }
+      ],
+      "Shared Utility Service": [
+        {
+          "id": "DataSource"
+        },
+        {
+          "id": "Index"
+        },
+        {
+          "id": "Sequence"
+        }
+      ],
+      "Web API Service": [
+        {
+          "id": "Cargocpc"
+        },
+        {
+          "id": "Get"
+        },
+        {
+          "id": "Jpetstore"
+        },
+        {
+          "id": "Post"
+        },
+        {
+          "id": "Response"
+        },
+        {
+          "id": "ResponseFacade"
+        }
+      ]
+    }
+  }
+}

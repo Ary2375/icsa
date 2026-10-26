@@ -1,0 +1,69 @@
+{
+  "tool": {
+    "decomposition": {
+      "Owner Management Service": [
+        {
+          "id": "Owner"
+        },
+        {
+          "id": "Pet"
+        },
+        {
+          "id": "Visit"
+        },
+        {
+          "id": "PetType"
+        },
+        {
+          "id": "OwnerController"
+        },
+        {
+          "id": "PetController"
+        },
+        {
+          "id": "VisitController"
+        },
+        {
+          "id": "OwnerRepository"
+        },
+        {
+          "id": "PetRepository"
+        },
+        {
+          "id": "VisitRepository"
+        }
+      ],
+      "Veterinary Service": [
+        {
+          "id": "Vet"
+        },
+        {
+          "id": "Specialty"
+        },
+        {
+          "id": "VetController"
+        },
+        {
+          "id": "VetRepository"
+        },
+        {
+          "id": "Vets"
+        }
+      ],
+      "Shared Infrastructure Service": [
+        {
+          "id": "PetClinicApplication"
+        },
+        {
+          "id": "BaseEntity"
+        },
+        {
+          "id": "NamedEntity"
+        },
+        {
+          "id": "Person"
+        }
+      ]
+    }
+  }
+}

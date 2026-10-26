@@ -1,0 +1,146 @@
+{
+  "tool": {
+    "decomposition": {
+      "Catalog Service": [
+        {
+          "id": "Category"
+        },
+        {
+          "id": "CategoryDao"
+        },
+        {
+          "id": "CategoryService"
+        },
+        {
+          "id": "Product"
+        },
+        {
+          "id": "ProductDao"
+        },
+        {
+          "id": "ProductService"
+        },
+        {
+          "id": "Item"
+        },
+        {
+          "id": "ItemDao"
+        },
+        {
+          "id": "ItemService"
+        },
+        {
+          "id": "Inventory"
+        },
+        {
+          "id": "InventoryDao"
+        },
+        {
+          "id": "InventoryService"
+        },
+        {
+          "id": "Supplier"
+        },
+        {
+          "id": "SupplierDao"
+        },
+        {
+          "id": "SupplierService"
+        },
+        {
+          "id": "BannerData"
+        },
+        {
+          "id": "BannerDataDao"
+        },
+        {
+          "id": "BannerDataService"
+        }
+      ],
+      "Order Service": [
+        {
+          "id": "Order"
+        },
+        {
+          "id": "OrderDao"
+        },
+        {
+          "id": "OrderService"
+        },
+        {
+          "id": "OrderStatus"
+        },
+        {
+          "id": "OrderStatusDao"
+        },
+        {
+          "id": "OrderStatusService"
+        },
+        {
+          "id": "LineItem"
+        },
+        {
+          "id": "LineItemDao"
+        },
+        {
+          "id": "LineItemService"
+        },
+        {
+          "id": "Sequence"
+        },
+        {
+          "id": "SequenceDao"
+        },
+        {
+          "id": "SequenceService"
+        }
+      ],
+      "Account Service": [
+        {
+          "id": "Account"
+        },
+        {
+          "id": "AccountDao"
+        },
+        {
+          "id": "AccountService"
+        },
+        {
+          "id": "Profile"
+        },
+        {
+          "id": "ProfileDao"
+        },
+        {
+          "id": "ProfileService"
+        },
+        {
+          "id": "Signon"
+        },
+        {
+          "id": "SignonDao"
+        },
+        {
+          "id": "SignonService"
+        }
+      ],
+      "Shared Infrastructure Service": [
+        {
+          "id": "DataSource"
+        },
+        {
+          "id": "Response"
+        },
+        {
+          "id": "ResponseFacade"
+        },
+        {
+          "id": "PetStoreServlet"
+        },
+        {
+          "id": "CargoCPCServlet"
+        }
+      ]
+    }
+  }
+}

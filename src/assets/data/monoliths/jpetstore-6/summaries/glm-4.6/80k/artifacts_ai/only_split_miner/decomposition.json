@@ -1,0 +1,131 @@
+{
+  "tool": {
+    "decomposition": {
+      "Account Service": [
+        {
+          "id": "Account"
+        },
+        {
+          "id": "Signon"
+        },
+        {
+          "id": "Profile"
+        },
+        {
+          "id": "Bannerdata"
+        },
+        {
+          "id": "AccountDao"
+        },
+        {
+          "id": "AccountSqlMapDao"
+        },
+        {
+          "id": "AccountService"
+        },
+        {
+          "id": "AccountBean"
+        }
+      ],
+      "Catalog Service": [
+        {
+          "id": "Category"
+        },
+        {
+          "id": "Product"
+        },
+        {
+          "id": "Item"
+        },
+        {
+          "id": "Supplier"
+        },
+        {
+          "id": "CategoryDao"
+        },
+        {
+          "id": "CategorySqlMapDao"
+        },
+        {
+          "id": "ProductDao"
+        },
+        {
+          "id": "ProductSqlMapDao"
+        },
+        {
+          "id": "ItemDao"
+        },
+        {
+          "id": "ItemSqlMapDao"
+        },
+        {
+          "id": "CatalogService"
+        },
+        {
+          "id": "CatalogBean"
+        }
+      ],
+      "Order Service": [
+        {
+          "id": "Order"
+        },
+        {
+          "id": "LineItem"
+        },
+        {
+          "id": "Cart"
+        },
+        {
+          "id": "CartItem"
+        },
+        {
+          "id": "OrderDao"
+        },
+        {
+          "id": "OrderSqlMapDao"
+        },
+        {
+          "id": "LineItemDao"
+        },
+        {
+          "id": "LineItemSqlMapDao"
+        },
+        {
+          "id": "OrderService"
+        },
+        {
+          "id": "OrderBean"
+        },
+        {
+          "id": "CartBean"
+        }
+      ],
+      "Shared Infrastructure Service": [
+        {
+          "id": "Sequence"
+        },
+        {
+          "id": "SequenceDao"
+        },
+        {
+          "id": "SequenceSqlMapDao"
+        },
+        {
+          "id": "BaseSqlMapDao"
+        },
+        {
+          "id": "BaseBean"
+        },
+        {
+          "id": "DataSource"
+        },
+        {
+          "id": "Response"
+        },
+        {
+          "id": "ResponseFacade"
+        }
+      ]
+    }
+  }
+}

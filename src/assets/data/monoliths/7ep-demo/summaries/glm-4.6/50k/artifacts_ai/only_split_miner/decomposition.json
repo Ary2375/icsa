@@ -1,0 +1,134 @@
+{
+  "tool": {
+    "decomposition": {
+      "Account Service": [
+        {
+          "id": "Account"
+        },
+        {
+          "id": "Bannerdata"
+        },
+        {
+          "id": "AccountDao"
+        },
+        {
+          "id": "BannerDataDao"
+        },
+        {
+          "id": "SqlMapAccountDao"
+        },
+        {
+          "id": "SqlMapBannerDataDao"
+        },
+        {
+          "id": "AccountService"
+        },
+        {
+          "id": "AccountBean"
+        },
+        {
+          "id": "SignonBean"
+        },
+        {
+          "id": "IncludeBean"
+        }
+      ],
+      "Catalog Service": [
+        {
+          "id": "Category"
+        },
+        {
+          "id": "Product"
+        },
+        {
+          "id": "Item"
+        },
+        {
+          "id": "Inventory"
+        },
+        {
+          "id": "Supplier"
+        },
+        {
+          "id": "CategoryDao"
+        },
+        {
+          "id": "ProductDao"
+        },
+        {
+          "id": "ItemDao"
+        },
+        {
+          "id": "SqlMapCategoryDao"
+        },
+        {
+          "id": "SqlMapProductDao"
+        },
+        {
+          "id": "SqlMapItemDao"
+        },
+        {
+          "id": "CatalogService"
+        },
+        {
+          "id": "CatalogBean"
+        }
+      ],
+      "Order Service": [
+        {
+          "id": "Cart"
+        },
+        {
+          "id": "CartItem"
+        },
+        {
+          "id": "Order"
+        },
+        {
+          "id": "OrderStatus"
+        },
+        {
+          "id": "LineItem"
+        },
+        {
+          "id": "Sequence"
+        },
+        {
+          "id": "OrderDao"
+        },
+        {
+          "id": "SequenceDao"
+        },
+        {
+          "id": "SqlMapOrderDao"
+        },
+        {
+          "id": "SqlMapSequenceDao"
+        },
+        {
+          "id": "OrderService"
+        },
+        {
+          "id": "SequenceService"
+        },
+        {
+          "id": "MailService"
+        },
+        {
+          "id": "CartBean"
+        },
+        {
+          "id": "OrderBean"
+        }
+      ],
+      "Shared Infrastructure Service": [
+        {
+          "id": "DaoManager"
+        },
+        {
+          "id": "AbstractBean"
+        }
+      ]
+    }
+  }
+}

@@ -1,0 +1,310 @@
+{
+  "tool": {
+    "decomposition": {
+      "Catalog Service": [
+        {
+          "id": "SelectProduct"
+        },
+        {
+          "id": "SelectCategory"
+        },
+        {
+          "id": "InsertSupplier"
+        },
+        {
+          "id": "InsertProduct"
+        },
+        {
+          "id": "InsertItem"
+        },
+        {
+          "id": "InsertCategory"
+        },
+        {
+          "id": "CreateTableSupplier"
+        },
+        {
+          "id": "CreateTableProduct"
+        },
+        {
+          "id": "CreateTableItem"
+        },
+        {
+          "id": "CreateTableCategory"
+        },
+        {
+          "id": "InsertSupplier"
+        },
+        {
+          "id": "InsertProduct"
+        },
+        {
+          "id": "InsertItem"
+        },
+        {
+          "id": "InsertCategory"
+        },
+        {
+          "id": "CreateTableSupplier"
+        },
+        {
+          "id": "CreateTableProduct"
+        },
+        {
+          "id": "CreateTableItem"
+        },
+        {
+          "id": "CreateTableCategory"
+        },
+        {
+          "id": "SelectProduct"
+        },
+        {
+          "id": "SelectCategory"
+        }
+      ],
+      "Inventory Service": [
+        {
+          "id": "UpdateInventory"
+        },
+        {
+          "id": "SelectInventory"
+        },
+        {
+          "id": "SelectInventory"
+        },
+        {
+          "id": "InsertInventory"
+        },
+        {
+          "id": "InsertInventory"
+        },
+        {
+          "id": "CreateTableInventory"
+        },
+        {
+          "id": "CreateTableInventory"
+        },
+        {
+          "id": "SelectInventory"
+        },
+        {
+          "id": "UpdateInventory"
+        }
+      ],
+      "Order Service": [
+        {
+          "id": "SelectOrderStatus"
+        },
+        {
+          "id": "SelectOrders"
+        },
+        {
+          "id": "SelectLineItem"
+        },
+        {
+          "id": "SelectLineItem"
+        },
+        {
+          "id": "InsertOrderStatus"
+        },
+        {
+          "id": "InsertOrders"
+        },
+        {
+          "id": "InsertLineItem"
+        },
+        {
+          "id": "CreateTableOrderStatus"
+        },
+        {
+          "id": "CreateTableOrders"
+        },
+        {
+          "id": "CreateTableLineItem"
+        },
+        {
+          "id": "CreateTableOrderStatus"
+        },
+        {
+          "id": "CreateTableOrders"
+        },
+        {
+          "id": "CreateTableLineItem"
+        },
+        {
+          "id": "SelectLineItem"
+        },
+        {
+          "id": "InsertOrders"
+        },
+        {
+          "id": "InsertOrderStatus"
+        },
+        {
+          "id": "InsertLineItem"
+        }
+      ],
+      "Account Service": [
+        {
+          "id": "UpdateSignon"
+        },
+        {
+          "id": "UpdateProfile"
+        },
+        {
+          "id": "UpdateAccount"
+        },
+        {
+          "id": "SelectSignon"
+        },
+        {
+          "id": "SelectProfile"
+        },
+        {
+          "id": "SelectAccount"
+        },
+        {
+          "id": "InsertSignon"
+        },
+        {
+          "id": "InsertProfile"
+        },
+        {
+          "id": "InsertAccount"
+        },
+        {
+          "id": "InsertSignon"
+        },
+        {
+          "id": "InsertProfile"
+        },
+        {
+          "id": "InsertAccount"
+        },
+        {
+          "id": "InsertSignon"
+        },
+        {
+          "id": "InsertProfile"
+        },
+        {
+          "id": "InsertAccount"
+        },
+        {
+          "id": "CreateTableSignon"
+        },
+        {
+          "id": "CreateTableProfile"
+        },
+        {
+          "id": "CreateTableAccount"
+        },
+        {
+          "id": "CreateTableSignon"
+        },
+        {
+          "id": "CreateTableProfile"
+        },
+        {
+          "id": "CreateTableAccount"
+        },
+        {
+          "id": "InsertAccount"
+        },
+        {
+          "id": "InsertProfile"
+        },
+        {
+          "id": "InsertSignon"
+        }
+      ],
+      "Sequence Service": [
+        {
+          "id": "UpdateSequence"
+        },
+        {
+          "id": "SelectSequence"
+        },
+        {
+          "id": "SelectSequence"
+        },
+        {
+          "id": "InsertSequence"
+        },
+        {
+          "id": "InsertSequence"
+        },
+        {
+          "id": "CreateTableSequence"
+        },
+        {
+          "id": "CreateTableSequence"
+        },
+        {
+          "id": "SelectSequence"
+        },
+        {
+          "id": "UpdateSequence"
+        }
+      ],
+      "Banner Service": [
+        {
+          "id": "InsertBannerData"
+        },
+        {
+          "id": "InsertBannerData"
+        },
+        {
+          "id": "CreateTableBannerData"
+        },
+        {
+          "id": "CreateTableBannerData"
+        }
+      ],
+      "Web Service": [
+        {
+          "id": "Post"
+        },
+        {
+          "id": "GetJpetstore"
+        },
+        {
+          "id": "Get"
+        },
+        {
+          "id": "PostJpetstoreAction"
+        },
+        {
+          "id": "GetJpetstoreAction"
+        },
+        {
+          "id": "ResponseSendError"
+        },
+        {
+          "id": "GetCargocpc"
+        },
+        {
+          "id": "ResponseFacadeSendRedirect"
+        }
+      ],
+      "Database Infrastructure Service": [
+        {
+          "id": "Datasource"
+        },
+        {
+          "id": "SelectGeneric"
+        },
+        {
+          "id": "CreateIndex"
+        },
+        {
+          "id": "CreateIndex"
+        },
+        {
+          "id": "SelectDatasource"
+        }
+      ]
+    }
+  }
+}

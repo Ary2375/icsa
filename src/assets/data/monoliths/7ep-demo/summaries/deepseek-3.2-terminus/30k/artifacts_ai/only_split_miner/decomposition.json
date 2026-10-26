@@ -1,0 +1,76 @@
+{
+  "tool": {
+    "decomposition": {
+      "Account Service": [
+        {
+          "id": "AccountDao"
+        },
+        {
+          "id": "SignonDao"
+        },
+        {
+          "id": "ProfileDao"
+        },
+        {
+          "id": "SequenceDao"
+        }
+      ],
+      "Catalog Service": [
+        {
+          "id": "ProductDao"
+        },
+        {
+          "id": "CategoryDao"
+        },
+        {
+          "id": "ItemDao"
+        },
+        {
+          "id": "InventoryDao"
+        },
+        {
+          "id": "SupplierDao"
+        },
+        {
+          "id": "BannerDataDao"
+        }
+      ],
+      "Order Service": [
+        {
+          "id": "OrderDao"
+        },
+        {
+          "id": "OrderStatusDao"
+        },
+        {
+          "id": "LineItemDao"
+        }
+      ],
+      "Web Service": [
+        {
+          "id": "JpetstoreController"
+        },
+        {
+          "id": "JpetstoreActionController"
+        },
+        {
+          "id": "CargoCpcController"
+        },
+        {
+          "id": "HttpController"
+        },
+        {
+          "id": "ResponseFacade"
+        }
+      ],
+      "Shared Infrastructure Service": [
+        {
+          "id": "DatasourceDao"
+        },
+        {
+          "id": "IndexDao"
+        }
+      ]
+    }
+  }
+}

@@ -1,0 +1,62 @@
+{
+  "tool": {
+    "decomposition": {
+      "Library Management Service": [
+        {
+          "id": "LibraryBookListAvailableServlet"
+        },
+        {
+          "id": "LibraryBorrowerListSearchServlet"
+        },
+        {
+          "id": "LibraryLendServlet"
+        },
+        {
+          "id": "LibraryRegisterBookServlet"
+        },
+        {
+          "id": "LibraryRegisterBorrowerServlet"
+        },
+        {
+          "id": "LibraryUtils"
+        }
+      ],
+      "User Management Service": [
+        {
+          "id": "LoginServlet"
+        },
+        {
+          "id": "LoginUtils"
+        },
+        {
+          "id": "RegisterServlet"
+        },
+        {
+          "id": "RegistrationUtils"
+        }
+      ],
+      "Math Service": [
+        {
+          "id": "MathServlet"
+        }
+      ],
+      "Shared Infrastructure Service": [
+        {
+          "id": "DbServlet"
+        },
+        {
+          "id": "StringUtils"
+        },
+        {
+          "id": "CheckUtils"
+        },
+        {
+          "id": "ServletUtils"
+        },
+        {
+          "id": "PersistenceLayer"
+        }
+      ]
+    }
+  }
+}

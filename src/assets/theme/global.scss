@@ -11,7 +11,8 @@
 
 app-methodology,
 app-artifacts,
-app-dashboard {
+app-dashboard,
+app-comparator {
   display: block;
   min-height: 0;
   flex: 1 0 auto;
@@ -47,7 +48,8 @@ app-root > router-outlet {
 
 app-methodology .methodology-page,
 app-artifacts .artifacts-page,
-app-dashboard .dashboard-container {
+app-dashboard .dashboard-container,
+app-comparator .comparator-page {
   max-width: var(--project-content-width);
   margin-inline: auto;
   padding: clamp(2.5rem, 6vw, 5rem) var(--project-page-gutter);
@@ -55,13 +57,15 @@ app-dashboard .dashboard-container {
 
 app-methodology .intro,
 app-artifacts .page-heading,
-app-dashboard .page-heading {
+app-dashboard .page-heading,
+app-comparator .page-heading {
   padding-bottom: 3.2rem;
 }
 
 app-methodology .eyebrow,
 app-artifacts .eyebrow,
-app-dashboard .eyebrow {
+app-dashboard .eyebrow,
+app-comparator .eyebrow {
   margin: 0 0 0.7rem;
   color: var(--project-accent);
   font-size: 0.7rem;
@@ -88,7 +92,11 @@ app-artifacts p,
 app-dashboard h1,
 app-dashboard h2,
 app-dashboard h3,
-app-dashboard p {
+app-dashboard p,
+app-comparator h1,
+app-comparator h2,
+app-comparator h3,
+app-comparator p {
   margin-top: 0;
 }
 
@@ -97,14 +105,17 @@ app-methodology h2,
 app-artifacts h1,
 app-artifacts h2,
 app-dashboard h1,
-app-dashboard h2 {
+app-dashboard h2,
+app-comparator h1,
+app-comparator h2 {
   font-family: Georgia, 'Times New Roman', serif;
   font-weight: 500;
 }
 
 app-methodology .intro h1,
 app-artifacts .page-heading h1,
-app-dashboard .page-heading h1 {
+app-dashboard .page-heading h1,
+app-comparator .page-heading h1 {
   margin: 0 0 1.2rem;
   font-size: 4rem;
   line-height: 1;
@@ -112,7 +123,8 @@ app-dashboard .page-heading h1 {
 
 app-methodology .intro-copy,
 app-artifacts .page-heading .intro-copy,
-app-dashboard .page-heading .intro-copy {
+app-dashboard .page-heading .intro-copy,
+app-comparator .page-heading .intro-copy {
   max-width: none;
   margin: 0;
   color: var(--project-muted);
@@ -127,7 +139,8 @@ app-methodology .experiment-detail,
 app-methodology .references,
 app-artifacts .available-section,
 app-artifacts .repository-section,
-app-dashboard .dashboard-content {
+app-dashboard .dashboard-content,
+app-comparator .comparator-section {
   padding-block: 2.5rem;
   border-top: 1px solid var(--project-rule);
 }
@@ -137,7 +150,8 @@ app-methodology .detail-section-heading,
 app-methodology .experiment-heading,
 app-methodology .references-heading,
 app-artifacts .section-heading,
-app-dashboard .section-heading {
+app-dashboard .section-heading,
+app-comparator .section-heading {
   display: flex;
   align-items: flex-start;
   flex-direction: column;
@@ -150,7 +164,8 @@ app-methodology .detail-section-heading .eyebrow,
 app-methodology .experiment-heading .eyebrow,
 app-methodology .references-heading .eyebrow,
 app-artifacts .section-heading .eyebrow,
-app-dashboard .section-heading .eyebrow {
+app-dashboard .section-heading .eyebrow,
+app-comparator .section-heading .eyebrow {
   margin-bottom: 0.45rem;
 }
 
@@ -159,7 +174,8 @@ app-methodology .detail-section-heading h2,
 app-methodology .experiment-heading h2,
 app-methodology .references-heading h2,
 app-artifacts .section-heading h2,
-app-dashboard .section-heading h2 {
+app-dashboard .section-heading h2,
+app-comparator .section-heading h2 {
   margin: 0;
   font-size: 2rem;
   line-height: 1.15;
@@ -169,7 +185,8 @@ app-methodology .section-note,
 app-methodology .detail-section-heading > p,
 app-methodology .experiment-heading > p:last-child,
 app-artifacts .section-heading > p,
-app-dashboard .section-heading > p {
+app-dashboard .section-heading > p,
+app-comparator .section-heading > p {
   max-width: none;
   margin: 0;
   color: var(--project-muted);
@@ -180,19 +197,22 @@ app-dashboard .section-heading > p {
 @media (max-width: 600px) {
   app-methodology .methodology-page,
   app-artifacts .artifacts-page,
-  app-dashboard .dashboard-container {
+  app-dashboard .dashboard-container,
+  app-comparator .comparator-page {
     padding-inline: 1.1rem;
   }
 
   app-methodology .intro,
   app-artifacts .page-heading,
-  app-dashboard .page-heading {
+  app-dashboard .page-heading,
+  app-comparator .page-heading {
     padding-bottom: 3rem;
   }
 
   app-methodology .intro h1,
   app-artifacts .page-heading h1,
-  app-dashboard .page-heading h1 {
+  app-dashboard .page-heading h1,
+  app-comparator .page-heading h1 {
     font-size: 3rem;
   }
 
@@ -201,7 +221,8 @@ app-dashboard .section-heading > p {
   app-methodology .experiment-heading,
   app-methodology .references-heading,
   app-artifacts .section-heading,
-  app-dashboard .section-heading {
+  app-dashboard .section-heading,
+  app-comparator .section-heading {
     gap: 0.8rem;
   }
 
@@ -210,7 +231,8 @@ app-dashboard .section-heading > p {
   app-methodology .experiment-heading h2,
   app-methodology .references-heading h2,
   app-artifacts .section-heading h2,
-  app-dashboard .section-heading h2 {
+  app-dashboard .section-heading h2,
+  app-comparator .section-heading h2 {
     font-size: 1.75rem;
   }
 }

@@ -1,0 +1,82 @@
+{
+  "tool": {
+    "decomposition": {
+      "Account Management Service": [
+        {
+          "id": "Account"
+        },
+        {
+          "id": "Signon"
+        },
+        {
+          "id": "Profile"
+        }
+      ],
+      "Catalog Service": [
+        {
+          "id": "Product"
+        },
+        {
+          "id": "Item"
+        },
+        {
+          "id": "Category"
+        },
+        {
+          "id": "Supplier"
+        }
+      ],
+      "Inventory Service": [
+        {
+          "id": "Inventory"
+        }
+      ],
+      "Order Management Service": [
+        {
+          "id": "Orders"
+        },
+        {
+          "id": "OrderStatus"
+        },
+        {
+          "id": "LineItem"
+        }
+      ],
+      "Banner Service": [
+        {
+          "id": "Bannerdata"
+        }
+      ],
+      "Sequence Generation Service": [
+        {
+          "id": "Sequence"
+        }
+      ],
+      "Web API Service": [
+        {
+          "id": "JpetstoreController"
+        },
+        {
+          "id": "JpetstoreActionController"
+        },
+        {
+          "id": "CargocpcController"
+        },
+        {
+          "id": "PostController"
+        },
+        {
+          "id": "Response"
+        },
+        {
+          "id": "ResponseFacade"
+        }
+      ],
+      "Shared Infrastructure Service": [
+        {
+          "id": "DataSource"
+        }
+      ]
+    }
+  }
+}

@@ -1,0 +1,86 @@
+{
+  "tool": {
+    "decomposition": {
+      "Account Service": [
+        {
+          "id": "Account"
+        },
+        {
+          "id": "AccountDAO"
+        },
+        {
+          "id": "AccountService"
+        },
+        {
+          "id": "AccountAction"
+        }
+      ],
+      "Catalog Service": [
+        {
+          "id": "Category"
+        },
+        {
+          "id": "Product"
+        },
+        {
+          "id": "Item"
+        },
+        {
+          "id": "CategoryDAO"
+        },
+        {
+          "id": "ProductDAO"
+        },
+        {
+          "id": "ItemDAO"
+        },
+        {
+          "id": "CatalogService"
+        },
+        {
+          "id": "CatalogAction"
+        }
+      ],
+      "Order Service": [
+        {
+          "id": "Order"
+        },
+        {
+          "id": "LineItem"
+        },
+        {
+          "id": "Cart"
+        },
+        {
+          "id": "CartItem"
+        },
+        {
+          "id": "OrderDAO"
+        },
+        {
+          "id": "LineItemDAO"
+        },
+        {
+          "id": "Sequence"
+        },
+        {
+          "id": "SequenceDAO"
+        },
+        {
+          "id": "OrderService"
+        },
+        {
+          "id": "OrderAction"
+        },
+        {
+          "id": "CartAction"
+        }
+      ],
+      "Shared Infrastructure Service": [
+        {
+          "id": "ResponseFacade"
+        }
+      ]
+    }
+  }
+}

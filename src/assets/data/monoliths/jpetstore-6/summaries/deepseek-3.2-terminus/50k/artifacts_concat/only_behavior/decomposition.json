@@ -1,0 +1,92 @@
+{
+  "tool": {
+    "decomposition": {
+      "Account Service": [
+        {
+          "id": "AccountService"
+        },
+        {
+          "id": "AccountAction"
+        },
+        {
+          "id": "Account"
+        },
+        {
+          "id": "Profile"
+        },
+        {
+          "id": "Signon"
+        },
+        {
+          "id": "AccountMapper"
+        }
+      ],
+      "Catalog Service": [
+        {
+          "id": "CatalogService"
+        },
+        {
+          "id": "CatalogAction"
+        },
+        {
+          "id": "Category"
+        },
+        {
+          "id": "Product"
+        },
+        {
+          "id": "Item"
+        },
+        {
+          "id": "Supplier"
+        },
+        {
+          "id": "BannerData"
+        },
+        {
+          "id": "CategoryMapper"
+        },
+        {
+          "id": "ProductMapper"
+        },
+        {
+          "id": "ItemMapper"
+        },
+        {
+          "id": "BannerMapper"
+        }
+      ],
+      "Order Service": [
+        {
+          "id": "OrderService"
+        },
+        {
+          "id": "OrderAction"
+        },
+        {
+          "id": "Order"
+        },
+        {
+          "id": "LineItem"
+        },
+        {
+          "id": "OrderMapper"
+        },
+        {
+          "id": "LineItemMapper"
+        },
+        {
+          "id": "SequenceMapper"
+        }
+      ],
+      "Shared Infrastructure Service": [
+        {
+          "id": "ResponseFacade"
+        },
+        {
+          "id": "Response"
+        }
+      ]
+    }
+  }
+}

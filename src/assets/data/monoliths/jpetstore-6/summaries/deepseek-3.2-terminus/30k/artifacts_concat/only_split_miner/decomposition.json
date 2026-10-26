@@ -1,0 +1,128 @@
+{
+  "tool": {
+    "decomposition": {
+      "Account Service": [
+        {
+          "id": "Account"
+        },
+        {
+          "id": "Signon"
+        },
+        {
+          "id": "Profile"
+        },
+        {
+          "id": "AccountMapper"
+        },
+        {
+          "id": "AccountService"
+        },
+        {
+          "id": "AccountActionBean"
+        }
+      ],
+      "Catalog Service": [
+        {
+          "id": "Product"
+        },
+        {
+          "id": "Category"
+        },
+        {
+          "id": "Item"
+        },
+        {
+          "id": "Supplier"
+        },
+        {
+          "id": "BannerData"
+        },
+        {
+          "id": "ProductMapper"
+        },
+        {
+          "id": "CategoryMapper"
+        },
+        {
+          "id": "ItemMapper"
+        },
+        {
+          "id": "CatalogService"
+        },
+        {
+          "id": "CatalogActionBean"
+        }
+      ],
+      "Inventory Service": [
+        {
+          "id": "Inventory"
+        },
+        {
+          "id": "InventoryMapper"
+        }
+      ],
+      "Order Service": [
+        {
+          "id": "Order"
+        },
+        {
+          "id": "OrderStatus"
+        },
+        {
+          "id": "LineItem"
+        },
+        {
+          "id": "Sequence"
+        },
+        {
+          "id": "OrderMapper"
+        },
+        {
+          "id": "SequenceMapper"
+        },
+        {
+          "id": "OrderService"
+        },
+        {
+          "id": "OrderActionBean"
+        }
+      ],
+      "Cart Service": [
+        {
+          "id": "Cart"
+        },
+        {
+          "id": "CartItem"
+        },
+        {
+          "id": "CartActionBean"
+        }
+      ],
+      "Web Service": [
+        {
+          "id": "AbstractActionBean"
+        },
+        {
+          "id": "JpetstoreController"
+        },
+        {
+          "id": "CargocpcController"
+        },
+        {
+          "id": "ErrorHandler"
+        },
+        {
+          "id": "RedirectHandler"
+        }
+      ],
+      "Database Service": [
+        {
+          "id": "DataSource"
+        },
+        {
+          "id": "DatabaseInitializer"
+        }
+      ]
+    }
+  }
+}

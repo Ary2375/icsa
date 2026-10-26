@@ -1,0 +1,86 @@
+{
+  "tool": {
+    "decomposition": {
+      "Web Storefront Service": [
+        {
+          "id": "AbstractActionBean"
+        },
+        {
+          "id": "AccountActionBean"
+        },
+        {
+          "id": "CartActionBean"
+        },
+        {
+          "id": "CatalogActionBean"
+        },
+        {
+          "id": "OrderActionBean"
+        },
+        {
+          "id": "Cart"
+        },
+        {
+          "id": "CartItem"
+        }
+      ],
+      "Account Management Service": [
+        {
+          "id": "AccountService"
+        },
+        {
+          "id": "AccountMapper"
+        },
+        {
+          "id": "Account"
+        }
+      ],
+      "Product Catalog Service": [
+        {
+          "id": "CatalogService"
+        },
+        {
+          "id": "CategoryMapper"
+        },
+        {
+          "id": "ProductMapper"
+        },
+        {
+          "id": "ItemMapper"
+        },
+        {
+          "id": "Category"
+        },
+        {
+          "id": "Product"
+        },
+        {
+          "id": "Item"
+        }
+      ],
+      "Order Management Service": [
+        {
+          "id": "OrderService"
+        },
+        {
+          "id": "OrderMapper"
+        },
+        {
+          "id": "LineItemMapper"
+        },
+        {
+          "id": "SequenceMapper"
+        },
+        {
+          "id": "Order"
+        },
+        {
+          "id": "LineItem"
+        },
+        {
+          "id": "Sequence"
+        }
+      ]
+    }
+  }
+}

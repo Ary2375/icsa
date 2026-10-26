@@ -1,0 +1,140 @@
+{
+  "tool": {
+    "decomposition": {
+      "Account Service": [
+        {
+          "id": "Account"
+        },
+        {
+          "id": "AccountDao"
+        },
+        {
+          "id": "AccountAction"
+        },
+        {
+          "id": "Signon"
+        },
+        {
+          "id": "Profile"
+        },
+        {
+          "id": "SignonDao"
+        },
+        {
+          "id": "ProfileDao"
+        },
+        {
+          "id": "AccountService"
+        }
+      ],
+      "Catalog Service": [
+        {
+          "id": "Category"
+        },
+        {
+          "id": "CategoryDao"
+        },
+        {
+          "id": "Product"
+        },
+        {
+          "id": "ProductDao"
+        },
+        {
+          "id": "Item"
+        },
+        {
+          "id": "ItemDao"
+        },
+        {
+          "id": "Inventory"
+        },
+        {
+          "id": "InventoryDao"
+        },
+        {
+          "id": "Supplier"
+        },
+        {
+          "id": "SupplierDao"
+        },
+        {
+          "id": "BannerData"
+        },
+        {
+          "id": "BannerDataDao"
+        },
+        {
+          "id": "CatalogAction"
+        },
+        {
+          "id": "CatalogService"
+        }
+      ],
+      "Order Service": [
+        {
+          "id": "Order"
+        },
+        {
+          "id": "OrderDao"
+        },
+        {
+          "id": "OrderStatus"
+        },
+        {
+          "id": "OrderStatusDao"
+        },
+        {
+          "id": "LineItem"
+        },
+        {
+          "id": "LineItemDao"
+        },
+        {
+          "id": "Cart"
+        },
+        {
+          "id": "CartItem"
+        },
+        {
+          "id": "CartAction"
+        },
+        {
+          "id": "OrderAction"
+        },
+        {
+          "id": "Sequence"
+        },
+        {
+          "id": "SequenceDao"
+        },
+        {
+          "id": "OrderService"
+        }
+      ],
+      "Infrastructure Service": [
+        {
+          "id": "Response"
+        },
+        {
+          "id": "ResponseFacade"
+        },
+        {
+          "id": "Datasource"
+        },
+        {
+          "id": "PetStoreFacade"
+        },
+        {
+          "id": "PetStoreImpl"
+        },
+        {
+          "id": "BaseAction"
+        },
+        {
+          "id": "CargoCPCAction"
+        }
+      ]
+    }
+  }
+}
