@@ -446,6 +446,27 @@ describe('Comparator page', () => {
       expect(reference.services[2]).toMatchObject({ label: 'Removed', counterparts: [] });
     });
 
+    it('relates each service only to the services it shares classes with', () => {
+      publish({
+        data: {
+          '30k_ai': [
+            { name: 'X', classes: ['A', 'B', 'C'] },
+            { name: 'Y', classes: ['D'] },
+          ],
+          '30k_ai_dfg': [
+            { name: 'P', classes: ['A', 'B'] },
+            { name: 'Q', classes: ['C', 'D'] },
+          ],
+        },
+      });
+      const [reference, selected] = component.columns();
+      expect(reference.services.map((service) => service.counterparts)).toEqual([
+        ['P', 'Q'],
+        ['Q'],
+      ]);
+      expect(selected.services.map((service) => service.counterparts)).toEqual([['X'], ['X', 'Y']]);
+    });
+
     it('lists the classes of each service in alphabetical order', () => {
       publish({
         data: {

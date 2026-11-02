@@ -113,8 +113,13 @@ export function serviceEvolution(reference: Partition[], selected: Partition[]) 
     const sameSet =
       referenceClasses.size === selectedClasses.size &&
       [...referenceClasses].every((name) => selectedClasses.has(name));
+    const flows = edges.filter(
+      (edge) =>
+        origins.some((service) => service.index === edge.source) &&
+        destinations.some((service) => service.index === edge.target),
+    );
     const kind: ServiceEvolutionKind =
-      ambiguousClasses.length || empty
+      (ambiguousClasses.length > 0 && flows.length === 0) || empty
         ? 'uncertain'
         : !origins.length
           ? 'new'
@@ -140,11 +145,7 @@ export function serviceEvolution(reference: Partition[], selected: Partition[]) 
         removed,
         ambiguousClasses,
         empty,
-        flows: edges.filter(
-          (edge) =>
-            origins.some((service) => service.index === edge.source) &&
-            destinations.some((service) => service.index === edge.target),
-        ),
+        flows,
       },
     ];
   });

@@ -145,10 +145,20 @@ export class Comparator implements OnInit {
       const roles = new Map<number, { kind: ServiceEvolutionKind; counterparts: string[] }>();
       for (const event of evolution.events) {
         const own = key === 'reference' ? event.origins : event.destinations;
-        const counterparts = (key === 'reference' ? event.destinations : event.origins).map(
-          (service) => service.name,
-        );
-        for (const service of own) roles.set(service.index, { kind: event.kind, counterparts });
+        const others = key === 'reference' ? event.destinations : event.origins;
+        // A service is related only to the services it actually shares classes with.
+        for (const service of own) {
+          const counterparts = others
+            .filter((other) =>
+              event.flows.some((flow) =>
+                key === 'reference'
+                  ? flow.source === service.index && flow.target === other.index
+                  : flow.target === service.index && flow.source === other.index,
+              ),
+            )
+            .map((other) => other.name);
+          roles.set(service.index, { kind: event.kind, counterparts });
+        }
       }
       const count = (list: Partition[]) => {
         const map = new Map<string, number[]>();

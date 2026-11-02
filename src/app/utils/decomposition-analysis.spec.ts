@@ -133,6 +133,31 @@ describe('directional microservice evolution', () => {
     ).toBe('uncertain');
   });
 
+  it('keeps reliable service relationships when their group also contains repeated classes', () => {
+    const result = serviceEvolution(
+      [service('Owner', 'Owner', 'OwnerController'), service('Pet', 'Pet', 'PetController')],
+      [
+        service(
+          'Customer and Pet',
+          'Owner',
+          'OwnerController',
+          'Pet',
+          'PetController',
+          'BaseEntity',
+        ),
+        service('Veterinary', 'Vet', 'BaseEntity'),
+      ],
+    );
+
+    expect(result.events).toHaveLength(2);
+    expect(result.events[0]).toMatchObject({
+      kind: 'merged',
+      ambiguousClasses: ['BaseEntity'],
+      flows: [{ classes: ['Owner', 'OwnerController'] }, { classes: ['Pet', 'PetController'] }],
+    });
+    expect(result.events[1].kind).toBe('uncertain');
+  });
+
   it('handles empty decompositions and empty services without inventing matches', () => {
     expect(serviceEvolution([], []).events).toEqual([]);
     expect(serviceEvolution([], [service('Empty')]).events[0].kind).toBe('uncertain');
