@@ -76,6 +76,9 @@
           "id": "AckermannIterative"
         },
         {
+          "id": "Calculator"
+        },
+        {
           "id": "FibServlet"
         },
         {
@@ -85,35 +88,30 @@
           "id": "FibonacciIterative"
         },
         {
-          "id": "MathServlet"
-        },
-        {
-          "id": "Calculator"
-        },
-        {
-          "id": "TailRecursive"
-        },
-        {
           "id": "FunctionalField"
         },
         {
-          "id": "CartesianProduct"
-        }
-      ],
-      "Expense Calculation Service": [
-        {
-          "id": "AlcoholCalculator"
+          "id": "MathServlet"
         },
         {
-          "id": "AlcoholResult"
-        },
-        {
-          "id": "DinnerPrices"
+          "id": "TailRecursive"
         }
       ],
       "Data Persistence Service": [
         {
+          "id": "DbServlet"
+        },
+        {
+          "id": "EmptyDataSource"
+        },
+        {
           "id": "IPersistenceLayer"
+        },
+        {
+          "id": "NotImplementedException"
+        },
+        {
+          "id": "ParameterObject"
         },
         {
           "id": "PersistenceLayer"
@@ -125,34 +123,13 @@
           "id": "SqlRuntimeException"
         },
         {
-          "id": "ParameterObject"
-        },
-        {
-          "id": "EmptyDataSource"
-        },
-        {
-          "id": "NotImplementedException"
-        },
-        {
-          "id": "DbServlet"
-        },
-        {
           "id": "WebAppListener"
-        },
-        {
-          "id": "User"
-        },
-        {
-          "id": "Book"
-        },
-        {
-          "id": "Borrower"
-        },
-        {
-          "id": "Loan"
         }
       ],
       "Shared Utilities Service": [
+        {
+          "id": "AssertionException"
+        },
         {
           "id": "CheckUtils"
         },
@@ -161,9 +138,20 @@
         },
         {
           "id": "StringUtils"
+        }
+      ],
+      "Ancillary Computation Service": [
+        {
+          "id": "CartesianProduct"
         },
         {
-          "id": "AssertionException"
+          "id": "AlcoholCalculator"
+        },
+        {
+          "id": "AlcoholResult"
+        },
+        {
+          "id": "DinnerPrices"
         }
       ]
     }

@@ -1,137 +1,130 @@
 {
   "tool": {
     "decomposition": {
-      "Account Service": [
+      "Authentication Service": [
         {
-          "id": "Account"
+          "id": "POST /demo/login"
         },
         {
-          "id": "Profile"
+          "id": "POST /demo/register"
         },
         {
-          "id": "Signon"
+          "id": "SELECT auth.user"
         },
         {
-          "id": "AccountService"
+          "id": "INSERT auth.user"
         },
         {
-          "id": "AccountMapper"
+          "id": "UPDATE auth.user"
         },
         {
-          "id": "ProfileMapper"
-        },
-        {
-          "id": "SignonMapper"
-        },
-        {
-          "id": "AccountAction"
+          "id": "CREATE table auth.USER"
         }
       ],
-      "Catalog Service": [
+      "Library Management Service": [
         {
-          "id": "Category"
+          "id": "SELECT library.book"
         },
         {
-          "id": "Product"
+          "id": "POST /demo/registerbook"
         },
         {
-          "id": "Item"
+          "id": "GET /demo/listavailable"
         },
         {
-          "id": "Inventory"
+          "id": "GET /demo/borrower"
         },
         {
-          "id": "Supplier"
+          "id": "INSERT library.book"
         },
         {
-          "id": "BannerData"
+          "id": "INSERT library.borrower"
         },
         {
-          "id": "CatalogService"
+          "id": "POST /demo/lend"
         },
         {
-          "id": "CategoryMapper"
+          "id": "POST /demo/registerborrower"
         },
         {
-          "id": "ProductMapper"
+          "id": "SELECT library.borrower"
         },
         {
-          "id": "ItemMapper"
+          "id": "INSERT library.loan"
         },
         {
-          "id": "InventoryMapper"
+          "id": "CREATE table library.LOAN"
         },
         {
-          "id": "SupplierMapper"
+          "id": "CREATE table library.PERSON"
         },
         {
-          "id": "BannerDataMapper"
+          "id": "CREATE table library.BOOK"
         },
         {
-          "id": "CatalogAction"
+          "id": "CREATE table library.BORROWER"
+        },
+        {
+          "id": "DROP table library.person"
         }
       ],
-      "Order Service": [
+      "Training Service": [
         {
-          "id": "Order"
+          "id": "CALL training.SCHEMA"
         },
         {
-          "id": "OrderStatus"
+          "id": "CREATE INDEX training"
         },
         {
-          "id": "LineItem"
+          "id": "CREATE training"
         },
         {
-          "id": "Sequence"
+          "id": "SELECT training"
         },
         {
-          "id": "OrderService"
+          "id": "DROP training"
         },
         {
-          "id": "OrderMapper"
-        },
-        {
-          "id": "OrderStatusMapper"
-        },
-        {
-          "id": "LineItemMapper"
-        },
-        {
-          "id": "SequenceMapper"
-        },
-        {
-          "id": "OrderAction"
+          "id": "training"
         }
       ],
-      "Cart Service": [
+      "Migration Service": [
         {
-          "id": "Cart"
+          "id": "GET /demo/flyway"
         },
         {
-          "id": "CartItem"
+          "id": "SELECT \"ADMINISTRATIVE\".\"flyway_schema_history\""
         },
         {
-          "id": "CartAction"
+          "id": "CREATE TABLE \"ADMINISTRATIVE\".\"flyway_schema_history\""
+        },
+        {
+          "id": "INSERT \"ADMINISTRATIVE\".\"flyway_schema_history\""
+        },
+        {
+          "id": "SELECT INFORMATION_SCHEMA.SETTINGS"
+        },
+        {
+          "id": "SELECT INFORMATION_SCHEMA.SCHEMATA"
         }
       ],
-      "Shared Infrastructure Service": [
+      "Math Service": [
         {
-          "id": "AbstractAction"
+          "id": "POST /demo/math"
+        }
+      ],
+      "Web Common Service": [
+        {
+          "id": "GET /demo/*"
         },
         {
-          "id": "DatabaseInitializer"
+          "id": "GET"
         },
         {
-          "id": "JpetstoreController"
+          "id": "Response.sendRedirect"
         },
         {
-          "id": "CargocpcController"
-        },
-        {
-          "id": "Response"
-        },
-        {
-          "id": "ResponseFacade"
+          "id": "Response.sendError"
         }
       ]
     }

@@ -1,79 +1,129 @@
 {
   "tool": {
     "decomposition": {
-      "Account Management Service": [
+      "User Management Service": [
         {
-          "id": "AccountDAO"
+          "id": "User"
         },
         {
-          "id": "SignonDAO"
+          "id": "UserRepository"
         },
         {
-          "id": "ProfileDAO"
+          "id": "UserService"
+        },
+        {
+          "id": "UserController"
+        },
+        {
+          "id": "SecurityConfig"
         }
       ],
-      "Catalog Management Service": [
+      "Borrower Management Service": [
         {
-          "id": "ProductDAO"
+          "id": "Person"
         },
         {
-          "id": "CategoryDAO"
+          "id": "Borrower"
         },
         {
-          "id": "ItemDAO"
+          "id": "PersonRepository"
         },
         {
-          "id": "InventoryDAO"
+          "id": "BorrowerRepository"
         },
         {
-          "id": "SupplierDAO"
+          "id": "BorrowerService"
         },
         {
-          "id": "BannerDataDAO"
+          "id": "BorrowerController"
         }
       ],
-      "Order Management Service": [
+      "Book Management Service": [
         {
-          "id": "OrdersDAO"
+          "id": "Book"
         },
         {
-          "id": "OrderStatusDAO"
+          "id": "BookRepository"
         },
         {
-          "id": "LineItemDAO"
+          "id": "BookService"
+        },
+        {
+          "id": "BookController"
         }
       ],
-      "Sequence Generation Service": [
+      "Loan Management Service": [
         {
-          "id": "SequenceDAO"
+          "id": "Loan"
+        },
+        {
+          "id": "LoanRepository"
+        },
+        {
+          "id": "LoanService"
+        },
+        {
+          "id": "LoanController"
         }
       ],
-      "Web API Service": [
+      "Training Service": [
         {
-          "id": "JPetStoreController"
+          "id": "TrainingService"
         },
         {
-          "id": "CargoCPCController"
+          "id": "TrainingController"
         },
         {
-          "id": "ResponseHandler"
+          "id": "MathService"
         },
         {
-          "id": "HttpGetHandler"
-        },
-        {
-          "id": "HttpPostHandler"
+          "id": "MathController"
         }
       ],
-      "Shared Infrastructure Service": [
+      "Administrative Service": [
+        {
+          "id": "FlywayService"
+        },
+        {
+          "id": "FlywayController"
+        },
+        {
+          "id": "FlywayConfig"
+        },
         {
           "id": "DataSourceConfig"
         },
         {
-          "id": "IndexInitializer"
+          "id": "SchemaService"
+        }
+      ],
+      "Shared Infrastructure Service": [
+        {
+          "id": "DemoApplication"
         },
         {
-          "id": "GenericDAO"
+          "id": "TenantContext"
+        },
+        {
+          "id": "TenantIdentifierResolver"
+        },
+        {
+          "id": "MultiTenantConnectionProvider"
+        },
+        {
+          "id": "SchemaPerTenantConnectionProvider"
+        },
+        {
+          "id": "WebConfig"
+        },
+        {
+          "id": "JpaConfig"
+        },
+        {
+          "id": "MultiTenancyConfig"
+        },
+        {
+          "id": "DemoController"
         }
       ]
     }

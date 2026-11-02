@@ -14,6 +14,7 @@ export const MONOLITH_FOLDERS: Record<string, string> = {
 export const LLM_FOLDERS: Record<string, string> = {
   'LLM: Deepseek 32 Terminus': 'deepseek-3.2-terminus',
   'LLM: GLM 4.6': 'glm-4.6',
+  'LLM: Glm 46': 'glm-4.6',
 };
 
 // Folder of each state-of-the-art method under summaries/. MONO2MICRO is stored by the number of

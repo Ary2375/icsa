@@ -1,81 +1,132 @@
 {
   "tool": {
     "decomposition": {
-      "Account Management Service": [
+      "Authentication Service": [
         {
-          "id": "Account"
+          "id": "POST /demo/register"
         },
         {
-          "id": "AccountMapper"
+          "id": "POST /demo/login"
         },
         {
-          "id": "AccountService"
+          "id": "SELECT auth.user"
         },
         {
-          "id": "AccountAction"
+          "id": "INSERT auth.user"
+        },
+        {
+          "id": "UPDATE auth.user"
+        },
+        {
+          "id": "CREATE table auth.USER"
         }
       ],
-      "Product Catalog Service": [
+      "Book Catalog Service": [
         {
-          "id": "Category"
+          "id": "POST /demo/registerbook"
         },
         {
-          "id": "CategoryMapper"
+          "id": "GET /demo/listavailable"
         },
         {
-          "id": "Product"
+          "id": "SELECT library.book"
         },
         {
-          "id": "ProductMapper"
+          "id": "INSERT library.book"
         },
         {
-          "id": "Item"
-        },
-        {
-          "id": "ItemMapper"
-        },
-        {
-          "id": "CatalogService"
-        },
-        {
-          "id": "CatalogAction"
+          "id": "CREATE table library.BOOK"
         }
       ],
-      "Order Management Service": [
+      "Borrower Management Service": [
         {
-          "id": "Order"
+          "id": "POST /demo/registerborrower"
         },
         {
-          "id": "OrderMapper"
+          "id": "GET /demo/borrower"
         },
         {
-          "id": "LineItem"
+          "id": "SELECT library.borrower"
         },
         {
-          "id": "Sequence"
+          "id": "INSERT library.borrower"
         },
         {
-          "id": "SequenceMapper"
+          "id": "CREATE table library.PERSON"
         },
         {
-          "id": "OrderService"
+          "id": "CREATE table library.BORROWER"
         },
         {
-          "id": "OrderAction"
-        },
-        {
-          "id": "Cart"
-        },
-        {
-          "id": "CartItem"
-        },
-        {
-          "id": "CartAction"
+          "id": "DROP table library.person"
         }
       ],
-      "Shared Infrastructure Service": [
+      "Lending Service": [
         {
-          "id": "AbstractAction"
+          "id": "POST /demo/lend"
+        },
+        {
+          "id": "INSERT library.loan"
+        },
+        {
+          "id": "CREATE table library.LOAN"
+        }
+      ],
+      "Database Migration Service": [
+        {
+          "id": "GET /demo/flyway"
+        },
+        {
+          "id": "SELECT INFORMATION_SCHEMA.SCHEMATA"
+        },
+        {
+          "id": "SELECT INFORMATION_SCHEMA.SETTINGS"
+        },
+        {
+          "id": "SELECT \"ADMINISTRATIVE\".\"flyway_schema_history\""
+        },
+        {
+          "id": "CREATE TABLE \"ADMINISTRATIVE\".\"flyway_schema_history\""
+        },
+        {
+          "id": "INSERT \"ADMINISTRATIVE\".\"flyway_schema_history\""
+        }
+      ],
+      "Training Service": [
+        {
+          "id": "SELECT training"
+        },
+        {
+          "id": "CREATE training"
+        },
+        {
+          "id": "CREATE INDEX training"
+        },
+        {
+          "id": "CALL training.SCHEMA"
+        },
+        {
+          "id": "DROP training"
+        },
+        {
+          "id": "training"
+        }
+      ],
+      "Web Infrastructure Service": [
+        {
+          "id": "GET"
+        },
+        {
+          "id": "GET /demo/*"
+        },
+        {
+          "id": "POST /demo/math"
+        },
+        {
+          "id": "Response.sendRedirect"
+        },
+        {
+          "id": "Response.sendError"
         }
       ]
     }

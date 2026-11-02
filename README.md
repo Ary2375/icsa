@@ -48,6 +48,8 @@ Observed-entity coverage is read from `# Obs. Ents. (%)`; it is not asserted to 
 
 Edit `src/assets/data/results.json`. The dashboard reads `llm_comparison` for LLM strategy results and `variant_comparison` for literature/state-of-the-art results. The latter includes DATACENTRIC, GROUND_TRUTH, HyDec, LOG2MS, and MONO2MICRO; the `business` and `natural` strategies are shown as separate MONO2MICRO configurations. LLM rows repeated in `variant_comparison` are ignored by the dashboard.
 
+To update the data, paste the export of the analysis into `results.json` as it is: no manual cleanup is needed. When the site loads it, `src/app/services/results/results-schema.ts` filters it automatically. At the top of that file, `INCLUDED_LLMS` and `INCLUDED_LITERATURE` list the models and state-of-the-art methods shown, and only LLM strategies shaped like `<chunk>_<ai|concat>[_<input>]` (e.g. `30k_ai_dfg`) are kept. Anything else, such as Gemini, GPT-5, the `Hierarchical` runs, or `raw_data`, is ignored. To show a new model or tool, add its exact `Tool` name to the matching list (an LLM also needs its folder in `decomposition-source.ts` for the Comparator). To show a new column, add one line to `FIELDS` in the same file and declare the field in `result.model.ts`. An invalid value is reported with its row and column.
+
 The dashboard combines both sources in the same views. Literature tools are reference points; LLM strategy keys identify baseline and augmented inputs:
 
 - `80k_ai`: baseline input

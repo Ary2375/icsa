@@ -135,9 +135,6 @@
         },
         {
           "id": "SqlRuntimeException"
-        },
-        {
-          "id": "WebAppListener"
         }
       ],
       "Shared Infrastructure Service": [
@@ -152,6 +149,9 @@
         },
         {
           "id": "StringUtils"
+        },
+        {
+          "id": "WebAppListener"
         }
       ]
     }

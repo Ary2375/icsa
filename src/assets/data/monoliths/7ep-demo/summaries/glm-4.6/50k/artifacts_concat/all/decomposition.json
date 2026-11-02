@@ -70,19 +70,19 @@
           "id": "MathServlet"
         },
         {
-          "id": "FibServlet"
-        },
-        {
-          "id": "AckServlet"
-        },
-        {
           "id": "Calculator"
+        },
+        {
+          "id": "FibServlet"
         },
         {
           "id": "Fibonacci"
         },
         {
           "id": "FibonacciIterative"
+        },
+        {
+          "id": "AckServlet"
         },
         {
           "id": "Ackermann"
@@ -102,13 +102,13 @@
       ],
       "Persistence Service": [
         {
-          "id": "IPersistenceLayer"
+          "id": "DbServlet"
         },
         {
           "id": "PersistenceLayer"
         },
         {
-          "id": "DbServlet"
+          "id": "IPersistenceLayer"
         },
         {
           "id": "SqlData"
@@ -124,22 +124,6 @@
         },
         {
           "id": "NotImplementedException"
-        }
-      ],
-      "Expense Calculation Service": [
-        {
-          "id": "AlcoholCalculator"
-        },
-        {
-          "id": "AlcoholResult"
-        },
-        {
-          "id": "DinnerPrices"
-        }
-      ],
-      "Web Infrastructure Service": [
-        {
-          "id": "ServletUtils"
         },
         {
           "id": "WebAppListener"
@@ -153,7 +137,21 @@
           "id": "CheckUtils"
         },
         {
+          "id": "ServletUtils"
+        },
+        {
           "id": "AssertionException"
+        }
+      ],
+      "Expense Calculation Service": [
+        {
+          "id": "AlcoholCalculator"
+        },
+        {
+          "id": "AlcoholResult"
+        },
+        {
+          "id": "DinnerPrices"
         }
       ]
     }

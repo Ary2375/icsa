@@ -52,10 +52,21 @@
           "id": "MathServlet"
         }
       ],
-      "Shared Infrastructure Service": [
+      "Data Management Service": [
         {
           "id": "DbServlet"
         },
+        {
+          "id": "PersistenceLayer"
+        },
+        {
+          "id": "SqlData"
+        },
+        {
+          "id": "ParameterObject"
+        }
+      ],
+      "Shared Utilities Service": [
         {
           "id": "StringUtils"
         },
@@ -63,16 +74,7 @@
           "id": "CheckUtils"
         },
         {
-          "id": "PersistenceLayer"
-        },
-        {
           "id": "ServletUtils"
-        },
-        {
-          "id": "SqlData"
-        },
-        {
-          "id": "ParameterObject"
         }
       ]
     }

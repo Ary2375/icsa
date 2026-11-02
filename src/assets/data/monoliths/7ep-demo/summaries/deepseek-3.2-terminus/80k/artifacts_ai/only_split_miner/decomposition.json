@@ -1,136 +1,132 @@
 {
   "tool": {
     "decomposition": {
-      "Account Service": [
+      "Authentication Service": [
         {
-          "id": "Account"
+          "id": "POST /demo/register"
         },
         {
-          "id": "AccountMapper"
+          "id": "POST /demo/login"
         },
         {
-          "id": "AccountService"
+          "id": "SELECT auth.user"
         },
         {
-          "id": "AccountController"
+          "id": "INSERT auth.user"
         },
         {
-          "id": "Signon"
+          "id": "UPDATE auth.user"
         },
         {
-          "id": "SignonMapper"
-        },
-        {
-          "id": "Profile"
-        },
-        {
-          "id": "ProfileMapper"
+          "id": "CREATE table auth.USER"
         }
       ],
-      "Catalog Service": [
+      "Borrower Management Service": [
         {
-          "id": "Product"
+          "id": "POST /demo/registerborrower"
         },
         {
-          "id": "ProductMapper"
+          "id": "GET /demo/borrower"
         },
         {
-          "id": "CatalogService"
+          "id": "SELECT library.borrower"
         },
         {
-          "id": "CatalogController"
+          "id": "INSERT library.borrower"
         },
         {
-          "id": "Category"
+          "id": "CREATE table library.PERSON"
         },
         {
-          "id": "CategoryMapper"
+          "id": "CREATE table library.BORROWER"
         },
         {
-          "id": "Item"
-        },
-        {
-          "id": "ItemMapper"
-        },
-        {
-          "id": "Supplier"
-        },
-        {
-          "id": "SupplierMapper"
-        },
-        {
-          "id": "BannerData"
-        },
-        {
-          "id": "BannerDataMapper"
+          "id": "DROP table library.person"
         }
       ],
-      "Order Service": [
+      "Book Catalog Service": [
         {
-          "id": "Order"
+          "id": "POST /demo/registerbook"
         },
         {
-          "id": "OrderMapper"
+          "id": "GET /demo/listavailable"
         },
         {
-          "id": "OrderService"
+          "id": "SELECT library.book"
         },
         {
-          "id": "OrderController"
+          "id": "INSERT library.book"
         },
         {
-          "id": "OrderStatus"
-        },
-        {
-          "id": "OrderStatusMapper"
-        },
-        {
-          "id": "LineItem"
-        },
-        {
-          "id": "LineItemMapper"
+          "id": "CREATE table library.BOOK"
         }
       ],
-      "Inventory Service": [
+      "Lending Service": [
         {
-          "id": "Inventory"
+          "id": "POST /demo/lend"
         },
         {
-          "id": "InventoryMapper"
+          "id": "INSERT library.loan"
         },
         {
-          "id": "InventoryService"
+          "id": "CREATE table library.LOAN"
         }
       ],
-      "Sequence Service": [
+      "Training and Demo Service": [
         {
-          "id": "Sequence"
+          "id": "POST /demo/math"
         },
         {
-          "id": "SequenceMapper"
+          "id": "SELECT training"
         },
         {
-          "id": "SequenceService"
+          "id": "CREATE INDEX training"
+        },
+        {
+          "id": "CALL training.SCHEMA"
+        },
+        {
+          "id": "CREATE training"
+        },
+        {
+          "id": "DROP training"
+        },
+        {
+          "id": "training"
         }
       ],
-      "Web and Shared Infrastructure Service": [
+      "Database Migration Service": [
         {
-          "id": "ActionServlet"
+          "id": "GET /demo/flyway"
         },
         {
-          "id": "JPetStoreController"
+          "id": "SELECT INFORMATION_SCHEMA.SCHEMATA"
         },
         {
-          "id": "CargoController"
+          "id": "SELECT \"ADMINISTRATIVE\".\"flyway_schema_history\""
         },
         {
-          "id": "ErrorHandler"
+          "id": "CREATE TABLE \"ADMINISTRATIVE\".\"flyway_schema_history\""
         },
         {
-          "id": "RedirectHandler"
+          "id": "SELECT INFORMATION_SCHEMA.SETTINGS"
         },
         {
-          "id": "DataSource"
+          "id": "INSERT \"ADMINISTRATIVE\".\"flyway_schema_history\""
+        }
+      ],
+      "API Gateway and Error Handling Service": [
+        {
+          "id": "GET /demo/*"
+        },
+        {
+          "id": "GET"
+        },
+        {
+          "id": "Response.sendRedirect"
+        },
+        {
+          "id": "Response.sendError"
         }
       ]
     }

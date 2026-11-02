@@ -6,13 +6,16 @@
           "id": "LoginServlet"
         },
         {
-          "id": "LoginUtils"
-        },
-        {
           "id": "RegisterServlet"
         },
         {
+          "id": "LoginUtils"
+        },
+        {
           "id": "RegistrationUtils"
+        },
+        {
+          "id": "User"
         },
         {
           "id": "PasswordResult"
@@ -25,9 +28,6 @@
         },
         {
           "id": "RegistrationStatusEnums"
-        },
-        {
-          "id": "User"
         }
       ],
       "Library Service": [
@@ -59,10 +59,10 @@
           "id": "Borrower"
         },
         {
-          "id": "LibraryActionResults"
+          "id": "Loan"
         },
         {
-          "id": "Loan"
+          "id": "LibraryActionResults"
         }
       ],
       "Mathematics Service": [
@@ -91,16 +91,28 @@
           "id": "AckermannIterative"
         },
         {
-          "id": "FunctionalField"
-        },
-        {
           "id": "TailRecursive"
         },
         {
+          "id": "FunctionalField"
+        },
+        {
           "id": "CartesianProduct"
+        },
+        {
+          "id": "AlcoholCalculator"
+        },
+        {
+          "id": "AlcoholResult"
+        },
+        {
+          "id": "DinnerPrices"
         }
       ],
       "Persistence Service": [
+        {
+          "id": "DbServlet"
+        },
         {
           "id": "IPersistenceLayer"
         },
@@ -114,16 +126,13 @@
           "id": "ParameterObject"
         },
         {
+          "id": "SqlRuntimeException"
+        },
+        {
           "id": "EmptyDataSource"
         },
         {
           "id": "NotImplementedException"
-        },
-        {
-          "id": "SqlRuntimeException"
-        },
-        {
-          "id": "DbServlet"
         }
       ],
       "Web Infrastructure Service": [
@@ -143,17 +152,6 @@
         },
         {
           "id": "AssertionException"
-        }
-      ],
-      "Expense Calculation Service": [
-        {
-          "id": "AlcoholCalculator"
-        },
-        {
-          "id": "AlcoholResult"
-        },
-        {
-          "id": "DinnerPrices"
         }
       ]
     }

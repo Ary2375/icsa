@@ -13,9 +13,6 @@
         },
         {
           "id": "RegistrationUtils"
-        },
-        {
-          "id": "User"
         }
       ],
       "Library Management Service": [
@@ -42,9 +39,6 @@
         },
         {
           "id": "Borrower"
-        },
-        {
-          "id": "Loan"
         }
       ],
       "Math Service": [
@@ -52,21 +46,10 @@
           "id": "MathServlet"
         }
       ],
-      "Database Administration Service": [
+      "Shared Infrastructure Service": [
         {
           "id": "DbServlet"
         },
-        {
-          "id": "PersistenceLayer"
-        },
-        {
-          "id": "SqlData"
-        },
-        {
-          "id": "ParameterObject"
-        }
-      ],
-      "Shared Infrastructure Service": [
         {
           "id": "StringUtils"
         },
@@ -74,7 +57,16 @@
           "id": "CheckUtils"
         },
         {
+          "id": "PersistenceLayer"
+        },
+        {
           "id": "ServletUtils"
+        },
+        {
+          "id": "SqlData"
+        },
+        {
+          "id": "ParameterObject"
         }
       ]
     }

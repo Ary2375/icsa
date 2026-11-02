@@ -1,7 +1,7 @@
 {
   "tool": {
     "decomposition": {
-      "Authentication and Registration Service": [
+      "Authentication Service": [
         {
           "id": "LoginServlet"
         },
@@ -45,9 +45,6 @@
         },
         {
           "id": "Loan"
-        },
-        {
-          "id": "Person"
         }
       ],
       "Math Service": [
@@ -55,7 +52,7 @@
           "id": "MathServlet"
         }
       ],
-      "Database and Persistence Service": [
+      "Shared Infrastructure Service": [
         {
           "id": "DbServlet"
         },
@@ -67,9 +64,7 @@
         },
         {
           "id": "ParameterObject"
-        }
-      ],
-      "Shared Utilities Service": [
+        },
         {
           "id": "StringUtils"
         },

@@ -1,83 +1,50 @@
 {
   "tool": {
     "decomposition": {
-      "Account Service": [
+      "Web API Service": [
         {
-          "id": "Account"
+          "id": "DemoApplication"
         },
         {
-          "id": "Profile"
-        },
-        {
-          "id": "Signon"
-        },
-        {
-          "id": "Sequence"
+          "id": "DemoController"
         }
       ],
-      "Catalog Service": [
+      "Authentication Service": [
         {
-          "id": "Product"
+          "id": "User"
         },
         {
-          "id": "Item"
-        },
-        {
-          "id": "Category"
-        },
-        {
-          "id": "Inventory"
-        },
-        {
-          "id": "Supplier"
-        },
-        {
-          "id": "BannerData"
+          "id": "UserRepository"
         }
       ],
-      "Order Service": [
+      "Borrower Management Service": [
         {
-          "id": "Order"
+          "id": "Person"
         },
         {
-          "id": "OrderStatus"
+          "id": "PersonRepository"
         },
         {
-          "id": "LineItem"
+          "id": "Borrower"
+        },
+        {
+          "id": "BorrowerRepository"
         }
       ],
-      "Web/API Service": [
+      "Book Management Service": [
         {
-          "id": "JpetstoreController"
+          "id": "Book"
         },
         {
-          "id": "JpetstoreActionController"
-        },
-        {
-          "id": "CargocpcController"
-        },
-        {
-          "id": "PostHandler"
-        },
-        {
-          "id": "GetHandler"
-        },
-        {
-          "id": "ErrorHandler"
-        },
-        {
-          "id": "RedirectHandler"
+          "id": "BookRepository"
         }
       ],
-      "Infrastructure Service": [
+      "Lending Service": [
         {
-          "id": "DataSource"
+          "id": "Loan"
         },
         {
-          "id": "SchemaIndex"
-        },
-        {
-          "id": "GenericSelect"
+          "id": "LoanRepository"
         }
       ]
     }

@@ -30,7 +30,7 @@
           "id": "Loan"
         }
       ],
-      "User Management Service": [
+      "Authentication Service": [
         {
           "id": "LoginServlet"
         },
@@ -52,10 +52,7 @@
           "id": "MathServlet"
         }
       ],
-      "Database and Infrastructure Service": [
-        {
-          "id": "DbServlet"
-        },
+      "Persistence Service": [
         {
           "id": "PersistenceLayer"
         },
@@ -64,9 +61,12 @@
         },
         {
           "id": "ParameterObject"
+        },
+        {
+          "id": "DbServlet"
         }
       ],
-      "Shared Utilities Service": [
+      "Shared Utility Service": [
         {
           "id": "StringUtils"
         },

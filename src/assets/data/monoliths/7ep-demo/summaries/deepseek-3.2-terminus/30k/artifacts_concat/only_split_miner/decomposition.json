@@ -1,86 +1,123 @@
 {
   "tool": {
     "decomposition": {
-      "Account Management Service": [
+      "Authentication Service": [
         {
-          "id": "Account"
+          "id": "AuthController"
         },
         {
-          "id": "Profile"
+          "id": "User"
         },
         {
-          "id": "Signon"
+          "id": "UserRepository"
+        },
+        {
+          "id": "UserService"
+        },
+        {
+          "id": "SecurityConfig"
+        },
+        {
+          "id": "UserDetailsServiceImpl"
+        },
+        {
+          "id": "JwtUtil"
+        },
+        {
+          "id": "JwtRequestFilter"
+        },
+        {
+          "id": "AuthenticationEntryPoint"
         }
       ],
-      "Order Management Service": [
+      "Borrower Management Service": [
         {
-          "id": "Orders"
+          "id": "BorrowerController"
         },
         {
-          "id": "OrderStatus"
+          "id": "Borrower"
         },
         {
-          "id": "LineItem"
+          "id": "Person"
         },
         {
-          "id": "Sequence"
+          "id": "BorrowerRepository"
+        },
+        {
+          "id": "BorrowerService"
         }
       ],
-      "Catalog Management Service": [
+      "Book Management Service": [
         {
-          "id": "Product"
+          "id": "BookController"
         },
         {
-          "id": "Category"
+          "id": "Book"
         },
         {
-          "id": "Item"
+          "id": "BookRepository"
         },
         {
-          "id": "Inventory"
-        },
-        {
-          "id": "Supplier"
-        },
-        {
-          "id": "BannerData"
+          "id": "BookService"
         }
       ],
-      "Web/API Gateway Service": [
+      "Loan Management Service": [
         {
-          "id": "JpetstoreController"
+          "id": "LoanController"
         },
         {
-          "id": "JpetstoreActionController"
+          "id": "Loan"
         },
         {
-          "id": "CargoController"
+          "id": "LoanRepository"
         },
         {
-          "id": "ErrorHandler"
-        },
-        {
-          "id": "RedirectHandler"
-        },
-        {
-          "id": "GetHandler"
-        },
-        {
-          "id": "PostHandler"
+          "id": "LoanService"
         }
       ],
-      "Database Infrastructure Service": [
+      "Database Migration Service": [
         {
-          "id": "SchemaManager"
+          "id": "FlywayController"
         },
         {
-          "id": "IndexManager"
+          "id": "FlywayConfig"
         },
         {
-          "id": "DatabaseHealthChecker"
+          "id": "FlywayMigrationStrategy"
         },
         {
-          "id": "DataSource"
+          "id": "AdministrativeSchemaInitializer"
+        }
+      ],
+      "Training Service": [
+        {
+          "id": "TrainingController"
+        },
+        {
+          "id": "TrainingService"
+        },
+        {
+          "id": "TrainingRepository"
+        },
+        {
+          "id": "Training"
+        }
+      ],
+      "Shared Infrastructure Service": [
+        {
+          "id": "DemoApplication"
+        },
+        {
+          "id": "DemoController"
+        },
+        {
+          "id": "GlobalExceptionHandler"
+        },
+        {
+          "id": "WebConfig"
+        },
+        {
+          "id": "MathService"
         }
       ]
     }

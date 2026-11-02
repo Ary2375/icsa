@@ -1,132 +1,128 @@
 {
   "tool": {
     "decomposition": {
-      "Account Service": [
+      "Library Management Service": [
         {
-          "id": "Account"
+          "id": "POST /demo/registerbook"
         },
         {
-          "id": "Bannerdata"
+          "id": "POST /demo/registerborrower"
         },
         {
-          "id": "AccountDao"
+          "id": "POST /demo/lend"
         },
         {
-          "id": "BannerDataDao"
+          "id": "GET /demo/listavailable"
         },
         {
-          "id": "SqlMapAccountDao"
+          "id": "GET /demo/borrower"
         },
         {
-          "id": "SqlMapBannerDataDao"
+          "id": "SELECT library.book"
         },
         {
-          "id": "AccountService"
+          "id": "SELECT library.borrower"
         },
         {
-          "id": "AccountBean"
+          "id": "INSERT library.book"
         },
         {
-          "id": "SignonBean"
+          "id": "INSERT library.borrower"
         },
         {
-          "id": "IncludeBean"
+          "id": "INSERT library.loan"
+        },
+        {
+          "id": "CREATE table library.PERSON"
+        },
+        {
+          "id": "DROP table library.person"
+        },
+        {
+          "id": "CREATE table library.BORROWER"
+        },
+        {
+          "id": "CREATE table library.BOOK"
+        },
+        {
+          "id": "CREATE table library.LOAN"
         }
       ],
-      "Catalog Service": [
+      "User Authentication Service": [
         {
-          "id": "Category"
+          "id": "POST /demo/login"
         },
         {
-          "id": "Product"
+          "id": "POST /demo/register"
         },
         {
-          "id": "Item"
+          "id": "SELECT auth.user"
         },
         {
-          "id": "Inventory"
+          "id": "INSERT auth.user"
         },
         {
-          "id": "Supplier"
+          "id": "UPDATE auth.user"
         },
         {
-          "id": "CategoryDao"
-        },
-        {
-          "id": "ProductDao"
-        },
-        {
-          "id": "ItemDao"
-        },
-        {
-          "id": "SqlMapCategoryDao"
-        },
-        {
-          "id": "SqlMapProductDao"
-        },
-        {
-          "id": "SqlMapItemDao"
-        },
-        {
-          "id": "CatalogService"
-        },
-        {
-          "id": "CatalogBean"
+          "id": "CREATE table auth.USER"
         }
       ],
-      "Order Service": [
+      "Database Migration Service": [
         {
-          "id": "Cart"
+          "id": "GET /demo/flyway"
         },
         {
-          "id": "CartItem"
+          "id": "SELECT INFORMATION_SCHEMA.SCHEMATA"
         },
         {
-          "id": "Order"
+          "id": "SELECT INFORMATION_SCHEMA.SETTINGS"
         },
         {
-          "id": "OrderStatus"
+          "id": "SELECT \"ADMINISTRATIVE\".\"flyway_schema_history\""
         },
         {
-          "id": "LineItem"
+          "id": "CREATE TABLE \"ADMINISTRATIVE\".\"flyway_schema_history\""
         },
         {
-          "id": "Sequence"
+          "id": "INSERT \"ADMINISTRATIVE\".\"flyway_schema_history\""
         },
         {
-          "id": "OrderDao"
+          "id": "SELECT training"
         },
         {
-          "id": "SequenceDao"
+          "id": "CREATE training"
         },
         {
-          "id": "SqlMapOrderDao"
+          "id": "CREATE INDEX training"
         },
         {
-          "id": "SqlMapSequenceDao"
+          "id": "DROP training"
         },
         {
-          "id": "OrderService"
+          "id": "CALL training.SCHEMA"
         },
         {
-          "id": "SequenceService"
-        },
-        {
-          "id": "MailService"
-        },
-        {
-          "id": "CartBean"
-        },
-        {
-          "id": "OrderBean"
+          "id": "training"
         }
       ],
-      "Shared Infrastructure Service": [
+      "API Gateway Service": [
         {
-          "id": "DaoManager"
+          "id": "GET"
         },
         {
-          "id": "AbstractBean"
+          "id": "GET /demo/*"
+        },
+        {
+          "id": "Response.sendRedirect"
+        },
+        {
+          "id": "Response.sendError"
+        }
+      ],
+      "Math Utility Service": [
+        {
+          "id": "POST /demo/math"
         }
       ]
     }

@@ -1,135 +1,176 @@
 {
   "tool": {
     "decomposition": {
-      "Account Management Service": [
+      "Authentication Service": [
         {
-          "id": "Account"
+          "id": "AuthController"
         },
         {
-          "id": "Profile"
+          "id": "User"
         },
         {
-          "id": "BannerData"
+          "id": "UserRepository"
         },
         {
-          "id": "AccountDao"
+          "id": "POST /demo/login"
         },
         {
-          "id": "SqlMapAccountDao"
+          "id": "POST /demo/register"
         },
         {
-          "id": "AccountController"
+          "id": "SELECT auth.user"
         },
         {
-          "id": "SignonController"
+          "id": "INSERT auth.user"
         },
         {
-          "id": "SignoffController"
-        },
-        {
-          "id": "NewAccountController"
-        },
-        {
-          "id": "UpdateAccountController"
+          "id": "UPDATE auth.user"
         }
       ],
-      "Product Catalog Service": [
+      "Library Management Service": [
         {
-          "id": "Category"
+          "id": "LibraryController"
         },
         {
-          "id": "Product"
+          "id": "Book"
         },
         {
-          "id": "Item"
+          "id": "BookRepository"
         },
         {
-          "id": "Supplier"
+          "id": "Borrower"
         },
         {
-          "id": "CategoryDao"
+          "id": "BorrowerRepository"
         },
         {
-          "id": "ProductDao"
+          "id": "Loan"
         },
         {
-          "id": "ItemDao"
+          "id": "LoanRepository"
         },
         {
-          "id": "SqlMapCategoryDao"
+          "id": "Person"
         },
         {
-          "id": "SqlMapProductDao"
+          "id": "POST /demo/registerbook"
         },
         {
-          "id": "SqlMapItemDao"
+          "id": "GET /demo/listavailable"
         },
         {
-          "id": "ViewCategoryController"
+          "id": "POST /demo/lend"
         },
         {
-          "id": "ViewProductController"
+          "id": "POST /demo/registerborrower"
         },
         {
-          "id": "ViewItemController"
+          "id": "GET /demo/borrower"
         },
         {
-          "id": "SearchProductsController"
+          "id": "SELECT library.book"
+        },
+        {
+          "id": "INSERT library.book"
+        },
+        {
+          "id": "SELECT library.borrower"
+        },
+        {
+          "id": "INSERT library.borrower"
+        },
+        {
+          "id": "INSERT library.loan"
         }
       ],
-      "Order Management Service": [
+      "Database Migration Service": [
         {
-          "id": "Order"
+          "id": "FlywayController"
         },
         {
-          "id": "OrderStatus"
+          "id": "MigrationService"
         },
         {
-          "id": "LineItem"
+          "id": "GET /demo/flyway"
         },
         {
-          "id": "Sequence"
+          "id": "CREATE table auth.USER"
         },
         {
-          "id": "SequenceDao"
+          "id": "CREATE table library.BOOK"
         },
         {
-          "id": "Cart"
+          "id": "CREATE table library.PERSON"
         },
         {
-          "id": "CartItem"
+          "id": "CREATE table library.BORROWER"
         },
         {
-          "id": "OrderDao"
+          "id": "CREATE table library.LOAN"
         },
         {
-          "id": "SqlMapOrderDao"
+          "id": "DROP table library.person"
         },
         {
-          "id": "NewOrderController"
+          "id": "CREATE training"
         },
         {
-          "id": "ViewOrderController"
+          "id": "SELECT training"
         },
         {
-          "id": "ListOrdersController"
+          "id": "DROP training"
         },
         {
-          "id": "AddItemToCartController"
+          "id": "CALL training.SCHEMA"
         },
         {
-          "id": "RemoveItemFromCartController"
+          "id": "CREATE INDEX training"
         },
         {
-          "id": "ViewCartController"
+          "id": "training"
+        },
+        {
+          "id": "CREATE TABLE \"ADMINISTRATIVE\".\"flyway_schema_history\""
+        },
+        {
+          "id": "SELECT \"ADMINISTRATIVE\".\"flyway_schema_history\""
+        },
+        {
+          "id": "INSERT \"ADMINISTRATIVE\".\"flyway_schema_history\""
+        },
+        {
+          "id": "SELECT INFORMATION_SCHEMA.SETTINGS"
+        },
+        {
+          "id": "SELECT INFORMATION_SCHEMA.SCHEMATA"
+        }
+      ],
+      "Math Utility Service": [
+        {
+          "id": "MathController"
+        },
+        {
+          "id": "POST /demo/math"
         }
       ],
       "Shared Infrastructure Service": [
         {
-          "id": "PetStoreFacade"
+          "id": "DemoApplication"
         },
         {
-          "id": "PetStoreImpl"
+          "id": "DemoController"
+        },
+        {
+          "id": "GET /demo/*"
+        },
+        {
+          "id": "GET"
+        },
+        {
+          "id": "Response.sendRedirect"
+        },
+        {
+          "id": "Response.sendError"
         }
       ]
     }

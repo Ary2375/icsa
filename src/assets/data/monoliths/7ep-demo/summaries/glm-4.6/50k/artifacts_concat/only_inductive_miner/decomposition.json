@@ -1,132 +1,132 @@
 {
   "tool": {
     "decomposition": {
-      "Account Management Service": [
+      "Authentication Service": [
         {
-          "id": "Account"
+          "id": "POST /demo/login"
         },
         {
-          "id": "Profile"
+          "id": "POST /demo/register"
         },
         {
-          "id": "BannerData"
+          "id": "SELECT auth.user"
         },
         {
-          "id": "AccountBean"
+          "id": "INSERT auth.user"
         },
         {
-          "id": "AccountService"
-        },
-        {
-          "id": "AccountDao"
-        },
-        {
-          "id": "AccountSqlMapDao"
+          "id": "UPDATE auth.user"
         }
       ],
-      "Catalog Service": [
+      "Book Management Service": [
         {
-          "id": "Category"
+          "id": "POST /demo/registerbook"
         },
         {
-          "id": "Product"
+          "id": "GET /demo/listavailable"
         },
         {
-          "id": "Item"
+          "id": "SELECT library.book"
         },
         {
-          "id": "Supplier"
-        },
-        {
-          "id": "Inventory"
-        },
-        {
-          "id": "CatalogBean"
-        },
-        {
-          "id": "CatalogService"
-        },
-        {
-          "id": "CategoryDao"
-        },
-        {
-          "id": "CategorySqlMapDao"
-        },
-        {
-          "id": "ProductDao"
-        },
-        {
-          "id": "ProductSqlMapDao"
-        },
-        {
-          "id": "ItemDao"
-        },
-        {
-          "id": "ItemSqlMapDao"
+          "id": "INSERT library.book"
         }
       ],
-      "Order Management Service": [
+      "Borrower Management Service": [
         {
-          "id": "Order"
+          "id": "POST /demo/registerborrower"
         },
         {
-          "id": "OrderStatus"
+          "id": "GET /demo/borrower"
         },
         {
-          "id": "LineItem"
+          "id": "SELECT library.borrower"
         },
         {
-          "id": "Sequence"
-        },
-        {
-          "id": "Cart"
-        },
-        {
-          "id": "CartItem"
-        },
-        {
-          "id": "OrderBean"
-        },
-        {
-          "id": "CartBean"
-        },
-        {
-          "id": "OrderService"
-        },
-        {
-          "id": "OrderDao"
-        },
-        {
-          "id": "OrderSqlMapDao"
-        },
-        {
-          "id": "LineItemDao"
-        },
-        {
-          "id": "LineItemSqlMapDao"
-        },
-        {
-          "id": "SequenceDao"
-        },
-        {
-          "id": "SequenceSqlMapDao"
+          "id": "INSERT library.borrower"
         }
       ],
-      "Shared Infrastructure Service": [
+      "Lending Service": [
         {
-          "id": "PetStoreFacade"
+          "id": "POST /demo/lend"
         },
         {
-          "id": "PetStoreImpl"
+          "id": "INSERT library.loan"
+        }
+      ],
+      "Database Migration Service": [
+        {
+          "id": "GET /demo/flyway"
         },
         {
-          "id": "BeanAction"
+          "id": "CREATE table auth.USER"
         },
         {
-          "id": "BaseBean"
+          "id": "CREATE table library.BOOK"
         },
         {
-          "id": "DaoManager"
+          "id": "CREATE table library.BORROWER"
+        },
+        {
+          "id": "CREATE table library.PERSON"
+        },
+        {
+          "id": "CREATE table library.LOAN"
+        },
+        {
+          "id": "DROP table library.person"
+        },
+        {
+          "id": "CREATE TABLE \"ADMINISTRATIVE\".\"flyway_schema_history\""
+        },
+        {
+          "id": "INSERT \"ADMINISTRATIVE\".\"flyway_schema_history\""
+        },
+        {
+          "id": "SELECT \"ADMINISTRATIVE\".\"flyway_schema_history\""
+        },
+        {
+          "id": "SELECT INFORMATION_SCHEMA.SETTINGS"
+        },
+        {
+          "id": "SELECT INFORMATION_SCHEMA.SCHEMATA"
+        },
+        {
+          "id": "CALL training.SCHEMA"
+        },
+        {
+          "id": "CREATE INDEX training"
+        },
+        {
+          "id": "CREATE training"
+        },
+        {
+          "id": "SELECT training"
+        },
+        {
+          "id": "DROP training"
+        },
+        {
+          "id": "training"
+        }
+      ],
+      "Web Gateway Service": [
+        {
+          "id": "GET"
+        },
+        {
+          "id": "GET /demo/*"
+        },
+        {
+          "id": "Response.sendRedirect"
+        },
+        {
+          "id": "Response.sendError"
+        }
+      ],
+      "Math Service": [
+        {
+          "id": "POST /demo/math"
         }
       ]
     }

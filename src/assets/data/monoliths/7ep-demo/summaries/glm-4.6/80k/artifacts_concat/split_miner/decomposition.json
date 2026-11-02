@@ -15,9 +15,6 @@
           "id": "RegistrationUtils"
         },
         {
-          "id": "User"
-        },
-        {
           "id": "PasswordResult"
         },
         {
@@ -28,6 +25,9 @@
         },
         {
           "id": "RegistrationStatusEnums"
+        },
+        {
+          "id": "User"
         }
       ],
       "Library Management Service": [
@@ -59,10 +59,10 @@
           "id": "Borrower"
         },
         {
-          "id": "Loan"
+          "id": "LibraryActionResults"
         },
         {
-          "id": "LibraryActionResults"
+          "id": "Loan"
         }
       ],
       "Mathematics Service": [
@@ -100,29 +100,12 @@
           "id": "CartesianProduct"
         }
       ],
-      "Expense Calculation Service": [
+      "Persistence Service": [
         {
-          "id": "AlcoholCalculator"
-        },
-        {
-          "id": "AlcoholResult"
-        },
-        {
-          "id": "DinnerPrices"
-        }
-      ],
-      "Database Administration Service": [
-        {
-          "id": "DbServlet"
-        },
-        {
-          "id": "WebAppListener"
+          "id": "IPersistenceLayer"
         },
         {
           "id": "PersistenceLayer"
-        },
-        {
-          "id": "IPersistenceLayer"
         },
         {
           "id": "SqlData"
@@ -140,18 +123,37 @@
           "id": "NotImplementedException"
         }
       ],
-      "Shared Utilities Service": [
+      "Database Administration Service": [
         {
-          "id": "StringUtils"
+          "id": "DbServlet"
         },
         {
+          "id": "WebAppListener"
+        }
+      ],
+      "Shared Utilities Service": [
+        {
           "id": "ServletUtils"
+        },
+        {
+          "id": "StringUtils"
         },
         {
           "id": "CheckUtils"
         },
         {
           "id": "AssertionException"
+        }
+      ],
+      "Expense Calculation Service": [
+        {
+          "id": "AlcoholCalculator"
+        },
+        {
+          "id": "AlcoholResult"
+        },
+        {
+          "id": "DinnerPrices"
         }
       ]
     }

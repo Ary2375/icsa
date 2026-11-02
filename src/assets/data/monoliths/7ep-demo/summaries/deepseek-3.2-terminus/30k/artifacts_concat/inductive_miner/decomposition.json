@@ -79,6 +79,9 @@
           "id": "Calculator"
         },
         {
+          "id": "CartesianProduct"
+        },
+        {
           "id": "FibServlet"
         },
         {
@@ -95,23 +98,9 @@
         },
         {
           "id": "TailRecursive"
-        },
-        {
-          "id": "CartesianProduct"
         }
       ],
-      "Expense Calculation Service": [
-        {
-          "id": "AlcoholCalculator"
-        },
-        {
-          "id": "AlcoholResult"
-        },
-        {
-          "id": "DinnerPrices"
-        }
-      ],
-      "Persistence Service": [
+      "Database and Persistence Service": [
         {
           "id": "DbServlet"
         },
@@ -140,7 +129,7 @@
           "id": "WebAppListener"
         }
       ],
-      "Shared Utilities Service": [
+      "Shared Utility Service": [
         {
           "id": "AssertionException"
         },
@@ -152,6 +141,17 @@
         },
         {
           "id": "StringUtils"
+        }
+      ],
+      "Expense Calculation Service": [
+        {
+          "id": "AlcoholCalculator"
+        },
+        {
+          "id": "AlcoholResult"
+        },
+        {
+          "id": "DinnerPrices"
         }
       ]
     }

@@ -1,0 +1,11 @@
+```markdown
+| Component Name | Responsibility | Interfaces (key endpoints or methods) | Depends On | Technologies |
+|---------------|----------------|--------------------------------------|------------|--------------|
+| Authentication Service | User registration, login, and password management | `POST /demo/login`, `POST /demo/register`, `LoginUtils.authenticate()`, `RegistrationUtils.registerUser()` | Persistence Layer, Database | Java Servlets, SHA-256 hashing, OWASP Nbvcxz password validation, JSP |
+| Library Management Service | Book/borrower registration and loan management | `POST /demo/registerbook`, `POST /demo/registerborrower`, `POST /demo/lend`, `GET /demo/book`, `GET /demo/borrower`, `GET /demo/listavailable`, `LibraryUtils.*` | Persistence Layer, Database | Java Servlets, H2 Database, Flyway migrations, JSON serialization |
+| Mathematics Service | Mathematical calculations and algorithms | `POST /demo/math`, `POST /demo/fibonacci`, `POST /demo/ackermann`, `Calculator.add()`, `Fibonacci.calculate()`, `Ackermann.calculate()` | None (stateless) | Java Servlets, BigInteger, Recursive algorithms, Functional programming patterns |
+| Persistence Service | Database operations and data access abstraction | `IPersistenceLayer.saveNewBook()`, `IPersistenceLayer.createLoan()`, `IPersistenceLayer.saveNewUser()`, `IPersistenceLayer.areCredentialsValid()`, `GET /demo/flyway` | H2 Database, Flyway | JDBC, H2 Database, Flyway migrations, Micro-ORM pattern, Connection pooling |
+| Web UI Service | Frontend interfaces and static content serving | Servlet endpoints for web pages, JSP rendering | Authentication Service, Library Service, Mathematics Service | Java Servlets, JSP, Tomcat 9, HTML/CSS/JavaScript |
+| Desktop Insurance Application | Insurance premium calculations and Swing UI | `AutoInsuranceUI`, `AutoInsuranceProcessor.calculatePremium()`, `AutoInsuranceScriptServer` | None (standalone) | Java Swing, Socket communication, Business logic for insurance calculations |
+| Testing Infrastructure | Comprehensive test coverage across all domains | JUnit test classes, Cucumber feature files, Selenium WebDriver tests, API test scripts | All application components | JUnit, Mockito, Cucumber, Selenium, Python, JavaScript, C#, JMeter, Pitest |
+```

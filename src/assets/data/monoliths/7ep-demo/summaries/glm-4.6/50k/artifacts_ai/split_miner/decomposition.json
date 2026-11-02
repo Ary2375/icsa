@@ -15,6 +15,9 @@
           "id": "RegistrationUtils"
         },
         {
+          "id": "User"
+        },
+        {
           "id": "PasswordResult"
         },
         {
@@ -25,14 +28,17 @@
         },
         {
           "id": "RegistrationStatusEnums"
-        },
-        {
-          "id": "User"
         }
       ],
       "Library Management Service": [
         {
-          "id": "LibraryBookListAvailableServlet"
+          "id": "LibraryRegisterBookServlet"
+        },
+        {
+          "id": "LibraryRegisterBorrowerServlet"
+        },
+        {
+          "id": "LibraryLendServlet"
         },
         {
           "id": "LibraryBookListSearchServlet"
@@ -41,13 +47,7 @@
           "id": "LibraryBorrowerListSearchServlet"
         },
         {
-          "id": "LibraryLendServlet"
-        },
-        {
-          "id": "LibraryRegisterBookServlet"
-        },
-        {
-          "id": "LibraryRegisterBorrowerServlet"
+          "id": "LibraryBookListAvailableServlet"
         },
         {
           "id": "LibraryUtils"
@@ -59,10 +59,10 @@
           "id": "Borrower"
         },
         {
-          "id": "LibraryActionResults"
+          "id": "Loan"
         },
         {
-          "id": "Loan"
+          "id": "LibraryActionResults"
         }
       ],
       "Mathematics Service": [
@@ -113,19 +113,7 @@
       ],
       "Persistence Service": [
         {
-          "id": "DbServlet"
-        },
-        {
-          "id": "EmptyDataSource"
-        },
-        {
           "id": "IPersistenceLayer"
-        },
-        {
-          "id": "NotImplementedException"
-        },
-        {
-          "id": "ParameterObject"
         },
         {
           "id": "PersistenceLayer"
@@ -134,7 +122,19 @@
           "id": "SqlData"
         },
         {
+          "id": "ParameterObject"
+        },
+        {
           "id": "SqlRuntimeException"
+        },
+        {
+          "id": "EmptyDataSource"
+        },
+        {
+          "id": "NotImplementedException"
+        },
+        {
+          "id": "DbServlet"
         },
         {
           "id": "WebAppListener"
@@ -142,7 +142,7 @@
       ],
       "Shared Utilities Service": [
         {
-          "id": "AssertionException"
+          "id": "StringUtils"
         },
         {
           "id": "CheckUtils"
@@ -151,7 +151,7 @@
           "id": "ServletUtils"
         },
         {
-          "id": "StringUtils"
+          "id": "AssertionException"
         }
       ]
     }

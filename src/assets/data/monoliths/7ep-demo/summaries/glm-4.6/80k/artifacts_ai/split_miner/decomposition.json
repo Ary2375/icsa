@@ -6,16 +6,13 @@
           "id": "LoginServlet"
         },
         {
-          "id": "LoginUtils"
-        },
-        {
           "id": "RegisterServlet"
         },
         {
-          "id": "RegistrationUtils"
+          "id": "LoginUtils"
         },
         {
-          "id": "User"
+          "id": "RegistrationUtils"
         },
         {
           "id": "PasswordResult"
@@ -28,6 +25,9 @@
         },
         {
           "id": "RegistrationStatusEnums"
+        },
+        {
+          "id": "User"
         }
       ],
       "Library Management Service": [
@@ -70,19 +70,19 @@
           "id": "MathServlet"
         },
         {
-          "id": "Calculator"
+          "id": "FibServlet"
         },
         {
-          "id": "FibServlet"
+          "id": "AckServlet"
+        },
+        {
+          "id": "Calculator"
         },
         {
           "id": "Fibonacci"
         },
         {
           "id": "FibonacciIterative"
-        },
-        {
-          "id": "AckServlet"
         },
         {
           "id": "Ackermann"
@@ -97,23 +97,15 @@
           "id": "FunctionalField"
         }
       ],
-      "Expense Calculation Service": [
-        {
-          "id": "AlcoholCalculator"
-        },
-        {
-          "id": "AlcoholResult"
-        },
-        {
-          "id": "DinnerPrices"
-        }
-      ],
       "Persistence Service": [
         {
-          "id": "PersistenceLayer"
+          "id": "DbServlet"
         },
         {
           "id": "IPersistenceLayer"
+        },
+        {
+          "id": "PersistenceLayer"
         },
         {
           "id": "SqlData"
@@ -122,16 +114,13 @@
           "id": "ParameterObject"
         },
         {
-          "id": "SqlRuntimeException"
-        },
-        {
           "id": "EmptyDataSource"
         },
         {
           "id": "NotImplementedException"
         },
         {
-          "id": "DbServlet"
+          "id": "SqlRuntimeException"
         },
         {
           "id": "WebAppListener"
@@ -152,6 +141,28 @@
         },
         {
           "id": "CartesianProduct"
+        }
+      ],
+      "Expense Calculation Service": [
+        {
+          "id": "AlcoholCalculator"
+        },
+        {
+          "id": "AlcoholResult"
+        },
+        {
+          "id": "DinnerPrices"
+        }
+      ],
+      "Auto Insurance Service": [
+        {
+          "id": "AutoInsuranceProcessor"
+        },
+        {
+          "id": "AutoInsuranceScriptServer"
+        },
+        {
+          "id": "AutoInsuranceScriptClient"
         }
       ]
     }

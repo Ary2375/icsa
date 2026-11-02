@@ -95,9 +95,12 @@
         },
         {
           "id": "TailRecursive"
+        },
+        {
+          "id": "CartesianProduct"
         }
       ],
-      "Expenses Service": [
+      "Expense Calculation Service": [
         {
           "id": "AlcoholCalculator"
         },
@@ -108,14 +111,21 @@
           "id": "DinnerPrices"
         }
       ],
-      "Cartesian Product Service": [
+      "Data Persistence Service": [
         {
-          "id": "CartesianProduct"
-        }
-      ],
-      "Persistence Service": [
+          "id": "DbServlet"
+        },
+        {
+          "id": "EmptyDataSource"
+        },
         {
           "id": "IPersistenceLayer"
+        },
+        {
+          "id": "NotImplementedException"
+        },
+        {
+          "id": "ParameterObject"
         },
         {
           "id": "PersistenceLayer"
@@ -124,36 +134,24 @@
           "id": "SqlData"
         },
         {
-          "id": "ParameterObject"
-        },
-        {
           "id": "SqlRuntimeException"
         },
         {
-          "id": "EmptyDataSource"
-        },
-        {
-          "id": "NotImplementedException"
-        },
-        {
-          "id": "DbServlet"
+          "id": "WebAppListener"
         }
       ],
-      "Shared Infrastructure Service": [
+      "Shared Utilities Service": [
         {
-          "id": "CheckUtils"
+          "id": "AssertionException"
         },
         {
-          "id": "StringUtils"
+          "id": "CheckUtils"
         },
         {
           "id": "ServletUtils"
         },
         {
-          "id": "AssertionException"
-        },
-        {
-          "id": "WebAppListener"
+          "id": "StringUtils"
         }
       ]
     }

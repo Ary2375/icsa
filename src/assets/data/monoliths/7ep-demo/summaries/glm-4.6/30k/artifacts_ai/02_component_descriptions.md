@@ -1,0 +1,10 @@
+
+| Component Name | Responsibility | Interfaces (key endpoints or methods) | Depends On | Technologies (frameworks, DBs, patterns) |
+|---|---|---|---|---|
+| **Authentication System** | Handles user registration, login, and password validation. | `/demo/login`, `/demo/register`, `LoginUtils.validateCredentials()` | Persistence Layer | Java Servlets, JSP, Nbvcxz library, SHA-256/BCrypt |
+| **Library Management System** | Manages books, borrowers, and the lending lifecycle. | `/demo/registerbook`, `/demo/lend`, `/demo/book`, `/demo/borrower`, `/demo/listavailable`, `LibraryUtils.validateLend()` | Persistence Layer | Java Servlets, JSP, Custom micro-ORM |
+| **Mathematics Service** | Provides endpoints for arithmetic, Fibonacci, and Ackermann computations. | `/demo/math`, `/demo/fib`, `/demo/ack` | (None, stateless) | Java Servlets, JSP, Recursive/Iterative Algorithms |
+| **Expense Calculator** | Estimates alcohol costs for restaurant bills. | (Internal utility, no direct endpoint mentioned) | (None, pure logic) | Plain Java (`AlcoholCalculator.java`) |
+| **Desktop Application (Auto Insurance)** | Swing-based app for calculating insurance premiums and generating warnings. | Swing UI, `AutoInsuranceScriptServer` (port 8000) | (None, isolated module) | Java Swing, Sockets |
+| **Persistence & Database Layer** | Manages all data access, schema migrations, and database connections. | `IPersistenceLayer`, `DbServlet` (`/demo/flyway`), Flyway scripts | H2 Database | H2 Database, FlywayDB, JDBC, Custom micro-ORM (`SqlData`, `ParameterObject`), Null Object Pattern, Connection Pooling |
+| **CI/CD & Quality Assurance** | Automates the build, test, analyze, and deployment pipeline. | Jenkinsfile, Git hooks, SonarQube, OWASP ZAP | Entire Application Codebase | Jenkins, Gradle, JUnit 5, Mockito, Selenium, Cucumber, SonarQube, OWASP ZAP, OWASP Dependency Check, JMeter, JaCoCo, Pitest |

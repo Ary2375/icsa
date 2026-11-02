@@ -1,0 +1,10 @@
+
+| Component Name | Responsibility | Interfaces | Depends On | Technologies |
+|---|---|---|---|---|
+| Authentication Module | Handle user registration, login, password validation, and credential management. | `POST /login`, `POST /register` | Persistence Layer, RegistrationUtils, LoginUtils, Nbvcxz library | Java Servlets, JSP, H2 Database, Flyway, Nbvcxz (password entropy), SHA-256/BCrypt |
+| Library Management Module | Manage the library's catalog of books, registry of borrowers, and the book lending lifecycle. | `GET/POST /book`, `GET/POST /borrower`, `POST /lend`, `POST /registerbook`, `POST /registerborrower`, `GET /listavailable` | Persistence Layer, LibraryUtils | Java Servlets, JSP, H2 Database, Flyway |
+| Mathematics Service | Provide stateless computational services for arithmetic, Fibonacci sequences, and the Ackermann function. | `POST /demo/math`, `POST /demo/fib`, `POST /demo/ack` | None (stateless) | Java Servlets, JSP |
+| Persistence Layer | Abstract all database interactions, provide a micro-ORM for CRUD operations, and manage schema migrations via Flyway. | `IPersistenceLayer` interface, `GET /demo/flyway` (for management) | H2 Database, JDBC, Flyway | JDBC, H2 Database, Flyway, Custom Micro-ORM, Servlet API |
+| Expense Calculation | Estimate and split costs, specifically for restaurant bills (food vs. alcohol). | Programmatic (direct method calls to `AlcoholCalculator`) | None mentioned | Plain Java |
+| Desktop Application (Auto Insurance) | Provide a Swing-based desktop UI for auto insurance premium calculations and includes a socket server for automated testing. | Swing GUI, Socket Server (port 8000) | AutoInsuranceProcessor | Java Swing, Sockets |
+| Testing & CI/CD Infrastructure | Orchestrate the entire software delivery pipeline, from build to deployment, including automated quality gates. | Jenkins Pipeline (Webhook trigger), SonarQube Dashboard, H2O Reports Server | Git, Gradle, Web Application | Jenkins, Gradle, JUnit 5, Mockito, Cucumber, Selenium, Behave, Pytest, JMeter, SonarQube, OWASP ZAP, OWASP Dependency Check, JaCoCo, Pitest |

@@ -15,6 +15,9 @@
           "id": "RegistrationUtils"
         },
         {
+          "id": "User"
+        },
+        {
           "id": "PasswordResult"
         },
         {
@@ -25,9 +28,6 @@
         },
         {
           "id": "RegistrationStatusEnums"
-        },
-        {
-          "id": "User"
         }
       ],
       "Library Management Service": [
@@ -59,10 +59,10 @@
           "id": "Borrower"
         },
         {
-          "id": "LibraryActionResults"
+          "id": "Loan"
         },
         {
-          "id": "Loan"
+          "id": "LibraryActionResults"
         }
       ],
       "Mathematics Service": [
@@ -145,10 +145,10 @@
           "id": "StringUtils"
         },
         {
-          "id": "ServletUtils"
+          "id": "CheckUtils"
         },
         {
-          "id": "CheckUtils"
+          "id": "ServletUtils"
         },
         {
           "id": "AssertionException"

@@ -1,80 +1,65 @@
 {
   "tool": {
     "decomposition": {
-      "Account Management Service": [
+      "Authentication Service": [
         {
-          "id": "Account"
+          "id": "AuthController"
         },
         {
-          "id": "Signon"
+          "id": "User"
         },
         {
-          "id": "Profile"
+          "id": "UserRepository"
         }
       ],
-      "Catalog Service": [
+      "Library Management Service": [
         {
-          "id": "Product"
+          "id": "LibraryController"
         },
         {
-          "id": "Item"
+          "id": "Book"
         },
         {
-          "id": "Category"
+          "id": "Borrower"
         },
         {
-          "id": "Supplier"
+          "id": "Loan"
+        },
+        {
+          "id": "BookRepository"
+        },
+        {
+          "id": "BorrowerRepository"
+        },
+        {
+          "id": "LoanRepository"
         }
       ],
-      "Inventory Service": [
+      "Database Migration Service": [
         {
-          "id": "Inventory"
+          "id": "FlywayController"
+        },
+        {
+          "id": "FlywayConfig"
         }
       ],
-      "Order Management Service": [
+      "Demo Utility Service": [
         {
-          "id": "Orders"
-        },
-        {
-          "id": "OrderStatus"
-        },
-        {
-          "id": "LineItem"
-        }
-      ],
-      "Banner Service": [
-        {
-          "id": "Bannerdata"
-        }
-      ],
-      "Sequence Generation Service": [
-        {
-          "id": "Sequence"
-        }
-      ],
-      "Web API Service": [
-        {
-          "id": "JpetstoreController"
-        },
-        {
-          "id": "JpetstoreActionController"
-        },
-        {
-          "id": "CargocpcController"
-        },
-        {
-          "id": "PostController"
-        },
-        {
-          "id": "Response"
-        },
-        {
-          "id": "ResponseFacade"
+          "id": "DemoController"
         }
       ],
       "Shared Infrastructure Service": [
         {
-          "id": "DataSource"
+          "id": "DemoApplication"
+        },
+        {
+          "id": "SecurityConfig"
+        },
+        {
+          "id": "WebConfig"
+        },
+        {
+          "id": "DataSourceConfig"
         }
       ]
     }

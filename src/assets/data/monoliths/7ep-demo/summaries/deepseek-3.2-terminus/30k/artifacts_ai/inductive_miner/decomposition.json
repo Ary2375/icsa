@@ -132,28 +132,38 @@
         },
         {
           "id": "NotImplementedException"
-        }
-      ],
-      "Database Management Service": [
+        },
         {
           "id": "DbServlet"
         },
         {
           "id": "WebAppListener"
+        },
+        {
+          "id": "User"
+        },
+        {
+          "id": "Book"
+        },
+        {
+          "id": "Borrower"
+        },
+        {
+          "id": "Loan"
         }
       ],
       "Shared Utilities Service": [
         {
-          "id": "ServletUtils"
-        },
-        {
-          "id": "StringUtils"
+          "id": "AssertionException"
         },
         {
           "id": "CheckUtils"
         },
         {
-          "id": "AssertionException"
+          "id": "ServletUtils"
+        },
+        {
+          "id": "StringUtils"
         }
       ]
     }

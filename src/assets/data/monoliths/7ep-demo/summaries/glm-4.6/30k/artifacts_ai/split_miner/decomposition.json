@@ -113,6 +113,9 @@
       ],
       "Persistence Service": [
         {
+          "id": "DbServlet"
+        },
+        {
           "id": "IPersistenceLayer"
         },
         {
@@ -125,22 +128,19 @@
           "id": "ParameterObject"
         },
         {
-          "id": "SqlRuntimeException"
-        },
-        {
           "id": "EmptyDataSource"
         },
         {
           "id": "NotImplementedException"
         },
         {
-          "id": "DbServlet"
+          "id": "SqlRuntimeException"
         },
         {
           "id": "WebAppListener"
         }
       ],
-      "Shared Utilities Service": [
+      "Shared Utility Service": [
         {
           "id": "StringUtils"
         },

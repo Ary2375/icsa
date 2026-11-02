@@ -15,6 +15,9 @@
           "id": "RegistrationUtils"
         },
         {
+          "id": "User"
+        },
+        {
           "id": "PasswordResult"
         },
         {
@@ -25,29 +28,26 @@
         },
         {
           "id": "RegistrationStatusEnums"
-        },
-        {
-          "id": "User"
         }
       ],
       "Library Management Service": [
-        {
-          "id": "LibraryBookListAvailableServlet"
-        },
-        {
-          "id": "LibraryBookListSearchServlet"
-        },
-        {
-          "id": "LibraryBorrowerListSearchServlet"
-        },
-        {
-          "id": "LibraryLendServlet"
-        },
         {
           "id": "LibraryRegisterBookServlet"
         },
         {
           "id": "LibraryRegisterBorrowerServlet"
+        },
+        {
+          "id": "LibraryLendServlet"
+        },
+        {
+          "id": "LibraryBookListSearchServlet"
+        },
+        {
+          "id": "LibraryBookListAvailableServlet"
+        },
+        {
+          "id": "LibraryBorrowerListSearchServlet"
         },
         {
           "id": "LibraryUtils"
@@ -59,10 +59,10 @@
           "id": "Borrower"
         },
         {
-          "id": "LibraryActionResults"
+          "id": "Loan"
         },
         {
-          "id": "Loan"
+          "id": "LibraryActionResults"
         }
       ],
       "Mathematics Service": [
@@ -100,6 +100,49 @@
           "id": "CartesianProduct"
         }
       ],
+      "Database Administration Service": [
+        {
+          "id": "DbServlet"
+        },
+        {
+          "id": "PersistenceLayer"
+        },
+        {
+          "id": "IPersistenceLayer"
+        },
+        {
+          "id": "SqlData"
+        },
+        {
+          "id": "ParameterObject"
+        },
+        {
+          "id": "SqlRuntimeException"
+        },
+        {
+          "id": "EmptyDataSource"
+        },
+        {
+          "id": "NotImplementedException"
+        },
+        {
+          "id": "WebAppListener"
+        }
+      ],
+      "Shared Utilities Service": [
+        {
+          "id": "StringUtils"
+        },
+        {
+          "id": "CheckUtils"
+        },
+        {
+          "id": "ServletUtils"
+        },
+        {
+          "id": "AssertionException"
+        }
+      ],
       "Expense Calculation Service": [
         {
           "id": "AlcoholCalculator"
@@ -109,49 +152,6 @@
         },
         {
           "id": "DinnerPrices"
-        }
-      ],
-      "Database Service": [
-        {
-          "id": "DbServlet"
-        },
-        {
-          "id": "WebAppListener"
-        },
-        {
-          "id": "IPersistenceLayer"
-        },
-        {
-          "id": "PersistenceLayer"
-        },
-        {
-          "id": "EmptyDataSource"
-        },
-        {
-          "id": "NotImplementedException"
-        },
-        {
-          "id": "ParameterObject"
-        },
-        {
-          "id": "SqlData"
-        },
-        {
-          "id": "SqlRuntimeException"
-        }
-      ],
-      "Shared Utilities Service": [
-        {
-          "id": "AssertionException"
-        },
-        {
-          "id": "CheckUtils"
-        },
-        {
-          "id": "ServletUtils"
-        },
-        {
-          "id": "StringUtils"
         }
       ]
     }

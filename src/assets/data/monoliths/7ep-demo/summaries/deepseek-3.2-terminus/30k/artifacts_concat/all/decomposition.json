@@ -65,7 +65,7 @@
           "id": "Loan"
         }
       ],
-      "Mathematics and Computation Service": [
+      "Mathematics Service": [
         {
           "id": "AckServlet"
         },
@@ -97,6 +97,11 @@
           "id": "TailRecursive"
         },
         {
+          "id": "CartesianProduct"
+        }
+      ],
+      "Expense Calculation Service": [
+        {
           "id": "AlcoholCalculator"
         },
         {
@@ -104,12 +109,9 @@
         },
         {
           "id": "DinnerPrices"
-        },
-        {
-          "id": "CartesianProduct"
         }
       ],
-      "Data Persistence Service": [
+      "Persistence and Database Management Service": [
         {
           "id": "DbServlet"
         },
@@ -138,7 +140,7 @@
           "id": "WebAppListener"
         }
       ],
-      "Shared Infrastructure Service": [
+      "Shared Utility Service": [
         {
           "id": "AssertionException"
         },

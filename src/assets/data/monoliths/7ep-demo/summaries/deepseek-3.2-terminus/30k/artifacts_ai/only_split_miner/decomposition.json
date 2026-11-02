@@ -1,74 +1,128 @@
 {
   "tool": {
     "decomposition": {
-      "Account Service": [
+      "Authentication Service": [
         {
-          "id": "AccountDao"
+          "id": "POST /demo/login"
         },
         {
-          "id": "SignonDao"
+          "id": "POST /demo/register"
         },
         {
-          "id": "ProfileDao"
+          "id": "SELECT auth.user"
         },
         {
-          "id": "SequenceDao"
+          "id": "INSERT auth.user"
+        },
+        {
+          "id": "UPDATE auth.user"
+        },
+        {
+          "id": "CREATE table auth.USER"
         }
       ],
-      "Catalog Service": [
+      "Library Management Service": [
         {
-          "id": "ProductDao"
+          "id": "POST /demo/registerborrower"
         },
         {
-          "id": "CategoryDao"
+          "id": "POST /demo/registerbook"
         },
         {
-          "id": "ItemDao"
+          "id": "POST /demo/lend"
         },
         {
-          "id": "InventoryDao"
+          "id": "GET /demo/listavailable"
         },
         {
-          "id": "SupplierDao"
+          "id": "GET /demo/borrower"
         },
         {
-          "id": "BannerDataDao"
+          "id": "SELECT library.borrower"
+        },
+        {
+          "id": "SELECT library.book"
+        },
+        {
+          "id": "INSERT library.loan"
+        },
+        {
+          "id": "INSERT library.book"
+        },
+        {
+          "id": "INSERT library.borrower"
+        },
+        {
+          "id": "CREATE table library.BOOK"
+        },
+        {
+          "id": "CREATE table library.LOAN"
+        },
+        {
+          "id": "CREATE table library.PERSON"
+        },
+        {
+          "id": "CREATE table library.BORROWER"
+        },
+        {
+          "id": "DROP table library.person"
         }
       ],
-      "Order Service": [
+      "Training Service": [
         {
-          "id": "OrderDao"
+          "id": "SELECT training"
         },
         {
-          "id": "OrderStatusDao"
+          "id": "CREATE INDEX training"
         },
         {
-          "id": "LineItemDao"
+          "id": "CALL training.SCHEMA"
+        },
+        {
+          "id": "CREATE training"
+        },
+        {
+          "id": "DROP training"
+        },
+        {
+          "id": "training"
         }
       ],
-      "Web Service": [
+      "Database Administration Service": [
         {
-          "id": "JpetstoreController"
+          "id": "GET /demo/flyway"
         },
         {
-          "id": "JpetstoreActionController"
+          "id": "SELECT INFORMATION_SCHEMA.SCHEMATA"
         },
         {
-          "id": "CargoCpcController"
+          "id": "SELECT \"ADMINISTRATIVE\".\"flyway_schema_history\""
         },
         {
-          "id": "HttpController"
+          "id": "CREATE TABLE \"ADMINISTRATIVE\".\"flyway_schema_history\""
         },
         {
-          "id": "ResponseFacade"
+          "id": "INSERT \"ADMINISTRATIVE\".\"flyway_schema_history\""
+        },
+        {
+          "id": "SELECT INFORMATION_SCHEMA.SETTINGS"
         }
       ],
-      "Shared Infrastructure Service": [
+      "Web Utility Service": [
         {
-          "id": "DatasourceDao"
+          "id": "POST /demo/math"
         },
         {
-          "id": "IndexDao"
+          "id": "GET /demo/*"
+        },
+        {
+          "id": "GET"
+        },
+        {
+          "id": "Response.sendRedirect"
+        },
+        {
+          "id": "Response.sendError"
         }
       ]
     }

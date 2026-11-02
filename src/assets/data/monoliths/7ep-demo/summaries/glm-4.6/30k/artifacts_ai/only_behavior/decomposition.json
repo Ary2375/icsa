@@ -3,19 +3,19 @@
     "decomposition": {
       "Library Management Service": [
         {
-          "id": "LibraryBookListAvailableServlet"
+          "id": "LibraryRegisterBookServlet"
         },
         {
-          "id": "LibraryBorrowerListSearchServlet"
+          "id": "LibraryRegisterBorrowerServlet"
         },
         {
           "id": "LibraryLendServlet"
         },
         {
-          "id": "LibraryRegisterBookServlet"
+          "id": "LibraryBorrowerListSearchServlet"
         },
         {
-          "id": "LibraryRegisterBorrowerServlet"
+          "id": "LibraryBookListAvailableServlet"
         },
         {
           "id": "LibraryUtils"
@@ -25,9 +25,6 @@
         },
         {
           "id": "Borrower"
-        },
-        {
-          "id": "Loan"
         }
       ],
       "Authentication Service": [
@@ -44,7 +41,10 @@
           "id": "RegistrationUtils"
         }
       ],
-      "Persistence Service": [
+      "Database Administration Service": [
+        {
+          "id": "DbServlet"
+        },
         {
           "id": "PersistenceLayer"
         },
@@ -53,9 +53,11 @@
         },
         {
           "id": "ParameterObject"
-        },
+        }
+      ],
+      "Math Service": [
         {
-          "id": "DbServlet"
+          "id": "MathServlet"
         }
       ],
       "Shared Utilities Service": [
@@ -67,11 +69,6 @@
         },
         {
           "id": "ServletUtils"
-        }
-      ],
-      "Calculation Service": [
-        {
-          "id": "MathServlet"
         }
       ]
     }

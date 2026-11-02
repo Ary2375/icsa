@@ -32,15 +32,6 @@
       ],
       "Library Management Service": [
         {
-          "id": "LibraryBookListAvailableServlet"
-        },
-        {
-          "id": "LibraryBookListSearchServlet"
-        },
-        {
-          "id": "LibraryBorrowerListSearchServlet"
-        },
-        {
           "id": "LibraryLendServlet"
         },
         {
@@ -48,6 +39,15 @@
         },
         {
           "id": "LibraryRegisterBorrowerServlet"
+        },
+        {
+          "id": "LibraryBookListSearchServlet"
+        },
+        {
+          "id": "LibraryBookListAvailableServlet"
+        },
+        {
+          "id": "LibraryBorrowerListSearchServlet"
         },
         {
           "id": "LibraryUtils"
@@ -65,7 +65,7 @@
           "id": "LibraryActionResults"
         }
       ],
-      "Mathematical Computation Service": [
+      "Mathematical Calculation Service": [
         {
           "id": "MathServlet"
         },
@@ -98,9 +98,21 @@
         },
         {
           "id": "CartesianProduct"
+        },
+        {
+          "id": "AlcoholCalculator"
+        },
+        {
+          "id": "AlcoholResult"
+        },
+        {
+          "id": "DinnerPrices"
         }
       ],
       "Persistence Service": [
+        {
+          "id": "DbServlet"
+        },
         {
           "id": "IPersistenceLayer"
         },
@@ -123,9 +135,6 @@
           "id": "SqlRuntimeException"
         },
         {
-          "id": "DbServlet"
-        },
-        {
           "id": "WebAppListener"
         }
       ],
@@ -141,17 +150,6 @@
         },
         {
           "id": "AssertionException"
-        }
-      ],
-      "Expense Calculation Service": [
-        {
-          "id": "AlcoholCalculator"
-        },
-        {
-          "id": "AlcoholResult"
-        },
-        {
-          "id": "DinnerPrices"
         }
       ]
     }

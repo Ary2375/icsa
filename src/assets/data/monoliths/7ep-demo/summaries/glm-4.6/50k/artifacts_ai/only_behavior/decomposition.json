@@ -1,7 +1,7 @@
 {
   "tool": {
     "decomposition": {
-      "User Authentication Service": [
+      "Authentication Service": [
         {
           "id": "LoginServlet"
         },
@@ -13,6 +13,12 @@
         },
         {
           "id": "RegistrationUtils"
+        },
+        {
+          "id": "User"
+        },
+        {
+          "id": "UserList"
         }
       ],
       "Library Management Service": [
@@ -38,7 +44,19 @@
           "id": "Book"
         },
         {
+          "id": "BookList"
+        },
+        {
           "id": "Borrower"
+        },
+        {
+          "id": "BorrowerList"
+        },
+        {
+          "id": "Loan"
+        },
+        {
+          "id": "LoanList"
         }
       ],
       "Persistence Service": [
@@ -55,7 +73,7 @@
           "id": "DbServlet"
         }
       ],
-      "Calculation Service": [
+      "Calculator Service": [
         {
           "id": "MathServlet"
         }
@@ -69,6 +87,15 @@
         },
         {
           "id": "ServletUtils"
+        },
+        {
+          "id": "DateUtils"
+        },
+        {
+          "id": "EncryptionUtils"
+        },
+        {
+          "id": "LoggerUtils"
         }
       ]
     }

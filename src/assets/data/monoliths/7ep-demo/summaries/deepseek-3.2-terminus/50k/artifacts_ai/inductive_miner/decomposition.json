@@ -139,7 +139,7 @@
           "id": "SqlRuntimeException"
         }
       ],
-      "Shared Infrastructure Service": [
+      "Helper Utilities Service": [
         {
           "id": "AssertionException"
         },

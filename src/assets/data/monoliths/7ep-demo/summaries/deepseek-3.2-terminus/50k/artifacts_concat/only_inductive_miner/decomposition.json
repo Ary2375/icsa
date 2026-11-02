@@ -1,125 +1,106 @@
 {
   "tool": {
     "decomposition": {
-      "Account Service": [
+      "Authentication Service": [
         {
-          "id": "Account"
+          "id": "AuthController"
         },
         {
-          "id": "Signon"
+          "id": "AuthService"
         },
         {
-          "id": "Profile"
+          "id": "User"
         },
         {
-          "id": "AccountDao"
+          "id": "UserRepository"
         },
         {
-          "id": "SignonDao"
-        },
-        {
-          "id": "ProfileDao"
-        },
-        {
-          "id": "AccountAction"
+          "id": "SecurityConfig"
         }
       ],
-      "Catalog Service": [
+      "Book Catalog Service": [
         {
-          "id": "Product"
+          "id": "BookController"
         },
         {
-          "id": "Category"
+          "id": "BookService"
         },
         {
-          "id": "Item"
+          "id": "Book"
         },
         {
-          "id": "Inventory"
-        },
-        {
-          "id": "Supplier"
-        },
-        {
-          "id": "ProductDao"
-        },
-        {
-          "id": "CategoryDao"
-        },
-        {
-          "id": "ItemDao"
-        },
-        {
-          "id": "InventoryDao"
-        },
-        {
-          "id": "SupplierDao"
-        },
-        {
-          "id": "CatalogAction"
+          "id": "BookRepository"
         }
       ],
-      "Order Service": [
+      "Borrower Management Service": [
         {
-          "id": "Order"
+          "id": "BorrowerController"
         },
         {
-          "id": "OrderStatus"
+          "id": "BorrowerService"
         },
         {
-          "id": "LineItem"
+          "id": "Borrower"
         },
         {
-          "id": "OrderDao"
+          "id": "BorrowerRepository"
         },
         {
-          "id": "OrderStatusDao"
+          "id": "Person"
         },
         {
-          "id": "LineItemDao"
-        },
-        {
-          "id": "OrderAction"
+          "id": "PersonRepository"
         }
       ],
-      "Banner Service": [
+      "Loan Management Service": [
         {
-          "id": "BannerData"
+          "id": "LoanController"
         },
         {
-          "id": "BannerDataDao"
+          "id": "LoanService"
+        },
+        {
+          "id": "Loan"
+        },
+        {
+          "id": "LoanRepository"
         }
       ],
-      "Sequence Service": [
+      "Database Migration Service": [
         {
-          "id": "Sequence"
+          "id": "FlywayController"
         },
         {
-          "id": "SequenceDao"
-        }
-      ],
-      "Database Initialization Service": [
-        {
-          "id": "DatabaseInitializer"
-        }
-      ],
-      "Web Service": [
-        {
-          "id": "PetStoreController"
+          "id": "FlywayConfig"
         },
         {
-          "id": "Response"
+          "id": "MigrationService"
         },
         {
-          "id": "ResponseFacade"
+          "id": "TrainingSchemaService"
+        },
+        {
+          "id": "DatabaseMetadataService"
         }
       ],
       "Shared Infrastructure Service": [
         {
-          "id": "BaseAction"
+          "id": "DemoApplication"
         },
         {
-          "id": "JpetstoreApplication"
+          "id": "DemoController"
+        },
+        {
+          "id": "HomeController"
+        },
+        {
+          "id": "MathController"
+        },
+        {
+          "id": "WebConfig"
+        },
+        {
+          "id": "WebResponseHandler"
         }
       ]
     }

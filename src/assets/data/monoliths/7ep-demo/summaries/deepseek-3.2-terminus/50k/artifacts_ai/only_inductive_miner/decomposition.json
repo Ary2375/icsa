@@ -1,74 +1,83 @@
 {
   "tool": {
     "decomposition": {
-      "Account Service": [
+      "Authentication Service": [
         {
-          "id": "Account"
+          "id": "User"
         },
         {
-          "id": "Profile"
+          "id": "UserRepository"
         },
         {
-          "id": "Signon"
+          "id": "UserService"
+        },
+        {
+          "id": "AuthController"
+        },
+        {
+          "id": "SecurityConfig"
         }
       ],
-      "Catalog Service": [
+      "Library Service": [
         {
-          "id": "Product"
+          "id": "Person"
         },
         {
-          "id": "Category"
+          "id": "Book"
         },
         {
-          "id": "Item"
+          "id": "BookRepository"
         },
         {
-          "id": "Supplier"
+          "id": "BookService"
+        },
+        {
+          "id": "BookController"
+        },
+        {
+          "id": "Borrower"
+        },
+        {
+          "id": "BorrowerRepository"
+        },
+        {
+          "id": "BorrowerService"
+        },
+        {
+          "id": "BorrowerController"
+        },
+        {
+          "id": "Loan"
+        },
+        {
+          "id": "LoanRepository"
+        },
+        {
+          "id": "LoanService"
+        },
+        {
+          "id": "LoanController"
         }
       ],
-      "Inventory Service": [
+      "Database Migration Service": [
         {
-          "id": "Inventory"
-        }
-      ],
-      "Order Service": [
-        {
-          "id": "Orders"
+          "id": "FlywayController"
         },
         {
-          "id": "OrderStatus"
+          "id": "FlywayConfig"
+        }
+      ],
+      "Math and Web Service": [
+        {
+          "id": "DemoController"
         },
         {
-          "id": "LineItem"
-        },
-        {
-          "id": "Sequence"
-        }
-      ],
-      "Banner Service": [
-        {
-          "id": "BannerData"
-        }
-      ],
-      "Cargo Service": [
-        {
-          "id": "CargoController"
-        }
-      ],
-      "JPetStore Web Service": [
-        {
-          "id": "JpetstoreController"
+          "id": "HomeController"
         }
       ],
       "Shared Infrastructure Service": [
         {
-          "id": "DataSource"
-        },
-        {
-          "id": "Response"
-        },
-        {
-          "id": "ResponseFacade"
+          "id": "DemoApplication"
         }
       ]
     }

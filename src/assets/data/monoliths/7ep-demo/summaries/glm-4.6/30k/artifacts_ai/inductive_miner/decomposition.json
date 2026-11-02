@@ -59,10 +59,10 @@
           "id": "Borrower"
         },
         {
-          "id": "Loan"
+          "id": "LibraryActionResults"
         },
         {
-          "id": "LibraryActionResults"
+          "id": "Loan"
         }
       ],
       "Mathematics Service": [
@@ -100,7 +100,7 @@
           "id": "CartesianProduct"
         }
       ],
-      "Expense Calculator Service": [
+      "Expense Calculation Service": [
         {
           "id": "AlcoholCalculator"
         },
@@ -111,7 +111,7 @@
           "id": "DinnerPrices"
         }
       ],
-      "Persistence and Database Service": [
+      "Persistence Service": [
         {
           "id": "IPersistenceLayer"
         },
@@ -142,10 +142,10 @@
       ],
       "Shared Utilities Service": [
         {
-          "id": "StringUtils"
+          "id": "ServletUtils"
         },
         {
-          "id": "ServletUtils"
+          "id": "StringUtils"
         },
         {
           "id": "CheckUtils"

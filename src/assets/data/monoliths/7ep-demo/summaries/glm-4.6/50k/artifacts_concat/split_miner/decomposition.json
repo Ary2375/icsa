@@ -6,16 +6,13 @@
           "id": "LoginServlet"
         },
         {
-          "id": "RegisterServlet"
-        },
-        {
           "id": "LoginUtils"
         },
         {
-          "id": "RegistrationUtils"
+          "id": "RegisterServlet"
         },
         {
-          "id": "User"
+          "id": "RegistrationUtils"
         },
         {
           "id": "PasswordResult"
@@ -28,9 +25,21 @@
         },
         {
           "id": "RegistrationStatusEnums"
+        },
+        {
+          "id": "User"
         }
       ],
       "Library Service": [
+        {
+          "id": "LibraryBookListAvailableServlet"
+        },
+        {
+          "id": "LibraryBookListSearchServlet"
+        },
+        {
+          "id": "LibraryBorrowerListSearchServlet"
+        },
         {
           "id": "LibraryLendServlet"
         },
@@ -39,15 +48,6 @@
         },
         {
           "id": "LibraryRegisterBorrowerServlet"
-        },
-        {
-          "id": "LibraryBookListSearchServlet"
-        },
-        {
-          "id": "LibraryBookListAvailableServlet"
-        },
-        {
-          "id": "LibraryBorrowerListSearchServlet"
         },
         {
           "id": "LibraryUtils"
@@ -70,19 +70,19 @@
           "id": "MathServlet"
         },
         {
-          "id": "FibServlet"
-        },
-        {
-          "id": "AckServlet"
-        },
-        {
           "id": "Calculator"
+        },
+        {
+          "id": "FibServlet"
         },
         {
           "id": "Fibonacci"
         },
         {
           "id": "FibonacciIterative"
+        },
+        {
+          "id": "AckServlet"
         },
         {
           "id": "Ackermann"
@@ -101,9 +101,6 @@
         }
       ],
       "Persistence Service": [
-        {
-          "id": "DbServlet"
-        },
         {
           "id": "IPersistenceLayer"
         },
@@ -124,6 +121,9 @@
         },
         {
           "id": "NotImplementedException"
+        },
+        {
+          "id": "DbServlet"
         }
       ],
       "Web Infrastructure Service": [
@@ -145,7 +145,7 @@
           "id": "AssertionException"
         }
       ],
-      "Expense Management Service": [
+      "Expense Calculation Service": [
         {
           "id": "AlcoholCalculator"
         },

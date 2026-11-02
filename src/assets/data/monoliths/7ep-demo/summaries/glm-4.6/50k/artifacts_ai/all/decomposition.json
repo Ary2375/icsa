@@ -6,10 +6,10 @@
           "id": "LoginServlet"
         },
         {
-          "id": "LoginUtils"
+          "id": "RegisterServlet"
         },
         {
-          "id": "RegisterServlet"
+          "id": "LoginUtils"
         },
         {
           "id": "RegistrationUtils"
@@ -32,7 +32,13 @@
       ],
       "Library Management Service": [
         {
-          "id": "LibraryBookListAvailableServlet"
+          "id": "LibraryRegisterBookServlet"
+        },
+        {
+          "id": "LibraryRegisterBorrowerServlet"
+        },
+        {
+          "id": "LibraryLendServlet"
         },
         {
           "id": "LibraryBookListSearchServlet"
@@ -41,13 +47,7 @@
           "id": "LibraryBorrowerListSearchServlet"
         },
         {
-          "id": "LibraryLendServlet"
-        },
-        {
-          "id": "LibraryRegisterBookServlet"
-        },
-        {
-          "id": "LibraryRegisterBorrowerServlet"
+          "id": "LibraryBookListAvailableServlet"
         },
         {
           "id": "LibraryUtils"
@@ -59,10 +59,10 @@
           "id": "Borrower"
         },
         {
-          "id": "LibraryActionResults"
+          "id": "Loan"
         },
         {
-          "id": "Loan"
+          "id": "LibraryActionResults"
         }
       ],
       "Mathematics Service": [
@@ -100,32 +100,9 @@
           "id": "CartesianProduct"
         }
       ],
-      "Expense Calculation Service": [
-        {
-          "id": "AlcoholCalculator"
-        },
-        {
-          "id": "AlcoholResult"
-        },
-        {
-          "id": "DinnerPrices"
-        }
-      ],
       "Persistence Service": [
         {
-          "id": "DbServlet"
-        },
-        {
-          "id": "EmptyDataSource"
-        },
-        {
           "id": "IPersistenceLayer"
-        },
-        {
-          "id": "NotImplementedException"
-        },
-        {
-          "id": "ParameterObject"
         },
         {
           "id": "PersistenceLayer"
@@ -134,7 +111,19 @@
           "id": "SqlData"
         },
         {
+          "id": "ParameterObject"
+        },
+        {
           "id": "SqlRuntimeException"
+        },
+        {
+          "id": "EmptyDataSource"
+        },
+        {
+          "id": "NotImplementedException"
+        },
+        {
+          "id": "DbServlet"
         },
         {
           "id": "WebAppListener"
@@ -152,6 +141,17 @@
         },
         {
           "id": "AssertionException"
+        }
+      ],
+      "Expense Calculation Service": [
+        {
+          "id": "AlcoholCalculator"
+        },
+        {
+          "id": "AlcoholResult"
+        },
+        {
+          "id": "DinnerPrices"
         }
       ]
     }

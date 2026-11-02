@@ -15,6 +15,9 @@
           "id": "RegistrationUtils"
         },
         {
+          "id": "User"
+        },
+        {
           "id": "PasswordResult"
         },
         {
@@ -25,9 +28,6 @@
         },
         {
           "id": "RegistrationStatusEnums"
-        },
-        {
-          "id": "User"
         }
       ],
       "Library Management Service": [
@@ -100,23 +100,12 @@
           "id": "CartesianProduct"
         }
       ],
-      "Expense Calculation Service": [
-        {
-          "id": "AlcoholCalculator"
-        },
-        {
-          "id": "AlcoholResult"
-        },
-        {
-          "id": "DinnerPrices"
-        }
-      ],
       "Persistence Service": [
         {
-          "id": "PersistenceLayer"
+          "id": "IPersistenceLayer"
         },
         {
-          "id": "IPersistenceLayer"
+          "id": "PersistenceLayer"
         },
         {
           "id": "SqlData"
@@ -125,10 +114,10 @@
           "id": "ParameterObject"
         },
         {
-          "id": "SqlRuntimeException"
+          "id": "EmptyDataSource"
         },
         {
-          "id": "EmptyDataSource"
+          "id": "SqlRuntimeException"
         },
         {
           "id": "NotImplementedException"
@@ -138,6 +127,17 @@
         },
         {
           "id": "WebAppListener"
+        }
+      ],
+      "Expense Calculation Service": [
+        {
+          "id": "AlcoholCalculator"
+        },
+        {
+          "id": "AlcoholResult"
+        },
+        {
+          "id": "DinnerPrices"
         }
       ],
       "Shared Utilities Service": [

@@ -145,4 +145,56 @@ describe('ResultsService', () => {
       'MONO2MICRO (natural)',
     ]);
   });
+
+  it('keeps only the sections and columns the site uses', () => {
+    let loaded: Result[] = [];
+    service.getResults().subscribe(results => loaded = results);
+    const row = { 'Case Study': '7ep-demo', Tool: 'LLM: Glm 46', Strategy: '30k_ai', CiD: 1, 'Unused column': 'x' };
+
+    http.expectOne('assets/data/results.json').flush({
+      llm_comparison: { '30k_ai': [row] },
+      raw_data: [row, row, row],
+      other_section: { x: [row] },
+    });
+
+    expect(loaded).toHaveLength(1);
+    expect(Object.keys(loaded[0])).not.toContain('Unused column');
+    expect(loaded[0]).toMatchObject({ caseStudy: '7ep-demo', tool: 'LLM: Glm 46', CiD: 1, partitions: null });
+  });
+
+  it('drops the models, strategies and tools the site does not show', () => {
+    let loaded: Result[] = [];
+    service.getResults().subscribe(results => loaded = results);
+    const row = (tool: string, strategy: string, type = 'LLM') =>
+      ({ 'Case Study': '7ep-demo', Tool: tool, Strategy: strategy, Type: type });
+
+    http.expectOne('assets/data/results.json').flush({
+      llm_comparison: {
+        kept: [row('LLM: Deepseek 32 Terminus', '30k_ai_dfg'), row('LLM: Glm 46', '80k_concat')],
+        models: [row('LLM: Gemini 25 Pro', '30k_ai'), row('LLM: Gpt 5', '30k_ai')],
+        strategies: [row('LLM: Glm 46', 'Hierarchical'), row('LLM: Glm 46', 'zero_shot')],
+      },
+      variant_comparison: {
+        literature: [row('HyDec', 'n/a', 'Traditional'), row('NEW_TOOL', 'default', 'Traditional')],
+        duplicated: [row('LLM: Glm 46', '30k_ai')],
+      },
+    });
+
+    expect(loaded.map(result => `${result.tool} | ${result.strategy}`)).toEqual([
+      'LLM: Deepseek 32 Terminus | 30k_ai_dfg',
+      'LLM: Glm 46 | 80k_concat',
+      'HyDec | n/a',
+    ]);
+  });
+
+  it('names the row and column of an invalid value', () => {
+    let error: Error | undefined;
+    service.getResults().subscribe({ error: e => error = e });
+
+    http.expectOne('assets/data/results.json').flush({
+      llm_comparison: { x: [{ 'Case Study': '7ep-demo', Tool: 'LLM: Glm 46', Strategy: '30k_ai', CiD: 'high' }] },
+    });
+
+    expect(error?.message).toContain('"CiD" for 7ep-demo / LLM: Glm 46 / 30k_ai');
+  });
 });

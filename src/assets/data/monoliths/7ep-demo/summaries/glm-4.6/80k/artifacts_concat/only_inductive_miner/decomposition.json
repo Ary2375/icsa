@@ -1,117 +1,80 @@
 {
   "tool": {
     "decomposition": {
-      "Account Management Service": [
+      "User Management Service": [
         {
-          "id": "Account"
+          "id": "LoginController"
         },
         {
-          "id": "Signon"
+          "id": "RegisterController"
         },
         {
-          "id": "Profile"
+          "id": "User"
         },
         {
-          "id": "BannerData"
-        },
-        {
-          "id": "AccountMapper"
-        },
-        {
-          "id": "SignonMapper"
-        },
-        {
-          "id": "ProfileMapper"
-        },
-        {
-          "id": "BannerDataMapper"
-        },
-        {
-          "id": "AccountService"
-        },
-        {
-          "id": "AccountController"
+          "id": "UserRepository"
         }
       ],
-      "Catalog Service": [
+      "Library Management Service": [
         {
-          "id": "Category"
+          "id": "BookController"
         },
         {
-          "id": "Product"
+          "id": "BorrowerController"
         },
         {
-          "id": "Item"
+          "id": "LendController"
         },
         {
-          "id": "Supplier"
+          "id": "Book"
         },
         {
-          "id": "Inventory"
+          "id": "Borrower"
         },
         {
-          "id": "CategoryMapper"
+          "id": "Loan"
         },
         {
-          "id": "ProductMapper"
+          "id": "BookRepository"
         },
         {
-          "id": "ItemMapper"
+          "id": "BorrowerRepository"
         },
         {
-          "id": "CatalogService"
-        },
-        {
-          "id": "CatalogController"
+          "id": "LoanRepository"
         }
       ],
-      "Order Management Service": [
+      "Database Migration Service": [
         {
-          "id": "Order"
+          "id": "FlywayController"
         },
         {
-          "id": "LineItem"
+          "id": "MigrationManager"
         },
         {
-          "id": "OrderStatus"
-        },
-        {
-          "id": "Sequence"
-        },
-        {
-          "id": "Cart"
-        },
-        {
-          "id": "CartItem"
-        },
-        {
-          "id": "OrderMapper"
-        },
-        {
-          "id": "LineItemMapper"
-        },
-        {
-          "id": "SequenceMapper"
-        },
-        {
-          "id": "OrderService"
-        },
-        {
-          "id": "CartController"
-        },
-        {
-          "id": "OrderController"
+          "id": "SchemaInitializer"
         }
       ],
-      "Web Gateway and Shared Infrastructure Service": [
+      "Math Service": [
+        {
+          "id": "MathController"
+        },
+        {
+          "id": "MathService"
+        }
+      ],
+      "Shared Infrastructure Service": [
+        {
+          "id": "DemoController"
+        },
+        {
+          "id": "DemoApplication"
+        },
         {
           "id": "Response"
         },
         {
-          "id": "ResponseFacade"
-        },
-        {
-          "id": "Datasource"
+          "id": "DatabaseUtil"
         }
       ]
     }

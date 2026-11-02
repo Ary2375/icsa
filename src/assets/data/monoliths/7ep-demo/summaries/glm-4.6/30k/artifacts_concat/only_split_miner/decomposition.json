@@ -1,79 +1,128 @@
 {
   "tool": {
     "decomposition": {
-      "Account Management Service": [
+      "User Management Service": [
         {
-          "id": "Account"
+          "id": "POST /demo/register"
         },
         {
-          "id": "AccountMapper"
+          "id": "POST /demo/login"
         },
         {
-          "id": "AccountService"
+          "id": "SELECT auth.user"
         },
         {
-          "id": "AccountAction"
+          "id": "INSERT auth.user"
+        },
+        {
+          "id": "UPDATE auth.user"
+        },
+        {
+          "id": "CREATE table auth.USER"
         }
       ],
-      "Product Catalog Service": [
+      "Library Management Service": [
         {
-          "id": "Category"
+          "id": "POST /demo/registerbook"
         },
         {
-          "id": "Product"
+          "id": "POST /demo/registerborrower"
         },
         {
-          "id": "Item"
+          "id": "POST /demo/lend"
         },
         {
-          "id": "CategoryMapper"
+          "id": "GET /demo/listavailable"
         },
         {
-          "id": "ProductMapper"
+          "id": "GET /demo/borrower"
         },
         {
-          "id": "ItemMapper"
+          "id": "SELECT library.book"
         },
         {
-          "id": "CatalogService"
+          "id": "INSERT library.book"
         },
         {
-          "id": "CatalogAction"
+          "id": "SELECT library.borrower"
+        },
+        {
+          "id": "INSERT library.borrower"
+        },
+        {
+          "id": "INSERT library.loan"
+        },
+        {
+          "id": "CREATE table library.PERSON"
+        },
+        {
+          "id": "DROP table library.person"
+        },
+        {
+          "id": "CREATE table library.BORROWER"
+        },
+        {
+          "id": "CREATE table library.BOOK"
+        },
+        {
+          "id": "CREATE table library.LOAN"
         }
       ],
-      "Order Management Service": [
+      "Database Migration Service": [
         {
-          "id": "Order"
+          "id": "GET /demo/flyway"
         },
         {
-          "id": "LineItem"
+          "id": "SELECT \"ADMINISTRATIVE\".\"flyway_schema_history\""
         },
         {
-          "id": "Sequence"
+          "id": "CREATE TABLE \"ADMINISTRATIVE\".\"flyway_schema_history\""
         },
         {
-          "id": "Cart"
+          "id": "INSERT \"ADMINISTRATIVE\".\"flyway_schema_history\""
         },
         {
-          "id": "CartItem"
+          "id": "SELECT INFORMATION_SCHEMA.SCHEMATA"
         },
         {
-          "id": "OrderMapper"
+          "id": "SELECT INFORMATION_SCHEMA.SETTINGS"
         },
         {
-          "id": "LineItemMapper"
+          "id": "SELECT training"
         },
         {
-          "id": "SequenceMapper"
+          "id": "CREATE training"
         },
         {
-          "id": "OrderService"
+          "id": "DROP training"
         },
         {
-          "id": "OrderAction"
+          "id": "CREATE INDEX training"
         },
         {
-          "id": "CartAction"
+          "id": "CALL training.SCHEMA"
+        },
+        {
+          "id": "training"
+        }
+      ],
+      "Math Service": [
+        {
+          "id": "POST /demo/math"
+        }
+      ],
+      "Shared Web Infrastructure Service": [
+        {
+          "id": "GET"
+        },
+        {
+          "id": "GET /demo/*"
+        },
+        {
+          "id": "Response.sendRedirect"
+        },
+        {
+          "id": "Response.sendError"
         }
       ]
     }

@@ -67,22 +67,7 @@
       ],
       "Mathematics Service": [
         {
-          "id": "MathServlet"
-        },
-        {
-          "id": "FibServlet"
-        },
-        {
           "id": "AckServlet"
-        },
-        {
-          "id": "Calculator"
-        },
-        {
-          "id": "Fibonacci"
-        },
-        {
-          "id": "FibonacciIterative"
         },
         {
           "id": "Ackermann"
@@ -91,10 +76,25 @@
           "id": "AckermannIterative"
         },
         {
-          "id": "TailRecursive"
+          "id": "Calculator"
+        },
+        {
+          "id": "FibServlet"
+        },
+        {
+          "id": "Fibonacci"
+        },
+        {
+          "id": "FibonacciIterative"
         },
         {
           "id": "FunctionalField"
+        },
+        {
+          "id": "MathServlet"
+        },
+        {
+          "id": "TailRecursive"
         },
         {
           "id": "CartesianProduct"
@@ -111,10 +111,7 @@
           "id": "DinnerPrices"
         }
       ],
-      "Persistence Service": [
-        {
-          "id": "DbServlet"
-        },
+      "Data Persistence and Administration Service": [
         {
           "id": "IPersistenceLayer"
         },
@@ -135,9 +132,18 @@
         },
         {
           "id": "NotImplementedException"
+        },
+        {
+          "id": "DbServlet"
+        },
+        {
+          "id": "WebAppListener"
         }
       ],
-      "Shared Infrastructure Service": [
+      "Shared Utilities Service": [
+        {
+          "id": "AssertionException"
+        },
         {
           "id": "CheckUtils"
         },
@@ -146,12 +152,6 @@
         },
         {
           "id": "StringUtils"
-        },
-        {
-          "id": "AssertionException"
-        },
-        {
-          "id": "WebAppListener"
         }
       ]
     }

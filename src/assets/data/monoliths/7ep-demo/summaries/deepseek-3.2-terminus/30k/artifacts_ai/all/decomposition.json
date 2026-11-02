@@ -25,6 +25,9 @@
         },
         {
           "id": "RegistrationStatusEnums"
+        },
+        {
+          "id": "User"
         }
       ],
       "Library Management Service": [
@@ -50,10 +53,19 @@
           "id": "LibraryUtils"
         },
         {
+          "id": "Book"
+        },
+        {
+          "id": "Borrower"
+        },
+        {
           "id": "LibraryActionResults"
+        },
+        {
+          "id": "Loan"
         }
       ],
-      "Mathematics Service": [
+      "Mathematics Computation Service": [
         {
           "id": "AckServlet"
         },
@@ -128,21 +140,7 @@
           "id": "WebAppListener"
         }
       ],
-      "Shared Domain Service": [
-        {
-          "id": "User"
-        },
-        {
-          "id": "Book"
-        },
-        {
-          "id": "Borrower"
-        },
-        {
-          "id": "Loan"
-        }
-      ],
-      "Shared Utility Service": [
+      "Shared Utilities Service": [
         {
           "id": "AssertionException"
         },

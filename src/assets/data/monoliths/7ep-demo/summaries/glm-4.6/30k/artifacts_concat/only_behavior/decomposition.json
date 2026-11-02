@@ -1,7 +1,36 @@
 {
   "tool": {
     "decomposition": {
-      "User Authentication Service": [
+      "Library Management Service": [
+        {
+          "id": "LibraryRegisterBookServlet"
+        },
+        {
+          "id": "LibraryRegisterBorrowerServlet"
+        },
+        {
+          "id": "LibraryLendServlet"
+        },
+        {
+          "id": "LibraryBookListAvailableServlet"
+        },
+        {
+          "id": "LibraryBorrowerListSearchServlet"
+        },
+        {
+          "id": "LibraryUtils"
+        },
+        {
+          "id": "Book"
+        },
+        {
+          "id": "Borrower"
+        },
+        {
+          "id": "Loan"
+        }
+      ],
+      "Authentication Service": [
         {
           "id": "LoginServlet"
         },
@@ -13,35 +42,22 @@
         },
         {
           "id": "RegistrationUtils"
+        },
+        {
+          "id": "User"
         }
       ],
-      "Library Management Service": [
+      "Database Administration Service": [
         {
-          "id": "LibraryBookListAvailableServlet"
-        },
-        {
-          "id": "LibraryBorrowerListSearchServlet"
-        },
-        {
-          "id": "LibraryLendServlet"
-        },
-        {
-          "id": "LibraryRegisterBookServlet"
-        },
-        {
-          "id": "LibraryRegisterBorrowerServlet"
-        },
-        {
-          "id": "LibraryUtils"
-        },
-        {
-          "id": "Book"
-        },
-        {
-          "id": "Borrower"
+          "id": "DbServlet"
         }
       ],
-      "Persistence Service": [
+      "Math Calculator Service": [
+        {
+          "id": "MathServlet"
+        }
+      ],
+      "Shared Infrastructure Service": [
         {
           "id": "PersistenceLayer"
         },
@@ -52,11 +68,6 @@
           "id": "ParameterObject"
         },
         {
-          "id": "DbServlet"
-        }
-      ],
-      "Shared Utilities Service": [
-        {
           "id": "StringUtils"
         },
         {
@@ -64,9 +75,6 @@
         },
         {
           "id": "ServletUtils"
-        },
-        {
-          "id": "MathServlet"
         }
       ]
     }

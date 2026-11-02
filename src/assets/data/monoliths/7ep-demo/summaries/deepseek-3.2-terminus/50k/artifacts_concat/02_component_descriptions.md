@@ -1,0 +1,13 @@
+| Component Name | Responsibility | Interfaces (key endpoints or methods) | Depends On | Technologies |
+|----------------|----------------|--------------------------------------|------------|-------------|
+| Authentication Module | User management, registration, and authentication | `POST /register`, `POST /login`, `processRegistration()`, `isUserRegistered()`, `isUserInDatabase()` | Persistence Layer, Helper Utilities | Java Servlets, SHA-256 hashing, Nbvcxz password entropy, JSP |
+| Library Management Module | Book/borrower management, lending operations, search | `POST /registerbook`, `POST /registerborrower`, `POST /lend`, `GET /book`, `GET /borrower`, `GET /listavailable`, `lendBook()`, `registerBook()`, `registerBorrower()` | Persistence Layer, Helper Utilities | Java Servlets, JDBC, JSP, JSON formatting |
+| Mathematics Module | Mathematical computations and algorithms | `POST /math`, `POST /fibonacci`, `POST /ackermann`, `calculate()` (multiple implementations) | Helper Utilities | Java Servlets, BigInteger arithmetic, Recursive algorithms |
+| Expenses Module | Alcohol and dinner expense calculations | `calculate()` methods in AlcoholCalculator, DinnerPrices data structure | None | Java, Basic arithmetic operations |
+| Cartesian Product Module | Set combination calculations | `CartesianProduct.compute()` (incomplete implementation) | None | Java, Set operations |
+| Auto Insurance Desktop Application | Auto insurance premium calculation and UI | Socket commands: `set age/claims/label`, `get age/claims/label`, `click calculate`, `quit` | None | Java Swing, Socket server (port 8000), Text-based protocol |
+| Persistence Layer | Database abstraction, data access operations | `areCredentialsValid()`, `searchForUserByName()`, `searchBooksByTitle()`, `createLoan()`, `cleanDatabase()`, `migrateDatabase()` | Database, Helper Utilities | JDBC, H2 Database, Flyway migrations, Micro-ORM pattern |
+| Helper Utilities | Common utilities, validation, string manipulation | `ServletUtils.forwardToResult()`, `StringUtils.escapeForJson()`, `CheckUtils.checkNotNull()` | None | Apache Commons Lang, Java Servlets API |
+| Database | Data storage and retrieval | H2 JDBC connection, SQL queries | None | H2 Database (embedded/file), Flyway migration tool |
+| Web Infrastructure | Request handling, application lifecycle | Servlet container endpoints, `WebAppListener` | All business modules | Tomcat, Java Servlets, JSP, Gretty plugin |
+| Testing Framework | Comprehensive test coverage | JUnit tests, Mockito mocks, Cucumber BDD, Selenium UI tests | All application components | JUnit, Mockito, Cucumber, Selenium, Mocha, Pytest, NUnit |

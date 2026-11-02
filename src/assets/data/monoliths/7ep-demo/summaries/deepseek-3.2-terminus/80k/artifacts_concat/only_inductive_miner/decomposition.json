@@ -1,99 +1,130 @@
 {
   "tool": {
     "decomposition": {
-      "Account Service": [
+      "Authentication Service": [
         {
-          "id": "Account"
+          "id": "AuthController"
         },
         {
-          "id": "Profile"
+          "id": "AuthService"
         },
         {
-          "id": "Signon"
+          "id": "AuthUserRepository"
         },
         {
-          "id": "AccountMapper"
+          "id": "User"
         },
         {
-          "id": "ProfileMapper"
+          "id": "LoginController"
         },
         {
-          "id": "SignonMapper"
-        },
-        {
-          "id": "AccountActionBean"
+          "id": "RegisterController"
         }
       ],
-      "Catalog Service": [
+      "Book Catalog Service": [
         {
-          "id": "BannerData"
+          "id": "BookController"
         },
         {
-          "id": "Category"
+          "id": "BookService"
         },
         {
-          "id": "Product"
+          "id": "BookRepository"
         },
         {
-          "id": "Item"
+          "id": "Book"
         },
         {
-          "id": "Supplier"
+          "id": "RegisterBookController"
         },
         {
-          "id": "BannerDataMapper"
-        },
-        {
-          "id": "CategoryMapper"
-        },
-        {
-          "id": "ProductMapper"
-        },
-        {
-          "id": "ItemMapper"
-        },
-        {
-          "id": "SupplierMapper"
-        },
-        {
-          "id": "CatalogActionBean"
+          "id": "ListAvailableController"
         }
       ],
-      "Order Service": [
+      "Borrower Management Service": [
         {
-          "id": "Order"
+          "id": "BorrowerController"
         },
         {
-          "id": "OrderStatus"
+          "id": "BorrowerService"
         },
         {
-          "id": "LineItem"
+          "id": "BorrowerRepository"
         },
         {
-          "id": "Sequence"
+          "id": "Borrower"
         },
         {
-          "id": "OrderMapper"
-        },
-        {
-          "id": "OrderStatusMapper"
-        },
-        {
-          "id": "LineItemMapper"
-        },
-        {
-          "id": "SequenceMapper"
-        },
-        {
-          "id": "OrderActionBean"
+          "id": "RegisterBorrowerController"
         }
       ],
-      "Inventory Service": [
+      "Lending Service": [
         {
-          "id": "Inventory"
+          "id": "LoanController"
         },
         {
-          "id": "InventoryMapper"
+          "id": "LoanService"
+        },
+        {
+          "id": "LoanRepository"
+        },
+        {
+          "id": "Loan"
+        },
+        {
+          "id": "LendController"
+        }
+      ],
+      "Database Migration Service": [
+        {
+          "id": "FlywayController"
+        },
+        {
+          "id": "FlywayService"
+        },
+        {
+          "id": "FlywaySchemaHistoryRepository"
+        },
+        {
+          "id": "TrainingSchemaRepository"
+        },
+        {
+          "id": "DatabaseMetadataRepository"
+        },
+        {
+          "id": "AuthMigrationRepository"
+        },
+        {
+          "id": "BookMigrationRepository"
+        },
+        {
+          "id": "BorrowerMigrationRepository"
+        },
+        {
+          "id": "LoanMigrationRepository"
+        },
+        {
+          "id": "PersonMigrationRepository"
+        }
+      ],
+      "Web and Common Service": [
+        {
+          "id": "DemoApplication"
+        },
+        {
+          "id": "HomeController"
+        },
+        {
+          "id": "MathController"
+        },
+        {
+          "id": "DemoWildcardController"
+        },
+        {
+          "id": "CommonController"
+        },
+        {
+          "id": "Response"
         }
       ]
     }

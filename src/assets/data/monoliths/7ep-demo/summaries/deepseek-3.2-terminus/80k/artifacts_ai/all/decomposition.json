@@ -111,21 +111,12 @@
           "id": "DinnerPrices"
         }
       ],
-      "Persistence and Database Service": [
+      "Persistence Service": [
         {
           "id": "DbServlet"
         },
         {
-          "id": "EmptyDataSource"
-        },
-        {
           "id": "IPersistenceLayer"
-        },
-        {
-          "id": "NotImplementedException"
-        },
-        {
-          "id": "ParameterObject"
         },
         {
           "id": "PersistenceLayer"
@@ -134,13 +125,19 @@
           "id": "SqlData"
         },
         {
+          "id": "ParameterObject"
+        },
+        {
           "id": "SqlRuntimeException"
         },
         {
-          "id": "WebAppListener"
+          "id": "EmptyDataSource"
+        },
+        {
+          "id": "NotImplementedException"
         }
       ],
-      "Shared Utilities Service": [
+      "Shared Infrastructure Service": [
         {
           "id": "AssertionException"
         },
@@ -152,6 +149,9 @@
         },
         {
           "id": "StringUtils"
+        },
+        {
+          "id": "WebAppListener"
         }
       ]
     }

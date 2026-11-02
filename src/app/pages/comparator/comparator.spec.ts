@@ -251,10 +251,10 @@ describe('Comparator page', () => {
 
     it('reports a method without a configured data folder', () => {
       publish(
-        { variantRows: [{ ...row('7ep-demo', 'default', 'UNKNOWN'), Type: 'Traditional' }] },
+        { variantRows: [{ ...row('7ep-demo', 'not/valid', 'MONO2MICRO'), Type: 'Traditional' }] },
         false,
       );
-      expect(component.error()).toContain('No data folder is configured for 7ep-demo / UNKNOWN');
+      expect(component.error()).toContain('No data folder is configured for 7ep-demo / MONO2MICRO');
       expect(component.experiments()).toEqual([]);
     });
 
@@ -615,9 +615,10 @@ describe('Comparator page', () => {
       expect(component.experiments()).toEqual([]);
     });
 
-    it('reports an unsupported strategy name, and duplicate experiments', () => {
-      publish({ rows: [row('7ep-demo', 'hierarchical')] }, false);
-      expect(component.error()).toContain('Unsupported experiment strategy: hierarchical');
+    it('ignores runs the site does not show, and reports duplicate experiments', () => {
+      publish({ rows: [row('7ep-demo', 'hierarchical'), row('7ep-demo', '30k_ai')] });
+      expect(component.error()).toBe('');
+      expect(component.experiments()).toHaveLength(1);
       component.load();
       http
         .expectOne(RESULTS)

@@ -1,15 +1,15 @@
 {
   "tool": {
     "decomposition": {
-      "Authentication Service": [
+      "Authentication and Registration Service": [
         {
           "id": "LoginServlet"
         },
         {
-          "id": "RegisterServlet"
+          "id": "LoginUtils"
         },
         {
-          "id": "LoginUtils"
+          "id": "RegisterServlet"
         },
         {
           "id": "RegistrationUtils"
@@ -47,17 +47,15 @@
           "id": "Loan"
         }
       ],
-      "Math Service": [
+      "Mathematics Service": [
         {
           "id": "MathServlet"
         }
       ],
-      "Database Administration Service": [
+      "Persistence and Database Service": [
         {
           "id": "DbServlet"
-        }
-      ],
-      "Shared Infrastructure Service": [
+        },
         {
           "id": "PersistenceLayer"
         },
@@ -66,15 +64,17 @@
         },
         {
           "id": "ParameterObject"
-        },
+        }
+      ],
+      "Shared Utility Service": [
         {
-          "id": "ServletUtils"
+          "id": "CheckUtils"
         },
         {
           "id": "StringUtils"
         },
         {
-          "id": "CheckUtils"
+          "id": "ServletUtils"
         }
       ]
     }

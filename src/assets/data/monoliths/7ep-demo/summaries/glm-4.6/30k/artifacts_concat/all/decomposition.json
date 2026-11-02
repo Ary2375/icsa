@@ -15,9 +15,6 @@
           "id": "RegistrationUtils"
         },
         {
-          "id": "User"
-        },
-        {
           "id": "PasswordResult"
         },
         {
@@ -28,6 +25,9 @@
         },
         {
           "id": "RegistrationStatusEnums"
+        },
+        {
+          "id": "User"
         }
       ],
       "Library Management Service": [
@@ -59,10 +59,10 @@
           "id": "Borrower"
         },
         {
-          "id": "Loan"
+          "id": "LibraryActionResults"
         },
         {
-          "id": "LibraryActionResults"
+          "id": "Loan"
         }
       ],
       "Mathematics Service": [

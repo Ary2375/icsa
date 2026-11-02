@@ -113,7 +113,7 @@
           "id": "CartesianProduct"
         }
       ],
-      "Persistence Service": [
+      "Data Persistence Service": [
         {
           "id": "DbServlet"
         },
@@ -137,9 +137,12 @@
         },
         {
           "id": "SqlRuntimeException"
+        },
+        {
+          "id": "WebAppListener"
         }
       ],
-      "Helper Utilities Service": [
+      "Shared Infrastructure Service": [
         {
           "id": "AssertionException"
         },
@@ -151,11 +154,6 @@
         },
         {
           "id": "StringUtils"
-        }
-      ],
-      "Web Infrastructure Service": [
-        {
-          "id": "WebAppListener"
         }
       ]
     }

@@ -111,7 +111,7 @@
           "id": "DinnerPrices"
         }
       ],
-      "Persistence Service": [
+      "Persistence and Data Access Service": [
         {
           "id": "DbServlet"
         },
@@ -138,18 +138,6 @@
         },
         {
           "id": "WebAppListener"
-        },
-        {
-          "id": "Book"
-        },
-        {
-          "id": "Borrower"
-        },
-        {
-          "id": "Loan"
-        },
-        {
-          "id": "User"
         }
       ],
       "Shared Utility Service": [

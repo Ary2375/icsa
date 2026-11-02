@@ -113,7 +113,21 @@
           "id": "CartesianProduct"
         }
       ],
-      "Persistence Service": [
+      "Shared Utilities Service": [
+        {
+          "id": "AssertionException"
+        },
+        {
+          "id": "CheckUtils"
+        },
+        {
+          "id": "ServletUtils"
+        },
+        {
+          "id": "StringUtils"
+        }
+      ],
+      "Persistence and System Administration Service": [
         {
           "id": "DbServlet"
         },
@@ -137,20 +151,6 @@
         },
         {
           "id": "SqlRuntimeException"
-        }
-      ],
-      "Shared Utilities Service": [
-        {
-          "id": "AssertionException"
-        },
-        {
-          "id": "CheckUtils"
-        },
-        {
-          "id": "ServletUtils"
-        },
-        {
-          "id": "StringUtils"
         },
         {
           "id": "WebAppListener"

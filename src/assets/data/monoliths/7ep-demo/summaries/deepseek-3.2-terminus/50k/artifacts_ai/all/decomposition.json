@@ -142,7 +142,7 @@
           "id": "WebAppListener"
         }
       ],
-      "Shared Utility Service": [
+      "Shared Utilities Service": [
         {
           "id": "AssertionException"
         },

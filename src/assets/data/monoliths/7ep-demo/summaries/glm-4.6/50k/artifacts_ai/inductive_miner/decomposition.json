@@ -6,13 +6,16 @@
           "id": "LoginServlet"
         },
         {
-          "id": "LoginUtils"
-        },
-        {
           "id": "RegisterServlet"
         },
         {
+          "id": "LoginUtils"
+        },
+        {
           "id": "RegistrationUtils"
+        },
+        {
+          "id": "User"
         },
         {
           "id": "PasswordResult"
@@ -25,9 +28,6 @@
         },
         {
           "id": "RegistrationStatusEnums"
-        },
-        {
-          "id": "User"
         }
       ],
       "Library Management Service": [

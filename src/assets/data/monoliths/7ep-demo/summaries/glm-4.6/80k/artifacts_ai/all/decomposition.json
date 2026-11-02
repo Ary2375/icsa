@@ -32,15 +32,6 @@
       ],
       "Library Management Service": [
         {
-          "id": "LibraryBookListAvailableServlet"
-        },
-        {
-          "id": "LibraryBookListSearchServlet"
-        },
-        {
-          "id": "LibraryBorrowerListSearchServlet"
-        },
-        {
           "id": "LibraryLendServlet"
         },
         {
@@ -48,6 +39,15 @@
         },
         {
           "id": "LibraryRegisterBorrowerServlet"
+        },
+        {
+          "id": "LibraryBookListSearchServlet"
+        },
+        {
+          "id": "LibraryBookListAvailableServlet"
+        },
+        {
+          "id": "LibraryBorrowerListSearchServlet"
         },
         {
           "id": "LibraryUtils"
@@ -59,10 +59,10 @@
           "id": "Borrower"
         },
         {
-          "id": "LibraryActionResults"
+          "id": "Loan"
         },
         {
-          "id": "Loan"
+          "id": "LibraryActionResults"
         }
       ],
       "Mathematical Computation Service": [
@@ -70,19 +70,19 @@
           "id": "MathServlet"
         },
         {
-          "id": "Calculator"
+          "id": "FibServlet"
         },
         {
-          "id": "FibServlet"
+          "id": "AckServlet"
+        },
+        {
+          "id": "Calculator"
         },
         {
           "id": "Fibonacci"
         },
         {
           "id": "FibonacciIterative"
-        },
-        {
-          "id": "AckServlet"
         },
         {
           "id": "Ackermann"
@@ -95,38 +95,10 @@
         },
         {
           "id": "FunctionalField"
-        }
-      ],
-      "Persistence Service": [
-        {
-          "id": "DbServlet"
         },
         {
-          "id": "EmptyDataSource"
+          "id": "CartesianProduct"
         },
-        {
-          "id": "IPersistenceLayer"
-        },
-        {
-          "id": "NotImplementedException"
-        },
-        {
-          "id": "ParameterObject"
-        },
-        {
-          "id": "PersistenceLayer"
-        },
-        {
-          "id": "SqlData"
-        },
-        {
-          "id": "SqlRuntimeException"
-        },
-        {
-          "id": "WebAppListener"
-        }
-      ],
-      "Expense Management Service": [
         {
           "id": "AlcoholCalculator"
         },
@@ -137,21 +109,47 @@
           "id": "DinnerPrices"
         }
       ],
-      "Shared Utilities Service": [
+      "Persistence Service": [
         {
-          "id": "AssertionException"
+          "id": "DbServlet"
         },
         {
-          "id": "CheckUtils"
+          "id": "PersistenceLayer"
+        },
+        {
+          "id": "IPersistenceLayer"
+        },
+        {
+          "id": "SqlData"
+        },
+        {
+          "id": "ParameterObject"
+        },
+        {
+          "id": "EmptyDataSource"
+        },
+        {
+          "id": "SqlRuntimeException"
+        },
+        {
+          "id": "NotImplementedException"
+        }
+      ],
+      "Shared Infrastructure Service": [
+        {
+          "id": "StringUtils"
         },
         {
           "id": "ServletUtils"
         },
         {
-          "id": "StringUtils"
+          "id": "CheckUtils"
         },
         {
-          "id": "CartesianProduct"
+          "id": "AssertionException"
+        },
+        {
+          "id": "WebAppListener"
         }
       ]
     }
