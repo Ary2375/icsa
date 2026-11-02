@@ -43,7 +43,9 @@ export function parseThesisStrategy(
 }
 
 export function toolLabel(tool: string): string {
-  return tool === 'GROUND_TRUTH' ? 'Ground Truth' : tool.replace(/^LLM:\s*/, '');
+  if (tool === 'GROUND_TRUTH') return 'Ground Truth';
+  if (tool === 'LLM: Glm 46' || tool === 'LLM: GLM 4.6') return 'GLM 4.6';
+  return tool.replace(/^LLM:\s*/, '');
 }
 
 export function modeLabel(mode: string): string {

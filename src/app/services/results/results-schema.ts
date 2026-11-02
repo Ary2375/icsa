@@ -10,7 +10,11 @@ export type RawRow = Record<string, unknown>;
 // ---------------------------------------------------------------------------
 
 /** LLMs shown, spelled exactly as `Tool` in results.json. Add a model here to show it. */
-export const INCLUDED_LLMS: readonly string[] = ['LLM: Deepseek 32 Terminus', 'LLM: Glm 46'];
+export const INCLUDED_LLMS: readonly string[] = [
+    'LLM: Deepseek 32 Terminus',
+    'LLM: GLM 4.6',
+    'LLM: Glm 46',
+];
 
 /** State-of-the-art methods shown, spelled exactly as `Tool` in results.json. */
 export const INCLUDED_LITERATURE: readonly string[] = [

@@ -1,3 +1,5 @@
+import { toolLabel as formatToolLabel } from '../utils/experiment-selection';
+
 export const METRICS = ['CiD', 'CMod', 'BCP', 'DI', 'DTP', 'TC', 'LC', 'MoJoFM', 'c2c_cvg 10%', 'c2c_cvg 33%', 'c2c_cvg 50%'] as const;
 export type Metric = (typeof METRICS)[number];
 export type ComparisonGroup = 'llm' | 'literature';
@@ -9,11 +11,10 @@ export class Result {
     }
 
     get toolLabel(): string {
-        if (this.tool === 'GROUND_TRUTH') return 'Ground Truth';
         if (this.tool === 'MONO2MICRO' && this.comparisonGroup === 'literature') {
             return `${this.tool} (${this.strategy})`;
         }
-        return this.tool.replace(/^LLM:\s*/, '');
+        return formatToolLabel(this.tool);
     }
 
     get configLabel(): string {

@@ -76,6 +76,7 @@ describe('experiment selection', () => {
       'Behavioral models only',
     ]);
     expect(variantGroup('some_new_model')).toBe('Other');
+    expect(toolLabel('LLM: Glm 46')).toBe('GLM 4.6');
     expect(describeConfiguration('LLM: GLM 4.6', '50k', 'concat', 'dfg')).toBe(
       'GLM 4.6 · 50k · CONCAT · Static + DFG',
     );

@@ -160,6 +160,7 @@ describe('ResultsService', () => {
     expect(loaded).toHaveLength(1);
     expect(Object.keys(loaded[0])).not.toContain('Unused column');
     expect(loaded[0]).toMatchObject({ caseStudy: '7ep-demo', tool: 'LLM: Glm 46', CiD: 1, partitions: null });
+    expect(loaded[0].toolLabel).toBe('GLM 4.6');
   });
 
   it('drops the models, strategies and tools the site does not show', () => {
@@ -170,7 +171,11 @@ describe('ResultsService', () => {
 
     http.expectOne('assets/data/results.json').flush({
       llm_comparison: {
-        kept: [row('LLM: Deepseek 32 Terminus', '30k_ai_dfg'), row('LLM: Glm 46', '80k_concat')],
+        kept: [
+          row('LLM: Deepseek 32 Terminus', '30k_ai_dfg'),
+          row('LLM: Glm 46', '80k_concat'),
+          row('LLM: GLM 4.6', '50k_ai'),
+        ],
         models: [row('LLM: Gemini 25 Pro', '30k_ai'), row('LLM: Gpt 5', '30k_ai')],
         strategies: [row('LLM: Glm 46', 'Hierarchical'), row('LLM: Glm 46', 'zero_shot')],
       },
@@ -183,6 +188,7 @@ describe('ResultsService', () => {
     expect(loaded.map(result => `${result.tool} | ${result.strategy}`)).toEqual([
       'LLM: Deepseek 32 Terminus | 30k_ai_dfg',
       'LLM: Glm 46 | 80k_concat',
+      'LLM: GLM 4.6 | 50k_ai',
       'HyDec | n/a',
     ]);
   });
