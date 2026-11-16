@@ -1,0 +1,92 @@
+{
+  "tool": {
+    "decomposition": {
+      "Owner and Pet Management Service": [
+        {
+          "id": "Owner"
+        },
+        {
+          "id": "OwnerController"
+        },
+        {
+          "id": "OwnerRepository"
+        },
+        {
+          "id": "OwnerRepository$MockitoMock$tgjJxeUm"
+        },
+        {
+          "id": "OwnerCreationPersistenceIT$$Lambda$2781/0x00000277c2fd70f0"
+        },
+        {
+          "id": "Pet"
+        },
+        {
+          "id": "PetController"
+        },
+        {
+          "id": "PetTypeFormatter"
+        },
+        {
+          "id": "PetValidator"
+        }
+      ],
+      "Visit Management Service": [
+        {
+          "id": "Visit"
+        },
+        {
+          "id": "VisitController"
+        }
+      ],
+      "Veterinarian Management Service": [
+        {
+          "id": "Vet"
+        },
+        {
+          "id": "VetController"
+        },
+        {
+          "id": "VetRepository"
+        },
+        {
+          "id": "VetRepository$MockitoMock$NDds5fkr"
+        },
+        {
+          "id": "Vets"
+        }
+      ],
+      "Shared Domain and Infrastructure Service": [
+        {
+          "id": "BaseEntity"
+        },
+        {
+          "id": "NamedEntity"
+        },
+        {
+          "id": "Person"
+        },
+        {
+          "id": "CacheConfiguration"
+        },
+        {
+          "id": "CrashController"
+        },
+        {
+          "id": "MockHttpServletResponse"
+        },
+        {
+          "id": "PetClinicApplication"
+        },
+        {
+          "id": "PetClinicRuntimeHints"
+        },
+        {
+          "id": "ResponseFacade"
+        },
+        {
+          "id": "WelcomeController"
+        }
+      ]
+    }
+  }
+}

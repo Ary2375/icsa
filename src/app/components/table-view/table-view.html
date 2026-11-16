@@ -21,6 +21,9 @@
     } @else {
     <span class="comparison-scope">Differences are calculated against {{ comparisonLabel() }} for the same case study.</span>
     }
+    @if (fullResults().length) {
+    <span class="comparison-scope">Last line in each cell: value in the full integration test run, with its difference from the standard value.</span>
+    }
   </div>
   <details class="structure-note">
     <summary>About coverage and structural data</summary>
@@ -79,6 +82,13 @@
           <small class="metric-delta">
             {{ delta > 0 ? '↑ +' : delta < 0 ? '↓ ' : '· ' }}{{ delta | number: '1.1-1' }} </small>
               }
+          @let full = fullOf(row.result);
+          @if (full && full[metric] != null) {
+          @let diff = fullDelta(row.result, full, metric);
+          <small class="full-value">
+            Full integration test: {{ full[metric] | number: '1.1-1' }} ({{ diff > 0 ? '+' : '' }}{{ diff | number: '1.1-1' }})
+          </small>
+          }
         </td>
         }
       </tr>

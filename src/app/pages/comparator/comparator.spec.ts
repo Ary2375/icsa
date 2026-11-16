@@ -11,9 +11,10 @@ import { Comparator } from './comparator';
 
 const TOOL = 'LLM: Deepseek 32 Terminus';
 const RESULTS = 'assets/data/results.json';
+const FULL_RESULTS = 'assets/data/full_integration_test/results.json';
 const CLASSES = ['example.A', 'example.B', 'example.C', 'example.D'];
 
-function urlOf(folder: string, strategy: string): string {
+function urlOf(folder: string, strategy: string, run = ''): string {
   const match = /^(\d+k)_(ai|concat)(?:_(.+))?$/.exec(strategy)!;
   return [
     'assets/data/monoliths',
@@ -22,6 +23,7 @@ function urlOf(folder: string, strategy: string): string {
     match[1],
     `artifacts_${match[2]}`,
     match[3] ?? '',
+    run,
     'decomposition.json',
   ]
     .filter(Boolean)
@@ -70,6 +72,7 @@ describe('Comparator page', () => {
   let http: HttpTestingController;
   let files: Map<string, unknown>;
   let requested: string[];
+  let requestedFullResults: string[];
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
@@ -81,12 +84,14 @@ describe('Comparator page', () => {
     component = fixture.componentInstance;
     files = new Map();
     requested = [];
+    requestedFullResults = [];
     fixture.detectChanges();
   });
   afterEach(() => http.verify());
 
   const respond = (request: TestRequest) => {
-    requested.push(request.request.url);
+    if (request.request.url === FULL_RESULTS) requestedFullResults.push(request.request.url);
+    else requested.push(request.request.url);
     const content = files.get(request.request.url);
     if (content === undefined) request.flush('Not found', { status: 404, statusText: 'Not Found' });
     else request.flush(content as object);
@@ -105,6 +110,7 @@ describe('Comparator page', () => {
 
   function publish(setup: Setup = {}, respondToDecompositions = true): void {
     const data = setup.data ?? DEFAULT_DATA;
+    if (!files.has(FULL_RESULTS)) files.set(FULL_RESULTS, { llm_comparison: {} });
     for (const [strategy, partitions] of Object.entries(data)) {
       files.set(urlOf('7ep-demo', strategy), body(partitions));
     }
@@ -125,6 +131,7 @@ describe('Comparator page', () => {
       },
       variant_comparison: { literature: setup.variantRows ?? [] },
     });
+    http.match(FULL_RESULTS).forEach(respond);
     if (respondToDecompositions) settle();
     else fixture.detectChanges();
   }
@@ -170,6 +177,54 @@ describe('Comparator page', () => {
     expect(component.second()).toMatchObject({ chunk: '30k', mode: 'ai', variant: 'dfg' });
     expect(component.first()?.label).toBe('Deepseek 32 Terminus · 30k · AI · Static only');
     expect(text()).toContain('Deepseek 32 Terminus · 30k · AI · Static + DFG');
+  });
+
+  it('adds and loads the full integration decompositions that are present', () => {
+    const variants = [
+      'all',
+      'dfg',
+      'gfsm',
+      'inductive_miner',
+      'only_behavior',
+      'only_dfg',
+      'only_gfsm',
+      'only_inductive_miner',
+      'only_split_miner',
+      'split_miner',
+    ];
+    files.set(FULL_RESULTS, {
+      llm_comparison: {
+        integrations: variants.map((variant) => row('7ep-demo', `30k_ai_${variant}`)),
+      },
+    });
+    const selectedFullUrl = urlOf(
+      '7ep-demo',
+      '30k_ai_split_miner',
+      'full_integration_test',
+    );
+    files.set(
+      urlOf('7ep-demo', '30k_ai_split_miner'),
+      body([{ name: 'Standard service', classes: ['A', 'B'] }]),
+    );
+    files.set(
+      selectedFullUrl,
+      body([{ name: 'Integrated service', classes: ['A', 'B', 'C'] }]),
+    );
+
+    publish({ rows: [row('7ep-demo', '30k_ai_split_miner')] });
+
+    const fullOptions = component.options().filter((option) => option.run === 'full_integration_test');
+    expect(requestedFullResults).toContain(FULL_RESULTS);
+    expect(fullOptions).toHaveLength(variants.length);
+    expect(fullOptions.map((option) => option.variant)).toEqual(variants);
+    expect(component.fullIntegrationError()).toBe(false);
+
+    const selected = fullOptions.find((option) => option.variant === 'split_miner')!;
+    component.selectedChoice.set(selectionOf(selected));
+    settle();
+    expect(requested).toContain(selectedFullUrl);
+    expect(component.second()?.label).toContain('Full integration test');
+    expect(component.columns()[1].services[0].name).toBe('Integrated service');
   });
 
   it('compares the LLM experiments and the state-of-the-art methods, which are never the default', () => {
@@ -644,6 +699,7 @@ describe('Comparator page', () => {
       http
         .expectOne(RESULTS)
         .flush({ llm_comparison: { x: [row('7ep-demo', '30k_ai'), row('7ep-demo', '30k_ai')] } });
+      http.expectOne(FULL_RESULTS).flush({ llm_comparison: {} });
       expect(component.error()).toContain('Duplicate experiments');
     });
 

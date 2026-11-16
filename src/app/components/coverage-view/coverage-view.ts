@@ -1,7 +1,7 @@
 import { afterNextRender, Component, computed, DestroyRef, effect, ElementRef, inject, input, signal, viewChild } from '@angular/core';
 import { Chart, ChartData, Legend, LinearScale, PointElement, ScatterController, Title, Tooltip } from 'chart.js';
 import { Metric, Result } from '../../models/result.model';
-import { isBaseline, parseStrategy } from '../../utils/chart-colors';
+import { isBaseline, parseStrategy, withAlpha } from '../../utils/chart-colors';
 
 Chart.register(ScatterController, LinearScale, PointElement, Legend, Title, Tooltip);
 
@@ -38,6 +38,7 @@ Chart.register(ScatterController, LinearScale, PointElement, Legend, Title, Tool
 })
 export class CoverageView {
   readonly results = input<Result[]>([]);
+  readonly fullResults = input<Result[]>([]);
   readonly metric = input<Metric>('CMod');
   readonly colors = input<Record<string, string>>({});
   readonly points = computed(() => this.results().filter(result =>
@@ -45,22 +46,31 @@ export class CoverageView {
     Number.isFinite(result.observedEntitiesPercent) && Number.isFinite(result[this.metric()]),
   ));
   readonly missingCount = computed(() => this.results().length - this.points().length);
+  // Standard points first, then the full integration test ones, in dataset order.
+  private readonly plotted = computed(() => [
+    ...this.points().map(result => ({ result, full: false })),
+    ...this.fullResults().filter(result =>
+      result.observedEntitiesPercent != null &&
+      Number.isFinite(result.observedEntitiesPercent) && Number.isFinite(result[this.metric()]),
+    ).map(result => ({ result, full: true })),
+  ]);
   private readonly canvas = viewChild.required<ElementRef<HTMLCanvasElement>>('canvas');
   private readonly rendered = signal(false);
   private chart?: Chart<'scatter'>;
 
   buildData(): ChartData<'scatter'> {
     return {
-      datasets: this.points().map(result => {
+      datasets: this.plotted().map(({ result, full }) => {
         const kind = parseStrategy(result.strategy).kind;
         const baseline = isBaseline(kind);
         const reference = result.comparisonGroup === 'literature';
         const color = this.colors()[result.configKey];
         return {
-          label: result.configLabel,
+          label: full ? `${result.configLabel} (full integration test)` : result.configLabel,
           data: [{ x: result.observedEntitiesPercent!, y: result[this.metric()] }],
-          backgroundColor: color,
+          backgroundColor: full ? withAlpha(color, 0.3) : color,
           borderColor: color,
+          borderWidth: full ? 2 : 1,
           pointStyle: reference ? 'rectRot' : baseline ? 'rect' : 'circle',
           pointRadius: 5,
           pointHoverRadius: 7,
@@ -88,8 +98,8 @@ export class CoverageView {
             tooltip: {
               callbacks: {
                 label: context => {
-                  const result = this.points()[context.datasetIndex];
-                  return `${result.configLabel}: observed ${result.observedEntities ?? 'N/A'} entities (${context.parsed.x}%), ${metric} ${context.parsed.y}`;
+                  const { result, full } = this.plotted()[context.datasetIndex];
+                  return `${full ? 'Full integration test · ' : ''}${result.configLabel}: observed ${result.observedEntities ?? 'N/A'} entities (${context.parsed.x}%), ${metric} ${context.parsed.y}`;
                 },
               },
             },

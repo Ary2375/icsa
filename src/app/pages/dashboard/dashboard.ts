@@ -1,12 +1,13 @@
 import { Component, computed, OnInit, signal } from '@angular/core';
 import { MatCardModule } from '@angular/material/card';
+import { catchError, of } from 'rxjs';
 import { BarView } from '../../components/bar-view/bar-view';
 import { RadarView } from '../../components/radar-view/radar-view';
 import { Filters } from '../../components/filters/filters';
 import { TableView } from '../../components/table-view/table-view';
 import { CoverageView } from '../../components/coverage-view/coverage-view';
 import { Metric, METRICS, Result } from '../../models/result.model';
-import { ResultsService } from '../../services/results/results';
+import { FULL_INTEGRATION_RESULTS_URL, ResultsService } from '../../services/results/results';
 import { buildConfigColors, compareChunks, compareVariants, parseStrategy, variantOf } from '../../utils/chart-colors';
 
 @Component({
@@ -90,6 +91,21 @@ export class Dashboard implements OnInit {
       result.comparisonGroup === 'literature' || result.tool === this.activeBarModel()),
   );
 
+  // Run with every LLM-generated integration test, shown next to the standard results.
+  readonly fullIntegrationResults = signal<Result[]>([]);
+  readonly includeFull = signal(false);
+  readonly selectedFullResults = computed(() => {
+    const configs = new Set(this.selectedConfigs());
+    return this.fullIntegrationResults().filter(r => r.comparisonGroup === 'llm' && configs.has(r.configKey));
+  });
+  readonly shownFullResults = computed(() => this.includeFull() ? this.selectedFullResults() : []);
+  readonly shownRepositoryFull = computed(() =>
+    this.shownFullResults().filter(r => r.caseStudy === this.activeRepository()),
+  );
+  readonly shownBarFull = computed(() =>
+    this.shownRepositoryFull().filter(r => r.tool === this.activeBarModel()),
+  );
+
   constructor(private resultsService: ResultsService) { }
 
   ngOnInit(): void {
@@ -99,5 +115,10 @@ export class Dashboard implements OnInit {
         this.results.set(data);
         this.selectedConfigs.set([...new Set(data.map(r => r.configKey))]);
       });
+    // Optional: if the file is missing the dashboard works without the full integration toggle.
+    this.resultsService
+      .getResults(FULL_INTEGRATION_RESULTS_URL, true)
+      .pipe(catchError(() => of([] as Result[])))
+      .subscribe(data => this.fullIntegrationResults.set(data));
   }
 }

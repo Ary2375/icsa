@@ -193,6 +193,29 @@ describe('ResultsService', () => {
     ]);
   });
 
+  it('accepts a metric written as numeric text, but not other text', () => {
+    let loaded: Result[] = [];
+    service.getResults().subscribe(results => loaded = results);
+
+    http.expectOne('assets/data/results.json').flush({
+      llm_comparison: { x: [{ 'Case Study': '7ep-demo', Tool: 'LLM: Glm 46', Strategy: '30k_ai', MoJoFM: '88.37' }] },
+    });
+
+    expect(loaded[0].MoJoFM).toBe(88.37);
+  });
+
+  it('leaves an unreadable metric unavailable in lenient mode, keeping the row', () => {
+    let loaded: Result[] = [];
+    service.getResults('assets/other.json', true).subscribe(results => loaded = results);
+
+    http.expectOne('assets/other.json').flush({
+      llm_comparison: { x: [{ 'Case Study': '7ep-demo', Tool: 'LLM: Glm 46', Strategy: '30k_ai', CiD: 70, MoJoFM: '# Java out of memory' }] },
+    });
+
+    expect(loaded[0].CiD).toBe(70);
+    expect(loaded[0].MoJoFM).toBeUndefined();
+  });
+
   it('names the row and column of an invalid value', () => {
     let error: Error | undefined;
     service.getResults().subscribe({ error: e => error = e });

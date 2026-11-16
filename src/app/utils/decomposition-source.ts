@@ -45,6 +45,23 @@ export function literaturePath(caseStudy: string, tool: string, strategy: string
   return folder ? `${DATA_ROOT}/${monolith}/summaries/${folder}/class_decomposition.json` : null;
 }
 
+// Settings that have a `full_integration_test` decomposition next to the standard one, as
+// `<caseStudy>|<tool>|<chunk>|<mode>`. Add an entry when adding such folders.
+const FULL_INTEGRATION_SETTINGS: readonly string[] = [
+  '7ep-demo|LLM: Deepseek 32 Terminus|30k|ai',
+  'Spring-PetClinic|LLM: Deepseek 32 Terminus|30k|ai',
+  'Spring-PetClinic|LLM: Deepseek 32 Terminus|30k|concat',
+];
+
+export function hasFullIntegration(
+  caseStudy: string,
+  tool: string,
+  chunk: string,
+  mode: string,
+): boolean {
+  return FULL_INTEGRATION_SETTINGS.includes([caseStudy, tool, chunk, mode].join('|'));
+}
+
 // An empty variant is the static baseline, stored directly in the artifacts folder.
 export function decompositionPath(
   caseStudy: string,
@@ -52,6 +69,7 @@ export function decompositionPath(
   chunk: string,
   mode: string,
   variant: string,
+  run = '',
 ): string | null {
   const monolith = MONOLITH_FOLDERS[caseStudy];
   const llm = LLM_FOLDERS[tool];
@@ -64,6 +82,7 @@ export function decompositionPath(
     chunk,
     `artifacts_${mode}`,
     variant,
+    run,
     'decomposition.json',
   ]
     .filter(Boolean)

@@ -1,7 +1,7 @@
 import { afterNextRender, Component, DestroyRef, effect, ElementRef, inject, input, signal, viewChild } from '@angular/core';
 import { Chart, ChartData, Filler, Legend, LineElement, PointElement, RadarController, RadialLinearScale, Title, Tooltip } from 'chart.js';
 import { Metric, METRICS, Result } from '../../models/result.model';
-import { parseStrategy, strategyFamily } from '../../utils/chart-colors';
+import { parseStrategy, strategyFamily, withAlpha } from '../../utils/chart-colors';
 
 Chart.register(RadarController, RadialLinearScale, PointElement, LineElement, Filler, Legend, Title, Tooltip);
 
@@ -13,6 +13,7 @@ Chart.register(RadarController, RadialLinearScale, PointElement, LineElement, Fi
 })
 export class RadarView {
   readonly results = input<Result[]>([]);
+  readonly fullResults = input<Result[]>([]);
   readonly metrics = input<Metric[]>([...METRICS]);
   readonly caseStudy = input<string>('');
   readonly colors = input<Record<string, string>>({});
@@ -42,7 +43,21 @@ export class RadarView {
           pointRadius: crowded ? 2 : 3,
           fill: false,
         }));
-      const data: ChartData<'radar'> = { labels: metrics, datasets };
+      // Full integration test: same color, translucent area and dotted outline.
+      const fullDatasets = this.fullResults()
+        .filter(result => result.caseStudy === caseStudy)
+        .map(result => ({
+          label: `${result.configLabel} (full integration test)`,
+          data: metrics.map(metric => result[metric]),
+          borderColor: withAlpha(colors[result.configKey], 0.7),
+          backgroundColor: withAlpha(colors[result.configKey], 0.2),
+          borderWidth: 1.5,
+          borderDash: [2, 3],
+          pointRadius: 2,
+          pointStyle: 'triangle',
+          fill: true,
+        }));
+      const data: ChartData<'radar'> = { labels: metrics, datasets: [...datasets, ...fullDatasets] };
 
       if (this.chart) {
         this.chart.data = data;

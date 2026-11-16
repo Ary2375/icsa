@@ -190,6 +190,17 @@ tbody tr:hover {
   font-weight: 700;
 }
 
+.full-value {
+  display: block;
+  white-space: nowrap;
+  margin-top: 0.15rem;
+  padding-top: 0.15rem;
+  border-top: 1px dashed var(--color-border);
+  color: var(--color-muted);
+  font-size: 0.62rem;
+  font-style: italic;
+}
+
 .case-study-heading th {
   position: static;
   padding: 0.65rem 0.6rem;

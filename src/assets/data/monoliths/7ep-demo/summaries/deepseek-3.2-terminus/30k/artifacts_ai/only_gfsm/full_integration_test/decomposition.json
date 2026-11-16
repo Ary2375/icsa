@@ -1,0 +1,85 @@
+{
+  "tool": {
+    "decomposition": {
+      "Authentication Service": [
+        {
+          "id": "LoginServlet"
+        },
+        {
+          "id": "RegisterServlet"
+        },
+        {
+          "id": "User"
+        },
+        {
+          "id": "RegistrationResult"
+        },
+        {
+          "id": "RegistrationUtils"
+        },
+        {
+          "id": "LoginUtils"
+        }
+      ],
+      "Library Management Service": [
+        {
+          "id": "LibraryBookListAvailableServlet"
+        },
+        {
+          "id": "LibraryBorrowerListSearchServlet"
+        },
+        {
+          "id": "LibraryRegisterBookServlet"
+        },
+        {
+          "id": "LibraryRegisterBorrowerServlet"
+        },
+        {
+          "id": "LibraryUtils"
+        },
+        {
+          "id": "Book"
+        },
+        {
+          "id": "Borrower"
+        },
+        {
+          "id": "Loan"
+        }
+      ],
+      "Persistence Service": [
+        {
+          "id": "PersistenceLayer"
+        },
+        {
+          "id": "SqlData"
+        },
+        {
+          "id": "ParameterObject"
+        }
+      ],
+      "Shared Utilities Service": [
+        {
+          "id": "CheckUtils"
+        },
+        {
+          "id": "StringUtils"
+        },
+        {
+          "id": "ServletUtils"
+        },
+        {
+          "id": "Response"
+        }
+      ],
+      "Infrastructure Service": [
+        {
+          "id": "DbServlet"
+        },
+        {
+          "id": "WebAppListener"
+        }
+      ]
+    }
+  }
+}

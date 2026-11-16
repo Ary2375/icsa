@@ -8,19 +8,20 @@ import { ExperimentPicker } from '../../components/experiment-picker/experiment-
 import { Partition } from '../../models/decomposition.model';
 import { Result } from '../../models/result.model';
 import { DecompositionsService } from '../../services/decompositions/decompositions';
-import { ResultsService } from '../../services/results/results';
+import { FULL_INTEGRATION_RESULTS_URL, ResultsService } from '../../services/results/results';
 import {
   decompositionCoverage,
   partitionStats,
   serviceEvolution,
   ServiceEvolutionKind,
 } from '../../utils/decomposition-analysis';
-import { decompositionPath, literaturePath } from '../../utils/decomposition-source';
+import { decompositionPath, hasFullIntegration, literaturePath } from '../../utils/decomposition-source';
 import {
   defaultSelections,
   describeConfiguration,
   ExperimentOption,
   findOption,
+  FULL_INTEGRATION_RUN,
   parseThesisStrategy,
   Selection,
 } from '../../utils/experiment-selection';
@@ -61,6 +62,7 @@ export class Comparator implements OnInit {
   readonly caseStudy = signal('');
   readonly referenceChoice = signal<Selection | null>(null);
   readonly selectedChoice = signal<Selection | null>(null);
+  readonly fullIntegrationError = signal(false);
   private readonly roleText: Record<ServiceEvolutionKind, Record<Side, [string, string]>> = {
     new: { reference: ['', ''], selected: ['New', ''] },
     removed: { reference: ['Removed', ''], selected: ['', ''] },
@@ -253,19 +255,40 @@ export class Comparator implements OnInit {
   load(): void {
     this.loading.set(true);
     this.error.set('');
-    this.resultsService.getResults().subscribe({
-      next: (results) => {
-        try {
-          this.experiments.set(this.toExperiments(results));
-        } catch (error: unknown) {
-          this.error.set(error instanceof Error ? error.message : 'Invalid experiment data.');
-        }
-        this.loading.set(false);
-      },
-      error: () => {
-        this.error.set('Unable to load the experiments (results.json). Check the network.');
-        this.loading.set(false);
-      },
+    this.resultsService
+      .getResults()
+      .pipe(
+        // The full integration run is only fetched when some setting has decompositions for it.
+        switchMap((results) =>
+          this.hasFullIntegrationSettings(results)
+            ? this.resultsService.getResults(FULL_INTEGRATION_RESULTS_URL, true).pipe(
+                catchError(() => of<Result[] | null>(null)),
+                map((full) => ({ results, full })),
+              )
+            : of({ results, full: null as Result[] | null }),
+        ),
+      )
+      .subscribe({
+        next: ({ results, full }) => {
+          try {
+            this.fullIntegrationError.set(!full && this.hasFullIntegrationSettings(results));
+            this.experiments.set(this.toExperiments(results, full ?? []));
+          } catch (error: unknown) {
+            this.error.set(error instanceof Error ? error.message : 'Invalid experiment data.');
+          }
+          this.loading.set(false);
+        },
+        error: () => {
+          this.error.set('Unable to load the experiments (results.json). Check the network.');
+          this.loading.set(false);
+        },
+      });
+  }
+
+  private hasFullIntegrationSettings(results: Result[]): boolean {
+    return results.some((result) => {
+      const parsed = result.comparisonGroup === 'llm' && parseThesisStrategy(result.strategy);
+      return !!parsed && hasFullIntegration(result.caseStudy, result.tool, parsed.chunk, parsed.mode);
     });
   }
 
@@ -299,7 +322,7 @@ export class Comparator implements OnInit {
 
   // Every evaluated experiment of results.json is comparable: the LLM runs and the
   // state-of-the-art methods, each read from its own decomposition file.
-  private toExperiments(results: Result[]): Experiment[] {
+  private toExperiments(results: Result[], fullResults: Result[]): Experiment[] {
     const experiments = results.map((result): Experiment => {
       const observed =
         result.observedEntities != null && result.observedEntitiesPercent != null
@@ -350,6 +373,44 @@ export class Comparator implements OnInit {
         observed,
       };
     });
+    const fullExperiments = fullResults.flatMap((result): Experiment[] => {
+      const parsed = result.comparisonGroup === 'llm' && parseThesisStrategy(result.strategy);
+      // The baseline has no integration tests to generate, so it has no run of its own.
+      if (!parsed || !parsed.variant) return [];
+      if (!hasFullIntegration(result.caseStudy, result.tool, parsed.chunk, parsed.mode)) return [];
+      const source = decompositionPath(
+        result.caseStudy,
+        result.tool,
+        parsed.chunk,
+        parsed.mode,
+        parsed.variant,
+        FULL_INTEGRATION_RUN,
+      );
+      if (!source) return [];
+      return [
+        {
+          id: source,
+          kind: 'llm',
+          caseStudy: result.caseStudy,
+          tool: result.tool,
+          ...parsed,
+          run: FULL_INTEGRATION_RUN,
+          label: describeConfiguration(
+            result.tool,
+            parsed.chunk,
+            parsed.mode,
+            parsed.variant,
+            FULL_INTEGRATION_RUN,
+          ),
+          source,
+          observed:
+            result.observedEntities != null && result.observedEntitiesPercent != null
+              ? `${result.observedEntities} (${result.observedEntitiesPercent.toFixed(1)}%)`
+              : null,
+        },
+      ];
+    });
+    experiments.push(...fullExperiments);
     if (new Set(experiments.map((item) => item.id)).size !== experiments.length) {
       throw new Error('Duplicate experiments in results.json.');
     }

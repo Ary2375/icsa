@@ -31,6 +31,10 @@ interface CaseStudyGroup {
 export class TableView {
   readonly results = input<Result[]>([]);
   readonly comparisonResults = input<Result[]>();
+  readonly fullResults = input<Result[]>([]);
+  private readonly fullByKey = computed(() =>
+    new Map(this.fullResults().map(result => [`${result.caseStudy}|${result.configKey}`, result])),
+  );
   readonly metrics = input<Metric[]>([]);
   readonly comparisonKey = signal('baseline');
   private readonly comparisonSource = computed(() => this.comparisonResults() ?? this.results());
@@ -125,6 +129,16 @@ export class TableView {
       result.comparisonGroup === 'literature' &&
       result.configKey === this.comparisonKey(),
     ) ?? null;
+  }
+
+  fullOf(result: Result): Result | null {
+    return this.fullByKey().get(`${result.caseStudy}|${result.configKey}`) ?? null;
+  }
+
+  // Full integration test value minus the standard one.
+  fullDelta(result: Result, full: Result, metric: Metric): number {
+    const delta = Math.round((full[metric] - result[metric]) * 10) / 10;
+    return delta === 0 ? 0 : delta;
   }
 
   metricDelta(row: ComparisonRow, metric: Metric): number | null {

@@ -63,7 +63,9 @@ const text = (value: unknown): string => {
 };
 
 // A missing value stays undefined: the pages show it as unavailable instead of zero.
+// Some exports write a number as text (e.g. "88.37"); that is accepted, any other text is not.
 const metric = (value: unknown): number => {
+    if (typeof value === 'string' && value.trim() !== '' && Number.isFinite(Number(value))) return Number(value);
     if (value !== undefined && (typeof value !== 'number' || !Number.isFinite(value))) {
         throw new Error(`expected a number, got ${JSON.stringify(value)}`);
     }
@@ -108,13 +110,23 @@ export const FIELDS: readonly Field[] = [
     { key: 'c2c_cvg 50%', column: 'c2c_cvg 50%', parse: metric },
 ];
 
-/** Keeps from a results.json row only what the site needs, and names it as the site does. */
-export function toResult(row: RawRow, comparisonGroup: ComparisonGroup): Result {
+const IDENTITY_FIELDS: readonly FieldKey[] = ['caseStudy', 'tool', 'strategy'];
+
+/**
+ * Keeps from a results.json row only what the site needs, and names it as the site does.
+ * With `lenient`, a value that cannot be read (e.g. a crash message in a metric column) is left
+ * unavailable instead of failing the whole file; the identity of the row must still be valid.
+ */
+export function toResult(row: RawRow, comparisonGroup: ComparisonGroup, lenient = false): Result {
     const values: Record<string, unknown> = { comparisonGroup };
     for (const field of FIELDS) {
         try {
             values[field.key] = field.parse(row[field.column]);
         } catch (error) {
+            if (lenient && !IDENTITY_FIELDS.includes(field.key)) {
+                values[field.key] = undefined;
+                continue;
+            }
             const where = `${row['Case Study']} / ${row['Tool']} / ${row['Strategy']}`;
             throw new Error(`Invalid "${field.column}" for ${where}: ${(error as Error).message}`);
         }

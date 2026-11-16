@@ -4,12 +4,15 @@ import {
   Facet,
   Selection,
   facetValues,
+  findOption,
   isAvailable,
   kindOf,
   modeLabel,
+  runLabel,
   selectionForTool,
   toolGroups,
   toolLabel,
+  variantChoices,
   variantGroup,
   variantLabel,
   variantsOfTool,
@@ -80,16 +83,16 @@ import {
         </div>
         <label class="field">
           <span class="field-label">Behavioral input</span>
-          <select (change)="pick('variant', $event)">
+          <select (change)="pickVariant($event)">
             @for (group of variantGroups(); track group.label) {
               <optgroup [label]="group.label">
-                @for (variant of group.items; track variant) {
+                @for (choice of group.items; track choice.value) {
                   <option
-                    [value]="variant"
-                    [selected]="variant === selection().variant"
-                    [disabled]="!available('variant', variant)"
+                    [value]="choice.value"
+                    [selected]="choice.variant === selection().variant && choice.run === (selection().run ?? '')"
+                    [disabled]="!availableChoice(choice)"
                   >
-                    {{ variantLabel(variant) }}
+                    {{ variantLabel(choice.variant) }}
                   </option>
                 }
               </optgroup>
@@ -208,17 +211,35 @@ export class ExperimentPicker {
     () => kindOf(this.options(), this.selection().tool) === 'literature',
   );
   readonly configurations = computed(() => variantsOfTool(this.options(), this.selection().tool));
+  // Full integration test decompositions are listed apart, as experiments of their own.
   readonly variantGroups = computed(() => {
-    const groups = new Map<string, string[]>();
-    for (const variant of this.facets().variants) {
-      const label = variantGroup(variant);
-      groups.set(label, [...(groups.get(label) ?? []), variant]);
+    const groups = new Map<string, { value: string; variant: string; run: string }[]>();
+    for (const choice of variantChoices(this.options().filter((o) => o.kind === 'llm'))) {
+      const label = choice.run ? runLabel(choice.run) : variantGroup(choice.variant);
+      groups.set(label, [...(groups.get(label) ?? []), choice]);
     }
     return [...groups].map(([label, items]) => ({ label, items }));
   });
 
   available(facet: Facet, value: string): boolean {
     return isAvailable(this.options(), this.selection(), facet, value);
+  }
+
+  availableChoice(choice: { variant: string; run: string }): boolean {
+    return (
+      findOption(this.options(), {
+        ...this.selection(),
+        variant: choice.variant,
+        run: choice.run,
+      }) !== null
+    );
+  }
+
+  pickVariant(event: Event): void {
+    const choice = this.variantGroups()
+      .flatMap((group) => group.items)
+      .find((item) => item.value === (event.target as HTMLSelectElement).value);
+    if (choice) this.update({ variant: choice.variant, run: choice.run || undefined });
   }
 
   update(patch: Partial<Selection>): void {

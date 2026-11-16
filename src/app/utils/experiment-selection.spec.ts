@@ -12,6 +12,7 @@ import {
   selectionOf,
   toolGroups,
   toolLabel,
+  variantChoices,
   variantGroup,
   variantLabel,
   variantsOfTool,
@@ -115,6 +116,41 @@ describe('experiment selection', () => {
     const { reference, selected } = defaultSelections(grid);
     expect(reference).toEqual({ tool: 'LLM: A', chunk: '30k', mode: 'ai', variant: '' });
     expect(selected).toEqual({ tool: 'LLM: A', chunk: '30k', mode: 'ai', variant: 'dfg' });
+  });
+
+  describe('full integration run', () => {
+    const full = (variant: string): ExperimentOption => ({
+      ...option('LLM: A', '30k', 'ai', variant),
+      id: `full|${variant}`,
+      run: 'full_integration_test',
+    });
+    const withRuns = [...grid, full('dfg'), full('gfsm')];
+
+    it('lists full integration decompositions as choices of their own, after the standard ones', () => {
+      expect(variantChoices(grid.filter((o) => o.tool === 'LLM: A' && o.chunk === '30k' && o.mode === 'ai')).map((c) => c.value)).toEqual(['', 'gfsm', 'dfg']);
+      expect(variantChoices(withRuns.filter((o) => o.chunk === '30k' && o.mode === 'ai')).map((c) => c.value)).toEqual([
+        '',
+        'gfsm',
+        'dfg',
+        'full_integration_test/gfsm',
+        'full_integration_test/dfg',
+      ]);
+      expect(defaultSelections(withRuns).selected.run).toBeUndefined();
+    });
+
+    it('tells a run apart when finding an experiment', () => {
+      const selection = selectionOf(full('dfg'));
+      expect(selection.run).toBe('full_integration_test');
+      expect(findOption(withRuns, selection)?.id).toBe('full|dfg');
+      expect(findOption(withRuns, { ...selection, run: '' })?.id).toBe(grid[3].id);
+    });
+
+    it('keeps the standard experiment available when a full integration one has the same variant', () => {
+      const dfg = selectionOf(grid[3]);
+      expect(isAvailable(withRuns, dfg, 'variant', 'dfg')).toBe(true);
+      expect(findOption(withRuns, { ...dfg, run: 'full_integration_test' })?.id).toBe('full|dfg');
+      expect(findOption(withRuns, { ...dfg, variant: '', run: 'full_integration_test' })).toBeNull();
+    });
   });
 
   it('falls back to another variant, another experiment, or an empty selection', () => {

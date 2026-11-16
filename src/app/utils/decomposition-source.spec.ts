@@ -1,5 +1,6 @@
 import {
   decompositionPath,
+  hasFullIntegration,
   literaturePath,
   parsePartitions,
   parseReference,
@@ -53,6 +54,18 @@ describe('decomposition source paths', () => {
     ).toBe(
       'assets/data/monoliths/spring-petclinic/summaries/glm-4.6/80k/artifacts_concat/only_behavior/decomposition.json',
     );
+  });
+
+  it('stores the full integration run in its own folder next to the standard decomposition', () => {
+    expect(
+      decompositionPath('Spring-PetClinic', deepseek, '30k', 'ai', 'split_miner', 'full_integration_test'),
+    ).toBe(
+      'assets/data/monoliths/spring-petclinic/summaries/deepseek-3.2-terminus/30k/artifacts_ai/split_miner/full_integration_test/decomposition.json',
+    );
+    expect(hasFullIntegration('7ep-demo', deepseek, '30k', 'ai')).toBe(true);
+    expect(hasFullIntegration('Spring-PetClinic', deepseek, '30k', 'ai')).toBe(true);
+    expect(hasFullIntegration('Spring-PetClinic', deepseek, '30k', 'concat')).toBe(true);
+    expect(hasFullIntegration('Spring-PetClinic', deepseek, '50k', 'ai')).toBe(false);
   });
 
   it('stores the static baseline directly in the artifacts folder', () => {

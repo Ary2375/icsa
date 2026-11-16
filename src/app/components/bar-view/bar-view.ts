@@ -23,9 +23,38 @@ import {
   Tooltip,
 } from 'chart.js';
 import { Metric, Result } from '../../models/result.model';
-import { compareChunks, compareKinds, isBaseline, parseStrategy, strategyFamily } from '../../utils/chart-colors';
+import { compareChunks, compareKinds, isBaseline, parseStrategy, strategyFamily, withAlpha } from '../../utils/chart-colors';
 
 Chart.register(BarController, BarElement, CategoryScale, LinearScale, Legend, Title, Tooltip);
+
+const stripeCache = new Map<string, string | CanvasPattern>();
+
+// Diagonal stripes in the bar color mark the full integration test run next to the solid standard bar.
+function stripes(color: string): string | CanvasPattern {
+  const cached = stripeCache.get(color);
+  if (cached) return cached;
+  const tile = document.createElement('canvas');
+  tile.width = tile.height = 8;
+  const ctx = tile.getContext('2d');
+  let fill: string | CanvasPattern = withAlpha(color, 0.3);
+  if (ctx) {
+    ctx.fillStyle = withAlpha(color, 0.2);
+    ctx.fillRect(0, 0, 8, 8);
+    ctx.strokeStyle = color;
+    ctx.lineWidth = 2;
+    ctx.beginPath();
+    ctx.moveTo(-2, 10);
+    ctx.lineTo(10, -2);
+    ctx.moveTo(-2, 2);
+    ctx.lineTo(2, -2);
+    ctx.moveTo(6, 10);
+    ctx.lineTo(10, 6);
+    ctx.stroke();
+    fill = ctx.createPattern(tile, 'repeat') ?? fill;
+  }
+  stripeCache.set(color, fill);
+  return fill;
+}
 
 export function compareBarGroups(a: Result, b: Result): number {
   const groupOrder = (result: Result): number => {
@@ -57,10 +86,11 @@ function barCategoryKey(result: Result): string {
 })
 export class BarView {
   readonly results = input<Result[]>([]);
+  readonly fullResults = input<Result[]>([]);
   readonly metric = input<Metric>('CMod');
   readonly colors = input<Record<string, string>>({});
   private readonly metricMax = computed(() =>
-    Math.max(100, ...this.results().map(result => result[this.metric()])),
+    Math.max(100, ...[...this.results(), ...this.fullResults()].map(result => result[this.metric()]).filter(Number.isFinite)),
   );
   private readonly title = computed(() => {
     const caseStudy = this.results()[0]?.caseStudy;
@@ -150,14 +180,19 @@ export class BarView {
 
     effect(() => {
       if (!this.rendered()) return;
-      this.render(this.buildData(this.results(), this.metric(), this.colors()));
+      this.render(this.buildData(this.results(), this.metric(), this.colors(), this.fullResults()));
     });
 
     destroyRef.onDestroy(() => this.chart?.destroy());
   }
 
   // Group chunk sizes within each model/strategy category so all runs remain visible without repeating labels.
-  buildData(results: Result[], metric: Metric, colors: Record<string, string>): ChartData<'bar', (number | null)[]> {
+  buildData(
+    results: Result[],
+    metric: Metric,
+    colors: Record<string, string>,
+    full: Result[] = [],
+  ): ChartData<'bar', (number | null)[]> {
     const parsed = results.map(r => ({ r, ...parseStrategy(r.strategy) }));
     const categoryResults = new Map<string, Result>();
     for (const item of parsed) categoryResults.set(barCategoryKey(item.r), item.r);
@@ -202,20 +237,50 @@ export class BarView {
       return multiTool ? `${result.toolLabel} · ${strategyLabel}` : strategyLabel;
     });
 
+    const fullByChunk = new Map<string, Map<string, Result>>();
+    for (const item of full) {
+      const { chunk } = parseStrategy(item.strategy);
+      const values = fullByChunk.get(chunk) ?? new Map<string, Result>();
+      values.set(barCategoryKey(item), item);
+      fullByChunk.set(chunk, values);
+    }
+
     const datasets = [...valuesByChunk]
       .sort(([a], [b]) => compareChunks(a, b))
-      .map(([chunk, values]) => ({
-        label: chunk,
-        skipNull: true,
-        maxBarThickness: 16,
-        categoryPercentage: 0.75,
-        barPercentage: 0.85,
-        backgroundColor: categories.map(key => {
-          const result = values.get(key);
-          return result ? colors[result.configKey] : 'transparent';
-        }),
-        data: categories.map(key => values.get(key)?.[metric] ?? null),
-      }));
+      .flatMap(([chunk, values]) => {
+        const standard = {
+          label: chunk,
+          skipNull: true,
+          maxBarThickness: 16,
+          categoryPercentage: 0.75,
+          barPercentage: 0.85,
+          backgroundColor: categories.map(key => {
+            const result = values.get(key);
+            return result ? colors[result.configKey] : 'transparent';
+          }),
+          data: categories.map(key => values.get(key)?.[metric] ?? null),
+        };
+        const fullValues = fullByChunk.get(chunk);
+        if (!fullValues) return [standard];
+        // Striped bar right after the solid one of the same chunk size.
+        return [standard, {
+          label: `${chunk} (full integration test)`,
+          skipNull: true,
+          maxBarThickness: 16,
+          categoryPercentage: 0.75,
+          barPercentage: 0.85,
+          borderWidth: 1.5,
+          backgroundColor: categories.map(key => {
+            const result = fullValues.get(key);
+            return result ? stripes(colors[result.configKey]) : 'transparent';
+          }),
+          borderColor: categories.map(key => {
+            const result = fullValues.get(key);
+            return result ? colors[result.configKey] : 'transparent';
+          }),
+          data: categories.map(key => fullValues.get(key)?.[metric] ?? null),
+        }];
+      });
     if (references.size) {
       datasets.push({
         label: 'Reference',
@@ -231,7 +296,7 @@ export class BarView {
       });
     }
 
-    return { labels, datasets };
+    return { labels, datasets } as ChartData<'bar', (number | null)[]>;
   }
 
   private render(data: ChartData<'bar', (number | null)[]>): void {

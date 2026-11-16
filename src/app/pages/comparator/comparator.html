@@ -46,6 +46,9 @@
           (selectionChange)="selectedChoice.set($event)"
         />
       </div>
+      @if (fullIntegrationError()) {
+        <p class="small" role="alert">Could not load the full integration test results.</p>
+      }
     </section>
 
     @if (evolution(); as evolution) {

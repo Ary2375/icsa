@@ -30,10 +30,20 @@
                 </div>
             }
 
+            @if (fullIntegrationResults().length) {
+                <label class="full-toggle">
+                    <input type="checkbox" [checked]="includeFull()" (change)="includeFull.set($any($event.target).checked)">
+                    Include full integration test results
+                </label>
+            }
+
             @if (viewMode() !== 'table' && (legendGroups().length || referenceTools().length)) {
                 <details class="shared-legend" open>
                     <summary>Legend (color = LLM variant, shade = chunk size; grey bands in bar charts = baselines and state-of-the-art references)</summary>
                     <div class="legend-groups">
+                        @if (includeFull() && fullIntegrationResults().length) {
+                            <p class="legend-note">Full integration test run, in the same color as its standard configuration: striped bar next to the solid one (bar), translucent area with dotted outline (radar), thicker outline with translucent fill (coverage).</p>
+                        }
                         @for (group of legendGroups(); track group.name) {
                             <div class="legend-group" [class.baseline]="group.baseline">
                                 <strong>{{ group.name }}</strong>
@@ -66,7 +76,7 @@
                         } @else {
                             @for (metric of selectedMetrics(); track metric) {
                                 <mat-card class="chart-card">
-                                    <app-coverage-view [results]="repositoryResults()" [metric]="metric" [colors]="colors()"></app-coverage-view>
+                                    <app-coverage-view [results]="repositoryResults()" [fullResults]="shownRepositoryFull()" [metric]="metric" [colors]="colors()"></app-coverage-view>
                                 </mat-card>
                             } @empty {
                                 <p>Select at least one metric.</p>
@@ -75,7 +85,7 @@
                     </div>
                 }
                 @case ('table') {
-                    <app-table-view [results]="repositoryResults()" [comparisonResults]="results()" [metrics]="selectedMetrics()"></app-table-view>
+                    <app-table-view [results]="repositoryResults()" [fullResults]="shownRepositoryFull()" [comparisonResults]="results()" [metrics]="selectedMetrics()"></app-table-view>
                 }
                 @case ('bar') {
                     @if (barModels().length) {
@@ -91,7 +101,7 @@
                         } @else {
                             @for (metric of selectedMetrics(); track metric) {
                                 <mat-card class="chart-card">
-                                    <app-bar-view [results]="barResults()" [metric]="metric" [colors]="colors()"></app-bar-view>
+                                    <app-bar-view [results]="barResults()" [fullResults]="shownBarFull()" [metric]="metric" [colors]="colors()"></app-bar-view>
                                 </mat-card>
                             } @empty {
                                 <p>Select at least one metric.</p>
@@ -105,7 +115,7 @@
                             <p>Select at least one metric.</p>
                         } @else if (activeRepository()) {
                             <mat-card class="chart-card">
-                                <app-radar-view [results]="filteredResults()" [metrics]="selectedMetrics()" [caseStudy]="activeRepository()" [colors]="colors()"></app-radar-view>
+                                <app-radar-view [results]="filteredResults()" [fullResults]="shownFullResults()" [metrics]="selectedMetrics()" [caseStudy]="activeRepository()" [colors]="colors()"></app-radar-view>
                             </mat-card>
                         } @else {
                             <p>No results for the selected filters.</p>

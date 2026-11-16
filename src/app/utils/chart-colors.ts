@@ -6,6 +6,11 @@ export function parseStrategy(strategy: string): { chunk: string; kind: string }
   return match ? { chunk: match[1], kind: match[2] } : { chunk: '', kind: strategy };
 }
 
+// Works on the hsl() colors built below; any other value is returned unchanged.
+export function withAlpha(color: string, alpha: number): string {
+  return color.replace(/^hsl\((.+)\)$/, `hsla($1, ${alpha})`);
+}
+
 export function compareChunks(a: string, b: string): number {
   return parseInt(a, 10) - parseInt(b, 10) || a.localeCompare(b);
 }

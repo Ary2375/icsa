@@ -1,5 +1,8 @@
 export type ExperimentKind = 'llm' | 'literature';
 
+// An empty run is the standard one.
+export const FULL_INTEGRATION_RUN = 'full_integration_test';
+
 export interface ExperimentOption {
   id: string;
   kind: ExperimentKind;
@@ -7,6 +10,7 @@ export interface ExperimentOption {
   chunk: string;
   mode: string;
   variant: string;
+  run?: string;
   label: string;
 }
 
@@ -15,6 +19,7 @@ export interface Selection {
   chunk: string;
   mode: string;
   variant: string;
+  run?: string;
 }
 
 export type Facet = keyof Selection;
@@ -56,6 +61,10 @@ export function variantLabel(variant: string): string {
   return VARIANT_LABELS[variant] ?? variant.replace(/_/g, ' ');
 }
 
+export function runLabel(run: string): string {
+  return run === FULL_INTEGRATION_RUN ? 'Full integration test' : 'Standard';
+}
+
 export function variantGroup(variant: string): string {
   if (variant === '') return 'Static artifacts only';
   if (variant === 'all') return 'Static + all behavioral models';
@@ -68,8 +77,10 @@ export function describeConfiguration(
   chunk: string,
   mode: string,
   variant: string,
+  run = '',
 ): string {
-  return [toolLabel(tool), chunk, modeLabel(mode), variantLabel(variant)].join(' · ');
+  const label = [toolLabel(tool), chunk, modeLabel(mode), variantLabel(variant)].join(' · ');
+  return run ? `${label} · ${runLabel(run)}` : label;
 }
 
 const rank = (order: string[], value: string) => {
@@ -99,7 +110,23 @@ export function selectionOf(option: ExperimentOption): Selection {
     chunk: option.chunk,
     mode: option.mode,
     variant: option.variant,
+    ...(option.run ? { run: option.run } : {}),
   };
+}
+
+// The behavioral inputs on offer. A full integration test decomposition is a choice of its own,
+// listed after the standard ones.
+export function variantChoices(
+  options: ExperimentOption[],
+): { value: string; variant: string; run: string }[] {
+  const choices = new Map<string, { value: string; variant: string; run: string }>();
+  for (const { variant, run = '' } of options) {
+    const value = run ? `${run}/${variant}` : variant;
+    choices.set(value, { value, variant, run });
+  }
+  return [...choices.values()].sort(
+    (a, b) => a.run.localeCompare(b.run) || compareVariants(a.variant, b.variant),
+  );
 }
 
 export function kindOf(options: ExperimentOption[], tool: string): ExperimentKind {
@@ -138,20 +165,26 @@ export function selectionForTool(
 ): Selection {
   const exact = findOption(options, { ...selection, tool });
   if (exact) return selectionOf(exact);
+  const best = closestOption(options.filter((o) => o.tool === tool), selection);
+  return best ? selectionOf(best) : { ...selection, tool };
+}
+
+function closestOption(
+  candidates: ExperimentOption[],
+  selection: Selection,
+): ExperimentOption | undefined {
   const shared = (o: ExperimentOption) =>
+    Number((o.run ?? '') === (selection.run ?? '')) +
     Number(o.chunk === selection.chunk) +
     Number(o.mode === selection.mode) +
     Number(o.variant === selection.variant);
-  const best = options
-    .filter((o) => o.tool === tool)
-    .sort(
-      (a, b) =>
-        shared(b) - shared(a) ||
-        compareChunks(a.chunk, b.chunk) ||
-        compareModes(a.mode, b.mode) ||
-        compareVariants(a.variant, b.variant),
-    )[0];
-  return best ? selectionOf(best) : { ...selection, tool };
+  return [...candidates].sort(
+    (a, b) =>
+      shared(b) - shared(a) ||
+      compareChunks(a.chunk, b.chunk) ||
+      compareModes(a.mode, b.mode) ||
+      compareVariants(a.variant, b.variant),
+  )[0];
 }
 
 export function findOption<T extends ExperimentOption>(
@@ -164,7 +197,8 @@ export function findOption<T extends ExperimentOption>(
         o.tool === selection.tool &&
         o.chunk === selection.chunk &&
         o.mode === selection.mode &&
-        o.variant === selection.variant,
+        o.variant === selection.variant &&
+        (o.run ?? '') === (selection.run ?? ''),
     ) ?? null
   );
 }
@@ -185,7 +219,7 @@ export function defaultSelections(allOptions: ExperimentOption[]): {
   reference: Selection;
   selected: Selection;
 } {
-  const llm = allOptions.filter((option) => option.kind === 'llm');
+  const llm = allOptions.filter((option) => option.kind === 'llm' && !option.run);
   const options = llm.length ? llm : allOptions;
   const sorted = [...options].sort(
     (a, b) =>
